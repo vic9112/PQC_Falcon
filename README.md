@@ -96,7 +96,7 @@ Zf(keygen)
 ##### Call graph
 
 Zf(sign_tree) / Zf(sign_dyn)
-│
+│\n
 └── 循環：嘗試產生有效簽名
      │
      ├── sampler_context初始化
