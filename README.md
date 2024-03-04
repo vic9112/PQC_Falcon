@@ -36,27 +36,7 @@ There are three top algorithm modules:
 
 ##### call graph
 
-Zf(keygen)
-│
-├── poly_small_mkgauss (兩次，分別用於產生 f 和 g)
-│
-├── poly_small_sqnorm (兩次，分別計算 f 和 g 的平方範數)
-│
-├── Zf(FFT) (四次，分別用於 f、g、rt1、rt2)
-│
-├── Zf(poly_invnorm2_fft) (計算正交化向量)
-│
-├── Zf(poly_adj_fft) (兩次，分別用於 rt1 和 rt2)
-│
-├── Zf(poly_mulconst) (兩次，分別用於 rt1 和 rt2)
-│
-├── Zf(poly_mul_autoadj_fft) (兩次，分別用於 rt1 和 rt2)
-│
-├── Zf(iFFT) (兩次，分別用於 rt1 與 rt2)
-│
-├── Zf(compute_public) (計算公鑰 h)
-│
-└── solve_NTRU (解NTRU方程，得到 F 和 G)
+![Call graph of keygen](https://github.com/vic9112/PQC_Falcon/assets/137171415/658774a4-0f0b-4a6c-8547-ddf854d15c2d)
 
 其中`rt1`和`rt2`是指向浮點數（`fpr`類型，「floating point real」）陣列的指標。 這些指針在處理多項式`f`和`g`的快速傅立葉變換（FFT）和逆變換（iFFT）以及其他相關計算中起到了作用。
 
@@ -95,31 +75,7 @@ Zf(keygen)
 
 ##### Call graph
 
-Zf(sign_tree) / Zf(sign_dyn)
-│
-└── 循環：嘗試產生有效簽名
-     │
-     ├── sampler_context初始化
-     │
-     ├── Zf(prng_init)：初始化偽隨機數產生器
-     │
-     ├── do_sign_tree / do_sign_dyn
-     │ │
-     │ ├── ffSampling_fft / ffSampling_fft_dyntree
-     │ │ │
-     │ │ ├── Zf(gaussian0_sampler)：高斯採樣
-     │ │ │
-     │ │ ├── BerExp：確認機率
-     │ │ │
-     │ │ └── 遞歸呼叫自身，直到達到基本狀況
-     │ │
-     │ ├── Zf(poly_mul_fft)、Zf(poly_add)等：多項式運算
-     │ │
-     │ ├── Zf(is_short_half)：檢查簽章向量是否夠短
-     │ │
-     │ └── 如果簽名有效，結束循環
-     │
-     └── 傳回產生的簽名部分
+![Call graph of Sign](https://github.com/vic9112/PQC_Falcon/assets/137171415/2512810b-7acd-437a-8a6c-1ed5c64e15cc)
 
 其中ffSampling使用了recursive, The funtion ffsampling shown in Algorithm 2 describes the fast Fourier sampling with its recursive structure.
 
@@ -146,33 +102,8 @@ Zf(sign_tree) / Zf(sign_dyn)
 
 
 ##### call graph
-vrfy.c 
-│
-├── Zf(compute_public) [計算公鑰]
-│ ├── mq_NTT
-│ ├── mq_iNTT
-│ └── mq_div_12289
-│
-├── Zf(verify_raw) [原始簽章驗證]
-│ ├── mq_NTT
-│ ├── mq_poly_montymul_ntt
-│ ├── mq_iNTT
-│ ├── mq_poly_sub
-│ └── Zf(is_short) [檢查向量是否短]
-│
-├── Zf(complete_private) [完成私鑰運算]
-│ ├── mq_NTT
-│ ├── mq_poly_montymul_ntt
-│ ├── mq_iNTT
-│ └── mq_div_12289
-│
-├── Zf(is_invertible) [檢查是否可逆]
-│ └── mq_NTT
-│
-└── Zf(verify_recover) [從簽章恢復公鑰]
-     ├── mq_NTT
-     ├── mq_iNTT
-     └── mq_div_12289
+
+![call graph of vrfy](https://github.com/vic9112/PQC_Falcon/assets/137171415/20ba90b5-7e32-4166-a6f2-d35dcef6775f)
 
 Algorithm 3 shows the signature verification steps for FALCON.
 
