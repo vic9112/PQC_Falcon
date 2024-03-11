@@ -2,7 +2,7 @@
 
 ## Interface Description
 
-- More details in xfft_hw.h
+- More details in `xfft_hw.h`
 
 | Port | Interface | Width | Description |
 | ---- | --------- | ----- | ----------- |
