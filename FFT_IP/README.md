@@ -13,14 +13,14 @@
 
 ## Utilization
 
-- FF/LUT
+### FF/LUT
 - ![Utilization_slice_logic](https://github.com/vic9112/PQC_Falcon/assets/137171415/2674009e-dd9b-4f32-af05-2655ff69a560)
-- DSP
+### DSP
 - ![Utilization_DSP](https://github.com/vic9112/PQC_Falcon/assets/137171415/7330c709-17ae-4553-a2ce-ae3a218e8de6)
 
 ## Timing
 
-- Timing Summary
+### Timing Summary
 - ![timing_slack](https://github.com/vic9112/PQC_Falcon/assets/137171415/f3367de3-e3ef-42f6-8abc-40b4c83dae37)
-- Intra-Clock Path
+### Intra-Clock Path
 - ![timing_clk](https://github.com/vic9112/PQC_Falcon/assets/137171415/7cfc3cc0-3253-4a1e-8ae6-2194a5db1236)
