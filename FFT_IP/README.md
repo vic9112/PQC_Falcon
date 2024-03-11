@@ -1,6 +1,6 @@
 # Fast-Fourier Transform Hardware IP
 
-- Tool
+- Tools
   - Vitis_HLS
   - Vivado
 
