@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="iFFT" xd:componentRef="iFFT" xd:initiationInterval="x" xd:clockPeriod="25" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:controlReg xd:name="control" xd:interfaceRef="s_axi_control" xd:busTypeRef="axilite" xd:type="generic_axi_lite" xd:offset="0x0"/>
+  <xd:arg xd:name="*(f)" xd:originalName="f" xd:direction="inout" xd:interfaceRef="m_axi_gmem0" xd:busTypeRef="aximm" xd:dataWidth="64" xd:bufferDirection="inout"/>
+  <xd:arg xd:name="f" xd:originalName="f" xd:direction="in" xd:interfaceRef="s_axi_control" xd:busTypeRef="axilite" xd:offset="0x10" xd:dataWidth="32" xd:aximmInterfaceRef="m_axi_gmem0"/>
+  <xd:arg xd:name="logn" xd:originalName="logn" xd:direction="in" xd:interfaceRef="s_axi_control" xd:busTypeRef="axilite" xd:offset="0x1C" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:latencyEstimates xd:best-case="undef" xd:worst-case="undef" xd:average-case="undef"/>
+  <xd:resourceEstimates xd:LUT="6284" xd:FF="5228" xd:BRAM="0" xd:DSP="25"/>
+</xd:acceleratorMap>
