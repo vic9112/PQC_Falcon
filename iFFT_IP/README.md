@@ -72,8 +72,8 @@
 ### Include files:
 - All files in `~/bitstream` and `~/jupyter_notebook`
   ![ex](https://github.com/vic9112/PQC_Falcon/assets/137171415/7a4e64c6-29cf-40f3-9b2d-7bfa1890b0a3)
-  - where `FFT_in.txt` is the test input, `FFT_out.txt` is the golden output value
-  - `FFT.bit` is the bitstream, `FFT.hwh` is the header (metadata) file for `FFT.bit`
+  - where `iFFT_in.txt` is the test input, `iFFT_out.txt` is the golden output value
+  - `iFFT.bit` is the bitstream, `iFFT.hwh` is the header (metadata) file for `iFFT.bit`
   
 ### Result
 ![result](https://github.com/vic9112/PQC_Falcon/assets/137171415/680e734f-21d1-4f46-bec3-a94bb256baa5)
