@@ -3,6 +3,7 @@
 - Tools
   - Vitis_HLS
   - Vivado
+  - PYNQ (jupyter notebook)
 
 ## Interface Description
 
@@ -60,9 +61,21 @@
 +----------------+------+-------+------------+-----------+-------+
 ```
 
-## Timing
+### Timing
 
-### Timing Summary
+#### Timing Summary
 - ![timing_slack](https://github.com/vic9112/PQC_Falcon/assets/137171415/f3367de3-e3ef-42f6-8abc-40b4c83dae37)
-### Intra-Clock Path
+#### Intra-Clock Path
 - ![timing_clk](https://github.com/vic9112/PQC_Falcon/assets/137171415/7cfc3cc0-3253-4a1e-8ae6-2194a5db1236)
+
+##  Verification on FPGA
+
+### Target board: PYNQ
+
+### Include files:
+- All files in `~/bitstream` and `~/jupyter_notebook`
+  ![example](https://github.com/vic9112/PQC_Falcon/assets/137171415/240474fb-3a1b-4d83-8fea-da2a396be559)
+  
+### Result
+![Result](https://github.com/vic9112/PQC_Falcon/assets/137171415/81a44eac-9c7b-4c5f-92d1-00b3449a4b07)
+
