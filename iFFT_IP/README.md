@@ -1,4 +1,4 @@
-# Fast-Fourier Transform Hardware IP
+# Inverse-Fast-Fourier Transform Hardware IP
 
 - Tools
   - Vitis_HLS
@@ -23,15 +23,15 @@
 +----------------------------+------+-------+------------+-----------+-------+
 |          Site Type         | Used | Fixed | Prohibited | Available | Util% |
 +----------------------------+------+-------+------------+-----------+-------+
-| Slice LUTs*                | 3779 |     0 |          0 |     53200 |  7.10 |
-|   LUT as Logic             | 3510 |     0 |          0 |     53200 |  6.60 |
-|   LUT as Memory            |  269 |     0 |          0 |     17400 |  1.55 |
+| Slice LUTs*                | 4192 |     0 |          0 |     53200 |  7.88 |
+|   LUT as Logic             | 3858 |     0 |          0 |     53200 |  7.25 |
+|   LUT as Memory            |  334 |     0 |          0 |     17400 |  1.92 |
 |     LUT as Distributed RAM |    0 |     0 |            |           |       |
-|     LUT as Shift Register  |  269 |     0 |            |           |       |
-| Slice Registers            | 5069 |     0 |          0 |    106400 |  4.76 |
-|   Register as Flip Flop    | 5069 |     0 |          0 |    106400 |  4.76 |
+|     LUT as Shift Register  |  334 |     0 |            |           |       |
+| Slice Registers            | 5551 |     0 |          0 |    106400 |  5.22 |
+|   Register as Flip Flop    | 5551 |     0 |          0 |    106400 |  5.22 |
 |   Register as Latch        |    0 |     0 |          0 |    106400 |  0.00 |
-| F7 Muxes                   |   66 |     0 |          0 |     26600 |  0.25 |
+| F7 Muxes                   |  130 |     0 |          0 |     26600 |  0.49 |
 | F8 Muxes                   |    1 |     0 |          0 |     13300 | <0.01 |
 +----------------------------+------+-------+------------+-----------+-------+
 ```
