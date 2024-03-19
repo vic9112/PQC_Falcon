@@ -7,7 +7,7 @@
 
 ## Interface Description
 
-- More details in `xifft_hw.h` under `/pynq`, `kv260`
+- More details in `xifft_hw.h` under `/pynq`, `/kv260`
 
 | Port | Interface | Width | Description |
 | ---- | --------- | ----- | ----------- |
