@@ -3,11 +3,11 @@
 - Tools
   - Vitis_HLS
   - Vivado
-  - PYNQ (jupyter notebook)
+  - PYNQ, KV260 (jupyter notebook)
 
 ## Interface Description
 
-- More details in `xifft_hw.h`
+- More details in `xifft_hw.h` under `/pynq`, `kv260`
 
 | Port | Interface | Width | Description |
 | ---- | --------- | ----- | ----------- |
@@ -16,7 +16,8 @@
 
 ## Utilization
 
-- Target Board: `xc7z020clg400-1` - Zynq7000
+- Target Board: `xc7z020clg400-1`-PYNQ, `xck26-sfvc784-2LV-c`-KV260
+- Here I use PYNQ for some brief outline, details please see under `/pynq`, `/kv260`
 
 ### Slice Logic
 ``` txt=
