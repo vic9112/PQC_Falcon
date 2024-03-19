@@ -3,7 +3,7 @@
 - Tools
   - Vitis_HLS
   - Vivado
-  - PYNQ (jupyter notebook)
+  - PYNQ, KV260 (jupyter notebook)
 
 ## Interface Description
 
@@ -20,7 +20,8 @@
 
 ## Utilization
 
-- Target Board: `xc7z020clg400-1` - Zynq7000
+- Target Board: `xc7z020clg400-1`-PYNQ, `xck26-sfvc784-2LV-c`-KV260
+- Here I use PYNQ for some brief outline, details please see under `/pynq` or `/kv260`
 
 ### Slice Logic
 ``` txt=
