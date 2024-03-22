@@ -41,9 +41,9 @@
 
 #### Result
 - Run with IP
-  ![After](https://github.com/vic9112/PQC_Falcon/assets/137171415/93a67df1-860e-4d3e-bb26-cfc08b2da983)
+- ![After](https://github.com/vic9112/PQC_Falcon/assets/137171415/93a67df1-860e-4d3e-bb26-cfc08b2da983)
 - Compare to the original code without IP acceleratation:
-  ![Before](https://github.com/vic9112/PQC_Falcon/assets/137171415/9f4fb2d3-94a5-4b8d-a182-9fb83e20f56f)
+- ![Before](https://github.com/vic9112/PQC_Falcon/assets/137171415/9f4fb2d3-94a5-4b8d-a182-9fb83e20f56f)
 
 
 
