@@ -37,8 +37,8 @@
 - All files in `~/bitstream`
 - Jupyter notebook `~/jupyter_notebook/test_ip_on_falcon.ipynb`
 - Python source code `~/python`
-  ![files](https://github.com/vic9112/PQC_Falcon/assets/137171415/1b7be2b5-ae7c-4233-a2bc-f5306c0db19d)
-  
+  ![files](https://github.com/vic9112/PQC_Falcon/assets/137171415/92323317-972c-4440-a143-c036e41c0ccc)
+
 #### Result
 - ![result](https://github.com/vic9112/PQC_Falcon/assets/137171415/93a67df1-860e-4d3e-bb26-cfc08b2da983)
 
