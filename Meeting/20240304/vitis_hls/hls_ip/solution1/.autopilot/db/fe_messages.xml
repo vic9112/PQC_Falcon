@@ -1,0 +1,888 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="" msg_id="207-4051" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/sign.c:317:11" msg_body="assigning to 'double *' from 'const fpr *' (aka 'const double *') discards qualifiers">
+        <args ClangWarningOption="incompatible-pointer-types-discards-qualifiers"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-4051" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/sign.c:356:10" msg_body="initializing 'fpr *' (aka 'double *') with an expression of type 'const fpr *' (aka 'const double *') discards qualifiers">
+        <args ClangWarningOption="incompatible-pointer-types-discards-qualifiers"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-4051" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/sign.c:512:12" msg_body="initializing 'double *' with an expression of type 'const fpr *' (aka 'const double *') discards qualifiers">
+        <args ClangWarningOption="incompatible-pointer-types-discards-qualifiers"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5176" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/sign.c:1905:38" msg_body="sizeof on array function parameter will return size of 'uint8_t *' (aka 'unsigned char *') instead of 'uint8_t [50]'">
+        <args ClangWarningOption="sizeof-array-argument"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-62" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/sign.c:1889:87" msg_body="declared here">
+        <args/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/sign.c:859:56" msg_body="unused parameter 'logn'">
+        <args ClangWarningOption="unused-parameter"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/sign.c:994:72" msg_body="unused parameter 'logn'">
+        <args ClangWarningOption="unused-parameter"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/sign.c:1956:46" msg_body="unused parameter 'tmp2'">
+        <args ClangWarningOption="unused-parameter"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/sign.c:348:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="ffSampling_fft_it" ARG_PragmaIsValid="1" ARG_PragmaOptions="max=511" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/sign.c:489:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="ffSampling_fft_it" ARG_PragmaIsValid="1" ARG_PragmaOptions="max=1" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/sign.c:1117:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="expand_privkey" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=m_axi port=f bundle=gmem0 offset=slave" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/sign.c:1118:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="expand_privkey" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=m_axi port=g bundle=gmem0 offset=slave" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/sign.c:1119:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="expand_privkey" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=m_axi port=F_upper bundle=gmem0 offset=slave" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/sign.c:1120:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="expand_privkey" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=m_axi port=G_upper bundle=gmem0 offset=slave" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/sign.c:1121:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="expand_privkey" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=m_axi port=expanded_key bundle=gmem0 offset=slave" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/sign.c:1122:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="expand_privkey" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=return" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/sign.c:1455:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="BerExp" ARG_PragmaIsValid="1" ARG_PragmaOptions="max=1" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/sign.c:1504:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="sampler" ARG_PragmaIsValid="1" ARG_PragmaOptions="max=1" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/sign.c:1572:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="bug" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=m_axi port=in bundle=gmem0 offset=slave" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/sign.c:1573:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="bug" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=m_axi port=out bundle=gmem0 offset=slave" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/sign.c:1574:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="bug" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=m_axi port=out2 bundle=gmem0 offset=slave" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/sign.c:1575:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="bug" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=m_axi port=out_int bundle=gmem0 offset=slave" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/sign.c:1576:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="bug" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=return" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/sign.c:1602:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="sign_tree_expand" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=m_axi port=f bundle=gmem0 offset=slave" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/sign.c:1603:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="sign_tree_expand" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=m_axi port=g bundle=gmem0 offset=slave" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/sign.c:1604:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="sign_tree_expand" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=m_axi port=F_upper bundle=gmem0 offset=slave" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/sign.c:1605:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="sign_tree_expand" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=m_axi port=G_upper bundle=gmem0 offset=slave" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/sign.c:1606:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="sign_tree_expand" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=m_axi port=sig bundle=gmem0 offset=slave" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/sign.c:1607:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="sign_tree_expand" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=m_axi port=seed bundle=gmem0 offset=slave" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/sign.c:1609:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="sign_tree_expand" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=m_axi port=hm bundle=gmem0 offset=slave" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/sign.c:1610:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="sign_tree_expand" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=return" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/sign.c:1617:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="sign_tree_expand" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=rng type=complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/sign.c:1892:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="sign_tree" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=m_axi port=sig bundle=gmem0 offset=slave" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/sign.c:1893:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="sign_tree" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=m_axi port=seed bundle=gmem0 offset=slave" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/sign.c:1894:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="sign_tree" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=m_axi port=expanded_key bundle=gmem0 offset=slave" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/sign.c:1895:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="sign_tree" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=m_axi port=hm bundle=gmem0 offset=slave" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/sign.c:1896:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="sign_tree" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=return" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/sign.c:1912:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="sign_tree" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=rng type=complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/sign.c:1919:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="sign_tree" ARG_PragmaIsValid="1" ARG_PragmaOptions="max=1" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/shake.c:847:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="i_shake256_extract" ARG_PragmaIsValid="1" ARG_PragmaOptions="min=1 avg=1 max=1" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/shake.c:864:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="i_shake256_extract" ARG_PragmaIsValid="1" ARG_PragmaOptions="min=1 avg=2 max=136" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/rng.c:80:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="prng_refill" ARG_PragmaIsValid="1" ARG_PragmaOptions="OFF" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/rng.c:94:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="prng_refill" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/rng.c:95:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="prng_refill" ARG_PragmaIsValid="1" ARG_PragmaOptions="max=8" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/rng.c:152:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="prng_refill" ARG_PragmaIsValid="1" ARG_PragmaOptions="max=16" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_DATAFLOW" msg_id="214-114" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/keygen.c:1006:9" msg_body="Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region"/>
+    <msg msg_groups="PRAGMA_DATAFLOW" msg_id="214-114" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/keygen.c:1288:9" msg_body="Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region"/>
+    <msg msg_groups="PRAGMA_DATAFLOW" msg_id="214-169" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/keygen.c:1288:9" msg_body="There are a total of 8 such instances of non-canonical statements in the dataflow region"/>
+    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/keygen.c:1257:102" msg_body="unused parameter 'logn'">
+        <args ClangWarningOption="unused-parameter"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/keygen.c:988:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="modp_NTT2_ext_stage" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/keygen.c:1006:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="modp_NTT2_ext_stub" ARG_PragmaIsValid="1" ARG_PragmaType="dataflow" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/keygen.c:1008:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="modp_NTT2_ext_stub" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=Stage dim=1 complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/keygen.c:1026:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="modp_NTT2_ext_stub" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/keygen.c:1045:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="modp_NTT2_ext_stub" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/keygen.c:1064:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="modp_NTT2_ext_stub" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/keygen.c:1083:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="modp_NTT2_ext_stub" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/keygen.c:1102:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="modp_NTT2_ext_stub" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/keygen.c:1121:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="modp_NTT2_ext_stub" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/keygen.c:1140:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="modp_NTT2_ext_stub" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/keygen.c:1159:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="modp_NTT2_ext_stub" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/keygen.c:1178:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="modp_NTT2_ext_stub" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/keygen.c:1197:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="modp_NTT2_ext_stub" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/keygen.c:1288:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="modp_iNTT2_ext_stub" ARG_PragmaIsValid="1" ARG_PragmaType="dataflow" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/keygen.c:1290:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="modp_iNTT2_ext_stub" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=Stage dim=1 complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/keygen.c:2455:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="poly_sub_scaled_ntt" ARG_PragmaIsValid="1" ARG_PragmaOptions="function instances=modp_montymul limit=1" ARG_PragmaType="allocation" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/ubuntu/falconlab/hls_ip/solution1/csynth.tcl:24:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="keygen" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=keygen" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/ubuntu/falconlab/hls_ip/solution1/directives.tcl:6:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="keygen" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=keygen" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/keygen.c:5743:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="keygen" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=f_out bundle=gmem0 offset=slave" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/keygen.c:5744:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="keygen" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=g_out bundle=gmem0 offset=slave" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/keygen.c:5745:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="keygen" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=h_out bundle=gmem0 offset=slave" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/keygen.c:5746:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="keygen" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=F_upper_out bundle=gmem0 offset=slave" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/keygen.c:5747:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="keygen" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=G_upper_out bundle=gmem0 offset=slave" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/keygen.c:5748:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="keygen" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=seed bundle=gmem0 offset=slave" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/keygen.c:5749:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="keygen" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=return" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/keygen.c:5762:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="keygen" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/keygen.c:5796:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="keygen" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=rng type=complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/fpr.c:47:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="fpr_of" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/fpr.c:113:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="fpr_floor" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5286" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/fft.c:1042:8" msg_body="expression result unused">
+        <args ClangWarningOption="unused-value"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5286" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/fft.c:1076:8" msg_body="expression result unused">
+        <args ClangWarningOption="unused-value"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5286" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/fft.c:1110:8" msg_body="expression result unused">
+        <args ClangWarningOption="unused-value"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5286" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/fft.c:1144:8" msg_body="expression result unused">
+        <args ClangWarningOption="unused-value"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5286" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/fft.c:1178:8" msg_body="expression result unused">
+        <args ClangWarningOption="unused-value"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5286" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/fft.c:1212:8" msg_body="expression result unused">
+        <args ClangWarningOption="unused-value"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5286" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/fft.c:1246:8" msg_body="expression result unused">
+        <args ClangWarningOption="unused-value"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5286" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/fft.c:1280:8" msg_body="expression result unused">
+        <args ClangWarningOption="unused-value"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5286" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/fft.c:1314:8" msg_body="expression result unused">
+        <args ClangWarningOption="unused-value"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5286" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/fft.c:1348:8" msg_body="expression result unused">
+        <args ClangWarningOption="unused-value"/>
+    </msg>
+    <msg msg_groups="PRAGMA_DATAFLOW" msg_id="214-114" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/fft.c:606:9" msg_body="Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region"/>
+    <msg msg_groups="PRAGMA_DATAFLOW" msg_id="214-114" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/fft.c:1025:9" msg_body="Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region"/>
+    <msg msg_groups="" msg_id="207-5286" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/fft.c:1042:27" msg_body="expression result unused">
+        <args ClangWarningOption="unused-value"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5286" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/fft.c:1076:27" msg_body="expression result unused">
+        <args ClangWarningOption="unused-value"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5286" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/fft.c:1110:27" msg_body="expression result unused">
+        <args ClangWarningOption="unused-value"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5286" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/fft.c:1144:27" msg_body="expression result unused">
+        <args ClangWarningOption="unused-value"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5286" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/fft.c:1178:27" msg_body="expression result unused">
+        <args ClangWarningOption="unused-value"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5286" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/fft.c:1212:28" msg_body="expression result unused">
+        <args ClangWarningOption="unused-value"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5286" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/fft.c:1246:28" msg_body="expression result unused">
+        <args ClangWarningOption="unused-value"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5286" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/fft.c:1280:28" msg_body="expression result unused">
+        <args ClangWarningOption="unused-value"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5286" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/fft.c:1314:28" msg_body="expression result unused">
+        <args ClangWarningOption="unused-value"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5286" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/fft.c:1348:28" msg_body="expression result unused">
+        <args ClangWarningOption="unused-value"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/fft.c:226:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="poly_invnorm2_fft" ARG_PragmaIsValid="1" ARG_PragmaOptions="max=102" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/fft.c:249:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="poly_div_autoadj_fft" ARG_PragmaIsValid="1" ARG_PragmaOptions="max=102" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/fft.c:264:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="poly_LDL_fft" ARG_PragmaIsValid="1" ARG_PragmaOptions="max=102" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/fft.c:295:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="poly_LDLmv_fft" ARG_PragmaIsValid="1" ARG_PragmaOptions="max=102" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/fft.c:322:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="poly_muladj_fft" ARG_PragmaIsValid="1" ARG_PragmaOptions="max=102" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/fft.c:346:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="poly_mulselfadj_fft" ARG_PragmaIsValid="1" ARG_PragmaOptions="max=102" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/fft.c:375:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="poly_merge_fft" ARG_PragmaIsValid="1" ARG_PragmaOptions="max=56" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/fft.c:421:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="poly_split_fft" ARG_PragmaIsValid="1" ARG_PragmaOptions="max=56" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/fft.c:451:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="poly_neg" ARG_PragmaIsValid="1" ARG_PragmaOptions="max=186" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/fft.c:465:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="poly_sub" ARG_PragmaIsValid="1" ARG_PragmaOptions="max=186" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/fft.c:481:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="poly_add_muladj_fft" ARG_PragmaIsValid="1" ARG_PragmaOptions="max=102" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/fft.c:512:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="poly_mul_fft" ARG_PragmaIsValid="1" ARG_PragmaOptions="max=102" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/fft.c:533:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="poly_add" ARG_PragmaIsValid="1" ARG_PragmaOptions="max=186" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/fft.c:547:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="poly_adj_fft" ARG_PragmaIsValid="1" ARG_PragmaOptions="max=186" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/fft.c:563:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="poly_mulconst" ARG_PragmaIsValid="1" ARG_PragmaOptions="max=186" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/fft.c:581:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="poly_mul_autoadj_fft" ARG_PragmaIsValid="1" ARG_PragmaOptions="max=102" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/fft.c:603:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="FFT_stub" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=f bundle=gmem0 offset=slave depth=1024" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/fft.c:604:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="FFT_stub" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=return" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/fft.c:606:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="FFT_stub" ARG_PragmaIsValid="1" ARG_PragmaType="dataflow" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/fft.c:608:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="FFT_stub" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=Stage_R dim=1 complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/fft.c:609:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="FFT_stub" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=Stage_I dim=1 complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/fft.c:627:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="FFT_stub" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/fft.c:652:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="FFT_stub" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/fft.c:677:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="FFT_stub" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/fft.c:702:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="FFT_stub" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/fft.c:727:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="FFT_stub" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/fft.c:752:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="FFT_stub" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/fft.c:777:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="FFT_stub" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/fft.c:802:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="FFT_stub" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/fft.c:827:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="FFT_stub" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/fft.c:852:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="FFT_stub" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/fft.c:882:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="FFT_stage" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/fft.c:883:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="FFT_stage" ARG_PragmaIsValid="1" ARG_PragmaOptions="max=1" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/fft.c:954:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="FFT" ARG_PragmaIsValid="1" ARG_PragmaOptions="max=9" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/fft.c:960:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="FFT" ARG_PragmaIsValid="1" ARG_PragmaOptions="max=56" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/fft.c:969:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="FFT" ARG_PragmaIsValid="1" ARG_PragmaOptions="max=56" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/fft.c:1025:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="iFFT_stub" ARG_PragmaIsValid="1" ARG_PragmaType="dataflow" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/fft.c:1030:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="iFFT_stub" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=Stage_R dim=1 complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/fft.c:1031:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="iFFT_stub" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=Stage_I dim=1 complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/fft.c:1043:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="iFFT_stub" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/fft.c:1077:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="iFFT_stub" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/fft.c:1111:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="iFFT_stub" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/fft.c:1145:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="iFFT_stub" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/fft.c:1179:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="iFFT_stub" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/fft.c:1213:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="iFFT_stub" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/fft.c:1247:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="iFFT_stub" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/fft.c:1281:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="iFFT_stub" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/fft.c:1315:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="iFFT_stub" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/fft.c:1349:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="iFFT_stub" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/fft.c:1392:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="iFFT_stage" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/fft.c:1393:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="iFFT_stage" ARG_PragmaIsValid="1" ARG_PragmaOptions="max=1" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/fft.c:1454:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="iFFT" ARG_PragmaIsValid="1" ARG_PragmaOptions="min=0 max=1" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/fft.c:1460:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="iFFT" ARG_PragmaIsValid="1" ARG_PragmaOptions="min=0 max=1" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/fft.c:1469:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="iFFT" ARG_PragmaIsValid="1" ARG_PragmaOptions="min=0 max=2305" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/common.c:297:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="is_short_half" ARG_PragmaIsValid="1" ARG_PragmaOptions="min=0 max=1024" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_DISAGGREGATE" msg_id="214-210" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/keygen.c:5795:25" msg_body="Disaggregating variable 'rng'">
+        <args Name="rng"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/keygen.c:2531:0" msg_body="Inlining function 'i_shake256_extract.85.104' into 'get_rng_u64.82.101'">
+        <args Callee="i_shake256_extract.85.104" Caller="get_rng_u64.82.101"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/keygen.c:4467:0" msg_body="Inlining function 'mkgauss.79.98' into 'poly_small_mkgauss'">
+        <args Callee="mkgauss.79.98" Caller="poly_small_mkgauss"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/fft.c:48:0" msg_body="Inlining function 'fpr_mul' into 'FPC_MUL'">
+        <args Callee="fpr_mul" Caller="FPC_MUL"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/fft.c:48:0" msg_body="Inlining function 'fpr_sub' into 'FPC_MUL'">
+        <args Callee="fpr_sub" Caller="FPC_MUL"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/fft.c:48:0" msg_body="Inlining function 'fpr_add' into 'FPC_MUL'">
+        <args Callee="fpr_add" Caller="FPC_MUL"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/fft.c:7:0" msg_body="Inlining function 'fpr_add' into 'FPC_ADD'">
+        <args Callee="fpr_add" Caller="FPC_ADD"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/fft.c:27:0" msg_body="Inlining function 'fpr_sub' into 'FPC_SUB'">
+        <args Callee="fpr_sub" Caller="FPC_SUB"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/fft.c:901:0" msg_body="Inlining function 'FPC_MUL' into 'FFT'">
+        <args Callee="FPC_MUL" Caller="FFT"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/fft.c:901:0" msg_body="Inlining function 'FPC_ADD' into 'FFT'">
+        <args Callee="FPC_ADD" Caller="FFT"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/fft.c:901:0" msg_body="Inlining function 'FPC_SUB' into 'FFT'">
+        <args Callee="FPC_SUB" Caller="FFT"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/fft.c:216:0" msg_body="Inlining function 'fpr_sqr' into 'poly_invnorm2_fft'">
+        <args Callee="fpr_sqr" Caller="poly_invnorm2_fft"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/fft.c:216:0" msg_body="Inlining function 'fpr_add' into 'poly_invnorm2_fft'">
+        <args Callee="fpr_add" Caller="poly_invnorm2_fft"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/fft.c:216:0" msg_body="Inlining function 'fpr_inv' into 'poly_invnorm2_fft'">
+        <args Callee="fpr_inv" Caller="poly_invnorm2_fft"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/fft.c:542:0" msg_body="Inlining function 'fpr_neg' into 'poly_adj_fft'">
+        <args Callee="fpr_neg" Caller="poly_adj_fft"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/fft.c:556:0" msg_body="Inlining function 'fpr_mul' into 'poly_mulconst'">
+        <args Callee="fpr_mul" Caller="poly_mulconst"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/fft.c:574:0" msg_body="Inlining function 'fpr_mul' into 'poly_mul_autoadj_fft'">
+        <args Callee="fpr_mul" Caller="poly_mul_autoadj_fft"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/fft.c:1404:0" msg_body="Inlining function 'fpr_neg' into 'iFFT'">
+        <args Callee="fpr_neg" Caller="iFFT"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/fft.c:1404:0" msg_body="Inlining function 'FPC_ADD' into 'iFFT'">
+        <args Callee="FPC_ADD" Caller="iFFT"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/fft.c:1404:0" msg_body="Inlining function 'FPC_SUB' into 'iFFT'">
+        <args Callee="FPC_SUB" Caller="iFFT"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/fft.c:1404:0" msg_body="Inlining function 'FPC_MUL' into 'iFFT'">
+        <args Callee="FPC_MUL" Caller="iFFT"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/fft.c:1404:0" msg_body="Inlining function 'fpr_mul' into 'iFFT'">
+        <args Callee="fpr_mul" Caller="iFFT"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/vrfy.c:506:0" msg_body="Inlining function 'mq_montymul' into 'mq_NTT'">
+        <args Callee="mq_montymul" Caller="mq_NTT"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/vrfy.c:506:0" msg_body="Inlining function 'mq_add' into 'mq_NTT'">
+        <args Callee="mq_add" Caller="mq_NTT"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/vrfy.c:506:0" msg_body="Inlining function 'mq_sub' into 'mq_NTT'">
+        <args Callee="mq_sub" Caller="mq_NTT"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/vrfy.c:431:0" msg_body="Inlining function 'mq_montymul' into 'mq_montysqr'">
+        <args Callee="mq_montymul" Caller="mq_montysqr"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/vrfy.c:540:0" msg_body="Inlining function 'mq_add' into 'mq_iNTT'">
+        <args Callee="mq_add" Caller="mq_iNTT"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/vrfy.c:540:0" msg_body="Inlining function 'mq_sub' into 'mq_iNTT'">
+        <args Callee="mq_sub" Caller="mq_iNTT"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/vrfy.c:540:0" msg_body="Inlining function 'mq_montymul' into 'mq_iNTT'">
+        <args Callee="mq_montymul" Caller="mq_iNTT"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/vrfy.c:540:0" msg_body="Inlining function 'mq_rshift1' into 'mq_iNTT'">
+        <args Callee="mq_rshift1" Caller="mq_iNTT"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/vrfy.c:818:0" msg_body="Inlining function 'mq_conv_small' into 'compute_public'">
+        <args Callee="mq_conv_small" Caller="compute_public"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/vrfy.c:818:0" msg_body="Inlining function 'mq_div_12289' into 'compute_public'">
+        <args Callee="mq_div_12289" Caller="compute_public"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/vrfy.c:818:0" msg_body="Inlining function 'mq_iNTT' into 'compute_public'">
+        <args Callee="mq_iNTT" Caller="compute_public"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/keygen.c:732:0" msg_body="Inlining function 'modp_R' into 'modp_R2'">
+        <args Callee="modp_R" Caller="modp_R2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/keygen.c:732:0" msg_body="Inlining function 'modp_add' into 'modp_R2'">
+        <args Callee="modp_add" Caller="modp_R2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/keygen.c:939:0" msg_body="Inlining function 'modp_R2' into 'modp_mkgm2'">
+        <args Callee="modp_R2" Caller="modp_mkgm2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/keygen.c:939:0" msg_body="Inlining function 'modp_R' into 'modp_mkgm2'">
+        <args Callee="modp_R" Caller="modp_mkgm2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/keygen.c:939:0" msg_body="Inlining function 'modp_div' into 'modp_mkgm2'">
+        <args Callee="modp_div" Caller="modp_mkgm2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/keygen.c:1223:0" msg_body="Inlining function 'modp_add' into 'modp_NTT2_ext'">
+        <args Callee="modp_add" Caller="modp_NTT2_ext"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/keygen.c:1223:0" msg_body="Inlining function 'modp_sub' into 'modp_NTT2_ext'">
+        <args Callee="modp_sub" Caller="modp_NTT2_ext"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/keygen.c:1325:0" msg_body="Inlining function 'modp_add' into 'modp_iNTT2_ext'">
+        <args Callee="modp_add" Caller="modp_iNTT2_ext"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/keygen.c:1325:0" msg_body="Inlining function 'modp_sub' into 'modp_iNTT2_ext'">
+        <args Callee="modp_sub" Caller="modp_iNTT2_ext"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/keygen.c:1508:0" msg_body="Inlining function 'modp_add' into 'zint_mod_small_unsigned'">
+        <args Callee="modp_add" Caller="zint_mod_small_unsigned"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/keygen.c:1579:0" msg_body="Inlining function 'zint_sub' into 'zint_norm_zero'">
+        <args Callee="zint_sub" Caller="zint_norm_zero"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/keygen.c:1641:0" msg_body="Inlining function 'modp_ninv31' into 'zint_rebuild_CRT'">
+        <args Callee="modp_ninv31" Caller="zint_rebuild_CRT"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/keygen.c:1641:0" msg_body="Inlining function 'modp_R2' into 'zint_rebuild_CRT'">
+        <args Callee="modp_R2" Caller="zint_rebuild_CRT"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/keygen.c:1641:0" msg_body="Inlining function 'zint_mod_small_unsigned' into 'zint_rebuild_CRT'">
+        <args Callee="zint_mod_small_unsigned" Caller="zint_rebuild_CRT"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/keygen.c:1641:0" msg_body="Inlining function 'modp_sub' into 'zint_rebuild_CRT'">
+        <args Callee="modp_sub" Caller="zint_rebuild_CRT"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/keygen.c:1641:0" msg_body="Inlining function 'zint_add_mul_small' into 'zint_rebuild_CRT'">
+        <args Callee="zint_add_mul_small" Caller="zint_rebuild_CRT"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/keygen.c:1641:0" msg_body="Inlining function 'zint_mul_small' into 'zint_rebuild_CRT'">
+        <args Callee="zint_mul_small" Caller="zint_rebuild_CRT"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/keygen.c:1641:0" msg_body="Inlining function 'zint_norm_zero' into 'zint_rebuild_CRT'">
+        <args Callee="zint_norm_zero" Caller="zint_rebuild_CRT"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/keygen.c:767:0" msg_body="Inlining function 'modp_R' into 'modp_Rx'">
+        <args Callee="modp_R" Caller="modp_Rx"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/keygen.c:1537:0" msg_body="Inlining function 'zint_mod_small_unsigned' into 'zint_mod_small_signed'">
+        <args Callee="zint_mod_small_unsigned" Caller="zint_mod_small_signed"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/keygen.c:1537:0" msg_body="Inlining function 'modp_sub' into 'zint_mod_small_signed'">
+        <args Callee="modp_sub" Caller="zint_mod_small_signed"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/keygen.c:2833:0" msg_body="Inlining function 'modp_ninv31' into 'make_fg_step'">
+        <args Callee="modp_ninv31" Caller="make_fg_step"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/keygen.c:2833:0" msg_body="Inlining function 'modp_R2' into 'make_fg_step'">
+        <args Callee="modp_R2" Caller="make_fg_step"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/keygen.c:2833:0" msg_body="Inlining function 'modp_Rx' into 'make_fg_step'">
+        <args Callee="modp_Rx" Caller="make_fg_step"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/keygen.c:2833:0" msg_body="Inlining function 'zint_mod_small_signed' into 'make_fg_step'">
+        <args Callee="zint_mod_small_signed" Caller="make_fg_step"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/keygen.c:2991:0" msg_body="Inlining function 'modp_set' into 'make_fg'">
+        <args Callee="modp_set" Caller="make_fg"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/keygen.c:2991:0" msg_body="Inlining function 'modp_ninv31' into 'make_fg'">
+        <args Callee="modp_ninv31" Caller="make_fg"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/keygen.c:2991:0" msg_body="Inlining function 'modp_mkgm2' into 'make_fg'">
+        <args Callee="modp_mkgm2" Caller="make_fg"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/keygen.c:1742:0" msg_body="Inlining function 'zint_negate' into 'zint_co_reduce'">
+        <args Callee="zint_negate" Caller="zint_co_reduce"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/keygen.c:1828:0" msg_body="Inlining function 'zint_finish_mod' into 'zint_co_reduce_mod'">
+        <args Callee="zint_finish_mod" Caller="zint_co_reduce_mod"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/keygen.c:1888:0" msg_body="Inlining function 'modp_ninv31' into 'zint_bezout'">
+        <args Callee="modp_ninv31" Caller="zint_bezout"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/keygen.c:1888:0" msg_body="Inlining function 'zint_co_reduce' into 'zint_bezout'">
+        <args Callee="zint_co_reduce" Caller="zint_bezout"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/keygen.c:2330:0" msg_body="Inlining function 'fpr_mul' into 'poly_big_to_fp'">
+        <args Callee="fpr_mul" Caller="poly_big_to_fp"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/keygen.c:2330:0" msg_body="Inlining function 'fpr_add' into 'poly_big_to_fp'">
+        <args Callee="fpr_add" Caller="poly_big_to_fp"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/fft.c:475:0" msg_body="Inlining function 'fpr_neg' into 'poly_add_muladj_fft'">
+        <args Callee="fpr_neg" Caller="poly_add_muladj_fft"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/fft.c:475:0" msg_body="Inlining function 'FPC_MUL' into 'poly_add_muladj_fft'">
+        <args Callee="FPC_MUL" Caller="poly_add_muladj_fft"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/fft.c:475:0" msg_body="Inlining function 'fpr_add' into 'poly_add_muladj_fft'">
+        <args Callee="fpr_add" Caller="poly_add_muladj_fft"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="/wrk/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:12:0" msg_body="Inlining function 'fp_struct&lt;double&gt;::fp_struct(double)' into 'long generic_cast_IEEE754&lt;long, (ap_q_mode)6, double&gt;(double, bool, hls::enable_if&lt;std::numeric_limits&lt;long&gt;::is_signed, bool&gt;::type)'">
+        <args Callee="fp_struct&lt;double&gt;::fp_struct(double)" Caller="long generic_cast_IEEE754&lt;long, (ap_q_mode)6, double&gt;(double, bool, hls::enable_if&lt;std::numeric_limits&lt;long&gt;::is_signed, bool&gt;::type)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="/wrk/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:12:0" msg_body="Inlining function 'fp_struct&lt;double&gt;::mantissa() const' into 'long generic_cast_IEEE754&lt;long, (ap_q_mode)6, double&gt;(double, bool, hls::enable_if&lt;std::numeric_limits&lt;long&gt;::is_signed, bool&gt;::type)'">
+        <args Callee="fp_struct&lt;double&gt;::mantissa() const" Caller="long generic_cast_IEEE754&lt;long, (ap_q_mode)6, double&gt;(double, bool, hls::enable_if&lt;std::numeric_limits&lt;long&gt;::is_signed, bool&gt;::type)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="/wrk/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:12:0" msg_body="Inlining function 'fp_struct&lt;double&gt;::expv() const' into 'long generic_cast_IEEE754&lt;long, (ap_q_mode)6, double&gt;(double, bool, hls::enable_if&lt;std::numeric_limits&lt;long&gt;::is_signed, bool&gt;::type)'">
+        <args Callee="fp_struct&lt;double&gt;::expv() const" Caller="long generic_cast_IEEE754&lt;long, (ap_q_mode)6, double&gt;(double, bool, hls::enable_if&lt;std::numeric_limits&lt;long&gt;::is_signed, bool&gt;::type)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="/wrk/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:12:0" msg_body="Inlining function 'fp_struct&lt;double&gt;::__signbit() const' into 'long generic_cast_IEEE754&lt;long, (ap_q_mode)6, double&gt;(double, bool, hls::enable_if&lt;std::numeric_limits&lt;long&gt;::is_signed, bool&gt;::type)'">
+        <args Callee="fp_struct&lt;double&gt;::__signbit() const" Caller="long generic_cast_IEEE754&lt;long, (ap_q_mode)6, double&gt;(double, bool, hls::enable_if&lt;std::numeric_limits&lt;long&gt;::is_signed, bool&gt;::type)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="/wrk/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:116:0" msg_body="Inlining function 'long generic_cast_IEEE754&lt;long, (ap_q_mode)6, double&gt;(double, bool, hls::enable_if&lt;std::numeric_limits&lt;long&gt;::is_signed, bool&gt;::type)' into 'long generic_cast_IEEE754&lt;long, double&gt;(double, bool)'">
+        <args Callee="long generic_cast_IEEE754&lt;long, (ap_q_mode)6, double&gt;(double, bool, hls::enable_if&lt;std::numeric_limits&lt;long&gt;::is_signed, bool&gt;::type)" Caller="long generic_cast_IEEE754&lt;long, double&gt;(double, bool)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="/wrk/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/src/lib_floatconversion.cpp:56:0" msg_body="Inlining function 'long generic_cast_IEEE754&lt;long, double&gt;(double, bool)' into '__hls_fptosi_double_i64'">
+        <args Callee="long generic_cast_IEEE754&lt;long, double&gt;(double, bool)" Caller="__hls_fptosi_double_i64"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/fft.c:506:0" msg_body="Inlining function 'FPC_MUL' into 'poly_mul_fft'">
+        <args Callee="FPC_MUL" Caller="poly_mul_fft"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/fft.c:460:0" msg_body="Inlining function 'fpr_sub' into 'poly_sub'">
+        <args Callee="fpr_sub" Caller="poly_sub"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/fft.c:243:0" msg_body="Inlining function 'fpr_inv' into 'poly_div_autoadj_fft'">
+        <args Callee="fpr_inv" Caller="poly_div_autoadj_fft"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/fft.c:243:0" msg_body="Inlining function 'fpr_mul' into 'poly_div_autoadj_fft'">
+        <args Callee="fpr_mul" Caller="poly_div_autoadj_fft"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/fft.c:527:0" msg_body="Inlining function 'fpr_add' into 'poly_add'">
+        <args Callee="fpr_add" Caller="poly_add"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/keygen.c:2454:0" msg_body="Inlining function 'modp_ninv31' into 'poly_sub_scaled_ntt'">
+        <args Callee="modp_ninv31" Caller="poly_sub_scaled_ntt"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/keygen.c:2454:0" msg_body="Inlining function 'modp_R2' into 'poly_sub_scaled_ntt'">
+        <args Callee="modp_R2" Caller="poly_sub_scaled_ntt"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/keygen.c:2454:0" msg_body="Inlining function 'modp_Rx' into 'poly_sub_scaled_ntt'">
+        <args Callee="modp_Rx" Caller="poly_sub_scaled_ntt"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/keygen.c:2454:0" msg_body="Inlining function 'modp_mkgm2' into 'poly_sub_scaled_ntt'">
+        <args Callee="modp_mkgm2" Caller="poly_sub_scaled_ntt"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/keygen.c:2454:0" msg_body="Inlining function 'modp_set' into 'poly_sub_scaled_ntt'">
+        <args Callee="modp_set" Caller="poly_sub_scaled_ntt"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/keygen.c:2454:0" msg_body="Inlining function 'zint_mod_small_signed' into 'poly_sub_scaled_ntt'">
+        <args Callee="zint_mod_small_signed" Caller="poly_sub_scaled_ntt"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/keygen.c:2454:0" msg_body="Inlining function 'modp_iNTT2_ext' into 'poly_sub_scaled_ntt'">
+        <args Callee="modp_iNTT2_ext" Caller="poly_sub_scaled_ntt"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/keygen.c:2454:0" msg_body="Inlining function 'zint_sub_scaled' into 'poly_sub_scaled_ntt'">
+        <args Callee="zint_sub_scaled" Caller="poly_sub_scaled_ntt"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/keygen.c:2410:0" msg_body="Inlining function 'zint_add_scaled_mul_small' into 'poly_sub_scaled'">
+        <args Callee="zint_add_scaled_mul_small" Caller="poly_sub_scaled"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/keygen.c:4509:0" msg_body="Inlining function 'zint_mul_small' into 'solve_NTRU_all'">
+        <args Callee="zint_mul_small" Caller="solve_NTRU_all"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/keygen.c:4509:0" msg_body="Inlining function 'modp_ninv31' into 'solve_NTRU_all'">
+        <args Callee="modp_ninv31" Caller="solve_NTRU_all"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/keygen.c:4509:0" msg_body="Inlining function 'modp_R2' into 'solve_NTRU_all'">
+        <args Callee="modp_R2" Caller="solve_NTRU_all"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/keygen.c:4509:0" msg_body="Inlining function 'modp_Rx' into 'solve_NTRU_all'">
+        <args Callee="modp_Rx" Caller="solve_NTRU_all"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/keygen.c:4509:0" msg_body="Inlining function 'modp_set' into 'solve_NTRU_all'">
+        <args Callee="modp_set" Caller="solve_NTRU_all"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/keygen.c:4509:0" msg_body="Inlining function 'modp_poly_rec_res' into 'solve_NTRU_all'">
+        <args Callee="modp_poly_rec_res" Caller="solve_NTRU_all"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/keygen.c:4509:0" msg_body="Inlining function 'align_fpr' into 'solve_NTRU_all'">
+        <args Callee="align_fpr" Caller="solve_NTRU_all"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/keygen.c:4509:0" msg_body="Inlining function 'poly_add_muladj_fft' into 'solve_NTRU_all'">
+        <args Callee="poly_add_muladj_fft" Caller="solve_NTRU_all"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/keygen.c:4509:0" msg_body="Inlining function 'poly_invnorm2_fft' into 'solve_NTRU_all'">
+        <args Callee="poly_invnorm2_fft" Caller="solve_NTRU_all"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/keygen.c:4509:0" msg_body="Inlining function 'poly_mul_autoadj_fft' into 'solve_NTRU_all'">
+        <args Callee="poly_mul_autoadj_fft" Caller="solve_NTRU_all"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/keygen.c:4509:0" msg_body="Inlining function 'fpr_lt' into 'solve_NTRU_all'">
+        <args Callee="fpr_lt" Caller="solve_NTRU_all"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/keygen.c:4509:0" msg_body="Inlining function 'poly_sub' into 'solve_NTRU_all'">
+        <args Callee="poly_sub" Caller="solve_NTRU_all"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/keygen.c:4509:0" msg_body="Inlining function 'zint_one_to_plain' into 'solve_NTRU_all'">
+        <args Callee="zint_one_to_plain" Caller="solve_NTRU_all"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/keygen.c:4509:0" msg_body="Inlining function 'modp_add' into 'solve_NTRU_all'">
+        <args Callee="modp_add" Caller="solve_NTRU_all"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/keygen.c:4509:0" msg_body="Inlining function 'modp_norm' into 'solve_NTRU_all'">
+        <args Callee="modp_norm" Caller="solve_NTRU_all"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/keygen.c:4509:0" msg_body="Inlining function 'poly_div_autoadj_fft' into 'solve_NTRU_all'">
+        <args Callee="poly_div_autoadj_fft" Caller="solve_NTRU_all"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/keygen.c:4509:0" msg_body="Inlining function 'modp_sub' into 'solve_NTRU_all'">
+        <args Callee="modp_sub" Caller="solve_NTRU_all"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/keygen.c:4509:0" msg_body="Inlining function 'align_u32' into 'solve_NTRU_all'">
+        <args Callee="align_u32" Caller="solve_NTRU_all"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/keygen.c:4509:0" msg_body="Inlining function 'poly_adj_fft' into 'solve_NTRU_all'">
+        <args Callee="poly_adj_fft" Caller="solve_NTRU_all"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/keygen.c:4509:0" msg_body="Inlining function 'poly_add' into 'solve_NTRU_all'">
+        <args Callee="poly_add" Caller="solve_NTRU_all"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/keygen.c:4509:0" msg_body="Inlining function 'fpr_mul' into 'solve_NTRU_all'">
+        <args Callee="fpr_mul" Caller="solve_NTRU_all"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/keygen.c:4509:0" msg_body="Inlining function 'fpr_sqr' into 'solve_NTRU_all'">
+        <args Callee="fpr_sqr" Caller="solve_NTRU_all"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/keygen.c:2381:0" msg_body="Inlining function 'zint_one_to_plain' into 'poly_big_to_small'">
+        <args Callee="zint_one_to_plain" Caller="poly_big_to_small"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/keygen.c:4326:0" msg_body="Inlining function 'poly_big_to_small' into 'solve_NTRU'">
+        <args Callee="poly_big_to_small" Caller="solve_NTRU"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/keygen.c:4326:0" msg_body="Inlining function 'modp_ninv31' into 'solve_NTRU'">
+        <args Callee="modp_ninv31" Caller="solve_NTRU"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/keygen.c:4326:0" msg_body="Inlining function 'modp_mkgm2' into 'solve_NTRU'">
+        <args Callee="modp_mkgm2" Caller="solve_NTRU"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/keygen.c:4326:0" msg_body="Inlining function 'modp_set' into 'solve_NTRU'">
+        <args Callee="modp_set" Caller="solve_NTRU"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/keygen.c:4326:0" msg_body="Inlining function 'modp_sub' into 'solve_NTRU'">
+        <args Callee="modp_sub" Caller="solve_NTRU"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/keygen.c:5742:0" msg_body="Inlining function 'i_shake256_init' into 'keygen'">
+        <args Callee="i_shake256_init" Caller="keygen"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/keygen.c:5742:0" msg_body="Inlining function 'i_shake256_inject' into 'keygen'">
+        <args Callee="i_shake256_inject" Caller="keygen"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/keygen.c:5742:0" msg_body="Inlining function 'i_shake256_flip' into 'keygen'">
+        <args Callee="i_shake256_flip" Caller="keygen"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/keygen.c:5742:0" msg_body="Inlining function 'poly_small_sqnorm' into 'keygen'">
+        <args Callee="poly_small_sqnorm" Caller="keygen"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/keygen.c:5742:0" msg_body="Inlining function 'poly_small_to_fp' into 'keygen'">
+        <args Callee="poly_small_to_fp" Caller="keygen"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/keygen.c:5742:0" msg_body="Inlining function 'poly_invnorm2_fft' into 'keygen'">
+        <args Callee="poly_invnorm2_fft" Caller="keygen"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/keygen.c:5742:0" msg_body="Inlining function 'poly_adj_fft' into 'keygen'">
+        <args Callee="poly_adj_fft" Caller="keygen"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/keygen.c:5742:0" msg_body="Inlining function 'poly_mulconst' into 'keygen'">
+        <args Callee="poly_mulconst" Caller="keygen"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/keygen.c:5742:0" msg_body="Inlining function 'poly_mul_autoadj_fft' into 'keygen'">
+        <args Callee="poly_mul_autoadj_fft" Caller="keygen"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/keygen.c:5742:0" msg_body="Inlining function 'fpr_sqr' into 'keygen'">
+        <args Callee="fpr_sqr" Caller="keygen"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/keygen.c:5742:0" msg_body="Inlining function 'fpr_add' into 'keygen'">
+        <args Callee="fpr_add" Caller="keygen"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/keygen.c:5742:0" msg_body="Inlining function 'fpr_lt' into 'keygen'">
+        <args Callee="fpr_lt" Caller="keygen"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-167" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/vrfy.c:825:9" msg_body="The program may have out of bound array access"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-167" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/keygen.c:4788:25" msg_body="The program may have out of bound array access"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-167" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/keygen.c:4790:25" msg_body="The program may have out of bound array access"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-167" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/fft.c:486:10" msg_body="The program may have out of bound array access"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-167" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/fft.c:487:10" msg_body="The program may have out of bound array access"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-167" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/fft.c:488:10" msg_body="The program may have out of bound array access"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-167" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/fft.c:489:10" msg_body="The program may have out of bound array access"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-167" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/fft.c:490:10" msg_body="The program may have out of bound array access"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-167" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/fft.c:491:10" msg_body="The program may have out of bound array access"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-167" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/fft.c:492:10" msg_body="The program may have out of bound array access"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-167" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/fft.c:493:10" msg_body="The program may have out of bound array access"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-167" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/fft.c:497:8" msg_body="The program may have out of bound array access"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-167" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/fft.c:498:13" msg_body="The program may have out of bound array access"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-167" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/fft.c:227:9" msg_body="The program may have out of bound array access"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-167" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/fft.c:228:10" msg_body="The program may have out of bound array access"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-167" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/fft.c:229:10" msg_body="The program may have out of bound array access"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-167" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/fft.c:230:10" msg_body="The program may have out of bound array access"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-167" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/fft.c:231:8" msg_body="The program may have out of bound array access"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-167" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/fft.c:582:17" msg_body="The program may have out of bound array access"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-167" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/fft.c:582:23" msg_body="The program may have out of bound array access"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-167" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/fft.c:582:7" msg_body="The program may have out of bound array access"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-167" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/fft.c:583:23" msg_body="The program may have out of bound array access"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-167" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/fft.c:583:34" msg_body="The program may have out of bound array access"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-167" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/fft.c:583:13" msg_body="The program may have out of bound array access"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-167" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/fft.c:466:17" msg_body="The program may have out of bound array access"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-167" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/fft.c:466:23" msg_body="The program may have out of bound array access"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-167" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/fft.c:466:7" msg_body="The program may have out of bound array access"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-167" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/keygen.c:4933:40" msg_body="The program may have out of bound array access"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-167" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/keygen.c:4934:40" msg_body="The program may have out of bound array access"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-167" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/keygen.c:5129:20" msg_body="The program may have out of bound array access"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-167" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/keygen.c:5140:20" msg_body="The program may have out of bound array access"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-167" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/fft.c:252:16" msg_body="The program may have out of bound array access"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-167" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/fft.c:253:18" msg_body="The program may have out of bound array access"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-167" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/fft.c:253:8" msg_body="The program may have out of bound array access"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-167" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/fft.c:254:23" msg_body="The program may have out of bound array access"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-167" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/fft.c:254:13" msg_body="The program may have out of bound array access"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-167" msg_severity="WARNING" msg_loc="../FalconHLS/code_hls/keygen.c:5151:48" msg_body="The program may have out of bound array access"/>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="../FalconHLS/code_hls/keygen.c:5795:25" msg_body="Applying array_partition to 'rng.st': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="rng.st"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

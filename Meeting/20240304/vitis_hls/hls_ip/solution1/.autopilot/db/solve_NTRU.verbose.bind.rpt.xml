@@ -1,0 +1,57 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'solve_NTRU'" level="0">
+<item name = "Date">Mon Mar  4 11:09:04 2024
+</item>
+<item name = "Version">2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)</item>
+<item name = "Project">hls_ip</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020-clg400-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">0.10 us, 72.829 ns, 27.00 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">?, ?, ?, ?, ?, ?, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_solve_NTRU_all_1_fu_478">solve_NTRU_all_1, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_modp_montymul_fu_514">modp_montymul, 0, 0, 0 ns, 0 ns, 0, 0, no</column>
+<column name="grp_modp_montymul_fu_524">modp_montymul, 0, 0, 0 ns, 0 ns, 0, 0, no</column>
+<column name="grp_modp_NTT2_ext_1_fu_542">modp_NTT2_ext_1, ?, ?, ?, ?, ?, ?, no</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- VITIS_LOOP_4378_2">?, ?, ?, -, -, ?, no</column>
+<column name="- VITIS_LOOP_2385_1">2, 2049, 2, -, -, 1 ~ 1024, no</column>
+<column name="- VITIS_LOOP_2385_1">2, 2049, 2, -, -, 1 ~ 1024, no</column>
+<column name="- VITIS_LOOP_808_1">62, 62, 2, -, -, 31, no</column>
+<column name="- VITIS_LOOP_962_2">2048, 2048, 2, -, -, 1024, no</column>
+<column name="- VITIS_LOOP_4432_3">2048, 2048, 2, -, -, 1024, no</column>
+<column name="- VITIS_LOOP_4435_4">3072, 3072, 3, -, -, 1024, no</column>
+<column name="- VITIS_LOOP_4447_5">3, 3074, 3, -, -, 1 ~ 1024, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

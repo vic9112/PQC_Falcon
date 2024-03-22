@@ -1,0 +1,688 @@
+
+
+================================================================
+== Vitis HLS Report for 'solve_NTRU'
+================================================================
+* Date:           Mon Mar  4 11:09:03 2024
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
+* Project:        hls_ip
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+-----------+------------+
+    |  Clock |  Target | Estimated | Uncertainty|
+    +--------+---------+-----------+------------+
+    |ap_clk  |  0.10 us|  72.829 ns|    27.00 ns|
+    +--------+---------+-----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +---------------------+---------+---------+----------+-----------+-----------+----------+----------+
+        |                     |  Latency (cycles) | Iteration|  Initiation Interval  |   Trip   |          |
+        |      Loop Name      |   min   |   max   |  Latency |  achieved |   target  |   Count  | Pipelined|
+        +---------------------+---------+---------+----------+-----------+-----------+----------+----------+
+        |- VITIS_LOOP_4378_2  |        ?|        ?|         ?|          -|          -|         ?|        no|
+        |- VITIS_LOOP_2385_1  |        2|     2049|         2|          -|          -|  1 ~ 1024|        no|
+        |- VITIS_LOOP_2385_1  |        2|     2049|         2|          -|          -|  1 ~ 1024|        no|
+        |- VITIS_LOOP_808_1   |       62|       62|         2|          -|          -|        31|        no|
+        |- VITIS_LOOP_962_2   |     2048|     2048|         2|          -|          -|      1024|        no|
+        |- VITIS_LOOP_4432_3  |     2048|     2048|         2|          -|          -|      1024|        no|
+        |- VITIS_LOOP_4435_4  |     3072|     3072|         3|          -|          -|      1024|        no|
+        |- VITIS_LOOP_4447_5  |        3|     3074|         3|          -|          -|  1 ~ 1024|        no|
+        +---------------------+---------+---------+----------+-----------+-----------+----------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 31
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 31 3 
+3 --> 4 
+4 --> 5 3 31 
+5 --> 6 
+6 --> 7 31 
+7 --> 8 
+8 --> 31 9 
+9 --> 10 11 
+10 --> 9 12 
+11 --> 12 13 
+12 --> 11 31 
+13 --> 14 15 
+14 --> 13 
+15 --> 16 17 
+16 --> 15 
+17 --> 18 19 
+18 --> 17 
+19 --> 20 22 
+20 --> 21 
+21 --> 19 
+22 --> 23 
+23 --> 24 
+24 --> 25 
+25 --> 26 
+26 --> 27 
+27 --> 28 
+28 --> 29 
+29 --> 30 31 
+30 --> 31 
+31 --> 29 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 67.7>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%p_read11 = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %p_read" [../FalconHLS/code_hls/keygen.c:4352]   --->   Operation 32 'read' 'p_read11' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%vla18 = alloca i64 1" [../FalconHLS/code_hls/keygen.c:4352]   --->   Operation 33 'alloca' 'vla18' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 7168> <RAM>
+ST_1 : Operation 34 [2/2] (67.7ns)   --->   "%call_ret9 = call i64 @solve_NTRU_all.1, i8 %f, i8 %g, i32 10, i32 %vla18, i32 %p_read11, i10 %REV10, i8 %MAX_BL_SMALL, i25 %PRIMES_p, i31 %PRIMES_g, i31 %PRIMES_s, i64 %fpr_gm_tab, i64 %fpr_p2_tab, i9 %MAX_BL_LARGE, i13 %BITLENGTH_avg, i5 %BITLENGTH_std" [../FalconHLS/code_hls/keygen.c:4354]   --->   Operation 34 'call' 'call_ret9' <Predicate = true> <Delay = 67.7> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 2 <SV = 1> <Delay = 4.53>
+ST_2 : Operation 35 [1/1] (0.00ns)   --->   "%specbramwithbyteenable_ln4352 = specbramwithbyteenable void @_ssdm_op_SpecBRAMWithByteEnable, i32 %vla18" [../FalconHLS/code_hls/keygen.c:4352]   --->   Operation 35 'specbramwithbyteenable' 'specbramwithbyteenable_ln4352' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 36 [1/2] (0.00ns)   --->   "%call_ret9 = call i64 @solve_NTRU_all.1, i8 %f, i8 %g, i32 10, i32 %vla18, i32 %p_read11, i10 %REV10, i8 %MAX_BL_SMALL, i25 %PRIMES_p, i31 %PRIMES_g, i31 %PRIMES_s, i64 %fpr_gm_tab, i64 %fpr_p2_tab, i9 %MAX_BL_LARGE, i13 %BITLENGTH_avg, i5 %BITLENGTH_std" [../FalconHLS/code_hls/keygen.c:4354]   --->   Operation 36 'call' 'call_ret9' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 37 [1/1] (0.00ns) (grouped into LUT with out node icmp_ln4354)   --->   "%tmp = extractvalue i64 %call_ret9" [../FalconHLS/code_hls/keygen.c:4354]   --->   Operation 37 'extractvalue' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 38 [1/1] (0.00ns)   --->   "%tmp2_0_ret6 = extractvalue i64 %call_ret9" [../FalconHLS/code_hls/keygen.c:4354]   --->   Operation 38 'extractvalue' 'tmp2_0_ret6' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 39 [1/1] (2.47ns) (out node of the LUT)   --->   "%icmp_ln4354 = icmp_eq  i32 %tmp, i32 0" [../FalconHLS/code_hls/keygen.c:4354]   --->   Operation 39 'icmp' 'icmp_ln4354' <Predicate = true> <Delay = 2.47> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 40 [1/1] (2.06ns)   --->   "%br_ln4354 = br i1 %icmp_ln4354, void %while.body12.preheader, void %cleanup94" [../FalconHLS/code_hls/keygen.c:4354]   --->   Operation 40 'br' 'br_ln4354' <Predicate = true> <Delay = 2.06>
+ST_2 : Operation 41 [1/1] (0.00ns)   --->   "%depth = alloca i32 1"   --->   Operation 41 'alloca' 'depth' <Predicate = (!icmp_ln4354)> <Delay = 0.00>
+ST_2 : Operation 42 [1/1] (0.00ns)   --->   "%tmp2_0_0 = alloca i32 1"   --->   Operation 42 'alloca' 'tmp2_0_0' <Predicate = (!icmp_ln4354)> <Delay = 0.00>
+ST_2 : Operation 43 [1/1] (1.58ns)   --->   "%store_ln4379 = store i32 %tmp2_0_ret6, i32 %tmp2_0_0" [../FalconHLS/code_hls/keygen.c:4379]   --->   Operation 43 'store' 'store_ln4379' <Predicate = (!icmp_ln4354)> <Delay = 1.58>
+ST_2 : Operation 44 [1/1] (1.58ns)   --->   "%store_ln4379 = store i32 9, i32 %depth" [../FalconHLS/code_hls/keygen.c:4379]   --->   Operation 44 'store' 'store_ln4379' <Predicate = (!icmp_ln4354)> <Delay = 1.58>
+ST_2 : Operation 45 [1/1] (0.00ns)   --->   "%br_ln4379 = br void %while.body12" [../FalconHLS/code_hls/keygen.c:4379]   --->   Operation 45 'br' 'br_ln4379' <Predicate = (!icmp_ln4354)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 67.7>
+ST_3 : Operation 46 [1/1] (0.00ns)   --->   "%depth_2 = load i32 %depth" [../FalconHLS/code_hls/keygen.c:4378]   --->   Operation 46 'load' 'depth_2' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 47 [1/1] (0.00ns)   --->   "%tmp2_0_0_load = load i32 %tmp2_0_0" [../FalconHLS/code_hls/keygen.c:4379]   --->   Operation 47 'load' 'tmp2_0_0_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 48 [2/2] (67.7ns)   --->   "%call_ret1 = call i64 @solve_NTRU_all.1, i8 %f, i8 %g, i32 %depth_2, i32 %vla18, i32 %tmp2_0_0_load, i10 %REV10, i8 %MAX_BL_SMALL, i25 %PRIMES_p, i31 %PRIMES_g, i31 %PRIMES_s, i64 %fpr_gm_tab, i64 %fpr_p2_tab, i9 %MAX_BL_LARGE, i13 %BITLENGTH_avg, i5 %BITLENGTH_std" [../FalconHLS/code_hls/keygen.c:4379]   --->   Operation 48 'call' 'call_ret1' <Predicate = true> <Delay = 67.7> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 5.03>
+ST_4 : Operation 49 [1/2] (0.00ns)   --->   "%call_ret1 = call i64 @solve_NTRU_all.1, i8 %f, i8 %g, i32 %depth_2, i32 %vla18, i32 %tmp2_0_0_load, i10 %REV10, i8 %MAX_BL_SMALL, i25 %PRIMES_p, i31 %PRIMES_g, i31 %PRIMES_s, i64 %fpr_gm_tab, i64 %fpr_p2_tab, i9 %MAX_BL_LARGE, i13 %BITLENGTH_avg, i5 %BITLENGTH_std" [../FalconHLS/code_hls/keygen.c:4379]   --->   Operation 49 'call' 'call_ret1' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 50 [1/1] (0.00ns) (grouped into LUT with out node icmp_ln4379)   --->   "%tmp_1 = extractvalue i64 %call_ret1" [../FalconHLS/code_hls/keygen.c:4379]   --->   Operation 50 'extractvalue' 'tmp_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 51 [1/1] (0.00ns)   --->   "%tmp2_0_ret4 = extractvalue i64 %call_ret1" [../FalconHLS/code_hls/keygen.c:4379]   --->   Operation 51 'extractvalue' 'tmp2_0_ret4' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 52 [1/1] (2.47ns) (out node of the LUT)   --->   "%icmp_ln4379 = icmp_eq  i32 %tmp_1, i32 0" [../FalconHLS/code_hls/keygen.c:4379]   --->   Operation 52 'icmp' 'icmp_ln4379' <Predicate = true> <Delay = 2.47> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 53 [1/1] (0.00ns)   --->   "%br_ln4379 = br i1 %icmp_ln4379, void %while.cond9, void %cleanup94.loopexit17" [../FalconHLS/code_hls/keygen.c:4379]   --->   Operation 53 'br' 'br_ln4379' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 54 [1/1] (0.00ns)   --->   "%specloopname_ln4376 = specloopname void @_ssdm_op_SpecLoopName, void @empty_34" [../FalconHLS/code_hls/keygen.c:4376]   --->   Operation 54 'specloopname' 'specloopname_ln4376' <Predicate = (!icmp_ln4379)> <Delay = 0.00>
+ST_4 : Operation 55 [1/1] (2.55ns)   --->   "%depth_3 = add i32 %depth_2, i32 4294967295" [../FalconHLS/code_hls/keygen.c:4378]   --->   Operation 55 'add' 'depth_3' <Predicate = (!icmp_ln4379)> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 56 [1/1] (2.47ns)   --->   "%icmp_ln4378 = icmp_ugt  i32 %depth_2, i32 2" [../FalconHLS/code_hls/keygen.c:4378]   --->   Operation 56 'icmp' 'icmp_ln4378' <Predicate = (!icmp_ln4379)> <Delay = 2.47> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 57 [1/1] (0.00ns)   --->   "%br_ln4378 = br i1 %icmp_ln4378, void %while.end18, void %while.cond9.while.body12_crit_edge" [../FalconHLS/code_hls/keygen.c:4378]   --->   Operation 57 'br' 'br_ln4378' <Predicate = (!icmp_ln4379)> <Delay = 0.00>
+ST_4 : Operation 58 [1/1] (1.58ns)   --->   "%store_ln4378 = store i32 %tmp2_0_ret4, i32 %tmp2_0_0" [../FalconHLS/code_hls/keygen.c:4378]   --->   Operation 58 'store' 'store_ln4378' <Predicate = (!icmp_ln4379 & icmp_ln4378)> <Delay = 1.58>
+ST_4 : Operation 59 [1/1] (1.58ns)   --->   "%store_ln4378 = store i32 %depth_3, i32 %depth" [../FalconHLS/code_hls/keygen.c:4378]   --->   Operation 59 'store' 'store_ln4378' <Predicate = (!icmp_ln4379 & icmp_ln4378)> <Delay = 1.58>
+ST_4 : Operation 60 [1/1] (0.00ns)   --->   "%br_ln4378 = br void %while.body12" [../FalconHLS/code_hls/keygen.c:4378]   --->   Operation 60 'br' 'br_ln4378' <Predicate = (!icmp_ln4379 & icmp_ln4378)> <Delay = 0.00>
+ST_4 : Operation 61 [1/1] (2.06ns)   --->   "%br_ln0 = br void %cleanup94"   --->   Operation 61 'br' 'br_ln0' <Predicate = (icmp_ln4379)> <Delay = 2.06>
+
+State 5 <SV = 4> <Delay = 67.7>
+ST_5 : Operation 62 [2/2] (67.7ns)   --->   "%call_ret2 = call i64 @solve_NTRU_all.1, i8 %f, i8 %g, i32 1, i32 %vla18, i32 %tmp2_0_ret4, i10 %REV10, i8 %MAX_BL_SMALL, i25 %PRIMES_p, i31 %PRIMES_g, i31 %PRIMES_s, i64 %fpr_gm_tab, i64 %fpr_p2_tab, i9 %MAX_BL_LARGE, i13 %BITLENGTH_avg, i5 %BITLENGTH_std" [../FalconHLS/code_hls/keygen.c:4384]   --->   Operation 62 'call' 'call_ret2' <Predicate = true> <Delay = 67.7> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 6 <SV = 5> <Delay = 4.53>
+ST_6 : Operation 63 [1/2] (0.00ns)   --->   "%call_ret2 = call i64 @solve_NTRU_all.1, i8 %f, i8 %g, i32 1, i32 %vla18, i32 %tmp2_0_ret4, i10 %REV10, i8 %MAX_BL_SMALL, i25 %PRIMES_p, i31 %PRIMES_g, i31 %PRIMES_s, i64 %fpr_gm_tab, i64 %fpr_p2_tab, i9 %MAX_BL_LARGE, i13 %BITLENGTH_avg, i5 %BITLENGTH_std" [../FalconHLS/code_hls/keygen.c:4384]   --->   Operation 63 'call' 'call_ret2' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_6 : Operation 64 [1/1] (0.00ns) (grouped into LUT with out node icmp_ln4384)   --->   "%tmp_2 = extractvalue i64 %call_ret2" [../FalconHLS/code_hls/keygen.c:4384]   --->   Operation 64 'extractvalue' 'tmp_2' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 65 [1/1] (0.00ns)   --->   "%tmp2_0_ret2 = extractvalue i64 %call_ret2" [../FalconHLS/code_hls/keygen.c:4384]   --->   Operation 65 'extractvalue' 'tmp2_0_ret2' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 66 [1/1] (2.47ns) (out node of the LUT)   --->   "%icmp_ln4384 = icmp_eq  i32 %tmp_2, i32 0" [../FalconHLS/code_hls/keygen.c:4384]   --->   Operation 66 'icmp' 'icmp_ln4384' <Predicate = true> <Delay = 2.47> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 67 [1/1] (2.06ns)   --->   "%br_ln4384 = br i1 %icmp_ln4384, void %if.end23, void %cleanup94" [../FalconHLS/code_hls/keygen.c:4384]   --->   Operation 67 'br' 'br_ln4384' <Predicate = true> <Delay = 2.06>
+
+State 7 <SV = 6> <Delay = 67.7>
+ST_7 : Operation 68 [2/2] (67.7ns)   --->   "%call_ret = call i64 @solve_NTRU_all.1, i8 %f, i8 %g, i32 0, i32 %vla18, i32 %tmp2_0_ret2, i10 %REV10, i8 %MAX_BL_SMALL, i25 %PRIMES_p, i31 %PRIMES_g, i31 %PRIMES_s, i64 %fpr_gm_tab, i64 %fpr_p2_tab, i9 %MAX_BL_LARGE, i13 %BITLENGTH_avg, i5 %BITLENGTH_std" [../FalconHLS/code_hls/keygen.c:4388]   --->   Operation 68 'call' 'call_ret' <Predicate = true> <Delay = 67.7> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 8 <SV = 7> <Delay = 4.53>
+ST_8 : Operation 69 [1/2] (0.00ns)   --->   "%call_ret = call i64 @solve_NTRU_all.1, i8 %f, i8 %g, i32 0, i32 %vla18, i32 %tmp2_0_ret2, i10 %REV10, i8 %MAX_BL_SMALL, i25 %PRIMES_p, i31 %PRIMES_g, i31 %PRIMES_s, i64 %fpr_gm_tab, i64 %fpr_p2_tab, i9 %MAX_BL_LARGE, i13 %BITLENGTH_avg, i5 %BITLENGTH_std" [../FalconHLS/code_hls/keygen.c:4388]   --->   Operation 69 'call' 'call_ret' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_8 : Operation 70 [1/1] (0.00ns) (grouped into LUT with out node icmp_ln4388)   --->   "%tmp_3 = extractvalue i64 %call_ret" [../FalconHLS/code_hls/keygen.c:4388]   --->   Operation 70 'extractvalue' 'tmp_3' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 71 [1/1] (2.47ns) (out node of the LUT)   --->   "%icmp_ln4388 = icmp_eq  i32 %tmp_3, i32 0" [../FalconHLS/code_hls/keygen.c:4388]   --->   Operation 71 'icmp' 'icmp_ln4388' <Predicate = true> <Delay = 2.47> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 72 [1/1] (2.06ns)   --->   "%br_ln4388 = br i1 %icmp_ln4388, void %for.body.i.preheader, void %cleanup94" [../FalconHLS/code_hls/keygen.c:4388]   --->   Operation 72 'br' 'br_ln4388' <Predicate = true> <Delay = 2.06>
+ST_8 : Operation 73 [1/1] (0.00ns)   --->   "%u = alloca i32 1"   --->   Operation 73 'alloca' 'u' <Predicate = (!icmp_ln4388)> <Delay = 0.00>
+ST_8 : Operation 74 [1/1] (1.58ns)   --->   "%store_ln2385 = store i11 0, i11 %u" [../FalconHLS/code_hls/keygen.c:2385]   --->   Operation 74 'store' 'store_ln2385' <Predicate = (!icmp_ln4388)> <Delay = 1.58>
+ST_8 : Operation 75 [1/1] (0.00ns)   --->   "%br_ln2385 = br void %for.body.i" [../FalconHLS/code_hls/keygen.c:2385]   --->   Operation 75 'br' 'br_ln2385' <Predicate = (!icmp_ln4388)> <Delay = 0.00>
+
+State 9 <SV = 8> <Delay = 3.46>
+ST_9 : Operation 76 [1/1] (0.00ns)   --->   "%u_174 = load i11 %u" [../FalconHLS/code_hls/keygen.c:2385]   --->   Operation 76 'load' 'u_174' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 77 [1/1] (0.00ns)   --->   "%zext_ln2385 = zext i11 %u_174" [../FalconHLS/code_hls/keygen.c:2385]   --->   Operation 77 'zext' 'zext_ln2385' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 78 [1/1] (1.88ns)   --->   "%icmp_ln2385 = icmp_eq  i11 %u_174, i11 1024" [../FalconHLS/code_hls/keygen.c:2385]   --->   Operation 78 'icmp' 'icmp_ln2385' <Predicate = true> <Delay = 1.88> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.88> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 79 [1/1] (0.00ns)   --->   "%speclooptripcount_ln0 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 1, i64 1024, i64 512"   --->   Operation 79 'speclooptripcount' 'speclooptripcount_ln0' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 80 [1/1] (1.63ns)   --->   "%u_175 = add i11 %u_174, i11 1" [../FalconHLS/code_hls/keygen.c:2385]   --->   Operation 80 'add' 'u_175' <Predicate = true> <Delay = 1.63> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.63> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 81 [1/1] (0.00ns)   --->   "%br_ln2385 = br i1 %icmp_ln2385, void %for.body.i.split, void %for.body.i44.preheader" [../FalconHLS/code_hls/keygen.c:2385]   --->   Operation 81 'br' 'br_ln2385' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 82 [1/1] (0.00ns)   --->   "%vla18_addr = getelementptr i32 %vla18, i64 0, i64 %zext_ln2385" [../FalconHLS/code_hls/keygen.c:2310]   --->   Operation 82 'getelementptr' 'vla18_addr' <Predicate = (!icmp_ln2385)> <Delay = 0.00>
+ST_9 : Operation 83 [2/2] (3.25ns)   --->   "%w = load i13 %vla18_addr" [../FalconHLS/code_hls/keygen.c:2310]   --->   Operation 83 'load' 'w' <Predicate = (!icmp_ln2385)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 7168> <RAM>
+ST_9 : Operation 84 [1/1] (0.00ns)   --->   "%u_103 = alloca i32 1"   --->   Operation 84 'alloca' 'u_103' <Predicate = (icmp_ln2385)> <Delay = 0.00>
+ST_9 : Operation 85 [1/1] (1.58ns)   --->   "%store_ln2385 = store i11 0, i11 %u_103" [../FalconHLS/code_hls/keygen.c:2385]   --->   Operation 85 'store' 'store_ln2385' <Predicate = (icmp_ln2385)> <Delay = 1.58>
+ST_9 : Operation 86 [1/1] (0.00ns)   --->   "%br_ln2385 = br void %for.body.i44" [../FalconHLS/code_hls/keygen.c:2385]   --->   Operation 86 'br' 'br_ln2385' <Predicate = (icmp_ln2385)> <Delay = 0.00>
+
+State 10 <SV = 9> <Delay = 11.5>
+ST_10 : Operation 87 [1/1] (0.00ns)   --->   "%specloopname_ln2382 = specloopname void @_ssdm_op_SpecLoopName, void @empty_16" [../FalconHLS/code_hls/keygen.c:2382]   --->   Operation 87 'specloopname' 'specloopname_ln2382' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 88 [1/2] (3.25ns)   --->   "%w = load i13 %vla18_addr" [../FalconHLS/code_hls/keygen.c:2310]   --->   Operation 88 'load' 'w' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 7168> <RAM>
+ST_10 : Operation 89 [1/1] (0.00ns) (grouped into LUT with out node add_ln2389)   --->   "%tmp_158 = bitselect i1 @_ssdm_op_BitSelect.i1.i32.i32, i32 %w, i32 30" [../FalconHLS/code_hls/keygen.c:2311]   --->   Operation 89 'bitselect' 'tmp_158' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 90 [1/1] (0.00ns) (grouped into LUT with out node add_ln2389)   --->   "%and_ln = bitconcatenate i32 @_ssdm_op_BitConcatenate.i32.i1.i31, i1 %tmp_158, i31 0" [../FalconHLS/code_hls/keygen.c:2311]   --->   Operation 90 'bitconcatenate' 'and_ln' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 91 [1/1] (0.00ns) (grouped into LUT with out node add_ln2389)   --->   "%w_51 = or i32 %w, i32 %and_ln" [../FalconHLS/code_hls/keygen.c:2311]   --->   Operation 91 'or' 'w_51' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 92 [1/1] (2.55ns) (out node of the LUT)   --->   "%add_ln2389 = add i32 %w_51, i32 127" [../FalconHLS/code_hls/keygen.c:2389]   --->   Operation 92 'add' 'add_ln2389' <Predicate = true> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 93 [1/1] (2.47ns)   --->   "%icmp_ln2389 = icmp_ugt  i32 %add_ln2389, i32 254" [../FalconHLS/code_hls/keygen.c:2389]   --->   Operation 93 'icmp' 'icmp_ln2389' <Predicate = true> <Delay = 2.47> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 94 [1/1] (0.00ns)   --->   "%br_ln2389 = br i1 %icmp_ln2389, void %for.inc.i, void %if.then38.loopexit16" [../FalconHLS/code_hls/keygen.c:2389]   --->   Operation 94 'br' 'br_ln2389' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 95 [1/1] (0.00ns)   --->   "%trunc_ln2392 = trunc i32 %w" [../FalconHLS/code_hls/keygen.c:2392]   --->   Operation 95 'trunc' 'trunc_ln2392' <Predicate = (!icmp_ln2389)> <Delay = 0.00>
+ST_10 : Operation 96 [1/1] (0.00ns)   --->   "%F_upper_addr = getelementptr i8 %F_upper, i64 0, i64 %zext_ln2385" [../FalconHLS/code_hls/keygen.c:2392]   --->   Operation 96 'getelementptr' 'F_upper_addr' <Predicate = (!icmp_ln2389)> <Delay = 0.00>
+ST_10 : Operation 97 [1/1] (3.25ns)   --->   "%store_ln2392 = store i8 %trunc_ln2392, i10 %F_upper_addr" [../FalconHLS/code_hls/keygen.c:2392]   --->   Operation 97 'store' 'store_ln2392' <Predicate = (!icmp_ln2389)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 1024> <RAM>
+ST_10 : Operation 98 [1/1] (1.58ns)   --->   "%store_ln2385 = store i11 %u_175, i11 %u" [../FalconHLS/code_hls/keygen.c:2385]   --->   Operation 98 'store' 'store_ln2385' <Predicate = (!icmp_ln2389)> <Delay = 1.58>
+ST_10 : Operation 99 [1/1] (0.00ns)   --->   "%br_ln2385 = br void %for.body.i" [../FalconHLS/code_hls/keygen.c:2385]   --->   Operation 99 'br' 'br_ln2385' <Predicate = (!icmp_ln2389)> <Delay = 0.00>
+ST_10 : Operation 100 [1/1] (0.00ns)   --->   "%br_ln0 = br void %if.then38"   --->   Operation 100 'br' 'br_ln0' <Predicate = (icmp_ln2389)> <Delay = 0.00>
+
+State 11 <SV = 9> <Delay = 3.46>
+ST_11 : Operation 101 [1/1] (0.00ns)   --->   "%u_176 = load i11 %u_103" [../FalconHLS/code_hls/keygen.c:2388]   --->   Operation 101 'load' 'u_176' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 102 [1/1] (0.00ns)   --->   "%zext_ln2385_1 = zext i11 %u_176" [../FalconHLS/code_hls/keygen.c:2385]   --->   Operation 102 'zext' 'zext_ln2385_1' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 103 [1/1] (1.88ns)   --->   "%icmp_ln2385_1 = icmp_eq  i11 %u_176, i11 1024" [../FalconHLS/code_hls/keygen.c:2385]   --->   Operation 103 'icmp' 'icmp_ln2385_1' <Predicate = true> <Delay = 1.88> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.88> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 104 [1/1] (0.00ns)   --->   "%speclooptripcount_ln0 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 1, i64 1024, i64 512"   --->   Operation 104 'speclooptripcount' 'speclooptripcount_ln0' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 105 [1/1] (1.63ns)   --->   "%u_177 = add i11 %u_176, i11 1" [../FalconHLS/code_hls/keygen.c:2385]   --->   Operation 105 'add' 'u_177' <Predicate = true> <Delay = 1.63> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.63> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 106 [1/1] (0.00ns)   --->   "%br_ln2385 = br i1 %icmp_ln2385_1, void %for.body.i44.split, void %if.end40" [../FalconHLS/code_hls/keygen.c:2385]   --->   Operation 106 'br' 'br_ln2385' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 107 [1/1] (0.00ns)   --->   "%trunc_ln2388 = trunc i11 %u_176" [../FalconHLS/code_hls/keygen.c:2388]   --->   Operation 107 'trunc' 'trunc_ln2388' <Predicate = (!icmp_ln2385_1)> <Delay = 0.00>
+ST_11 : Operation 108 [1/1] (0.00ns)   --->   "%zext_ln = bitconcatenate i11 @_ssdm_op_BitConcatenate.i11.i1.i10, i1 1, i10 %trunc_ln2388" [../FalconHLS/code_hls/keygen.c:2310]   --->   Operation 108 'bitconcatenate' 'zext_ln' <Predicate = (!icmp_ln2385_1)> <Delay = 0.00>
+ST_11 : Operation 109 [1/1] (0.00ns)   --->   "%zext_ln2310 = zext i11 %zext_ln" [../FalconHLS/code_hls/keygen.c:2310]   --->   Operation 109 'zext' 'zext_ln2310' <Predicate = (!icmp_ln2385_1)> <Delay = 0.00>
+ST_11 : Operation 110 [1/1] (0.00ns)   --->   "%vla18_addr_273 = getelementptr i32 %vla18, i64 0, i64 %zext_ln2310" [../FalconHLS/code_hls/keygen.c:2310]   --->   Operation 110 'getelementptr' 'vla18_addr_273' <Predicate = (!icmp_ln2385_1)> <Delay = 0.00>
+ST_11 : Operation 111 [2/2] (3.25ns)   --->   "%w_41 = load i13 %vla18_addr_273" [../FalconHLS/code_hls/keygen.c:2310]   --->   Operation 111 'load' 'w_41' <Predicate = (!icmp_ln2385_1)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 7168> <RAM>
+ST_11 : Operation 112 [1/1] (0.00ns)   --->   "%z_47 = alloca i32 1"   --->   Operation 112 'alloca' 'z_47' <Predicate = (icmp_ln2385_1)> <Delay = 0.00>
+ST_11 : Operation 113 [1/1] (0.00ns)   --->   "%i = alloca i32 1"   --->   Operation 113 'alloca' 'i' <Predicate = (icmp_ln2385_1)> <Delay = 0.00>
+ST_11 : Operation 114 [1/1] (1.58ns)   --->   "%store_ln808 = store i6 30, i6 %i" [../FalconHLS/code_hls/keygen.c:808]   --->   Operation 114 'store' 'store_ln808' <Predicate = (icmp_ln2385_1)> <Delay = 1.58>
+ST_11 : Operation 115 [1/1] (1.58ns)   --->   "%store_ln808 = store i32 10239, i32 %z_47" [../FalconHLS/code_hls/keygen.c:808]   --->   Operation 115 'store' 'store_ln808' <Predicate = (icmp_ln2385_1)> <Delay = 1.58>
+ST_11 : Operation 116 [1/1] (0.00ns)   --->   "%br_ln808 = br void %for.inc.i.i" [../FalconHLS/code_hls/keygen.c:808]   --->   Operation 116 'br' 'br_ln808' <Predicate = (icmp_ln2385_1)> <Delay = 0.00>
+
+State 12 <SV = 10> <Delay = 11.5>
+ST_12 : Operation 117 [1/1] (0.00ns)   --->   "%specloopname_ln2382 = specloopname void @_ssdm_op_SpecLoopName, void @empty_16" [../FalconHLS/code_hls/keygen.c:2382]   --->   Operation 117 'specloopname' 'specloopname_ln2382' <Predicate = (icmp_ln2385)> <Delay = 0.00>
+ST_12 : Operation 118 [1/2] (3.25ns)   --->   "%w_41 = load i13 %vla18_addr_273" [../FalconHLS/code_hls/keygen.c:2310]   --->   Operation 118 'load' 'w_41' <Predicate = (icmp_ln2385)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 7168> <RAM>
+ST_12 : Operation 119 [1/1] (0.00ns) (grouped into LUT with out node add_ln2389_1)   --->   "%tmp_159 = bitselect i1 @_ssdm_op_BitSelect.i1.i32.i32, i32 %w_41, i32 30" [../FalconHLS/code_hls/keygen.c:2311]   --->   Operation 119 'bitselect' 'tmp_159' <Predicate = (icmp_ln2385)> <Delay = 0.00>
+ST_12 : Operation 120 [1/1] (0.00ns) (grouped into LUT with out node add_ln2389_1)   --->   "%and_ln2311_2 = bitconcatenate i32 @_ssdm_op_BitConcatenate.i32.i1.i31, i1 %tmp_159, i31 0" [../FalconHLS/code_hls/keygen.c:2311]   --->   Operation 120 'bitconcatenate' 'and_ln2311_2' <Predicate = (icmp_ln2385)> <Delay = 0.00>
+ST_12 : Operation 121 [1/1] (0.00ns) (grouped into LUT with out node add_ln2389_1)   --->   "%w_52 = or i32 %w_41, i32 %and_ln2311_2" [../FalconHLS/code_hls/keygen.c:2311]   --->   Operation 121 'or' 'w_52' <Predicate = (icmp_ln2385)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 122 [1/1] (2.55ns) (out node of the LUT)   --->   "%add_ln2389_1 = add i32 %w_52, i32 127" [../FalconHLS/code_hls/keygen.c:2389]   --->   Operation 122 'add' 'add_ln2389_1' <Predicate = (icmp_ln2385)> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 123 [1/1] (2.47ns)   --->   "%icmp_ln2389_1 = icmp_ugt  i32 %add_ln2389_1, i32 254" [../FalconHLS/code_hls/keygen.c:2389]   --->   Operation 123 'icmp' 'icmp_ln2389_1' <Predicate = (icmp_ln2385)> <Delay = 2.47> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 124 [1/1] (0.00ns)   --->   "%br_ln2389 = br i1 %icmp_ln2389_1, void %for.inc.i53, void %if.then38.loopexit" [../FalconHLS/code_hls/keygen.c:2389]   --->   Operation 124 'br' 'br_ln2389' <Predicate = (icmp_ln2385)> <Delay = 0.00>
+ST_12 : Operation 125 [1/1] (0.00ns)   --->   "%trunc_ln2392_1 = trunc i32 %w_41" [../FalconHLS/code_hls/keygen.c:2392]   --->   Operation 125 'trunc' 'trunc_ln2392_1' <Predicate = (icmp_ln2385 & !icmp_ln2389_1)> <Delay = 0.00>
+ST_12 : Operation 126 [1/1] (0.00ns)   --->   "%G_upper_addr = getelementptr i8 %G_upper, i64 0, i64 %zext_ln2385_1" [../FalconHLS/code_hls/keygen.c:2392]   --->   Operation 126 'getelementptr' 'G_upper_addr' <Predicate = (icmp_ln2385 & !icmp_ln2389_1)> <Delay = 0.00>
+ST_12 : Operation 127 [1/1] (3.25ns)   --->   "%store_ln2392 = store i8 %trunc_ln2392_1, i10 %G_upper_addr" [../FalconHLS/code_hls/keygen.c:2392]   --->   Operation 127 'store' 'store_ln2392' <Predicate = (icmp_ln2385 & !icmp_ln2389_1)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 1024> <RAM>
+ST_12 : Operation 128 [1/1] (1.58ns)   --->   "%store_ln2385 = store i11 %u_177, i11 %u_103" [../FalconHLS/code_hls/keygen.c:2385]   --->   Operation 128 'store' 'store_ln2385' <Predicate = (icmp_ln2385 & !icmp_ln2389_1)> <Delay = 1.58>
+ST_12 : Operation 129 [1/1] (0.00ns)   --->   "%br_ln2385 = br void %for.body.i44" [../FalconHLS/code_hls/keygen.c:2385]   --->   Operation 129 'br' 'br_ln2385' <Predicate = (icmp_ln2385 & !icmp_ln2389_1)> <Delay = 0.00>
+ST_12 : Operation 130 [1/1] (0.00ns)   --->   "%br_ln0 = br void %if.then38"   --->   Operation 130 'br' 'br_ln0' <Predicate = (icmp_ln2385 & icmp_ln2389_1)> <Delay = 0.00>
+ST_12 : Operation 131 [1/1] (2.06ns)   --->   "%br_ln4411 = br void %cleanup94" [../FalconHLS/code_hls/keygen.c:4411]   --->   Operation 131 'br' 'br_ln4411' <Predicate = (icmp_ln2389_1) | (!icmp_ln2385)> <Delay = 2.06>
+
+State 13 <SV = 10> <Delay = 72.1>
+ST_13 : Operation 132 [1/1] (0.00ns)   --->   "%i_8 = load i6 %i" [../FalconHLS/code_hls/keygen.c:808]   --->   Operation 132 'load' 'i_8' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 133 [1/1] (0.00ns)   --->   "%sext_ln808 = sext i6 %i_8" [../FalconHLS/code_hls/keygen.c:808]   --->   Operation 133 'sext' 'sext_ln808' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 134 [1/1] (0.00ns)   --->   "%tmp_160 = bitselect i1 @_ssdm_op_BitSelect.i1.i6.i32, i6 %i_8, i32 5" [../FalconHLS/code_hls/keygen.c:808]   --->   Operation 134 'bitselect' 'tmp_160' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 135 [1/1] (0.00ns)   --->   "%speclooptripcount_ln0 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 31, i64 31, i64 31"   --->   Operation 135 'speclooptripcount' 'speclooptripcount_ln0' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 136 [1/1] (0.00ns)   --->   "%br_ln808 = br i1 %tmp_160, void %for.inc.i.i.split, void %modp_div.exit.i" [../FalconHLS/code_hls/keygen.c:808]   --->   Operation 136 'br' 'br_ln808' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 137 [1/1] (0.00ns)   --->   "%z_47_load_1 = load i32 %z_47" [../FalconHLS/code_hls/keygen.c:811]   --->   Operation 137 'load' 'z_47_load_1' <Predicate = (!tmp_160)> <Delay = 0.00>
+ST_13 : Operation 138 [1/1] (33.8ns)   --->   "%z_63 = call i32 @modp_montymul, i32 %z_47_load_1, i32 %z_47_load_1, i32 2147473409, i32 2042615807" [../FalconHLS/code_hls/keygen.c:811]   --->   Operation 138 'call' 'z_63' <Predicate = (!tmp_160)> <Delay = 33.8> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_13 : Operation 139 [1/1] (33.8ns)   --->   "%z2 = call i32 @modp_montymul, i32 %z_63, i32 1968792473, i32 2147473409, i32 2042615807" [../FalconHLS/code_hls/keygen.c:812]   --->   Operation 139 'call' 'z2' <Predicate = (!tmp_160)> <Delay = 33.8> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_13 : Operation 140 [1/1] (0.00ns) (grouped into LUT with out node z_64)   --->   "%xor_ln813 = xor i32 %z2, i32 %z_63" [../FalconHLS/code_hls/keygen.c:813]   --->   Operation 140 'xor' 'xor_ln813' <Predicate = (!tmp_160)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 141 [1/1] (0.00ns) (grouped into LUT with out node z_64)   --->   "%lshr_ln813 = lshr i32 2147473407, i32 %sext_ln808" [../FalconHLS/code_hls/keygen.c:813]   --->   Operation 141 'lshr' 'lshr_ln813' <Predicate = (!tmp_160)> <Delay = 0.00> <CoreInst = "Shifter">   --->   Core 75 'Shifter' <Latency = 0> <II = 1> <Delay = 4.42> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 142 [1/1] (0.00ns) (grouped into LUT with out node z_64)   --->   "%trunc_ln813 = trunc i32 %lshr_ln813" [../FalconHLS/code_hls/keygen.c:813]   --->   Operation 142 'trunc' 'trunc_ln813' <Predicate = (!tmp_160)> <Delay = 0.00>
+ST_13 : Operation 143 [1/1] (0.00ns) (grouped into LUT with out node z_64)   --->   "%select_ln813 = select i1 %trunc_ln813, i32 4294967295, i32 0" [../FalconHLS/code_hls/keygen.c:813]   --->   Operation 143 'select' 'select_ln813' <Predicate = (!tmp_160)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_13 : Operation 144 [1/1] (0.00ns) (grouped into LUT with out node z_64)   --->   "%and_ln813 = and i32 %xor_ln813, i32 %select_ln813" [../FalconHLS/code_hls/keygen.c:813]   --->   Operation 144 'and' 'and_ln813' <Predicate = (!tmp_160)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 145 [1/1] (4.42ns) (out node of the LUT)   --->   "%z_64 = xor i32 %and_ln813, i32 %z_63" [../FalconHLS/code_hls/keygen.c:813]   --->   Operation 145 'xor' 'z_64' <Predicate = (!tmp_160)> <Delay = 4.42> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 146 [1/1] (1.82ns)   --->   "%i_9 = add i6 %i_8, i6 63" [../FalconHLS/code_hls/keygen.c:808]   --->   Operation 146 'add' 'i_9' <Predicate = (!tmp_160)> <Delay = 1.82> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 147 [1/1] (1.58ns)   --->   "%store_ln808 = store i6 %i_9, i6 %i" [../FalconHLS/code_hls/keygen.c:808]   --->   Operation 147 'store' 'store_ln808' <Predicate = (!tmp_160)> <Delay = 1.58>
+ST_13 : Operation 148 [1/1] (0.00ns)   --->   "%u_105 = alloca i32 1"   --->   Operation 148 'alloca' 'u_105' <Predicate = (tmp_160)> <Delay = 0.00>
+ST_13 : Operation 149 [1/1] (0.00ns)   --->   "%x1 = alloca i32 1"   --->   Operation 149 'alloca' 'x1' <Predicate = (tmp_160)> <Delay = 0.00>
+ST_13 : Operation 150 [1/1] (0.00ns)   --->   "%x2 = alloca i32 1"   --->   Operation 150 'alloca' 'x2' <Predicate = (tmp_160)> <Delay = 0.00>
+ST_13 : Operation 151 [1/1] (0.00ns)   --->   "%z_47_load = load i32 %z_47" [../FalconHLS/code_hls/keygen.c:827]   --->   Operation 151 'load' 'z_47_load' <Predicate = (tmp_160)> <Delay = 0.00>
+ST_13 : Operation 152 [1/1] (33.8ns)   --->   "%z_62 = call i32 @modp_montymul, i32 %z_47_load, i32 1, i32 2147473409, i32 2042615807" [../FalconHLS/code_hls/keygen.c:827]   --->   Operation 152 'call' 'z_62' <Predicate = (tmp_160)> <Delay = 33.8> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_13 : Operation 153 [1/1] (33.8ns)   --->   "%ig = call i32 @modp_montymul, i32 104837121, i32 %z_62, i32 2147473409, i32 2042615807" [../FalconHLS/code_hls/keygen.c:828]   --->   Operation 153 'call' 'ig' <Predicate = (tmp_160)> <Delay = 33.8> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_13 : Operation 154 [1/1] (1.58ns)   --->   "%store_ln962 = store i32 10239, i32 %x2" [../FalconHLS/code_hls/keygen.c:962]   --->   Operation 154 'store' 'store_ln962' <Predicate = (tmp_160)> <Delay = 1.58>
+ST_13 : Operation 155 [1/1] (1.58ns)   --->   "%store_ln962 = store i32 10239, i32 %x1" [../FalconHLS/code_hls/keygen.c:962]   --->   Operation 155 'store' 'store_ln962' <Predicate = (tmp_160)> <Delay = 1.58>
+ST_13 : Operation 156 [1/1] (1.58ns)   --->   "%store_ln962 = store i11 0, i11 %u_105" [../FalconHLS/code_hls/keygen.c:962]   --->   Operation 156 'store' 'store_ln962' <Predicate = (tmp_160)> <Delay = 1.58>
+ST_13 : Operation 157 [1/1] (0.00ns)   --->   "%br_ln962 = br void %for.inc15.i" [../FalconHLS/code_hls/keygen.c:962]   --->   Operation 157 'br' 'br_ln962' <Predicate = (tmp_160)> <Delay = 0.00>
+
+State 14 <SV = 11> <Delay = 1.58>
+ST_14 : Operation 158 [1/1] (0.00ns)   --->   "%specloopname_ln803 = specloopname void @_ssdm_op_SpecLoopName, void @empty_17" [../FalconHLS/code_hls/keygen.c:803]   --->   Operation 158 'specloopname' 'specloopname_ln803' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 159 [1/1] (1.58ns)   --->   "%store_ln808 = store i32 %z_64, i32 %z_47" [../FalconHLS/code_hls/keygen.c:808]   --->   Operation 159 'store' 'store_ln808' <Predicate = true> <Delay = 1.58>
+ST_14 : Operation 160 [1/1] (0.00ns)   --->   "%br_ln808 = br void %for.inc.i.i" [../FalconHLS/code_hls/keygen.c:808]   --->   Operation 160 'br' 'br_ln808' <Predicate = true> <Delay = 0.00>
+
+State 15 <SV = 11> <Delay = 3.46>
+ST_15 : Operation 161 [1/1] (0.00ns)   --->   "%u_178 = load i11 %u_105" [../FalconHLS/code_hls/keygen.c:962]   --->   Operation 161 'load' 'u_178' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 162 [1/1] (0.00ns)   --->   "%zext_ln962 = zext i11 %u_178" [../FalconHLS/code_hls/keygen.c:962]   --->   Operation 162 'zext' 'zext_ln962' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 163 [1/1] (1.88ns)   --->   "%icmp_ln962 = icmp_eq  i11 %u_178, i11 1024" [../FalconHLS/code_hls/keygen.c:962]   --->   Operation 163 'icmp' 'icmp_ln962' <Predicate = true> <Delay = 1.88> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.88> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 164 [1/1] (0.00ns)   --->   "%speclooptripcount_ln0 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 1024, i64 1024, i64 1024"   --->   Operation 164 'speclooptripcount' 'speclooptripcount_ln0' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 165 [1/1] (1.63ns)   --->   "%u_179 = add i11 %u_178, i11 1" [../FalconHLS/code_hls/keygen.c:962]   --->   Operation 165 'add' 'u_179' <Predicate = true> <Delay = 1.63> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.63> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 166 [1/1] (0.00ns)   --->   "%br_ln962 = br i1 %icmp_ln962, void %for.inc15.i.split, void %for.inc.preheader" [../FalconHLS/code_hls/keygen.c:962]   --->   Operation 166 'br' 'br_ln962' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 167 [1/1] (0.00ns)   --->   "%REV10_addr = getelementptr i10 %REV10, i64 0, i64 %zext_ln962" [../FalconHLS/code_hls/keygen.c:966]   --->   Operation 167 'getelementptr' 'REV10_addr' <Predicate = (!icmp_ln962)> <Delay = 0.00>
+ST_15 : Operation 168 [2/2] (3.25ns)   --->   "%v = load i10 %REV10_addr" [../FalconHLS/code_hls/keygen.c:966]   --->   Operation 168 'load' 'v' <Predicate = (!icmp_ln962)> <Delay = 3.25> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 10> <Depth = 1024> <ROM>
+ST_15 : Operation 169 [1/1] (1.58ns)   --->   "%store_ln962 = store i11 %u_179, i11 %u_105" [../FalconHLS/code_hls/keygen.c:962]   --->   Operation 169 'store' 'store_ln962' <Predicate = (!icmp_ln962)> <Delay = 1.58>
+ST_15 : Operation 170 [1/1] (0.00ns)   --->   "%u_034 = alloca i32 1"   --->   Operation 170 'alloca' 'u_034' <Predicate = (icmp_ln962)> <Delay = 0.00>
+ST_15 : Operation 171 [1/1] (1.58ns)   --->   "%store_ln4432 = store i11 0, i11 %u_034" [../FalconHLS/code_hls/keygen.c:4432]   --->   Operation 171 'store' 'store_ln4432' <Predicate = (icmp_ln962)> <Delay = 1.58>
+ST_15 : Operation 172 [1/1] (0.00ns)   --->   "%br_ln4432 = br void %for.inc" [../FalconHLS/code_hls/keygen.c:4432]   --->   Operation 172 'br' 'br_ln4432' <Predicate = (icmp_ln962)> <Delay = 0.00>
+
+State 16 <SV = 12> <Delay = 35.4>
+ST_16 : Operation 173 [1/1] (0.00ns)   --->   "%x1_load = load i32 %x1" [../FalconHLS/code_hls/keygen.c:967]   --->   Operation 173 'load' 'x1_load' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 174 [1/1] (0.00ns)   --->   "%x2_load = load i32 %x2" [../FalconHLS/code_hls/keygen.c:968]   --->   Operation 174 'load' 'x2_load' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 175 [1/1] (0.00ns)   --->   "%specloopname_ln942 = specloopname void @_ssdm_op_SpecLoopName, void @empty_18" [../FalconHLS/code_hls/keygen.c:942]   --->   Operation 175 'specloopname' 'specloopname_ln942' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 176 [1/2] (3.25ns)   --->   "%v = load i10 %REV10_addr" [../FalconHLS/code_hls/keygen.c:966]   --->   Operation 176 'load' 'v' <Predicate = true> <Delay = 3.25> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 10> <Depth = 1024> <ROM>
+ST_16 : Operation 177 [1/1] (0.00ns)   --->   "%zext_ln966 = zext i10 %v" [../FalconHLS/code_hls/keygen.c:966]   --->   Operation 177 'zext' 'zext_ln966' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 178 [1/1] (0.00ns)   --->   "%zext_ln967_cast = bitconcatenate i13 @_ssdm_op_BitConcatenate.i13.i3.i10, i3 4, i10 %v" [../FalconHLS/code_hls/keygen.c:967]   --->   Operation 178 'bitconcatenate' 'zext_ln967_cast' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 179 [1/1] (0.00ns)   --->   "%zext_ln967 = zext i13 %zext_ln967_cast" [../FalconHLS/code_hls/keygen.c:967]   --->   Operation 179 'zext' 'zext_ln967' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 180 [1/1] (0.00ns)   --->   "%vla18_addr_274 = getelementptr i32 %vla18, i64 0, i64 %zext_ln967" [../FalconHLS/code_hls/keygen.c:967]   --->   Operation 180 'getelementptr' 'vla18_addr_274' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 181 [1/1] (3.25ns)   --->   "%store_ln967 = store void @_ssdm_op_Write.bram.i32, i13 %vla18_addr_274, i32 %x1_load, i4 15" [../FalconHLS/code_hls/keygen.c:967]   --->   Operation 181 'store' 'store_ln967' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 7168> <RAM>
+ST_16 : Operation 182 [1/1] (0.00ns)   --->   "%vla18_addr_275 = getelementptr i32 %vla18, i64 0, i64 %zext_ln966" [../FalconHLS/code_hls/keygen.c:968]   --->   Operation 182 'getelementptr' 'vla18_addr_275' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 183 [1/1] (3.25ns)   --->   "%store_ln968 = store void @_ssdm_op_Write.bram.i32, i13 %vla18_addr_275, i32 %x2_load, i4 15" [../FalconHLS/code_hls/keygen.c:968]   --->   Operation 183 'store' 'store_ln968' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 7168> <RAM>
+ST_16 : Operation 184 [1/1] (33.8ns)   --->   "%x1_1 = call i32 @modp_montymul, i32 %x1_load, i32 1968792473, i32 2147473409, i32 2042615807" [../FalconHLS/code_hls/keygen.c:969]   --->   Operation 184 'call' 'x1_1' <Predicate = true> <Delay = 33.8> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_16 : Operation 185 [1/1] (33.8ns)   --->   "%x2_1 = call i32 @modp_montymul, i32 %x2_load, i32 %ig, i32 2147473409, i32 2042615807" [../FalconHLS/code_hls/keygen.c:970]   --->   Operation 185 'call' 'x2_1' <Predicate = true> <Delay = 33.8> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_16 : Operation 186 [1/1] (1.58ns)   --->   "%store_ln962 = store i32 %x2_1, i32 %x2" [../FalconHLS/code_hls/keygen.c:962]   --->   Operation 186 'store' 'store_ln962' <Predicate = true> <Delay = 1.58>
+ST_16 : Operation 187 [1/1] (1.58ns)   --->   "%store_ln962 = store i32 %x1_1, i32 %x1" [../FalconHLS/code_hls/keygen.c:962]   --->   Operation 187 'store' 'store_ln962' <Predicate = true> <Delay = 1.58>
+ST_16 : Operation 188 [1/1] (0.00ns)   --->   "%br_ln962 = br void %for.inc15.i" [../FalconHLS/code_hls/keygen.c:962]   --->   Operation 188 'br' 'br_ln962' <Predicate = true> <Delay = 0.00>
+
+State 17 <SV = 12> <Delay = 3.46>
+ST_17 : Operation 189 [1/1] (0.00ns)   --->   "%u_180 = load i11 %u_034" [../FalconHLS/code_hls/keygen.c:4432]   --->   Operation 189 'load' 'u_180' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 190 [1/1] (0.00ns)   --->   "%zext_ln4432 = zext i11 %u_180" [../FalconHLS/code_hls/keygen.c:4432]   --->   Operation 190 'zext' 'zext_ln4432' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 191 [1/1] (1.88ns)   --->   "%icmp_ln4432 = icmp_eq  i11 %u_180, i11 1024" [../FalconHLS/code_hls/keygen.c:4432]   --->   Operation 191 'icmp' 'icmp_ln4432' <Predicate = true> <Delay = 1.88> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.88> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 192 [1/1] (0.00ns)   --->   "%speclooptripcount_ln0 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 1024, i64 1024, i64 1024"   --->   Operation 192 'speclooptripcount' 'speclooptripcount_ln0' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 193 [1/1] (1.63ns)   --->   "%u_181 = add i11 %u_180, i11 1" [../FalconHLS/code_hls/keygen.c:4432]   --->   Operation 193 'add' 'u_181' <Predicate = true> <Delay = 1.63> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.63> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 194 [1/1] (0.00ns)   --->   "%br_ln4432 = br i1 %icmp_ln4432, void %for.inc.split, void %for.inc69.preheader" [../FalconHLS/code_hls/keygen.c:4432]   --->   Operation 194 'br' 'br_ln4432' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 195 [1/1] (0.00ns)   --->   "%G_upper_addr_1 = getelementptr i8 %G_upper, i64 0, i64 %zext_ln4432" [../FalconHLS/code_hls/keygen.c:4433]   --->   Operation 195 'getelementptr' 'G_upper_addr_1' <Predicate = (!icmp_ln4432)> <Delay = 0.00>
+ST_17 : Operation 196 [2/2] (3.25ns)   --->   "%w_43 = load i10 %G_upper_addr_1" [../FalconHLS/code_hls/keygen.c:4433]   --->   Operation 196 'load' 'w_43' <Predicate = (!icmp_ln4432)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 1024> <RAM>
+ST_17 : Operation 197 [1/1] (1.58ns)   --->   "%store_ln4432 = store i11 %u_181, i11 %u_034" [../FalconHLS/code_hls/keygen.c:4432]   --->   Operation 197 'store' 'store_ln4432' <Predicate = (!icmp_ln4432)> <Delay = 1.58>
+ST_17 : Operation 198 [1/1] (0.00ns)   --->   "%u_108 = alloca i32 1"   --->   Operation 198 'alloca' 'u_108' <Predicate = (icmp_ln4432)> <Delay = 0.00>
+ST_17 : Operation 199 [1/1] (1.58ns)   --->   "%store_ln4435 = store i11 0, i11 %u_108" [../FalconHLS/code_hls/keygen.c:4435]   --->   Operation 199 'store' 'store_ln4435' <Predicate = (icmp_ln4432)> <Delay = 1.58>
+ST_17 : Operation 200 [1/1] (0.00ns)   --->   "%br_ln4435 = br void %for.inc69" [../FalconHLS/code_hls/keygen.c:4435]   --->   Operation 200 'br' 'br_ln4435' <Predicate = (icmp_ln4432)> <Delay = 0.00>
+
+State 18 <SV = 13> <Delay = 9.06>
+ST_18 : Operation 201 [1/1] (0.00ns)   --->   "%specloopname_ln4345 = specloopname void @_ssdm_op_SpecLoopName, void @empty_19" [../FalconHLS/code_hls/keygen.c:4345]   --->   Operation 201 'specloopname' 'specloopname_ln4345' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 202 [1/2] (3.25ns)   --->   "%w_43 = load i10 %G_upper_addr_1" [../FalconHLS/code_hls/keygen.c:4433]   --->   Operation 202 'load' 'w_43' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 1024> <RAM>
+ST_18 : Operation 203 [1/1] (0.00ns) (grouped into LUT with out node w_44)   --->   "%sext_ln4433 = sext i8 %w_43" [../FalconHLS/code_hls/keygen.c:4433]   --->   Operation 203 'sext' 'sext_ln4433' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 204 [1/1] (0.00ns) (grouped into LUT with out node w_44)   --->   "%tmp_161 = bitselect i1 @_ssdm_op_BitSelect.i1.i8.i32, i8 %w_43, i32 7" [../FalconHLS/code_hls/keygen.c:635]   --->   Operation 204 'bitselect' 'tmp_161' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 205 [1/1] (0.00ns) (grouped into LUT with out node w_44)   --->   "%select_ln635 = select i1 %tmp_161, i32 2147473409, i32 0" [../FalconHLS/code_hls/keygen.c:635]   --->   Operation 205 'select' 'select_ln635' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_18 : Operation 206 [1/1] (2.55ns) (out node of the LUT)   --->   "%w_44 = add i32 %select_ln635, i32 %sext_ln4433" [../FalconHLS/code_hls/keygen.c:635]   --->   Operation 206 'add' 'w_44' <Predicate = true> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 207 [1/1] (0.00ns)   --->   "%vla18_addr_276 = getelementptr i32 %vla18, i64 0, i64 %zext_ln4432" [../FalconHLS/code_hls/keygen.c:4433]   --->   Operation 207 'getelementptr' 'vla18_addr_276' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 208 [1/1] (3.25ns)   --->   "%store_ln4433 = store void @_ssdm_op_Write.bram.i32, i13 %vla18_addr_276, i32 %w_44, i4 15" [../FalconHLS/code_hls/keygen.c:4433]   --->   Operation 208 'store' 'store_ln4433' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 7168> <RAM>
+ST_18 : Operation 209 [1/1] (0.00ns)   --->   "%br_ln4432 = br void %for.inc" [../FalconHLS/code_hls/keygen.c:4432]   --->   Operation 209 'br' 'br_ln4432' <Predicate = true> <Delay = 0.00>
+
+State 19 <SV = 13> <Delay = 7.88>
+ST_19 : Operation 210 [1/1] (0.00ns)   --->   "%u_182 = load i11 %u_108" [../FalconHLS/code_hls/keygen.c:4436]   --->   Operation 210 'load' 'u_182' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 211 [1/1] (0.00ns)   --->   "%zext_ln4435 = zext i11 %u_182" [../FalconHLS/code_hls/keygen.c:4435]   --->   Operation 211 'zext' 'zext_ln4435' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 212 [1/1] (1.88ns)   --->   "%icmp_ln4435 = icmp_eq  i11 %u_182, i11 1024" [../FalconHLS/code_hls/keygen.c:4435]   --->   Operation 212 'icmp' 'icmp_ln4435' <Predicate = true> <Delay = 1.88> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.88> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_19 : Operation 213 [1/1] (0.00ns)   --->   "%speclooptripcount_ln0 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 1024, i64 1024, i64 1024"   --->   Operation 213 'speclooptripcount' 'speclooptripcount_ln0' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 214 [1/1] (1.63ns)   --->   "%u_183 = add i11 %u_182, i11 1" [../FalconHLS/code_hls/keygen.c:4435]   --->   Operation 214 'add' 'u_183' <Predicate = true> <Delay = 1.63> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.63> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_19 : Operation 215 [1/1] (0.00ns)   --->   "%br_ln4435 = br i1 %icmp_ln4435, void %for.inc69.split, void %for.end71" [../FalconHLS/code_hls/keygen.c:4435]   --->   Operation 215 'br' 'br_ln4435' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 216 [1/1] (0.00ns)   --->   "%f_addr11 = getelementptr i8 %f, i64 0, i64 %zext_ln4435" [../FalconHLS/code_hls/keygen.c:4436]   --->   Operation 216 'getelementptr' 'f_addr11' <Predicate = (!icmp_ln4435)> <Delay = 0.00>
+ST_19 : Operation 217 [2/2] (3.25ns)   --->   "%w_45 = load i10 %f_addr11" [../FalconHLS/code_hls/keygen.c:4436]   --->   Operation 217 'load' 'w_45' <Predicate = (!icmp_ln4435)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 1024> <RAM>
+ST_19 : Operation 218 [1/1] (0.00ns)   --->   "%g_addr14 = getelementptr i8 %g, i64 0, i64 %zext_ln4435" [../FalconHLS/code_hls/keygen.c:4437]   --->   Operation 218 'getelementptr' 'g_addr14' <Predicate = (!icmp_ln4435)> <Delay = 0.00>
+ST_19 : Operation 219 [2/2] (3.25ns)   --->   "%w_47 = load i10 %g_addr14" [../FalconHLS/code_hls/keygen.c:4437]   --->   Operation 219 'load' 'w_47' <Predicate = (!icmp_ln4435)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 1024> <RAM>
+ST_19 : Operation 220 [1/1] (0.00ns)   --->   "%F_upper_addr_1 = getelementptr i8 %F_upper, i64 0, i64 %zext_ln4435" [../FalconHLS/code_hls/keygen.c:4438]   --->   Operation 220 'getelementptr' 'F_upper_addr_1' <Predicate = (!icmp_ln4435)> <Delay = 0.00>
+ST_19 : Operation 221 [2/2] (3.25ns)   --->   "%w_49 = load i10 %F_upper_addr_1" [../FalconHLS/code_hls/keygen.c:4438]   --->   Operation 221 'load' 'w_49' <Predicate = (!icmp_ln4435)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 1024> <RAM>
+ST_19 : Operation 222 [1/1] (1.58ns)   --->   "%store_ln4435 = store i11 %u_183, i11 %u_108" [../FalconHLS/code_hls/keygen.c:4435]   --->   Operation 222 'store' 'store_ln4435' <Predicate = (!icmp_ln4435)> <Delay = 1.58>
+ST_19 : Operation 223 [1/1] (0.00ns)   --->   "%u_110 = alloca i32 1"   --->   Operation 223 'alloca' 'u_110' <Predicate = (icmp_ln4435)> <Delay = 0.00>
+ST_19 : Operation 224 [2/2] (6.00ns)   --->   "%call_ln4442 = call void @modp_NTT2_ext.1, i32 %vla18, i15 4096, i8 1, i15 16384, i32 10, i25 33544193, i31 2042615807" [../FalconHLS/code_hls/keygen.c:4442]   --->   Operation 224 'call' 'call_ln4442' <Predicate = (icmp_ln4435)> <Delay = 6.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_19 : Operation 225 [1/1] (1.58ns)   --->   "%store_ln4447 = store i11 0, i11 %u_110" [../FalconHLS/code_hls/keygen.c:4447]   --->   Operation 225 'store' 'store_ln4447' <Predicate = (icmp_ln4435)> <Delay = 1.58>
+
+State 20 <SV = 14> <Delay = 9.06>
+ST_20 : Operation 226 [1/2] (3.25ns)   --->   "%w_45 = load i10 %f_addr11" [../FalconHLS/code_hls/keygen.c:4436]   --->   Operation 226 'load' 'w_45' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 1024> <RAM>
+ST_20 : Operation 227 [1/1] (0.00ns) (grouped into LUT with out node w_46)   --->   "%sext_ln4436 = sext i8 %w_45" [../FalconHLS/code_hls/keygen.c:4436]   --->   Operation 227 'sext' 'sext_ln4436' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 228 [1/1] (0.00ns) (grouped into LUT with out node w_46)   --->   "%tmp_162 = bitselect i1 @_ssdm_op_BitSelect.i1.i8.i32, i8 %w_45, i32 7" [../FalconHLS/code_hls/keygen.c:635]   --->   Operation 228 'bitselect' 'tmp_162' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 229 [1/1] (0.00ns) (grouped into LUT with out node w_46)   --->   "%select_ln635_15 = select i1 %tmp_162, i32 2147473409, i32 0" [../FalconHLS/code_hls/keygen.c:635]   --->   Operation 229 'select' 'select_ln635_15' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_20 : Operation 230 [1/1] (2.55ns) (out node of the LUT)   --->   "%w_46 = add i32 %select_ln635_15, i32 %sext_ln4436" [../FalconHLS/code_hls/keygen.c:635]   --->   Operation 230 'add' 'w_46' <Predicate = true> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 231 [1/1] (0.00ns)   --->   "%trunc_ln4436 = trunc i11 %u_182" [../FalconHLS/code_hls/keygen.c:4436]   --->   Operation 231 'trunc' 'trunc_ln4436' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 232 [1/1] (0.00ns)   --->   "%zext_ln46 = bitconcatenate i11 @_ssdm_op_BitConcatenate.i11.i1.i10, i1 1, i10 %trunc_ln4436" [../FalconHLS/code_hls/keygen.c:4436]   --->   Operation 232 'bitconcatenate' 'zext_ln46' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 233 [1/1] (0.00ns)   --->   "%zext_ln4436 = zext i11 %zext_ln46" [../FalconHLS/code_hls/keygen.c:4436]   --->   Operation 233 'zext' 'zext_ln4436' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 234 [1/1] (0.00ns)   --->   "%vla18_addr_277 = getelementptr i32 %vla18, i64 0, i64 %zext_ln4436" [../FalconHLS/code_hls/keygen.c:4436]   --->   Operation 234 'getelementptr' 'vla18_addr_277' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 235 [1/1] (3.25ns)   --->   "%store_ln4436 = store void @_ssdm_op_Write.bram.i32, i13 %vla18_addr_277, i32 %w_46, i4 15" [../FalconHLS/code_hls/keygen.c:4436]   --->   Operation 235 'store' 'store_ln4436' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 7168> <RAM>
+ST_20 : Operation 236 [1/2] (3.25ns)   --->   "%w_47 = load i10 %g_addr14" [../FalconHLS/code_hls/keygen.c:4437]   --->   Operation 236 'load' 'w_47' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 1024> <RAM>
+ST_20 : Operation 237 [1/1] (0.00ns) (grouped into LUT with out node w_48)   --->   "%sext_ln4437 = sext i8 %w_47" [../FalconHLS/code_hls/keygen.c:4437]   --->   Operation 237 'sext' 'sext_ln4437' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 238 [1/1] (0.00ns) (grouped into LUT with out node w_48)   --->   "%tmp_163 = bitselect i1 @_ssdm_op_BitSelect.i1.i8.i32, i8 %w_47, i32 7" [../FalconHLS/code_hls/keygen.c:635]   --->   Operation 238 'bitselect' 'tmp_163' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 239 [1/1] (0.00ns) (grouped into LUT with out node w_48)   --->   "%select_ln635_16 = select i1 %tmp_163, i32 2147473409, i32 0" [../FalconHLS/code_hls/keygen.c:635]   --->   Operation 239 'select' 'select_ln635_16' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_20 : Operation 240 [1/1] (2.55ns) (out node of the LUT)   --->   "%w_48 = add i32 %select_ln635_16, i32 %sext_ln4437" [../FalconHLS/code_hls/keygen.c:635]   --->   Operation 240 'add' 'w_48' <Predicate = true> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 241 [1/1] (0.00ns)   --->   "%zext_ln47 = bitconcatenate i12 @_ssdm_op_BitConcatenate.i12.i2.i10, i2 2, i10 %trunc_ln4436" [../FalconHLS/code_hls/keygen.c:4437]   --->   Operation 241 'bitconcatenate' 'zext_ln47' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 242 [1/1] (0.00ns)   --->   "%zext_ln4437 = zext i12 %zext_ln47" [../FalconHLS/code_hls/keygen.c:4437]   --->   Operation 242 'zext' 'zext_ln4437' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 243 [1/1] (0.00ns)   --->   "%vla18_addr_278 = getelementptr i32 %vla18, i64 0, i64 %zext_ln4437" [../FalconHLS/code_hls/keygen.c:4437]   --->   Operation 243 'getelementptr' 'vla18_addr_278' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 244 [1/1] (3.25ns)   --->   "%store_ln4437 = store void @_ssdm_op_Write.bram.i32, i13 %vla18_addr_278, i32 %w_48, i4 15" [../FalconHLS/code_hls/keygen.c:4437]   --->   Operation 244 'store' 'store_ln4437' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 7168> <RAM>
+ST_20 : Operation 245 [1/2] (3.25ns)   --->   "%w_49 = load i10 %F_upper_addr_1" [../FalconHLS/code_hls/keygen.c:4438]   --->   Operation 245 'load' 'w_49' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 1024> <RAM>
+ST_20 : Operation 246 [1/1] (0.00ns) (grouped into LUT with out node w_50)   --->   "%sext_ln4438 = sext i8 %w_49" [../FalconHLS/code_hls/keygen.c:4438]   --->   Operation 246 'sext' 'sext_ln4438' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 247 [1/1] (0.00ns) (grouped into LUT with out node w_50)   --->   "%tmp_164 = bitselect i1 @_ssdm_op_BitSelect.i1.i8.i32, i8 %w_49, i32 7" [../FalconHLS/code_hls/keygen.c:635]   --->   Operation 247 'bitselect' 'tmp_164' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 248 [1/1] (0.00ns) (grouped into LUT with out node w_50)   --->   "%select_ln635_17 = select i1 %tmp_164, i32 2147473409, i32 0" [../FalconHLS/code_hls/keygen.c:635]   --->   Operation 248 'select' 'select_ln635_17' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_20 : Operation 249 [1/1] (2.55ns) (out node of the LUT)   --->   "%w_50 = add i32 %select_ln635_17, i32 %sext_ln4438" [../FalconHLS/code_hls/keygen.c:635]   --->   Operation 249 'add' 'w_50' <Predicate = true> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 21 <SV = 15> <Delay = 3.25>
+ST_21 : Operation 250 [1/1] (0.00ns)   --->   "%specloopname_ln4345 = specloopname void @_ssdm_op_SpecLoopName, void @empty_40" [../FalconHLS/code_hls/keygen.c:4345]   --->   Operation 250 'specloopname' 'specloopname_ln4345' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 251 [1/1] (0.00ns)   --->   "%or_ln4438 = or i11 %u_182, i11 1024" [../FalconHLS/code_hls/keygen.c:4438]   --->   Operation 251 'or' 'or_ln4438' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 252 [1/1] (0.00ns)   --->   "%sext_ln4438_1 = sext i11 %or_ln4438" [../FalconHLS/code_hls/keygen.c:4438]   --->   Operation 252 'sext' 'sext_ln4438_1' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 253 [1/1] (0.00ns)   --->   "%zext_ln4438 = zext i12 %sext_ln4438_1" [../FalconHLS/code_hls/keygen.c:4438]   --->   Operation 253 'zext' 'zext_ln4438' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 254 [1/1] (0.00ns)   --->   "%vla18_addr_279 = getelementptr i32 %vla18, i64 0, i64 %zext_ln4438" [../FalconHLS/code_hls/keygen.c:4438]   --->   Operation 254 'getelementptr' 'vla18_addr_279' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 255 [1/1] (3.25ns)   --->   "%store_ln4438 = store void @_ssdm_op_Write.bram.i32, i13 %vla18_addr_279, i32 %w_50, i4 15" [../FalconHLS/code_hls/keygen.c:4438]   --->   Operation 255 'store' 'store_ln4438' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 7168> <RAM>
+ST_21 : Operation 256 [1/1] (0.00ns)   --->   "%br_ln4435 = br void %for.inc69" [../FalconHLS/code_hls/keygen.c:4435]   --->   Operation 256 'br' 'br_ln4435' <Predicate = true> <Delay = 0.00>
+
+State 22 <SV = 14> <Delay = 0.00>
+ST_22 : Operation 257 [1/2] (0.00ns)   --->   "%call_ln4442 = call void @modp_NTT2_ext.1, i32 %vla18, i15 4096, i8 1, i15 16384, i32 10, i25 33544193, i31 2042615807" [../FalconHLS/code_hls/keygen.c:4442]   --->   Operation 257 'call' 'call_ln4442' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 23 <SV = 15> <Delay = 6.00>
+ST_23 : Operation 258 [2/2] (6.00ns)   --->   "%call_ln4443 = call void @modp_NTT2_ext.1, i32 %vla18, i15 8192, i8 1, i15 16384, i32 10, i25 33544193, i31 2042615807" [../FalconHLS/code_hls/keygen.c:4443]   --->   Operation 258 'call' 'call_ln4443' <Predicate = true> <Delay = 6.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 24 <SV = 16> <Delay = 0.00>
+ST_24 : Operation 259 [1/2] (0.00ns)   --->   "%call_ln4443 = call void @modp_NTT2_ext.1, i32 %vla18, i15 8192, i8 1, i15 16384, i32 10, i25 33544193, i31 2042615807" [../FalconHLS/code_hls/keygen.c:4443]   --->   Operation 259 'call' 'call_ln4443' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 25 <SV = 17> <Delay = 6.00>
+ST_25 : Operation 260 [2/2] (6.00ns)   --->   "%call_ln4444 = call void @modp_NTT2_ext.1, i32 %vla18, i15 12288, i8 1, i15 16384, i32 10, i25 33544193, i31 2042615807" [../FalconHLS/code_hls/keygen.c:4444]   --->   Operation 260 'call' 'call_ln4444' <Predicate = true> <Delay = 6.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 26 <SV = 18> <Delay = 0.00>
+ST_26 : Operation 261 [1/2] (0.00ns)   --->   "%call_ln4444 = call void @modp_NTT2_ext.1, i32 %vla18, i15 12288, i8 1, i15 16384, i32 10, i25 33544193, i31 2042615807" [../FalconHLS/code_hls/keygen.c:4444]   --->   Operation 261 'call' 'call_ln4444' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 27 <SV = 19> <Delay = 6.00>
+ST_27 : Operation 262 [2/2] (6.00ns)   --->   "%call_ln4445 = call void @modp_NTT2_ext.1, i32 %vla18, i15 0, i8 1, i15 16384, i32 10, i25 33544193, i31 2042615807" [../FalconHLS/code_hls/keygen.c:4445]   --->   Operation 262 'call' 'call_ln4445' <Predicate = true> <Delay = 6.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 28 <SV = 20> <Delay = 0.00>
+ST_28 : Operation 263 [1/2] (0.00ns)   --->   "%call_ln4445 = call void @modp_NTT2_ext.1, i32 %vla18, i15 0, i8 1, i15 16384, i32 10, i25 33544193, i31 2042615807" [../FalconHLS/code_hls/keygen.c:4445]   --->   Operation 263 'call' 'call_ln4445' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_28 : Operation 264 [1/1] (0.00ns)   --->   "%br_ln4447 = br void %for.body75" [../FalconHLS/code_hls/keygen.c:4447]   --->   Operation 264 'br' 'br_ln4447' <Predicate = true> <Delay = 0.00>
+
+State 29 <SV = 21> <Delay = 3.46>
+ST_29 : Operation 265 [1/1] (0.00ns)   --->   "%u_184 = load i11 %u_110" [../FalconHLS/code_hls/keygen.c:4450]   --->   Operation 265 'load' 'u_184' <Predicate = true> <Delay = 0.00>
+ST_29 : Operation 266 [1/1] (0.00ns)   --->   "%zext_ln4447 = zext i11 %u_184" [../FalconHLS/code_hls/keygen.c:4447]   --->   Operation 266 'zext' 'zext_ln4447' <Predicate = true> <Delay = 0.00>
+ST_29 : Operation 267 [1/1] (1.88ns)   --->   "%icmp_ln4447 = icmp_eq  i11 %u_184, i11 1024" [../FalconHLS/code_hls/keygen.c:4447]   --->   Operation 267 'icmp' 'icmp_ln4447' <Predicate = true> <Delay = 1.88> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.88> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_29 : Operation 268 [1/1] (0.00ns)   --->   "%speclooptripcount_ln0 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 1, i64 1024, i64 512"   --->   Operation 268 'speclooptripcount' 'speclooptripcount_ln0' <Predicate = true> <Delay = 0.00>
+ST_29 : Operation 269 [1/1] (1.63ns)   --->   "%u_185 = add i11 %u_184, i11 1" [../FalconHLS/code_hls/keygen.c:4447]   --->   Operation 269 'add' 'u_185' <Predicate = true> <Delay = 1.63> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.63> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_29 : Operation 270 [1/1] (1.58ns)   --->   "%br_ln4447 = br i1 %icmp_ln4447, void %for.body75.split, void %cleanup94.loopexit" [../FalconHLS/code_hls/keygen.c:4447]   --->   Operation 270 'br' 'br_ln4447' <Predicate = true> <Delay = 1.58>
+ST_29 : Operation 271 [1/1] (0.00ns)   --->   "%trunc_ln4450 = trunc i11 %u_184" [../FalconHLS/code_hls/keygen.c:4450]   --->   Operation 271 'trunc' 'trunc_ln4450' <Predicate = (!icmp_ln4447)> <Delay = 0.00>
+ST_29 : Operation 272 [1/1] (0.00ns)   --->   "%zext_ln48 = bitconcatenate i11 @_ssdm_op_BitConcatenate.i11.i1.i10, i1 1, i10 %trunc_ln4450" [../FalconHLS/code_hls/keygen.c:4450]   --->   Operation 272 'bitconcatenate' 'zext_ln48' <Predicate = (!icmp_ln4447)> <Delay = 0.00>
+ST_29 : Operation 273 [1/1] (0.00ns)   --->   "%zext_ln4450 = zext i11 %zext_ln48" [../FalconHLS/code_hls/keygen.c:4450]   --->   Operation 273 'zext' 'zext_ln4450' <Predicate = (!icmp_ln4447)> <Delay = 0.00>
+ST_29 : Operation 274 [1/1] (0.00ns)   --->   "%vla18_addr_280 = getelementptr i32 %vla18, i64 0, i64 %zext_ln4450" [../FalconHLS/code_hls/keygen.c:4450]   --->   Operation 274 'getelementptr' 'vla18_addr_280' <Predicate = (!icmp_ln4447)> <Delay = 0.00>
+ST_29 : Operation 275 [2/2] (3.25ns)   --->   "%vla18_load = load i13 %vla18_addr_280" [../FalconHLS/code_hls/keygen.c:4450]   --->   Operation 275 'load' 'vla18_load' <Predicate = (!icmp_ln4447)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 7168> <RAM>
+ST_29 : Operation 276 [1/1] (0.00ns)   --->   "%vla18_addr_281 = getelementptr i32 %vla18, i64 0, i64 %zext_ln4447" [../FalconHLS/code_hls/keygen.c:4450]   --->   Operation 276 'getelementptr' 'vla18_addr_281' <Predicate = (!icmp_ln4447)> <Delay = 0.00>
+ST_29 : Operation 277 [2/2] (3.25ns)   --->   "%vla18_load_186 = load i13 %vla18_addr_281" [../FalconHLS/code_hls/keygen.c:4450]   --->   Operation 277 'load' 'vla18_load_186' <Predicate = (!icmp_ln4447)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 7168> <RAM>
+
+State 30 <SV = 22> <Delay = 37.1>
+ST_30 : Operation 278 [1/2] (3.25ns)   --->   "%vla18_load = load i13 %vla18_addr_280" [../FalconHLS/code_hls/keygen.c:4450]   --->   Operation 278 'load' 'vla18_load' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 7168> <RAM>
+ST_30 : Operation 279 [1/2] (3.25ns)   --->   "%vla18_load_186 = load i13 %vla18_addr_281" [../FalconHLS/code_hls/keygen.c:4450]   --->   Operation 279 'load' 'vla18_load_186' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 7168> <RAM>
+ST_30 : Operation 280 [1/1] (33.8ns)   --->   "%a_assign_9 = call i32 @modp_montymul, i32 %vla18_load, i32 %vla18_load_186, i32 2147473409, i32 2042615807" [../FalconHLS/code_hls/keygen.c:4450]   --->   Operation 280 'call' 'a_assign_9' <Predicate = true> <Delay = 33.8> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_30 : Operation 281 [1/1] (0.00ns)   --->   "%zext_ln49 = bitconcatenate i12 @_ssdm_op_BitConcatenate.i12.i2.i10, i2 2, i10 %trunc_ln4450" [../FalconHLS/code_hls/keygen.c:4451]   --->   Operation 281 'bitconcatenate' 'zext_ln49' <Predicate = true> <Delay = 0.00>
+ST_30 : Operation 282 [1/1] (0.00ns)   --->   "%zext_ln4451 = zext i12 %zext_ln49" [../FalconHLS/code_hls/keygen.c:4451]   --->   Operation 282 'zext' 'zext_ln4451' <Predicate = true> <Delay = 0.00>
+ST_30 : Operation 283 [1/1] (0.00ns)   --->   "%vla18_addr_282 = getelementptr i32 %vla18, i64 0, i64 %zext_ln4451" [../FalconHLS/code_hls/keygen.c:4451]   --->   Operation 283 'getelementptr' 'vla18_addr_282' <Predicate = true> <Delay = 0.00>
+ST_30 : Operation 284 [2/2] (3.25ns)   --->   "%vla18_load_187 = load i13 %vla18_addr_282" [../FalconHLS/code_hls/keygen.c:4451]   --->   Operation 284 'load' 'vla18_load_187' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 7168> <RAM>
+ST_30 : Operation 285 [1/1] (0.00ns)   --->   "%or_ln4451 = or i11 %u_184, i11 1024" [../FalconHLS/code_hls/keygen.c:4451]   --->   Operation 285 'or' 'or_ln4451' <Predicate = true> <Delay = 0.00>
+ST_30 : Operation 286 [1/1] (0.00ns)   --->   "%sext_ln4451 = sext i11 %or_ln4451" [../FalconHLS/code_hls/keygen.c:4451]   --->   Operation 286 'sext' 'sext_ln4451' <Predicate = true> <Delay = 0.00>
+ST_30 : Operation 287 [1/1] (0.00ns)   --->   "%zext_ln4451_1 = zext i12 %sext_ln4451" [../FalconHLS/code_hls/keygen.c:4451]   --->   Operation 287 'zext' 'zext_ln4451_1' <Predicate = true> <Delay = 0.00>
+ST_30 : Operation 288 [1/1] (0.00ns)   --->   "%vla18_addr_283 = getelementptr i32 %vla18, i64 0, i64 %zext_ln4451_1" [../FalconHLS/code_hls/keygen.c:4451]   --->   Operation 288 'getelementptr' 'vla18_addr_283' <Predicate = true> <Delay = 0.00>
+ST_30 : Operation 289 [2/2] (3.25ns)   --->   "%vla18_load_188 = load i13 %vla18_addr_283" [../FalconHLS/code_hls/keygen.c:4451]   --->   Operation 289 'load' 'vla18_load_188' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 7168> <RAM>
+
+State 31 <SV = 23> <Delay = 48.3>
+ST_31 : Operation 290 [1/1] (0.00ns)   --->   "%specloopname_ln4345 = specloopname void @_ssdm_op_SpecLoopName, void @empty_0" [../FalconHLS/code_hls/keygen.c:4345]   --->   Operation 290 'specloopname' 'specloopname_ln4345' <Predicate = (!icmp_ln4354 & !icmp_ln4379 & !icmp_ln4384 & !icmp_ln4388 & icmp_ln2385 & icmp_ln2385_1 & !icmp_ln4447)> <Delay = 0.00>
+ST_31 : Operation 291 [1/2] (3.25ns)   --->   "%vla18_load_187 = load i13 %vla18_addr_282" [../FalconHLS/code_hls/keygen.c:4451]   --->   Operation 291 'load' 'vla18_load_187' <Predicate = (!icmp_ln4354 & !icmp_ln4379 & !icmp_ln4384 & !icmp_ln4388 & icmp_ln2385 & icmp_ln2385_1 & !icmp_ln4447)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 7168> <RAM>
+ST_31 : Operation 292 [1/2] (3.25ns)   --->   "%vla18_load_188 = load i13 %vla18_addr_283" [../FalconHLS/code_hls/keygen.c:4451]   --->   Operation 292 'load' 'vla18_load_188' <Predicate = (!icmp_ln4354 & !icmp_ln4379 & !icmp_ln4384 & !icmp_ln4388 & icmp_ln2385 & icmp_ln2385_1 & !icmp_ln4447)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 7168> <RAM>
+ST_31 : Operation 293 [1/1] (33.8ns)   --->   "%b_assign_8 = call i32 @modp_montymul, i32 %vla18_load_187, i32 %vla18_load_188, i32 2147473409, i32 2042615807" [../FalconHLS/code_hls/keygen.c:4451]   --->   Operation 293 'call' 'b_assign_8' <Predicate = (!icmp_ln4354 & !icmp_ln4379 & !icmp_ln4384 & !icmp_ln4388 & icmp_ln2385 & icmp_ln2385_1 & !icmp_ln4447)> <Delay = 33.8> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_31 : Operation 294 [1/1] (2.55ns)   --->   "%sub_ln697 = sub i32 %a_assign_9, i32 %b_assign_8" [../FalconHLS/code_hls/keygen.c:697]   --->   Operation 294 'sub' 'sub_ln697' <Predicate = (!icmp_ln4354 & !icmp_ln4379 & !icmp_ln4384 & !icmp_ln4388 & icmp_ln2385 & icmp_ln2385_1 & !icmp_ln4447)> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_31 : Operation 295 [1/1] (0.00ns) (grouped into LUT with out node z_65)   --->   "%tmp_165 = bitselect i1 @_ssdm_op_BitSelect.i1.i32.i32, i32 %sub_ln697, i32 31" [../FalconHLS/code_hls/keygen.c:697]   --->   Operation 295 'bitselect' 'tmp_165' <Predicate = (!icmp_ln4354 & !icmp_ln4379 & !icmp_ln4384 & !icmp_ln4388 & icmp_ln2385 & icmp_ln2385_1 & !icmp_ln4447)> <Delay = 0.00>
+ST_31 : Operation 296 [1/1] (0.00ns) (grouped into LUT with out node z_65)   --->   "%select_ln697 = select i1 %tmp_165, i32 2147473409, i32 0" [../FalconHLS/code_hls/keygen.c:697]   --->   Operation 296 'select' 'select_ln697' <Predicate = (!icmp_ln4354 & !icmp_ln4379 & !icmp_ln4384 & !icmp_ln4388 & icmp_ln2385 & icmp_ln2385_1 & !icmp_ln4447)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_31 : Operation 297 [1/1] (2.55ns) (out node of the LUT)   --->   "%z_65 = add i32 %select_ln697, i32 %sub_ln697" [../FalconHLS/code_hls/keygen.c:697]   --->   Operation 297 'add' 'z_65' <Predicate = (!icmp_ln4354 & !icmp_ln4379 & !icmp_ln4384 & !icmp_ln4388 & icmp_ln2385 & icmp_ln2385_1 & !icmp_ln4447)> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_31 : Operation 298 [1/1] (2.47ns)   --->   "%icmp_ln4452 = icmp_eq  i32 %z_65, i32 1916765260" [../FalconHLS/code_hls/keygen.c:4452]   --->   Operation 298 'icmp' 'icmp_ln4452' <Predicate = (!icmp_ln4354 & !icmp_ln4379 & !icmp_ln4384 & !icmp_ln4388 & icmp_ln2385 & icmp_ln2385_1 & !icmp_ln4447)> <Delay = 2.47> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_31 : Operation 299 [1/1] (1.58ns)   --->   "%br_ln4452 = br i1 %icmp_ln4452, void %cleanup94.loopexit, void %for.inc90" [../FalconHLS/code_hls/keygen.c:4452]   --->   Operation 299 'br' 'br_ln4452' <Predicate = (!icmp_ln4354 & !icmp_ln4379 & !icmp_ln4384 & !icmp_ln4388 & icmp_ln2385 & icmp_ln2385_1 & !icmp_ln4447)> <Delay = 1.58>
+ST_31 : Operation 300 [1/1] (1.58ns)   --->   "%store_ln4447 = store i11 %u_185, i11 %u_110" [../FalconHLS/code_hls/keygen.c:4447]   --->   Operation 300 'store' 'store_ln4447' <Predicate = (!icmp_ln4354 & !icmp_ln4379 & !icmp_ln4384 & !icmp_ln4388 & icmp_ln2385 & icmp_ln2385_1 & !icmp_ln4447 & icmp_ln4452)> <Delay = 1.58>
+ST_31 : Operation 301 [1/1] (0.00ns)   --->   "%br_ln4447 = br void %for.body75" [../FalconHLS/code_hls/keygen.c:4447]   --->   Operation 301 'br' 'br_ln4447' <Predicate = (!icmp_ln4354 & !icmp_ln4379 & !icmp_ln4384 & !icmp_ln4388 & icmp_ln2385 & icmp_ln2385_1 & !icmp_ln4447 & icmp_ln4452)> <Delay = 0.00>
+ST_31 : Operation 302 [1/1] (0.00ns)   --->   "%tmp2_0_2_ph = phi i6 35, void %for.body75, i6 6, void %for.body75.split"   --->   Operation 302 'phi' 'tmp2_0_2_ph' <Predicate = (!icmp_ln4354 & !icmp_ln4379 & !icmp_ln4384 & !icmp_ln4388 & icmp_ln2385 & icmp_ln2385_1 & !icmp_ln4452) | (!icmp_ln4354 & !icmp_ln4379 & !icmp_ln4384 & !icmp_ln4388 & icmp_ln2385 & icmp_ln2385_1 & icmp_ln4447)> <Delay = 0.00>
+ST_31 : Operation 303 [1/1] (0.00ns)   --->   "%retval_5_ph = phi i1 1, void %for.body75, i1 0, void %for.body75.split"   --->   Operation 303 'phi' 'retval_5_ph' <Predicate = (!icmp_ln4354 & !icmp_ln4379 & !icmp_ln4384 & !icmp_ln4388 & icmp_ln2385 & icmp_ln2385_1 & !icmp_ln4452) | (!icmp_ln4354 & !icmp_ln4379 & !icmp_ln4384 & !icmp_ln4388 & icmp_ln2385 & icmp_ln2385_1 & icmp_ln4447)> <Delay = 0.00>
+ST_31 : Operation 304 [1/1] (2.06ns)   --->   "%br_ln0 = br void %cleanup94"   --->   Operation 304 'br' 'br_ln0' <Predicate = (!icmp_ln4354 & !icmp_ln4379 & !icmp_ln4384 & !icmp_ln4388 & icmp_ln2385 & icmp_ln2385_1 & !icmp_ln4452) | (!icmp_ln4354 & !icmp_ln4379 & !icmp_ln4384 & !icmp_ln4388 & icmp_ln2385 & icmp_ln2385_1 & icmp_ln4447)> <Delay = 2.06>
+ST_31 : Operation 305 [1/1] (0.00ns)   --->   "%tmp2_0_2 = phi i6 5, void %if.then38, i6 0, void %entry, i6 3, void %while.end18, i6 4, void %if.end23, i6 %tmp2_0_2_ph, void %cleanup94.loopexit, i6 2, void %cleanup94.loopexit17"   --->   Operation 305 'phi' 'tmp2_0_2' <Predicate = (!icmp_ln4452) | (icmp_ln4447) | (!icmp_ln2385_1) | (!icmp_ln2385) | (icmp_ln4388) | (icmp_ln4384) | (icmp_ln4379) | (icmp_ln4354)> <Delay = 0.00>
+ST_31 : Operation 306 [1/1] (0.00ns)   --->   "%retval_5 = phi i1 0, void %if.then38, i1 0, void %entry, i1 0, void %while.end18, i1 0, void %if.end23, i1 %retval_5_ph, void %cleanup94.loopexit, i1 0, void %cleanup94.loopexit17"   --->   Operation 306 'phi' 'retval_5' <Predicate = (!icmp_ln4452) | (icmp_ln4447) | (!icmp_ln2385_1) | (!icmp_ln2385) | (icmp_ln4388) | (icmp_ln4384) | (icmp_ln4379) | (icmp_ln4354)> <Delay = 0.00>
+ST_31 : Operation 307 [1/1] (0.00ns)   --->   "%zext_ln4459 = zext i1 %retval_5" [../FalconHLS/code_hls/keygen.c:4459]   --->   Operation 307 'zext' 'zext_ln4459' <Predicate = (!icmp_ln4452) | (icmp_ln4447) | (!icmp_ln2385_1) | (!icmp_ln2385) | (icmp_ln4388) | (icmp_ln4384) | (icmp_ln4379) | (icmp_ln4354)> <Delay = 0.00>
+ST_31 : Operation 308 [1/1] (0.00ns)   --->   "%sext_ln4459 = sext i6 %tmp2_0_2" [../FalconHLS/code_hls/keygen.c:4459]   --->   Operation 308 'sext' 'sext_ln4459' <Predicate = (!icmp_ln4452) | (icmp_ln4447) | (!icmp_ln2385_1) | (!icmp_ln2385) | (icmp_ln4388) | (icmp_ln4384) | (icmp_ln4379) | (icmp_ln4354)> <Delay = 0.00>
+ST_31 : Operation 309 [1/1] (0.00ns)   --->   "%zext_ln4459_1 = zext i7 %sext_ln4459" [../FalconHLS/code_hls/keygen.c:4459]   --->   Operation 309 'zext' 'zext_ln4459_1' <Predicate = (!icmp_ln4452) | (icmp_ln4447) | (!icmp_ln2385_1) | (!icmp_ln2385) | (icmp_ln4388) | (icmp_ln4384) | (icmp_ln4379) | (icmp_ln4354)> <Delay = 0.00>
+ST_31 : Operation 310 [1/1] (0.00ns)   --->   "%mrv = insertvalue i64 <undef>, i32 %zext_ln4459" [../FalconHLS/code_hls/keygen.c:4459]   --->   Operation 310 'insertvalue' 'mrv' <Predicate = (!icmp_ln4452) | (icmp_ln4447) | (!icmp_ln2385_1) | (!icmp_ln2385) | (icmp_ln4388) | (icmp_ln4384) | (icmp_ln4379) | (icmp_ln4354)> <Delay = 0.00>
+ST_31 : Operation 311 [1/1] (0.00ns)   --->   "%mrv_1 = insertvalue i64 %mrv, i32 %zext_ln4459_1" [../FalconHLS/code_hls/keygen.c:4459]   --->   Operation 311 'insertvalue' 'mrv_1' <Predicate = (!icmp_ln4452) | (icmp_ln4447) | (!icmp_ln2385_1) | (!icmp_ln2385) | (icmp_ln4388) | (icmp_ln4384) | (icmp_ln4379) | (icmp_ln4354)> <Delay = 0.00>
+ST_31 : Operation 312 [1/1] (0.00ns)   --->   "%ret_ln4459 = ret i64 %mrv_1" [../FalconHLS/code_hls/keygen.c:4459]   --->   Operation 312 'ret' 'ret_ln4459' <Predicate = (!icmp_ln4452) | (icmp_ln4447) | (!icmp_ln2385_1) | (!icmp_ln2385) | (icmp_ln4388) | (icmp_ln4384) | (icmp_ln4379) | (icmp_ln4354)> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 100ns, clock uncertainty: 27ns.
+
+ <State 1>: 67.7ns
+The critical path consists of the following:
+	wire read operation ('p_read11', ../FalconHLS/code_hls/keygen.c:4352) on port 'p_read' (../FalconHLS/code_hls/keygen.c:4352) [16]  (0 ns)
+	'call' operation ('call_ret9', ../FalconHLS/code_hls/keygen.c:4354) to 'solve_NTRU_all.1' [19]  (67.7 ns)
+
+ <State 2>: 4.54ns
+The critical path consists of the following:
+	'call' operation ('call_ret9', ../FalconHLS/code_hls/keygen.c:4354) to 'solve_NTRU_all.1' [19]  (0 ns)
+	'icmp' operation ('icmp_ln4354', ../FalconHLS/code_hls/keygen.c:4354) [22]  (2.47 ns)
+	multiplexor before 'phi' operation ('tmp2_0_2') [306]  (2.07 ns)
+
+ <State 3>: 67.7ns
+The critical path consists of the following:
+	'load' operation ('depth', ../FalconHLS/code_hls/keygen.c:4378) on local variable 'depth' [31]  (0 ns)
+	'call' operation ('call_ret1', ../FalconHLS/code_hls/keygen.c:4379) to 'solve_NTRU_all.1' [33]  (67.7 ns)
+
+ <State 4>: 5.04ns
+The critical path consists of the following:
+	'add' operation ('depth', ../FalconHLS/code_hls/keygen.c:4378) [40]  (2.55 ns)
+	'store' operation ('store_ln4378', ../FalconHLS/code_hls/keygen.c:4378) of variable 'depth', ../FalconHLS/code_hls/keygen.c:4378 on local variable 'depth' [45]  (1.59 ns)
+	blocking operation 0.899 ns on control path)
+
+ <State 5>: 67.7ns
+The critical path consists of the following:
+	'call' operation ('call_ret2', ../FalconHLS/code_hls/keygen.c:4384) to 'solve_NTRU_all.1' [48]  (67.7 ns)
+
+ <State 6>: 4.54ns
+The critical path consists of the following:
+	'call' operation ('call_ret2', ../FalconHLS/code_hls/keygen.c:4384) to 'solve_NTRU_all.1' [48]  (0 ns)
+	'icmp' operation ('icmp_ln4384', ../FalconHLS/code_hls/keygen.c:4384) [51]  (2.47 ns)
+	multiplexor before 'phi' operation ('tmp2_0_2') [306]  (2.07 ns)
+
+ <State 7>: 67.7ns
+The critical path consists of the following:
+	'call' operation ('call_ret', ../FalconHLS/code_hls/keygen.c:4388) to 'solve_NTRU_all.1' [54]  (67.7 ns)
+
+ <State 8>: 4.54ns
+The critical path consists of the following:
+	'call' operation ('call_ret', ../FalconHLS/code_hls/keygen.c:4388) to 'solve_NTRU_all.1' [54]  (0 ns)
+	'icmp' operation ('icmp_ln4388', ../FalconHLS/code_hls/keygen.c:4388) [56]  (2.47 ns)
+	multiplexor before 'phi' operation ('tmp2_0_2') [306]  (2.07 ns)
+
+ <State 9>: 3.47ns
+The critical path consists of the following:
+	'load' operation ('u', ../FalconHLS/code_hls/keygen.c:2385) on local variable 'u' [63]  (0 ns)
+	'getelementptr' operation ('vla18_addr', ../FalconHLS/code_hls/keygen.c:2310) [71]  (0 ns)
+	'load' operation ('w', ../FalconHLS/code_hls/keygen.c:2310) on array 'vla18', ../FalconHLS/code_hls/keygen.c:4352 [72]  (3.25 ns)
+	blocking operation 0.214 ns on control path)
+
+ <State 10>: 11.5ns
+The critical path consists of the following:
+	'load' operation ('w', ../FalconHLS/code_hls/keygen.c:2310) on array 'vla18', ../FalconHLS/code_hls/keygen.c:4352 [72]  (3.25 ns)
+	'or' operation ('w', ../FalconHLS/code_hls/keygen.c:2311) [75]  (0 ns)
+	'add' operation ('add_ln2389', ../FalconHLS/code_hls/keygen.c:2389) [76]  (2.55 ns)
+	'icmp' operation ('icmp_ln2389', ../FalconHLS/code_hls/keygen.c:2389) [77]  (2.47 ns)
+	blocking operation 3.25 ns on control path)
+
+ <State 11>: 3.47ns
+The critical path consists of the following:
+	'load' operation ('u', ../FalconHLS/code_hls/keygen.c:2388) on local variable 'u' [92]  (0 ns)
+	'getelementptr' operation ('vla18_addr_273', ../FalconHLS/code_hls/keygen.c:2310) [103]  (0 ns)
+	'load' operation ('w', ../FalconHLS/code_hls/keygen.c:2310) on array 'vla18', ../FalconHLS/code_hls/keygen.c:4352 [104]  (3.25 ns)
+	blocking operation 0.214 ns on control path)
+
+ <State 12>: 11.5ns
+The critical path consists of the following:
+	'load' operation ('w', ../FalconHLS/code_hls/keygen.c:2310) on array 'vla18', ../FalconHLS/code_hls/keygen.c:4352 [104]  (3.25 ns)
+	'or' operation ('w', ../FalconHLS/code_hls/keygen.c:2311) [107]  (0 ns)
+	'add' operation ('add_ln2389_1', ../FalconHLS/code_hls/keygen.c:2389) [108]  (2.55 ns)
+	'icmp' operation ('icmp_ln2389_1', ../FalconHLS/code_hls/keygen.c:2389) [109]  (2.47 ns)
+	blocking operation 3.25 ns on control path)
+
+ <State 13>: 72.1ns
+The critical path consists of the following:
+	'load' operation ('z_47_load_1', ../FalconHLS/code_hls/keygen.c:811) on local variable 'z' [134]  (0 ns)
+	'call' operation ('z', ../FalconHLS/code_hls/keygen.c:811) to 'modp_montymul' [136]  (33.9 ns)
+	'call' operation ('z2', ../FalconHLS/code_hls/keygen.c:812) to 'modp_montymul' [137]  (33.9 ns)
+	'xor' operation ('xor_ln813', ../FalconHLS/code_hls/keygen.c:813) [138]  (0 ns)
+	'and' operation ('and_ln813', ../FalconHLS/code_hls/keygen.c:813) [142]  (0 ns)
+	'xor' operation ('z', ../FalconHLS/code_hls/keygen.c:813) [143]  (4.42 ns)
+
+ <State 14>: 1.59ns
+The critical path consists of the following:
+	'store' operation ('store_ln808', ../FalconHLS/code_hls/keygen.c:808) of variable 'z', ../FalconHLS/code_hls/keygen.c:813 on local variable 'z' [146]  (1.59 ns)
+
+ <State 15>: 3.47ns
+The critical path consists of the following:
+	'load' operation ('u', ../FalconHLS/code_hls/keygen.c:962) on local variable 'u' [160]  (0 ns)
+	'getelementptr' operation ('REV10_addr', ../FalconHLS/code_hls/keygen.c:966) [170]  (0 ns)
+	'load' operation ('v', ../FalconHLS/code_hls/keygen.c:966) on array 'REV10' [171]  (3.25 ns)
+	blocking operation 0.214 ns on control path)
+
+ <State 16>: 35.5ns
+The critical path consists of the following:
+	'load' operation ('x2_load', ../FalconHLS/code_hls/keygen.c:968) on local variable 'x2' [168]  (0 ns)
+	'call' operation ('x2', ../FalconHLS/code_hls/keygen.c:970) to 'modp_montymul' [180]  (33.9 ns)
+	'store' operation ('store_ln962', ../FalconHLS/code_hls/keygen.c:962) of variable 'x2', ../FalconHLS/code_hls/keygen.c:970 on local variable 'x2' [181]  (1.59 ns)
+
+ <State 17>: 3.47ns
+The critical path consists of the following:
+	'load' operation ('u', ../FalconHLS/code_hls/keygen.c:4432) on local variable 'u' [190]  (0 ns)
+	'getelementptr' operation ('G_upper_addr_1', ../FalconHLS/code_hls/keygen.c:4433) [198]  (0 ns)
+	'load' operation ('x', ../FalconHLS/code_hls/keygen.c:4433) on array 'G_upper' [199]  (3.25 ns)
+	blocking operation 0.214 ns on control path)
+
+ <State 18>: 9.06ns
+The critical path consists of the following:
+	'load' operation ('x', ../FalconHLS/code_hls/keygen.c:4433) on array 'G_upper' [199]  (3.25 ns)
+	'add' operation ('w', ../FalconHLS/code_hls/keygen.c:635) [203]  (2.55 ns)
+	'store' operation ('store_ln4433', ../FalconHLS/code_hls/keygen.c:4433) of constant <constant:_ssdm_op_Write.bram.i32> on array 'vla18', ../FalconHLS/code_hls/keygen.c:4352 [205]  (3.25 ns)
+
+ <State 19>: 7.89ns
+The critical path consists of the following:
+	'call' operation ('call_ln4442', ../FalconHLS/code_hls/keygen.c:4442) to 'modp_NTT2_ext.1' [257]  (6.01 ns)
+	blocking operation 1.88 ns on control path)
+
+ <State 20>: 9.06ns
+The critical path consists of the following:
+	'load' operation ('x', ../FalconHLS/code_hls/keygen.c:4436) on array 'f' [222]  (3.25 ns)
+	'add' operation ('w', ../FalconHLS/code_hls/keygen.c:635) [226]  (2.55 ns)
+	'store' operation ('store_ln4436', ../FalconHLS/code_hls/keygen.c:4436) of constant <constant:_ssdm_op_Write.bram.i32> on array 'vla18', ../FalconHLS/code_hls/keygen.c:4352 [231]  (3.25 ns)
+
+ <State 21>: 3.25ns
+The critical path consists of the following:
+	'or' operation ('or_ln4438', ../FalconHLS/code_hls/keygen.c:4438) [248]  (0 ns)
+	'getelementptr' operation ('vla18_addr_279', ../FalconHLS/code_hls/keygen.c:4438) [251]  (0 ns)
+	'store' operation ('store_ln4438', ../FalconHLS/code_hls/keygen.c:4438) of constant <constant:_ssdm_op_Write.bram.i32> on array 'vla18', ../FalconHLS/code_hls/keygen.c:4352 [252]  (3.25 ns)
+
+ <State 22>: 0ns
+The critical path consists of the following:
+
+ <State 23>: 6.01ns
+The critical path consists of the following:
+	'call' operation ('call_ln4443', ../FalconHLS/code_hls/keygen.c:4443) to 'modp_NTT2_ext.1' [258]  (6.01 ns)
+
+ <State 24>: 0ns
+The critical path consists of the following:
+
+ <State 25>: 6.01ns
+The critical path consists of the following:
+	'call' operation ('call_ln4444', ../FalconHLS/code_hls/keygen.c:4444) to 'modp_NTT2_ext.1' [259]  (6.01 ns)
+
+ <State 26>: 0ns
+The critical path consists of the following:
+
+ <State 27>: 6.01ns
+The critical path consists of the following:
+	'call' operation ('call_ln4445', ../FalconHLS/code_hls/keygen.c:4445) to 'modp_NTT2_ext.1' [260]  (6.01 ns)
+
+ <State 28>: 0ns
+The critical path consists of the following:
+
+ <State 29>: 3.47ns
+The critical path consists of the following:
+	'load' operation ('u', ../FalconHLS/code_hls/keygen.c:4450) on local variable 'u' [264]  (0 ns)
+	'icmp' operation ('icmp_ln4447', ../FalconHLS/code_hls/keygen.c:4447) [266]  (1.88 ns)
+	multiplexor before 'phi' operation ('tmp2_0_2_ph') [300]  (1.59 ns)
+
+ <State 30>: 37.1ns
+The critical path consists of the following:
+	'load' operation ('vla18_load', ../FalconHLS/code_hls/keygen.c:4450) on array 'vla18', ../FalconHLS/code_hls/keygen.c:4352 [276]  (3.25 ns)
+	'call' operation ('a', ../FalconHLS/code_hls/keygen.c:4450) to 'modp_montymul' [279]  (33.9 ns)
+
+ <State 31>: 48.3ns
+The critical path consists of the following:
+	'load' operation ('vla18_load_187', ../FalconHLS/code_hls/keygen.c:4451) on array 'vla18', ../FalconHLS/code_hls/keygen.c:4352 [283]  (3.25 ns)
+	'call' operation ('b', ../FalconHLS/code_hls/keygen.c:4451) to 'modp_montymul' [289]  (33.9 ns)
+	'sub' operation ('sub_ln697', ../FalconHLS/code_hls/keygen.c:697) [290]  (2.55 ns)
+	'add' operation ('z', ../FalconHLS/code_hls/keygen.c:697) [293]  (2.55 ns)
+	'icmp' operation ('icmp_ln4452', ../FalconHLS/code_hls/keygen.c:4452) [294]  (2.47 ns)
+	multiplexor before 'phi' operation ('tmp2_0_2_ph') [300]  (1.59 ns)
+	'phi' operation ('tmp2_0_2_ph') [300]  (0 ns)
+	multiplexor before 'phi' operation ('tmp2_0_2') [306]  (2.07 ns)
+	'phi' operation ('tmp2_0_2') [306]  (0 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+	State 26
+	State 27
+	State 28
+	State 29
+	State 30
+	State 31
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

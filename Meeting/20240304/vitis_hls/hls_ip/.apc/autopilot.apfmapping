@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="codec.c" path="/home/ubuntu/FalconHLS/code_hls/codec.c"/>
+    <originFiles name="common.c" path="/home/ubuntu/FalconHLS/code_hls/common.c"/>
+    <originFiles name="fft.c" path="/home/ubuntu/FalconHLS/code_hls/fft.c"/>
+    <originFiles name="fpr.c" path="/home/ubuntu/FalconHLS/code_hls/fpr.c"/>
+    <originFiles name="header.h" path="/home/ubuntu/FalconHLS/code_hls/header.h"/>
+    <originFiles name="keygen.c" path="/home/ubuntu/FalconHLS/code_hls/keygen.c"/>
+    <originFiles name="rng.c" path="/home/ubuntu/FalconHLS/code_hls/rng.c"/>
+    <originFiles name="shake.c" path="/home/ubuntu/FalconHLS/code_hls/shake.c"/>
+    <originFiles name="sign.c" path="/home/ubuntu/FalconHLS/code_hls/sign.c"/>
+    <originFiles name="vrfy.c" path="/home/ubuntu/FalconHLS/code_hls/vrfy.c"/>
+  </source>
+  <testbench>
+    <originFiles name="tb.c" path="/home/ubuntu/FalconHLS/code_hls/tb.c"/>
+    <originFiles name="tb_data.h" path="/home/ubuntu/FalconHLS/code_hls/tb_data.h"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

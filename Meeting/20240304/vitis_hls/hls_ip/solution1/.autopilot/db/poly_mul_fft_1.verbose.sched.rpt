@@ -1,0 +1,286 @@
+
+
+================================================================
+== Vitis HLS Report for 'poly_mul_fft_1'
+================================================================
+* Date:           Mon Mar  4 11:08:48 2024
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
+* Project:        hls_ip
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+-----------+------------+
+    |  Clock |  Target | Estimated | Uncertainty|
+    +--------+---------+-----------+------------+
+    |ap_clk  |  0.10 us|  63.415 ns|    27.00 ns|
+    +--------+---------+-----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+-----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max    | min | max |   Type  |
+    +---------+---------+----------+-----------+-----+-----+---------+
+    |        1|      817|  0.100 us|  81.700 us|    1|  817|       no|
+    +---------+---------+----------+-----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------+---------+---------+----------+-----------+-----------+---------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  |   Trip  |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  |  Count  | Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+---------+----------+
+        |- VITIS_LOOP_511_1  |        0|      816|         8|          -|          -|  0 ~ 102|        no|
+        +--------------------+---------+---------+----------+-----------+-----------+---------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 9
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 2 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 4.42>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%u_02 = alloca i32 1"   --->   Operation 10 'alloca' 'u_02' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%specbramwithbyteenable_ln0 = specbramwithbyteenable void @_ssdm_op_SpecBRAMWithByteEnable, i32 %vla18"   --->   Operation 11 'specbramwithbyteenable' 'specbramwithbyteenable_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%specbramwithbyteenable_ln0 = specbramwithbyteenable void @_ssdm_op_SpecBRAMWithByteEnable, i32 %vla18"   --->   Operation 12 'specbramwithbyteenable' 'specbramwithbyteenable_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%logn_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %logn" [../FalconHLS/code_hls/fft.c:506]   --->   Operation 13 'read' 'logn_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%b_read = read i15 @_ssdm_op_Read.ap_auto.i15, i15 %b" [../FalconHLS/code_hls/fft.c:506]   --->   Operation 14 'read' 'b_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%a_read = read i15 @_ssdm_op_Read.ap_auto.i15, i15 %a" [../FalconHLS/code_hls/fft.c:506]   --->   Operation 15 'read' 'a_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%zext_ln509 = zext i32 %logn_read" [../FalconHLS/code_hls/fft.c:509]   --->   Operation 16 'zext' 'zext_ln509' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (4.42ns)   --->   "%n = shl i64 1, i64 %zext_ln509" [../FalconHLS/code_hls/fft.c:509]   --->   Operation 17 'shl' 'n' <Predicate = true> <Delay = 4.42> <CoreInst = "Shifter">   --->   Core 75 'Shifter' <Latency = 0> <II = 1> <Delay = 4.42> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%trunc_ln = partselect i63 @_ssdm_op_PartSelect.i63.i64.i32.i32, i64 %n, i32 1, i32 63" [../FalconHLS/code_hls/fft.c:507]   --->   Operation 18 'partselect' 'trunc_ln' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%trunc_ln10 = partselect i12 @_ssdm_op_PartSelect.i12.i64.i32.i32, i64 %n, i32 1, i32 12" [../FalconHLS/code_hls/fft.c:516]   --->   Operation 19 'partselect' 'trunc_ln10' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (1.58ns)   --->   "%store_ln511 = store i63 0, i63 %u_02" [../FalconHLS/code_hls/fft.c:511]   --->   Operation 20 'store' 'store_ln511' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%br_ln511 = br void %for.inc" [../FalconHLS/code_hls/fft.c:511]   --->   Operation 21 'br' 'br_ln511' <Predicate = true> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 6.87>
+ST_2 : Operation 22 [1/1] (0.00ns)   --->   "%u = load i63 %u_02" [../FalconHLS/code_hls/fft.c:511]   --->   Operation 22 'load' 'u' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 23 [1/1] (0.00ns)   --->   "%trunc_ln511 = trunc i63 %u" [../FalconHLS/code_hls/fft.c:511]   --->   Operation 23 'trunc' 'trunc_ln511' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 24 [1/1] (2.78ns)   --->   "%icmp_ln511 = icmp_eq  i63 %u, i63 %trunc_ln" [../FalconHLS/code_hls/fft.c:511]   --->   Operation 24 'icmp' 'icmp_ln511' <Predicate = true> <Delay = 2.78> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.78> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 25 [1/1] (3.49ns)   --->   "%u_198 = add i63 %u, i63 1" [../FalconHLS/code_hls/fft.c:511]   --->   Operation 25 'add' 'u_198' <Predicate = true> <Delay = 3.49> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 3.49> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 26 [1/1] (0.00ns)   --->   "%br_ln511 = br i1 %icmp_ln511, void %for.inc.split, void %for.end.loopexit" [../FalconHLS/code_hls/fft.c:511]   --->   Operation 26 'br' 'br_ln511' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 27 [1/1] (0.00ns)   --->   "%shl_ln = bitconcatenate i15 @_ssdm_op_BitConcatenate.i15.i12.i3, i12 %trunc_ln511, i3 0" [../FalconHLS/code_hls/fft.c:515]   --->   Operation 27 'bitconcatenate' 'shl_ln' <Predicate = (!icmp_ln511)> <Delay = 0.00>
+ST_2 : Operation 28 [1/1] (1.94ns)   --->   "%add_ln515 = add i15 %shl_ln, i15 %a_read" [../FalconHLS/code_hls/fft.c:515]   --->   Operation 28 'add' 'add_ln515' <Predicate = (!icmp_ln511)> <Delay = 1.94> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.94> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 29 [1/1] (0.00ns)   --->   "%trunc_ln11 = partselect i13 @_ssdm_op_PartSelect.i13.i15.i32.i32, i15 %add_ln515, i32 2, i32 14" [../FalconHLS/code_hls/fft.c:515]   --->   Operation 29 'partselect' 'trunc_ln11' <Predicate = (!icmp_ln511)> <Delay = 0.00>
+ST_2 : Operation 30 [1/1] (0.00ns)   --->   "%zext_ln515 = zext i13 %trunc_ln11" [../FalconHLS/code_hls/fft.c:515]   --->   Operation 30 'zext' 'zext_ln515' <Predicate = (!icmp_ln511)> <Delay = 0.00>
+ST_2 : Operation 31 [1/1] (0.00ns)   --->   "%vla18_addr = getelementptr i32 %vla18, i64 0, i64 %zext_ln515" [../FalconHLS/code_hls/fft.c:515]   --->   Operation 31 'getelementptr' 'vla18_addr' <Predicate = (!icmp_ln511)> <Delay = 0.00>
+ST_2 : Operation 32 [2/2] (3.25ns)   --->   "%vla18_load = load i13 %vla18_addr" [../FalconHLS/code_hls/fft.c:515]   --->   Operation 32 'load' 'vla18_load' <Predicate = (!icmp_ln511)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 7168> <RAM>
+ST_2 : Operation 33 [1/1] (1.67ns)   --->   "%add_ln515_1 = add i13 %trunc_ln11, i13 1" [../FalconHLS/code_hls/fft.c:515]   --->   Operation 33 'add' 'add_ln515_1' <Predicate = (!icmp_ln511)> <Delay = 1.67> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.67> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 34 [1/1] (0.00ns)   --->   "%zext_ln515_1 = zext i13 %add_ln515_1" [../FalconHLS/code_hls/fft.c:515]   --->   Operation 34 'zext' 'zext_ln515_1' <Predicate = (!icmp_ln511)> <Delay = 0.00>
+ST_2 : Operation 35 [1/1] (0.00ns)   --->   "%vla18_addr_302 = getelementptr i32 %vla18, i64 0, i64 %zext_ln515_1" [../FalconHLS/code_hls/fft.c:515]   --->   Operation 35 'getelementptr' 'vla18_addr_302' <Predicate = (!icmp_ln511)> <Delay = 0.00>
+ST_2 : Operation 36 [2/2] (3.25ns)   --->   "%vla18_load_203 = load i13 %vla18_addr_302" [../FalconHLS/code_hls/fft.c:515]   --->   Operation 36 'load' 'vla18_load_203' <Predicate = (!icmp_ln511)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 7168> <RAM>
+ST_2 : Operation 37 [1/1] (1.54ns)   --->   "%add_ln516 = add i12 %trunc_ln511, i12 %trunc_ln10" [../FalconHLS/code_hls/fft.c:516]   --->   Operation 37 'add' 'add_ln516' <Predicate = (!icmp_ln511)> <Delay = 1.54> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.54> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 38 [1/1] (0.00ns)   --->   "%shl_ln62 = bitconcatenate i15 @_ssdm_op_BitConcatenate.i15.i12.i3, i12 %add_ln516, i3 0" [../FalconHLS/code_hls/fft.c:516]   --->   Operation 38 'bitconcatenate' 'shl_ln62' <Predicate = (!icmp_ln511)> <Delay = 0.00>
+ST_2 : Operation 39 [1/1] (1.94ns)   --->   "%add_ln516_1 = add i15 %shl_ln62, i15 %a_read" [../FalconHLS/code_hls/fft.c:516]   --->   Operation 39 'add' 'add_ln516_1' <Predicate = (!icmp_ln511)> <Delay = 1.94> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.94> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 40 [1/1] (0.00ns)   --->   "%trunc_ln516_2 = partselect i13 @_ssdm_op_PartSelect.i13.i15.i32.i32, i15 %add_ln516_1, i32 2, i32 14" [../FalconHLS/code_hls/fft.c:516]   --->   Operation 40 'partselect' 'trunc_ln516_2' <Predicate = (!icmp_ln511)> <Delay = 0.00>
+ST_2 : Operation 41 [1/1] (1.94ns)   --->   "%add_ln517 = add i15 %shl_ln, i15 %b_read" [../FalconHLS/code_hls/fft.c:517]   --->   Operation 41 'add' 'add_ln517' <Predicate = (!icmp_ln511)> <Delay = 1.94> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.94> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 42 [1/1] (0.00ns)   --->   "%trunc_ln12 = partselect i13 @_ssdm_op_PartSelect.i13.i15.i32.i32, i15 %add_ln517, i32 2, i32 14" [../FalconHLS/code_hls/fft.c:517]   --->   Operation 42 'partselect' 'trunc_ln12' <Predicate = (!icmp_ln511)> <Delay = 0.00>
+ST_2 : Operation 43 [1/1] (1.94ns)   --->   "%add_ln518 = add i15 %shl_ln62, i15 %b_read" [../FalconHLS/code_hls/fft.c:518]   --->   Operation 43 'add' 'add_ln518' <Predicate = (!icmp_ln511)> <Delay = 1.94> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.94> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 44 [1/1] (0.00ns)   --->   "%trunc_ln13 = partselect i13 @_ssdm_op_PartSelect.i13.i15.i32.i32, i15 %add_ln518, i32 2, i32 14" [../FalconHLS/code_hls/fft.c:518]   --->   Operation 44 'partselect' 'trunc_ln13' <Predicate = (!icmp_ln511)> <Delay = 0.00>
+ST_2 : Operation 45 [1/1] (1.58ns)   --->   "%store_ln511 = store i63 %u_198, i63 %u_02" [../FalconHLS/code_hls/fft.c:511]   --->   Operation 45 'store' 'store_ln511' <Predicate = (!icmp_ln511)> <Delay = 1.58>
+ST_2 : Operation 46 [1/1] (0.00ns)   --->   "%ret_ln521 = ret" [../FalconHLS/code_hls/fft.c:521]   --->   Operation 46 'ret' 'ret_ln521' <Predicate = (icmp_ln511)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 4.93>
+ST_3 : Operation 47 [1/2] (3.25ns)   --->   "%vla18_load = load i13 %vla18_addr" [../FalconHLS/code_hls/fft.c:515]   --->   Operation 47 'load' 'vla18_load' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 7168> <RAM>
+ST_3 : Operation 48 [1/2] (3.25ns)   --->   "%vla18_load_203 = load i13 %vla18_addr_302" [../FalconHLS/code_hls/fft.c:515]   --->   Operation 48 'load' 'vla18_load_203' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 7168> <RAM>
+ST_3 : Operation 49 [1/1] (0.00ns)   --->   "%zext_ln516 = zext i13 %trunc_ln516_2" [../FalconHLS/code_hls/fft.c:516]   --->   Operation 49 'zext' 'zext_ln516' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 50 [1/1] (0.00ns)   --->   "%vla18_addr_303 = getelementptr i32 %vla18, i64 0, i64 %zext_ln516" [../FalconHLS/code_hls/fft.c:516]   --->   Operation 50 'getelementptr' 'vla18_addr_303' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 51 [2/2] (3.25ns)   --->   "%vla18_load_204 = load i13 %vla18_addr_303" [../FalconHLS/code_hls/fft.c:516]   --->   Operation 51 'load' 'vla18_load_204' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 7168> <RAM>
+ST_3 : Operation 52 [1/1] (1.67ns)   --->   "%add_ln516_2 = add i13 %trunc_ln516_2, i13 1" [../FalconHLS/code_hls/fft.c:516]   --->   Operation 52 'add' 'add_ln516_2' <Predicate = true> <Delay = 1.67> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.67> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 53 [1/1] (0.00ns)   --->   "%zext_ln516_1 = zext i13 %add_ln516_2" [../FalconHLS/code_hls/fft.c:516]   --->   Operation 53 'zext' 'zext_ln516_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 54 [1/1] (0.00ns)   --->   "%vla18_addr_304 = getelementptr i32 %vla18, i64 0, i64 %zext_ln516_1" [../FalconHLS/code_hls/fft.c:516]   --->   Operation 54 'getelementptr' 'vla18_addr_304' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 55 [2/2] (3.25ns)   --->   "%vla18_load_205 = load i13 %vla18_addr_304" [../FalconHLS/code_hls/fft.c:516]   --->   Operation 55 'load' 'vla18_load_205' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 7168> <RAM>
+
+State 4 <SV = 3> <Delay = 4.93>
+ST_4 : Operation 56 [1/2] (3.25ns)   --->   "%vla18_load_204 = load i13 %vla18_addr_303" [../FalconHLS/code_hls/fft.c:516]   --->   Operation 56 'load' 'vla18_load_204' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 7168> <RAM>
+ST_4 : Operation 57 [1/2] (3.25ns)   --->   "%vla18_load_205 = load i13 %vla18_addr_304" [../FalconHLS/code_hls/fft.c:516]   --->   Operation 57 'load' 'vla18_load_205' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 7168> <RAM>
+ST_4 : Operation 58 [1/1] (0.00ns)   --->   "%zext_ln517 = zext i13 %trunc_ln12" [../FalconHLS/code_hls/fft.c:517]   --->   Operation 58 'zext' 'zext_ln517' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 59 [1/1] (0.00ns)   --->   "%vla18_addr_305 = getelementptr i32 %vla18, i64 0, i64 %zext_ln517" [../FalconHLS/code_hls/fft.c:517]   --->   Operation 59 'getelementptr' 'vla18_addr_305' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 60 [2/2] (3.25ns)   --->   "%vla18_load_206 = load i13 %vla18_addr_305" [../FalconHLS/code_hls/fft.c:517]   --->   Operation 60 'load' 'vla18_load_206' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 7168> <RAM>
+ST_4 : Operation 61 [1/1] (1.67ns)   --->   "%add_ln517_1 = add i13 %trunc_ln12, i13 1" [../FalconHLS/code_hls/fft.c:517]   --->   Operation 61 'add' 'add_ln517_1' <Predicate = true> <Delay = 1.67> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.67> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 62 [1/1] (0.00ns)   --->   "%zext_ln517_1 = zext i13 %add_ln517_1" [../FalconHLS/code_hls/fft.c:517]   --->   Operation 62 'zext' 'zext_ln517_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 63 [1/1] (0.00ns)   --->   "%vla18_addr_306 = getelementptr i32 %vla18, i64 0, i64 %zext_ln517_1" [../FalconHLS/code_hls/fft.c:517]   --->   Operation 63 'getelementptr' 'vla18_addr_306' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 64 [2/2] (3.25ns)   --->   "%vla18_load_207 = load i13 %vla18_addr_306" [../FalconHLS/code_hls/fft.c:517]   --->   Operation 64 'load' 'vla18_load_207' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 7168> <RAM>
+
+State 5 <SV = 4> <Delay = 4.93>
+ST_5 : Operation 65 [1/2] (3.25ns)   --->   "%vla18_load_206 = load i13 %vla18_addr_305" [../FalconHLS/code_hls/fft.c:517]   --->   Operation 65 'load' 'vla18_load_206' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 7168> <RAM>
+ST_5 : Operation 66 [1/2] (3.25ns)   --->   "%vla18_load_207 = load i13 %vla18_addr_306" [../FalconHLS/code_hls/fft.c:517]   --->   Operation 66 'load' 'vla18_load_207' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 7168> <RAM>
+ST_5 : Operation 67 [1/1] (0.00ns)   --->   "%zext_ln518 = zext i13 %trunc_ln13" [../FalconHLS/code_hls/fft.c:518]   --->   Operation 67 'zext' 'zext_ln518' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 68 [1/1] (0.00ns)   --->   "%vla18_addr_307 = getelementptr i32 %vla18, i64 0, i64 %zext_ln518" [../FalconHLS/code_hls/fft.c:518]   --->   Operation 68 'getelementptr' 'vla18_addr_307' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 69 [2/2] (3.25ns)   --->   "%vla18_load_208 = load i13 %vla18_addr_307" [../FalconHLS/code_hls/fft.c:518]   --->   Operation 69 'load' 'vla18_load_208' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 7168> <RAM>
+ST_5 : Operation 70 [1/1] (1.67ns)   --->   "%add_ln518_1 = add i13 %trunc_ln13, i13 1" [../FalconHLS/code_hls/fft.c:518]   --->   Operation 70 'add' 'add_ln518_1' <Predicate = true> <Delay = 1.67> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.67> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 71 [1/1] (0.00ns)   --->   "%zext_ln518_1 = zext i13 %add_ln518_1" [../FalconHLS/code_hls/fft.c:518]   --->   Operation 71 'zext' 'zext_ln518_1' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 72 [1/1] (0.00ns)   --->   "%vla18_addr_308 = getelementptr i32 %vla18, i64 0, i64 %zext_ln518_1" [../FalconHLS/code_hls/fft.c:518]   --->   Operation 72 'getelementptr' 'vla18_addr_308' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 73 [2/2] (3.25ns)   --->   "%vla18_load_209 = load i13 %vla18_addr_308" [../FalconHLS/code_hls/fft.c:518]   --->   Operation 73 'load' 'vla18_load_209' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 7168> <RAM>
+
+State 6 <SV = 5> <Delay = 35.6>
+ST_6 : Operation 74 [1/1] (0.00ns)   --->   "%tmp = bitconcatenate i64 @_ssdm_op_BitConcatenate.i64.i32.i32, i32 %vla18_load_203, i32 %vla18_load" [../FalconHLS/code_hls/fft.c:515]   --->   Operation 74 'bitconcatenate' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 75 [1/1] (0.00ns)   --->   "%a_re = bitcast i64 %tmp" [../FalconHLS/code_hls/fft.c:515]   --->   Operation 75 'bitcast' 'a_re' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 76 [1/1] (0.00ns)   --->   "%tmp_s = bitconcatenate i64 @_ssdm_op_BitConcatenate.i64.i32.i32, i32 %vla18_load_205, i32 %vla18_load_204" [../FalconHLS/code_hls/fft.c:516]   --->   Operation 76 'bitconcatenate' 'tmp_s' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 77 [1/1] (0.00ns)   --->   "%a_im = bitcast i64 %tmp_s" [../FalconHLS/code_hls/fft.c:516]   --->   Operation 77 'bitcast' 'a_im' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 78 [1/1] (0.00ns)   --->   "%tmp_76 = bitconcatenate i64 @_ssdm_op_BitConcatenate.i64.i32.i32, i32 %vla18_load_207, i32 %vla18_load_206" [../FalconHLS/code_hls/fft.c:517]   --->   Operation 78 'bitconcatenate' 'tmp_76' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 79 [1/1] (0.00ns)   --->   "%b_re = bitcast i64 %tmp_76" [../FalconHLS/code_hls/fft.c:517]   --->   Operation 79 'bitcast' 'b_re' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 80 [1/2] (3.25ns)   --->   "%vla18_load_208 = load i13 %vla18_addr_307" [../FalconHLS/code_hls/fft.c:518]   --->   Operation 80 'load' 'vla18_load_208' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 7168> <RAM>
+ST_6 : Operation 81 [1/2] (3.25ns)   --->   "%vla18_load_209 = load i13 %vla18_addr_308" [../FalconHLS/code_hls/fft.c:518]   --->   Operation 81 'load' 'vla18_load_209' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 7168> <RAM>
+ST_6 : Operation 82 [1/1] (0.00ns)   --->   "%tmp_77 = bitconcatenate i64 @_ssdm_op_BitConcatenate.i64.i32.i32, i32 %vla18_load_209, i32 %vla18_load_208" [../FalconHLS/code_hls/fft.c:518]   --->   Operation 82 'bitconcatenate' 'tmp_77' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 83 [1/1] (0.00ns)   --->   "%b_im = bitcast i64 %tmp_77" [../FalconHLS/code_hls/fft.c:518]   --->   Operation 83 'bitcast' 'b_im' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 84 [2/2] (32.3ns)   --->   "%test1 = dmul i64 %a_re, i64 %b_re" [../FalconHLS/code_hls/fpr.c:162]   --->   Operation 84 'dmul' 'test1' <Predicate = true> <Delay = 32.3> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 1> <II = 1> <Delay = 32.3> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 85 [2/2] (32.3ns)   --->   "%test2 = dmul i64 %a_im, i64 %b_im" [../FalconHLS/code_hls/fpr.c:162]   --->   Operation 85 'dmul' 'test2' <Predicate = true> <Delay = 32.3> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 1> <II = 1> <Delay = 32.3> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 86 [2/2] (32.3ns)   --->   "%test1_4 = dmul i64 %a_re, i64 %b_im" [../FalconHLS/code_hls/fpr.c:162]   --->   Operation 86 'dmul' 'test1_4' <Predicate = true> <Delay = 32.3> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 1> <II = 1> <Delay = 32.3> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 87 [2/2] (32.3ns)   --->   "%test2_4 = dmul i64 %a_im, i64 %b_re" [../FalconHLS/code_hls/fpr.c:162]   --->   Operation 87 'dmul' 'test2_4' <Predicate = true> <Delay = 32.3> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 1> <II = 1> <Delay = 32.3> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 7 <SV = 6> <Delay = 63.4>
+ST_7 : Operation 88 [1/2] (32.3ns)   --->   "%test1 = dmul i64 %a_re, i64 %b_re" [../FalconHLS/code_hls/fpr.c:162]   --->   Operation 88 'dmul' 'test1' <Predicate = true> <Delay = 32.3> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 1> <II = 1> <Delay = 32.3> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 89 [1/2] (32.3ns)   --->   "%test2 = dmul i64 %a_im, i64 %b_im" [../FalconHLS/code_hls/fpr.c:162]   --->   Operation 89 'dmul' 'test2' <Predicate = true> <Delay = 32.3> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 1> <II = 1> <Delay = 32.3> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 90 [2/2] (31.0ns)   --->   "%fpct_d_re = dsub i64 %test1, i64 %test2" [../FalconHLS/code_hls/fpr.c:142]   --->   Operation 90 'dsub' 'fpct_d_re' <Predicate = true> <Delay = 31.0> <CoreInst = "DAddSub_fulldsp">   --->   Core 37 'DAddSub_fulldsp' <Latency = 1> <II = 1> <Delay = 31.0> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 91 [1/2] (32.3ns)   --->   "%test1_4 = dmul i64 %a_re, i64 %b_im" [../FalconHLS/code_hls/fpr.c:162]   --->   Operation 91 'dmul' 'test1_4' <Predicate = true> <Delay = 32.3> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 1> <II = 1> <Delay = 32.3> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 92 [1/2] (32.3ns)   --->   "%test2_4 = dmul i64 %a_im, i64 %b_re" [../FalconHLS/code_hls/fpr.c:162]   --->   Operation 92 'dmul' 'test2_4' <Predicate = true> <Delay = 32.3> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 1> <II = 1> <Delay = 32.3> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 93 [2/2] (31.0ns)   --->   "%fpct_d_im = dadd i64 %test1_4, i64 %test2_4" [../FalconHLS/code_hls/fpr.c:137]   --->   Operation 93 'dadd' 'fpct_d_im' <Predicate = true> <Delay = 31.0> <CoreInst = "DAddSub_fulldsp">   --->   Core 37 'DAddSub_fulldsp' <Latency = 1> <II = 1> <Delay = 31.0> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 8 <SV = 7> <Delay = 34.3>
+ST_8 : Operation 94 [1/2] (31.0ns)   --->   "%fpct_d_re = dsub i64 %test1, i64 %test2" [../FalconHLS/code_hls/fpr.c:142]   --->   Operation 94 'dsub' 'fpct_d_re' <Predicate = true> <Delay = 31.0> <CoreInst = "DAddSub_fulldsp">   --->   Core 37 'DAddSub_fulldsp' <Latency = 1> <II = 1> <Delay = 31.0> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 95 [1/2] (31.0ns)   --->   "%fpct_d_im = dadd i64 %test1_4, i64 %test2_4" [../FalconHLS/code_hls/fpr.c:137]   --->   Operation 95 'dadd' 'fpct_d_im' <Predicate = true> <Delay = 31.0> <CoreInst = "DAddSub_fulldsp">   --->   Core 37 'DAddSub_fulldsp' <Latency = 1> <II = 1> <Delay = 31.0> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 96 [1/1] (0.00ns)   --->   "%bitcast_ln64 = bitcast i64 %fpct_d_re" [../FalconHLS/code_hls/fft.c:64]   --->   Operation 96 'bitcast' 'bitcast_ln64' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 97 [1/1] (0.00ns)   --->   "%trunc_ln64 = trunc i64 %bitcast_ln64" [../FalconHLS/code_hls/fft.c:64]   --->   Operation 97 'trunc' 'trunc_ln64' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 98 [1/1] (3.25ns)   --->   "%store_ln64 = store void @_ssdm_op_Write.bram.i32, i13 %vla18_addr, i32 %trunc_ln64, i4 15" [../FalconHLS/code_hls/fft.c:64]   --->   Operation 98 'store' 'store_ln64' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 7168> <RAM>
+ST_8 : Operation 99 [1/1] (0.00ns)   --->   "%trunc_ln64_1 = partselect i32 @_ssdm_op_PartSelect.i32.i64.i32.i32, i64 %bitcast_ln64, i32 32, i32 63" [../FalconHLS/code_hls/fft.c:64]   --->   Operation 99 'partselect' 'trunc_ln64_1' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 100 [1/1] (3.25ns)   --->   "%store_ln64 = store void @_ssdm_op_Write.bram.i32, i13 %vla18_addr_302, i32 %trunc_ln64_1, i4 15" [../FalconHLS/code_hls/fft.c:64]   --->   Operation 100 'store' 'store_ln64' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 7168> <RAM>
+
+State 9 <SV = 8> <Delay = 3.25>
+ST_9 : Operation 101 [1/1] (0.00ns)   --->   "%speclooptripcount_ln512 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 0, i64 102, i64 51" [../FalconHLS/code_hls/fft.c:512]   --->   Operation 101 'speclooptripcount' 'speclooptripcount_ln512' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 102 [1/1] (0.00ns)   --->   "%specloopname_ln507 = specloopname void @_ssdm_op_SpecLoopName, void @empty_20" [../FalconHLS/code_hls/fft.c:507]   --->   Operation 102 'specloopname' 'specloopname_ln507' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 103 [1/1] (0.00ns)   --->   "%bitcast_ln65 = bitcast i64 %fpct_d_im" [../FalconHLS/code_hls/fft.c:65]   --->   Operation 103 'bitcast' 'bitcast_ln65' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 104 [1/1] (0.00ns)   --->   "%trunc_ln65 = trunc i64 %bitcast_ln65" [../FalconHLS/code_hls/fft.c:65]   --->   Operation 104 'trunc' 'trunc_ln65' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 105 [1/1] (3.25ns)   --->   "%store_ln65 = store void @_ssdm_op_Write.bram.i32, i13 %vla18_addr_303, i32 %trunc_ln65, i4 15" [../FalconHLS/code_hls/fft.c:65]   --->   Operation 105 'store' 'store_ln65' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 7168> <RAM>
+ST_9 : Operation 106 [1/1] (0.00ns)   --->   "%trunc_ln65_1 = partselect i32 @_ssdm_op_PartSelect.i32.i64.i32.i32, i64 %bitcast_ln65, i32 32, i32 63" [../FalconHLS/code_hls/fft.c:65]   --->   Operation 106 'partselect' 'trunc_ln65_1' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 107 [1/1] (3.25ns)   --->   "%store_ln65 = store void @_ssdm_op_Write.bram.i32, i13 %vla18_addr_304, i32 %trunc_ln65_1, i4 15" [../FalconHLS/code_hls/fft.c:65]   --->   Operation 107 'store' 'store_ln65' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 7168> <RAM>
+ST_9 : Operation 108 [1/1] (0.00ns)   --->   "%br_ln511 = br void %for.inc" [../FalconHLS/code_hls/fft.c:511]   --->   Operation 108 'br' 'br_ln511' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 100ns, clock uncertainty: 27ns.
+
+ <State 1>: 4.42ns
+The critical path consists of the following:
+	wire read operation ('logn', ../FalconHLS/code_hls/fft.c:506) on port 'logn' (../FalconHLS/code_hls/fft.c:506) [8]  (0 ns)
+	'shl' operation ('n', ../FalconHLS/code_hls/fft.c:509) [12]  (4.42 ns)
+
+ <State 2>: 6.88ns
+The critical path consists of the following:
+	'load' operation ('u', ../FalconHLS/code_hls/fft.c:511) on local variable 'u' [18]  (0 ns)
+	'add' operation ('d_re', ../FalconHLS/code_hls/fft.c:515) [27]  (1.94 ns)
+	'add' operation ('add_ln515_1', ../FalconHLS/code_hls/fft.c:515) [32]  (1.68 ns)
+	'getelementptr' operation ('vla18_addr_302', ../FalconHLS/code_hls/fft.c:515) [34]  (0 ns)
+	'load' operation ('vla18_load_203', ../FalconHLS/code_hls/fft.c:515) on array 'vla18' [35]  (3.25 ns)
+
+ <State 3>: 4.93ns
+The critical path consists of the following:
+	'add' operation ('add_ln516_2', ../FalconHLS/code_hls/fft.c:516) [45]  (1.68 ns)
+	'getelementptr' operation ('vla18_addr_304', ../FalconHLS/code_hls/fft.c:516) [47]  (0 ns)
+	'load' operation ('vla18_load_205', ../FalconHLS/code_hls/fft.c:516) on array 'vla18' [48]  (3.25 ns)
+
+ <State 4>: 4.93ns
+The critical path consists of the following:
+	'add' operation ('add_ln517_1', ../FalconHLS/code_hls/fft.c:517) [56]  (1.68 ns)
+	'getelementptr' operation ('vla18_addr_306', ../FalconHLS/code_hls/fft.c:517) [58]  (0 ns)
+	'load' operation ('vla18_load_207', ../FalconHLS/code_hls/fft.c:517) on array 'vla18' [59]  (3.25 ns)
+
+ <State 5>: 4.93ns
+The critical path consists of the following:
+	'add' operation ('add_ln518_1', ../FalconHLS/code_hls/fft.c:518) [67]  (1.68 ns)
+	'getelementptr' operation ('vla18_addr_308', ../FalconHLS/code_hls/fft.c:518) [69]  (0 ns)
+	'load' operation ('vla18_load_209', ../FalconHLS/code_hls/fft.c:518) on array 'vla18' [70]  (3.25 ns)
+
+ <State 6>: 35.6ns
+The critical path consists of the following:
+	'load' operation ('vla18_load_208', ../FalconHLS/code_hls/fft.c:518) on array 'vla18' [66]  (3.25 ns)
+	'dmul' operation ('test2', ../FalconHLS/code_hls/fpr.c:162) [74]  (32.4 ns)
+
+ <State 7>: 63.4ns
+The critical path consists of the following:
+	'dmul' operation ('test1', ../FalconHLS/code_hls/fpr.c:162) [73]  (32.4 ns)
+	'dsub' operation ('fpct_d_re', ../FalconHLS/code_hls/fpr.c:142) [75]  (31.1 ns)
+
+ <State 8>: 34.3ns
+The critical path consists of the following:
+	'dsub' operation ('fpct_d_re', ../FalconHLS/code_hls/fpr.c:142) [75]  (31.1 ns)
+	'store' operation ('store_ln64', ../FalconHLS/code_hls/fft.c:64) of constant <constant:_ssdm_op_Write.bram.i32> on array 'vla18' [81]  (3.25 ns)
+
+ <State 9>: 3.25ns
+The critical path consists of the following:
+	'store' operation ('store_ln65', ../FalconHLS/code_hls/fft.c:65) of constant <constant:_ssdm_op_Write.bram.i32> on array 'vla18' [86]  (3.25 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

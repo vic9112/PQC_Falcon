@@ -1,0 +1,1558 @@
+
+
+================================================================
+== Vitis HLS Report for 'compute_public_1'
+================================================================
+* Date:           Mon Mar  4 11:08:45 2024
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
+* Project:        hls_ip
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+-----------+------------+
+    |  Clock |  Target | Estimated | Uncertainty|
+    +--------+---------+-----------+------------+
+    |ap_clk  |  0.10 us|  16.811 ns|    27.00 ns|
+    +--------+---------+-----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-----------------------+---------+---------+----------+-----------+-----------+----------+----------+
+        |                       |  Latency (cycles) | Iteration|  Initiation Interval  |   Trip   |          |
+        |       Loop Name       |   min   |   max   |  Latency |  achieved |   target  |   Count  | Pipelined|
+        +-----------------------+---------+---------+----------+-----------+-----------+----------+----------+
+        |- VITIS_LOOP_824_1     |     2048|     2048|         2|          -|          -|      1024|        no|
+        |- VITIS_LOOP_830_2     |      202|   206849|       202|          -|          -|  1 ~ 1024|        no|
+        |- VITIS_LOOP_547_1     |        ?|        ?|         ?|          -|          -|        10|        no|
+        | + VITIS_LOOP_552_2    |        ?|        ?|         ?|          -|          -|     1 ~ ?|        no|
+        |  ++ VITIS_LOOP_558_3  |        ?|        ?|        11|          -|          -|         ?|        no|
+        |- VITIS_LOOP_586_5     |     5120|     5120|         5|          -|          -|      1024|        no|
+        +-----------------------+---------+---------+----------+-----------+-----------+----------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 116
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 4 
+3 --> 2 
+4 --> 5 
+5 --> 6 97 
+6 --> 7 116 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 15 
+15 --> 16 
+16 --> 17 
+17 --> 18 
+18 --> 19 
+19 --> 20 
+20 --> 21 
+21 --> 22 
+22 --> 23 
+23 --> 24 
+24 --> 25 
+25 --> 26 
+26 --> 27 
+27 --> 28 
+28 --> 29 
+29 --> 30 
+30 --> 31 
+31 --> 32 
+32 --> 33 
+33 --> 34 
+34 --> 35 
+35 --> 36 
+36 --> 37 
+37 --> 38 
+38 --> 39 
+39 --> 40 
+40 --> 41 
+41 --> 42 
+42 --> 43 
+43 --> 44 
+44 --> 45 
+45 --> 46 
+46 --> 47 
+47 --> 48 
+48 --> 49 
+49 --> 50 
+50 --> 51 
+51 --> 52 
+52 --> 53 
+53 --> 54 
+54 --> 55 
+55 --> 56 
+56 --> 57 
+57 --> 58 
+58 --> 59 
+59 --> 60 
+60 --> 61 
+61 --> 62 
+62 --> 63 
+63 --> 64 
+64 --> 65 
+65 --> 66 
+66 --> 67 
+67 --> 68 
+68 --> 69 
+69 --> 70 
+70 --> 71 
+71 --> 72 
+72 --> 73 
+73 --> 74 
+74 --> 75 
+75 --> 76 
+76 --> 77 
+77 --> 78 
+78 --> 79 
+79 --> 80 
+80 --> 81 
+81 --> 82 
+82 --> 83 
+83 --> 84 
+84 --> 85 
+85 --> 86 
+86 --> 87 
+87 --> 88 
+88 --> 89 
+89 --> 90 
+90 --> 91 
+91 --> 92 
+92 --> 93 
+93 --> 94 
+94 --> 95 
+95 --> 96 
+96 --> 5 
+97 --> 98 111 
+98 --> 99 97 
+99 --> 100 
+100 --> 101 98 
+101 --> 102 
+102 --> 103 
+103 --> 104 
+104 --> 105 
+105 --> 106 
+106 --> 107 
+107 --> 108 
+108 --> 109 
+109 --> 110 
+110 --> 100 
+111 --> 112 116 
+112 --> 113 
+113 --> 114 
+114 --> 115 
+115 --> 111 
+116 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.58>
+ST_1 : Operation 117 [1/1] (0.00ns)   --->   "%u_02 = alloca i32 1"   --->   Operation 117 'alloca' 'u_02' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 118 [1/1] (0.00ns)   --->   "%specbramwithbyteenable_ln0 = specbramwithbyteenable void @_ssdm_op_SpecBRAMWithByteEnable, i16 %tmp2108"   --->   Operation 118 'specbramwithbyteenable' 'specbramwithbyteenable_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 119 [1/1] (1.58ns)   --->   "%store_ln824 = store i11 0, i11 %u_02" [../FalconHLS/code_hls/vrfy.c:824]   --->   Operation 119 'store' 'store_ln824' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 120 [1/1] (0.00ns)   --->   "%br_ln824 = br void %for.inc" [../FalconHLS/code_hls/vrfy.c:824]   --->   Operation 120 'br' 'br_ln824' <Predicate = true> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 3.46>
+ST_2 : Operation 121 [1/1] (0.00ns)   --->   "%u = load i11 %u_02" [../FalconHLS/code_hls/vrfy.c:824]   --->   Operation 121 'load' 'u' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 122 [1/1] (0.00ns)   --->   "%zext_ln824 = zext i11 %u" [../FalconHLS/code_hls/vrfy.c:824]   --->   Operation 122 'zext' 'zext_ln824' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 123 [1/1] (1.88ns)   --->   "%icmp_ln824 = icmp_eq  i11 %u, i11 1024" [../FalconHLS/code_hls/vrfy.c:824]   --->   Operation 123 'icmp' 'icmp_ln824' <Predicate = true> <Delay = 1.88> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.88> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 124 [1/1] (0.00ns)   --->   "%speclooptripcount_ln0 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 1024, i64 1024, i64 1024"   --->   Operation 124 'speclooptripcount' 'speclooptripcount_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 125 [1/1] (1.63ns)   --->   "%u_234 = add i11 %u, i11 1" [../FalconHLS/code_hls/vrfy.c:824]   --->   Operation 125 'add' 'u_234' <Predicate = true> <Delay = 1.63> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.63> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 126 [1/1] (0.00ns)   --->   "%br_ln824 = br i1 %icmp_ln824, void %for.inc.split, void %for.end" [../FalconHLS/code_hls/vrfy.c:824]   --->   Operation 126 'br' 'br_ln824' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 127 [1/1] (0.00ns)   --->   "%f_addr12 = getelementptr i8 %f, i64 0, i64 %zext_ln824" [../FalconHLS/code_hls/vrfy.c:825]   --->   Operation 127 'getelementptr' 'f_addr12' <Predicate = (!icmp_ln824)> <Delay = 0.00>
+ST_2 : Operation 128 [2/2] (3.25ns)   --->   "%f_load = load i10 %f_addr12" [../FalconHLS/code_hls/vrfy.c:825]   --->   Operation 128 'load' 'f_load' <Predicate = (!icmp_ln824)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 1024> <RAM>
+ST_2 : Operation 129 [1/1] (0.00ns)   --->   "%g_addr15 = getelementptr i8 %g, i64 0, i64 %zext_ln824" [../FalconHLS/code_hls/vrfy.c:826]   --->   Operation 129 'getelementptr' 'g_addr15' <Predicate = (!icmp_ln824)> <Delay = 0.00>
+ST_2 : Operation 130 [2/2] (3.25ns)   --->   "%g_load = load i10 %g_addr15" [../FalconHLS/code_hls/vrfy.c:826]   --->   Operation 130 'load' 'g_load' <Predicate = (!icmp_ln824)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 1024> <RAM>
+ST_2 : Operation 131 [1/1] (1.58ns)   --->   "%store_ln824 = store i11 %u_234, i11 %u_02" [../FalconHLS/code_hls/vrfy.c:824]   --->   Operation 131 'store' 'store_ln824' <Predicate = (!icmp_ln824)> <Delay = 1.58>
+ST_2 : Operation 132 [1/1] (0.00ns)   --->   "%u_11 = alloca i32 1"   --->   Operation 132 'alloca' 'u_11' <Predicate = (icmp_ln824)> <Delay = 0.00>
+ST_2 : Operation 133 [2/2] (0.00ns)   --->   "%call_ln828 = call void @mq_NTT, i16 %h, i14 %GMb" [../FalconHLS/code_hls/vrfy.c:828]   --->   Operation 133 'call' 'call_ln828' <Predicate = (icmp_ln824)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 134 [2/2] (0.00ns)   --->   "%call_ln829 = call void @mq_NTT.1, i16 %tmp2108, i14 %GMb" [../FalconHLS/code_hls/vrfy.c:829]   --->   Operation 134 'call' 'call_ln829' <Predicate = (icmp_ln824)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 135 [1/1] (1.58ns)   --->   "%store_ln830 = store i11 0, i11 %u_11" [../FalconHLS/code_hls/vrfy.c:830]   --->   Operation 135 'store' 'store_ln830' <Predicate = (icmp_ln824)> <Delay = 1.58>
+
+State 3 <SV = 2> <Delay = 8.45>
+ST_3 : Operation 136 [1/1] (0.00ns)   --->   "%specloopname_ln819 = specloopname void @_ssdm_op_SpecLoopName, void @empty_61" [../FalconHLS/code_hls/vrfy.c:819]   --->   Operation 136 'specloopname' 'specloopname_ln819' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 137 [1/2] (3.25ns)   --->   "%f_load = load i10 %f_addr12" [../FalconHLS/code_hls/vrfy.c:825]   --->   Operation 137 'load' 'f_load' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 1024> <RAM>
+ST_3 : Operation 138 [1/1] (0.00ns) (grouped into LUT with out node add_ln825)   --->   "%tmp = bitselect i1 @_ssdm_op_BitSelect.i1.i8.i32, i8 %f_load, i32 7" [../FalconHLS/code_hls/vrfy.c:337]   --->   Operation 138 'bitselect' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 139 [1/1] (0.00ns) (grouped into LUT with out node add_ln825)   --->   "%sext_ln337 = sext i8 %f_load" [../FalconHLS/code_hls/vrfy.c:337]   --->   Operation 139 'sext' 'sext_ln337' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 140 [1/1] (0.00ns) (grouped into LUT with out node add_ln825)   --->   "%select_ln825 = select i1 %tmp, i15 12289, i15 0" [../FalconHLS/code_hls/vrfy.c:825]   --->   Operation 140 'select' 'select_ln825' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.75> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 141 [1/1] (1.94ns) (out node of the LUT)   --->   "%add_ln825 = add i15 %select_ln825, i15 %sext_ln337" [../FalconHLS/code_hls/vrfy.c:825]   --->   Operation 141 'add' 'add_ln825' <Predicate = true> <Delay = 1.94> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.94> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 142 [1/1] (0.00ns)   --->   "%sext_ln825 = sext i15 %add_ln825" [../FalconHLS/code_hls/vrfy.c:825]   --->   Operation 142 'sext' 'sext_ln825' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 143 [1/1] (0.00ns)   --->   "%tmp2108_addr = getelementptr i16 %tmp2108, i64 0, i64 %zext_ln824" [../FalconHLS/code_hls/vrfy.c:825]   --->   Operation 143 'getelementptr' 'tmp2108_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 144 [1/1] (3.25ns)   --->   "%store_ln825 = store void @_ssdm_op_Write.bram.i16, i11 %tmp2108_addr, i16 %sext_ln825, i2 3" [../FalconHLS/code_hls/vrfy.c:825]   --->   Operation 144 'store' 'store_ln825' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 2048> <RAM>
+ST_3 : Operation 145 [1/2] (3.25ns)   --->   "%g_load = load i10 %g_addr15" [../FalconHLS/code_hls/vrfy.c:826]   --->   Operation 145 'load' 'g_load' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 1024> <RAM>
+ST_3 : Operation 146 [1/1] (0.00ns) (grouped into LUT with out node add_ln826)   --->   "%tmp_228 = bitselect i1 @_ssdm_op_BitSelect.i1.i8.i32, i8 %g_load, i32 7" [../FalconHLS/code_hls/vrfy.c:337]   --->   Operation 146 'bitselect' 'tmp_228' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 147 [1/1] (0.00ns) (grouped into LUT with out node add_ln826)   --->   "%sext_ln337_1 = sext i8 %g_load" [../FalconHLS/code_hls/vrfy.c:337]   --->   Operation 147 'sext' 'sext_ln337_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 148 [1/1] (0.00ns) (grouped into LUT with out node add_ln826)   --->   "%select_ln826 = select i1 %tmp_228, i15 12289, i15 0" [../FalconHLS/code_hls/vrfy.c:826]   --->   Operation 148 'select' 'select_ln826' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.75> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 149 [1/1] (1.94ns) (out node of the LUT)   --->   "%add_ln826 = add i15 %select_ln826, i15 %sext_ln337_1" [../FalconHLS/code_hls/vrfy.c:826]   --->   Operation 149 'add' 'add_ln826' <Predicate = true> <Delay = 1.94> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.94> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 150 [1/1] (0.00ns)   --->   "%sext_ln826 = sext i15 %add_ln826" [../FalconHLS/code_hls/vrfy.c:826]   --->   Operation 150 'sext' 'sext_ln826' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 151 [1/1] (0.00ns)   --->   "%h_addr = getelementptr i16 %h, i64 0, i64 %zext_ln824" [../FalconHLS/code_hls/vrfy.c:826]   --->   Operation 151 'getelementptr' 'h_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 152 [1/1] (3.25ns)   --->   "%store_ln826 = store i16 %sext_ln826, i10 %h_addr" [../FalconHLS/code_hls/vrfy.c:826]   --->   Operation 152 'store' 'store_ln826' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 1024> <RAM>
+ST_3 : Operation 153 [1/1] (0.00ns)   --->   "%br_ln824 = br void %for.inc" [../FalconHLS/code_hls/vrfy.c:824]   --->   Operation 153 'br' 'br_ln824' <Predicate = true> <Delay = 0.00>
+
+State 4 <SV = 2> <Delay = 0.00>
+ST_4 : Operation 154 [1/2] (0.00ns)   --->   "%call_ln828 = call void @mq_NTT, i16 %h, i14 %GMb" [../FalconHLS/code_hls/vrfy.c:828]   --->   Operation 154 'call' 'call_ln828' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 155 [1/2] (0.00ns)   --->   "%call_ln829 = call void @mq_NTT.1, i16 %tmp2108, i14 %GMb" [../FalconHLS/code_hls/vrfy.c:829]   --->   Operation 155 'call' 'call_ln829' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 156 [1/1] (0.00ns)   --->   "%br_ln830 = br void %for.body10" [../FalconHLS/code_hls/vrfy.c:830]   --->   Operation 156 'br' 'br_ln830' <Predicate = true> <Delay = 0.00>
+
+State 5 <SV = 3> <Delay = 3.46>
+ST_5 : Operation 157 [1/1] (0.00ns)   --->   "%u_235 = load i11 %u_11" [../FalconHLS/code_hls/vrfy.c:830]   --->   Operation 157 'load' 'u_235' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 158 [1/1] (0.00ns)   --->   "%zext_ln830 = zext i11 %u_235" [../FalconHLS/code_hls/vrfy.c:830]   --->   Operation 158 'zext' 'zext_ln830' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 159 [1/1] (1.88ns)   --->   "%icmp_ln830 = icmp_eq  i11 %u_235, i11 1024" [../FalconHLS/code_hls/vrfy.c:830]   --->   Operation 159 'icmp' 'icmp_ln830' <Predicate = true> <Delay = 1.88> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.88> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 160 [1/1] (0.00ns)   --->   "%speclooptripcount_ln0 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 1, i64 1024, i64 512"   --->   Operation 160 'speclooptripcount' 'speclooptripcount_ln0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 161 [1/1] (1.63ns)   --->   "%u_236 = add i11 %u_235, i11 1" [../FalconHLS/code_hls/vrfy.c:830]   --->   Operation 161 'add' 'u_236' <Predicate = true> <Delay = 1.63> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.63> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 162 [1/1] (0.00ns)   --->   "%br_ln830 = br i1 %icmp_ln830, void %for.body10.split, void %while.cond.i.preheader" [../FalconHLS/code_hls/vrfy.c:830]   --->   Operation 162 'br' 'br_ln830' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 163 [1/1] (0.00ns)   --->   "%tmp2108_addr_2 = getelementptr i16 %tmp2108, i64 0, i64 %zext_ln830" [../FalconHLS/code_hls/vrfy.c:831]   --->   Operation 163 'getelementptr' 'tmp2108_addr_2' <Predicate = (!icmp_ln830)> <Delay = 0.00>
+ST_5 : Operation 164 [2/2] (3.25ns)   --->   "%y_assign_66 = load i11 %tmp2108_addr_2" [../FalconHLS/code_hls/vrfy.c:831]   --->   Operation 164 'load' 'y_assign_66' <Predicate = (!icmp_ln830)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 2048> <RAM>
+ST_5 : Operation 165 [1/1] (0.00ns)   --->   "%m = alloca i32 1"   --->   Operation 165 'alloca' 'm' <Predicate = (icmp_ln830)> <Delay = 0.00>
+ST_5 : Operation 166 [1/1] (0.00ns)   --->   "%t = alloca i32 1"   --->   Operation 166 'alloca' 't' <Predicate = (icmp_ln830)> <Delay = 0.00>
+ST_5 : Operation 167 [1/1] (1.58ns)   --->   "%store_ln541 = store i64 1, i64 %t" [../FalconHLS/code_hls/vrfy.c:541]   --->   Operation 167 'store' 'store_ln541' <Predicate = (icmp_ln830)> <Delay = 1.58>
+ST_5 : Operation 168 [1/1] (1.58ns)   --->   "%store_ln541 = store i11 1024, i11 %m" [../FalconHLS/code_hls/vrfy.c:541]   --->   Operation 168 'store' 'store_ln541' <Predicate = (icmp_ln830)> <Delay = 1.58>
+ST_5 : Operation 169 [1/1] (0.00ns)   --->   "%br_ln541 = br void %while.cond.i" [../FalconHLS/code_hls/vrfy.c:541]   --->   Operation 169 'br' 'br_ln541' <Predicate = (icmp_ln830)> <Delay = 0.00>
+
+State 6 <SV = 4> <Delay = 7.27>
+ST_6 : Operation 170 [1/1] (0.00ns)   --->   "%specloopname_ln819 = specloopname void @_ssdm_op_SpecLoopName, void @empty_62" [../FalconHLS/code_hls/vrfy.c:819]   --->   Operation 170 'specloopname' 'specloopname_ln819' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 171 [1/2] (3.25ns)   --->   "%y_assign_66 = load i11 %tmp2108_addr_2" [../FalconHLS/code_hls/vrfy.c:831]   --->   Operation 171 'load' 'y_assign_66' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 2048> <RAM>
+ST_6 : Operation 172 [1/1] (0.00ns)   --->   "%zext_ln831 = zext i16 %y_assign_66" [../FalconHLS/code_hls/vrfy.c:831]   --->   Operation 172 'zext' 'zext_ln831' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 173 [1/1] (2.42ns)   --->   "%icmp_ln831 = icmp_eq  i16 %y_assign_66, i16 0" [../FalconHLS/code_hls/vrfy.c:831]   --->   Operation 173 'icmp' 'icmp_ln831' <Predicate = true> <Delay = 2.42> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.42> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 174 [1/1] (0.00ns)   --->   "%br_ln831 = br i1 %icmp_ln831, void %for.inc21, void %cleanup.loopexit20" [../FalconHLS/code_hls/vrfy.c:831]   --->   Operation 174 'br' 'br_ln831' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 175 [1/1] (0.00ns)   --->   "%h_addr_1 = getelementptr i16 %h, i64 0, i64 %zext_ln830" [../FalconHLS/code_hls/vrfy.c:834]   --->   Operation 175 'getelementptr' 'h_addr_1' <Predicate = (!icmp_ln831)> <Delay = 0.00>
+ST_6 : Operation 176 [4/4] (2.15ns) (root node of the DSP)   --->   "%mul_ln406_4 = mul i16 %y_assign_66, i16 21816" [../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:474]   --->   Operation 176 'mul' 'mul_ln406_4' <Predicate = (!icmp_ln831)> <Delay = 2.15> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_6 : Operation 177 [1/1] (1.58ns)   --->   "%store_ln830 = store i11 %u_236, i11 %u_11" [../FalconHLS/code_hls/vrfy.c:830]   --->   Operation 177 'store' 'store_ln830' <Predicate = (!icmp_ln831)> <Delay = 1.58>
+ST_6 : Operation 178 [1/1] (1.58ns)   --->   "%br_ln0 = br void %cleanup"   --->   Operation 178 'br' 'br_ln0' <Predicate = (icmp_ln831)> <Delay = 1.58>
+
+State 7 <SV = 5> <Delay = 2.15>
+ST_7 : Operation 179 [3/4] (2.15ns) (root node of the DSP)   --->   "%mul_ln406_4 = mul i16 %y_assign_66, i16 21816" [../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:474]   --->   Operation 179 'mul' 'mul_ln406_4' <Predicate = true> <Delay = 2.15> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 8 <SV = 6> <Delay = 2.15>
+ST_8 : Operation 180 [2/4] (2.15ns) (root node of the DSP)   --->   "%mul_ln406_4 = mul i16 %y_assign_66, i16 21816" [../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:474]   --->   Operation 180 'mul' 'mul_ln406_4' <Predicate = true> <Delay = 2.15> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 9 <SV = 7> <Delay = 2.15>
+ST_9 : Operation 181 [1/4] (0.00ns) (root node of the DSP)   --->   "%mul_ln406_4 = mul i16 %y_assign_66, i16 21816" [../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:474]   --->   Operation 181 'mul' 'mul_ln406_4' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_9 : Operation 182 [1/1] (0.00ns)   --->   "%zext_ln406 = zext i16 %mul_ln406_4" [../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:474]   --->   Operation 182 'zext' 'zext_ln406' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 183 [4/4] (2.15ns) (root node of the DSP)   --->   "%w_69 = mul i30 %zext_ln406, i30 12289" [../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:474]   --->   Operation 183 'mul' 'w_69' <Predicate = true> <Delay = 2.15> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 10 <SV = 8> <Delay = 2.15>
+ST_10 : Operation 184 [3/3] (1.05ns) (grouped into DSP with root node add_ln414_2)   --->   "%z_131 = mul i30 %zext_ln831, i30 10952" [../FalconHLS/code_hls/vrfy.c:405->../FalconHLS/code_hls/vrfy.c:474]   --->   Operation 184 'mul' 'z_131' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_10 : Operation 185 [3/4] (2.15ns) (root node of the DSP)   --->   "%w_69 = mul i30 %zext_ln406, i30 12289" [../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:474]   --->   Operation 185 'mul' 'w_69' <Predicate = true> <Delay = 2.15> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 11 <SV = 9> <Delay = 2.15>
+ST_11 : Operation 186 [2/3] (1.05ns) (grouped into DSP with root node add_ln414_2)   --->   "%z_131 = mul i30 %zext_ln831, i30 10952" [../FalconHLS/code_hls/vrfy.c:405->../FalconHLS/code_hls/vrfy.c:474]   --->   Operation 186 'mul' 'z_131' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_11 : Operation 187 [2/4] (2.15ns) (root node of the DSP)   --->   "%w_69 = mul i30 %zext_ln406, i30 12289" [../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:474]   --->   Operation 187 'mul' 'w_69' <Predicate = true> <Delay = 2.15> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 12 <SV = 10> <Delay = 2.10>
+ST_12 : Operation 188 [1/3] (0.00ns) (grouped into DSP with root node add_ln414_2)   --->   "%z_131 = mul i30 %zext_ln831, i30 10952" [../FalconHLS/code_hls/vrfy.c:405->../FalconHLS/code_hls/vrfy.c:474]   --->   Operation 188 'mul' 'z_131' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_12 : Operation 189 [1/1] (0.00ns) (grouped into DSP with root node add_ln414_2)   --->   "%zext_ln396 = zext i30 %z_131" [../FalconHLS/code_hls/vrfy.c:396->../FalconHLS/code_hls/vrfy.c:474]   --->   Operation 189 'zext' 'zext_ln396' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 190 [1/4] (0.00ns) (root node of the DSP)   --->   "%w_69 = mul i30 %zext_ln406, i30 12289" [../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:474]   --->   Operation 190 'mul' 'w_69' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_12 : Operation 191 [1/1] (0.00ns)   --->   "%zext_ln396_4 = zext i30 %w_69" [../FalconHLS/code_hls/vrfy.c:396->../FalconHLS/code_hls/vrfy.c:474]   --->   Operation 191 'zext' 'zext_ln396_4' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 192 [2/2] (2.10ns) (root node of the DSP)   --->   "%add_ln414_2 = add i31 %zext_ln396_4, i31 %zext_ln396" [../FalconHLS/code_hls/vrfy.c:414->../FalconHLS/code_hls/vrfy.c:474]   --->   Operation 192 'add' 'add_ln414_2' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 13 <SV = 11> <Delay = 8.13>
+ST_13 : Operation 193 [1/2] (2.10ns) (root node of the DSP)   --->   "%add_ln414_2 = add i31 %zext_ln396_4, i31 %zext_ln396" [../FalconHLS/code_hls/vrfy.c:414->../FalconHLS/code_hls/vrfy.c:474]   --->   Operation 193 'add' 'add_ln414_2' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_13 : Operation 194 [1/1] (0.00ns)   --->   "%trunc_ln = partselect i15 @_ssdm_op_PartSelect.i15.i31.i32.i32, i31 %add_ln414_2, i32 16, i32 30" [../FalconHLS/code_hls/vrfy.c:396->../FalconHLS/code_hls/vrfy.c:474]   --->   Operation 194 'partselect' 'trunc_ln' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 195 [1/1] (1.94ns)   --->   "%z_134 = add i15 %trunc_ln, i15 20479" [../FalconHLS/code_hls/vrfy.c:421->../FalconHLS/code_hls/vrfy.c:474]   --->   Operation 195 'add' 'z_134' <Predicate = true> <Delay = 1.94> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.94> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 196 [1/1] (0.00ns) (grouped into LUT with out node z_177)   --->   "%sext_ln396 = sext i15 %z_134" [../FalconHLS/code_hls/vrfy.c:396->../FalconHLS/code_hls/vrfy.c:474]   --->   Operation 196 'sext' 'sext_ln396' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 197 [1/1] (0.00ns) (grouped into LUT with out node z_177)   --->   "%tmp_230 = bitselect i1 @_ssdm_op_BitSelect.i1.i15.i32, i15 %z_134, i32 14" [../FalconHLS/code_hls/vrfy.c:422->../FalconHLS/code_hls/vrfy.c:474]   --->   Operation 197 'bitselect' 'tmp_230' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 198 [1/1] (0.00ns) (grouped into LUT with out node z_177)   --->   "%select_ln422 = select i1 %tmp_230, i16 12289, i16 0" [../FalconHLS/code_hls/vrfy.c:422->../FalconHLS/code_hls/vrfy.c:474]   --->   Operation 198 'select' 'select_ln422' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.75> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_13 : Operation 199 [1/1] (1.94ns) (out node of the LUT)   --->   "%z_177 = add i16 %select_ln422, i16 %sext_ln396" [../FalconHLS/code_hls/vrfy.c:422->../FalconHLS/code_hls/vrfy.c:474]   --->   Operation 199 'add' 'z_177' <Predicate = true> <Delay = 1.94> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.94> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 200 [1/1] (0.00ns)   --->   "%sext_ln396_4 = sext i16 %z_177" [../FalconHLS/code_hls/vrfy.c:396->../FalconHLS/code_hls/vrfy.c:474]   --->   Operation 200 'sext' 'sext_ln396_4' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 201 [2/2] (2.15ns)   --->   "%y1 = call i17 @mq_montysqr, i17 %sext_ln396_4" [../FalconHLS/code_hls/vrfy.c:475]   --->   Operation 201 'call' 'y1' <Predicate = true> <Delay = 2.15> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 14 <SV = 12> <Delay = 8.43>
+ST_14 : Operation 202 [1/1] (0.00ns)   --->   "%sext_ln396_3 = sext i16 %z_177" [../FalconHLS/code_hls/vrfy.c:396->../FalconHLS/code_hls/vrfy.c:474]   --->   Operation 202 'sext' 'sext_ln396_3' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 203 [1/2] (6.28ns)   --->   "%y1 = call i17 @mq_montysqr, i17 %sext_ln396_4" [../FalconHLS/code_hls/vrfy.c:475]   --->   Operation 203 'call' 'y1' <Predicate = true> <Delay = 6.28> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_14 : Operation 204 [1/1] (0.00ns)   --->   "%sext_ln471 = sext i17 %y1" [../FalconHLS/code_hls/vrfy.c:471]   --->   Operation 204 'sext' 'sext_ln471' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 205 [4/4] (2.15ns) (root node of the DSP)   --->   "%z_140 = mul i32 %sext_ln396_3, i32 %sext_ln471" [../FalconHLS/code_hls/vrfy.c:405->../FalconHLS/code_hls/vrfy.c:476]   --->   Operation 205 'mul' 'z_140' <Predicate = true> <Delay = 2.15> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 15 <SV = 13> <Delay = 2.15>
+ST_15 : Operation 206 [3/4] (2.15ns) (root node of the DSP)   --->   "%z_140 = mul i32 %sext_ln396_3, i32 %sext_ln471" [../FalconHLS/code_hls/vrfy.c:405->../FalconHLS/code_hls/vrfy.c:476]   --->   Operation 206 'mul' 'z_140' <Predicate = true> <Delay = 2.15> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 16 <SV = 14> <Delay = 2.15>
+ST_16 : Operation 207 [2/4] (2.15ns) (root node of the DSP)   --->   "%z_140 = mul i32 %sext_ln396_3, i32 %sext_ln471" [../FalconHLS/code_hls/vrfy.c:405->../FalconHLS/code_hls/vrfy.c:476]   --->   Operation 207 'mul' 'z_140' <Predicate = true> <Delay = 2.15> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 17 <SV = 15> <Delay = 2.15>
+ST_17 : Operation 208 [1/4] (0.00ns) (root node of the DSP)   --->   "%z_140 = mul i32 %sext_ln396_3, i32 %sext_ln471" [../FalconHLS/code_hls/vrfy.c:405->../FalconHLS/code_hls/vrfy.c:476]   --->   Operation 208 'mul' 'z_140' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_17 : Operation 209 [1/1] (0.00ns)   --->   "%trunc_ln406 = trunc i32 %z_140" [../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:476]   --->   Operation 209 'trunc' 'trunc_ln406' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 210 [4/4] (2.15ns) (root node of the DSP)   --->   "%mul_ln406_6 = mul i16 %trunc_ln406, i16 12287" [../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:476]   --->   Operation 210 'mul' 'mul_ln406_6' <Predicate = true> <Delay = 2.15> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 18 <SV = 16> <Delay = 2.15>
+ST_18 : Operation 211 [3/4] (2.15ns) (root node of the DSP)   --->   "%mul_ln406_6 = mul i16 %trunc_ln406, i16 12287" [../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:476]   --->   Operation 211 'mul' 'mul_ln406_6' <Predicate = true> <Delay = 2.15> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 19 <SV = 17> <Delay = 2.15>
+ST_19 : Operation 212 [2/4] (2.15ns) (root node of the DSP)   --->   "%mul_ln406_6 = mul i16 %trunc_ln406, i16 12287" [../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:476]   --->   Operation 212 'mul' 'mul_ln406_6' <Predicate = true> <Delay = 2.15> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 20 <SV = 18> <Delay = 1.05>
+ST_20 : Operation 213 [1/4] (0.00ns) (root node of the DSP)   --->   "%mul_ln406_6 = mul i16 %trunc_ln406, i16 12287" [../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:476]   --->   Operation 213 'mul' 'mul_ln406_6' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_20 : Operation 214 [1/1] (0.00ns)   --->   "%zext_ln406_1 = zext i16 %mul_ln406_6" [../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:476]   --->   Operation 214 'zext' 'zext_ln406_1' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 215 [3/3] (1.05ns) (grouped into DSP with root node add_ln414_3)   --->   "%w_70 = mul i30 %zext_ln406_1, i30 12289" [../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:476]   --->   Operation 215 'mul' 'w_70' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 21 <SV = 19> <Delay = 1.05>
+ST_21 : Operation 216 [2/3] (1.05ns) (grouped into DSP with root node add_ln414_3)   --->   "%w_70 = mul i30 %zext_ln406_1, i30 12289" [../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:476]   --->   Operation 216 'mul' 'w_70' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 22 <SV = 20> <Delay = 2.10>
+ST_22 : Operation 217 [1/3] (0.00ns) (grouped into DSP with root node add_ln414_3)   --->   "%w_70 = mul i30 %zext_ln406_1, i30 12289" [../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:476]   --->   Operation 217 'mul' 'w_70' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_22 : Operation 218 [1/1] (0.00ns) (grouped into DSP with root node add_ln414_3)   --->   "%zext_ln396_5 = zext i30 %w_70" [../FalconHLS/code_hls/vrfy.c:396->../FalconHLS/code_hls/vrfy.c:476]   --->   Operation 218 'zext' 'zext_ln396_5' <Predicate = true> <Delay = 0.00>
+ST_22 : Operation 219 [2/2] (2.10ns) (root node of the DSP)   --->   "%add_ln414_3 = add i32 %zext_ln396_5, i32 %z_140" [../FalconHLS/code_hls/vrfy.c:414->../FalconHLS/code_hls/vrfy.c:476]   --->   Operation 219 'add' 'add_ln414_3' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 23 <SV = 21> <Delay = 8.43>
+ST_23 : Operation 220 [1/2] (2.10ns) (root node of the DSP)   --->   "%add_ln414_3 = add i32 %zext_ln396_5, i32 %z_140" [../FalconHLS/code_hls/vrfy.c:414->../FalconHLS/code_hls/vrfy.c:476]   --->   Operation 220 'add' 'add_ln414_3' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_23 : Operation 221 [1/1] (0.00ns)   --->   "%trunc_ln396_1 = partselect i16 @_ssdm_op_PartSelect.i16.i32.i32.i32, i32 %add_ln414_3, i32 16, i32 31" [../FalconHLS/code_hls/vrfy.c:396->../FalconHLS/code_hls/vrfy.c:476]   --->   Operation 221 'partselect' 'trunc_ln396_1' <Predicate = true> <Delay = 0.00>
+ST_23 : Operation 222 [1/1] (0.00ns)   --->   "%zext_ln396_6 = zext i16 %trunc_ln396_1" [../FalconHLS/code_hls/vrfy.c:396->../FalconHLS/code_hls/vrfy.c:476]   --->   Operation 222 'zext' 'zext_ln396_6' <Predicate = true> <Delay = 0.00>
+ST_23 : Operation 223 [1/1] (2.07ns)   --->   "%z_146 = add i17 %zext_ln396_6, i17 118783" [../FalconHLS/code_hls/vrfy.c:421->../FalconHLS/code_hls/vrfy.c:476]   --->   Operation 223 'add' 'z_146' <Predicate = true> <Delay = 2.07> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.07> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_23 : Operation 224 [1/1] (0.00ns) (grouped into LUT with out node z_178)   --->   "%tmp_231 = bitselect i1 @_ssdm_op_BitSelect.i1.i17.i32, i17 %z_146, i32 16" [../FalconHLS/code_hls/vrfy.c:422->../FalconHLS/code_hls/vrfy.c:476]   --->   Operation 224 'bitselect' 'tmp_231' <Predicate = true> <Delay = 0.00>
+ST_23 : Operation 225 [1/1] (0.00ns) (grouped into LUT with out node z_178)   --->   "%select_ln422_1 = select i1 %tmp_231, i17 12289, i17 0" [../FalconHLS/code_hls/vrfy.c:422->../FalconHLS/code_hls/vrfy.c:476]   --->   Operation 225 'select' 'select_ln422_1' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.75> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_23 : Operation 226 [1/1] (2.10ns) (out node of the LUT)   --->   "%z_178 = add i17 %select_ln422_1, i17 %z_146" [../FalconHLS/code_hls/vrfy.c:422->../FalconHLS/code_hls/vrfy.c:476]   --->   Operation 226 'add' 'z_178' <Predicate = true> <Delay = 2.10> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.10> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_23 : Operation 227 [1/1] (0.00ns)   --->   "%sext_ln396_5 = sext i17 %z_178" [../FalconHLS/code_hls/vrfy.c:396->../FalconHLS/code_hls/vrfy.c:476]   --->   Operation 227 'sext' 'sext_ln396_5' <Predicate = true> <Delay = 0.00>
+ST_23 : Operation 228 [4/4] (2.15ns) (root node of the DSP)   --->   "%z_154 = mul i32 %sext_ln471, i32 %sext_ln396_5" [../FalconHLS/code_hls/vrfy.c:405->../FalconHLS/code_hls/vrfy.c:477]   --->   Operation 228 'mul' 'z_154' <Predicate = true> <Delay = 2.15> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 24 <SV = 22> <Delay = 2.15>
+ST_24 : Operation 229 [3/4] (2.15ns) (root node of the DSP)   --->   "%z_154 = mul i32 %sext_ln471, i32 %sext_ln396_5" [../FalconHLS/code_hls/vrfy.c:405->../FalconHLS/code_hls/vrfy.c:477]   --->   Operation 229 'mul' 'z_154' <Predicate = true> <Delay = 2.15> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 25 <SV = 23> <Delay = 2.15>
+ST_25 : Operation 230 [2/4] (2.15ns) (root node of the DSP)   --->   "%z_154 = mul i32 %sext_ln471, i32 %sext_ln396_5" [../FalconHLS/code_hls/vrfy.c:405->../FalconHLS/code_hls/vrfy.c:477]   --->   Operation 230 'mul' 'z_154' <Predicate = true> <Delay = 2.15> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 26 <SV = 24> <Delay = 2.15>
+ST_26 : Operation 231 [1/4] (0.00ns) (root node of the DSP)   --->   "%z_154 = mul i32 %sext_ln471, i32 %sext_ln396_5" [../FalconHLS/code_hls/vrfy.c:405->../FalconHLS/code_hls/vrfy.c:477]   --->   Operation 231 'mul' 'z_154' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_26 : Operation 232 [1/1] (0.00ns)   --->   "%trunc_ln406_1 = trunc i32 %z_154" [../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:477]   --->   Operation 232 'trunc' 'trunc_ln406_1' <Predicate = true> <Delay = 0.00>
+ST_26 : Operation 233 [4/4] (2.15ns) (root node of the DSP)   --->   "%mul_ln406_8 = mul i16 %trunc_ln406_1, i16 12287" [../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:477]   --->   Operation 233 'mul' 'mul_ln406_8' <Predicate = true> <Delay = 2.15> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 27 <SV = 25> <Delay = 2.15>
+ST_27 : Operation 234 [3/4] (2.15ns) (root node of the DSP)   --->   "%mul_ln406_8 = mul i16 %trunc_ln406_1, i16 12287" [../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:477]   --->   Operation 234 'mul' 'mul_ln406_8' <Predicate = true> <Delay = 2.15> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 28 <SV = 26> <Delay = 2.15>
+ST_28 : Operation 235 [2/4] (2.15ns) (root node of the DSP)   --->   "%mul_ln406_8 = mul i16 %trunc_ln406_1, i16 12287" [../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:477]   --->   Operation 235 'mul' 'mul_ln406_8' <Predicate = true> <Delay = 2.15> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 29 <SV = 27> <Delay = 1.05>
+ST_29 : Operation 236 [1/4] (0.00ns) (root node of the DSP)   --->   "%mul_ln406_8 = mul i16 %trunc_ln406_1, i16 12287" [../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:477]   --->   Operation 236 'mul' 'mul_ln406_8' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_29 : Operation 237 [1/1] (0.00ns)   --->   "%zext_ln406_2 = zext i16 %mul_ln406_8" [../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:477]   --->   Operation 237 'zext' 'zext_ln406_2' <Predicate = true> <Delay = 0.00>
+ST_29 : Operation 238 [3/3] (1.05ns) (grouped into DSP with root node add_ln414_4)   --->   "%w_71 = mul i30 %zext_ln406_2, i30 12289" [../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:477]   --->   Operation 238 'mul' 'w_71' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 30 <SV = 28> <Delay = 1.05>
+ST_30 : Operation 239 [2/3] (1.05ns) (grouped into DSP with root node add_ln414_4)   --->   "%w_71 = mul i30 %zext_ln406_2, i30 12289" [../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:477]   --->   Operation 239 'mul' 'w_71' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 31 <SV = 29> <Delay = 2.10>
+ST_31 : Operation 240 [1/3] (0.00ns) (grouped into DSP with root node add_ln414_4)   --->   "%w_71 = mul i30 %zext_ln406_2, i30 12289" [../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:477]   --->   Operation 240 'mul' 'w_71' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_31 : Operation 241 [1/1] (0.00ns) (grouped into DSP with root node add_ln414_4)   --->   "%zext_ln396_7 = zext i30 %w_71" [../FalconHLS/code_hls/vrfy.c:396->../FalconHLS/code_hls/vrfy.c:477]   --->   Operation 241 'zext' 'zext_ln396_7' <Predicate = true> <Delay = 0.00>
+ST_31 : Operation 242 [2/2] (2.10ns) (root node of the DSP)   --->   "%add_ln414_4 = add i32 %zext_ln396_7, i32 %z_154" [../FalconHLS/code_hls/vrfy.c:414->../FalconHLS/code_hls/vrfy.c:477]   --->   Operation 242 'add' 'add_ln414_4' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 32 <SV = 30> <Delay = 8.43>
+ST_32 : Operation 243 [1/2] (2.10ns) (root node of the DSP)   --->   "%add_ln414_4 = add i32 %zext_ln396_7, i32 %z_154" [../FalconHLS/code_hls/vrfy.c:414->../FalconHLS/code_hls/vrfy.c:477]   --->   Operation 243 'add' 'add_ln414_4' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_32 : Operation 244 [1/1] (0.00ns)   --->   "%trunc_ln396_2 = partselect i16 @_ssdm_op_PartSelect.i16.i32.i32.i32, i32 %add_ln414_4, i32 16, i32 31" [../FalconHLS/code_hls/vrfy.c:396->../FalconHLS/code_hls/vrfy.c:477]   --->   Operation 244 'partselect' 'trunc_ln396_2' <Predicate = true> <Delay = 0.00>
+ST_32 : Operation 245 [1/1] (0.00ns)   --->   "%zext_ln396_8 = zext i16 %trunc_ln396_2" [../FalconHLS/code_hls/vrfy.c:396->../FalconHLS/code_hls/vrfy.c:477]   --->   Operation 245 'zext' 'zext_ln396_8' <Predicate = true> <Delay = 0.00>
+ST_32 : Operation 246 [1/1] (2.07ns)   --->   "%z_155 = add i17 %zext_ln396_8, i17 118783" [../FalconHLS/code_hls/vrfy.c:421->../FalconHLS/code_hls/vrfy.c:477]   --->   Operation 246 'add' 'z_155' <Predicate = true> <Delay = 2.07> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.07> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_32 : Operation 247 [1/1] (0.00ns) (grouped into LUT with out node z_179)   --->   "%tmp_232 = bitselect i1 @_ssdm_op_BitSelect.i1.i17.i32, i17 %z_155, i32 16" [../FalconHLS/code_hls/vrfy.c:422->../FalconHLS/code_hls/vrfy.c:477]   --->   Operation 247 'bitselect' 'tmp_232' <Predicate = true> <Delay = 0.00>
+ST_32 : Operation 248 [1/1] (0.00ns) (grouped into LUT with out node z_179)   --->   "%select_ln422_2 = select i1 %tmp_232, i17 12289, i17 0" [../FalconHLS/code_hls/vrfy.c:422->../FalconHLS/code_hls/vrfy.c:477]   --->   Operation 248 'select' 'select_ln422_2' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.75> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_32 : Operation 249 [1/1] (2.10ns) (out node of the LUT)   --->   "%z_179 = add i17 %select_ln422_2, i17 %z_155" [../FalconHLS/code_hls/vrfy.c:422->../FalconHLS/code_hls/vrfy.c:477]   --->   Operation 249 'add' 'z_179' <Predicate = true> <Delay = 2.10> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.10> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_32 : Operation 250 [2/2] (2.15ns)   --->   "%y4 = call i17 @mq_montysqr, i17 %z_179" [../FalconHLS/code_hls/vrfy.c:478]   --->   Operation 250 'call' 'y4' <Predicate = true> <Delay = 2.15> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 33 <SV = 31> <Delay = 8.43>
+ST_33 : Operation 251 [1/2] (6.28ns)   --->   "%y4 = call i17 @mq_montysqr, i17 %z_179" [../FalconHLS/code_hls/vrfy.c:478]   --->   Operation 251 'call' 'y4' <Predicate = true> <Delay = 6.28> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_33 : Operation 252 [2/2] (2.15ns)   --->   "%y5 = call i17 @mq_montysqr, i17 %y4" [../FalconHLS/code_hls/vrfy.c:479]   --->   Operation 252 'call' 'y5' <Predicate = true> <Delay = 2.15> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 34 <SV = 32> <Delay = 8.43>
+ST_34 : Operation 253 [1/2] (6.28ns)   --->   "%y5 = call i17 @mq_montysqr, i17 %y4" [../FalconHLS/code_hls/vrfy.c:479]   --->   Operation 253 'call' 'y5' <Predicate = true> <Delay = 6.28> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_34 : Operation 254 [2/2] (2.15ns)   --->   "%y6 = call i17 @mq_montysqr, i17 %y5" [../FalconHLS/code_hls/vrfy.c:480]   --->   Operation 254 'call' 'y6' <Predicate = true> <Delay = 2.15> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 35 <SV = 33> <Delay = 8.43>
+ST_35 : Operation 255 [1/2] (6.28ns)   --->   "%y6 = call i17 @mq_montysqr, i17 %y5" [../FalconHLS/code_hls/vrfy.c:480]   --->   Operation 255 'call' 'y6' <Predicate = true> <Delay = 6.28> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_35 : Operation 256 [2/2] (2.15ns)   --->   "%y7 = call i17 @mq_montysqr, i17 %y6" [../FalconHLS/code_hls/vrfy.c:481]   --->   Operation 256 'call' 'y7' <Predicate = true> <Delay = 2.15> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 36 <SV = 34> <Delay = 8.43>
+ST_36 : Operation 257 [1/2] (6.28ns)   --->   "%y7 = call i17 @mq_montysqr, i17 %y6" [../FalconHLS/code_hls/vrfy.c:481]   --->   Operation 257 'call' 'y7' <Predicate = true> <Delay = 6.28> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_36 : Operation 258 [2/2] (2.15ns)   --->   "%y8 = call i17 @mq_montysqr, i17 %y7" [../FalconHLS/code_hls/vrfy.c:482]   --->   Operation 258 'call' 'y8' <Predicate = true> <Delay = 2.15> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 37 <SV = 35> <Delay = 8.43>
+ST_37 : Operation 259 [1/2] (6.28ns)   --->   "%y8 = call i17 @mq_montysqr, i17 %y7" [../FalconHLS/code_hls/vrfy.c:482]   --->   Operation 259 'call' 'y8' <Predicate = true> <Delay = 6.28> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_37 : Operation 260 [1/1] (0.00ns)   --->   "%sext_ln471_1 = sext i17 %y8" [../FalconHLS/code_hls/vrfy.c:471]   --->   Operation 260 'sext' 'sext_ln471_1' <Predicate = true> <Delay = 0.00>
+ST_37 : Operation 261 [4/4] (2.15ns) (root node of the DSP)   --->   "%z_157 = mul i32 %sext_ln396_5, i32 %sext_ln471_1" [../FalconHLS/code_hls/vrfy.c:405->../FalconHLS/code_hls/vrfy.c:483]   --->   Operation 261 'mul' 'z_157' <Predicate = true> <Delay = 2.15> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 38 <SV = 36> <Delay = 2.15>
+ST_38 : Operation 262 [3/4] (2.15ns) (root node of the DSP)   --->   "%z_157 = mul i32 %sext_ln396_5, i32 %sext_ln471_1" [../FalconHLS/code_hls/vrfy.c:405->../FalconHLS/code_hls/vrfy.c:483]   --->   Operation 262 'mul' 'z_157' <Predicate = true> <Delay = 2.15> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 39 <SV = 37> <Delay = 2.15>
+ST_39 : Operation 263 [2/4] (2.15ns) (root node of the DSP)   --->   "%z_157 = mul i32 %sext_ln396_5, i32 %sext_ln471_1" [../FalconHLS/code_hls/vrfy.c:405->../FalconHLS/code_hls/vrfy.c:483]   --->   Operation 263 'mul' 'z_157' <Predicate = true> <Delay = 2.15> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 40 <SV = 38> <Delay = 2.15>
+ST_40 : Operation 264 [1/4] (0.00ns) (root node of the DSP)   --->   "%z_157 = mul i32 %sext_ln396_5, i32 %sext_ln471_1" [../FalconHLS/code_hls/vrfy.c:405->../FalconHLS/code_hls/vrfy.c:483]   --->   Operation 264 'mul' 'z_157' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_40 : Operation 265 [1/1] (0.00ns)   --->   "%trunc_ln406_2 = trunc i32 %z_157" [../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:483]   --->   Operation 265 'trunc' 'trunc_ln406_2' <Predicate = true> <Delay = 0.00>
+ST_40 : Operation 266 [4/4] (2.15ns) (root node of the DSP)   --->   "%mul_ln406_10 = mul i16 %trunc_ln406_2, i16 12287" [../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:483]   --->   Operation 266 'mul' 'mul_ln406_10' <Predicate = true> <Delay = 2.15> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 41 <SV = 39> <Delay = 2.15>
+ST_41 : Operation 267 [3/4] (2.15ns) (root node of the DSP)   --->   "%mul_ln406_10 = mul i16 %trunc_ln406_2, i16 12287" [../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:483]   --->   Operation 267 'mul' 'mul_ln406_10' <Predicate = true> <Delay = 2.15> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 42 <SV = 40> <Delay = 2.15>
+ST_42 : Operation 268 [2/4] (2.15ns) (root node of the DSP)   --->   "%mul_ln406_10 = mul i16 %trunc_ln406_2, i16 12287" [../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:483]   --->   Operation 268 'mul' 'mul_ln406_10' <Predicate = true> <Delay = 2.15> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 43 <SV = 41> <Delay = 1.05>
+ST_43 : Operation 269 [1/4] (0.00ns) (root node of the DSP)   --->   "%mul_ln406_10 = mul i16 %trunc_ln406_2, i16 12287" [../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:483]   --->   Operation 269 'mul' 'mul_ln406_10' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_43 : Operation 270 [1/1] (0.00ns)   --->   "%zext_ln406_3 = zext i16 %mul_ln406_10" [../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:483]   --->   Operation 270 'zext' 'zext_ln406_3' <Predicate = true> <Delay = 0.00>
+ST_43 : Operation 271 [3/3] (1.05ns) (grouped into DSP with root node add_ln414_5)   --->   "%w_72 = mul i30 %zext_ln406_3, i30 12289" [../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:483]   --->   Operation 271 'mul' 'w_72' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 44 <SV = 42> <Delay = 1.05>
+ST_44 : Operation 272 [2/3] (1.05ns) (grouped into DSP with root node add_ln414_5)   --->   "%w_72 = mul i30 %zext_ln406_3, i30 12289" [../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:483]   --->   Operation 272 'mul' 'w_72' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 45 <SV = 43> <Delay = 2.10>
+ST_45 : Operation 273 [1/3] (0.00ns) (grouped into DSP with root node add_ln414_5)   --->   "%w_72 = mul i30 %zext_ln406_3, i30 12289" [../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:483]   --->   Operation 273 'mul' 'w_72' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_45 : Operation 274 [1/1] (0.00ns) (grouped into DSP with root node add_ln414_5)   --->   "%zext_ln396_9 = zext i30 %w_72" [../FalconHLS/code_hls/vrfy.c:396->../FalconHLS/code_hls/vrfy.c:483]   --->   Operation 274 'zext' 'zext_ln396_9' <Predicate = true> <Delay = 0.00>
+ST_45 : Operation 275 [2/2] (2.10ns) (root node of the DSP)   --->   "%add_ln414_5 = add i32 %zext_ln396_9, i32 %z_157" [../FalconHLS/code_hls/vrfy.c:414->../FalconHLS/code_hls/vrfy.c:483]   --->   Operation 275 'add' 'add_ln414_5' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 46 <SV = 44> <Delay = 8.43>
+ST_46 : Operation 276 [1/2] (2.10ns) (root node of the DSP)   --->   "%add_ln414_5 = add i32 %zext_ln396_9, i32 %z_157" [../FalconHLS/code_hls/vrfy.c:414->../FalconHLS/code_hls/vrfy.c:483]   --->   Operation 276 'add' 'add_ln414_5' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_46 : Operation 277 [1/1] (0.00ns)   --->   "%trunc_ln396_3 = partselect i16 @_ssdm_op_PartSelect.i16.i32.i32.i32, i32 %add_ln414_5, i32 16, i32 31" [../FalconHLS/code_hls/vrfy.c:396->../FalconHLS/code_hls/vrfy.c:483]   --->   Operation 277 'partselect' 'trunc_ln396_3' <Predicate = true> <Delay = 0.00>
+ST_46 : Operation 278 [1/1] (0.00ns)   --->   "%zext_ln396_10 = zext i16 %trunc_ln396_3" [../FalconHLS/code_hls/vrfy.c:396->../FalconHLS/code_hls/vrfy.c:483]   --->   Operation 278 'zext' 'zext_ln396_10' <Predicate = true> <Delay = 0.00>
+ST_46 : Operation 279 [1/1] (2.07ns)   --->   "%z_158 = add i17 %zext_ln396_10, i17 118783" [../FalconHLS/code_hls/vrfy.c:421->../FalconHLS/code_hls/vrfy.c:483]   --->   Operation 279 'add' 'z_158' <Predicate = true> <Delay = 2.07> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.07> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_46 : Operation 280 [1/1] (0.00ns) (grouped into LUT with out node z_180)   --->   "%tmp_233 = bitselect i1 @_ssdm_op_BitSelect.i1.i17.i32, i17 %z_158, i32 16" [../FalconHLS/code_hls/vrfy.c:422->../FalconHLS/code_hls/vrfy.c:483]   --->   Operation 280 'bitselect' 'tmp_233' <Predicate = true> <Delay = 0.00>
+ST_46 : Operation 281 [1/1] (0.00ns) (grouped into LUT with out node z_180)   --->   "%select_ln422_3 = select i1 %tmp_233, i17 12289, i17 0" [../FalconHLS/code_hls/vrfy.c:422->../FalconHLS/code_hls/vrfy.c:483]   --->   Operation 281 'select' 'select_ln422_3' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.75> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_46 : Operation 282 [1/1] (2.10ns) (out node of the LUT)   --->   "%z_180 = add i17 %select_ln422_3, i17 %z_158" [../FalconHLS/code_hls/vrfy.c:422->../FalconHLS/code_hls/vrfy.c:483]   --->   Operation 282 'add' 'z_180' <Predicate = true> <Delay = 2.10> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.10> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_46 : Operation 283 [1/1] (0.00ns)   --->   "%sext_ln396_6 = sext i17 %z_180" [../FalconHLS/code_hls/vrfy.c:396->../FalconHLS/code_hls/vrfy.c:483]   --->   Operation 283 'sext' 'sext_ln396_6' <Predicate = true> <Delay = 0.00>
+ST_46 : Operation 284 [4/4] (2.15ns) (root node of the DSP)   --->   "%z_160 = mul i32 %sext_ln471_1, i32 %sext_ln396_6" [../FalconHLS/code_hls/vrfy.c:405->../FalconHLS/code_hls/vrfy.c:484]   --->   Operation 284 'mul' 'z_160' <Predicate = true> <Delay = 2.15> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 47 <SV = 45> <Delay = 2.15>
+ST_47 : Operation 285 [3/4] (2.15ns) (root node of the DSP)   --->   "%z_160 = mul i32 %sext_ln471_1, i32 %sext_ln396_6" [../FalconHLS/code_hls/vrfy.c:405->../FalconHLS/code_hls/vrfy.c:484]   --->   Operation 285 'mul' 'z_160' <Predicate = true> <Delay = 2.15> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 48 <SV = 46> <Delay = 2.15>
+ST_48 : Operation 286 [2/4] (2.15ns) (root node of the DSP)   --->   "%z_160 = mul i32 %sext_ln471_1, i32 %sext_ln396_6" [../FalconHLS/code_hls/vrfy.c:405->../FalconHLS/code_hls/vrfy.c:484]   --->   Operation 286 'mul' 'z_160' <Predicate = true> <Delay = 2.15> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 49 <SV = 47> <Delay = 2.15>
+ST_49 : Operation 287 [1/4] (0.00ns) (root node of the DSP)   --->   "%z_160 = mul i32 %sext_ln471_1, i32 %sext_ln396_6" [../FalconHLS/code_hls/vrfy.c:405->../FalconHLS/code_hls/vrfy.c:484]   --->   Operation 287 'mul' 'z_160' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_49 : Operation 288 [1/1] (0.00ns)   --->   "%trunc_ln406_3 = trunc i32 %z_160" [../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:484]   --->   Operation 288 'trunc' 'trunc_ln406_3' <Predicate = true> <Delay = 0.00>
+ST_49 : Operation 289 [4/4] (2.15ns) (root node of the DSP)   --->   "%mul_ln406_12 = mul i16 %trunc_ln406_3, i16 12287" [../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:484]   --->   Operation 289 'mul' 'mul_ln406_12' <Predicate = true> <Delay = 2.15> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 50 <SV = 48> <Delay = 2.15>
+ST_50 : Operation 290 [3/4] (2.15ns) (root node of the DSP)   --->   "%mul_ln406_12 = mul i16 %trunc_ln406_3, i16 12287" [../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:484]   --->   Operation 290 'mul' 'mul_ln406_12' <Predicate = true> <Delay = 2.15> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 51 <SV = 49> <Delay = 2.15>
+ST_51 : Operation 291 [2/4] (2.15ns) (root node of the DSP)   --->   "%mul_ln406_12 = mul i16 %trunc_ln406_3, i16 12287" [../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:484]   --->   Operation 291 'mul' 'mul_ln406_12' <Predicate = true> <Delay = 2.15> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 52 <SV = 50> <Delay = 1.05>
+ST_52 : Operation 292 [1/4] (0.00ns) (root node of the DSP)   --->   "%mul_ln406_12 = mul i16 %trunc_ln406_3, i16 12287" [../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:484]   --->   Operation 292 'mul' 'mul_ln406_12' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_52 : Operation 293 [1/1] (0.00ns)   --->   "%zext_ln406_4 = zext i16 %mul_ln406_12" [../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:484]   --->   Operation 293 'zext' 'zext_ln406_4' <Predicate = true> <Delay = 0.00>
+ST_52 : Operation 294 [3/3] (1.05ns) (grouped into DSP with root node add_ln414_6)   --->   "%w_73 = mul i30 %zext_ln406_4, i30 12289" [../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:484]   --->   Operation 294 'mul' 'w_73' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 53 <SV = 51> <Delay = 1.05>
+ST_53 : Operation 295 [2/3] (1.05ns) (grouped into DSP with root node add_ln414_6)   --->   "%w_73 = mul i30 %zext_ln406_4, i30 12289" [../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:484]   --->   Operation 295 'mul' 'w_73' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 54 <SV = 52> <Delay = 2.10>
+ST_54 : Operation 296 [1/3] (0.00ns) (grouped into DSP with root node add_ln414_6)   --->   "%w_73 = mul i30 %zext_ln406_4, i30 12289" [../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:484]   --->   Operation 296 'mul' 'w_73' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_54 : Operation 297 [1/1] (0.00ns) (grouped into DSP with root node add_ln414_6)   --->   "%zext_ln396_11 = zext i30 %w_73" [../FalconHLS/code_hls/vrfy.c:396->../FalconHLS/code_hls/vrfy.c:484]   --->   Operation 297 'zext' 'zext_ln396_11' <Predicate = true> <Delay = 0.00>
+ST_54 : Operation 298 [2/2] (2.10ns) (root node of the DSP)   --->   "%add_ln414_6 = add i32 %zext_ln396_11, i32 %z_160" [../FalconHLS/code_hls/vrfy.c:414->../FalconHLS/code_hls/vrfy.c:484]   --->   Operation 298 'add' 'add_ln414_6' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 55 <SV = 53> <Delay = 8.43>
+ST_55 : Operation 299 [1/2] (2.10ns) (root node of the DSP)   --->   "%add_ln414_6 = add i32 %zext_ln396_11, i32 %z_160" [../FalconHLS/code_hls/vrfy.c:414->../FalconHLS/code_hls/vrfy.c:484]   --->   Operation 299 'add' 'add_ln414_6' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_55 : Operation 300 [1/1] (0.00ns)   --->   "%trunc_ln396_4 = partselect i16 @_ssdm_op_PartSelect.i16.i32.i32.i32, i32 %add_ln414_6, i32 16, i32 31" [../FalconHLS/code_hls/vrfy.c:396->../FalconHLS/code_hls/vrfy.c:484]   --->   Operation 300 'partselect' 'trunc_ln396_4' <Predicate = true> <Delay = 0.00>
+ST_55 : Operation 301 [1/1] (0.00ns)   --->   "%zext_ln396_12 = zext i16 %trunc_ln396_4" [../FalconHLS/code_hls/vrfy.c:396->../FalconHLS/code_hls/vrfy.c:484]   --->   Operation 301 'zext' 'zext_ln396_12' <Predicate = true> <Delay = 0.00>
+ST_55 : Operation 302 [1/1] (2.07ns)   --->   "%z_161 = add i17 %zext_ln396_12, i17 118783" [../FalconHLS/code_hls/vrfy.c:421->../FalconHLS/code_hls/vrfy.c:484]   --->   Operation 302 'add' 'z_161' <Predicate = true> <Delay = 2.07> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.07> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_55 : Operation 303 [1/1] (0.00ns) (grouped into LUT with out node z_181)   --->   "%tmp_234 = bitselect i1 @_ssdm_op_BitSelect.i1.i17.i32, i17 %z_161, i32 16" [../FalconHLS/code_hls/vrfy.c:422->../FalconHLS/code_hls/vrfy.c:484]   --->   Operation 303 'bitselect' 'tmp_234' <Predicate = true> <Delay = 0.00>
+ST_55 : Operation 304 [1/1] (0.00ns) (grouped into LUT with out node z_181)   --->   "%select_ln422_4 = select i1 %tmp_234, i17 12289, i17 0" [../FalconHLS/code_hls/vrfy.c:422->../FalconHLS/code_hls/vrfy.c:484]   --->   Operation 304 'select' 'select_ln422_4' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.75> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_55 : Operation 305 [1/1] (2.10ns) (out node of the LUT)   --->   "%z_181 = add i17 %select_ln422_4, i17 %z_161" [../FalconHLS/code_hls/vrfy.c:422->../FalconHLS/code_hls/vrfy.c:484]   --->   Operation 305 'add' 'z_181' <Predicate = true> <Delay = 2.10> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.10> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_55 : Operation 306 [2/2] (2.15ns)   --->   "%y11 = call i17 @mq_montysqr, i17 %z_181" [../FalconHLS/code_hls/vrfy.c:485]   --->   Operation 306 'call' 'y11' <Predicate = true> <Delay = 2.15> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 56 <SV = 54> <Delay = 8.43>
+ST_56 : Operation 307 [1/2] (6.28ns)   --->   "%y11 = call i17 @mq_montysqr, i17 %z_181" [../FalconHLS/code_hls/vrfy.c:485]   --->   Operation 307 'call' 'y11' <Predicate = true> <Delay = 6.28> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_56 : Operation 308 [2/2] (2.15ns)   --->   "%y12 = call i17 @mq_montysqr, i17 %y11" [../FalconHLS/code_hls/vrfy.c:486]   --->   Operation 308 'call' 'y12' <Predicate = true> <Delay = 2.15> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 57 <SV = 55> <Delay = 8.43>
+ST_57 : Operation 309 [1/2] (6.28ns)   --->   "%y12 = call i17 @mq_montysqr, i17 %y11" [../FalconHLS/code_hls/vrfy.c:486]   --->   Operation 309 'call' 'y12' <Predicate = true> <Delay = 6.28> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_57 : Operation 310 [1/1] (0.00ns)   --->   "%sext_ln472 = sext i17 %y12" [../FalconHLS/code_hls/vrfy.c:472]   --->   Operation 310 'sext' 'sext_ln472' <Predicate = true> <Delay = 0.00>
+ST_57 : Operation 311 [4/4] (2.15ns) (root node of the DSP)   --->   "%z_163 = mul i32 %sext_ln396_6, i32 %sext_ln472" [../FalconHLS/code_hls/vrfy.c:405->../FalconHLS/code_hls/vrfy.c:487]   --->   Operation 311 'mul' 'z_163' <Predicate = true> <Delay = 2.15> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 58 <SV = 56> <Delay = 2.15>
+ST_58 : Operation 312 [3/4] (2.15ns) (root node of the DSP)   --->   "%z_163 = mul i32 %sext_ln396_6, i32 %sext_ln472" [../FalconHLS/code_hls/vrfy.c:405->../FalconHLS/code_hls/vrfy.c:487]   --->   Operation 312 'mul' 'z_163' <Predicate = true> <Delay = 2.15> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 59 <SV = 57> <Delay = 2.15>
+ST_59 : Operation 313 [2/4] (2.15ns) (root node of the DSP)   --->   "%z_163 = mul i32 %sext_ln396_6, i32 %sext_ln472" [../FalconHLS/code_hls/vrfy.c:405->../FalconHLS/code_hls/vrfy.c:487]   --->   Operation 313 'mul' 'z_163' <Predicate = true> <Delay = 2.15> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 60 <SV = 58> <Delay = 2.15>
+ST_60 : Operation 314 [1/4] (0.00ns) (root node of the DSP)   --->   "%z_163 = mul i32 %sext_ln396_6, i32 %sext_ln472" [../FalconHLS/code_hls/vrfy.c:405->../FalconHLS/code_hls/vrfy.c:487]   --->   Operation 314 'mul' 'z_163' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_60 : Operation 315 [1/1] (0.00ns)   --->   "%trunc_ln406_4 = trunc i32 %z_163" [../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:487]   --->   Operation 315 'trunc' 'trunc_ln406_4' <Predicate = true> <Delay = 0.00>
+ST_60 : Operation 316 [4/4] (2.15ns) (root node of the DSP)   --->   "%mul_ln406_14 = mul i16 %trunc_ln406_4, i16 12287" [../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:487]   --->   Operation 316 'mul' 'mul_ln406_14' <Predicate = true> <Delay = 2.15> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 61 <SV = 59> <Delay = 2.15>
+ST_61 : Operation 317 [3/4] (2.15ns) (root node of the DSP)   --->   "%mul_ln406_14 = mul i16 %trunc_ln406_4, i16 12287" [../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:487]   --->   Operation 317 'mul' 'mul_ln406_14' <Predicate = true> <Delay = 2.15> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 62 <SV = 60> <Delay = 2.15>
+ST_62 : Operation 318 [2/4] (2.15ns) (root node of the DSP)   --->   "%mul_ln406_14 = mul i16 %trunc_ln406_4, i16 12287" [../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:487]   --->   Operation 318 'mul' 'mul_ln406_14' <Predicate = true> <Delay = 2.15> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 63 <SV = 61> <Delay = 1.05>
+ST_63 : Operation 319 [1/4] (0.00ns) (root node of the DSP)   --->   "%mul_ln406_14 = mul i16 %trunc_ln406_4, i16 12287" [../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:487]   --->   Operation 319 'mul' 'mul_ln406_14' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_63 : Operation 320 [1/1] (0.00ns)   --->   "%zext_ln406_5 = zext i16 %mul_ln406_14" [../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:487]   --->   Operation 320 'zext' 'zext_ln406_5' <Predicate = true> <Delay = 0.00>
+ST_63 : Operation 321 [3/3] (1.05ns) (grouped into DSP with root node add_ln414_7)   --->   "%w_74 = mul i30 %zext_ln406_5, i30 12289" [../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:487]   --->   Operation 321 'mul' 'w_74' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 64 <SV = 62> <Delay = 1.05>
+ST_64 : Operation 322 [2/3] (1.05ns) (grouped into DSP with root node add_ln414_7)   --->   "%w_74 = mul i30 %zext_ln406_5, i30 12289" [../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:487]   --->   Operation 322 'mul' 'w_74' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 65 <SV = 63> <Delay = 2.10>
+ST_65 : Operation 323 [1/3] (0.00ns) (grouped into DSP with root node add_ln414_7)   --->   "%w_74 = mul i30 %zext_ln406_5, i30 12289" [../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:487]   --->   Operation 323 'mul' 'w_74' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_65 : Operation 324 [1/1] (0.00ns) (grouped into DSP with root node add_ln414_7)   --->   "%zext_ln396_13 = zext i30 %w_74" [../FalconHLS/code_hls/vrfy.c:396->../FalconHLS/code_hls/vrfy.c:487]   --->   Operation 324 'zext' 'zext_ln396_13' <Predicate = true> <Delay = 0.00>
+ST_65 : Operation 325 [2/2] (2.10ns) (root node of the DSP)   --->   "%add_ln414_7 = add i32 %zext_ln396_13, i32 %z_163" [../FalconHLS/code_hls/vrfy.c:414->../FalconHLS/code_hls/vrfy.c:487]   --->   Operation 325 'add' 'add_ln414_7' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 66 <SV = 64> <Delay = 8.43>
+ST_66 : Operation 326 [1/2] (2.10ns) (root node of the DSP)   --->   "%add_ln414_7 = add i32 %zext_ln396_13, i32 %z_163" [../FalconHLS/code_hls/vrfy.c:414->../FalconHLS/code_hls/vrfy.c:487]   --->   Operation 326 'add' 'add_ln414_7' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_66 : Operation 327 [1/1] (0.00ns)   --->   "%trunc_ln396_5 = partselect i16 @_ssdm_op_PartSelect.i16.i32.i32.i32, i32 %add_ln414_7, i32 16, i32 31" [../FalconHLS/code_hls/vrfy.c:396->../FalconHLS/code_hls/vrfy.c:487]   --->   Operation 327 'partselect' 'trunc_ln396_5' <Predicate = true> <Delay = 0.00>
+ST_66 : Operation 328 [1/1] (0.00ns)   --->   "%zext_ln396_14 = zext i16 %trunc_ln396_5" [../FalconHLS/code_hls/vrfy.c:396->../FalconHLS/code_hls/vrfy.c:487]   --->   Operation 328 'zext' 'zext_ln396_14' <Predicate = true> <Delay = 0.00>
+ST_66 : Operation 329 [1/1] (2.07ns)   --->   "%z_164 = add i17 %zext_ln396_14, i17 118783" [../FalconHLS/code_hls/vrfy.c:421->../FalconHLS/code_hls/vrfy.c:487]   --->   Operation 329 'add' 'z_164' <Predicate = true> <Delay = 2.07> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.07> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_66 : Operation 330 [1/1] (0.00ns) (grouped into LUT with out node z_182)   --->   "%tmp_235 = bitselect i1 @_ssdm_op_BitSelect.i1.i17.i32, i17 %z_164, i32 16" [../FalconHLS/code_hls/vrfy.c:422->../FalconHLS/code_hls/vrfy.c:487]   --->   Operation 330 'bitselect' 'tmp_235' <Predicate = true> <Delay = 0.00>
+ST_66 : Operation 331 [1/1] (0.00ns) (grouped into LUT with out node z_182)   --->   "%select_ln422_5 = select i1 %tmp_235, i17 12289, i17 0" [../FalconHLS/code_hls/vrfy.c:422->../FalconHLS/code_hls/vrfy.c:487]   --->   Operation 331 'select' 'select_ln422_5' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.75> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_66 : Operation 332 [1/1] (2.10ns) (out node of the LUT)   --->   "%z_182 = add i17 %select_ln422_5, i17 %z_164" [../FalconHLS/code_hls/vrfy.c:422->../FalconHLS/code_hls/vrfy.c:487]   --->   Operation 332 'add' 'z_182' <Predicate = true> <Delay = 2.10> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.10> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_66 : Operation 333 [2/2] (2.15ns)   --->   "%y14 = call i17 @mq_montysqr, i17 %z_182" [../FalconHLS/code_hls/vrfy.c:488]   --->   Operation 333 'call' 'y14' <Predicate = true> <Delay = 2.15> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 67 <SV = 65> <Delay = 8.43>
+ST_67 : Operation 334 [1/2] (6.28ns)   --->   "%y14 = call i17 @mq_montysqr, i17 %z_182" [../FalconHLS/code_hls/vrfy.c:488]   --->   Operation 334 'call' 'y14' <Predicate = true> <Delay = 6.28> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_67 : Operation 335 [2/2] (2.15ns)   --->   "%y15 = call i17 @mq_montysqr, i17 %y14" [../FalconHLS/code_hls/vrfy.c:489]   --->   Operation 335 'call' 'y15' <Predicate = true> <Delay = 2.15> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 68 <SV = 66> <Delay = 8.43>
+ST_68 : Operation 336 [1/1] (0.00ns)   --->   "%sext_ln396_7 = sext i17 %z_181" [../FalconHLS/code_hls/vrfy.c:396->../FalconHLS/code_hls/vrfy.c:484]   --->   Operation 336 'sext' 'sext_ln396_7' <Predicate = true> <Delay = 0.00>
+ST_68 : Operation 337 [1/2] (6.28ns)   --->   "%y15 = call i17 @mq_montysqr, i17 %y14" [../FalconHLS/code_hls/vrfy.c:489]   --->   Operation 337 'call' 'y15' <Predicate = true> <Delay = 6.28> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_68 : Operation 338 [1/1] (0.00ns)   --->   "%sext_ln472_1 = sext i17 %y15" [../FalconHLS/code_hls/vrfy.c:472]   --->   Operation 338 'sext' 'sext_ln472_1' <Predicate = true> <Delay = 0.00>
+ST_68 : Operation 339 [4/4] (2.15ns) (root node of the DSP)   --->   "%z_166 = mul i32 %sext_ln396_7, i32 %sext_ln472_1" [../FalconHLS/code_hls/vrfy.c:405->../FalconHLS/code_hls/vrfy.c:490]   --->   Operation 339 'mul' 'z_166' <Predicate = true> <Delay = 2.15> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 69 <SV = 67> <Delay = 2.15>
+ST_69 : Operation 340 [3/4] (2.15ns) (root node of the DSP)   --->   "%z_166 = mul i32 %sext_ln396_7, i32 %sext_ln472_1" [../FalconHLS/code_hls/vrfy.c:405->../FalconHLS/code_hls/vrfy.c:490]   --->   Operation 340 'mul' 'z_166' <Predicate = true> <Delay = 2.15> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 70 <SV = 68> <Delay = 2.15>
+ST_70 : Operation 341 [2/4] (2.15ns) (root node of the DSP)   --->   "%z_166 = mul i32 %sext_ln396_7, i32 %sext_ln472_1" [../FalconHLS/code_hls/vrfy.c:405->../FalconHLS/code_hls/vrfy.c:490]   --->   Operation 341 'mul' 'z_166' <Predicate = true> <Delay = 2.15> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 71 <SV = 69> <Delay = 2.15>
+ST_71 : Operation 342 [1/4] (0.00ns) (root node of the DSP)   --->   "%z_166 = mul i32 %sext_ln396_7, i32 %sext_ln472_1" [../FalconHLS/code_hls/vrfy.c:405->../FalconHLS/code_hls/vrfy.c:490]   --->   Operation 342 'mul' 'z_166' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_71 : Operation 343 [1/1] (0.00ns)   --->   "%trunc_ln406_5 = trunc i32 %z_166" [../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:490]   --->   Operation 343 'trunc' 'trunc_ln406_5' <Predicate = true> <Delay = 0.00>
+ST_71 : Operation 344 [4/4] (2.15ns) (root node of the DSP)   --->   "%mul_ln406_16 = mul i16 %trunc_ln406_5, i16 12287" [../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:490]   --->   Operation 344 'mul' 'mul_ln406_16' <Predicate = true> <Delay = 2.15> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 72 <SV = 70> <Delay = 2.15>
+ST_72 : Operation 345 [3/4] (2.15ns) (root node of the DSP)   --->   "%mul_ln406_16 = mul i16 %trunc_ln406_5, i16 12287" [../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:490]   --->   Operation 345 'mul' 'mul_ln406_16' <Predicate = true> <Delay = 2.15> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 73 <SV = 71> <Delay = 2.15>
+ST_73 : Operation 346 [2/4] (2.15ns) (root node of the DSP)   --->   "%mul_ln406_16 = mul i16 %trunc_ln406_5, i16 12287" [../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:490]   --->   Operation 346 'mul' 'mul_ln406_16' <Predicate = true> <Delay = 2.15> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 74 <SV = 72> <Delay = 1.05>
+ST_74 : Operation 347 [1/4] (0.00ns) (root node of the DSP)   --->   "%mul_ln406_16 = mul i16 %trunc_ln406_5, i16 12287" [../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:490]   --->   Operation 347 'mul' 'mul_ln406_16' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_74 : Operation 348 [1/1] (0.00ns)   --->   "%zext_ln406_6 = zext i16 %mul_ln406_16" [../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:490]   --->   Operation 348 'zext' 'zext_ln406_6' <Predicate = true> <Delay = 0.00>
+ST_74 : Operation 349 [3/3] (1.05ns) (grouped into DSP with root node add_ln414_8)   --->   "%w_75 = mul i30 %zext_ln406_6, i30 12289" [../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:490]   --->   Operation 349 'mul' 'w_75' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 75 <SV = 73> <Delay = 1.05>
+ST_75 : Operation 350 [2/3] (1.05ns) (grouped into DSP with root node add_ln414_8)   --->   "%w_75 = mul i30 %zext_ln406_6, i30 12289" [../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:490]   --->   Operation 350 'mul' 'w_75' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 76 <SV = 74> <Delay = 2.10>
+ST_76 : Operation 351 [1/3] (0.00ns) (grouped into DSP with root node add_ln414_8)   --->   "%w_75 = mul i30 %zext_ln406_6, i30 12289" [../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:490]   --->   Operation 351 'mul' 'w_75' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_76 : Operation 352 [1/1] (0.00ns) (grouped into DSP with root node add_ln414_8)   --->   "%zext_ln396_15 = zext i30 %w_75" [../FalconHLS/code_hls/vrfy.c:396->../FalconHLS/code_hls/vrfy.c:490]   --->   Operation 352 'zext' 'zext_ln396_15' <Predicate = true> <Delay = 0.00>
+ST_76 : Operation 353 [2/2] (2.10ns) (root node of the DSP)   --->   "%add_ln414_8 = add i32 %zext_ln396_15, i32 %z_166" [../FalconHLS/code_hls/vrfy.c:414->../FalconHLS/code_hls/vrfy.c:490]   --->   Operation 353 'add' 'add_ln414_8' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 77 <SV = 75> <Delay = 8.43>
+ST_77 : Operation 354 [1/2] (2.10ns) (root node of the DSP)   --->   "%add_ln414_8 = add i32 %zext_ln396_15, i32 %z_166" [../FalconHLS/code_hls/vrfy.c:414->../FalconHLS/code_hls/vrfy.c:490]   --->   Operation 354 'add' 'add_ln414_8' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_77 : Operation 355 [1/1] (0.00ns)   --->   "%trunc_ln396_6 = partselect i16 @_ssdm_op_PartSelect.i16.i32.i32.i32, i32 %add_ln414_8, i32 16, i32 31" [../FalconHLS/code_hls/vrfy.c:396->../FalconHLS/code_hls/vrfy.c:490]   --->   Operation 355 'partselect' 'trunc_ln396_6' <Predicate = true> <Delay = 0.00>
+ST_77 : Operation 356 [1/1] (0.00ns)   --->   "%zext_ln396_16 = zext i16 %trunc_ln396_6" [../FalconHLS/code_hls/vrfy.c:396->../FalconHLS/code_hls/vrfy.c:490]   --->   Operation 356 'zext' 'zext_ln396_16' <Predicate = true> <Delay = 0.00>
+ST_77 : Operation 357 [1/1] (2.07ns)   --->   "%z_167 = add i17 %zext_ln396_16, i17 118783" [../FalconHLS/code_hls/vrfy.c:421->../FalconHLS/code_hls/vrfy.c:490]   --->   Operation 357 'add' 'z_167' <Predicate = true> <Delay = 2.07> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.07> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_77 : Operation 358 [1/1] (0.00ns) (grouped into LUT with out node z_183)   --->   "%tmp_236 = bitselect i1 @_ssdm_op_BitSelect.i1.i17.i32, i17 %z_167, i32 16" [../FalconHLS/code_hls/vrfy.c:422->../FalconHLS/code_hls/vrfy.c:490]   --->   Operation 358 'bitselect' 'tmp_236' <Predicate = true> <Delay = 0.00>
+ST_77 : Operation 359 [1/1] (0.00ns) (grouped into LUT with out node z_183)   --->   "%select_ln422_6 = select i1 %tmp_236, i17 12289, i17 0" [../FalconHLS/code_hls/vrfy.c:422->../FalconHLS/code_hls/vrfy.c:490]   --->   Operation 359 'select' 'select_ln422_6' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.75> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_77 : Operation 360 [1/1] (2.10ns) (out node of the LUT)   --->   "%z_183 = add i17 %select_ln422_6, i17 %z_167" [../FalconHLS/code_hls/vrfy.c:422->../FalconHLS/code_hls/vrfy.c:490]   --->   Operation 360 'add' 'z_183' <Predicate = true> <Delay = 2.10> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.10> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_77 : Operation 361 [2/2] (2.15ns)   --->   "%y17 = call i17 @mq_montysqr, i17 %z_183" [../FalconHLS/code_hls/vrfy.c:491]   --->   Operation 361 'call' 'y17' <Predicate = true> <Delay = 2.15> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 78 <SV = 76> <Delay = 8.43>
+ST_78 : Operation 362 [1/2] (6.28ns)   --->   "%y17 = call i17 @mq_montysqr, i17 %z_183" [../FalconHLS/code_hls/vrfy.c:491]   --->   Operation 362 'call' 'y17' <Predicate = true> <Delay = 6.28> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_78 : Operation 363 [1/1] (0.00ns)   --->   "%sext_ln472_2 = sext i17 %y17" [../FalconHLS/code_hls/vrfy.c:472]   --->   Operation 363 'sext' 'sext_ln472_2' <Predicate = true> <Delay = 0.00>
+ST_78 : Operation 364 [4/4] (2.15ns) (root node of the DSP)   --->   "%z_169 = mul i32 %sext_ln396_3, i32 %sext_ln472_2" [../FalconHLS/code_hls/vrfy.c:405->../FalconHLS/code_hls/vrfy.c:492]   --->   Operation 364 'mul' 'z_169' <Predicate = true> <Delay = 2.15> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 79 <SV = 77> <Delay = 2.15>
+ST_79 : Operation 365 [3/4] (2.15ns) (root node of the DSP)   --->   "%z_169 = mul i32 %sext_ln396_3, i32 %sext_ln472_2" [../FalconHLS/code_hls/vrfy.c:405->../FalconHLS/code_hls/vrfy.c:492]   --->   Operation 365 'mul' 'z_169' <Predicate = true> <Delay = 2.15> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 80 <SV = 78> <Delay = 2.15>
+ST_80 : Operation 366 [2/4] (2.15ns) (root node of the DSP)   --->   "%z_169 = mul i32 %sext_ln396_3, i32 %sext_ln472_2" [../FalconHLS/code_hls/vrfy.c:405->../FalconHLS/code_hls/vrfy.c:492]   --->   Operation 366 'mul' 'z_169' <Predicate = true> <Delay = 2.15> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 81 <SV = 79> <Delay = 2.15>
+ST_81 : Operation 367 [1/4] (0.00ns) (root node of the DSP)   --->   "%z_169 = mul i32 %sext_ln396_3, i32 %sext_ln472_2" [../FalconHLS/code_hls/vrfy.c:405->../FalconHLS/code_hls/vrfy.c:492]   --->   Operation 367 'mul' 'z_169' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_81 : Operation 368 [1/1] (0.00ns)   --->   "%trunc_ln406_6 = trunc i32 %z_169" [../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:492]   --->   Operation 368 'trunc' 'trunc_ln406_6' <Predicate = true> <Delay = 0.00>
+ST_81 : Operation 369 [4/4] (2.15ns) (root node of the DSP)   --->   "%mul_ln406_18 = mul i16 %trunc_ln406_6, i16 12287" [../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:492]   --->   Operation 369 'mul' 'mul_ln406_18' <Predicate = true> <Delay = 2.15> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 82 <SV = 80> <Delay = 2.15>
+ST_82 : Operation 370 [3/4] (2.15ns) (root node of the DSP)   --->   "%mul_ln406_18 = mul i16 %trunc_ln406_6, i16 12287" [../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:492]   --->   Operation 370 'mul' 'mul_ln406_18' <Predicate = true> <Delay = 2.15> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 83 <SV = 81> <Delay = 2.15>
+ST_83 : Operation 371 [2/4] (2.15ns) (root node of the DSP)   --->   "%mul_ln406_18 = mul i16 %trunc_ln406_6, i16 12287" [../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:492]   --->   Operation 371 'mul' 'mul_ln406_18' <Predicate = true> <Delay = 2.15> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 84 <SV = 82> <Delay = 1.05>
+ST_84 : Operation 372 [1/4] (0.00ns) (root node of the DSP)   --->   "%mul_ln406_18 = mul i16 %trunc_ln406_6, i16 12287" [../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:492]   --->   Operation 372 'mul' 'mul_ln406_18' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_84 : Operation 373 [1/1] (0.00ns)   --->   "%zext_ln406_7 = zext i16 %mul_ln406_18" [../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:492]   --->   Operation 373 'zext' 'zext_ln406_7' <Predicate = true> <Delay = 0.00>
+ST_84 : Operation 374 [3/3] (1.05ns) (grouped into DSP with root node add_ln414_9)   --->   "%w_76 = mul i30 %zext_ln406_7, i30 12289" [../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:492]   --->   Operation 374 'mul' 'w_76' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 85 <SV = 83> <Delay = 1.05>
+ST_85 : Operation 375 [2/3] (1.05ns) (grouped into DSP with root node add_ln414_9)   --->   "%w_76 = mul i30 %zext_ln406_7, i30 12289" [../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:492]   --->   Operation 375 'mul' 'w_76' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 86 <SV = 84> <Delay = 3.25>
+ST_86 : Operation 376 [2/2] (3.25ns)   --->   "%h_load = load i10 %h_addr_1" [../FalconHLS/code_hls/vrfy.c:834]   --->   Operation 376 'load' 'h_load' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 1024> <RAM>
+ST_86 : Operation 377 [1/3] (0.00ns) (grouped into DSP with root node add_ln414_9)   --->   "%w_76 = mul i30 %zext_ln406_7, i30 12289" [../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:492]   --->   Operation 377 'mul' 'w_76' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_86 : Operation 378 [1/1] (0.00ns) (grouped into DSP with root node add_ln414_9)   --->   "%zext_ln396_17 = zext i30 %w_76" [../FalconHLS/code_hls/vrfy.c:396->../FalconHLS/code_hls/vrfy.c:492]   --->   Operation 378 'zext' 'zext_ln396_17' <Predicate = true> <Delay = 0.00>
+ST_86 : Operation 379 [2/2] (2.10ns) (root node of the DSP)   --->   "%add_ln414_9 = add i32 %zext_ln396_17, i32 %z_169" [../FalconHLS/code_hls/vrfy.c:414->../FalconHLS/code_hls/vrfy.c:492]   --->   Operation 379 'add' 'add_ln414_9' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 87 <SV = 85> <Delay = 8.43>
+ST_87 : Operation 380 [1/2] (3.25ns)   --->   "%h_load = load i10 %h_addr_1" [../FalconHLS/code_hls/vrfy.c:834]   --->   Operation 380 'load' 'h_load' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 1024> <RAM>
+ST_87 : Operation 381 [1/1] (0.00ns)   --->   "%zext_ln834 = zext i16 %h_load" [../FalconHLS/code_hls/vrfy.c:834]   --->   Operation 381 'zext' 'zext_ln834' <Predicate = true> <Delay = 0.00>
+ST_87 : Operation 382 [1/2] (2.10ns) (root node of the DSP)   --->   "%add_ln414_9 = add i32 %zext_ln396_17, i32 %z_169" [../FalconHLS/code_hls/vrfy.c:414->../FalconHLS/code_hls/vrfy.c:492]   --->   Operation 382 'add' 'add_ln414_9' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_87 : Operation 383 [1/1] (0.00ns)   --->   "%trunc_ln396_7 = partselect i16 @_ssdm_op_PartSelect.i16.i32.i32.i32, i32 %add_ln414_9, i32 16, i32 31" [../FalconHLS/code_hls/vrfy.c:396->../FalconHLS/code_hls/vrfy.c:492]   --->   Operation 383 'partselect' 'trunc_ln396_7' <Predicate = true> <Delay = 0.00>
+ST_87 : Operation 384 [1/1] (0.00ns)   --->   "%zext_ln396_18 = zext i16 %trunc_ln396_7" [../FalconHLS/code_hls/vrfy.c:396->../FalconHLS/code_hls/vrfy.c:492]   --->   Operation 384 'zext' 'zext_ln396_18' <Predicate = true> <Delay = 0.00>
+ST_87 : Operation 385 [1/1] (2.07ns)   --->   "%z_170 = add i17 %zext_ln396_18, i17 118783" [../FalconHLS/code_hls/vrfy.c:421->../FalconHLS/code_hls/vrfy.c:492]   --->   Operation 385 'add' 'z_170' <Predicate = true> <Delay = 2.07> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.07> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_87 : Operation 386 [1/1] (0.00ns) (grouped into LUT with out node z_184)   --->   "%tmp_237 = bitselect i1 @_ssdm_op_BitSelect.i1.i17.i32, i17 %z_170, i32 16" [../FalconHLS/code_hls/vrfy.c:422->../FalconHLS/code_hls/vrfy.c:492]   --->   Operation 386 'bitselect' 'tmp_237' <Predicate = true> <Delay = 0.00>
+ST_87 : Operation 387 [1/1] (0.00ns) (grouped into LUT with out node z_184)   --->   "%select_ln422_7 = select i1 %tmp_237, i17 12289, i17 0" [../FalconHLS/code_hls/vrfy.c:422->../FalconHLS/code_hls/vrfy.c:492]   --->   Operation 387 'select' 'select_ln422_7' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.75> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_87 : Operation 388 [1/1] (2.10ns) (out node of the LUT)   --->   "%z_184 = add i17 %select_ln422_7, i17 %z_170" [../FalconHLS/code_hls/vrfy.c:422->../FalconHLS/code_hls/vrfy.c:492]   --->   Operation 388 'add' 'z_184' <Predicate = true> <Delay = 2.10> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.10> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_87 : Operation 389 [1/1] (0.00ns)   --->   "%sext_ln396_8 = sext i17 %z_184" [../FalconHLS/code_hls/vrfy.c:396->../FalconHLS/code_hls/vrfy.c:492]   --->   Operation 389 'sext' 'sext_ln396_8' <Predicate = true> <Delay = 0.00>
+ST_87 : Operation 390 [4/4] (2.15ns) (root node of the DSP)   --->   "%z_172 = mul i32 %sext_ln396_8, i32 %zext_ln834" [../FalconHLS/code_hls/vrfy.c:405->../FalconHLS/code_hls/vrfy.c:498]   --->   Operation 390 'mul' 'z_172' <Predicate = true> <Delay = 2.15> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 88 <SV = 86> <Delay = 2.15>
+ST_88 : Operation 391 [3/4] (2.15ns) (root node of the DSP)   --->   "%z_172 = mul i32 %sext_ln396_8, i32 %zext_ln834" [../FalconHLS/code_hls/vrfy.c:405->../FalconHLS/code_hls/vrfy.c:498]   --->   Operation 391 'mul' 'z_172' <Predicate = true> <Delay = 2.15> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 89 <SV = 87> <Delay = 2.15>
+ST_89 : Operation 392 [2/4] (2.15ns) (root node of the DSP)   --->   "%z_172 = mul i32 %sext_ln396_8, i32 %zext_ln834" [../FalconHLS/code_hls/vrfy.c:405->../FalconHLS/code_hls/vrfy.c:498]   --->   Operation 392 'mul' 'z_172' <Predicate = true> <Delay = 2.15> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 90 <SV = 88> <Delay = 2.15>
+ST_90 : Operation 393 [1/4] (0.00ns) (root node of the DSP)   --->   "%z_172 = mul i32 %sext_ln396_8, i32 %zext_ln834" [../FalconHLS/code_hls/vrfy.c:405->../FalconHLS/code_hls/vrfy.c:498]   --->   Operation 393 'mul' 'z_172' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_90 : Operation 394 [1/1] (0.00ns)   --->   "%trunc_ln406_7 = trunc i32 %z_172" [../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:498]   --->   Operation 394 'trunc' 'trunc_ln406_7' <Predicate = true> <Delay = 0.00>
+ST_90 : Operation 395 [4/4] (2.15ns) (root node of the DSP)   --->   "%mul_ln406_20 = mul i16 %trunc_ln406_7, i16 12287" [../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:498]   --->   Operation 395 'mul' 'mul_ln406_20' <Predicate = true> <Delay = 2.15> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 91 <SV = 89> <Delay = 2.15>
+ST_91 : Operation 396 [3/4] (2.15ns) (root node of the DSP)   --->   "%mul_ln406_20 = mul i16 %trunc_ln406_7, i16 12287" [../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:498]   --->   Operation 396 'mul' 'mul_ln406_20' <Predicate = true> <Delay = 2.15> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 92 <SV = 90> <Delay = 2.15>
+ST_92 : Operation 397 [2/4] (2.15ns) (root node of the DSP)   --->   "%mul_ln406_20 = mul i16 %trunc_ln406_7, i16 12287" [../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:498]   --->   Operation 397 'mul' 'mul_ln406_20' <Predicate = true> <Delay = 2.15> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 93 <SV = 91> <Delay = 1.05>
+ST_93 : Operation 398 [1/4] (0.00ns) (root node of the DSP)   --->   "%mul_ln406_20 = mul i16 %trunc_ln406_7, i16 12287" [../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:498]   --->   Operation 398 'mul' 'mul_ln406_20' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_93 : Operation 399 [1/1] (0.00ns)   --->   "%zext_ln406_8 = zext i16 %mul_ln406_20" [../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:498]   --->   Operation 399 'zext' 'zext_ln406_8' <Predicate = true> <Delay = 0.00>
+ST_93 : Operation 400 [3/3] (1.05ns) (grouped into DSP with root node add_ln414_10)   --->   "%w_77 = mul i30 %zext_ln406_8, i30 12289" [../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:498]   --->   Operation 400 'mul' 'w_77' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 94 <SV = 92> <Delay = 1.05>
+ST_94 : Operation 401 [2/3] (1.05ns) (grouped into DSP with root node add_ln414_10)   --->   "%w_77 = mul i30 %zext_ln406_8, i30 12289" [../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:498]   --->   Operation 401 'mul' 'w_77' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 95 <SV = 93> <Delay = 2.10>
+ST_95 : Operation 402 [1/3] (0.00ns) (grouped into DSP with root node add_ln414_10)   --->   "%w_77 = mul i30 %zext_ln406_8, i30 12289" [../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:498]   --->   Operation 402 'mul' 'w_77' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_95 : Operation 403 [1/1] (0.00ns) (grouped into DSP with root node add_ln414_10)   --->   "%zext_ln396_19 = zext i30 %w_77" [../FalconHLS/code_hls/vrfy.c:396->../FalconHLS/code_hls/vrfy.c:498]   --->   Operation 403 'zext' 'zext_ln396_19' <Predicate = true> <Delay = 0.00>
+ST_95 : Operation 404 [2/2] (2.10ns) (root node of the DSP)   --->   "%add_ln414_10 = add i32 %zext_ln396_19, i32 %z_172" [../FalconHLS/code_hls/vrfy.c:414->../FalconHLS/code_hls/vrfy.c:498]   --->   Operation 404 'add' 'add_ln414_10' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 96 <SV = 94> <Delay = 9.50>
+ST_96 : Operation 405 [1/2] (2.10ns) (root node of the DSP)   --->   "%add_ln414_10 = add i32 %zext_ln396_19, i32 %z_172" [../FalconHLS/code_hls/vrfy.c:414->../FalconHLS/code_hls/vrfy.c:498]   --->   Operation 405 'add' 'add_ln414_10' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_96 : Operation 406 [1/1] (0.00ns)   --->   "%trunc_ln396_8 = partselect i16 @_ssdm_op_PartSelect.i16.i32.i32.i32, i32 %add_ln414_10, i32 16, i32 31" [../FalconHLS/code_hls/vrfy.c:396->../FalconHLS/code_hls/vrfy.c:498]   --->   Operation 406 'partselect' 'trunc_ln396_8' <Predicate = true> <Delay = 0.00>
+ST_96 : Operation 407 [1/1] (0.00ns)   --->   "%zext_ln396_20 = zext i16 %trunc_ln396_8" [../FalconHLS/code_hls/vrfy.c:396->../FalconHLS/code_hls/vrfy.c:498]   --->   Operation 407 'zext' 'zext_ln396_20' <Predicate = true> <Delay = 0.00>
+ST_96 : Operation 408 [1/1] (2.07ns)   --->   "%z_173 = add i17 %zext_ln396_20, i17 118783" [../FalconHLS/code_hls/vrfy.c:421->../FalconHLS/code_hls/vrfy.c:498]   --->   Operation 408 'add' 'z_173' <Predicate = true> <Delay = 2.07> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.07> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_96 : Operation 409 [1/1] (0.00ns) (grouped into LUT with out node add_ln834)   --->   "%tmp_238 = bitselect i1 @_ssdm_op_BitSelect.i1.i17.i32, i17 %z_173, i32 16" [../FalconHLS/code_hls/vrfy.c:422->../FalconHLS/code_hls/vrfy.c:498]   --->   Operation 409 'bitselect' 'tmp_238' <Predicate = true> <Delay = 0.00>
+ST_96 : Operation 410 [1/1] (0.00ns) (grouped into LUT with out node add_ln834)   --->   "%select_ln834 = select i1 %tmp_238, i16 0, i16 53247" [../FalconHLS/code_hls/vrfy.c:834]   --->   Operation 410 'select' 'select_ln834' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.75> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_96 : Operation 411 [1/1] (2.07ns) (out node of the LUT)   --->   "%add_ln834 = add i16 %select_ln834, i16 %trunc_ln396_8" [../FalconHLS/code_hls/vrfy.c:834]   --->   Operation 411 'add' 'add_ln834' <Predicate = true> <Delay = 2.07> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.07> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_96 : Operation 412 [1/1] (3.25ns)   --->   "%store_ln834 = store i16 %add_ln834, i10 %h_addr_1" [../FalconHLS/code_hls/vrfy.c:834]   --->   Operation 412 'store' 'store_ln834' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 1024> <RAM>
+ST_96 : Operation 413 [1/1] (0.00ns)   --->   "%br_ln830 = br void %for.body10" [../FalconHLS/code_hls/vrfy.c:830]   --->   Operation 413 'br' 'br_ln830' <Predicate = true> <Delay = 0.00>
+
+State 97 <SV = 4> <Delay = 3.35>
+ST_97 : Operation 414 [1/1] (0.00ns)   --->   "%m_15 = load i11 %m" [../FalconHLS/code_hls/vrfy.c:547]   --->   Operation 414 'load' 'm_15' <Predicate = true> <Delay = 0.00>
+ST_97 : Operation 415 [1/1] (0.00ns)   --->   "%t_9 = load i64 %t" [../FalconHLS/code_hls/vrfy.c:541]   --->   Operation 415 'load' 't_9' <Predicate = true> <Delay = 0.00>
+ST_97 : Operation 416 [1/1] (0.00ns)   --->   "%tmp_229 = partselect i10 @_ssdm_op_PartSelect.i10.i11.i32.i32, i11 %m_15, i32 1, i32 10" [../FalconHLS/code_hls/vrfy.c:547]   --->   Operation 416 'partselect' 'tmp_229' <Predicate = true> <Delay = 0.00>
+ST_97 : Operation 417 [1/1] (1.77ns)   --->   "%icmp_ln547 = icmp_eq  i10 %tmp_229, i10 0" [../FalconHLS/code_hls/vrfy.c:547]   --->   Operation 417 'icmp' 'icmp_ln547' <Predicate = true> <Delay = 1.77> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.77> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_97 : Operation 418 [1/1] (0.00ns)   --->   "%speclooptripcount_ln0 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 10, i64 10, i64 10"   --->   Operation 418 'speclooptripcount' 'speclooptripcount_ln0' <Predicate = true> <Delay = 0.00>
+ST_97 : Operation 419 [1/1] (0.00ns)   --->   "%br_ln547 = br i1 %icmp_ln547, void %VITIS_LOOP_552_2.i, void %for.inc38.i.preheader" [../FalconHLS/code_hls/vrfy.c:547]   --->   Operation 419 'br' 'br_ln547' <Predicate = true> <Delay = 0.00>
+ST_97 : Operation 420 [1/1] (0.00ns)   --->   "%specloopname_ln550 = specloopname void @_ssdm_op_SpecLoopName, void @empty_32" [../FalconHLS/code_hls/vrfy.c:550]   --->   Operation 420 'specloopname' 'specloopname_ln550' <Predicate = (!icmp_ln547)> <Delay = 0.00>
+ST_97 : Operation 421 [1/1] (0.00ns)   --->   "%hm = partselect i10 @_ssdm_op_PartSelect.i10.i11.i32.i32, i11 %m_15, i32 1, i32 10" [../FalconHLS/code_hls/vrfy.c:550]   --->   Operation 421 'partselect' 'hm' <Predicate = (!icmp_ln547)> <Delay = 0.00>
+ST_97 : Operation 422 [1/1] (0.00ns)   --->   "%zext_ln550 = zext i10 %hm" [../FalconHLS/code_hls/vrfy.c:550]   --->   Operation 422 'zext' 'zext_ln550' <Predicate = (!icmp_ln547)> <Delay = 0.00>
+ST_97 : Operation 423 [1/1] (0.00ns)   --->   "%dt = shl i64 %t_9, i64 1" [../FalconHLS/code_hls/vrfy.c:551]   --->   Operation 423 'shl' 'dt' <Predicate = (!icmp_ln547)> <Delay = 0.00>
+ST_97 : Operation 424 [1/1] (1.58ns)   --->   "%br_ln552 = br void %VITIS_LOOP_558_3.i" [../FalconHLS/code_hls/vrfy.c:552]   --->   Operation 424 'br' 'br_ln552' <Predicate = (!icmp_ln547)> <Delay = 1.58>
+ST_97 : Operation 425 [1/1] (0.00ns)   --->   "%m_11 = alloca i32 1"   --->   Operation 425 'alloca' 'm_11' <Predicate = (icmp_ln547)> <Delay = 0.00>
+ST_97 : Operation 426 [1/1] (1.58ns)   --->   "%store_ln586 = store i11 0, i11 %m_11" [../FalconHLS/code_hls/vrfy.c:586]   --->   Operation 426 'store' 'store_ln586' <Predicate = (icmp_ln547)> <Delay = 1.58>
+ST_97 : Operation 427 [1/1] (0.00ns)   --->   "%br_ln586 = br void %for.inc38.i" [../FalconHLS/code_hls/vrfy.c:586]   --->   Operation 427 'br' 'br_ln586' <Predicate = (icmp_ln547)> <Delay = 0.00>
+
+State 98 <SV = 5> <Delay = 4.98>
+ST_98 : Operation 428 [1/1] (0.00ns)   --->   "%indvars_iv = phi i64 %add_ln552, void %for.inc19.i.loopexit, i64 %t_9, void %VITIS_LOOP_552_2.i"   --->   Operation 428 'phi' 'indvars_iv' <Predicate = true> <Delay = 0.00>
+ST_98 : Operation 429 [1/1] (0.00ns)   --->   "%j1_10 = phi i64 %j1, void %for.inc19.i.loopexit, i64 0, void %VITIS_LOOP_552_2.i"   --->   Operation 429 'phi' 'j1_10' <Predicate = true> <Delay = 0.00>
+ST_98 : Operation 430 [1/1] (0.00ns)   --->   "%i = phi i10 %i_18, void %for.inc19.i.loopexit, i10 0, void %VITIS_LOOP_552_2.i"   --->   Operation 430 'phi' 'i' <Predicate = true> <Delay = 0.00>
+ST_98 : Operation 431 [1/1] (1.77ns)   --->   "%icmp_ln552 = icmp_eq  i10 %i, i10 %hm" [../FalconHLS/code_hls/vrfy.c:552]   --->   Operation 431 'icmp' 'icmp_ln552' <Predicate = true> <Delay = 1.77> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.77> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_98 : Operation 432 [1/1] (0.00ns)   --->   "%speclooptripcount_ln0 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 1, i64 18446744073709551615, i64 0"   --->   Operation 432 'speclooptripcount' 'speclooptripcount_ln0' <Predicate = true> <Delay = 0.00>
+ST_98 : Operation 433 [1/1] (1.73ns)   --->   "%i_18 = add i10 %i, i10 1" [../FalconHLS/code_hls/vrfy.c:552]   --->   Operation 433 'add' 'i_18' <Predicate = true> <Delay = 1.73> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_98 : Operation 434 [1/1] (0.00ns)   --->   "%br_ln552 = br i1 %icmp_ln552, void %VITIS_LOOP_558_3.i.split, void %for.end22.i.loopexit" [../FalconHLS/code_hls/vrfy.c:552]   --->   Operation 434 'br' 'br_ln552' <Predicate = true> <Delay = 0.00>
+ST_98 : Operation 435 [1/1] (1.73ns)   --->   "%add_ln557 = add i10 %i, i10 %hm" [../FalconHLS/code_hls/vrfy.c:557]   --->   Operation 435 'add' 'add_ln557' <Predicate = (!icmp_ln552)> <Delay = 1.73> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_98 : Operation 436 [1/1] (0.00ns)   --->   "%zext_ln557 = zext i10 %add_ln557" [../FalconHLS/code_hls/vrfy.c:557]   --->   Operation 436 'zext' 'zext_ln557' <Predicate = (!icmp_ln552)> <Delay = 0.00>
+ST_98 : Operation 437 [1/1] (0.00ns)   --->   "%iGMb_addr = getelementptr i14 %iGMb, i64 0, i64 %zext_ln557" [../FalconHLS/code_hls/vrfy.c:557]   --->   Operation 437 'getelementptr' 'iGMb_addr' <Predicate = (!icmp_ln552)> <Delay = 0.00>
+ST_98 : Operation 438 [2/2] (3.25ns)   --->   "%s = load i10 %iGMb_addr" [../FalconHLS/code_hls/vrfy.c:557]   --->   Operation 438 'load' 's' <Predicate = (!icmp_ln552)> <Delay = 3.25> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 14> <Depth = 1024> <ROM>
+ST_98 : Operation 439 [1/1] (1.58ns)   --->   "%store_ln547 = store i64 %dt, i64 %t" [../FalconHLS/code_hls/vrfy.c:547]   --->   Operation 439 'store' 'store_ln547' <Predicate = (icmp_ln552)> <Delay = 1.58>
+ST_98 : Operation 440 [1/1] (1.58ns)   --->   "%store_ln547 = store i11 %zext_ln550, i11 %m" [../FalconHLS/code_hls/vrfy.c:547]   --->   Operation 440 'store' 'store_ln547' <Predicate = (icmp_ln552)> <Delay = 1.58>
+ST_98 : Operation 441 [1/1] (0.00ns)   --->   "%br_ln547 = br void %while.cond.i" [../FalconHLS/code_hls/vrfy.c:547]   --->   Operation 441 'br' 'br_ln547' <Predicate = (icmp_ln552)> <Delay = 0.00>
+
+State 99 <SV = 6> <Delay = 3.25>
+ST_99 : Operation 442 [1/1] (0.00ns)   --->   "%specloopname_ln548 = specloopname void @_ssdm_op_SpecLoopName, void @empty_55" [../FalconHLS/code_hls/vrfy.c:548]   --->   Operation 442 'specloopname' 'specloopname_ln548' <Predicate = true> <Delay = 0.00>
+ST_99 : Operation 443 [1/2] (3.25ns)   --->   "%s = load i10 %iGMb_addr" [../FalconHLS/code_hls/vrfy.c:557]   --->   Operation 443 'load' 's' <Predicate = true> <Delay = 3.25> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 14> <Depth = 1024> <ROM>
+ST_99 : Operation 444 [1/1] (0.00ns)   --->   "%zext_ln557_1 = zext i14 %s" [../FalconHLS/code_hls/vrfy.c:557]   --->   Operation 444 'zext' 'zext_ln557_1' <Predicate = true> <Delay = 0.00>
+ST_99 : Operation 445 [1/1] (1.58ns)   --->   "%br_ln558 = br void %for.inc.i" [../FalconHLS/code_hls/vrfy.c:558]   --->   Operation 445 'br' 'br_ln558' <Predicate = true> <Delay = 1.58>
+
+State 100 <SV = 7> <Delay = 4.98>
+ST_100 : Operation 446 [1/1] (0.00ns)   --->   "%j_9 = phi i64 %j1_10, void %VITIS_LOOP_558_3.i.split, i64 %j_12, void %for.inc.i.split"   --->   Operation 446 'phi' 'j_9' <Predicate = true> <Delay = 0.00>
+ST_100 : Operation 447 [1/1] (2.77ns)   --->   "%icmp_ln558 = icmp_ult  i64 %j_9, i64 %indvars_iv" [../FalconHLS/code_hls/vrfy.c:558]   --->   Operation 447 'icmp' 'icmp_ln558' <Predicate = true> <Delay = 2.77> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.77> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_100 : Operation 448 [1/1] (0.00ns)   --->   "%br_ln558 = br i1 %icmp_ln558, void %for.inc19.i.loopexit, void %for.inc.i.split" [../FalconHLS/code_hls/vrfy.c:558]   --->   Operation 448 'br' 'br_ln558' <Predicate = true> <Delay = 0.00>
+ST_100 : Operation 449 [1/1] (0.00ns)   --->   "%h_addr_3 = getelementptr i16 %h, i64 0, i64 %j_9" [../FalconHLS/code_hls/vrfy.c:561]   --->   Operation 449 'getelementptr' 'h_addr_3' <Predicate = (icmp_ln558)> <Delay = 0.00>
+ST_100 : Operation 450 [2/2] (3.25ns)   --->   "%u_237 = load i10 %h_addr_3" [../FalconHLS/code_hls/vrfy.c:561]   --->   Operation 450 'load' 'u_237' <Predicate = (icmp_ln558)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 1024> <RAM>
+ST_100 : Operation 451 [1/1] (0.00ns)   --->   "%trunc_ln558 = trunc i64 %j_9" [../FalconHLS/code_hls/vrfy.c:558]   --->   Operation 451 'trunc' 'trunc_ln558' <Predicate = (icmp_ln558)> <Delay = 0.00>
+ST_100 : Operation 452 [1/1] (0.00ns)   --->   "%trunc_ln541 = trunc i64 %t_9" [../FalconHLS/code_hls/vrfy.c:541]   --->   Operation 452 'trunc' 'trunc_ln541' <Predicate = (icmp_ln558)> <Delay = 0.00>
+ST_100 : Operation 453 [1/1] (1.73ns)   --->   "%add_ln562 = add i10 %trunc_ln558, i10 %trunc_ln541" [../FalconHLS/code_hls/vrfy.c:562]   --->   Operation 453 'add' 'add_ln562' <Predicate = (icmp_ln558)> <Delay = 1.73> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_100 : Operation 454 [1/1] (0.00ns)   --->   "%zext_ln562 = zext i10 %add_ln562" [../FalconHLS/code_hls/vrfy.c:562]   --->   Operation 454 'zext' 'zext_ln562' <Predicate = (icmp_ln558)> <Delay = 0.00>
+ST_100 : Operation 455 [1/1] (0.00ns)   --->   "%h_addr_4 = getelementptr i16 %h, i64 0, i64 %zext_ln562" [../FalconHLS/code_hls/vrfy.c:562]   --->   Operation 455 'getelementptr' 'h_addr_4' <Predicate = (icmp_ln558)> <Delay = 0.00>
+ST_100 : Operation 456 [2/2] (3.25ns)   --->   "%v = load i10 %h_addr_4" [../FalconHLS/code_hls/vrfy.c:562]   --->   Operation 456 'load' 'v' <Predicate = (icmp_ln558)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 1024> <RAM>
+ST_100 : Operation 457 [1/1] (3.52ns)   --->   "%j_12 = add i64 %j_9, i64 1" [../FalconHLS/code_hls/vrfy.c:558]   --->   Operation 457 'add' 'j_12' <Predicate = (icmp_ln558)> <Delay = 3.52> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 3.52> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_100 : Operation 458 [1/1] (3.52ns)   --->   "%j1 = add i64 %dt, i64 %j1_10" [../FalconHLS/code_hls/vrfy.c:552]   --->   Operation 458 'add' 'j1' <Predicate = (!icmp_ln558)> <Delay = 3.52> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 3.52> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_100 : Operation 459 [1/1] (3.52ns)   --->   "%add_ln552 = add i64 %dt, i64 %indvars_iv" [../FalconHLS/code_hls/vrfy.c:552]   --->   Operation 459 'add' 'add_ln552' <Predicate = (!icmp_ln558)> <Delay = 3.52> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 3.52> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_100 : Operation 460 [1/1] (0.00ns)   --->   "%br_ln552 = br void %VITIS_LOOP_558_3.i" [../FalconHLS/code_hls/vrfy.c:552]   --->   Operation 460 'br' 'br_ln552' <Predicate = (!icmp_ln558)> <Delay = 0.00>
+
+State 101 <SV = 8> <Delay = 15.3>
+ST_101 : Operation 461 [1/2] (3.25ns)   --->   "%u_237 = load i10 %h_addr_3" [../FalconHLS/code_hls/vrfy.c:561]   --->   Operation 461 'load' 'u_237' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 1024> <RAM>
+ST_101 : Operation 462 [1/1] (0.00ns)   --->   "%zext_ln559 = zext i16 %u_237" [../FalconHLS/code_hls/vrfy.c:559]   --->   Operation 462 'zext' 'zext_ln559' <Predicate = true> <Delay = 0.00>
+ST_101 : Operation 463 [1/1] (0.00ns)   --->   "%zext_ln559_1 = zext i16 %u_237" [../FalconHLS/code_hls/vrfy.c:559]   --->   Operation 463 'zext' 'zext_ln559_1' <Predicate = true> <Delay = 0.00>
+ST_101 : Operation 464 [1/2] (3.25ns)   --->   "%v = load i10 %h_addr_4" [../FalconHLS/code_hls/vrfy.c:562]   --->   Operation 464 'load' 'v' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 1024> <RAM>
+ST_101 : Operation 465 [1/1] (0.00ns)   --->   "%zext_ln559_2 = zext i16 %v" [../FalconHLS/code_hls/vrfy.c:559]   --->   Operation 465 'zext' 'zext_ln559_2' <Predicate = true> <Delay = 0.00>
+ST_101 : Operation 466 [1/1] (2.07ns)   --->   "%add_ln356 = add i17 %zext_ln559_2, i17 118783" [../FalconHLS/code_hls/vrfy.c:356]   --->   Operation 466 'add' 'add_ln356' <Predicate = true> <Delay = 2.07> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.07> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_101 : Operation 467 [1/1] (0.00ns)   --->   "%sext_ln356 = sext i17 %add_ln356" [../FalconHLS/code_hls/vrfy.c:356]   --->   Operation 467 'sext' 'sext_ln356' <Predicate = true> <Delay = 0.00>
+ST_101 : Operation 468 [1/1] (2.10ns)   --->   "%d = add i18 %sext_ln356, i18 %zext_ln559_1" [../FalconHLS/code_hls/vrfy.c:356]   --->   Operation 468 'add' 'd' <Predicate = true> <Delay = 2.10> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.10> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_101 : Operation 469 [1/1] (0.00ns)   --->   "%tmp_240 = bitselect i1 @_ssdm_op_BitSelect.i1.i18.i32, i18 %d, i32 17" [../FalconHLS/code_hls/vrfy.c:357]   --->   Operation 469 'bitselect' 'tmp_240' <Predicate = true> <Delay = 0.00>
+ST_101 : Operation 470 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_ln563_1 = add i16 %u_237, i16 %v" [../FalconHLS/code_hls/vrfy.c:563]   --->   Operation 470 'add' 'add_ln563_1' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_101 : Operation 471 [1/1] (0.75ns)   --->   "%select_ln563 = select i1 %tmp_240, i16 0, i16 53247" [../FalconHLS/code_hls/vrfy.c:563]   --->   Operation 471 'select' 'select_ln563' <Predicate = true> <Delay = 0.75> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.75> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_101 : Operation 472 [1/1] (3.90ns) (root node of TernaryAdder)   --->   "%add_ln563 = add i16 %select_ln563, i16 %add_ln563_1" [../FalconHLS/code_hls/vrfy.c:563]   --->   Operation 472 'add' 'add_ln563' <Predicate = true> <Delay = 3.90> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_101 : Operation 473 [1/1] (3.25ns)   --->   "%store_ln563 = store i16 %add_ln563, i10 %h_addr_3" [../FalconHLS/code_hls/vrfy.c:563]   --->   Operation 473 'store' 'store_ln563' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 1024> <RAM>
+ST_101 : Operation 474 [1/1] (2.07ns)   --->   "%d_13 = sub i17 %zext_ln559, i17 %zext_ln559_2" [../FalconHLS/code_hls/vrfy.c:373]   --->   Operation 474 'sub' 'd_13' <Predicate = true> <Delay = 2.07> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.07> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_101 : Operation 475 [1/1] (0.00ns)   --->   "%sext_ln371 = sext i17 %d_13" [../FalconHLS/code_hls/vrfy.c:371]   --->   Operation 475 'sext' 'sext_ln371' <Predicate = true> <Delay = 0.00>
+ST_101 : Operation 476 [1/1] (0.00ns)   --->   "%tmp_241 = bitselect i1 @_ssdm_op_BitSelect.i1.i17.i32, i17 %d_13, i32 16" [../FalconHLS/code_hls/vrfy.c:374]   --->   Operation 476 'bitselect' 'tmp_241' <Predicate = true> <Delay = 0.00>
+ST_101 : Operation 477 [1/1] (0.75ns)   --->   "%select_ln374 = select i1 %tmp_241, i18 12289, i18 0" [../FalconHLS/code_hls/vrfy.c:374]   --->   Operation 477 'select' 'select_ln374' <Predicate = true> <Delay = 0.75> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.75> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_101 : Operation 478 [1/1] (2.25ns) (grouped into DSP with root node z_175)   --->   "%d_15 = add i18 %select_ln374, i18 %sext_ln371" [../FalconHLS/code_hls/vrfy.c:374]   --->   Operation 478 'add' 'd_15' <Predicate = true> <Delay = 2.25> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_101 : Operation 479 [1/1] (0.00ns) (grouped into DSP with root node z_175)   --->   "%sext_ln371_1 = sext i18 %d_15" [../FalconHLS/code_hls/vrfy.c:371]   --->   Operation 479 'sext' 'sext_ln371_1' <Predicate = true> <Delay = 0.00>
+ST_101 : Operation 480 [4/4] (1.05ns) (root node of the DSP)   --->   "%z_175 = mul i32 %sext_ln371_1, i32 %zext_ln557_1" [../FalconHLS/code_hls/vrfy.c:405]   --->   Operation 480 'mul' 'z_175' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 102 <SV = 9> <Delay = 1.05>
+ST_102 : Operation 481 [3/4] (1.05ns) (root node of the DSP)   --->   "%z_175 = mul i32 %sext_ln371_1, i32 %zext_ln557_1" [../FalconHLS/code_hls/vrfy.c:405]   --->   Operation 481 'mul' 'z_175' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 103 <SV = 10> <Delay = 1.05>
+ST_103 : Operation 482 [2/4] (1.05ns) (root node of the DSP)   --->   "%z_175 = mul i32 %sext_ln371_1, i32 %zext_ln557_1" [../FalconHLS/code_hls/vrfy.c:405]   --->   Operation 482 'mul' 'z_175' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 104 <SV = 11> <Delay = 2.15>
+ST_104 : Operation 483 [1/4] (0.00ns) (root node of the DSP)   --->   "%z_175 = mul i32 %sext_ln371_1, i32 %zext_ln557_1" [../FalconHLS/code_hls/vrfy.c:405]   --->   Operation 483 'mul' 'z_175' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_104 : Operation 484 [1/1] (0.00ns)   --->   "%trunc_ln406_8 = trunc i32 %z_175" [../FalconHLS/code_hls/vrfy.c:406]   --->   Operation 484 'trunc' 'trunc_ln406_8' <Predicate = true> <Delay = 0.00>
+ST_104 : Operation 485 [4/4] (2.15ns) (root node of the DSP)   --->   "%mul_ln406 = mul i16 %trunc_ln406_8, i16 12287" [../FalconHLS/code_hls/vrfy.c:406]   --->   Operation 485 'mul' 'mul_ln406' <Predicate = true> <Delay = 2.15> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 105 <SV = 12> <Delay = 2.15>
+ST_105 : Operation 486 [3/4] (2.15ns) (root node of the DSP)   --->   "%mul_ln406 = mul i16 %trunc_ln406_8, i16 12287" [../FalconHLS/code_hls/vrfy.c:406]   --->   Operation 486 'mul' 'mul_ln406' <Predicate = true> <Delay = 2.15> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 106 <SV = 13> <Delay = 2.15>
+ST_106 : Operation 487 [2/4] (2.15ns) (root node of the DSP)   --->   "%mul_ln406 = mul i16 %trunc_ln406_8, i16 12287" [../FalconHLS/code_hls/vrfy.c:406]   --->   Operation 487 'mul' 'mul_ln406' <Predicate = true> <Delay = 2.15> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 107 <SV = 14> <Delay = 1.05>
+ST_107 : Operation 488 [1/4] (0.00ns) (root node of the DSP)   --->   "%mul_ln406 = mul i16 %trunc_ln406_8, i16 12287" [../FalconHLS/code_hls/vrfy.c:406]   --->   Operation 488 'mul' 'mul_ln406' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_107 : Operation 489 [1/1] (0.00ns)   --->   "%zext_ln406_10 = zext i16 %mul_ln406" [../FalconHLS/code_hls/vrfy.c:406]   --->   Operation 489 'zext' 'zext_ln406_10' <Predicate = true> <Delay = 0.00>
+ST_107 : Operation 490 [3/3] (1.05ns) (grouped into DSP with root node add_ln414_1)   --->   "%w_79 = mul i30 %zext_ln406_10, i30 12289" [../FalconHLS/code_hls/vrfy.c:406]   --->   Operation 490 'mul' 'w_79' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 108 <SV = 15> <Delay = 1.05>
+ST_108 : Operation 491 [2/3] (1.05ns) (grouped into DSP with root node add_ln414_1)   --->   "%w_79 = mul i30 %zext_ln406_10, i30 12289" [../FalconHLS/code_hls/vrfy.c:406]   --->   Operation 491 'mul' 'w_79' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 109 <SV = 16> <Delay = 2.10>
+ST_109 : Operation 492 [1/3] (0.00ns) (grouped into DSP with root node add_ln414_1)   --->   "%w_79 = mul i30 %zext_ln406_10, i30 12289" [../FalconHLS/code_hls/vrfy.c:406]   --->   Operation 492 'mul' 'w_79' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_109 : Operation 493 [1/1] (0.00ns) (grouped into DSP with root node add_ln414_1)   --->   "%zext_ln396_23 = zext i30 %w_79" [../FalconHLS/code_hls/vrfy.c:396]   --->   Operation 493 'zext' 'zext_ln396_23' <Predicate = true> <Delay = 0.00>
+ST_109 : Operation 494 [2/2] (2.10ns) (root node of the DSP)   --->   "%add_ln414_1 = add i32 %zext_ln396_23, i32 %z_175" [../FalconHLS/code_hls/vrfy.c:414]   --->   Operation 494 'add' 'add_ln414_1' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 110 <SV = 17> <Delay = 9.50>
+ST_110 : Operation 495 [1/1] (0.00ns)   --->   "%specloopname_ln553 = specloopname void @_ssdm_op_SpecLoopName, void @empty_31" [../FalconHLS/code_hls/vrfy.c:553]   --->   Operation 495 'specloopname' 'specloopname_ln553' <Predicate = true> <Delay = 0.00>
+ST_110 : Operation 496 [1/2] (2.10ns) (root node of the DSP)   --->   "%add_ln414_1 = add i32 %zext_ln396_23, i32 %z_175" [../FalconHLS/code_hls/vrfy.c:414]   --->   Operation 496 'add' 'add_ln414_1' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_110 : Operation 497 [1/1] (0.00ns)   --->   "%trunc_ln396_s = partselect i16 @_ssdm_op_PartSelect.i16.i32.i32.i32, i32 %add_ln414_1, i32 16, i32 31" [../FalconHLS/code_hls/vrfy.c:396]   --->   Operation 497 'partselect' 'trunc_ln396_s' <Predicate = true> <Delay = 0.00>
+ST_110 : Operation 498 [1/1] (0.00ns)   --->   "%zext_ln396_24 = zext i16 %trunc_ln396_s" [../FalconHLS/code_hls/vrfy.c:396]   --->   Operation 498 'zext' 'zext_ln396_24' <Predicate = true> <Delay = 0.00>
+ST_110 : Operation 499 [1/1] (2.07ns)   --->   "%z_176 = add i17 %zext_ln396_24, i17 118783" [../FalconHLS/code_hls/vrfy.c:421]   --->   Operation 499 'add' 'z_176' <Predicate = true> <Delay = 2.07> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.07> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_110 : Operation 500 [1/1] (0.00ns) (grouped into LUT with out node add_ln565)   --->   "%tmp_242 = bitselect i1 @_ssdm_op_BitSelect.i1.i17.i32, i17 %z_176, i32 16" [../FalconHLS/code_hls/vrfy.c:422]   --->   Operation 500 'bitselect' 'tmp_242' <Predicate = true> <Delay = 0.00>
+ST_110 : Operation 501 [1/1] (0.00ns) (grouped into LUT with out node add_ln565)   --->   "%select_ln565 = select i1 %tmp_242, i16 0, i16 53247" [../FalconHLS/code_hls/vrfy.c:565]   --->   Operation 501 'select' 'select_ln565' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.75> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_110 : Operation 502 [1/1] (2.07ns) (out node of the LUT)   --->   "%add_ln565 = add i16 %select_ln565, i16 %trunc_ln396_s" [../FalconHLS/code_hls/vrfy.c:565]   --->   Operation 502 'add' 'add_ln565' <Predicate = true> <Delay = 2.07> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.07> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_110 : Operation 503 [1/1] (3.25ns)   --->   "%store_ln565 = store i16 %add_ln565, i10 %h_addr_4" [../FalconHLS/code_hls/vrfy.c:565]   --->   Operation 503 'store' 'store_ln565' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 1024> <RAM>
+ST_110 : Operation 504 [1/1] (0.00ns)   --->   "%br_ln558 = br void %for.inc.i" [../FalconHLS/code_hls/vrfy.c:558]   --->   Operation 504 'br' 'br_ln558' <Predicate = true> <Delay = 0.00>
+
+State 111 <SV = 5> <Delay = 3.46>
+ST_111 : Operation 505 [1/1] (0.00ns)   --->   "%m_16 = load i11 %m_11" [../FalconHLS/code_hls/vrfy.c:586]   --->   Operation 505 'load' 'm_16' <Predicate = true> <Delay = 0.00>
+ST_111 : Operation 506 [1/1] (0.00ns)   --->   "%zext_ln586 = zext i11 %m_16" [../FalconHLS/code_hls/vrfy.c:586]   --->   Operation 506 'zext' 'zext_ln586' <Predicate = true> <Delay = 0.00>
+ST_111 : Operation 507 [1/1] (1.88ns)   --->   "%icmp_ln586 = icmp_eq  i11 %m_16, i11 1024" [../FalconHLS/code_hls/vrfy.c:586]   --->   Operation 507 'icmp' 'icmp_ln586' <Predicate = true> <Delay = 1.88> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.88> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_111 : Operation 508 [1/1] (0.00ns)   --->   "%speclooptripcount_ln0 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 1024, i64 1024, i64 1024"   --->   Operation 508 'speclooptripcount' 'speclooptripcount_ln0' <Predicate = true> <Delay = 0.00>
+ST_111 : Operation 509 [1/1] (1.63ns)   --->   "%m_17 = add i11 %m_16, i11 1" [../FalconHLS/code_hls/vrfy.c:586]   --->   Operation 509 'add' 'm_17' <Predicate = true> <Delay = 1.63> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.63> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_111 : Operation 510 [1/1] (0.00ns)   --->   "%br_ln586 = br i1 %icmp_ln586, void %for.inc38.i.split, void %cleanup.loopexit" [../FalconHLS/code_hls/vrfy.c:586]   --->   Operation 510 'br' 'br_ln586' <Predicate = true> <Delay = 0.00>
+ST_111 : Operation 511 [1/1] (0.00ns)   --->   "%h_addr_2 = getelementptr i16 %h, i64 0, i64 %zext_ln586" [../FalconHLS/code_hls/vrfy.c:587]   --->   Operation 511 'getelementptr' 'h_addr_2' <Predicate = (!icmp_ln586)> <Delay = 0.00>
+ST_111 : Operation 512 [2/2] (3.25ns)   --->   "%h_load_1 = load i10 %h_addr_2" [../FalconHLS/code_hls/vrfy.c:587]   --->   Operation 512 'load' 'h_load_1' <Predicate = (!icmp_ln586)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 1024> <RAM>
+ST_111 : Operation 513 [1/1] (1.58ns)   --->   "%store_ln586 = store i11 %m_17, i11 %m_11" [../FalconHLS/code_hls/vrfy.c:586]   --->   Operation 513 'store' 'store_ln586' <Predicate = (!icmp_ln586)> <Delay = 1.58>
+ST_111 : Operation 514 [1/1] (1.58ns)   --->   "%br_ln0 = br void %cleanup"   --->   Operation 514 'br' 'br_ln0' <Predicate = (icmp_ln586)> <Delay = 1.58>
+
+State 112 <SV = 6> <Delay = 5.95>
+ST_112 : Operation 515 [1/2] (3.25ns)   --->   "%h_load_1 = load i10 %h_addr_2" [../FalconHLS/code_hls/vrfy.c:587]   --->   Operation 515 'load' 'h_load_1' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 1024> <RAM>
+ST_112 : Operation 516 [1/1] (0.00ns)   --->   "%shl_ln406 = shl i16 %h_load_1, i16 6" [../FalconHLS/code_hls/vrfy.c:406]   --->   Operation 516 'shl' 'shl_ln406' <Predicate = true> <Delay = 0.00>
+ST_112 : Operation 517 [1/1] (1.65ns) (grouped into DSP with root node add_ln414)   --->   "%sub_ln406 = sub i16 0, i16 %shl_ln406" [../FalconHLS/code_hls/vrfy.c:406]   --->   Operation 517 'sub' 'sub_ln406' <Predicate = true> <Delay = 1.65> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_112 : Operation 518 [1/1] (0.00ns) (grouped into DSP with root node add_ln414)   --->   "%zext_ln406_9 = zext i16 %sub_ln406" [../FalconHLS/code_hls/vrfy.c:406]   --->   Operation 518 'zext' 'zext_ln406_9' <Predicate = true> <Delay = 0.00>
+ST_112 : Operation 519 [3/3] (1.05ns) (grouped into DSP with root node add_ln414)   --->   "%w = mul i30 %zext_ln406_9, i30 12289" [../FalconHLS/code_hls/vrfy.c:406]   --->   Operation 519 'mul' 'w' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 113 <SV = 7> <Delay = 1.05>
+ST_113 : Operation 520 [2/3] (1.05ns) (grouped into DSP with root node add_ln414)   --->   "%w = mul i30 %zext_ln406_9, i30 12289" [../FalconHLS/code_hls/vrfy.c:406]   --->   Operation 520 'mul' 'w' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 114 <SV = 8> <Delay = 2.10>
+ST_114 : Operation 521 [1/1] (0.00ns)   --->   "%z = bitconcatenate i22 @_ssdm_op_BitConcatenate.i22.i16.i6, i16 %h_load_1, i6 0" [../FalconHLS/code_hls/vrfy.c:405]   --->   Operation 521 'bitconcatenate' 'z' <Predicate = true> <Delay = 0.00>
+ST_114 : Operation 522 [1/1] (0.00ns)   --->   "%zext_ln396_21 = zext i22 %z" [../FalconHLS/code_hls/vrfy.c:396]   --->   Operation 522 'zext' 'zext_ln396_21' <Predicate = true> <Delay = 0.00>
+ST_114 : Operation 523 [1/3] (0.00ns) (grouped into DSP with root node add_ln414)   --->   "%w = mul i30 %zext_ln406_9, i30 12289" [../FalconHLS/code_hls/vrfy.c:406]   --->   Operation 523 'mul' 'w' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_114 : Operation 524 [2/2] (2.10ns) (root node of the DSP)   --->   "%add_ln414 = add i30 %w, i30 %zext_ln396_21" [../FalconHLS/code_hls/vrfy.c:414]   --->   Operation 524 'add' 'add_ln414' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 115 <SV = 9> <Delay = 9.24>
+ST_115 : Operation 525 [1/1] (0.00ns)   --->   "%specloopname_ln541 = specloopname void @_ssdm_op_SpecLoopName, void @empty_35" [../FalconHLS/code_hls/vrfy.c:541]   --->   Operation 525 'specloopname' 'specloopname_ln541' <Predicate = true> <Delay = 0.00>
+ST_115 : Operation 526 [1/2] (2.10ns) (root node of the DSP)   --->   "%add_ln414 = add i30 %w, i30 %zext_ln396_21" [../FalconHLS/code_hls/vrfy.c:414]   --->   Operation 526 'add' 'add_ln414' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_115 : Operation 527 [1/1] (0.00ns)   --->   "%trunc_ln396_9 = partselect i14 @_ssdm_op_PartSelect.i14.i30.i32.i32, i30 %add_ln414, i32 16, i32 29" [../FalconHLS/code_hls/vrfy.c:396]   --->   Operation 527 'partselect' 'trunc_ln396_9' <Predicate = true> <Delay = 0.00>
+ST_115 : Operation 528 [1/1] (0.00ns)   --->   "%zext_ln396_22 = zext i14 %trunc_ln396_9" [../FalconHLS/code_hls/vrfy.c:396]   --->   Operation 528 'zext' 'zext_ln396_22' <Predicate = true> <Delay = 0.00>
+ST_115 : Operation 529 [1/1] (1.94ns)   --->   "%z_174 = add i15 %zext_ln396_22, i15 20479" [../FalconHLS/code_hls/vrfy.c:421]   --->   Operation 529 'add' 'z_174' <Predicate = true> <Delay = 1.94> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.94> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_115 : Operation 530 [1/1] (0.00ns) (grouped into LUT with out node add_ln587)   --->   "%tmp_239 = bitselect i1 @_ssdm_op_BitSelect.i1.i15.i32, i15 %z_174, i32 14" [../FalconHLS/code_hls/vrfy.c:422]   --->   Operation 530 'bitselect' 'tmp_239' <Predicate = true> <Delay = 0.00>
+ST_115 : Operation 531 [1/1] (0.00ns) (grouped into LUT with out node add_ln587)   --->   "%select_ln587 = select i1 %tmp_239, i15 0, i15 20479" [../FalconHLS/code_hls/vrfy.c:587]   --->   Operation 531 'select' 'select_ln587' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.75> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_115 : Operation 532 [1/1] (1.94ns) (out node of the LUT)   --->   "%add_ln587 = add i15 %select_ln587, i15 %zext_ln396_22" [../FalconHLS/code_hls/vrfy.c:587]   --->   Operation 532 'add' 'add_ln587' <Predicate = true> <Delay = 1.94> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.94> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_115 : Operation 533 [1/1] (0.00ns)   --->   "%sext_ln587 = sext i15 %add_ln587" [../FalconHLS/code_hls/vrfy.c:587]   --->   Operation 533 'sext' 'sext_ln587' <Predicate = true> <Delay = 0.00>
+ST_115 : Operation 534 [1/1] (3.25ns)   --->   "%store_ln587 = store i16 %sext_ln587, i10 %h_addr_2" [../FalconHLS/code_hls/vrfy.c:587]   --->   Operation 534 'store' 'store_ln587' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 1024> <RAM>
+ST_115 : Operation 535 [1/1] (0.00ns)   --->   "%br_ln586 = br void %for.inc38.i" [../FalconHLS/code_hls/vrfy.c:586]   --->   Operation 535 'br' 'br_ln586' <Predicate = true> <Delay = 0.00>
+
+State 116 <SV = 6> <Delay = 0.00>
+ST_116 : Operation 536 [1/1] (0.00ns)   --->   "%retval_0 = phi i1 1, void %cleanup.loopexit, i1 0, void %cleanup.loopexit20"   --->   Operation 536 'phi' 'retval_0' <Predicate = true> <Delay = 0.00>
+ST_116 : Operation 537 [1/1] (0.00ns)   --->   "%ret_ln838 = ret i1 %retval_0" [../FalconHLS/code_hls/vrfy.c:838]   --->   Operation 537 'ret' 'ret_ln838' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 100ns, clock uncertainty: 27ns.
+
+ <State 1>: 1.59ns
+The critical path consists of the following:
+	'alloca' operation ('u') [7]  (0 ns)
+	'store' operation ('store_ln824', ../FalconHLS/code_hls/vrfy.c:824) of constant 0 on local variable 'u' [9]  (1.59 ns)
+
+ <State 2>: 3.47ns
+The critical path consists of the following:
+	'load' operation ('u', ../FalconHLS/code_hls/vrfy.c:824) on local variable 'u' [12]  (0 ns)
+	'getelementptr' operation ('f_addr12', ../FalconHLS/code_hls/vrfy.c:825) [20]  (0 ns)
+	'load' operation ('f_load', ../FalconHLS/code_hls/vrfy.c:825) on array 'f' [21]  (3.25 ns)
+	blocking operation 0.214 ns on control path)
+
+ <State 3>: 8.45ns
+The critical path consists of the following:
+	'load' operation ('f_load', ../FalconHLS/code_hls/vrfy.c:825) on array 'f' [21]  (3.25 ns)
+	'add' operation ('add_ln825', ../FalconHLS/code_hls/vrfy.c:825) [25]  (1.94 ns)
+	'store' operation ('store_ln825', ../FalconHLS/code_hls/vrfy.c:825) of constant <constant:_ssdm_op_Write.bram.i16> on array 'tmp2108' [28]  (3.25 ns)
+
+ <State 4>: 0ns
+The critical path consists of the following:
+
+ <State 5>: 3.47ns
+The critical path consists of the following:
+	'load' operation ('u', ../FalconHLS/code_hls/vrfy.c:830) on local variable 'u' [47]  (0 ns)
+	'getelementptr' operation ('tmp2108_addr_2', ../FalconHLS/code_hls/vrfy.c:831) [55]  (0 ns)
+	'load' operation ('y', ../FalconHLS/code_hls/vrfy.c:831) on array 'tmp2108' [56]  (3.25 ns)
+	blocking operation 0.214 ns on control path)
+
+ <State 6>: 7.27ns
+The critical path consists of the following:
+	'load' operation ('y', ../FalconHLS/code_hls/vrfy.c:831) on array 'tmp2108' [56]  (3.25 ns)
+	'icmp' operation ('icmp_ln831', ../FalconHLS/code_hls/vrfy.c:831) [58]  (2.43 ns)
+	blocking operation 1.59 ns on control path)
+
+ <State 7>: 2.15ns
+The critical path consists of the following:
+	'mul' operation of DSP[66] ('mul_ln406_4', ../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:474) [66]  (2.15 ns)
+
+ <State 8>: 2.15ns
+The critical path consists of the following:
+	'mul' operation of DSP[66] ('mul_ln406_4', ../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:474) [66]  (2.15 ns)
+
+ <State 9>: 2.15ns
+The critical path consists of the following:
+	'mul' operation of DSP[66] ('mul_ln406_4', ../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:474) [66]  (0 ns)
+	'mul' operation of DSP[68] ('w', ../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:474) [68]  (2.15 ns)
+
+ <State 10>: 2.15ns
+The critical path consists of the following:
+	'mul' operation of DSP[68] ('w', ../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:474) [68]  (2.15 ns)
+
+ <State 11>: 2.15ns
+The critical path consists of the following:
+	'mul' operation of DSP[68] ('w', ../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:474) [68]  (2.15 ns)
+
+ <State 12>: 2.1ns
+The critical path consists of the following:
+	'mul' operation of DSP[70] ('z', ../FalconHLS/code_hls/vrfy.c:405->../FalconHLS/code_hls/vrfy.c:474) [64]  (0 ns)
+	'add' operation of DSP[70] ('add_ln414_2', ../FalconHLS/code_hls/vrfy.c:414->../FalconHLS/code_hls/vrfy.c:474) [70]  (2.1 ns)
+
+ <State 13>: 8.14ns
+The critical path consists of the following:
+	'add' operation of DSP[70] ('add_ln414_2', ../FalconHLS/code_hls/vrfy.c:414->../FalconHLS/code_hls/vrfy.c:474) [70]  (2.1 ns)
+	'add' operation ('z', ../FalconHLS/code_hls/vrfy.c:421->../FalconHLS/code_hls/vrfy.c:474) [72]  (1.94 ns)
+	'add' operation ('z', ../FalconHLS/code_hls/vrfy.c:422->../FalconHLS/code_hls/vrfy.c:474) [76]  (1.94 ns)
+	'call' operation ('y1', ../FalconHLS/code_hls/vrfy.c:475) to 'mq_montysqr' [79]  (2.15 ns)
+
+ <State 14>: 8.43ns
+The critical path consists of the following:
+	'call' operation ('y1', ../FalconHLS/code_hls/vrfy.c:475) to 'mq_montysqr' [79]  (6.28 ns)
+	'mul' operation of DSP[81] ('z', ../FalconHLS/code_hls/vrfy.c:405->../FalconHLS/code_hls/vrfy.c:476) [81]  (2.15 ns)
+
+ <State 15>: 2.15ns
+The critical path consists of the following:
+	'mul' operation of DSP[81] ('z', ../FalconHLS/code_hls/vrfy.c:405->../FalconHLS/code_hls/vrfy.c:476) [81]  (2.15 ns)
+
+ <State 16>: 2.15ns
+The critical path consists of the following:
+	'mul' operation of DSP[81] ('z', ../FalconHLS/code_hls/vrfy.c:405->../FalconHLS/code_hls/vrfy.c:476) [81]  (2.15 ns)
+
+ <State 17>: 2.15ns
+The critical path consists of the following:
+	'mul' operation of DSP[81] ('z', ../FalconHLS/code_hls/vrfy.c:405->../FalconHLS/code_hls/vrfy.c:476) [81]  (0 ns)
+	'mul' operation of DSP[83] ('mul_ln406_6', ../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:476) [83]  (2.15 ns)
+
+ <State 18>: 2.15ns
+The critical path consists of the following:
+	'mul' operation of DSP[83] ('mul_ln406_6', ../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:476) [83]  (2.15 ns)
+
+ <State 19>: 2.15ns
+The critical path consists of the following:
+	'mul' operation of DSP[83] ('mul_ln406_6', ../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:476) [83]  (2.15 ns)
+
+ <State 20>: 1.05ns
+The critical path consists of the following:
+	'mul' operation of DSP[83] ('mul_ln406_6', ../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:476) [83]  (0 ns)
+	'mul' operation of DSP[87] ('w', ../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:476) [85]  (1.05 ns)
+
+ <State 21>: 1.05ns
+The critical path consists of the following:
+	'mul' operation of DSP[87] ('w', ../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:476) [85]  (1.05 ns)
+
+ <State 22>: 2.1ns
+The critical path consists of the following:
+	'mul' operation of DSP[87] ('w', ../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:476) [85]  (0 ns)
+	'add' operation of DSP[87] ('add_ln414_3', ../FalconHLS/code_hls/vrfy.c:414->../FalconHLS/code_hls/vrfy.c:476) [87]  (2.1 ns)
+
+ <State 23>: 8.43ns
+The critical path consists of the following:
+	'add' operation of DSP[87] ('add_ln414_3', ../FalconHLS/code_hls/vrfy.c:414->../FalconHLS/code_hls/vrfy.c:476) [87]  (2.1 ns)
+	'add' operation ('z', ../FalconHLS/code_hls/vrfy.c:421->../FalconHLS/code_hls/vrfy.c:476) [90]  (2.08 ns)
+	'add' operation ('z', ../FalconHLS/code_hls/vrfy.c:422->../FalconHLS/code_hls/vrfy.c:476) [93]  (2.11 ns)
+	'mul' operation of DSP[95] ('z', ../FalconHLS/code_hls/vrfy.c:405->../FalconHLS/code_hls/vrfy.c:477) [95]  (2.15 ns)
+
+ <State 24>: 2.15ns
+The critical path consists of the following:
+	'mul' operation of DSP[95] ('z', ../FalconHLS/code_hls/vrfy.c:405->../FalconHLS/code_hls/vrfy.c:477) [95]  (2.15 ns)
+
+ <State 25>: 2.15ns
+The critical path consists of the following:
+	'mul' operation of DSP[95] ('z', ../FalconHLS/code_hls/vrfy.c:405->../FalconHLS/code_hls/vrfy.c:477) [95]  (2.15 ns)
+
+ <State 26>: 2.15ns
+The critical path consists of the following:
+	'mul' operation of DSP[95] ('z', ../FalconHLS/code_hls/vrfy.c:405->../FalconHLS/code_hls/vrfy.c:477) [95]  (0 ns)
+	'mul' operation of DSP[97] ('mul_ln406_8', ../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:477) [97]  (2.15 ns)
+
+ <State 27>: 2.15ns
+The critical path consists of the following:
+	'mul' operation of DSP[97] ('mul_ln406_8', ../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:477) [97]  (2.15 ns)
+
+ <State 28>: 2.15ns
+The critical path consists of the following:
+	'mul' operation of DSP[97] ('mul_ln406_8', ../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:477) [97]  (2.15 ns)
+
+ <State 29>: 1.05ns
+The critical path consists of the following:
+	'mul' operation of DSP[97] ('mul_ln406_8', ../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:477) [97]  (0 ns)
+	'mul' operation of DSP[101] ('w', ../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:477) [99]  (1.05 ns)
+
+ <State 30>: 1.05ns
+The critical path consists of the following:
+	'mul' operation of DSP[101] ('w', ../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:477) [99]  (1.05 ns)
+
+ <State 31>: 2.1ns
+The critical path consists of the following:
+	'mul' operation of DSP[101] ('w', ../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:477) [99]  (0 ns)
+	'add' operation of DSP[101] ('add_ln414_4', ../FalconHLS/code_hls/vrfy.c:414->../FalconHLS/code_hls/vrfy.c:477) [101]  (2.1 ns)
+
+ <State 32>: 8.43ns
+The critical path consists of the following:
+	'add' operation of DSP[101] ('add_ln414_4', ../FalconHLS/code_hls/vrfy.c:414->../FalconHLS/code_hls/vrfy.c:477) [101]  (2.1 ns)
+	'add' operation ('z', ../FalconHLS/code_hls/vrfy.c:421->../FalconHLS/code_hls/vrfy.c:477) [104]  (2.08 ns)
+	'add' operation ('z', ../FalconHLS/code_hls/vrfy.c:422->../FalconHLS/code_hls/vrfy.c:477) [107]  (2.11 ns)
+	'call' operation ('y4', ../FalconHLS/code_hls/vrfy.c:478) to 'mq_montysqr' [108]  (2.15 ns)
+
+ <State 33>: 8.43ns
+The critical path consists of the following:
+	'call' operation ('y4', ../FalconHLS/code_hls/vrfy.c:478) to 'mq_montysqr' [108]  (6.28 ns)
+	'call' operation ('y5', ../FalconHLS/code_hls/vrfy.c:479) to 'mq_montysqr' [109]  (2.15 ns)
+
+ <State 34>: 8.43ns
+The critical path consists of the following:
+	'call' operation ('y5', ../FalconHLS/code_hls/vrfy.c:479) to 'mq_montysqr' [109]  (6.28 ns)
+	'call' operation ('y6', ../FalconHLS/code_hls/vrfy.c:480) to 'mq_montysqr' [110]  (2.15 ns)
+
+ <State 35>: 8.43ns
+The critical path consists of the following:
+	'call' operation ('y6', ../FalconHLS/code_hls/vrfy.c:480) to 'mq_montysqr' [110]  (6.28 ns)
+	'call' operation ('y7', ../FalconHLS/code_hls/vrfy.c:481) to 'mq_montysqr' [111]  (2.15 ns)
+
+ <State 36>: 8.43ns
+The critical path consists of the following:
+	'call' operation ('y7', ../FalconHLS/code_hls/vrfy.c:481) to 'mq_montysqr' [111]  (6.28 ns)
+	'call' operation ('y8', ../FalconHLS/code_hls/vrfy.c:482) to 'mq_montysqr' [112]  (2.15 ns)
+
+ <State 37>: 8.43ns
+The critical path consists of the following:
+	'call' operation ('y8', ../FalconHLS/code_hls/vrfy.c:482) to 'mq_montysqr' [112]  (6.28 ns)
+	'mul' operation of DSP[114] ('z', ../FalconHLS/code_hls/vrfy.c:405->../FalconHLS/code_hls/vrfy.c:483) [114]  (2.15 ns)
+
+ <State 38>: 2.15ns
+The critical path consists of the following:
+	'mul' operation of DSP[114] ('z', ../FalconHLS/code_hls/vrfy.c:405->../FalconHLS/code_hls/vrfy.c:483) [114]  (2.15 ns)
+
+ <State 39>: 2.15ns
+The critical path consists of the following:
+	'mul' operation of DSP[114] ('z', ../FalconHLS/code_hls/vrfy.c:405->../FalconHLS/code_hls/vrfy.c:483) [114]  (2.15 ns)
+
+ <State 40>: 2.15ns
+The critical path consists of the following:
+	'mul' operation of DSP[114] ('z', ../FalconHLS/code_hls/vrfy.c:405->../FalconHLS/code_hls/vrfy.c:483) [114]  (0 ns)
+	'mul' operation of DSP[116] ('mul_ln406_10', ../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:483) [116]  (2.15 ns)
+
+ <State 41>: 2.15ns
+The critical path consists of the following:
+	'mul' operation of DSP[116] ('mul_ln406_10', ../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:483) [116]  (2.15 ns)
+
+ <State 42>: 2.15ns
+The critical path consists of the following:
+	'mul' operation of DSP[116] ('mul_ln406_10', ../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:483) [116]  (2.15 ns)
+
+ <State 43>: 1.05ns
+The critical path consists of the following:
+	'mul' operation of DSP[116] ('mul_ln406_10', ../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:483) [116]  (0 ns)
+	'mul' operation of DSP[120] ('w', ../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:483) [118]  (1.05 ns)
+
+ <State 44>: 1.05ns
+The critical path consists of the following:
+	'mul' operation of DSP[120] ('w', ../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:483) [118]  (1.05 ns)
+
+ <State 45>: 2.1ns
+The critical path consists of the following:
+	'mul' operation of DSP[120] ('w', ../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:483) [118]  (0 ns)
+	'add' operation of DSP[120] ('add_ln414_5', ../FalconHLS/code_hls/vrfy.c:414->../FalconHLS/code_hls/vrfy.c:483) [120]  (2.1 ns)
+
+ <State 46>: 8.43ns
+The critical path consists of the following:
+	'add' operation of DSP[120] ('add_ln414_5', ../FalconHLS/code_hls/vrfy.c:414->../FalconHLS/code_hls/vrfy.c:483) [120]  (2.1 ns)
+	'add' operation ('z', ../FalconHLS/code_hls/vrfy.c:421->../FalconHLS/code_hls/vrfy.c:483) [123]  (2.08 ns)
+	'add' operation ('z', ../FalconHLS/code_hls/vrfy.c:422->../FalconHLS/code_hls/vrfy.c:483) [126]  (2.11 ns)
+	'mul' operation of DSP[128] ('z', ../FalconHLS/code_hls/vrfy.c:405->../FalconHLS/code_hls/vrfy.c:484) [128]  (2.15 ns)
+
+ <State 47>: 2.15ns
+The critical path consists of the following:
+	'mul' operation of DSP[128] ('z', ../FalconHLS/code_hls/vrfy.c:405->../FalconHLS/code_hls/vrfy.c:484) [128]  (2.15 ns)
+
+ <State 48>: 2.15ns
+The critical path consists of the following:
+	'mul' operation of DSP[128] ('z', ../FalconHLS/code_hls/vrfy.c:405->../FalconHLS/code_hls/vrfy.c:484) [128]  (2.15 ns)
+
+ <State 49>: 2.15ns
+The critical path consists of the following:
+	'mul' operation of DSP[128] ('z', ../FalconHLS/code_hls/vrfy.c:405->../FalconHLS/code_hls/vrfy.c:484) [128]  (0 ns)
+	'mul' operation of DSP[130] ('mul_ln406_12', ../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:484) [130]  (2.15 ns)
+
+ <State 50>: 2.15ns
+The critical path consists of the following:
+	'mul' operation of DSP[130] ('mul_ln406_12', ../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:484) [130]  (2.15 ns)
+
+ <State 51>: 2.15ns
+The critical path consists of the following:
+	'mul' operation of DSP[130] ('mul_ln406_12', ../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:484) [130]  (2.15 ns)
+
+ <State 52>: 1.05ns
+The critical path consists of the following:
+	'mul' operation of DSP[130] ('mul_ln406_12', ../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:484) [130]  (0 ns)
+	'mul' operation of DSP[134] ('w', ../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:484) [132]  (1.05 ns)
+
+ <State 53>: 1.05ns
+The critical path consists of the following:
+	'mul' operation of DSP[134] ('w', ../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:484) [132]  (1.05 ns)
+
+ <State 54>: 2.1ns
+The critical path consists of the following:
+	'mul' operation of DSP[134] ('w', ../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:484) [132]  (0 ns)
+	'add' operation of DSP[134] ('add_ln414_6', ../FalconHLS/code_hls/vrfy.c:414->../FalconHLS/code_hls/vrfy.c:484) [134]  (2.1 ns)
+
+ <State 55>: 8.43ns
+The critical path consists of the following:
+	'add' operation of DSP[134] ('add_ln414_6', ../FalconHLS/code_hls/vrfy.c:414->../FalconHLS/code_hls/vrfy.c:484) [134]  (2.1 ns)
+	'add' operation ('z', ../FalconHLS/code_hls/vrfy.c:421->../FalconHLS/code_hls/vrfy.c:484) [137]  (2.08 ns)
+	'add' operation ('z', ../FalconHLS/code_hls/vrfy.c:422->../FalconHLS/code_hls/vrfy.c:484) [140]  (2.11 ns)
+	'call' operation ('y11', ../FalconHLS/code_hls/vrfy.c:485) to 'mq_montysqr' [142]  (2.15 ns)
+
+ <State 56>: 8.43ns
+The critical path consists of the following:
+	'call' operation ('y11', ../FalconHLS/code_hls/vrfy.c:485) to 'mq_montysqr' [142]  (6.28 ns)
+	'call' operation ('y12', ../FalconHLS/code_hls/vrfy.c:486) to 'mq_montysqr' [143]  (2.15 ns)
+
+ <State 57>: 8.43ns
+The critical path consists of the following:
+	'call' operation ('y12', ../FalconHLS/code_hls/vrfy.c:486) to 'mq_montysqr' [143]  (6.28 ns)
+	'mul' operation of DSP[145] ('z', ../FalconHLS/code_hls/vrfy.c:405->../FalconHLS/code_hls/vrfy.c:487) [145]  (2.15 ns)
+
+ <State 58>: 2.15ns
+The critical path consists of the following:
+	'mul' operation of DSP[145] ('z', ../FalconHLS/code_hls/vrfy.c:405->../FalconHLS/code_hls/vrfy.c:487) [145]  (2.15 ns)
+
+ <State 59>: 2.15ns
+The critical path consists of the following:
+	'mul' operation of DSP[145] ('z', ../FalconHLS/code_hls/vrfy.c:405->../FalconHLS/code_hls/vrfy.c:487) [145]  (2.15 ns)
+
+ <State 60>: 2.15ns
+The critical path consists of the following:
+	'mul' operation of DSP[145] ('z', ../FalconHLS/code_hls/vrfy.c:405->../FalconHLS/code_hls/vrfy.c:487) [145]  (0 ns)
+	'mul' operation of DSP[147] ('mul_ln406_14', ../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:487) [147]  (2.15 ns)
+
+ <State 61>: 2.15ns
+The critical path consists of the following:
+	'mul' operation of DSP[147] ('mul_ln406_14', ../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:487) [147]  (2.15 ns)
+
+ <State 62>: 2.15ns
+The critical path consists of the following:
+	'mul' operation of DSP[147] ('mul_ln406_14', ../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:487) [147]  (2.15 ns)
+
+ <State 63>: 1.05ns
+The critical path consists of the following:
+	'mul' operation of DSP[147] ('mul_ln406_14', ../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:487) [147]  (0 ns)
+	'mul' operation of DSP[151] ('w', ../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:487) [149]  (1.05 ns)
+
+ <State 64>: 1.05ns
+The critical path consists of the following:
+	'mul' operation of DSP[151] ('w', ../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:487) [149]  (1.05 ns)
+
+ <State 65>: 2.1ns
+The critical path consists of the following:
+	'mul' operation of DSP[151] ('w', ../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:487) [149]  (0 ns)
+	'add' operation of DSP[151] ('add_ln414_7', ../FalconHLS/code_hls/vrfy.c:414->../FalconHLS/code_hls/vrfy.c:487) [151]  (2.1 ns)
+
+ <State 66>: 8.43ns
+The critical path consists of the following:
+	'add' operation of DSP[151] ('add_ln414_7', ../FalconHLS/code_hls/vrfy.c:414->../FalconHLS/code_hls/vrfy.c:487) [151]  (2.1 ns)
+	'add' operation ('z', ../FalconHLS/code_hls/vrfy.c:421->../FalconHLS/code_hls/vrfy.c:487) [154]  (2.08 ns)
+	'add' operation ('z', ../FalconHLS/code_hls/vrfy.c:422->../FalconHLS/code_hls/vrfy.c:487) [157]  (2.11 ns)
+	'call' operation ('y14', ../FalconHLS/code_hls/vrfy.c:488) to 'mq_montysqr' [158]  (2.15 ns)
+
+ <State 67>: 8.43ns
+The critical path consists of the following:
+	'call' operation ('y14', ../FalconHLS/code_hls/vrfy.c:488) to 'mq_montysqr' [158]  (6.28 ns)
+	'call' operation ('y15', ../FalconHLS/code_hls/vrfy.c:489) to 'mq_montysqr' [159]  (2.15 ns)
+
+ <State 68>: 8.43ns
+The critical path consists of the following:
+	'call' operation ('y15', ../FalconHLS/code_hls/vrfy.c:489) to 'mq_montysqr' [159]  (6.28 ns)
+	'mul' operation of DSP[161] ('z', ../FalconHLS/code_hls/vrfy.c:405->../FalconHLS/code_hls/vrfy.c:490) [161]  (2.15 ns)
+
+ <State 69>: 2.15ns
+The critical path consists of the following:
+	'mul' operation of DSP[161] ('z', ../FalconHLS/code_hls/vrfy.c:405->../FalconHLS/code_hls/vrfy.c:490) [161]  (2.15 ns)
+
+ <State 70>: 2.15ns
+The critical path consists of the following:
+	'mul' operation of DSP[161] ('z', ../FalconHLS/code_hls/vrfy.c:405->../FalconHLS/code_hls/vrfy.c:490) [161]  (2.15 ns)
+
+ <State 71>: 2.15ns
+The critical path consists of the following:
+	'mul' operation of DSP[161] ('z', ../FalconHLS/code_hls/vrfy.c:405->../FalconHLS/code_hls/vrfy.c:490) [161]  (0 ns)
+	'mul' operation of DSP[163] ('mul_ln406_16', ../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:490) [163]  (2.15 ns)
+
+ <State 72>: 2.15ns
+The critical path consists of the following:
+	'mul' operation of DSP[163] ('mul_ln406_16', ../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:490) [163]  (2.15 ns)
+
+ <State 73>: 2.15ns
+The critical path consists of the following:
+	'mul' operation of DSP[163] ('mul_ln406_16', ../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:490) [163]  (2.15 ns)
+
+ <State 74>: 1.05ns
+The critical path consists of the following:
+	'mul' operation of DSP[163] ('mul_ln406_16', ../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:490) [163]  (0 ns)
+	'mul' operation of DSP[167] ('w', ../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:490) [165]  (1.05 ns)
+
+ <State 75>: 1.05ns
+The critical path consists of the following:
+	'mul' operation of DSP[167] ('w', ../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:490) [165]  (1.05 ns)
+
+ <State 76>: 2.1ns
+The critical path consists of the following:
+	'mul' operation of DSP[167] ('w', ../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:490) [165]  (0 ns)
+	'add' operation of DSP[167] ('add_ln414_8', ../FalconHLS/code_hls/vrfy.c:414->../FalconHLS/code_hls/vrfy.c:490) [167]  (2.1 ns)
+
+ <State 77>: 8.43ns
+The critical path consists of the following:
+	'add' operation of DSP[167] ('add_ln414_8', ../FalconHLS/code_hls/vrfy.c:414->../FalconHLS/code_hls/vrfy.c:490) [167]  (2.1 ns)
+	'add' operation ('z', ../FalconHLS/code_hls/vrfy.c:421->../FalconHLS/code_hls/vrfy.c:490) [170]  (2.08 ns)
+	'add' operation ('z', ../FalconHLS/code_hls/vrfy.c:422->../FalconHLS/code_hls/vrfy.c:490) [173]  (2.11 ns)
+	'call' operation ('y17', ../FalconHLS/code_hls/vrfy.c:491) to 'mq_montysqr' [174]  (2.15 ns)
+
+ <State 78>: 8.43ns
+The critical path consists of the following:
+	'call' operation ('y17', ../FalconHLS/code_hls/vrfy.c:491) to 'mq_montysqr' [174]  (6.28 ns)
+	'mul' operation of DSP[176] ('z', ../FalconHLS/code_hls/vrfy.c:405->../FalconHLS/code_hls/vrfy.c:492) [176]  (2.15 ns)
+
+ <State 79>: 2.15ns
+The critical path consists of the following:
+	'mul' operation of DSP[176] ('z', ../FalconHLS/code_hls/vrfy.c:405->../FalconHLS/code_hls/vrfy.c:492) [176]  (2.15 ns)
+
+ <State 80>: 2.15ns
+The critical path consists of the following:
+	'mul' operation of DSP[176] ('z', ../FalconHLS/code_hls/vrfy.c:405->../FalconHLS/code_hls/vrfy.c:492) [176]  (2.15 ns)
+
+ <State 81>: 2.15ns
+The critical path consists of the following:
+	'mul' operation of DSP[176] ('z', ../FalconHLS/code_hls/vrfy.c:405->../FalconHLS/code_hls/vrfy.c:492) [176]  (0 ns)
+	'mul' operation of DSP[178] ('mul_ln406_18', ../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:492) [178]  (2.15 ns)
+
+ <State 82>: 2.15ns
+The critical path consists of the following:
+	'mul' operation of DSP[178] ('mul_ln406_18', ../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:492) [178]  (2.15 ns)
+
+ <State 83>: 2.15ns
+The critical path consists of the following:
+	'mul' operation of DSP[178] ('mul_ln406_18', ../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:492) [178]  (2.15 ns)
+
+ <State 84>: 1.05ns
+The critical path consists of the following:
+	'mul' operation of DSP[178] ('mul_ln406_18', ../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:492) [178]  (0 ns)
+	'mul' operation of DSP[182] ('w', ../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:492) [180]  (1.05 ns)
+
+ <State 85>: 1.05ns
+The critical path consists of the following:
+	'mul' operation of DSP[182] ('w', ../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:492) [180]  (1.05 ns)
+
+ <State 86>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('x', ../FalconHLS/code_hls/vrfy.c:834) on array 'h' [62]  (3.25 ns)
+
+ <State 87>: 8.43ns
+The critical path consists of the following:
+	'add' operation of DSP[182] ('add_ln414_9', ../FalconHLS/code_hls/vrfy.c:414->../FalconHLS/code_hls/vrfy.c:492) [182]  (2.1 ns)
+	'add' operation ('z', ../FalconHLS/code_hls/vrfy.c:421->../FalconHLS/code_hls/vrfy.c:492) [185]  (2.08 ns)
+	'add' operation ('z', ../FalconHLS/code_hls/vrfy.c:422->../FalconHLS/code_hls/vrfy.c:492) [188]  (2.11 ns)
+	'mul' operation of DSP[190] ('z', ../FalconHLS/code_hls/vrfy.c:405->../FalconHLS/code_hls/vrfy.c:498) [190]  (2.15 ns)
+
+ <State 88>: 2.15ns
+The critical path consists of the following:
+	'mul' operation of DSP[190] ('z', ../FalconHLS/code_hls/vrfy.c:405->../FalconHLS/code_hls/vrfy.c:498) [190]  (2.15 ns)
+
+ <State 89>: 2.15ns
+The critical path consists of the following:
+	'mul' operation of DSP[190] ('z', ../FalconHLS/code_hls/vrfy.c:405->../FalconHLS/code_hls/vrfy.c:498) [190]  (2.15 ns)
+
+ <State 90>: 2.15ns
+The critical path consists of the following:
+	'mul' operation of DSP[190] ('z', ../FalconHLS/code_hls/vrfy.c:405->../FalconHLS/code_hls/vrfy.c:498) [190]  (0 ns)
+	'mul' operation of DSP[192] ('mul_ln406_20', ../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:498) [192]  (2.15 ns)
+
+ <State 91>: 2.15ns
+The critical path consists of the following:
+	'mul' operation of DSP[192] ('mul_ln406_20', ../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:498) [192]  (2.15 ns)
+
+ <State 92>: 2.15ns
+The critical path consists of the following:
+	'mul' operation of DSP[192] ('mul_ln406_20', ../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:498) [192]  (2.15 ns)
+
+ <State 93>: 1.05ns
+The critical path consists of the following:
+	'mul' operation of DSP[192] ('mul_ln406_20', ../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:498) [192]  (0 ns)
+	'mul' operation of DSP[196] ('w', ../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:498) [194]  (1.05 ns)
+
+ <State 94>: 1.05ns
+The critical path consists of the following:
+	'mul' operation of DSP[196] ('w', ../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:498) [194]  (1.05 ns)
+
+ <State 95>: 2.1ns
+The critical path consists of the following:
+	'mul' operation of DSP[196] ('w', ../FalconHLS/code_hls/vrfy.c:406->../FalconHLS/code_hls/vrfy.c:498) [194]  (0 ns)
+	'add' operation of DSP[196] ('add_ln414_10', ../FalconHLS/code_hls/vrfy.c:414->../FalconHLS/code_hls/vrfy.c:498) [196]  (2.1 ns)
+
+ <State 96>: 9.51ns
+The critical path consists of the following:
+	'add' operation of DSP[196] ('add_ln414_10', ../FalconHLS/code_hls/vrfy.c:414->../FalconHLS/code_hls/vrfy.c:498) [196]  (2.1 ns)
+	'add' operation ('z', ../FalconHLS/code_hls/vrfy.c:421->../FalconHLS/code_hls/vrfy.c:498) [199]  (2.08 ns)
+	'select' operation ('select_ln834', ../FalconHLS/code_hls/vrfy.c:834) [201]  (0 ns)
+	'add' operation ('add_ln834', ../FalconHLS/code_hls/vrfy.c:834) [202]  (2.08 ns)
+	'store' operation ('store_ln834', ../FalconHLS/code_hls/vrfy.c:834) of variable 'add_ln834', ../FalconHLS/code_hls/vrfy.c:834 on array 'h' [203]  (3.25 ns)
+
+ <State 97>: 3.36ns
+The critical path consists of the following:
+	'load' operation ('m', ../FalconHLS/code_hls/vrfy.c:547) on local variable 'm' [215]  (0 ns)
+	'icmp' operation ('icmp_ln547', ../FalconHLS/code_hls/vrfy.c:547) [218]  (1.77 ns)
+	blocking operation 1.59 ns on control path)
+
+ <State 98>: 4.98ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', ../FalconHLS/code_hls/vrfy.c:552) [230]  (0 ns)
+	'add' operation ('add_ln557', ../FalconHLS/code_hls/vrfy.c:557) [237]  (1.73 ns)
+	'getelementptr' operation ('iGMb_addr', ../FalconHLS/code_hls/vrfy.c:557) [239]  (0 ns)
+	'load' operation ('s', ../FalconHLS/code_hls/vrfy.c:557) on array 'iGMb' [240]  (3.25 ns)
+
+ <State 99>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('s', ../FalconHLS/code_hls/vrfy.c:557) on array 'iGMb' [240]  (3.25 ns)
+
+ <State 100>: 4.98ns
+The critical path consists of the following:
+	'phi' operation ('j') with incoming values : ('j', ../FalconHLS/code_hls/vrfy.c:558) ('j1', ../FalconHLS/code_hls/vrfy.c:552) [244]  (0 ns)
+	'add' operation ('add_ln562', ../FalconHLS/code_hls/vrfy.c:562) [255]  (1.73 ns)
+	'getelementptr' operation ('h_addr_4', ../FalconHLS/code_hls/vrfy.c:562) [257]  (0 ns)
+	'load' operation ('v', ../FalconHLS/code_hls/vrfy.c:562) on array 'h' [258]  (3.25 ns)
+
+ <State 101>: 15.3ns
+The critical path consists of the following:
+	'load' operation ('v', ../FalconHLS/code_hls/vrfy.c:562) on array 'h' [258]  (3.25 ns)
+	'add' operation ('add_ln356', ../FalconHLS/code_hls/vrfy.c:356) [260]  (2.08 ns)
+	'add' operation ('d', ../FalconHLS/code_hls/vrfy.c:356) [262]  (2.11 ns)
+	'select' operation ('select_ln563', ../FalconHLS/code_hls/vrfy.c:563) [265]  (0.754 ns)
+	'add' operation ('add_ln563', ../FalconHLS/code_hls/vrfy.c:563) [266]  (3.9 ns)
+	'store' operation ('store_ln563', ../FalconHLS/code_hls/vrfy.c:563) of variable 'add_ln563', ../FalconHLS/code_hls/vrfy.c:563 on array 'h' [267]  (3.25 ns)
+
+ <State 102>: 1.05ns
+The critical path consists of the following:
+	'mul' operation of DSP[274] ('z', ../FalconHLS/code_hls/vrfy.c:405) [274]  (1.05 ns)
+
+ <State 103>: 1.05ns
+The critical path consists of the following:
+	'mul' operation of DSP[274] ('z', ../FalconHLS/code_hls/vrfy.c:405) [274]  (1.05 ns)
+
+ <State 104>: 2.15ns
+The critical path consists of the following:
+	'mul' operation of DSP[274] ('z', ../FalconHLS/code_hls/vrfy.c:405) [274]  (0 ns)
+	'mul' operation of DSP[276] ('mul_ln406', ../FalconHLS/code_hls/vrfy.c:406) [276]  (2.15 ns)
+
+ <State 105>: 2.15ns
+The critical path consists of the following:
+	'mul' operation of DSP[276] ('mul_ln406', ../FalconHLS/code_hls/vrfy.c:406) [276]  (2.15 ns)
+
+ <State 106>: 2.15ns
+The critical path consists of the following:
+	'mul' operation of DSP[276] ('mul_ln406', ../FalconHLS/code_hls/vrfy.c:406) [276]  (2.15 ns)
+
+ <State 107>: 1.05ns
+The critical path consists of the following:
+	'mul' operation of DSP[276] ('mul_ln406', ../FalconHLS/code_hls/vrfy.c:406) [276]  (0 ns)
+	'mul' operation of DSP[280] ('w', ../FalconHLS/code_hls/vrfy.c:406) [278]  (1.05 ns)
+
+ <State 108>: 1.05ns
+The critical path consists of the following:
+	'mul' operation of DSP[280] ('w', ../FalconHLS/code_hls/vrfy.c:406) [278]  (1.05 ns)
+
+ <State 109>: 2.1ns
+The critical path consists of the following:
+	'mul' operation of DSP[280] ('w', ../FalconHLS/code_hls/vrfy.c:406) [278]  (0 ns)
+	'add' operation of DSP[280] ('add_ln414_1', ../FalconHLS/code_hls/vrfy.c:414) [280]  (2.1 ns)
+
+ <State 110>: 9.51ns
+The critical path consists of the following:
+	'add' operation of DSP[280] ('add_ln414_1', ../FalconHLS/code_hls/vrfy.c:414) [280]  (2.1 ns)
+	'add' operation ('z', ../FalconHLS/code_hls/vrfy.c:421) [283]  (2.08 ns)
+	'select' operation ('select_ln565', ../FalconHLS/code_hls/vrfy.c:565) [285]  (0 ns)
+	'add' operation ('add_ln565', ../FalconHLS/code_hls/vrfy.c:565) [286]  (2.08 ns)
+	'store' operation ('store_ln565', ../FalconHLS/code_hls/vrfy.c:565) of variable 'add_ln565', ../FalconHLS/code_hls/vrfy.c:565 on array 'h' [287]  (3.25 ns)
+
+ <State 111>: 3.47ns
+The critical path consists of the following:
+	'load' operation ('m', ../FalconHLS/code_hls/vrfy.c:586) on local variable 'm' [303]  (0 ns)
+	'getelementptr' operation ('h_addr_2', ../FalconHLS/code_hls/vrfy.c:587) [311]  (0 ns)
+	'load' operation ('x', ../FalconHLS/code_hls/vrfy.c:587) on array 'h' [312]  (3.25 ns)
+	blocking operation 0.214 ns on control path)
+
+ <State 112>: 5.95ns
+The critical path consists of the following:
+	'load' operation ('x', ../FalconHLS/code_hls/vrfy.c:587) on array 'h' [312]  (3.25 ns)
+	'shl' operation ('shl_ln406', ../FalconHLS/code_hls/vrfy.c:406) [315]  (0 ns)
+	'sub' operation of DSP[319] ('sub_ln406', ../FalconHLS/code_hls/vrfy.c:406) [316]  (1.65 ns)
+	'mul' operation of DSP[319] ('w', ../FalconHLS/code_hls/vrfy.c:406) [318]  (1.05 ns)
+
+ <State 113>: 1.05ns
+The critical path consists of the following:
+	'mul' operation of DSP[319] ('w', ../FalconHLS/code_hls/vrfy.c:406) [318]  (1.05 ns)
+
+ <State 114>: 2.1ns
+The critical path consists of the following:
+	'add' operation of DSP[319] ('add_ln414', ../FalconHLS/code_hls/vrfy.c:414) [319]  (2.1 ns)
+
+ <State 115>: 9.24ns
+The critical path consists of the following:
+	'add' operation of DSP[319] ('add_ln414', ../FalconHLS/code_hls/vrfy.c:414) [319]  (2.1 ns)
+	'add' operation ('z', ../FalconHLS/code_hls/vrfy.c:421) [322]  (1.94 ns)
+	'select' operation ('select_ln587', ../FalconHLS/code_hls/vrfy.c:587) [324]  (0 ns)
+	'add' operation ('add_ln587', ../FalconHLS/code_hls/vrfy.c:587) [325]  (1.94 ns)
+	'store' operation ('store_ln587', ../FalconHLS/code_hls/vrfy.c:587) of variable 'sext_ln587', ../FalconHLS/code_hls/vrfy.c:587 on array 'h' [327]  (3.25 ns)
+
+ <State 116>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+	State 26
+	State 27
+	State 28
+	State 29
+	State 30
+	State 31
+	State 32
+	State 33
+	State 34
+	State 35
+	State 36
+	State 37
+	State 38
+	State 39
+	State 40
+	State 41
+	State 42
+	State 43
+	State 44
+	State 45
+	State 46
+	State 47
+	State 48
+	State 49
+	State 50
+	State 51
+	State 52
+	State 53
+	State 54
+	State 55
+	State 56
+	State 57
+	State 58
+	State 59
+	State 60
+	State 61
+	State 62
+	State 63
+	State 64
+	State 65
+	State 66
+	State 67
+	State 68
+	State 69
+	State 70
+	State 71
+	State 72
+	State 73
+	State 74
+	State 75
+	State 76
+	State 77
+	State 78
+	State 79
+	State 80
+	State 81
+	State 82
+	State 83
+	State 84
+	State 85
+	State 86
+	State 87
+	State 88
+	State 89
+	State 90
+	State 91
+	State 92
+	State 93
+	State 94
+	State 95
+	State 96
+	State 97
+	State 98
+	State 99
+	State 100
+	State 101
+	State 102
+	State 103
+	State 104
+	State 105
+	State 106
+	State 107
+	State 108
+	State 109
+	State 110
+	State 111
+	State 112
+	State 113
+	State 114
+	State 115
+	State 116
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

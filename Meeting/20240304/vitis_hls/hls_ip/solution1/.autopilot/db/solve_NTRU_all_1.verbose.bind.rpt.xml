@@ -1,0 +1,138 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'solve_NTRU_all_1'" level="0">
+<item name = "Date">Mon Mar  4 11:08:59 2024
+</item>
+<item name = "Version">2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)</item>
+<item name = "Project">hls_ip</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020-clg400-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">0.10 us, 72.829 ns, 27.00 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">?, ?, ?, ?, ?, ?, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_modp_mkgm2_1_fu_3306">modp_mkgm2_1, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_make_fg_1_fu_3330">make_fg_1, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_modp_NTT2_ext_1_fu_3357">modp_NTT2_ext_1, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_modp_iNTT2_ext_1_fu_3386">modp_iNTT2_ext_1, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_modp_montymul_fu_3413">modp_montymul, 0, 0, 0 ns, 0 ns, 0, 0, no</column>
+<column name="grp_modp_montymul_fu_3425">modp_montymul, 0, 0, 0 ns, 0 ns, 0, 0, no</column>
+<column name="grp_modp_montymul_fu_3437">modp_montymul, 0, 0, 0 ns, 0 ns, 0, 0, no</column>
+<column name="grp_modp_montymul_fu_3463">modp_montymul, 0, 0, 0 ns, 0 ns, 0, 0, no</column>
+<column name="tmp_47_modp_montymul_fu_3473">modp_montymul, 0, 0, 0 ns, 0 ns, 0, 0, no</column>
+<column name="tmp_48_modp_montymul_fu_3482">modp_montymul, 0, 0, 0 ns, 0 ns, 0, 0, no</column>
+<column name="grp_FFT_1_fu_3500">FFT_1, 1, 255547, 0.100 us, 25.555 ms, 1, 255547, no</column>
+<column name="grp_fpr_of_fu_3517">fpr_of, 1, 1, 0.100 us, 0.100 us, 1, 1, no</column>
+<column name="grp_iFFT_1_fu_3522">iFFT_1, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_fpr_rint_fu_3539">fpr_rint, 1, 1, 0.100 us, 0.100 us, 1, 1, no</column>
+<column name="grp_zint_mod_small_signed_1_fu_3545">zint_mod_small_signed_1, 5, 421, 0.500 us, 42.100 us, 5, 421, no</column>
+<column name="grp_zint_rebuild_CRT_1_fu_3561">zint_rebuild_CRT_1, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_poly_big_to_fp_1_fu_3592">poly_big_to_fp_1, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_poly_mul_fft_1_fu_3613">poly_mul_fft_1, 1, 817, 0.100 us, 81.700 us, 1, 817, no</column>
+<column name="grp_zint_bezout_1_fu_3626">zint_bezout_1, 2915067, 2915067, 0.292 sec, 0.292 sec, 2915067, 2915067, no</column>
+<column name="grp_poly_sub_scaled_1_fu_3632">poly_sub_scaled_1, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_poly_sub_scaled_ntt_1_fu_3649">poly_sub_scaled_ntt_1, ?, ?, ?, ?, ?, ?, no</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- VITIS_LOOP_1487_1">418, 418, 2, -, -, 209, no</column>
+<column name="- VITIS_LOOP_1487_1">418, 418, 2, -, -, 209, no</column>
+<column name="- VITIS_LOOP_4631_1">?, ?, ?, -, -, 2, no</column>
+<column name=" + VITIS_LOOP_779_1">?, ?, 2, -, -, ?, no</column>
+<column name=" + VITIS_LOOP_4640_2">4096, 217088, 16 ~ 848, -, -, 256, no</column>
+<column name="- Loop 4">8193, 8193, 2, -, -, 4096, no</column>
+<column name="- Loop 5">8193, 8193, 2, -, -, 4096, no</column>
+<column name="- VITIS_LOOP_4664_3">?, ?, ?, -, -, 2, no</column>
+<column name=" + VITIS_LOOP_4694_4">2048, 2048, 2, -, -, 1024, no</column>
+<column name=" + VITIS_LOOP_1407_1">1536, 1536, 3, -, -, 512, no</column>
+<column name=" + VITIS_LOOP_1407_1">1536, 1536, 3, -, -, 512, no</column>
+<column name=" + VITIS_LOOP_4664_3.4">4095, 4095, 2, -, -, 2048, no</column>
+<column name=" + VITIS_LOOP_4664_3.5">4095, 4095, 2, -, -, 2048, no</column>
+<column name=" + VITIS_LOOP_4664_3.6">4095, 4095, 2, -, -, 2048, no</column>
+<column name=" + VITIS_LOOP_4729_6">1024, 1024, 4, -, -, 256, no</column>
+<column name=" + VITIS_LOOP_4775_7">1792, 1792, 7, -, -, 256, no</column>
+<column name=" + VITIS_LOOP_4801_8">1024, 1024, 2, -, -, 512, no</column>
+<column name="- Loop 7">8193, 8193, 2, -, -, 4096, no</column>
+<column name="- Loop 8">16385, 16385, 2, -, -, 8192, no</column>
+<column name="- Loop 9">32769, 32769, 2, -, -, 16384, no</column>
+<column name="- VITIS_LOOP_480_1">3840, 3840, 15, -, -, 256, no</column>
+<column name="- VITIS_LOOP_225_1">4096, 4096, 16, -, -, 256, no</column>
+<column name="- VITIS_LOOP_580_1">2560, 2560, 10, -, -, 256, no</column>
+<column name="- VITIS_LOOP_4901_9">7, 3585, 7, -, -, 1 ~ 512, no</column>
+<column name="- VITIS_LOOP_464_1">2048, 2048, 4, -, -, 512, no</column>
+<column name="- VITIS_LOOP_464_1">2560, 2560, 5, -, -, 512, no</column>
+<column name="- Loop 16">16385, 16385, 2, -, -, 8192, no</column>
+<column name="- VITIS_LOOP_4932_10">4096, 4096, 8, -, -, 512, no</column>
+<column name="- VITIS_LOOP_4980_11">1024, 1024, 2, -, -, 512, no</column>
+<column name="- VITIS_LOOP_4990_12">2048, 2048, 2, -, -, 1024, no</column>
+<column name="- VITIS_LOOP_5000_13">3072, 3072, 6, -, -, 512, no</column>
+<column name="- Loop 21">16385, 16385, 2, -, -, 8192, no</column>
+<column name="- VITIS_LOOP_5052_14">3069, 3069, 3, -, -, 1023, no</column>
+<column name="- VITIS_LOOP_5062_15">3072, 3072, 3, -, -, 1024, no</column>
+<column name="- VITIS_LOOP_5075_16">3069, 3069, 3, -, -, 1023, no</column>
+<column name="- VITIS_LOOP_5085_17">4096, 4096, 4, -, -, 1024, no</column>
+<column name="- VITIS_LOOP_5104_18">2048, 2048, 2, -, -, 1024, no</column>
+<column name="- VITIS_LOOP_5128_19">5120, 5120, 5, -, -, 1024, no</column>
+<column name="- Loop 28">8193, 8193, 2, -, -, 4096, no</column>
+<column name="- VITIS_LOOP_5139_20">5120, 5120, 5, -, -, 1024, no</column>
+<column name="- VITIS_LOOP_248_1">7680, 7680, 15, -, -, 512, no</column>
+<column name="- VITIS_LOOP_5150_21">4096, 4096, 4, -, -, 1024, no</column>
+<column name="- VITIS_LOOP_5168_22">2048, 2048, 2, -, -, 1024, no</column>
+<column name="- VITIS_LOOP_5175_23">4096, 4096, 4, -, -, 1024, no</column>
+<column name="- VITIS_LOOP_5186_24">2048, 2048, 2, -, -, 1024, no</column>
+<column name="- Loop 35">3, ?, 2, -, -, 1 ~ ?, no</column>
+<column name="- Loop 36">3, ?, 2, -, -, 1 ~ ?, no</column>
+<column name="- Loop 37">3, ?, 2, -, -, 1 ~ ?, no</column>
+<column name="- Loop 38">3, ?, 2, -, -, 1 ~ ?, no</column>
+<column name="- solve_NTRU_intermediate_loop1">?, ?, ?, -, -, 2 ~ 308, no</column>
+<column name=" + VITIS_LOOP_779_1">?, ?, 2, -, -, ?, no</column>
+<column name=" + solve_NTRU_intermediate_loop11">?, ?, 16 ~ 848, -, -, ?, no</column>
+<column name="- solve_NTRU_intermediate_loop2">?, ?, ?, -, -, 2 ~ 308, no</column>
+<column name=" + solve_NTRU_intermediate_loop21">?, ?, 4, -, -, ?, no</column>
+<column name=" + VITIS_LOOP_779_1">?, ?, 2, -, -, ?, no</column>
+<column name=" + solve_NTRU_intermediate_loop22">?, ?, 16 ~ 848, -, -, ?, no</column>
+<column name=" + solve_NTRU_intermediate_loop23">?, ?, 4, -, -, ?, no</column>
+<column name=" + solve_NTRU_intermediate_loop24">?, ?, 7, -, -, ?, no</column>
+<column name="- VITIS_LOOP_225_1">0, 1530, 15, -, -, 0 ~ 102, no</column>
+<column name="- VITIS_LOOP_546_1">0, 372, 2, -, -, 0 ~ 186, no</column>
+<column name="- VITIS_LOOP_546_1">0, 372, 2, -, -, 0 ~ 186, no</column>
+<column name="- solve_NTRU_intermediate_loop3">?, ?, ?, -, -, ?, no</column>
+<column name=" + VITIS_LOOP_532_1">0, 744, 4, -, -, 0 ~ 186, no</column>
+<column name=" + VITIS_LOOP_580_1">0, 816, 8, -, -, 0 ~ 102, no</column>
+<column name=" + VITIS_LOOP_5623_25">?, ?, 3, -, -, ?, no</column>
+<column name=" + solve_NTRU_intermediate_loop31">?, ?, 6, -, -, ?, no</column>
+<column name="- solve_NTRU_intermediate_loop4">?, ?, ?, -, -, ?, no</column>
+<column name=" + solve_NTRU_intermediate_loop41">?, ?, 1, -, -, ?, no</column>
+<column name=" + solve_NTRU_intermediate_loop42">?, ?, 1, -, -, ?, no</column>
+<column name="- solve_NTRU_intermediate_loop5">?, ?, 9 ~ 1673, -, -, ?, no</column>
+<column name=" + solve_NTRU_intermediate_loop5.1">7, 1671, 2, -, -, 4 ~ 836, no</column>
+<column name=" + solve_NTRU_intermediate_loop5.2">7, 1671, 2, -, -, 4 ~ 836, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

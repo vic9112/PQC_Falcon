@@ -1,0 +1,134 @@
+
+
+================================================================
+== Vitis HLS Report for 'modp_montymul'
+================================================================
+* Date:           Mon Mar  4 11:08:46 2024
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
+* Project:        hls_ip
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+-----------+------------+
+    |  Clock |  Target | Estimated | Uncertainty|
+    +--------+---------+-----------+------------+
+    |ap_clk  |  0.10 us|  33.863 ns|    27.00 ns|
+    +--------+---------+-----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        0|        0|      0 ns|      0 ns|    0|    0|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 0
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 1
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 33.8>
+ST_1 : Operation 2 [1/1] (0.00ns)   --->   "%p0i_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %p0i"   --->   Operation 2 'read' 'p0i_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 3 [1/1] (0.00ns)   --->   "%p_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %p"   --->   Operation 3 'read' 'p_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%b_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %b"   --->   Operation 4 'read' 'b_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%a_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %a"   --->   Operation 5 'read' 'a_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns) (grouped into LUT with out node d_6)   --->   "%empty = trunc i32 %p_read"   --->   Operation 6 'trunc' 'empty' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%zext_ln721 = zext i32 %a_read" [../FalconHLS/code_hls/keygen.c:721]   --->   Operation 7 'zext' 'zext_ln721' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%zext_ln721_1 = zext i32 %b_read" [../FalconHLS/code_hls/keygen.c:721]   --->   Operation 8 'zext' 'zext_ln721_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (8.51ns)   --->   "%z = mul i63 %zext_ln721_1, i63 %zext_ln721" [../FalconHLS/code_hls/keygen.c:721]   --->   Operation 9 'mul' 'z' <Predicate = true> <Delay = 8.51> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 8.51> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%trunc_ln718 = trunc i63 %z" [../FalconHLS/code_hls/keygen.c:718]   --->   Operation 10 'trunc' 'trunc_ln718' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%trunc_ln722 = trunc i32 %p0i_read" [../FalconHLS/code_hls/keygen.c:722]   --->   Operation 11 'trunc' 'trunc_ln722' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (8.24ns)   --->   "%mul_ln722 = mul i31 %trunc_ln718, i31 %trunc_ln722" [../FalconHLS/code_hls/keygen.c:722]   --->   Operation 12 'mul' 'mul_ln722' <Predicate = true> <Delay = 8.24> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 8.24> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%zext_ln722 = zext i31 %mul_ln722" [../FalconHLS/code_hls/keygen.c:722]   --->   Operation 13 'zext' 'zext_ln722' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%zext_ln722_2 = zext i32 %p_read" [../FalconHLS/code_hls/keygen.c:722]   --->   Operation 14 'zext' 'zext_ln722_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (8.51ns)   --->   "%w = mul i62 %zext_ln722, i62 %zext_ln722_2" [../FalconHLS/code_hls/keygen.c:722]   --->   Operation 15 'mul' 'w' <Predicate = true> <Delay = 8.51> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 8.51> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%zext_ln718 = zext i62 %w" [../FalconHLS/code_hls/keygen.c:718]   --->   Operation 16 'zext' 'zext_ln718' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (3.49ns)   --->   "%add_ln723 = add i63 %zext_ln718, i63 %z" [../FalconHLS/code_hls/keygen.c:723]   --->   Operation 17 'add' 'add_ln723' <Predicate = true> <Delay = 3.49> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 3.49> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%trunc_ln = partselect i32 @_ssdm_op_PartSelect.i32.i63.i32.i32, i63 %add_ln723, i32 31, i32 62" [../FalconHLS/code_hls/keygen.c:723]   --->   Operation 18 'partselect' 'trunc_ln' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (2.55ns)   --->   "%d = sub i32 %trunc_ln, i32 %p_read" [../FalconHLS/code_hls/keygen.c:723]   --->   Operation 19 'sub' 'd' <Predicate = true> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 20 [1/1] (0.00ns) (grouped into LUT with out node d_6)   --->   "%tmp = bitselect i1 @_ssdm_op_BitSelect.i1.i32.i32, i32 %d, i32 31" [../FalconHLS/code_hls/keygen.c:724]   --->   Operation 20 'bitselect' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns) (grouped into LUT with out node d_6)   --->   "%select_ln724 = select i1 %tmp, i31 2147483647, i31 0" [../FalconHLS/code_hls/keygen.c:724]   --->   Operation 21 'select' 'select_ln724' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 22 [1/1] (0.00ns) (grouped into LUT with out node d_6)   --->   "%and_ln724 = and i31 %select_ln724, i31 %empty" [../FalconHLS/code_hls/keygen.c:724]   --->   Operation 22 'and' 'and_ln724' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 23 [1/1] (0.00ns) (grouped into LUT with out node d_6)   --->   "%zext_ln724 = zext i31 %and_ln724" [../FalconHLS/code_hls/keygen.c:724]   --->   Operation 23 'zext' 'zext_ln724' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (2.55ns) (out node of the LUT)   --->   "%d_6 = add i32 %zext_ln724, i32 %d" [../FalconHLS/code_hls/keygen.c:724]   --->   Operation 24 'add' 'd_6' <Predicate = true> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%ret_ln725 = ret i32 %d_6" [../FalconHLS/code_hls/keygen.c:725]   --->   Operation 25 'ret' 'ret_ln725' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 100ns, clock uncertainty: 27ns.
+
+ <State 1>: 33.9ns
+The critical path consists of the following:
+	wire read operation ('b') on port 'b' [7]  (0 ns)
+	'mul' operation ('z', ../FalconHLS/code_hls/keygen.c:721) [12]  (8.51 ns)
+	'mul' operation ('mul_ln722', ../FalconHLS/code_hls/keygen.c:722) [15]  (8.24 ns)
+	'mul' operation ('w', ../FalconHLS/code_hls/keygen.c:722) [18]  (8.51 ns)
+	'add' operation ('add_ln723', ../FalconHLS/code_hls/keygen.c:723) [20]  (3.49 ns)
+	'sub' operation ('d', ../FalconHLS/code_hls/keygen.c:723) [22]  (2.55 ns)
+	'add' operation ('d', ../FalconHLS/code_hls/keygen.c:724) [27]  (2.55 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

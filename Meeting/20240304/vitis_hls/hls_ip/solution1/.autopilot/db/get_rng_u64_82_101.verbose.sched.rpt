@@ -1,0 +1,514 @@
+
+
+================================================================
+== Vitis HLS Report for 'get_rng_u64_82_101'
+================================================================
+* Date:           Mon Mar  4 11:08:43 2024
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
+* Project:        hls_ip
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+-----------+------------+
+    |  Clock |  Target | Estimated | Uncertainty|
+    +--------+---------+-----------+------------+
+    |ap_clk  |  0.10 us|  13.084 ns|    27.00 ns|
+    +--------+---------+-----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+-----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max    | min | max |   Type  |
+    +---------+---------+----------+-----------+-----+-----+---------+
+    |        9|      194|  0.900 us|  19.400 us|    9|  194|       no|
+    +---------+---------+----------+-----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +---------------------+---------+---------+----------+-----------+-----------+---------+----------+
+        |                     |  Latency (cycles) | Iteration|  Initiation Interval  |   Trip  |          |
+        |      Loop Name      |   min   |   max   |  Latency |  achieved |   target  |  Count  | Pipelined|
+        +---------------------+---------+---------+----------+-----------+-----------+---------+----------+
+        |- VITIS_LOOP_846_1   |        4|      189|   4 ~ 189|          -|          -|        1|        no|
+        | + VITIS_LOOP_863_2  |        0|      135|         1|          -|          -|  1 ~ 136|        no|
+        +---------------------+---------+---------+----------+-----------+-----------+---------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 10
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 7 3 4 
+3 --> 4 
+4 --> 5 
+5 --> 5 6 
+6 --> 2 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.58>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%len_assign = alloca i32 1"   --->   Operation 11 'alloca' 'len_assign' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%out_assign = alloca i32 1"   --->   Operation 12 'alloca' 'out_assign' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%dptr_2 = alloca i32 1"   --->   Operation 13 'alloca' 'dptr_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%rng_st_24_0 = alloca i32 1"   --->   Operation 14 'alloca' 'rng_st_24_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%rng_st_23_0 = alloca i32 1"   --->   Operation 15 'alloca' 'rng_st_23_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%rng_st_22_0 = alloca i32 1"   --->   Operation 16 'alloca' 'rng_st_22_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%rng_st_21_0 = alloca i32 1"   --->   Operation 17 'alloca' 'rng_st_21_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%rng_st_20_0 = alloca i32 1"   --->   Operation 18 'alloca' 'rng_st_20_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%rng_st_19_0 = alloca i32 1"   --->   Operation 19 'alloca' 'rng_st_19_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%rng_st_18_0 = alloca i32 1"   --->   Operation 20 'alloca' 'rng_st_18_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%rng_st_17_0 = alloca i32 1"   --->   Operation 21 'alloca' 'rng_st_17_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%rng_st_16_0 = alloca i32 1"   --->   Operation 22 'alloca' 'rng_st_16_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%rng_st_15_0 = alloca i32 1"   --->   Operation 23 'alloca' 'rng_st_15_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%rng_st_14_0 = alloca i32 1"   --->   Operation 24 'alloca' 'rng_st_14_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%rng_st_1316_0 = alloca i32 1"   --->   Operation 25 'alloca' 'rng_st_1316_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%rng_st_12_0 = alloca i32 1"   --->   Operation 26 'alloca' 'rng_st_12_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%rng_st_11_0 = alloca i32 1"   --->   Operation 27 'alloca' 'rng_st_11_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%rng_st_10_0 = alloca i32 1"   --->   Operation 28 'alloca' 'rng_st_10_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%rng_st_9_0 = alloca i32 1"   --->   Operation 29 'alloca' 'rng_st_9_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%rng_st_8_0 = alloca i32 1"   --->   Operation 30 'alloca' 'rng_st_8_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%rng_st_7_0 = alloca i32 1"   --->   Operation 31 'alloca' 'rng_st_7_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%rng_st_6_0 = alloca i32 1"   --->   Operation 32 'alloca' 'rng_st_6_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%rng_st_5_0 = alloca i32 1"   --->   Operation 33 'alloca' 'rng_st_5_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%rng_st_4_0 = alloca i32 1"   --->   Operation 34 'alloca' 'rng_st_4_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%rng_st_3_0 = alloca i32 1"   --->   Operation 35 'alloca' 'rng_st_3_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%rng_st_2_0 = alloca i32 1"   --->   Operation 36 'alloca' 'rng_st_2_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%rng_st_1_0 = alloca i32 1"   --->   Operation 37 'alloca' 'rng_st_1_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%rng_st_0_0 = alloca i32 1"   --->   Operation 38 'alloca' 'rng_st_0_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "%rng_dptr_read_1 = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %rng_dptr_read"   --->   Operation 39 'read' 'rng_dptr_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 40 [1/1] (0.00ns)   --->   "%p_read_27 = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %p_read24"   --->   Operation 40 'read' 'p_read_27' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 41 [1/1] (0.00ns)   --->   "%p_read_28 = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %p_read23"   --->   Operation 41 'read' 'p_read_28' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 42 [1/1] (0.00ns)   --->   "%p_read_29 = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %p_read22"   --->   Operation 42 'read' 'p_read_29' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 43 [1/1] (0.00ns)   --->   "%p_read_30 = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %p_read21"   --->   Operation 43 'read' 'p_read_30' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 44 [1/1] (0.00ns)   --->   "%p_read_31 = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %p_read20"   --->   Operation 44 'read' 'p_read_31' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 45 [1/1] (0.00ns)   --->   "%p_read_32 = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %p_read19"   --->   Operation 45 'read' 'p_read_32' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 46 [1/1] (0.00ns)   --->   "%p_read_33 = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %p_read18"   --->   Operation 46 'read' 'p_read_33' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 47 [1/1] (0.00ns)   --->   "%p_read_34 = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %p_read17"   --->   Operation 47 'read' 'p_read_34' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 48 [1/1] (0.00ns)   --->   "%p_read_35 = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %p_read16"   --->   Operation 48 'read' 'p_read_35' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 49 [1/1] (0.00ns)   --->   "%p_read_36 = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %p_read15"   --->   Operation 49 'read' 'p_read_36' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 50 [1/1] (0.00ns)   --->   "%p_read_37 = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %p_read14"   --->   Operation 50 'read' 'p_read_37' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 51 [1/1] (0.00ns)   --->   "%p_read_38 = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %p_read13"   --->   Operation 51 'read' 'p_read_38' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 52 [1/1] (0.00ns)   --->   "%p_read_39 = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %p_read12"   --->   Operation 52 'read' 'p_read_39' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 53 [1/1] (0.00ns)   --->   "%p_read_40 = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %p_read11"   --->   Operation 53 'read' 'p_read_40' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 54 [1/1] (0.00ns)   --->   "%p_read1035 = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %p_read10"   --->   Operation 54 'read' 'p_read1035' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 55 [1/1] (0.00ns)   --->   "%p_read934 = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %p_read9"   --->   Operation 55 'read' 'p_read934' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 56 [1/1] (0.00ns)   --->   "%p_read833 = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %p_read8"   --->   Operation 56 'read' 'p_read833' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 57 [1/1] (0.00ns)   --->   "%p_read732 = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %p_read7"   --->   Operation 57 'read' 'p_read732' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 58 [1/1] (0.00ns)   --->   "%p_read631 = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %p_read6"   --->   Operation 58 'read' 'p_read631' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 59 [1/1] (0.00ns)   --->   "%p_read530 = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %p_read5"   --->   Operation 59 'read' 'p_read530' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 60 [1/1] (0.00ns)   --->   "%p_read429 = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %p_read4"   --->   Operation 60 'read' 'p_read429' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 61 [1/1] (0.00ns)   --->   "%p_read328 = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %p_read3"   --->   Operation 61 'read' 'p_read328' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 62 [1/1] (0.00ns)   --->   "%p_read227 = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %p_read2"   --->   Operation 62 'read' 'p_read227' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 63 [1/1] (0.00ns)   --->   "%p_read126 = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %p_read1"   --->   Operation 63 'read' 'p_read126' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 64 [1/1] (0.00ns)   --->   "%p_read25 = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %p_read"   --->   Operation 64 'read' 'p_read25' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 65 [1/1] (0.00ns)   --->   "%tmp = alloca i64 1"   --->   Operation 65 'alloca' 'tmp' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_1 : Operation 66 [1/1] (1.58ns)   --->   "%store_ln846 = store i64 %p_read25, i64 %rng_st_0_0" [../FalconHLS/code_hls/shake.c:846]   --->   Operation 66 'store' 'store_ln846' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 67 [1/1] (1.58ns)   --->   "%store_ln846 = store i64 %p_read126, i64 %rng_st_1_0" [../FalconHLS/code_hls/shake.c:846]   --->   Operation 67 'store' 'store_ln846' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 68 [1/1] (1.58ns)   --->   "%store_ln846 = store i64 %p_read227, i64 %rng_st_2_0" [../FalconHLS/code_hls/shake.c:846]   --->   Operation 68 'store' 'store_ln846' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 69 [1/1] (1.58ns)   --->   "%store_ln846 = store i64 %p_read328, i64 %rng_st_3_0" [../FalconHLS/code_hls/shake.c:846]   --->   Operation 69 'store' 'store_ln846' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 70 [1/1] (1.58ns)   --->   "%store_ln846 = store i64 %p_read429, i64 %rng_st_4_0" [../FalconHLS/code_hls/shake.c:846]   --->   Operation 70 'store' 'store_ln846' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 71 [1/1] (1.58ns)   --->   "%store_ln846 = store i64 %p_read530, i64 %rng_st_5_0" [../FalconHLS/code_hls/shake.c:846]   --->   Operation 71 'store' 'store_ln846' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 72 [1/1] (1.58ns)   --->   "%store_ln846 = store i64 %p_read631, i64 %rng_st_6_0" [../FalconHLS/code_hls/shake.c:846]   --->   Operation 72 'store' 'store_ln846' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 73 [1/1] (1.58ns)   --->   "%store_ln846 = store i64 %p_read732, i64 %rng_st_7_0" [../FalconHLS/code_hls/shake.c:846]   --->   Operation 73 'store' 'store_ln846' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 74 [1/1] (1.58ns)   --->   "%store_ln846 = store i64 %p_read833, i64 %rng_st_8_0" [../FalconHLS/code_hls/shake.c:846]   --->   Operation 74 'store' 'store_ln846' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 75 [1/1] (1.58ns)   --->   "%store_ln846 = store i64 %p_read934, i64 %rng_st_9_0" [../FalconHLS/code_hls/shake.c:846]   --->   Operation 75 'store' 'store_ln846' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 76 [1/1] (1.58ns)   --->   "%store_ln846 = store i64 %p_read1035, i64 %rng_st_10_0" [../FalconHLS/code_hls/shake.c:846]   --->   Operation 76 'store' 'store_ln846' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 77 [1/1] (1.58ns)   --->   "%store_ln846 = store i64 %p_read_40, i64 %rng_st_11_0" [../FalconHLS/code_hls/shake.c:846]   --->   Operation 77 'store' 'store_ln846' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 78 [1/1] (1.58ns)   --->   "%store_ln846 = store i64 %p_read_39, i64 %rng_st_12_0" [../FalconHLS/code_hls/shake.c:846]   --->   Operation 78 'store' 'store_ln846' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 79 [1/1] (1.58ns)   --->   "%store_ln846 = store i64 %p_read_38, i64 %rng_st_1316_0" [../FalconHLS/code_hls/shake.c:846]   --->   Operation 79 'store' 'store_ln846' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 80 [1/1] (1.58ns)   --->   "%store_ln846 = store i64 %p_read_37, i64 %rng_st_14_0" [../FalconHLS/code_hls/shake.c:846]   --->   Operation 80 'store' 'store_ln846' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 81 [1/1] (1.58ns)   --->   "%store_ln846 = store i64 %p_read_36, i64 %rng_st_15_0" [../FalconHLS/code_hls/shake.c:846]   --->   Operation 81 'store' 'store_ln846' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 82 [1/1] (1.58ns)   --->   "%store_ln846 = store i64 %p_read_35, i64 %rng_st_16_0" [../FalconHLS/code_hls/shake.c:846]   --->   Operation 82 'store' 'store_ln846' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 83 [1/1] (1.58ns)   --->   "%store_ln846 = store i64 %p_read_34, i64 %rng_st_17_0" [../FalconHLS/code_hls/shake.c:846]   --->   Operation 83 'store' 'store_ln846' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 84 [1/1] (1.58ns)   --->   "%store_ln846 = store i64 %p_read_33, i64 %rng_st_18_0" [../FalconHLS/code_hls/shake.c:846]   --->   Operation 84 'store' 'store_ln846' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 85 [1/1] (1.58ns)   --->   "%store_ln846 = store i64 %p_read_32, i64 %rng_st_19_0" [../FalconHLS/code_hls/shake.c:846]   --->   Operation 85 'store' 'store_ln846' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 86 [1/1] (1.58ns)   --->   "%store_ln846 = store i64 %p_read_31, i64 %rng_st_20_0" [../FalconHLS/code_hls/shake.c:846]   --->   Operation 86 'store' 'store_ln846' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 87 [1/1] (1.58ns)   --->   "%store_ln846 = store i64 %p_read_30, i64 %rng_st_21_0" [../FalconHLS/code_hls/shake.c:846]   --->   Operation 87 'store' 'store_ln846' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 88 [1/1] (1.58ns)   --->   "%store_ln846 = store i64 %p_read_29, i64 %rng_st_22_0" [../FalconHLS/code_hls/shake.c:846]   --->   Operation 88 'store' 'store_ln846' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 89 [1/1] (1.58ns)   --->   "%store_ln846 = store i64 %p_read_28, i64 %rng_st_23_0" [../FalconHLS/code_hls/shake.c:846]   --->   Operation 89 'store' 'store_ln846' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 90 [1/1] (1.58ns)   --->   "%store_ln846 = store i64 %p_read_27, i64 %rng_st_24_0" [../FalconHLS/code_hls/shake.c:846]   --->   Operation 90 'store' 'store_ln846' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 91 [1/1] (1.58ns)   --->   "%store_ln846 = store i64 %rng_dptr_read_1, i64 %dptr_2" [../FalconHLS/code_hls/shake.c:846]   --->   Operation 91 'store' 'store_ln846' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 92 [1/1] (1.58ns)   --->   "%store_ln846 = store i64 0, i64 %out_assign" [../FalconHLS/code_hls/shake.c:846]   --->   Operation 92 'store' 'store_ln846' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 93 [1/1] (1.58ns)   --->   "%store_ln846 = store i64 8, i64 %len_assign" [../FalconHLS/code_hls/shake.c:846]   --->   Operation 93 'store' 'store_ln846' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 94 [1/1] (0.00ns)   --->   "%br_ln846 = br void %while.cond.i" [../FalconHLS/code_hls/shake.c:846]   --->   Operation 94 'br' 'br_ln846' <Predicate = true> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 5.34>
+ST_2 : Operation 95 [1/1] (0.00ns)   --->   "%len_assign_load = load i64 %len_assign" [../FalconHLS/code_hls/shake.c:863]   --->   Operation 95 'load' 'len_assign_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 96 [1/1] (0.00ns)   --->   "%dptr_4 = load i64 %dptr_2" [../FalconHLS/code_hls/keygen.c:2539]   --->   Operation 96 'load' 'dptr_4' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 97 [1/1] (2.77ns)   --->   "%icmp_ln846 = icmp_eq  i64 %len_assign_load, i64 0" [../FalconHLS/code_hls/shake.c:846]   --->   Operation 97 'icmp' 'icmp_ln846' <Predicate = true> <Delay = 2.77> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.77> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 98 [1/1] (0.00ns)   --->   "%br_ln846 = br i1 %icmp_ln846, void %while.body.i, void %i_shake256_extract.85.104.exit" [../FalconHLS/code_hls/shake.c:846]   --->   Operation 98 'br' 'br_ln846' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 99 [1/1] (0.00ns)   --->   "%speclooptripcount_ln847 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 1, i64 1, i64 1" [../FalconHLS/code_hls/shake.c:847]   --->   Operation 99 'speclooptripcount' 'speclooptripcount_ln847' <Predicate = (!icmp_ln846)> <Delay = 0.00>
+ST_2 : Operation 100 [1/1] (0.00ns)   --->   "%specloopname_ln854 = specloopname void @_ssdm_op_SpecLoopName, void @empty_63" [../FalconHLS/code_hls/shake.c:854]   --->   Operation 100 'specloopname' 'specloopname_ln854' <Predicate = (!icmp_ln846)> <Delay = 0.00>
+ST_2 : Operation 101 [1/1] (2.77ns)   --->   "%icmp_ln854 = icmp_eq  i64 %dptr_4, i64 136" [../FalconHLS/code_hls/shake.c:854]   --->   Operation 101 'icmp' 'icmp_ln854' <Predicate = (!icmp_ln846)> <Delay = 2.77> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.77> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 102 [1/1] (1.58ns)   --->   "%br_ln854 = br i1 %icmp_ln854, void %if.end.i, void %if.then.i" [../FalconHLS/code_hls/shake.c:854]   --->   Operation 102 'br' 'br_ln854' <Predicate = (!icmp_ln846)> <Delay = 1.58>
+ST_2 : Operation 103 [1/1] (0.00ns)   --->   "%rng_st_24_0_load_1 = load i64 %rng_st_24_0" [../FalconHLS/code_hls/shake.c:855]   --->   Operation 103 'load' 'rng_st_24_0_load_1' <Predicate = (!icmp_ln846 & icmp_ln854)> <Delay = 0.00>
+ST_2 : Operation 104 [1/1] (0.00ns)   --->   "%rng_st_23_0_load_1 = load i64 %rng_st_23_0" [../FalconHLS/code_hls/shake.c:855]   --->   Operation 104 'load' 'rng_st_23_0_load_1' <Predicate = (!icmp_ln846 & icmp_ln854)> <Delay = 0.00>
+ST_2 : Operation 105 [1/1] (0.00ns)   --->   "%rng_st_22_0_load_1 = load i64 %rng_st_22_0" [../FalconHLS/code_hls/shake.c:855]   --->   Operation 105 'load' 'rng_st_22_0_load_1' <Predicate = (!icmp_ln846 & icmp_ln854)> <Delay = 0.00>
+ST_2 : Operation 106 [1/1] (0.00ns)   --->   "%rng_st_21_0_load_1 = load i64 %rng_st_21_0" [../FalconHLS/code_hls/shake.c:855]   --->   Operation 106 'load' 'rng_st_21_0_load_1' <Predicate = (!icmp_ln846 & icmp_ln854)> <Delay = 0.00>
+ST_2 : Operation 107 [1/1] (0.00ns)   --->   "%rng_st_20_0_load_1 = load i64 %rng_st_20_0" [../FalconHLS/code_hls/shake.c:855]   --->   Operation 107 'load' 'rng_st_20_0_load_1' <Predicate = (!icmp_ln846 & icmp_ln854)> <Delay = 0.00>
+ST_2 : Operation 108 [1/1] (0.00ns)   --->   "%rng_st_19_0_load_1 = load i64 %rng_st_19_0" [../FalconHLS/code_hls/shake.c:855]   --->   Operation 108 'load' 'rng_st_19_0_load_1' <Predicate = (!icmp_ln846 & icmp_ln854)> <Delay = 0.00>
+ST_2 : Operation 109 [1/1] (0.00ns)   --->   "%rng_st_18_0_load_1 = load i64 %rng_st_18_0" [../FalconHLS/code_hls/shake.c:855]   --->   Operation 109 'load' 'rng_st_18_0_load_1' <Predicate = (!icmp_ln846 & icmp_ln854)> <Delay = 0.00>
+ST_2 : Operation 110 [1/1] (0.00ns)   --->   "%rng_st_17_0_load_1 = load i64 %rng_st_17_0" [../FalconHLS/code_hls/shake.c:855]   --->   Operation 110 'load' 'rng_st_17_0_load_1' <Predicate = (!icmp_ln846 & icmp_ln854)> <Delay = 0.00>
+ST_2 : Operation 111 [1/1] (0.00ns)   --->   "%rng_st_16_0_load_1 = load i64 %rng_st_16_0" [../FalconHLS/code_hls/shake.c:855]   --->   Operation 111 'load' 'rng_st_16_0_load_1' <Predicate = (!icmp_ln846 & icmp_ln854)> <Delay = 0.00>
+ST_2 : Operation 112 [1/1] (0.00ns)   --->   "%rng_st_15_0_load_1 = load i64 %rng_st_15_0" [../FalconHLS/code_hls/shake.c:855]   --->   Operation 112 'load' 'rng_st_15_0_load_1' <Predicate = (!icmp_ln846 & icmp_ln854)> <Delay = 0.00>
+ST_2 : Operation 113 [1/1] (0.00ns)   --->   "%rng_st_14_0_load_1 = load i64 %rng_st_14_0" [../FalconHLS/code_hls/shake.c:855]   --->   Operation 113 'load' 'rng_st_14_0_load_1' <Predicate = (!icmp_ln846 & icmp_ln854)> <Delay = 0.00>
+ST_2 : Operation 114 [1/1] (0.00ns)   --->   "%rng_st_1316_0_load_1 = load i64 %rng_st_1316_0" [../FalconHLS/code_hls/shake.c:855]   --->   Operation 114 'load' 'rng_st_1316_0_load_1' <Predicate = (!icmp_ln846 & icmp_ln854)> <Delay = 0.00>
+ST_2 : Operation 115 [1/1] (0.00ns)   --->   "%rng_st_12_0_load_1 = load i64 %rng_st_12_0" [../FalconHLS/code_hls/shake.c:855]   --->   Operation 115 'load' 'rng_st_12_0_load_1' <Predicate = (!icmp_ln846 & icmp_ln854)> <Delay = 0.00>
+ST_2 : Operation 116 [1/1] (0.00ns)   --->   "%rng_st_11_0_load_1 = load i64 %rng_st_11_0" [../FalconHLS/code_hls/shake.c:855]   --->   Operation 116 'load' 'rng_st_11_0_load_1' <Predicate = (!icmp_ln846 & icmp_ln854)> <Delay = 0.00>
+ST_2 : Operation 117 [1/1] (0.00ns)   --->   "%rng_st_10_0_load_1 = load i64 %rng_st_10_0" [../FalconHLS/code_hls/shake.c:855]   --->   Operation 117 'load' 'rng_st_10_0_load_1' <Predicate = (!icmp_ln846 & icmp_ln854)> <Delay = 0.00>
+ST_2 : Operation 118 [1/1] (0.00ns)   --->   "%rng_st_9_0_load_1 = load i64 %rng_st_9_0" [../FalconHLS/code_hls/shake.c:855]   --->   Operation 118 'load' 'rng_st_9_0_load_1' <Predicate = (!icmp_ln846 & icmp_ln854)> <Delay = 0.00>
+ST_2 : Operation 119 [1/1] (0.00ns)   --->   "%rng_st_8_0_load_1 = load i64 %rng_st_8_0" [../FalconHLS/code_hls/shake.c:855]   --->   Operation 119 'load' 'rng_st_8_0_load_1' <Predicate = (!icmp_ln846 & icmp_ln854)> <Delay = 0.00>
+ST_2 : Operation 120 [1/1] (0.00ns)   --->   "%rng_st_7_0_load_1 = load i64 %rng_st_7_0" [../FalconHLS/code_hls/shake.c:855]   --->   Operation 120 'load' 'rng_st_7_0_load_1' <Predicate = (!icmp_ln846 & icmp_ln854)> <Delay = 0.00>
+ST_2 : Operation 121 [1/1] (0.00ns)   --->   "%rng_st_6_0_load_1 = load i64 %rng_st_6_0" [../FalconHLS/code_hls/shake.c:855]   --->   Operation 121 'load' 'rng_st_6_0_load_1' <Predicate = (!icmp_ln846 & icmp_ln854)> <Delay = 0.00>
+ST_2 : Operation 122 [1/1] (0.00ns)   --->   "%rng_st_5_0_load_1 = load i64 %rng_st_5_0" [../FalconHLS/code_hls/shake.c:855]   --->   Operation 122 'load' 'rng_st_5_0_load_1' <Predicate = (!icmp_ln846 & icmp_ln854)> <Delay = 0.00>
+ST_2 : Operation 123 [1/1] (0.00ns)   --->   "%rng_st_4_0_load_1 = load i64 %rng_st_4_0" [../FalconHLS/code_hls/shake.c:855]   --->   Operation 123 'load' 'rng_st_4_0_load_1' <Predicate = (!icmp_ln846 & icmp_ln854)> <Delay = 0.00>
+ST_2 : Operation 124 [1/1] (0.00ns)   --->   "%rng_st_3_0_load_1 = load i64 %rng_st_3_0" [../FalconHLS/code_hls/shake.c:855]   --->   Operation 124 'load' 'rng_st_3_0_load_1' <Predicate = (!icmp_ln846 & icmp_ln854)> <Delay = 0.00>
+ST_2 : Operation 125 [1/1] (0.00ns)   --->   "%rng_st_2_0_load_1 = load i64 %rng_st_2_0" [../FalconHLS/code_hls/shake.c:855]   --->   Operation 125 'load' 'rng_st_2_0_load_1' <Predicate = (!icmp_ln846 & icmp_ln854)> <Delay = 0.00>
+ST_2 : Operation 126 [1/1] (0.00ns)   --->   "%rng_st_1_0_load_1 = load i64 %rng_st_1_0" [../FalconHLS/code_hls/shake.c:855]   --->   Operation 126 'load' 'rng_st_1_0_load_1' <Predicate = (!icmp_ln846 & icmp_ln854)> <Delay = 0.00>
+ST_2 : Operation 127 [1/1] (0.00ns)   --->   "%rng_st_0_0_load_1 = load i64 %rng_st_0_0" [../FalconHLS/code_hls/shake.c:855]   --->   Operation 127 'load' 'rng_st_0_0_load_1' <Predicate = (!icmp_ln846 & icmp_ln854)> <Delay = 0.00>
+ST_2 : Operation 128 [2/2] (1.58ns)   --->   "%call_ret = call i1600 @process_block.111.112, i64 %rng_st_0_0_load_1, i64 %rng_st_1_0_load_1, i64 %rng_st_2_0_load_1, i64 %rng_st_3_0_load_1, i64 %rng_st_4_0_load_1, i64 %rng_st_5_0_load_1, i64 %rng_st_6_0_load_1, i64 %rng_st_7_0_load_1, i64 %rng_st_8_0_load_1, i64 %rng_st_9_0_load_1, i64 %rng_st_10_0_load_1, i64 %rng_st_11_0_load_1, i64 %rng_st_12_0_load_1, i64 %rng_st_1316_0_load_1, i64 %rng_st_14_0_load_1, i64 %rng_st_15_0_load_1, i64 %rng_st_16_0_load_1, i64 %rng_st_17_0_load_1, i64 %rng_st_18_0_load_1, i64 %rng_st_19_0_load_1, i64 %rng_st_20_0_load_1, i64 %rng_st_21_0_load_1, i64 %rng_st_22_0_load_1, i64 %rng_st_23_0_load_1, i64 %rng_st_24_0_load_1, i64 %RC" [../FalconHLS/code_hls/shake.c:855]   --->   Operation 128 'call' 'call_ret' <Predicate = (!icmp_ln846 & icmp_ln854)> <Delay = 1.58> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 129 [1/1] (0.00ns)   --->   "%tmp_addr = getelementptr i8 %tmp, i64 0, i64 0" [../FalconHLS/code_hls/keygen.c:2539]   --->   Operation 129 'getelementptr' 'tmp_addr' <Predicate = (icmp_ln846)> <Delay = 0.00>
+ST_2 : Operation 130 [2/2] (2.32ns)   --->   "%empty = load i3 %tmp_addr" [../FalconHLS/code_hls/keygen.c:2539]   --->   Operation 130 'load' 'empty' <Predicate = (icmp_ln846)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_2 : Operation 131 [1/1] (0.00ns)   --->   "%tmp_addr_1 = getelementptr i8 %tmp, i64 0, i64 1" [../FalconHLS/code_hls/keygen.c:2540]   --->   Operation 131 'getelementptr' 'tmp_addr_1' <Predicate = (icmp_ln846)> <Delay = 0.00>
+ST_2 : Operation 132 [2/2] (2.32ns)   --->   "%empty_398 = load i3 %tmp_addr_1" [../FalconHLS/code_hls/keygen.c:2540]   --->   Operation 132 'load' 'empty_398' <Predicate = (icmp_ln846)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+
+State 3 <SV = 2> <Delay = 1.58>
+ST_3 : Operation 133 [1/2] (0.00ns)   --->   "%call_ret = call i1600 @process_block.111.112, i64 %rng_st_0_0_load_1, i64 %rng_st_1_0_load_1, i64 %rng_st_2_0_load_1, i64 %rng_st_3_0_load_1, i64 %rng_st_4_0_load_1, i64 %rng_st_5_0_load_1, i64 %rng_st_6_0_load_1, i64 %rng_st_7_0_load_1, i64 %rng_st_8_0_load_1, i64 %rng_st_9_0_load_1, i64 %rng_st_10_0_load_1, i64 %rng_st_11_0_load_1, i64 %rng_st_12_0_load_1, i64 %rng_st_1316_0_load_1, i64 %rng_st_14_0_load_1, i64 %rng_st_15_0_load_1, i64 %rng_st_16_0_load_1, i64 %rng_st_17_0_load_1, i64 %rng_st_18_0_load_1, i64 %rng_st_19_0_load_1, i64 %rng_st_20_0_load_1, i64 %rng_st_21_0_load_1, i64 %rng_st_22_0_load_1, i64 %rng_st_23_0_load_1, i64 %rng_st_24_0_load_1, i64 %RC" [../FalconHLS/code_hls/shake.c:855]   --->   Operation 133 'call' 'call_ret' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 134 [1/1] (0.00ns)   --->   "%rng_st_0_ret = extractvalue i1600 %call_ret" [../FalconHLS/code_hls/shake.c:855]   --->   Operation 134 'extractvalue' 'rng_st_0_ret' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 135 [1/1] (0.00ns)   --->   "%rng_st_1_ret = extractvalue i1600 %call_ret" [../FalconHLS/code_hls/shake.c:855]   --->   Operation 135 'extractvalue' 'rng_st_1_ret' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 136 [1/1] (0.00ns)   --->   "%rng_st_2_ret = extractvalue i1600 %call_ret" [../FalconHLS/code_hls/shake.c:855]   --->   Operation 136 'extractvalue' 'rng_st_2_ret' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 137 [1/1] (0.00ns)   --->   "%rng_st_3_ret = extractvalue i1600 %call_ret" [../FalconHLS/code_hls/shake.c:855]   --->   Operation 137 'extractvalue' 'rng_st_3_ret' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 138 [1/1] (0.00ns)   --->   "%rng_st_4_ret = extractvalue i1600 %call_ret" [../FalconHLS/code_hls/shake.c:855]   --->   Operation 138 'extractvalue' 'rng_st_4_ret' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 139 [1/1] (0.00ns)   --->   "%rng_st_5_ret = extractvalue i1600 %call_ret" [../FalconHLS/code_hls/shake.c:855]   --->   Operation 139 'extractvalue' 'rng_st_5_ret' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 140 [1/1] (0.00ns)   --->   "%rng_st_6_ret = extractvalue i1600 %call_ret" [../FalconHLS/code_hls/shake.c:855]   --->   Operation 140 'extractvalue' 'rng_st_6_ret' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 141 [1/1] (0.00ns)   --->   "%rng_st_7_ret = extractvalue i1600 %call_ret" [../FalconHLS/code_hls/shake.c:855]   --->   Operation 141 'extractvalue' 'rng_st_7_ret' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 142 [1/1] (0.00ns)   --->   "%rng_st_8_ret = extractvalue i1600 %call_ret" [../FalconHLS/code_hls/shake.c:855]   --->   Operation 142 'extractvalue' 'rng_st_8_ret' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 143 [1/1] (0.00ns)   --->   "%rng_st_9_ret = extractvalue i1600 %call_ret" [../FalconHLS/code_hls/shake.c:855]   --->   Operation 143 'extractvalue' 'rng_st_9_ret' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 144 [1/1] (0.00ns)   --->   "%rng_st_10_ret = extractvalue i1600 %call_ret" [../FalconHLS/code_hls/shake.c:855]   --->   Operation 144 'extractvalue' 'rng_st_10_ret' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 145 [1/1] (0.00ns)   --->   "%rng_st_11_ret = extractvalue i1600 %call_ret" [../FalconHLS/code_hls/shake.c:855]   --->   Operation 145 'extractvalue' 'rng_st_11_ret' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 146 [1/1] (0.00ns)   --->   "%rng_st_12_ret = extractvalue i1600 %call_ret" [../FalconHLS/code_hls/shake.c:855]   --->   Operation 146 'extractvalue' 'rng_st_12_ret' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 147 [1/1] (0.00ns)   --->   "%rng_st_13_ret = extractvalue i1600 %call_ret" [../FalconHLS/code_hls/shake.c:855]   --->   Operation 147 'extractvalue' 'rng_st_13_ret' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 148 [1/1] (0.00ns)   --->   "%rng_st_14_ret = extractvalue i1600 %call_ret" [../FalconHLS/code_hls/shake.c:855]   --->   Operation 148 'extractvalue' 'rng_st_14_ret' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 149 [1/1] (0.00ns)   --->   "%rng_st_15_ret = extractvalue i1600 %call_ret" [../FalconHLS/code_hls/shake.c:855]   --->   Operation 149 'extractvalue' 'rng_st_15_ret' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 150 [1/1] (0.00ns)   --->   "%rng_st_16_ret = extractvalue i1600 %call_ret" [../FalconHLS/code_hls/shake.c:855]   --->   Operation 150 'extractvalue' 'rng_st_16_ret' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 151 [1/1] (0.00ns)   --->   "%rng_st_17_ret = extractvalue i1600 %call_ret" [../FalconHLS/code_hls/shake.c:855]   --->   Operation 151 'extractvalue' 'rng_st_17_ret' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 152 [1/1] (0.00ns)   --->   "%rng_st_18_ret = extractvalue i1600 %call_ret" [../FalconHLS/code_hls/shake.c:855]   --->   Operation 152 'extractvalue' 'rng_st_18_ret' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 153 [1/1] (0.00ns)   --->   "%rng_st_19_ret = extractvalue i1600 %call_ret" [../FalconHLS/code_hls/shake.c:855]   --->   Operation 153 'extractvalue' 'rng_st_19_ret' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 154 [1/1] (0.00ns)   --->   "%rng_st_20_ret = extractvalue i1600 %call_ret" [../FalconHLS/code_hls/shake.c:855]   --->   Operation 154 'extractvalue' 'rng_st_20_ret' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 155 [1/1] (0.00ns)   --->   "%rng_st_21_ret = extractvalue i1600 %call_ret" [../FalconHLS/code_hls/shake.c:855]   --->   Operation 155 'extractvalue' 'rng_st_21_ret' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 156 [1/1] (0.00ns)   --->   "%rng_st_22_ret = extractvalue i1600 %call_ret" [../FalconHLS/code_hls/shake.c:855]   --->   Operation 156 'extractvalue' 'rng_st_22_ret' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 157 [1/1] (0.00ns)   --->   "%rng_st_23_ret = extractvalue i1600 %call_ret" [../FalconHLS/code_hls/shake.c:855]   --->   Operation 157 'extractvalue' 'rng_st_23_ret' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 158 [1/1] (0.00ns)   --->   "%rng_st_24_ret = extractvalue i1600 %call_ret" [../FalconHLS/code_hls/shake.c:855]   --->   Operation 158 'extractvalue' 'rng_st_24_ret' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 159 [1/1] (1.58ns)   --->   "%store_ln857 = store i64 %rng_st_0_ret, i64 %rng_st_0_0" [../FalconHLS/code_hls/shake.c:857]   --->   Operation 159 'store' 'store_ln857' <Predicate = true> <Delay = 1.58>
+ST_3 : Operation 160 [1/1] (1.58ns)   --->   "%store_ln857 = store i64 %rng_st_1_ret, i64 %rng_st_1_0" [../FalconHLS/code_hls/shake.c:857]   --->   Operation 160 'store' 'store_ln857' <Predicate = true> <Delay = 1.58>
+ST_3 : Operation 161 [1/1] (1.58ns)   --->   "%store_ln857 = store i64 %rng_st_2_ret, i64 %rng_st_2_0" [../FalconHLS/code_hls/shake.c:857]   --->   Operation 161 'store' 'store_ln857' <Predicate = true> <Delay = 1.58>
+ST_3 : Operation 162 [1/1] (1.58ns)   --->   "%store_ln857 = store i64 %rng_st_3_ret, i64 %rng_st_3_0" [../FalconHLS/code_hls/shake.c:857]   --->   Operation 162 'store' 'store_ln857' <Predicate = true> <Delay = 1.58>
+ST_3 : Operation 163 [1/1] (1.58ns)   --->   "%store_ln857 = store i64 %rng_st_4_ret, i64 %rng_st_4_0" [../FalconHLS/code_hls/shake.c:857]   --->   Operation 163 'store' 'store_ln857' <Predicate = true> <Delay = 1.58>
+ST_3 : Operation 164 [1/1] (1.58ns)   --->   "%store_ln857 = store i64 %rng_st_5_ret, i64 %rng_st_5_0" [../FalconHLS/code_hls/shake.c:857]   --->   Operation 164 'store' 'store_ln857' <Predicate = true> <Delay = 1.58>
+ST_3 : Operation 165 [1/1] (1.58ns)   --->   "%store_ln857 = store i64 %rng_st_6_ret, i64 %rng_st_6_0" [../FalconHLS/code_hls/shake.c:857]   --->   Operation 165 'store' 'store_ln857' <Predicate = true> <Delay = 1.58>
+ST_3 : Operation 166 [1/1] (1.58ns)   --->   "%store_ln857 = store i64 %rng_st_7_ret, i64 %rng_st_7_0" [../FalconHLS/code_hls/shake.c:857]   --->   Operation 166 'store' 'store_ln857' <Predicate = true> <Delay = 1.58>
+ST_3 : Operation 167 [1/1] (1.58ns)   --->   "%store_ln857 = store i64 %rng_st_8_ret, i64 %rng_st_8_0" [../FalconHLS/code_hls/shake.c:857]   --->   Operation 167 'store' 'store_ln857' <Predicate = true> <Delay = 1.58>
+ST_3 : Operation 168 [1/1] (1.58ns)   --->   "%store_ln857 = store i64 %rng_st_9_ret, i64 %rng_st_9_0" [../FalconHLS/code_hls/shake.c:857]   --->   Operation 168 'store' 'store_ln857' <Predicate = true> <Delay = 1.58>
+ST_3 : Operation 169 [1/1] (1.58ns)   --->   "%store_ln857 = store i64 %rng_st_10_ret, i64 %rng_st_10_0" [../FalconHLS/code_hls/shake.c:857]   --->   Operation 169 'store' 'store_ln857' <Predicate = true> <Delay = 1.58>
+ST_3 : Operation 170 [1/1] (1.58ns)   --->   "%store_ln857 = store i64 %rng_st_11_ret, i64 %rng_st_11_0" [../FalconHLS/code_hls/shake.c:857]   --->   Operation 170 'store' 'store_ln857' <Predicate = true> <Delay = 1.58>
+ST_3 : Operation 171 [1/1] (1.58ns)   --->   "%store_ln857 = store i64 %rng_st_12_ret, i64 %rng_st_12_0" [../FalconHLS/code_hls/shake.c:857]   --->   Operation 171 'store' 'store_ln857' <Predicate = true> <Delay = 1.58>
+ST_3 : Operation 172 [1/1] (1.58ns)   --->   "%store_ln857 = store i64 %rng_st_13_ret, i64 %rng_st_1316_0" [../FalconHLS/code_hls/shake.c:857]   --->   Operation 172 'store' 'store_ln857' <Predicate = true> <Delay = 1.58>
+ST_3 : Operation 173 [1/1] (1.58ns)   --->   "%store_ln857 = store i64 %rng_st_14_ret, i64 %rng_st_14_0" [../FalconHLS/code_hls/shake.c:857]   --->   Operation 173 'store' 'store_ln857' <Predicate = true> <Delay = 1.58>
+ST_3 : Operation 174 [1/1] (1.58ns)   --->   "%store_ln857 = store i64 %rng_st_15_ret, i64 %rng_st_15_0" [../FalconHLS/code_hls/shake.c:857]   --->   Operation 174 'store' 'store_ln857' <Predicate = true> <Delay = 1.58>
+ST_3 : Operation 175 [1/1] (1.58ns)   --->   "%store_ln857 = store i64 %rng_st_16_ret, i64 %rng_st_16_0" [../FalconHLS/code_hls/shake.c:857]   --->   Operation 175 'store' 'store_ln857' <Predicate = true> <Delay = 1.58>
+ST_3 : Operation 176 [1/1] (1.58ns)   --->   "%store_ln857 = store i64 %rng_st_17_ret, i64 %rng_st_17_0" [../FalconHLS/code_hls/shake.c:857]   --->   Operation 176 'store' 'store_ln857' <Predicate = true> <Delay = 1.58>
+ST_3 : Operation 177 [1/1] (1.58ns)   --->   "%store_ln857 = store i64 %rng_st_18_ret, i64 %rng_st_18_0" [../FalconHLS/code_hls/shake.c:857]   --->   Operation 177 'store' 'store_ln857' <Predicate = true> <Delay = 1.58>
+ST_3 : Operation 178 [1/1] (1.58ns)   --->   "%store_ln857 = store i64 %rng_st_19_ret, i64 %rng_st_19_0" [../FalconHLS/code_hls/shake.c:857]   --->   Operation 178 'store' 'store_ln857' <Predicate = true> <Delay = 1.58>
+ST_3 : Operation 179 [1/1] (1.58ns)   --->   "%store_ln857 = store i64 %rng_st_20_ret, i64 %rng_st_20_0" [../FalconHLS/code_hls/shake.c:857]   --->   Operation 179 'store' 'store_ln857' <Predicate = true> <Delay = 1.58>
+ST_3 : Operation 180 [1/1] (1.58ns)   --->   "%store_ln857 = store i64 %rng_st_21_ret, i64 %rng_st_21_0" [../FalconHLS/code_hls/shake.c:857]   --->   Operation 180 'store' 'store_ln857' <Predicate = true> <Delay = 1.58>
+ST_3 : Operation 181 [1/1] (1.58ns)   --->   "%store_ln857 = store i64 %rng_st_22_ret, i64 %rng_st_22_0" [../FalconHLS/code_hls/shake.c:857]   --->   Operation 181 'store' 'store_ln857' <Predicate = true> <Delay = 1.58>
+ST_3 : Operation 182 [1/1] (1.58ns)   --->   "%store_ln857 = store i64 %rng_st_23_ret, i64 %rng_st_23_0" [../FalconHLS/code_hls/shake.c:857]   --->   Operation 182 'store' 'store_ln857' <Predicate = true> <Delay = 1.58>
+ST_3 : Operation 183 [1/1] (1.58ns)   --->   "%store_ln857 = store i64 %rng_st_24_ret, i64 %rng_st_24_0" [../FalconHLS/code_hls/shake.c:857]   --->   Operation 183 'store' 'store_ln857' <Predicate = true> <Delay = 1.58>
+ST_3 : Operation 184 [1/1] (1.58ns)   --->   "%br_ln857 = br void %if.end.i" [../FalconHLS/code_hls/shake.c:857]   --->   Operation 184 'br' 'br_ln857' <Predicate = true> <Delay = 1.58>
+
+State 4 <SV = 3> <Delay = 12.1>
+ST_4 : Operation 185 [1/1] (0.00ns)   --->   "%dptr = phi i64 0, void %if.then.i, i64 %dptr_4, void %while.body.i"   --->   Operation 185 'phi' 'dptr' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 186 [1/1] (3.52ns)   --->   "%clen = sub i64 136, i64 %dptr" [../FalconHLS/code_hls/shake.c:858]   --->   Operation 186 'sub' 'clen' <Predicate = true> <Delay = 3.52> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 3.52> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 187 [1/1] (2.77ns)   --->   "%icmp_ln859 = icmp_ugt  i64 %clen, i64 %len_assign_load" [../FalconHLS/code_hls/shake.c:859]   --->   Operation 187 'icmp' 'icmp_ln859' <Predicate = true> <Delay = 2.77> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.77> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 188 [1/1] (1.48ns)   --->   "%clen_1 = select i1 %icmp_ln859, i64 %len_assign_load, i64 %clen" [../FalconHLS/code_hls/shake.c:859]   --->   Operation 188 'select' 'clen_1' <Predicate = true> <Delay = 1.48> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 189 [1/1] (3.52ns)   --->   "%sub_ln862 = sub i64 %len_assign_load, i64 %clen_1" [../FalconHLS/code_hls/shake.c:862]   --->   Operation 189 'sub' 'sub_ln862' <Predicate = true> <Delay = 3.52> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 3.52> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 190 [1/1] (2.77ns)   --->   "%icmp_ln863 = icmp_eq  i64 %clen_1, i64 0" [../FalconHLS/code_hls/shake.c:863]   --->   Operation 190 'icmp' 'icmp_ln863' <Predicate = true> <Delay = 2.77> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.77> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 191 [1/1] (1.58ns)   --->   "%br_ln863 = br i1 %icmp_ln863, void %while.body9.i.preheader, void %while.end.i" [../FalconHLS/code_hls/shake.c:863]   --->   Operation 191 'br' 'br_ln863' <Predicate = true> <Delay = 1.58>
+ST_4 : Operation 192 [1/1] (1.58ns)   --->   "%br_ln841 = br void %while.body9.i" [../FalconHLS/code_hls/shake.c:841]   --->   Operation 192 'br' 'br_ln841' <Predicate = (!icmp_ln863)> <Delay = 1.58>
+
+State 5 <SV = 4> <Delay = 13.0>
+ST_5 : Operation 193 [1/1] (0.00ns)   --->   "%indvars_iv = phi i64 %add_ln865, void %while.body9.i, i64 0, void %while.body9.i.preheader" [../FalconHLS/code_hls/shake.c:865]   --->   Operation 193 'phi' 'indvars_iv' <Predicate = (!icmp_ln863)> <Delay = 0.00>
+ST_5 : Operation 194 [1/1] (0.00ns)   --->   "%dec5_i_in = phi i64 %clen_2, void %while.body9.i, i64 %clen_1, void %while.body9.i.preheader"   --->   Operation 194 'phi' 'dec5_i_in' <Predicate = (!icmp_ln863)> <Delay = 0.00>
+ST_5 : Operation 195 [1/1] (0.00ns)   --->   "%dptr_1 = phi i64 %dptr_5, void %while.body9.i, i64 %dptr, void %while.body9.i.preheader"   --->   Operation 195 'phi' 'dptr_1' <Predicate = (!icmp_ln863)> <Delay = 0.00>
+ST_5 : Operation 196 [1/1] (0.00ns)   --->   "%out_assign_load = load i64 %out_assign" [../FalconHLS/code_hls/shake.c:841]   --->   Operation 196 'load' 'out_assign_load' <Predicate = (!icmp_ln863)> <Delay = 0.00>
+ST_5 : Operation 197 [1/1] (0.00ns)   --->   "%rng_st_24_0_load_2 = load i64 %rng_st_24_0" [../FalconHLS/code_hls/shake.c:865]   --->   Operation 197 'load' 'rng_st_24_0_load_2' <Predicate = (!icmp_ln863)> <Delay = 0.00>
+ST_5 : Operation 198 [1/1] (0.00ns)   --->   "%rng_st_23_0_load_2 = load i64 %rng_st_23_0" [../FalconHLS/code_hls/shake.c:865]   --->   Operation 198 'load' 'rng_st_23_0_load_2' <Predicate = (!icmp_ln863)> <Delay = 0.00>
+ST_5 : Operation 199 [1/1] (0.00ns)   --->   "%rng_st_22_0_load_2 = load i64 %rng_st_22_0" [../FalconHLS/code_hls/shake.c:865]   --->   Operation 199 'load' 'rng_st_22_0_load_2' <Predicate = (!icmp_ln863)> <Delay = 0.00>
+ST_5 : Operation 200 [1/1] (0.00ns)   --->   "%rng_st_21_0_load_2 = load i64 %rng_st_21_0" [../FalconHLS/code_hls/shake.c:865]   --->   Operation 200 'load' 'rng_st_21_0_load_2' <Predicate = (!icmp_ln863)> <Delay = 0.00>
+ST_5 : Operation 201 [1/1] (0.00ns)   --->   "%rng_st_20_0_load_2 = load i64 %rng_st_20_0" [../FalconHLS/code_hls/shake.c:865]   --->   Operation 201 'load' 'rng_st_20_0_load_2' <Predicate = (!icmp_ln863)> <Delay = 0.00>
+ST_5 : Operation 202 [1/1] (0.00ns)   --->   "%rng_st_19_0_load_2 = load i64 %rng_st_19_0" [../FalconHLS/code_hls/shake.c:865]   --->   Operation 202 'load' 'rng_st_19_0_load_2' <Predicate = (!icmp_ln863)> <Delay = 0.00>
+ST_5 : Operation 203 [1/1] (0.00ns)   --->   "%rng_st_18_0_load_2 = load i64 %rng_st_18_0" [../FalconHLS/code_hls/shake.c:865]   --->   Operation 203 'load' 'rng_st_18_0_load_2' <Predicate = (!icmp_ln863)> <Delay = 0.00>
+ST_5 : Operation 204 [1/1] (0.00ns)   --->   "%rng_st_17_0_load_2 = load i64 %rng_st_17_0" [../FalconHLS/code_hls/shake.c:865]   --->   Operation 204 'load' 'rng_st_17_0_load_2' <Predicate = (!icmp_ln863)> <Delay = 0.00>
+ST_5 : Operation 205 [1/1] (0.00ns)   --->   "%rng_st_16_0_load_2 = load i64 %rng_st_16_0" [../FalconHLS/code_hls/shake.c:865]   --->   Operation 205 'load' 'rng_st_16_0_load_2' <Predicate = (!icmp_ln863)> <Delay = 0.00>
+ST_5 : Operation 206 [1/1] (0.00ns)   --->   "%rng_st_15_0_load_2 = load i64 %rng_st_15_0" [../FalconHLS/code_hls/shake.c:865]   --->   Operation 206 'load' 'rng_st_15_0_load_2' <Predicate = (!icmp_ln863)> <Delay = 0.00>
+ST_5 : Operation 207 [1/1] (0.00ns)   --->   "%rng_st_14_0_load_2 = load i64 %rng_st_14_0" [../FalconHLS/code_hls/shake.c:865]   --->   Operation 207 'load' 'rng_st_14_0_load_2' <Predicate = (!icmp_ln863)> <Delay = 0.00>
+ST_5 : Operation 208 [1/1] (0.00ns)   --->   "%rng_st_1316_0_load_2 = load i64 %rng_st_1316_0" [../FalconHLS/code_hls/shake.c:865]   --->   Operation 208 'load' 'rng_st_1316_0_load_2' <Predicate = (!icmp_ln863)> <Delay = 0.00>
+ST_5 : Operation 209 [1/1] (0.00ns)   --->   "%rng_st_12_0_load_2 = load i64 %rng_st_12_0" [../FalconHLS/code_hls/shake.c:865]   --->   Operation 209 'load' 'rng_st_12_0_load_2' <Predicate = (!icmp_ln863)> <Delay = 0.00>
+ST_5 : Operation 210 [1/1] (0.00ns)   --->   "%rng_st_11_0_load_2 = load i64 %rng_st_11_0" [../FalconHLS/code_hls/shake.c:865]   --->   Operation 210 'load' 'rng_st_11_0_load_2' <Predicate = (!icmp_ln863)> <Delay = 0.00>
+ST_5 : Operation 211 [1/1] (0.00ns)   --->   "%rng_st_10_0_load_2 = load i64 %rng_st_10_0" [../FalconHLS/code_hls/shake.c:865]   --->   Operation 211 'load' 'rng_st_10_0_load_2' <Predicate = (!icmp_ln863)> <Delay = 0.00>
+ST_5 : Operation 212 [1/1] (0.00ns)   --->   "%rng_st_9_0_load_2 = load i64 %rng_st_9_0" [../FalconHLS/code_hls/shake.c:865]   --->   Operation 212 'load' 'rng_st_9_0_load_2' <Predicate = (!icmp_ln863)> <Delay = 0.00>
+ST_5 : Operation 213 [1/1] (0.00ns)   --->   "%rng_st_8_0_load_2 = load i64 %rng_st_8_0" [../FalconHLS/code_hls/shake.c:865]   --->   Operation 213 'load' 'rng_st_8_0_load_2' <Predicate = (!icmp_ln863)> <Delay = 0.00>
+ST_5 : Operation 214 [1/1] (0.00ns)   --->   "%rng_st_7_0_load_2 = load i64 %rng_st_7_0" [../FalconHLS/code_hls/shake.c:865]   --->   Operation 214 'load' 'rng_st_7_0_load_2' <Predicate = (!icmp_ln863)> <Delay = 0.00>
+ST_5 : Operation 215 [1/1] (0.00ns)   --->   "%rng_st_6_0_load_2 = load i64 %rng_st_6_0" [../FalconHLS/code_hls/shake.c:865]   --->   Operation 215 'load' 'rng_st_6_0_load_2' <Predicate = (!icmp_ln863)> <Delay = 0.00>
+ST_5 : Operation 216 [1/1] (0.00ns)   --->   "%rng_st_5_0_load_2 = load i64 %rng_st_5_0" [../FalconHLS/code_hls/shake.c:865]   --->   Operation 216 'load' 'rng_st_5_0_load_2' <Predicate = (!icmp_ln863)> <Delay = 0.00>
+ST_5 : Operation 217 [1/1] (0.00ns)   --->   "%rng_st_4_0_load_2 = load i64 %rng_st_4_0" [../FalconHLS/code_hls/shake.c:865]   --->   Operation 217 'load' 'rng_st_4_0_load_2' <Predicate = (!icmp_ln863)> <Delay = 0.00>
+ST_5 : Operation 218 [1/1] (0.00ns)   --->   "%rng_st_3_0_load_2 = load i64 %rng_st_3_0" [../FalconHLS/code_hls/shake.c:865]   --->   Operation 218 'load' 'rng_st_3_0_load_2' <Predicate = (!icmp_ln863)> <Delay = 0.00>
+ST_5 : Operation 219 [1/1] (0.00ns)   --->   "%rng_st_2_0_load_2 = load i64 %rng_st_2_0" [../FalconHLS/code_hls/shake.c:865]   --->   Operation 219 'load' 'rng_st_2_0_load_2' <Predicate = (!icmp_ln863)> <Delay = 0.00>
+ST_5 : Operation 220 [1/1] (0.00ns)   --->   "%rng_st_1_0_load_2 = load i64 %rng_st_1_0" [../FalconHLS/code_hls/shake.c:865]   --->   Operation 220 'load' 'rng_st_1_0_load_2' <Predicate = (!icmp_ln863)> <Delay = 0.00>
+ST_5 : Operation 221 [1/1] (0.00ns)   --->   "%rng_st_0_0_load_2 = load i64 %rng_st_0_0" [../FalconHLS/code_hls/shake.c:865]   --->   Operation 221 'load' 'rng_st_0_0_load_2' <Predicate = (!icmp_ln863)> <Delay = 0.00>
+ST_5 : Operation 222 [1/1] (0.00ns)   --->   "%trunc_ln852 = trunc i64 %indvars_iv" [../FalconHLS/code_hls/shake.c:852]   --->   Operation 222 'trunc' 'trunc_ln852' <Predicate = (!icmp_ln863)> <Delay = 0.00>
+ST_5 : Operation 223 [1/1] (3.52ns)   --->   "%clen_2 = add i64 %dec5_i_in, i64 18446744073709551615" [../FalconHLS/code_hls/shake.c:852]   --->   Operation 223 'add' 'clen_2' <Predicate = (!icmp_ln863)> <Delay = 3.52> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 3.52> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 224 [1/1] (0.00ns)   --->   "%speclooptripcount_ln864 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 1, i64 136, i64 2" [../FalconHLS/code_hls/shake.c:864]   --->   Operation 224 'speclooptripcount' 'speclooptripcount_ln864' <Predicate = (!icmp_ln863)> <Delay = 0.00>
+ST_5 : Operation 225 [1/1] (0.00ns)   --->   "%specloopname_ln843 = specloopname void @_ssdm_op_SpecLoopName, void @empty_37" [../FalconHLS/code_hls/shake.c:843]   --->   Operation 225 'specloopname' 'specloopname_ln843' <Predicate = (!icmp_ln863)> <Delay = 0.00>
+ST_5 : Operation 226 [1/1] (0.00ns)   --->   "%trunc_ln841 = trunc i64 %out_assign_load" [../FalconHLS/code_hls/shake.c:841]   --->   Operation 226 'trunc' 'trunc_ln841' <Predicate = (!icmp_ln863)> <Delay = 0.00>
+ST_5 : Operation 227 [1/1] (1.65ns)   --->   "%add_ln843 = add i3 %trunc_ln852, i3 %trunc_ln841" [../FalconHLS/code_hls/shake.c:843]   --->   Operation 227 'add' 'add_ln843' <Predicate = (!icmp_ln863)> <Delay = 1.65> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.65> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 228 [1/1] (0.00ns)   --->   "%zext_ln843 = zext i3 %add_ln843" [../FalconHLS/code_hls/shake.c:843]   --->   Operation 228 'zext' 'zext_ln843' <Predicate = (!icmp_ln863)> <Delay = 0.00>
+ST_5 : Operation 229 [1/1] (0.00ns)   --->   "%lshr_ln = partselect i61 @_ssdm_op_PartSelect.i61.i64.i32.i32, i64 %dptr_1, i32 3, i32 63" [../FalconHLS/code_hls/shake.c:865]   --->   Operation 229 'partselect' 'lshr_ln' <Predicate = (!icmp_ln863)> <Delay = 0.00>
+ST_5 : Operation 230 [1/1] (3.20ns)   --->   "%tmp_s = mux i64 @_ssdm_op_Mux.ap_auto.25i64.i61, i64 %rng_st_0_0_load_2, i64 %rng_st_1_0_load_2, i64 %rng_st_2_0_load_2, i64 %rng_st_3_0_load_2, i64 %rng_st_4_0_load_2, i64 %rng_st_5_0_load_2, i64 %rng_st_6_0_load_2, i64 %rng_st_7_0_load_2, i64 %rng_st_8_0_load_2, i64 %rng_st_9_0_load_2, i64 %rng_st_10_0_load_2, i64 %rng_st_11_0_load_2, i64 %rng_st_12_0_load_2, i64 %rng_st_1316_0_load_2, i64 %rng_st_14_0_load_2, i64 %rng_st_15_0_load_2, i64 %rng_st_16_0_load_2, i64 %rng_st_17_0_load_2, i64 %rng_st_18_0_load_2, i64 %rng_st_19_0_load_2, i64 %rng_st_20_0_load_2, i64 %rng_st_21_0_load_2, i64 %rng_st_22_0_load_2, i64 %rng_st_23_0_load_2, i64 %rng_st_24_0_load_2, i61 %lshr_ln" [../FalconHLS/code_hls/shake.c:865]   --->   Operation 230 'mux' 'tmp_s' <Predicate = (!icmp_ln863)> <Delay = 3.20> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 3.20> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 231 [1/1] (0.00ns)   --->   "%trunc_ln865 = trunc i64 %dptr_1" [../FalconHLS/code_hls/shake.c:865]   --->   Operation 231 'trunc' 'trunc_ln865' <Predicate = (!icmp_ln863)> <Delay = 0.00>
+ST_5 : Operation 232 [1/1] (0.00ns)   --->   "%shl_ln = bitconcatenate i6 @_ssdm_op_BitConcatenate.i6.i3.i3, i3 %trunc_ln865, i3 0" [../FalconHLS/code_hls/shake.c:865]   --->   Operation 232 'bitconcatenate' 'shl_ln' <Predicate = (!icmp_ln863)> <Delay = 0.00>
+ST_5 : Operation 233 [1/1] (0.00ns)   --->   "%zext_ln865 = zext i6 %shl_ln" [../FalconHLS/code_hls/shake.c:865]   --->   Operation 233 'zext' 'zext_ln865' <Predicate = (!icmp_ln863)> <Delay = 0.00>
+ST_5 : Operation 234 [1/1] (4.59ns)   --->   "%lshr_ln865 = lshr i64 %tmp_s, i64 %zext_ln865" [../FalconHLS/code_hls/shake.c:865]   --->   Operation 234 'lshr' 'lshr_ln865' <Predicate = (!icmp_ln863)> <Delay = 4.59> <CoreInst = "Shifter">   --->   Core 75 'Shifter' <Latency = 0> <II = 1> <Delay = 4.59> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 235 [1/1] (0.00ns)   --->   "%trunc_ln865_1 = trunc i64 %lshr_ln865" [../FalconHLS/code_hls/shake.c:865]   --->   Operation 235 'trunc' 'trunc_ln865_1' <Predicate = (!icmp_ln863)> <Delay = 0.00>
+ST_5 : Operation 236 [1/1] (3.52ns)   --->   "%add_ln865 = add i64 %indvars_iv, i64 1" [../FalconHLS/code_hls/shake.c:865]   --->   Operation 236 'add' 'add_ln865' <Predicate = (!icmp_ln863)> <Delay = 3.52> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 3.52> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 237 [1/1] (0.00ns)   --->   "%tmp_addr_8 = getelementptr i8 %tmp, i64 0, i64 %zext_ln843" [../FalconHLS/code_hls/shake.c:865]   --->   Operation 237 'getelementptr' 'tmp_addr_8' <Predicate = (!icmp_ln863)> <Delay = 0.00>
+ST_5 : Operation 238 [1/1] (2.32ns)   --->   "%store_ln865 = store i8 %trunc_ln865_1, i3 %tmp_addr_8" [../FalconHLS/code_hls/shake.c:865]   --->   Operation 238 'store' 'store_ln865' <Predicate = (!icmp_ln863)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_5 : Operation 239 [1/1] (3.52ns)   --->   "%dptr_5 = add i64 %dptr_1, i64 1" [../FalconHLS/code_hls/shake.c:866]   --->   Operation 239 'add' 'dptr_5' <Predicate = (!icmp_ln863)> <Delay = 3.52> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 3.52> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 240 [1/1] (2.77ns)   --->   "%icmp_ln863_1 = icmp_eq  i64 %clen_2, i64 0" [../FalconHLS/code_hls/shake.c:863]   --->   Operation 240 'icmp' 'icmp_ln863_1' <Predicate = (!icmp_ln863)> <Delay = 2.77> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.77> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 241 [1/1] (0.00ns)   --->   "%br_ln863 = br i1 %icmp_ln863_1, void %while.body9.i, void %while.end.i.loopexit" [../FalconHLS/code_hls/shake.c:863]   --->   Operation 241 'br' 'br_ln863' <Predicate = (!icmp_ln863)> <Delay = 0.00>
+ST_5 : Operation 242 [1/1] (3.52ns)   --->   "%add_ln863 = add i64 %dptr, i64 18446744073709551479" [../FalconHLS/code_hls/shake.c:863]   --->   Operation 242 'add' 'add_ln863' <Predicate = (!icmp_ln863 & icmp_ln863_1)> <Delay = 3.52> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 3.52> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 243 [1/1] (0.99ns)   --->   "%xor_ln863 = xor i64 %len_assign_load, i64 18446744073709551615" [../FalconHLS/code_hls/shake.c:863]   --->   Operation 243 'xor' 'xor_ln863' <Predicate = (!icmp_ln863 & icmp_ln863_1)> <Delay = 0.99> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 244 [1/1] (2.77ns)   --->   "%icmp_ln863_2 = icmp_ult  i64 %add_ln863, i64 %xor_ln863" [../FalconHLS/code_hls/shake.c:863]   --->   Operation 244 'icmp' 'icmp_ln863_2' <Predicate = (!icmp_ln863 & icmp_ln863_1)> <Delay = 2.77> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.77> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 245 [1/1] (3.52ns)   --->   "%add_ln863_1 = add i64 %clen_1, i64 %out_assign_load" [../FalconHLS/code_hls/shake.c:863]   --->   Operation 245 'add' 'add_ln863_1' <Predicate = (!icmp_ln863 & icmp_ln863_1)> <Delay = 3.52> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 3.52> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 246 [1/1] (1.48ns)   --->   "%select_ln863 = select i1 %icmp_ln863_2, i64 %xor_ln863, i64 %add_ln863" [../FalconHLS/code_hls/shake.c:863]   --->   Operation 246 'select' 'select_ln863' <Predicate = (!icmp_ln863 & icmp_ln863_1)> <Delay = 1.48> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 247 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_ln863_2 = add i64 %dptr, i64 18446744073709551615" [../FalconHLS/code_hls/shake.c:863]   --->   Operation 247 'add' 'add_ln863_2' <Predicate = (!icmp_ln863 & icmp_ln863_1)> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.65> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 248 [1/1] (5.30ns) (root node of TernaryAdder)   --->   "%sub_ln863 = sub i64 %add_ln863_2, i64 %select_ln863" [../FalconHLS/code_hls/shake.c:863]   --->   Operation 248 'sub' 'sub_ln863' <Predicate = (!icmp_ln863 & icmp_ln863_1)> <Delay = 5.30> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.65> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 249 [1/1] (1.58ns)   --->   "%store_ln846 = store i64 %add_ln863_1, i64 %out_assign" [../FalconHLS/code_hls/shake.c:846]   --->   Operation 249 'store' 'store_ln846' <Predicate = (!icmp_ln863 & icmp_ln863_1)> <Delay = 1.58>
+ST_5 : Operation 250 [1/1] (1.58ns)   --->   "%br_ln846 = br void %while.end.i" [../FalconHLS/code_hls/shake.c:846]   --->   Operation 250 'br' 'br_ln846' <Predicate = (!icmp_ln863 & icmp_ln863_1)> <Delay = 1.58>
+ST_5 : Operation 251 [1/1] (1.58ns)   --->   "%store_ln846 = store i64 %sub_ln862, i64 %len_assign" [../FalconHLS/code_hls/shake.c:846]   --->   Operation 251 'store' 'store_ln846' <Predicate = (icmp_ln863_1) | (icmp_ln863)> <Delay = 1.58>
+
+State 6 <SV = 5> <Delay = 1.58>
+ST_6 : Operation 252 [1/1] (0.00ns)   --->   "%dptr_2_lcssa_i = phi i64 %sub_ln863, void %while.end.i.loopexit, i64 %dptr, void %if.end.i"   --->   Operation 252 'phi' 'dptr_2_lcssa_i' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 253 [1/1] (1.58ns)   --->   "%store_ln846 = store i64 %dptr_2_lcssa_i, i64 %dptr_2" [../FalconHLS/code_hls/shake.c:846]   --->   Operation 253 'store' 'store_ln846' <Predicate = true> <Delay = 1.58>
+ST_6 : Operation 254 [1/1] (0.00ns)   --->   "%br_ln846 = br void %while.cond.i" [../FalconHLS/code_hls/shake.c:846]   --->   Operation 254 'br' 'br_ln846' <Predicate = true> <Delay = 0.00>
+
+State 7 <SV = 2> <Delay = 2.32>
+ST_7 : Operation 255 [1/2] (2.32ns)   --->   "%empty = load i3 %tmp_addr" [../FalconHLS/code_hls/keygen.c:2539]   --->   Operation 255 'load' 'empty' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_7 : Operation 256 [1/2] (2.32ns)   --->   "%empty_398 = load i3 %tmp_addr_1" [../FalconHLS/code_hls/keygen.c:2540]   --->   Operation 256 'load' 'empty_398' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_7 : Operation 257 [1/1] (0.00ns)   --->   "%tmp_addr_2 = getelementptr i8 %tmp, i64 0, i64 2" [../FalconHLS/code_hls/keygen.c:2541]   --->   Operation 257 'getelementptr' 'tmp_addr_2' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 258 [2/2] (2.32ns)   --->   "%empty_399 = load i3 %tmp_addr_2" [../FalconHLS/code_hls/keygen.c:2541]   --->   Operation 258 'load' 'empty_399' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_7 : Operation 259 [1/1] (0.00ns)   --->   "%tmp_addr_3 = getelementptr i8 %tmp, i64 0, i64 3" [../FalconHLS/code_hls/keygen.c:2542]   --->   Operation 259 'getelementptr' 'tmp_addr_3' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 260 [2/2] (2.32ns)   --->   "%empty_400 = load i3 %tmp_addr_3" [../FalconHLS/code_hls/keygen.c:2542]   --->   Operation 260 'load' 'empty_400' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+
+State 8 <SV = 3> <Delay = 2.32>
+ST_8 : Operation 261 [1/2] (2.32ns)   --->   "%empty_399 = load i3 %tmp_addr_2" [../FalconHLS/code_hls/keygen.c:2541]   --->   Operation 261 'load' 'empty_399' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_8 : Operation 262 [1/2] (2.32ns)   --->   "%empty_400 = load i3 %tmp_addr_3" [../FalconHLS/code_hls/keygen.c:2542]   --->   Operation 262 'load' 'empty_400' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_8 : Operation 263 [1/1] (0.00ns)   --->   "%tmp_addr_4 = getelementptr i8 %tmp, i64 0, i64 4" [../FalconHLS/code_hls/keygen.c:2543]   --->   Operation 263 'getelementptr' 'tmp_addr_4' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 264 [2/2] (2.32ns)   --->   "%empty_401 = load i3 %tmp_addr_4" [../FalconHLS/code_hls/keygen.c:2543]   --->   Operation 264 'load' 'empty_401' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_8 : Operation 265 [1/1] (0.00ns)   --->   "%tmp_addr_5 = getelementptr i8 %tmp, i64 0, i64 5" [../FalconHLS/code_hls/keygen.c:2544]   --->   Operation 265 'getelementptr' 'tmp_addr_5' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 266 [2/2] (2.32ns)   --->   "%empty_402 = load i3 %tmp_addr_5" [../FalconHLS/code_hls/keygen.c:2544]   --->   Operation 266 'load' 'empty_402' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+
+State 9 <SV = 4> <Delay = 2.32>
+ST_9 : Operation 267 [1/2] (2.32ns)   --->   "%empty_401 = load i3 %tmp_addr_4" [../FalconHLS/code_hls/keygen.c:2543]   --->   Operation 267 'load' 'empty_401' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_9 : Operation 268 [1/2] (2.32ns)   --->   "%empty_402 = load i3 %tmp_addr_5" [../FalconHLS/code_hls/keygen.c:2544]   --->   Operation 268 'load' 'empty_402' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_9 : Operation 269 [1/1] (0.00ns)   --->   "%tmp_addr_6 = getelementptr i8 %tmp, i64 0, i64 6" [../FalconHLS/code_hls/keygen.c:2545]   --->   Operation 269 'getelementptr' 'tmp_addr_6' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 270 [2/2] (2.32ns)   --->   "%empty_403 = load i3 %tmp_addr_6" [../FalconHLS/code_hls/keygen.c:2545]   --->   Operation 270 'load' 'empty_403' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_9 : Operation 271 [1/1] (0.00ns)   --->   "%tmp_addr_7 = getelementptr i8 %tmp, i64 0, i64 7" [../FalconHLS/code_hls/keygen.c:2546]   --->   Operation 271 'getelementptr' 'tmp_addr_7' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 272 [2/2] (2.32ns)   --->   "%empty_404 = load i3 %tmp_addr_7" [../FalconHLS/code_hls/keygen.c:2546]   --->   Operation 272 'load' 'empty_404' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+
+State 10 <SV = 5> <Delay = 2.32>
+ST_10 : Operation 273 [1/1] (0.00ns)   --->   "%rng_st_24_0_load = load i64 %rng_st_24_0" [../FalconHLS/code_hls/keygen.c:2539]   --->   Operation 273 'load' 'rng_st_24_0_load' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 274 [1/1] (0.00ns)   --->   "%rng_st_23_0_load = load i64 %rng_st_23_0" [../FalconHLS/code_hls/keygen.c:2539]   --->   Operation 274 'load' 'rng_st_23_0_load' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 275 [1/1] (0.00ns)   --->   "%rng_st_22_0_load = load i64 %rng_st_22_0" [../FalconHLS/code_hls/keygen.c:2539]   --->   Operation 275 'load' 'rng_st_22_0_load' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 276 [1/1] (0.00ns)   --->   "%rng_st_21_0_load = load i64 %rng_st_21_0" [../FalconHLS/code_hls/keygen.c:2539]   --->   Operation 276 'load' 'rng_st_21_0_load' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 277 [1/1] (0.00ns)   --->   "%rng_st_20_0_load = load i64 %rng_st_20_0" [../FalconHLS/code_hls/keygen.c:2539]   --->   Operation 277 'load' 'rng_st_20_0_load' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 278 [1/1] (0.00ns)   --->   "%rng_st_19_0_load = load i64 %rng_st_19_0" [../FalconHLS/code_hls/keygen.c:2539]   --->   Operation 278 'load' 'rng_st_19_0_load' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 279 [1/1] (0.00ns)   --->   "%rng_st_18_0_load = load i64 %rng_st_18_0" [../FalconHLS/code_hls/keygen.c:2539]   --->   Operation 279 'load' 'rng_st_18_0_load' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 280 [1/1] (0.00ns)   --->   "%rng_st_17_0_load = load i64 %rng_st_17_0" [../FalconHLS/code_hls/keygen.c:2539]   --->   Operation 280 'load' 'rng_st_17_0_load' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 281 [1/1] (0.00ns)   --->   "%rng_st_16_0_load = load i64 %rng_st_16_0" [../FalconHLS/code_hls/keygen.c:2539]   --->   Operation 281 'load' 'rng_st_16_0_load' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 282 [1/1] (0.00ns)   --->   "%rng_st_15_0_load = load i64 %rng_st_15_0" [../FalconHLS/code_hls/keygen.c:2539]   --->   Operation 282 'load' 'rng_st_15_0_load' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 283 [1/1] (0.00ns)   --->   "%rng_st_14_0_load = load i64 %rng_st_14_0" [../FalconHLS/code_hls/keygen.c:2539]   --->   Operation 283 'load' 'rng_st_14_0_load' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 284 [1/1] (0.00ns)   --->   "%rng_st_1316_0_load = load i64 %rng_st_1316_0" [../FalconHLS/code_hls/keygen.c:2539]   --->   Operation 284 'load' 'rng_st_1316_0_load' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 285 [1/1] (0.00ns)   --->   "%rng_st_12_0_load = load i64 %rng_st_12_0" [../FalconHLS/code_hls/keygen.c:2539]   --->   Operation 285 'load' 'rng_st_12_0_load' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 286 [1/1] (0.00ns)   --->   "%rng_st_11_0_load = load i64 %rng_st_11_0" [../FalconHLS/code_hls/keygen.c:2539]   --->   Operation 286 'load' 'rng_st_11_0_load' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 287 [1/1] (0.00ns)   --->   "%rng_st_10_0_load = load i64 %rng_st_10_0" [../FalconHLS/code_hls/keygen.c:2539]   --->   Operation 287 'load' 'rng_st_10_0_load' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 288 [1/1] (0.00ns)   --->   "%rng_st_9_0_load = load i64 %rng_st_9_0" [../FalconHLS/code_hls/keygen.c:2539]   --->   Operation 288 'load' 'rng_st_9_0_load' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 289 [1/1] (0.00ns)   --->   "%rng_st_8_0_load = load i64 %rng_st_8_0" [../FalconHLS/code_hls/keygen.c:2539]   --->   Operation 289 'load' 'rng_st_8_0_load' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 290 [1/1] (0.00ns)   --->   "%rng_st_7_0_load = load i64 %rng_st_7_0" [../FalconHLS/code_hls/keygen.c:2539]   --->   Operation 290 'load' 'rng_st_7_0_load' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 291 [1/1] (0.00ns)   --->   "%rng_st_6_0_load = load i64 %rng_st_6_0" [../FalconHLS/code_hls/keygen.c:2539]   --->   Operation 291 'load' 'rng_st_6_0_load' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 292 [1/1] (0.00ns)   --->   "%rng_st_5_0_load = load i64 %rng_st_5_0" [../FalconHLS/code_hls/keygen.c:2539]   --->   Operation 292 'load' 'rng_st_5_0_load' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 293 [1/1] (0.00ns)   --->   "%rng_st_4_0_load = load i64 %rng_st_4_0" [../FalconHLS/code_hls/keygen.c:2539]   --->   Operation 293 'load' 'rng_st_4_0_load' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 294 [1/1] (0.00ns)   --->   "%rng_st_3_0_load = load i64 %rng_st_3_0" [../FalconHLS/code_hls/keygen.c:2539]   --->   Operation 294 'load' 'rng_st_3_0_load' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 295 [1/1] (0.00ns)   --->   "%rng_st_2_0_load = load i64 %rng_st_2_0" [../FalconHLS/code_hls/keygen.c:2539]   --->   Operation 295 'load' 'rng_st_2_0_load' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 296 [1/1] (0.00ns)   --->   "%rng_st_1_0_load = load i64 %rng_st_1_0" [../FalconHLS/code_hls/keygen.c:2539]   --->   Operation 296 'load' 'rng_st_1_0_load' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 297 [1/1] (0.00ns)   --->   "%rng_st_0_0_load = load i64 %rng_st_0_0" [../FalconHLS/code_hls/keygen.c:2539]   --->   Operation 297 'load' 'rng_st_0_0_load' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 298 [1/2] (2.32ns)   --->   "%empty_403 = load i3 %tmp_addr_6" [../FalconHLS/code_hls/keygen.c:2545]   --->   Operation 298 'load' 'empty_403' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_10 : Operation 299 [1/2] (2.32ns)   --->   "%empty_404 = load i3 %tmp_addr_7" [../FalconHLS/code_hls/keygen.c:2546]   --->   Operation 299 'load' 'empty_404' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_10 : Operation 300 [1/1] (0.00ns)   --->   "%or_ln = bitconcatenate i64 @_ssdm_op_BitConcatenate.i64.i8.i8.i8.i8.i8.i8.i8.i8, i8 %empty_404, i8 %empty_403, i8 %empty_402, i8 %empty_401, i8 %empty_400, i8 %empty_399, i8 %empty_398, i8 %empty" [../FalconHLS/code_hls/keygen.c:2546]   --->   Operation 300 'bitconcatenate' 'or_ln' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 301 [1/1] (0.00ns)   --->   "%mrv_s = insertvalue i1728 <undef>, i64 %or_ln" [../FalconHLS/code_hls/keygen.c:2539]   --->   Operation 301 'insertvalue' 'mrv_s' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 302 [1/1] (0.00ns)   --->   "%mrv_27 = insertvalue i1728 %mrv_s, i64 %dptr_4" [../FalconHLS/code_hls/keygen.c:2539]   --->   Operation 302 'insertvalue' 'mrv_27' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 303 [1/1] (0.00ns)   --->   "%mrv_2 = insertvalue i1728 %mrv_27, i64 %rng_st_0_0_load" [../FalconHLS/code_hls/keygen.c:2539]   --->   Operation 303 'insertvalue' 'mrv_2' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 304 [1/1] (0.00ns)   --->   "%mrv_3 = insertvalue i1728 %mrv_2, i64 %rng_st_1_0_load" [../FalconHLS/code_hls/keygen.c:2539]   --->   Operation 304 'insertvalue' 'mrv_3' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 305 [1/1] (0.00ns)   --->   "%mrv_4 = insertvalue i1728 %mrv_3, i64 %rng_st_2_0_load" [../FalconHLS/code_hls/keygen.c:2539]   --->   Operation 305 'insertvalue' 'mrv_4' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 306 [1/1] (0.00ns)   --->   "%mrv_5 = insertvalue i1728 %mrv_4, i64 %rng_st_3_0_load" [../FalconHLS/code_hls/keygen.c:2539]   --->   Operation 306 'insertvalue' 'mrv_5' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 307 [1/1] (0.00ns)   --->   "%mrv_6 = insertvalue i1728 %mrv_5, i64 %rng_st_4_0_load" [../FalconHLS/code_hls/keygen.c:2539]   --->   Operation 307 'insertvalue' 'mrv_6' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 308 [1/1] (0.00ns)   --->   "%mrv_7 = insertvalue i1728 %mrv_6, i64 %rng_st_5_0_load" [../FalconHLS/code_hls/keygen.c:2539]   --->   Operation 308 'insertvalue' 'mrv_7' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 309 [1/1] (0.00ns)   --->   "%mrv_8 = insertvalue i1728 %mrv_7, i64 %rng_st_6_0_load" [../FalconHLS/code_hls/keygen.c:2539]   --->   Operation 309 'insertvalue' 'mrv_8' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 310 [1/1] (0.00ns)   --->   "%mrv_9 = insertvalue i1728 %mrv_8, i64 %rng_st_7_0_load" [../FalconHLS/code_hls/keygen.c:2539]   --->   Operation 310 'insertvalue' 'mrv_9' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 311 [1/1] (0.00ns)   --->   "%mrv_10 = insertvalue i1728 %mrv_9, i64 %rng_st_8_0_load" [../FalconHLS/code_hls/keygen.c:2539]   --->   Operation 311 'insertvalue' 'mrv_10' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 312 [1/1] (0.00ns)   --->   "%mrv_11 = insertvalue i1728 %mrv_10, i64 %rng_st_9_0_load" [../FalconHLS/code_hls/keygen.c:2539]   --->   Operation 312 'insertvalue' 'mrv_11' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 313 [1/1] (0.00ns)   --->   "%mrv_12 = insertvalue i1728 %mrv_11, i64 %rng_st_10_0_load" [../FalconHLS/code_hls/keygen.c:2539]   --->   Operation 313 'insertvalue' 'mrv_12' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 314 [1/1] (0.00ns)   --->   "%mrv_13 = insertvalue i1728 %mrv_12, i64 %rng_st_11_0_load" [../FalconHLS/code_hls/keygen.c:2539]   --->   Operation 314 'insertvalue' 'mrv_13' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 315 [1/1] (0.00ns)   --->   "%mrv_14 = insertvalue i1728 %mrv_13, i64 %rng_st_12_0_load" [../FalconHLS/code_hls/keygen.c:2539]   --->   Operation 315 'insertvalue' 'mrv_14' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 316 [1/1] (0.00ns)   --->   "%mrv_15 = insertvalue i1728 %mrv_14, i64 %rng_st_1316_0_load" [../FalconHLS/code_hls/keygen.c:2539]   --->   Operation 316 'insertvalue' 'mrv_15' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 317 [1/1] (0.00ns)   --->   "%mrv_16 = insertvalue i1728 %mrv_15, i64 %rng_st_14_0_load" [../FalconHLS/code_hls/keygen.c:2539]   --->   Operation 317 'insertvalue' 'mrv_16' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 318 [1/1] (0.00ns)   --->   "%mrv_17 = insertvalue i1728 %mrv_16, i64 %rng_st_15_0_load" [../FalconHLS/code_hls/keygen.c:2539]   --->   Operation 318 'insertvalue' 'mrv_17' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 319 [1/1] (0.00ns)   --->   "%mrv_18 = insertvalue i1728 %mrv_17, i64 %rng_st_16_0_load" [../FalconHLS/code_hls/keygen.c:2539]   --->   Operation 319 'insertvalue' 'mrv_18' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 320 [1/1] (0.00ns)   --->   "%mrv_19 = insertvalue i1728 %mrv_18, i64 %rng_st_17_0_load" [../FalconHLS/code_hls/keygen.c:2539]   --->   Operation 320 'insertvalue' 'mrv_19' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 321 [1/1] (0.00ns)   --->   "%mrv_20 = insertvalue i1728 %mrv_19, i64 %rng_st_18_0_load" [../FalconHLS/code_hls/keygen.c:2539]   --->   Operation 321 'insertvalue' 'mrv_20' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 322 [1/1] (0.00ns)   --->   "%mrv_21 = insertvalue i1728 %mrv_20, i64 %rng_st_19_0_load" [../FalconHLS/code_hls/keygen.c:2539]   --->   Operation 322 'insertvalue' 'mrv_21' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 323 [1/1] (0.00ns)   --->   "%mrv_22 = insertvalue i1728 %mrv_21, i64 %rng_st_20_0_load" [../FalconHLS/code_hls/keygen.c:2539]   --->   Operation 323 'insertvalue' 'mrv_22' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 324 [1/1] (0.00ns)   --->   "%mrv_23 = insertvalue i1728 %mrv_22, i64 %rng_st_21_0_load" [../FalconHLS/code_hls/keygen.c:2539]   --->   Operation 324 'insertvalue' 'mrv_23' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 325 [1/1] (0.00ns)   --->   "%mrv_24 = insertvalue i1728 %mrv_23, i64 %rng_st_22_0_load" [../FalconHLS/code_hls/keygen.c:2539]   --->   Operation 325 'insertvalue' 'mrv_24' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 326 [1/1] (0.00ns)   --->   "%mrv_25 = insertvalue i1728 %mrv_24, i64 %rng_st_23_0_load" [../FalconHLS/code_hls/keygen.c:2539]   --->   Operation 326 'insertvalue' 'mrv_25' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 327 [1/1] (0.00ns)   --->   "%mrv_26 = insertvalue i1728 %mrv_25, i64 %rng_st_24_0_load" [../FalconHLS/code_hls/keygen.c:2539]   --->   Operation 327 'insertvalue' 'mrv_26' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 328 [1/1] (0.00ns)   --->   "%ret_ln2539 = ret i1728 %mrv_26" [../FalconHLS/code_hls/keygen.c:2539]   --->   Operation 328 'ret' 'ret_ln2539' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 100ns, clock uncertainty: 27ns.
+
+ <State 1>: 1.59ns
+The critical path consists of the following:
+	'alloca' operation ('rng_st_0_0') [55]  (0 ns)
+	'store' operation ('store_ln846', ../FalconHLS/code_hls/shake.c:846) of variable 'p_read25' on local variable 'rng_st_0_0' [83]  (1.59 ns)
+
+ <State 2>: 5.34ns
+The critical path consists of the following:
+	'load' operation ('dptr', ../FalconHLS/code_hls/keygen.c:2539) on local variable 'rng.dptr' [114]  (0 ns)
+	'icmp' operation ('icmp_ln854', ../FalconHLS/code_hls/shake.c:854) [120]  (2.78 ns)
+	multiplexor before 'phi' operation ('dptr') with incoming values : ('dptr', ../FalconHLS/code_hls/keygen.c:2539) [201]  (1.59 ns)
+	blocking operation 0.978 ns on control path)
+
+ <State 3>: 1.59ns
+The critical path consists of the following:
+	'call' operation ('call_ret', ../FalconHLS/code_hls/shake.c:855) to 'process_block.111.112' [148]  (0 ns)
+	'store' operation ('store_ln857', ../FalconHLS/code_hls/shake.c:857) of variable 'rng_st_0_ret', ../FalconHLS/code_hls/shake.c:855 on local variable 'rng_st_0_0' [174]  (1.59 ns)
+
+ <State 4>: 12.1ns
+The critical path consists of the following:
+	'phi' operation ('dptr') with incoming values : ('dptr', ../FalconHLS/code_hls/keygen.c:2539) [201]  (0 ns)
+	'sub' operation ('clen', ../FalconHLS/code_hls/shake.c:858) [202]  (3.52 ns)
+	'icmp' operation ('icmp_ln859', ../FalconHLS/code_hls/shake.c:859) [203]  (2.78 ns)
+	'select' operation ('clen', ../FalconHLS/code_hls/shake.c:859) [204]  (1.48 ns)
+	'icmp' operation ('icmp_ln863', ../FalconHLS/code_hls/shake.c:863) [206]  (2.78 ns)
+	multiplexor before 'phi' operation ('dptr') with incoming values : ('dptr', ../FalconHLS/code_hls/keygen.c:2539) ('sub_ln863', ../FalconHLS/code_hls/shake.c:863) [271]  (1.59 ns)
+
+ <State 5>: 13.1ns
+The critical path consists of the following:
+	'add' operation ('add_ln863', ../FalconHLS/code_hls/shake.c:863) [261]  (3.52 ns)
+	'icmp' operation ('icmp_ln863_2', ../FalconHLS/code_hls/shake.c:863) [263]  (2.78 ns)
+	'select' operation ('select_ln863', ../FalconHLS/code_hls/shake.c:863) [265]  (1.48 ns)
+	'sub' operation ('sub_ln863', ../FalconHLS/code_hls/shake.c:863) [267]  (5.31 ns)
+
+ <State 6>: 1.59ns
+The critical path consists of the following:
+	'phi' operation ('dptr') with incoming values : ('dptr', ../FalconHLS/code_hls/keygen.c:2539) ('sub_ln863', ../FalconHLS/code_hls/shake.c:863) [271]  (0 ns)
+	'store' operation ('store_ln846', ../FalconHLS/code_hls/shake.c:846) of variable 'dptr' on local variable 'rng.dptr' [272]  (1.59 ns)
+
+ <State 7>: 2.32ns
+The critical path consists of the following:
+	'load' operation ('empty', ../FalconHLS/code_hls/keygen.c:2539) on array 'tmp' [302]  (2.32 ns)
+
+ <State 8>: 2.32ns
+The critical path consists of the following:
+	'load' operation ('empty_399', ../FalconHLS/code_hls/keygen.c:2541) on array 'tmp' [306]  (2.32 ns)
+
+ <State 9>: 2.32ns
+The critical path consists of the following:
+	'load' operation ('empty_401', ../FalconHLS/code_hls/keygen.c:2543) on array 'tmp' [310]  (2.32 ns)
+
+ <State 10>: 2.32ns
+The critical path consists of the following:
+	'load' operation ('empty_403', ../FalconHLS/code_hls/keygen.c:2545) on array 'tmp' [314]  (2.32 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

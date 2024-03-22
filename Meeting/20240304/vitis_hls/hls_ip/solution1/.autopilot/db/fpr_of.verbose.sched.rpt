@@ -1,0 +1,117 @@
+
+
+================================================================
+== Vitis HLS Report for 'fpr_of'
+================================================================
+* Date:           Mon Mar  4 11:08:44 2024
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
+* Project:        hls_ip
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+-----------+------------+
+    |  Clock |  Target | Estimated | Uncertainty|
+    +--------+---------+-----------+------------+
+    |ap_clk  |  0.10 us|  19.697 ns|    27.00 ns|
+    +--------+---------+-----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        1|        1|  0.100 us|  0.100 us|    1|    1|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 2
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 19.6>
+ST_1 : Operation 3 [1/1] (0.00ns)   --->   "%i_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %i" [../FalconHLS/code_hls/fpr.c:45]   --->   Operation 3 'read' 'i_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 4 [2/2] (19.6ns)   --->   "%conv = sitodp i64 %i_read" [../FalconHLS/code_hls/fpr.c:48]   --->   Operation 4 'sitodp' 'conv' <Predicate = true> <Delay = 19.6> <CoreInst = "Int2Double">   --->   Core 66 'Int2Double' <Latency = 1> <II = 1> <Delay = 19.6> <FuncUnit> <Opcode : 'sitodp' 'uitodp'> <InPorts = 1> <OutPorts = 1>
+
+State 2 <SV = 1> <Delay = 19.6>
+ST_2 : Operation 5 [1/2] (19.6ns)   --->   "%conv = sitodp i64 %i_read" [../FalconHLS/code_hls/fpr.c:48]   --->   Operation 5 'sitodp' 'conv' <Predicate = true> <Delay = 19.6> <CoreInst = "Int2Double">   --->   Core 66 'Int2Double' <Latency = 1> <II = 1> <Delay = 19.6> <FuncUnit> <Opcode : 'sitodp' 'uitodp'> <InPorts = 1> <OutPorts = 1>
+ST_2 : Operation 6 [1/1] (0.00ns)   --->   "%ret_ln48 = ret i64 %conv" [../FalconHLS/code_hls/fpr.c:48]   --->   Operation 6 'ret' 'ret_ln48' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 100ns, clock uncertainty: 27ns.
+
+ <State 1>: 19.7ns
+The critical path consists of the following:
+	wire read operation ('i', ../FalconHLS/code_hls/fpr.c:45) on port 'i' (../FalconHLS/code_hls/fpr.c:45) [2]  (0 ns)
+	'sitodp' operation ('conv', ../FalconHLS/code_hls/fpr.c:48) [3]  (19.7 ns)
+
+ <State 2>: 19.7ns
+The critical path consists of the following:
+	'sitodp' operation ('conv', ../FalconHLS/code_hls/fpr.c:48) [3]  (19.7 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Mon Mar  4 11:11:42 2024
+# Process ID: 31381
+# Current directory: /home/ubuntu/falconlab/hls_ip/solution1/.autopilot/db/ip_tmp
+# Command line: vivado  -notrace -log vivado.log -mode batch -source run_vivado_gen_ip.tcl
+# Log file: /home/ubuntu/falconlab/hls_ip/solution1/.autopilot/db/ip_tmp/vivado.log
+# Journal file: /home/ubuntu/falconlab/hls_ip/solution1/.autopilot/db/ip_tmp/vivado.jou
+# Running On: ubuntu2004, OS: Linux, CPU Frequency: 1996.807 MHz, CPU Physical cores: 2, Host memory: 8323 MB
+#-----------------------------------------------------------
+source run_vivado_gen_ip.tcl -notrace
