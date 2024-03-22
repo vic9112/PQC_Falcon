@@ -3,7 +3,7 @@
 ## Contributers:
 - [Vic Chen](https://github.com/vic9112)
 - [YouWei](https://github.com/nthuyouwei)
-- [ShenDa](https://github.com/ShengdaChen1212)
+- [ShengDa](https://github.com/ShengdaChen1212)
 - [KennyWang](https://github.com/kenny0916)
 - [LukasChen](https://github.com/lukaschen1010)
 
