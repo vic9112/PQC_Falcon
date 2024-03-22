@@ -14,10 +14,10 @@
 | h    | AXI-M     | 64-bit| Output the compute public key `h` |
 | g    | AXI-M     | 64-bit| Input the `g` compute from NTRU |
 | f    | AXI-M     | 64-bit| Input the `f` compute from NTRU |
-| tmp  | AXI-M     | 64-bit| Input a array which used to temporarily store data |
+| tmp  | AXI-M     | 64-bit| Input a array which is used to temporarily storing data |
 | logn | AXI-Lite  | 32-bit| Coefficient `logn` |
 
-- In Falcon, we replace the function with out IP:
+- In Falcon, we replace the function with our IP:
   ![screenshot](https://github.com/vic9112/PQC_Falcon/assets/137171415/c264aa6f-ad77-4dd1-a9ba-b8f03d0ce58b)
 
 ##  Verification on FPGA
