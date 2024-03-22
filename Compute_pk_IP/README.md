@@ -40,6 +40,9 @@
   ![files](https://github.com/vic9112/PQC_Falcon/assets/137171415/92323317-972c-4440-a143-c036e41c0ccc)
 
 #### Result
-- ![result](https://github.com/vic9112/PQC_Falcon/assets/137171415/93a67df1-860e-4d3e-bb26-cfc08b2da983)
+- ![After](https://github.com/vic9112/PQC_Falcon/assets/137171415/93a67df1-860e-4d3e-bb26-cfc08b2da983)
+- Compare to the original code without accelerate with IP:
+  ![Before](https://github.com/vic9112/PQC_Falcon/assets/137171415/9f4fb2d3-94a5-4b8d-a182-9fb83e20f56f)
+
 
 
