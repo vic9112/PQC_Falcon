@@ -33,7 +33,7 @@
 
 ### Include files for testing the workflows of falcon:
 - All files in `~/bitstream`
-- Jupyter notebook `~/jupyter_notebook/test_ip_on_falconipynb`
+- Jupyter notebook `~/jupyter_notebook/test_ip_on_falcon.ipynb`
 - Python source code `~/python`
   ![files](https://github.com/vic9112/PQC_Falcon/assets/137171415/1b7be2b5-ae7c-4233-a2bc-f5306c0db19d)
   
