@@ -24,6 +24,7 @@
 
 ### Include files:
 - All files in `~/bitstream` and `~/jupyter_notebook`
+  ![files](https://github.com/vic9112/PQC_Falcon/assets/137171415/8489db9b-a444-4290-94b6-3b12d924e0dc)
   - where `f_in.txt`, `g_in` is the test input, `h_out.txt` is the golden output value
   - `compute_pk.bit` is the bitstream, `compute_pk.hwh` is the header (metadata) file for `compute_pk.bit`
   
