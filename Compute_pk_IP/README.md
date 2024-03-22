@@ -1,4 +1,4 @@
-# Fast-Fourier Transform Hardware IP
+# Compute Public Key Hardware IP
 
 - Tools
   - Vitis_HLS
