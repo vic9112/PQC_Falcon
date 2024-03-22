@@ -17,6 +17,8 @@
 | tmp  | AXI-M     | 64-bit| Input a array which used to temporarily store data |
 | logn | AXI-Lite  | 32-bit| Coefficient `logn` |
 
+- In Falcon, we replace the function with out IP:
+  ![screenshot](https://github.com/vic9112/PQC_Falcon/assets/137171415/c264aa6f-ad77-4dd1-a9ba-b8f03d0ce58b)
 
 ##  Verification on FPGA
 
