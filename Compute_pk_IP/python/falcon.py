@@ -184,18 +184,13 @@ def normalize_tree(tree, sigma):
         tree[1] = 0
 
 def write_to_ip(g, f):
-    timeKernelStart = time()
     # ============ Write value into IP ===============
     for i in range(len(g)):
         inBufferg[i] = g[i]
     for j in range(len(f)):
         inBufferf[j] = f[j]
-    logn = 10
-    ipPK.write(0x3C, logn) # Coefficient
-    ipPK.write(0x18, outBufferh.device_address)  # get h
-    ipPK.write(0x24, inBufferf.device_address)  # write f
-    ipPK.write(0x30, inBufferg.device_address)  # write g
     # =================== Start ======================
+    timeKernelStart = time()
     ipPK.write(0x00, 0x01) # 0x00: bit 0: 0->1: start
     while (ipPK.read(0x00) & 0x4) == 0x0: # wait for ap_done
         continue

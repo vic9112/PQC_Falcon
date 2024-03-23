@@ -46,6 +46,11 @@ inBufferf   = allocate(shape=(1024,), dtype=np.int8)   # ntru f
 outBufferh  = allocate(shape=(1024,), dtype=np.uint16) # pk h
 inBufferTmp = allocate(shape=(4096,), dtype=np.uint8)
 
-# Since tmp is just for temporarily storing data, we write it here
+# Get the Buffer Address
+logn = 10
+ipPK.write(0x3C, logn) # Coefficient
+ipPK.write(0x18, outBufferh.device_address)  # get h
+ipPK.write(0x24, inBufferf.device_address)   # write f
+ipPK.write(0x30, inBufferg.device_address)   # write g
 ipPK.write(0x44, inBufferTmp.device_address)
 
