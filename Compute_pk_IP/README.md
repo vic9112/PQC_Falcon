@@ -53,4 +53,4 @@
 - ![Before](https://github.com/vic9112/PQC_Falcon/assets/137171415/9f4fb2d3-94a5-4b8d-a182-9fb83e20f56f)
 
 **Conclusion:**
-- We can see that IP is 7.334 times faster than the original function
+- We can see that IP is 8.53 times faster than the original function
