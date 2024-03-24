@@ -82,3 +82,6 @@
 ### Result
 ![Result](https://github.com/vic9112/PQC_Falcon/assets/137171415/81a44eac-9c7b-4c5f-92d1-00b3449a4b07)
 
+### Compare to FFT in `falcon.py`
+![Result](https://github.com/vic9112/PQC_Falcon/assets/137171415/1056177d-1c32-4ace-9ced-3ade5a202d45)
+
