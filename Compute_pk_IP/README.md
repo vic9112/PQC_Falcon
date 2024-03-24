@@ -43,7 +43,7 @@
 
 ### Run with IP
 **Result:**
-- ![After](https://github.com/vic9112/PQC_Falcon/assets/137171415/93a67df1-860e-4d3e-bb26-cfc08b2da983)
+- ![After](https://github.com/vic9112/PQC_Falcon/assets/137171415/26126f90-886b-41f3-a31f-e3c36426dd82)
 
 ### Original code without IP acceleratation:
 - Replace the code at line 278,279 in `~/python/falcon.py` with:
