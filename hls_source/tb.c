@@ -401,6 +401,22 @@ void test_FFT(void)
 
 }
 
+void test_iFFT(void) {
+	iFFT(FFT_out, 10);
+	int fo, fi;
+	for (int i = 0; i < 1024; ++i) {
+		fo = round(FFT_out[i] * 100000);
+		fi = round(FFT_in[i] * 100000);
+		if (fo != fi) {
+			printf("%4d cal = %15f, cor = %15f \n", i, FFT_out[i], FFT_in[i]);
+		} else {
+			printf("%4d pass\n", i);
+		}
+	}
+	printf("Test Finished \n");
+}
+
+
 void test_bug(void)
 {
 	double in = -1.23;
@@ -453,8 +469,8 @@ main(void)
 	// test_sampler();
 	// test_sign();
 	// expand_privkey()
-	 //test_keygen();
-	   test_python_h();
+	// test_keygen();
+	// test_python_h();
 	// fpr f[1024];
 	// for (int i = 0; i < 1024; i++)
 	// {
@@ -466,6 +482,7 @@ main(void)
 	// test_nist_KAT(10, "affdeb3aa83bf9a2039fa9c17d65fd3e3b9828e2");
 	/* test_speed(); */
 	// test_FFT();
+	test_iFFT();
 	// test_expand_key();
 	// test_bug();
 
