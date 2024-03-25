@@ -3,4 +3,8 @@
 - Use both `FFT_IP` and `iFFT_IP` with one proccessor on `KV260` and test whether `iFFT` can generate the correct answer from the data output from `FFT`.
 
 **Include files:**
-- All files in `~/bitstream` and `~/jupyter_notebook`
+
+- For testing the functionality of `FFT_iFFT_IP`
+  - Include all files in `~/bitstream` and `~/jupyter_notebook` except `~/jupyter_notebook/test_ip_fft_ifft.ipynb`
+- For comparing the IP to python function
+  - Include all files in `~/bitstream` and `~/jupyter_notebook` except `~/jupyter_notebook/FFT_iFFT.ipynb`
