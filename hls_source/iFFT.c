@@ -99,12 +99,12 @@ void iFFT(fpr *f, unsigned logn) {
 	 * Last iteration is a no-op, provided that we divide by N/2
 	 * instead of N. We need to make a special case for logn = 0.
 	 */
-	//if (logn > 0) {
-	fpr ni;
-	ni = fpr_p2_tab[logn];
-	for (u = 0; u < n; u++) {
+	if (logn > 0) {
+		fpr ni;
+		ni = fpr_p2_tab[logn];
+		for (u = 0; u < n; u++) {
 #pragma HLS PIPELINE II=18
-		f[u] = fpr_mul(f[u], ni);
+			f[u] = f[u] * ni;
+		}
 	}
-	//}
 }
