@@ -4,6 +4,11 @@
   - Vitis_HLS
   - Vivado
   - PYNQ, KV260 (jupyter notebook)
+  
+## IP Description
+- For testing the functionality on PYNQ, KV260, please go through `~/kv260` or `~/pynq`
+- For comparing the IP to the python function, include `test_ip_fft.ipynb` and `FFT_in.txt` under `~/jupyter_notebook` with all files under `~/python` and `~/kv260/bitstream`
+- For testing the IP under falcon implementation, include `test_ip_on_falcon` under `~/jupyter_notebook` with all files under `~/python` and `~/kv260/bitstream`
 
 ## Interface Description
 
