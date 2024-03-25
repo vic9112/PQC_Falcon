@@ -12,7 +12,11 @@ from fft_constants import roots_dict    # Import constants useful for the FFT
 
 from time import time
 from ip import ipFFT, inBufferFFT
+<<<<<<< HEAD
 from get_vector import get_fft1024, get_fft512
+=======
+from get_vector import get_fft1024
+>>>>>>> 287725ad8a9ba32f581524d6be7590ffd347bf61
 
 # n_2 = 0
 # n_4 = 0
