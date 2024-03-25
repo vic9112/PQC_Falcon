@@ -1,0 +1,7 @@
+<pragmas>
+<pragma file="hls_source/my_intt.c" line="145" pragmaType="inline" parentfunction="mq_iNTT" off="0" region="0" recursive="1"/>
+<pragma file="hls_source/my_intt.c" line="146" pragmaType="dataflow" parentfunction="mq_iNTT" disable_start_propagation="0"/>
+<pragma file="hls_source/my_intt.c" line="141" pragmaType="interface" parentfunction="mq_iNTT" mode="m_axi" port="a" bundle="gmem0" offset="slave" name="" depth="1024" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1"/>
+<pragma file="hls_source/my_intt.c" line="142" pragmaType="interface" parentfunction="mq_iNTT" mode="s_axilite" port="logn" bundle="" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="hls_source/my_intt.c" line="143" pragmaType="interface" parentfunction="mq_iNTT" mode="s_axilite" port="" bundle="" offset="-1" name="" clock="" impl="" register="0"/>
+</pragmas>

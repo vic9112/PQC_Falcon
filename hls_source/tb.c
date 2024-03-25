@@ -445,7 +445,7 @@ main(void)
 
 	// test_SHAKE256();
 	// test_codec();
-	// test_vrfy();
+	 test_vrfy();
 	// test_RNG();
 	// test_FP_block();
 	// test_poly();
@@ -454,7 +454,7 @@ main(void)
 	// test_sign();
 	// expand_privkey()
 	 //test_keygen();
-	   test_python_h();
+	// test_python_h();
 	// fpr f[1024];
 	// for (int i = 0; i < 1024; i++)
 	// {

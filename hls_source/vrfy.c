@@ -31,6 +31,7 @@
 
 #include "header.h"
 
+
 /* ===================================================================== */
 /*
  * Constants for NTT.
@@ -501,6 +502,7 @@ mq_div_12289(uint32_t x, uint32_t y)
 /*
  * Compute NTT on a ring element.
  */
+ /*
  void
 mq_NTT(uint16_t *a, unsigned logn)
 {
@@ -530,11 +532,12 @@ mq_NTT(uint16_t *a, unsigned logn)
 		t = ht;
 	}
 }
-
+*/
 
 // /*
 //  * Compute the inverse NTT on a ring element, binary case.
 //  */
+/*
  void
 mq_iNTT(uint16_t *a, unsigned logn)
 {
@@ -569,7 +572,7 @@ mq_iNTT(uint16_t *a, unsigned logn)
 		t = dt;
 		m = hm;
 	}
-
+*/
 	/*
 	 * To complete the inverse NTT, we must now divide all values by
 	 * n (the vector size). We thus need the inverse of n, i.e. we
@@ -579,6 +582,7 @@ mq_iNTT(uint16_t *a, unsigned logn)
 	 * shift. The loop below is generic and works also in corner cases;
 	 * its computation time is negligible.
 	 */
+/*
 	ni = R;
 	for (m = n; m > 1; m >>= 1) {
 		ni = mq_rshift1(ni);
@@ -587,6 +591,8 @@ mq_iNTT(uint16_t *a, unsigned logn)
 		a[m] = (uint16_t)mq_montymul(a[m], ni);
 	}
 }
+*/
+
 
 /*
  * Convert a polynomial (mod q) to Montgomery representation.

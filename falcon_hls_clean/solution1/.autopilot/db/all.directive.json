@@ -1,0 +1,170 @@
+{"sourceFile": [{
+      "name": "",
+      "directive": [
+        {
+          "functionName": "mq_iNTT",
+          "label": "",
+          "functionLabel": "",
+          "id": "1",
+          "sourceFile": "\/home\/ubuntu\/Desktop\/Vic_PQC_Falcon\/falcon_hls_clean\/solution1\/csynth.tcl",
+          "sourceLine": "27",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "mq_iNTT"
+              }]
+          }
+        },
+        {
+          "functionName": "mq_iNTT",
+          "label": "",
+          "functionLabel": "",
+          "id": "2",
+          "sourceFile": "\/home\/ubuntu\/Desktop\/Vic_PQC_Falcon\/falcon_hls_clean\/solution1\/csynth.tcl",
+          "sourceLine": "27",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "mq_iNTT"
+              }]
+          }
+        },
+        {
+          "functionName": "mq_iNTT",
+          "label": "",
+          "functionLabel": "",
+          "id": "3",
+          "sourceFile": "\/home\/ubuntu\/Desktop\/Vic_PQC_Falcon\/falcon_hls_clean\/solution1\/csynth.tcl",
+          "sourceLine": "27",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "mq_iNTT"
+              }]
+          }
+        },
+        {
+          "functionName": "mq_iNTT",
+          "label": "",
+          "functionLabel": "",
+          "id": "4",
+          "sourceFile": "\/home\/ubuntu\/Desktop\/Vic_PQC_Falcon\/falcon_hls_clean\/solution1\/csynth.tcl",
+          "sourceLine": "27",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "mq_iNTT"
+              }]
+          }
+        },
+        {
+          "functionName": "mq_iNTT",
+          "label": "",
+          "functionLabel": "",
+          "id": "5",
+          "sourceFile": "\/home\/ubuntu\/Desktop\/Vic_PQC_Falcon\/falcon_hls_clean\/solution1\/csynth.tcl",
+          "sourceLine": "27",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "mq_iNTT"
+              }]
+          }
+        },
+        {
+          "functionName": "mq_iNTT",
+          "label": "",
+          "functionLabel": "",
+          "id": "6",
+          "sourceFile": "\/home\/ubuntu\/Desktop\/Vic_PQC_Falcon\/falcon_hls_clean\/solution1\/csynth.tcl",
+          "sourceLine": "27",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "mq_iNTT"
+              }]
+          }
+        },
+        {
+          "functionName": "mq_iNTT",
+          "label": "",
+          "functionLabel": "",
+          "id": "7",
+          "sourceFile": "\/home\/ubuntu\/Desktop\/Vic_PQC_Falcon\/falcon_hls_clean\/solution1\/csynth.tcl",
+          "sourceLine": "27",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "mq_iNTT"
+              }]
+          }
+        },
+        {
+          "functionName": "mq_iNTT",
+          "label": "",
+          "functionLabel": "",
+          "id": "8",
+          "sourceFile": "\/home\/ubuntu\/Desktop\/Vic_PQC_Falcon\/falcon_hls_clean\/solution1\/csynth.tcl",
+          "sourceLine": "27",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "mq_iNTT"
+              }]
+          }
+        },
+        {
+          "functionName": "mq_iNTT",
+          "label": "",
+          "functionLabel": "",
+          "id": "9",
+          "sourceFile": "\/home\/ubuntu\/Desktop\/Vic_PQC_Falcon\/falcon_hls_clean\/solution1\/csynth.tcl",
+          "sourceLine": "27",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "mq_iNTT"
+              }]
+          }
+        },
+        {
+          "functionName": "mq_iNTT",
+          "label": "",
+          "functionLabel": "",
+          "id": "10",
+          "sourceFile": "\/home\/ubuntu\/Desktop\/Vic_PQC_Falcon\/falcon_hls_clean\/solution1\/csynth.tcl",
+          "sourceLine": "27",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "mq_iNTT"
+              }]
+          }
+        },
+        {
+          "functionName": "mq_iNTT",
+          "label": "",
+          "functionLabel": "",
+          "id": "11",
+          "sourceFile": "\/home\/ubuntu\/Desktop\/Vic_PQC_Falcon\/falcon_hls_clean\/solution1\/csynth.tcl",
+          "sourceLine": "27",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "mq_iNTT"
+              }]
+          }
+        }
+      ]
+    }]}

@@ -1,0 +1,585 @@
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xck26-sfvc784-2LV-c'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1464] Running solution command: config_export -vivado_clock=10
+INFO: [HLS 200-1510] Running: set_part xck26-sfvc784-2LV-c 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -rtl verilog -vivado_clock 10 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 1.462 GB.
+INFO: [HLS 200-10] Analyzing design file 'hls_source/vrfy.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'hls_source/sign.c' ... 
+WARNING: [HLS 207-4051] assigning to 'double *' from 'const fpr *' (aka 'const double *') discards qualifiers (hls_source/sign.c:317:11)
+WARNING: [HLS 207-4051] initializing 'fpr *' (aka 'double *') with an expression of type 'const fpr *' (aka 'const double *') discards qualifiers (hls_source/sign.c:356:10)
+WARNING: [HLS 207-4051] initializing 'double *' with an expression of type 'const fpr *' (aka 'const double *') discards qualifiers (hls_source/sign.c:512:12)
+WARNING: [HLS 207-5176] sizeof on array function parameter will return size of 'uint8_t *' (aka 'unsigned char *') instead of 'uint8_t [50]' (hls_source/sign.c:1905:38)
+INFO: [HLS 207-62] declared here (hls_source/sign.c:1889:87)
+WARNING: [HLS 207-5292] unused parameter 'logn' (hls_source/sign.c:859:56)
+WARNING: [HLS 207-5292] unused parameter 'logn' (hls_source/sign.c:994:72)
+WARNING: [HLS 207-5292] unused parameter 'tmp2' (hls_source/sign.c:1956:46)
+INFO: [HLS 200-10] Analyzing design file 'hls_source/shake.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'hls_source/rng.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'hls_source/my_ntt.c' ... 
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region (hls_source/my_ntt.c:144:9)
+WARNING: [HLS 200-471] Dataflow form checks found 1 issue(s) in file hls_source/my_ntt.c
+INFO: [HLS 200-10] Analyzing design file 'hls_source/my_intt.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'hls_source/keygen.c' ... 
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region (hls_source/keygen.c:1006:9)
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region (hls_source/keygen.c:1288:9)
+WARNING: [HLS 214-169] There are a total of 8 such instances of non-canonical statements in the dataflow region (hls_source/keygen.c:1288:9)
+WARNING: [HLS 200-471] Dataflow form checks found 3 issue(s) in file hls_source/keygen.c
+WARNING: [HLS 207-5292] unused parameter 'logn' (hls_source/keygen.c:1257:102)
+INFO: [HLS 200-10] Analyzing design file 'hls_source/fpr.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'hls_source/fft.c' ... 
+WARNING: [HLS 207-5286] expression result unused (hls_source/fft.c:1046:8)
+WARNING: [HLS 207-5286] expression result unused (hls_source/fft.c:1080:8)
+WARNING: [HLS 207-5286] expression result unused (hls_source/fft.c:1114:8)
+WARNING: [HLS 207-5286] expression result unused (hls_source/fft.c:1148:8)
+WARNING: [HLS 207-5286] expression result unused (hls_source/fft.c:1182:8)
+WARNING: [HLS 207-5286] expression result unused (hls_source/fft.c:1216:8)
+WARNING: [HLS 207-5286] expression result unused (hls_source/fft.c:1250:8)
+WARNING: [HLS 207-5286] expression result unused (hls_source/fft.c:1284:8)
+WARNING: [HLS 207-5286] expression result unused (hls_source/fft.c:1318:8)
+WARNING: [HLS 207-5286] expression result unused (hls_source/fft.c:1352:8)
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region (hls_source/fft.c:606:9)
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region (hls_source/fft.c:907:9)
+WARNING: [HLS 214-169] There are a total of 4 such instances of non-canonical statements in the dataflow region (hls_source/fft.c:907:9)
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region (hls_source/fft.c:1029:9)
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region (hls_source/fft.c:1414:9)
+WARNING: [HLS 214-169] There are a total of 7 such instances of non-canonical statements in the dataflow region (hls_source/fft.c:1414:9)
+WARNING: [HLS 200-471] Dataflow form checks found 6 issue(s) in file hls_source/fft.c
+WARNING: [HLS 207-5286] expression result unused (hls_source/fft.c:1046:27)
+WARNING: [HLS 207-5286] expression result unused (hls_source/fft.c:1080:27)
+WARNING: [HLS 207-5286] expression result unused (hls_source/fft.c:1114:27)
+WARNING: [HLS 207-5286] expression result unused (hls_source/fft.c:1148:27)
+WARNING: [HLS 207-5286] expression result unused (hls_source/fft.c:1182:27)
+WARNING: [HLS 207-5286] expression result unused (hls_source/fft.c:1216:28)
+WARNING: [HLS 207-5286] expression result unused (hls_source/fft.c:1250:28)
+WARNING: [HLS 207-5286] expression result unused (hls_source/fft.c:1284:28)
+WARNING: [HLS 207-5286] expression result unused (hls_source/fft.c:1318:28)
+WARNING: [HLS 207-5286] expression result unused (hls_source/fft.c:1352:28)
+INFO: [HLS 200-10] Analyzing design file 'hls_source/common.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'hls_source/codec.c' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 7.07 seconds. CPU system time: 2.82 seconds. Elapsed time: 10.98 seconds; current allocated memory: 466.605 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 3.76 seconds. CPU system time: 0.41 seconds. Elapsed time: 4.44 seconds; current allocated memory: 467.340 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 467.340 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 468.195 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.01 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.01 seconds; current allocated memory: 468.434 MB.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_160_3' (hls_source/my_ntt.c:155) in function 'mq_NTT' automatically.
+INFO: [XFORM 203-721] Changing loop 'Loop_VITIS_LOOP_150_1_proc' (hls_source/my_ntt.c:153) to a process function for dataflow in function 'mq_NTT'.
+WARNING: [HLS 200-786] Detected dataflow-on-top in function  'mq_NTT' (hls_source/my_ntt.c:137)  with default interface mode 'ap_ctrl_hs'. Overlapped execution of successive kernel calls will not happen unless interface mode 'ap_ctrl_chain' is used (or 'ap_ctrl_none' for a purely data-driven design).
+INFO: [XFORM 203-712] Applying dataflow to function 'mq_NTT' (hls_source/my_ntt.c:137), detected/extracted 3 process function(s): 
+	 'entry_proc'
+	 'Block_entry39_proc'
+	 'Loop_VITIS_LOOP_150_1_proc'.
+INFO: [XFORM 203-11] Balancing expressions in function 'Loop_VITIS_LOOP_150_1_proc' (hls_source/my_ntt.c:146:21)...3 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.04 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.08 seconds; current allocated memory: 491.059 MB.
+WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_154_2' (hls_source/my_ntt.c:151:14) in function 'Loop_VITIS_LOOP_150_1_proc' the outer loop is not a perfect loop because either the parent loop or the sub loop has no invariant trip count.
+WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_150_1' (hls_source/my_ntt.c:153:10) in function 'Loop_VITIS_LOOP_150_1_proc' the outer loop is not a perfect loop.
+WARNING: [HLS 200-1449] Process Loop_VITIS_LOOP_150_1_proc has both a predecessor and reads an input from its caller (see the GUI dataflow viewer). This may lead to lower throughput. Consider copying this input via a predecessor process.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.04 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.13 seconds; current allocated memory: 519.922 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'mq_NTT' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'entry_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.02 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.12 seconds; current allocated memory: 520.207 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 520.246 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Block_entry39_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 520.402 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.02 seconds; current allocated memory: 520.402 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Loop_VITIS_LOOP_150_1_proc_Pipeline_VITIS_LOOP_160_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=tmp1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln167) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=tmp2) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_160_3'.
+WARNING: [HLS 200-880] The II Violation in module 'Loop_VITIS_LOOP_150_1_proc_Pipeline_VITIS_LOOP_160_3' (loop 'VITIS_LOOP_160_3'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between bus response operation ('gmem0_addr_resp', hls_source/my_ntt.c:176) on port 'gmem0' (hls_source/my_ntt.c:176) and bus request operation ('u_req', hls_source/my_ntt.c:164) on port 'gmem0' (hls_source/my_ntt.c:164).
+WARNING: [HLS 200-880] The II Violation in module 'Loop_VITIS_LOOP_150_1_proc_Pipeline_VITIS_LOOP_160_3' (loop 'VITIS_LOOP_160_3'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between bus response operation ('gmem0_addr_resp', hls_source/my_ntt.c:176) on port 'gmem0' (hls_source/my_ntt.c:176) and bus request operation ('u_req', hls_source/my_ntt.c:164) on port 'gmem0' (hls_source/my_ntt.c:164).
+WARNING: [HLS 200-880] The II Violation in module 'Loop_VITIS_LOOP_150_1_proc_Pipeline_VITIS_LOOP_160_3' (loop 'VITIS_LOOP_160_3'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between bus response operation ('gmem0_addr_resp', hls_source/my_ntt.c:176) on port 'gmem0' (hls_source/my_ntt.c:176) and bus request operation ('u_req', hls_source/my_ntt.c:164) on port 'gmem0' (hls_source/my_ntt.c:164).
+WARNING: [HLS 200-880] The II Violation in module 'Loop_VITIS_LOOP_150_1_proc_Pipeline_VITIS_LOOP_160_3' (loop 'VITIS_LOOP_160_3'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between bus response operation ('gmem0_addr_resp', hls_source/my_ntt.c:176) on port 'gmem0' (hls_source/my_ntt.c:176) and bus request operation ('u_req', hls_source/my_ntt.c:164) on port 'gmem0' (hls_source/my_ntt.c:164).
+WARNING: [HLS 200-880] The II Violation in module 'Loop_VITIS_LOOP_150_1_proc_Pipeline_VITIS_LOOP_160_3' (loop 'VITIS_LOOP_160_3'): Unable to enforce a carried dependence constraint (II = 19, distance = 1, offset = 1) between bus response operation ('gmem0_addr_resp', hls_source/my_ntt.c:176) on port 'gmem0' (hls_source/my_ntt.c:176) and bus request operation ('u_req', hls_source/my_ntt.c:164) on port 'gmem0' (hls_source/my_ntt.c:164).
+WARNING: [HLS 200-880] The II Violation in module 'Loop_VITIS_LOOP_150_1_proc_Pipeline_VITIS_LOOP_160_3' (loop 'VITIS_LOOP_160_3'): Unable to enforce a carried dependence constraint (II = 23, distance = 1, offset = 1) between bus response operation ('gmem0_addr_resp', hls_source/my_ntt.c:176) on port 'gmem0' (hls_source/my_ntt.c:176) and bus request operation ('u_req', hls_source/my_ntt.c:164) on port 'gmem0' (hls_source/my_ntt.c:164).
+WARNING: [HLS 200-880] The II Violation in module 'Loop_VITIS_LOOP_150_1_proc_Pipeline_VITIS_LOOP_160_3' (loop 'VITIS_LOOP_160_3'): Unable to enforce a carried dependence constraint (II = 25, distance = 1, offset = 1) between bus response operation ('gmem0_addr_1_resp', hls_source/my_ntt.c:181) on port 'gmem0' (hls_source/my_ntt.c:181) and bus request operation ('u_req', hls_source/my_ntt.c:164) on port 'gmem0' (hls_source/my_ntt.c:164).
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 26, Depth = 28, loop 'VITIS_LOOP_160_3'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.1 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.25 seconds; current allocated memory: 521.895 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.1 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.18 seconds; current allocated memory: 521.895 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Loop_VITIS_LOOP_150_1_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.14 seconds; current allocated memory: 522.293 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xck26-sfvc784-2LV-c'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1464] Running solution command: config_export -vivado_clock=10
+INFO: [HLS 200-1510] Running: set_part xck26-sfvc784-2LV-c 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -rtl verilog -vivado_clock 10 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 1.462 GB.
+INFO: [HLS 200-10] Analyzing design file 'hls_source/vrfy.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'hls_source/sign.c' ... 
+WARNING: [HLS 207-4051] assigning to 'double *' from 'const fpr *' (aka 'const double *') discards qualifiers (hls_source/sign.c:317:11)
+WARNING: [HLS 207-4051] initializing 'fpr *' (aka 'double *') with an expression of type 'const fpr *' (aka 'const double *') discards qualifiers (hls_source/sign.c:356:10)
+WARNING: [HLS 207-4051] initializing 'double *' with an expression of type 'const fpr *' (aka 'const double *') discards qualifiers (hls_source/sign.c:512:12)
+WARNING: [HLS 207-5176] sizeof on array function parameter will return size of 'uint8_t *' (aka 'unsigned char *') instead of 'uint8_t [50]' (hls_source/sign.c:1905:38)
+INFO: [HLS 207-62] declared here (hls_source/sign.c:1889:87)
+WARNING: [HLS 207-5292] unused parameter 'logn' (hls_source/sign.c:859:56)
+WARNING: [HLS 207-5292] unused parameter 'logn' (hls_source/sign.c:994:72)
+WARNING: [HLS 207-5292] unused parameter 'tmp2' (hls_source/sign.c:1956:46)
+INFO: [HLS 200-10] Analyzing design file 'hls_source/shake.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'hls_source/rng.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'hls_source/my_ntt.c' ... 
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region (hls_source/my_ntt.c:144:9)
+WARNING: [HLS 200-471] Dataflow form checks found 1 issue(s) in file hls_source/my_ntt.c
+INFO: [HLS 200-10] Analyzing design file 'hls_source/my_intt.c' ... 
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region (hls_source/my_intt.c:146:9)
+WARNING: [HLS 214-169] There are a total of 7 such instances of non-canonical statements in the dataflow region (hls_source/my_intt.c:146:9)
+WARNING: [HLS 200-471] Dataflow form checks found 2 issue(s) in file hls_source/my_intt.c
+INFO: [HLS 200-10] Analyzing design file 'hls_source/keygen.c' ... 
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region (hls_source/keygen.c:1006:9)
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region (hls_source/keygen.c:1288:9)
+WARNING: [HLS 214-169] There are a total of 8 such instances of non-canonical statements in the dataflow region (hls_source/keygen.c:1288:9)
+WARNING: [HLS 200-471] Dataflow form checks found 3 issue(s) in file hls_source/keygen.c
+WARNING: [HLS 207-5292] unused parameter 'logn' (hls_source/keygen.c:1257:102)
+INFO: [HLS 200-10] Analyzing design file 'hls_source/fpr.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'hls_source/fft.c' ... 
+WARNING: [HLS 207-5286] expression result unused (hls_source/fft.c:1046:8)
+WARNING: [HLS 207-5286] expression result unused (hls_source/fft.c:1080:8)
+WARNING: [HLS 207-5286] expression result unused (hls_source/fft.c:1114:8)
+WARNING: [HLS 207-5286] expression result unused (hls_source/fft.c:1148:8)
+WARNING: [HLS 207-5286] expression result unused (hls_source/fft.c:1182:8)
+WARNING: [HLS 207-5286] expression result unused (hls_source/fft.c:1216:8)
+WARNING: [HLS 207-5286] expression result unused (hls_source/fft.c:1250:8)
+WARNING: [HLS 207-5286] expression result unused (hls_source/fft.c:1284:8)
+WARNING: [HLS 207-5286] expression result unused (hls_source/fft.c:1318:8)
+WARNING: [HLS 207-5286] expression result unused (hls_source/fft.c:1352:8)
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region (hls_source/fft.c:606:9)
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region (hls_source/fft.c:907:9)
+WARNING: [HLS 214-169] There are a total of 4 such instances of non-canonical statements in the dataflow region (hls_source/fft.c:907:9)
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region (hls_source/fft.c:1029:9)
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region (hls_source/fft.c:1414:9)
+WARNING: [HLS 214-169] There are a total of 7 such instances of non-canonical statements in the dataflow region (hls_source/fft.c:1414:9)
+WARNING: [HLS 200-471] Dataflow form checks found 6 issue(s) in file hls_source/fft.c
+WARNING: [HLS 207-5286] expression result unused (hls_source/fft.c:1046:27)
+WARNING: [HLS 207-5286] expression result unused (hls_source/fft.c:1080:27)
+WARNING: [HLS 207-5286] expression result unused (hls_source/fft.c:1114:27)
+WARNING: [HLS 207-5286] expression result unused (hls_source/fft.c:1148:27)
+WARNING: [HLS 207-5286] expression result unused (hls_source/fft.c:1182:27)
+WARNING: [HLS 207-5286] expression result unused (hls_source/fft.c:1216:28)
+WARNING: [HLS 207-5286] expression result unused (hls_source/fft.c:1250:28)
+WARNING: [HLS 207-5286] expression result unused (hls_source/fft.c:1284:28)
+WARNING: [HLS 207-5286] expression result unused (hls_source/fft.c:1318:28)
+WARNING: [HLS 207-5286] expression result unused (hls_source/fft.c:1352:28)
+INFO: [HLS 200-10] Analyzing design file 'hls_source/common.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'hls_source/codec.c' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 6.76 seconds. CPU system time: 2.73 seconds. Elapsed time: 11.38 seconds; current allocated memory: 466.812 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 3.77 seconds. CPU system time: 0.38 seconds. Elapsed time: 4.3 seconds; current allocated memory: 467.559 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 467.559 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 468.422 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 468.660 MB.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_160_3' (hls_source/my_ntt.c:155) in function 'mq_NTT' automatically.
+INFO: [XFORM 203-721] Changing loop 'Loop_VITIS_LOOP_150_1_proc' (hls_source/my_ntt.c:153) to a process function for dataflow in function 'mq_NTT'.
+WARNING: [HLS 200-786] Detected dataflow-on-top in function  'mq_NTT' (hls_source/my_ntt.c:137)  with default interface mode 'ap_ctrl_hs'. Overlapped execution of successive kernel calls will not happen unless interface mode 'ap_ctrl_chain' is used (or 'ap_ctrl_none' for a purely data-driven design).
+INFO: [XFORM 203-712] Applying dataflow to function 'mq_NTT' (hls_source/my_ntt.c:137), detected/extracted 3 process function(s): 
+	 'entry_proc'
+	 'Block_entry39_proc'
+	 'Loop_VITIS_LOOP_150_1_proc'.
+INFO: [XFORM 203-11] Balancing expressions in function 'Loop_VITIS_LOOP_150_1_proc' (hls_source/my_ntt.c:146:21)...3 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.05 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.09 seconds; current allocated memory: 491.293 MB.
+WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_154_2' (hls_source/my_ntt.c:151:14) in function 'Loop_VITIS_LOOP_150_1_proc' the outer loop is not a perfect loop because either the parent loop or the sub loop has no invariant trip count.
+WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_150_1' (hls_source/my_ntt.c:153:10) in function 'Loop_VITIS_LOOP_150_1_proc' the outer loop is not a perfect loop.
+WARNING: [HLS 200-1449] Process Loop_VITIS_LOOP_150_1_proc has both a predecessor and reads an input from its caller (see the GUI dataflow viewer). This may lead to lower throughput. Consider copying this input via a predecessor process.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.04 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.08 seconds; current allocated memory: 520.121 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'mq_NTT' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'entry_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.01 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.05 seconds; current allocated memory: 520.391 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 520.477 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Block_entry39_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 520.621 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 520.621 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Loop_VITIS_LOOP_150_1_proc_Pipeline_VITIS_LOOP_160_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=tmp1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln167) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=tmp2) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_160_3'.
+WARNING: [HLS 200-880] The II Violation in module 'Loop_VITIS_LOOP_150_1_proc_Pipeline_VITIS_LOOP_160_3' (loop 'VITIS_LOOP_160_3'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between bus response operation ('gmem0_addr_resp', hls_source/my_ntt.c:176) on port 'gmem0' (hls_source/my_ntt.c:176) and bus request operation ('u_req', hls_source/my_ntt.c:164) on port 'gmem0' (hls_source/my_ntt.c:164).
+WARNING: [HLS 200-880] The II Violation in module 'Loop_VITIS_LOOP_150_1_proc_Pipeline_VITIS_LOOP_160_3' (loop 'VITIS_LOOP_160_3'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between bus response operation ('gmem0_addr_resp', hls_source/my_ntt.c:176) on port 'gmem0' (hls_source/my_ntt.c:176) and bus request operation ('u_req', hls_source/my_ntt.c:164) on port 'gmem0' (hls_source/my_ntt.c:164).
+WARNING: [HLS 200-880] The II Violation in module 'Loop_VITIS_LOOP_150_1_proc_Pipeline_VITIS_LOOP_160_3' (loop 'VITIS_LOOP_160_3'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between bus response operation ('gmem0_addr_resp', hls_source/my_ntt.c:176) on port 'gmem0' (hls_source/my_ntt.c:176) and bus request operation ('u_req', hls_source/my_ntt.c:164) on port 'gmem0' (hls_source/my_ntt.c:164).
+WARNING: [HLS 200-880] The II Violation in module 'Loop_VITIS_LOOP_150_1_proc_Pipeline_VITIS_LOOP_160_3' (loop 'VITIS_LOOP_160_3'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between bus response operation ('gmem0_addr_resp', hls_source/my_ntt.c:176) on port 'gmem0' (hls_source/my_ntt.c:176) and bus request operation ('u_req', hls_source/my_ntt.c:164) on port 'gmem0' (hls_source/my_ntt.c:164).
+WARNING: [HLS 200-880] The II Violation in module 'Loop_VITIS_LOOP_150_1_proc_Pipeline_VITIS_LOOP_160_3' (loop 'VITIS_LOOP_160_3'): Unable to enforce a carried dependence constraint (II = 19, distance = 1, offset = 1) between bus response operation ('gmem0_addr_resp', hls_source/my_ntt.c:176) on port 'gmem0' (hls_source/my_ntt.c:176) and bus request operation ('u_req', hls_source/my_ntt.c:164) on port 'gmem0' (hls_source/my_ntt.c:164).
+WARNING: [HLS 200-880] The II Violation in module 'Loop_VITIS_LOOP_150_1_proc_Pipeline_VITIS_LOOP_160_3' (loop 'VITIS_LOOP_160_3'): Unable to enforce a carried dependence constraint (II = 23, distance = 1, offset = 1) between bus response operation ('gmem0_addr_resp', hls_source/my_ntt.c:176) on port 'gmem0' (hls_source/my_ntt.c:176) and bus request operation ('u_req', hls_source/my_ntt.c:164) on port 'gmem0' (hls_source/my_ntt.c:164).
+WARNING: [HLS 200-880] The II Violation in module 'Loop_VITIS_LOOP_150_1_proc_Pipeline_VITIS_LOOP_160_3' (loop 'VITIS_LOOP_160_3'): Unable to enforce a carried dependence constraint (II = 25, distance = 1, offset = 1) between bus response operation ('gmem0_addr_1_resp', hls_source/my_ntt.c:181) on port 'gmem0' (hls_source/my_ntt.c:181) and bus request operation ('u_req', hls_source/my_ntt.c:164) on port 'gmem0' (hls_source/my_ntt.c:164).
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 26, Depth = 28, loop 'VITIS_LOOP_160_3'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.11 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.29 seconds; current allocated memory: 522.070 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.15 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.21 seconds; current allocated memory: 522.070 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42]==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xck26-sfvc784-2LV-c'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1464] Running solution command: config_export -vivado_clock=10
+INFO: [HLS 200-1510] Running: set_part xck26-sfvc784-2LV-c 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -rtl verilog -vivado_clock 10 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 1.462 GB.
+INFO: [HLS 200-10] Analyzing design file 'hls_source/vrfy.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'hls_source/sign.c' ... 
+WARNING: [HLS 207-4051] assigning to 'double *' from 'const fpr *' (aka 'const double *') discards qualifiers (hls_source/sign.c:317:11)
+WARNING: [HLS 207-4051] initializing 'fpr *' (aka 'double *') with an expression of type 'const fpr *' (aka 'const double *') discards qualifiers (hls_source/sign.c:356:10)
+WARNING: [HLS 207-4051] initializing 'double *' with an expression of type 'const fpr *' (aka 'const double *') discards qualifiers (hls_source/sign.c:512:12)
+WARNING: [HLS 207-5176] sizeof on array function parameter will return size of 'uint8_t *' (aka 'unsigned char *') instead of 'uint8_t [50]' (hls_source/sign.c:1905:38)
+INFO: [HLS 207-62] declared here (hls_source/sign.c:1889:87)
+WARNING: [HLS 207-5292] unused parameter 'logn' (hls_source/sign.c:859:56)
+WARNING: [HLS 207-5292] unused parameter 'logn' (hls_source/sign.c:994:72)
+WARNING: [HLS 207-5292] unused parameter 'tmp2' (hls_source/sign.c:1956:46)
+INFO: [HLS 200-10] Analyzing design file 'hls_source/shake.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'hls_source/rng.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'hls_source/my_ntt.c' ... 
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region (hls_source/my_ntt.c:144:9)
+WARNING: [HLS 200-471] Dataflow form checks found 1 issue(s) in file hls_source/my_ntt.c
+INFO: [HLS 200-10] Analyzing design file 'hls_source/my_intt.c' ... 
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region (hls_source/my_intt.c:146:9)
+WARNING: [HLS 214-169] There are a total of 7 such instances of non-canonical statements in the dataflow region (hls_source/my_intt.c:146:9)
+WARNING: [HLS 200-471] Dataflow form checks found 2 issue(s) in file hls_source/my_intt.c
+INFO: [HLS 200-10] Analyzing design file 'hls_source/keygen.c' ... 
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region (hls_source/keygen.c:1006:9)
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region (hls_source/keygen.c:1288:9)
+WARNING: [HLS 214-169] There are a total of 8 such instances of non-canonical statements in the dataflow region (hls_source/keygen.c:1288:9)
+WARNING: [HLS 200-471] Dataflow form checks found 3 issue(s) in file hls_source/keygen.c
+WARNING: [HLS 207-5292] unused parameter 'logn' (hls_source/keygen.c:1257:102)
+INFO: [HLS 200-10] Analyzing design file 'hls_source/fpr.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'hls_source/fft.c' ... 
+WARNING: [HLS 207-5286] expression result unused (hls_source/fft.c:1046:8)
+WARNING: [HLS 207-5286] expression result unused (hls_source/fft.c:1080:8)
+WARNING: [HLS 207-5286] expression result unused (hls_source/fft.c:1114:8)
+WARNING: [HLS 207-5286] expression result unused (hls_source/fft.c:1148:8)
+WARNING: [HLS 207-5286] expression result unused (hls_source/fft.c:1182:8)
+WARNING: [HLS 207-5286] expression result unused (hls_source/fft.c:1216:8)
+WARNING: [HLS 207-5286] expression result unused (hls_source/fft.c:1250:8)
+WARNING: [HLS 207-5286] expression result unused (hls_source/fft.c:1284:8)
+WARNING: [HLS 207-5286] expression result unused (hls_source/fft.c:1318:8)
+WARNING: [HLS 207-5286] expression result unused (hls_source/fft.c:1352:8)
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region (hls_source/fft.c:606:9)
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region (hls_source/fft.c:907:9)
+WARNING: [HLS 214-169] There are a total of 4 such instances of non-canonical statements in the dataflow region (hls_source/fft.c:907:9)
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region (hls_source/fft.c:1029:9)
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region (hls_source/fft.c:1414:9)
+WARNING: [HLS 214-169] There are a total of 7 such instances of non-canonical statements in the dataflow region (hls_source/fft.c:1414:9)
+WARNING: [HLS 200-471] Dataflow form checks found 6 issue(s) in file hls_source/fft.c
+WARNING: [HLS 207-5286] expression result unused (hls_source/fft.c:1046:27)
+WARNING: [HLS 207-5286] expression result unused (hls_source/fft.c:1080:27)
+WARNING: [HLS 207-5286] expression result unused (hls_source/fft.c:1114:27)
+WARNING: [HLS 207-5286] expression result unused (hls_source/fft.c:1148:27)
+WARNING: [HLS 207-5286] expression result unused (hls_source/fft.c:1182:27)
+WARNING: [HLS 207-5286] expression result unused (hls_source/fft.c:1216:28)
+WARNING: [HLS 207-5286] expression result unused (hls_source/fft.c:1250:28)
+WARNING: [HLS 207-5286] expression result unused (hls_source/fft.c:1284:28)
+WARNING: [HLS 207-5286] expression result unused (hls_source/fft.c:1318:28)
+WARNING: [HLS 207-5286] expression result unused (hls_source/fft.c:1352:28)
+INFO: [HLS 200-10] Analyzing design file 'hls_source/common.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'hls_source/codec.c' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 7.33 seconds. CPU system time: 2.83 seconds. Elapsed time: 11.22 seconds; current allocated memory: 466.762 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 4.03 seconds. CPU system time: 0.42 seconds. Elapsed time: 4.53 seconds; current allocated memory: 467.586 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 467.594 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 468.605 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 468.836 MB.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_165_3' (hls_source/my_intt.c:160) in function 'mq_iNTT' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_194_4' (hls_source/my_intt.c:196) in function 'mq_iNTT' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_199_5' (hls_source/my_intt.c:201) in function 'mq_iNTT' automatically.
+WARNING: [HLS 200-786] Detected dataflow-on-top in function  'mq_iNTT' (hls_source/my_intt.c:139)  with default interface mode 'ap_ctrl_hs'. Overlapped execution of successive kernel calls will not happen unless interface mode 'ap_ctrl_chain' is used (or 'ap_ctrl_none' for a purely data-driven design).
+INFO: [XFORM 203-712] Applying dataflow to function 'mq_iNTT' (hls_source/my_intt.c:139), detected/extracted 3 process function(s): 
+	 'entry_proc'
+	 'Block_entry47_proc'
+	 'Loop_VITIS_LOOP_154_1_proc'.
+INFO: [XFORM 203-11] Balancing expressions in function 'Loop_VITIS_LOOP_154_1_proc' (hls_source/my_intt.c:148:21)...3 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.07 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.13 seconds; current allocated memory: 491.883 MB.
+WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_159_2' (hls_source/my_intt.c:155:18) in function 'Loop_VITIS_LOOP_154_1_proc' the outer loop is not a perfect loop because either the parent loop or the sub loop has no invariant trip count.
+WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_154_1' (hls_source/my_intt.c:157:10) in function 'Loop_VITIS_LOOP_154_1_proc' the outer loop is not a perfect loop because either the parent loop or the sub loop has no computeable trip count.
+WARNING: [HLS 200-1449] Process Loop_VITIS_LOOP_154_1_proc has both a predecessor and reads an input from its caller (see the GUI dataflow viewer). This may lead to lower throughput. Consider copying this input via a predecessor process.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.06 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.14 seconds; current allocated memory: 540.004 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'mq_iNTT' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'entry_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.02 seconds. CPU system time: 0.04 seconds. Elapsed time: 0.09 seconds; current allocated memory: 540.316 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.01 seconds; current allocated memory: 540.383 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Block_entry47_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 540.547 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 540.547 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Loop_VITIS_LOOP_154_1_proc_Pipeline_VITIS_LOOP_165_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=tmp1_3) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln183) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=tmp1_4) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_165_3'.
+WARNING: [HLS 200-880] The II Violation in module 'Loop_VITIS_LOOP_154_1_proc_Pipeline_VITIS_LOOP_165_3' (loop 'VITIS_LOOP_165_3'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between bus response operation ('gmem0_addr_resp', hls_source/my_intt.c:173) on port 'gmem0' (hls_source/my_intt.c:173) and bus request operation ('u_req', hls_source/my_intt.c:168) on port 'gmem0' (hls_source/my_intt.c:168).
+WARNING: [HLS 200-880] The II Violation in module 'Loop_VITIS_LOOP_154_1_proc_Pipeline_VITIS_LOOP_165_3' (loop 'VITIS_LOOP_165_3'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between bus response operation ('gmem0_addr_resp', hls_source/my_intt.c:173) on port 'gmem0' (hls_source/my_intt.c:173) and bus request operation ('u_req', hls_source/my_intt.c:168) on port 'gmem0' (hls_source/my_intt.c:168).
+WARNING: [HLS 200-880] The II Violation in module 'Loop_VITIS_LOOP_154_1_proc_Pipeline_VITIS_LOOP_165_3' (loop 'VITIS_LOOP_165_3'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between bus response operation ('gmem0_addr_resp', hls_source/my_intt.c:173) on port 'gmem0' (hls_source/my_intt.c:173) and bus request operation ('u_req', hls_source/my_intt.c:168) on port 'gmem0' (hls_source/my_intt.c:168).
+WARNING: [HLS 200-880] The II Violation in module 'Loop_VITIS_LOOP_154_1_proc_Pipeline_VITIS_LOOP_165_3' (loop 'VITIS_LOOP_165_3'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between bus response operation ('gmem0_addr_resp', hls_source/my_intt.c:173) on port 'gmem0' (hls_source/my_intt.c:173) and bus request operation ('u_req', hls_source/my_intt.c:168) on port 'gmem0' (hls_source/my_intt.c:168).
+WARNING: [HLS 200-880] The II Violation in module 'Loop_VITIS_LOOP_154_1_proc_Pipeline_VITIS_LOOP_165_3' (loop 'VITIS_LOOP_165_3'): Unable to enforce a carried dependence constraint (II = 19, distance = 1, offset = 1) between bus response operation ('gmem0_addr_1_resp', hls_source/my_intt.c:187) on port 'gmem0' (hls_source/my_intt.c:187) and bus request operation ('u_req', hls_source/my_intt.c:168) on port 'gmem0' (hls_source/my_intt.c:168).
+WARNING: [HLS 200-880] The II Violation in module 'Loop_VITIS_LOOP_154_1_proc_Pipeline_VITIS_LOOP_165_3' (loop 'VITIS_LOOP_165_3'): Unable to enforce a carried dependence constraint (II = 23, distance = 1, offset = 1) between bus response operation ('gmem0_addr_1_resp', hls_source/my_intt.c:187) on port 'gmem0' (hls_source/my_intt.c:187) and bus request operation ('u_req', hls_source/my_intt.c:168) on port 'gmem0' (hls_source/my_intt.c:168).
+WARNING: [HLS 200-880] The II Violation in module 'Loop_VITIS_LOOP_154_1_proc_Pipeline_VITIS_LOOP_165_3' (loop 'VITIS_LOOP_165_3'): Unable to enforce a carried dependence constraint (II = 24, distance = 1, offset = 1) between bus response operation ('gmem0_addr_1_resp', hls_source/my_intt.c:187) on port 'gmem0' (hls_source/my_intt.c:187) and bus request operation ('u_req', hls_source/my_intt.c:168) on port 'gmem0' (hls_source/my_intt.c:168).
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 25, Depth = 27, loop 'VITIS_LOOP_165_3'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.11 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.18 seconds; current allocated memory: 542.004 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.14 seconds. CPU system time: 0 seconds. Elapsed time: 0.22 seconds; current allocated memory: 542.004 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Loop_VITIS_LOOP_154_1_proc_Pipeline_VITIS_LOOP_194_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_194_4'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_194_4'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.09 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.15 seconds; current allocated memory: 542.371 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 542.371 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Loop_VITIS_LOOP_154_1_proc_Pipeline_VITIS_LOOP_199_5' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=tmp1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln202) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_199_5'.
+WARNING: [HLS 200-880] The II Violation in module 'Loop_VITIS_LOOP_154_1_proc_Pipeline_VITIS_LOOP_199_5' (loop 'VITIS_LOOP_199_5'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between bus response operation ('gmem0_addr_2_resp', hls_source/my_intt.c:206) on port 'gmem0' (hls_source/my_intt.c:206) and bus request operation ('gmem0_load_req', hls_source/my_intt.c:201) on port 'gmem0' (hls_source/my_intt.c:201).
+WARNING: [HLS 200-880] The II Violation in module 'Loop_VITIS_LOOP_154_1_proc_Pipeline_VITIS_LOOP_199_5' (loop 'VITIS_LOOP_199_5'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between bus response operation ('gmem0_addr_2_resp', hls_source/my_intt.c:206) on port 'gmem0' (hls_source/my_intt.c:206) and bus request operation ('gmem0_load_req', hls_source/my_intt.c:201) on port 'gmem0' (hls_source/my_intt.c:201).
+WARNING: [HLS 200-880] The II Violation in module 'Loop_VITIS_LOOP_154_1_proc_Pipeline_VITIS_LOOP_199_5' (loop 'VITIS_LOOP_199_5'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between bus response operation ('gmem0_addr_2_resp', hls_source/my_intt.c:206) on port 'gmem0' (hls_source/my_intt.c:206) and bus request operation ('gmem0_load_req', hls_source/my_intt.c:201) on port 'gmem0' (hls_source/my_intt.c:201).
+WARNING: [HLS 200-880] The II Violation in module 'Loop_VITIS_LOOP_154_1_proc_Pipeline_VITIS_LOOP_199_5' (loop 'VITIS_LOOP_199_5'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between bus response operation ('gmem0_addr_2_resp', hls_source/my_intt.c:206) on port 'gmem0' (hls_source/my_intt.c:206) and bus request operation ('gmem0_load_req', hls_source/my_intt.c:201) on port 'gmem0' (hls_source/my_intt.c:201).
+WARNING: [HLS 200-880] The II Violation in module 'Loop_VITIS_LOOP_154_1_proc_Pipeline_VITIS_LOOP_199_5' (loop 'VITIS_LOOP_199_5'): Unable to enforce a carried dependence constraint (II = 19, distance = 1, offset = 1) between bus response operation ('gmem0_addr_2_resp', hls_source/my_intt.c:206) on port 'gmem0' (hls_source/my_intt.c:206) and bus request operation ('gmem0_load_req', hls_source/my_intt.c:201) on port 'gmem0' (hls_source/my_intt.c:201).
+WARNING: [HLS 200-880] The II Violation in module 'Loop_VITIS_LOOP_154_1_proc_Pipeline_VITIS_LOOP_199_5' (loop 'VITIS_LOOP_199_5'): Unable to enforce a carried dependence constraint (II = 20, distance = 1, offset = 1) between bus response operation ('gmem0_addr_2_resp', hls_source/my_intt.c:206) on port 'gmem0' (hls_source/my_intt.c:206) and bus request operation ('gmem0_load_req', hls_source/my_intt.c:201) on port 'gmem0' (hls_source/my_intt.c:201).
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 21, Depth = 23, loop 'VITIS_LOOP_199_5'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.18 seconds; current allocated memory: 542.902 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.11 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.18 seconds; current allocated memory: 542.902 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Loop_VITIS_LOOP_154_1_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 543.312 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 543.312 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'mq_iNTT' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.07 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.08 seconds; current allocated memory: 543.695 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 543.695 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'entry_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'entry_proc'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 543.695 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Block_entry47_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Block_entry47_proc'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 543.695 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Loop_VITIS_LOOP_154_1_proc_Pipeline_VITIS_LOOP_165_3' 

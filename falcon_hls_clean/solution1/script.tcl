@@ -4,6 +4,7 @@
 ## Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ############################################################
 open_project falcon_hls_clean
+set_top mq_iNTT
 add_files hls_source/codec.c
 add_files hls_source/common.c
 add_files hls_source/fft.c
