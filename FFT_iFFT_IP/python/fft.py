@@ -12,7 +12,7 @@ from fft_constants import roots_dict    # Import constants useful for the FFT
 
 from time import time
 from ip import ipFFT, inBufferFFT
-from get_vector import get_fft
+from get_vector import get_fft1024
 
 # n_2 = 0
 # n_4 = 0
@@ -121,7 +121,7 @@ def fft(f):
         tmp = [0 for i in range(1024)]
         for i in range(1024):
             tmp[i] = inBufferFFT[i]
-        f_fft = get_fft(tmp)
+        f_fft = get_fft1024(tmp)
         
     elif (n > 2):
         f0, f1 = split(f)
