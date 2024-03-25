@@ -1035,7 +1035,7 @@ def get_fft512(f):
 
     return f_out
 
-def get_fft512(f_in):
+def get_ifft512(f_in):
     '''Change the order of the iFFT input to match the python iFFT'''
     f = [0 for i in range(512)]
     Re = [0 for j in range(512)]
