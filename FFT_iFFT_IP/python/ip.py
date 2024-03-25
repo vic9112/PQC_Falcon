@@ -23,9 +23,6 @@ inBufferiFFT = allocate(shape=(1024,), dtype=np.float64)
 #        bit 31~0 - f[63:32] (Read/Write)
 # 0x1c : Data signal of logn
 #        bit 31~0 - logn[31:0] (Read/Write)
-logn = 10
-ipFFT.write(0x1C, logn) # Coefficient
 ipFFT.write(0x10, inBufferFFT.device_address)
 
-ipiFFT.write(0x1C, logn)
 ipiFFT.write(0x10, inBufferiFFT.device_address)
