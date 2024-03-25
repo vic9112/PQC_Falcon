@@ -7,4 +7,7 @@
 - For testing the functionality of `FFT_iFFT_IP`
   - Include all files in `~/bitstream` and `~/jupyter_notebook` except `~/jupyter_notebook/test_ip_fft_ifft.ipynb`
 - For comparing the IP to python function
-  - Include all files in `~/bitstream` and `~/jupyter_notebook` except `~/jupyter_notebook/FFT_iFFT.ipynb`
+  - Include all files in `~/bitstream`, `~/python` and `~/jupyter_notebook` except `~/jupyter_notebook/FFT_iFFT.ipynb`
+
+## Result:
+![compare](https://github.com/vic9112/PQC_Falcon/assets/137171415/9a23417e-9523-4fc0-b15d-0f8cbc02336d)
