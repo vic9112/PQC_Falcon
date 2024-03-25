@@ -1,6 +1,6 @@
 # PQC Implementation on HLS
 
-## Contributers:
+## Contributors:
 - [VicChen](https://github.com/vic9112)
 - [YouWei](https://github.com/nthuyouwei)
 - [ShengDa](https://github.com/ShengdaChen1212)
