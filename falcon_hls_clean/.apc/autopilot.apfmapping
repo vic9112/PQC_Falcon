@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="codec.c" path="/home/ubuntu/Desktop/Vic_PQC_Falcon/hls_source/codec.c"/>
+    <originFiles name="common.c" path="/home/ubuntu/Desktop/Vic_PQC_Falcon/hls_source/common.c"/>
+    <originFiles name="fft.c" path="/home/ubuntu/Desktop/Vic_PQC_Falcon/hls_source/fft.c"/>
+    <originFiles name="fpr.c" path="/home/ubuntu/Desktop/Vic_PQC_Falcon/hls_source/fpr.c"/>
+    <originFiles name="header.h" path="/home/ubuntu/Desktop/Vic_PQC_Falcon/hls_source/header.h"/>
+    <originFiles name="keygen.c" path="/home/ubuntu/Desktop/Vic_PQC_Falcon/hls_source/keygen.c"/>
+    <originFiles name="rng.c" path="/home/ubuntu/Desktop/Vic_PQC_Falcon/hls_source/rng.c"/>
+    <originFiles name="shake.c" path="/home/ubuntu/Desktop/Vic_PQC_Falcon/hls_source/shake.c"/>
+    <originFiles name="sign.c" path="/home/ubuntu/Desktop/Vic_PQC_Falcon/hls_source/sign.c"/>
+    <originFiles name="vrfy.c" path="/home/ubuntu/Desktop/Vic_PQC_Falcon/hls_source/vrfy.c"/>
+    <originFiles name="my_intt.c" path="/home/ubuntu/Desktop/Vic_PQC_Falcon/hls_source/my_intt.c"/>
+    <originFiles name="my_ntt.c" path="/home/ubuntu/Desktop/Vic_PQC_Falcon/hls_source/my_ntt.c"/>
+  </source>
+  <testbench>
+    <originFiles name="tb.c" path="/home/ubuntu/Desktop/Vic_PQC_Falcon/hls_source/tb.c"/>
+    <originFiles name="tb_data.h" path="/home/ubuntu/Desktop/Vic_PQC_Falcon/hls_source/tb_data.h"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>
