@@ -10,4 +10,5 @@
   - Include all files in `~/bitstream`, `~/python` and `~/jupyter_notebook` except `~/jupyter_notebook/FFT_iFFT.ipynb`
 
 ## Result:
-![compare](https://github.com/vic9112/PQC_Falcon/assets/137171415/60b3373a-e052-4256-bfbf-46ca336e5e83)
+![compare](https://github.com/vc9112/PQC_Falcon/assets/137171415/64c5d33b-ff11-4d63-bf3a-405d6e44b38e)
+
