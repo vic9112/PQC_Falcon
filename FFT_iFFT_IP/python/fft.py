@@ -112,22 +112,23 @@ def fft(f):
 #    else:
 #        print("not logn")
 
-    if (n == 1024):
-        for i in range(n):
-            inBufferFFT[i] = f[i]
-    
-        start = time()
-        ipFFT.write(0x00, 0x01) # 0x00: bit 0: 0->1: start
-        while (ipFFT.read(0x00) & 0x4) == 0x0:
-            continue
-        end = time()
-        #print(f"FFT IP execution time: {end - start} sec")
-        tmp = [0 for i in range(1024)]
-        for i in range(1024):
-            tmp[i] = inBufferFFT[i]
-        f_fft = get_fft1024(tmp)
-        
-    elif (n > 2):
+#    if (n == 1024):
+#        for i in range(n):
+#            inBufferFFT[i] = f[i]
+#    
+#        start = time()
+#        ipFFT.write(0x00, 0x01) # 0x00: bit 0: 0->1: start
+#        while (ipFFT.read(0x00) & 0x4) == 0x0:
+#           continue
+#        end = time()
+#        #print(f"FFT IP execution time: {end - start} sec")
+#        tmp = [0 for i in range(1024)]
+#        for i in range(1024):
+#            tmp[i] = inBufferFFT[i]
+#        f_fft = get_fft1024(tmp)
+#        
+#    elif
+    if (n > 2):
         f0, f1 = split(f)
         f0_fft = fft(f0)
         f1_fft = fft(f1)
