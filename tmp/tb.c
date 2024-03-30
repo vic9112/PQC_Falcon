@@ -43,7 +43,7 @@ void test_FFT(void)
 	FFT(FFT_in);
     for(int i = 0; i<1024;++i)
             if(FFT_in[i] != FFT_out[i])
-            printf("%d cal = %lf, cor = %lf ", i, FFT_in[i], FFT_out[i]);
+            printf("%d cal = %lf, cor = %lf \n", i, FFT_in[i], FFT_out[i]);
         printf("\n \n");
     printf("Test Finished \n");
 }
@@ -79,15 +79,84 @@ void test_iFFT(void) {
 }
 */
 
+void test_index(int t, int m) {
+	int hm, ht;
+	hm = m >> 1;
+	ht = t >> 1;
+	int gm_or[256];
+	int gm_op[256];
+	int in_or[256];
+	int in_op[256];
+
+	int or_in = 0;
+	int op_in = 0;
+
+	int error_cnt = 0;
+	//printf("Original");
+	SECTION: for (int k = 0, i = 0; k < hm; k++, i += t) {
+	#pragma HLS UNROLL factor=4
+			int j, j2;
+			j2 = i + ht;
+			int gm_re, gm_im;
+			gm_re = ((m + k) << 1) + 0;
+			gm_im = ((m + k) << 1) + 1;
+			BUTTERFLY: for (j = i; j < j2; j++) {
+				//printf("gm %d, index %d \n", k, j);
+				gm_or[or_in] = gm_re;
+				in_or[or_in] = j;
+				or_in += 1;
+			}
+	}
+	//printf("Optimized");
+	int in = 0, in_gm = 0;
+	for (int n = 0; n < 256; n++) {
+		int gm_re_new, gm_im_new;
+		gm_re_new = ((m + in_gm) << 1) + 0;
+		gm_im_new = ((m + in_gm) << 1) + 1;
+		//printf("gm %d, index %d \n", in_gm, in);
+		gm_op[n] = gm_re_new;
+		in_op[n] = in;
+		if ((in + 1) % ht == 0) {
+			in += ht + 1;
+			in_gm += 1;
+		} else {
+			in += 1;
+		}
+	}
+
+	for (int g = 0; g < 256; g++) {
+		if (gm_op[g] != gm_or[g]) {
+			printf("%d GM not equal \n", g);
+			error_cnt += 1;
+		}
+		if (in_op[g] != in_or[g]) {
+			printf("%d index not equal \n", g);
+			error_cnt += 1;
+		}
+	}
+
+	if (error_cnt == 0) printf("t = %d, m = %d passed\n", t, m);
+	else				printf("t = %d, m = %d failed\n", t, m);
+}
+
 
 int
-main(void)
-{
+main(void) {
 
 	// test_python_h();
 	test_FFT();
 	// test_iFFT();
 	// test_FFT_skeleton();
-
+/*
+	test_index(512, 2);
+	test_index(256, 4);
+	test_index(128, 8);
+	test_index(64, 16);
+	test_index(32, 32);
+	test_index(16, 64);
+	test_index(8, 128);
+	test_index(4, 256);
+	test_index(2, 512);
+*/
 	return 0;
 }
