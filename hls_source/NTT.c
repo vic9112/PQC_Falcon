@@ -173,12 +173,12 @@ void mq_NTT(uint16_t *a, unsigned logn)
 				//a[j] = (uint16_t)my_mq_add(u, v);
 				tmp1 = u + v - Q;
 				tmp1 += Q & -(tmp1 >> 31);
-				a[j] = (uint32_t)tmp1;
+				a[j] = (uint16_t)tmp1;
 
 				//a[j + ht] = (uint16_t)my_mq_sub(u, v);
 				tmp1 = u - v;
 				tmp1 += Q & -(tmp1 >> 31);
-				a[j + ht] = (uint32_t)tmp1;
+				a[j + ht] = (uint16_t)tmp1;
 
 			}
 		}
