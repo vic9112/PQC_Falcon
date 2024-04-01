@@ -1,4 +1,4 @@
-# Optimized Fast-Fourier Transform Hardware IP
+# Optimized Number Theoretic Transform Hardware IP
 
 ## Improvement
 
