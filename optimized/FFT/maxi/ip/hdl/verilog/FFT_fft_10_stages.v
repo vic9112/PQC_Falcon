@@ -104,6 +104,12 @@ reg ap_ready;
 
 (* fsm_encoding = "none" *) reg   [17:0] ap_CS_fsm;
 wire    ap_CS_fsm_state1;
+reg   [9:0] gm_re_tab_address0;
+reg    gm_re_tab_ce0;
+wire   [63:0] gm_re_tab_q0;
+reg   [9:0] gm_im_tab_address0;
+reg    gm_im_tab_ce0;
+wire   [63:0] gm_im_tab_q0;
 reg   [6:0] stage0_r_address0;
 reg    stage0_r_ce0;
 reg    stage0_r_we0;
@@ -112,7 +118,6 @@ wire   [63:0] stage0_r_q0;
 reg   [6:0] stage0_r_address1;
 reg    stage0_r_ce1;
 reg    stage0_r_we1;
-reg   [63:0] stage0_r_d1;
 wire   [63:0] stage0_r_q1;
 reg   [6:0] stage0_r_1_address0;
 reg    stage0_r_1_ce0;
@@ -149,7 +154,6 @@ wire   [63:0] stage0_i_q0;
 reg   [6:0] stage0_i_address1;
 reg    stage0_i_ce1;
 reg    stage0_i_we1;
-reg   [63:0] stage0_i_d1;
 wire   [63:0] stage0_i_q1;
 reg   [6:0] stage0_i_1_address0;
 reg    stage0_i_1_ce0;
@@ -181,401 +185,909 @@ wire   [63:0] stage0_i_3_q1;
 reg   [6:0] stage1_r_address0;
 reg    stage1_r_ce0;
 reg    stage1_r_we0;
+reg   [63:0] stage1_r_d0;
 wire   [63:0] stage1_r_q0;
 reg   [6:0] stage1_r_address1;
 reg    stage1_r_ce1;
-reg    stage1_r_we1;
 wire   [63:0] stage1_r_q1;
 reg   [6:0] stage1_r_1_address0;
 reg    stage1_r_1_ce0;
 reg    stage1_r_1_we0;
+reg   [63:0] stage1_r_1_d0;
 wire   [63:0] stage1_r_1_q0;
 reg   [6:0] stage1_r_1_address1;
 reg    stage1_r_1_ce1;
-reg    stage1_r_1_we1;
 wire   [63:0] stage1_r_1_q1;
 reg   [6:0] stage1_r_2_address0;
 reg    stage1_r_2_ce0;
 reg    stage1_r_2_we0;
+reg   [63:0] stage1_r_2_d0;
 wire   [63:0] stage1_r_2_q0;
 reg   [6:0] stage1_r_2_address1;
 reg    stage1_r_2_ce1;
-reg    stage1_r_2_we1;
 wire   [63:0] stage1_r_2_q1;
 reg   [6:0] stage1_r_3_address0;
 reg    stage1_r_3_ce0;
 reg    stage1_r_3_we0;
+reg   [63:0] stage1_r_3_d0;
 wire   [63:0] stage1_r_3_q0;
 reg   [6:0] stage1_r_3_address1;
 reg    stage1_r_3_ce1;
-reg    stage1_r_3_we1;
 wire   [63:0] stage1_r_3_q1;
 reg   [6:0] stage1_i_address0;
 reg    stage1_i_ce0;
 reg    stage1_i_we0;
+reg   [63:0] stage1_i_d0;
 wire   [63:0] stage1_i_q0;
 reg   [6:0] stage1_i_address1;
 reg    stage1_i_ce1;
-reg    stage1_i_we1;
 wire   [63:0] stage1_i_q1;
 reg   [6:0] stage1_i_1_address0;
 reg    stage1_i_1_ce0;
 reg    stage1_i_1_we0;
+reg   [63:0] stage1_i_1_d0;
 wire   [63:0] stage1_i_1_q0;
 reg   [6:0] stage1_i_1_address1;
 reg    stage1_i_1_ce1;
-reg    stage1_i_1_we1;
 wire   [63:0] stage1_i_1_q1;
 reg   [6:0] stage1_i_2_address0;
 reg    stage1_i_2_ce0;
 reg    stage1_i_2_we0;
+reg   [63:0] stage1_i_2_d0;
 wire   [63:0] stage1_i_2_q0;
 reg   [6:0] stage1_i_2_address1;
 reg    stage1_i_2_ce1;
-reg    stage1_i_2_we1;
 wire   [63:0] stage1_i_2_q1;
 reg   [6:0] stage1_i_3_address0;
 reg    stage1_i_3_ce0;
 reg    stage1_i_3_we0;
+reg   [63:0] stage1_i_3_d0;
 wire   [63:0] stage1_i_3_q0;
 reg   [6:0] stage1_i_3_address1;
 reg    stage1_i_3_ce1;
-reg    stage1_i_3_we1;
 wire   [63:0] stage1_i_3_q1;
-wire    grp_fft_stage_fu_102_ap_start;
-wire    grp_fft_stage_fu_102_ap_done;
-wire    grp_fft_stage_fu_102_ap_idle;
-wire    grp_fft_stage_fu_102_ap_ready;
-wire   [8:0] grp_fft_stage_fu_102_in_r_address0;
-wire    grp_fft_stage_fu_102_in_r_ce0;
-wire   [8:0] grp_fft_stage_fu_102_in_r_address1;
-wire    grp_fft_stage_fu_102_in_r_ce1;
-wire   [8:0] grp_fft_stage_fu_102_in_i_address0;
-wire    grp_fft_stage_fu_102_in_i_ce0;
-wire   [8:0] grp_fft_stage_fu_102_in_i_address1;
-wire    grp_fft_stage_fu_102_in_i_ce1;
-wire   [6:0] grp_fft_stage_fu_102_out_r_0_address0;
-wire    grp_fft_stage_fu_102_out_r_0_ce0;
-wire    grp_fft_stage_fu_102_out_r_0_we0;
-wire   [63:0] grp_fft_stage_fu_102_out_r_0_d0;
-wire   [6:0] grp_fft_stage_fu_102_out_r_0_address1;
-wire    grp_fft_stage_fu_102_out_r_0_ce1;
-wire    grp_fft_stage_fu_102_out_r_0_we1;
-wire   [63:0] grp_fft_stage_fu_102_out_r_0_d1;
-wire   [6:0] grp_fft_stage_fu_102_out_r_1_address0;
-wire    grp_fft_stage_fu_102_out_r_1_ce0;
-wire    grp_fft_stage_fu_102_out_r_1_we0;
-wire   [63:0] grp_fft_stage_fu_102_out_r_1_d0;
-wire   [6:0] grp_fft_stage_fu_102_out_r_2_address0;
-wire    grp_fft_stage_fu_102_out_r_2_ce0;
-wire    grp_fft_stage_fu_102_out_r_2_we0;
-wire   [63:0] grp_fft_stage_fu_102_out_r_2_d0;
-wire   [6:0] grp_fft_stage_fu_102_out_r_3_address0;
-wire    grp_fft_stage_fu_102_out_r_3_ce0;
-wire    grp_fft_stage_fu_102_out_r_3_we0;
-wire   [63:0] grp_fft_stage_fu_102_out_r_3_d0;
-wire   [6:0] grp_fft_stage_fu_102_out_i_0_address0;
-wire    grp_fft_stage_fu_102_out_i_0_ce0;
-wire    grp_fft_stage_fu_102_out_i_0_we0;
-wire   [63:0] grp_fft_stage_fu_102_out_i_0_d0;
-wire   [6:0] grp_fft_stage_fu_102_out_i_0_address1;
-wire    grp_fft_stage_fu_102_out_i_0_ce1;
-wire    grp_fft_stage_fu_102_out_i_0_we1;
-wire   [63:0] grp_fft_stage_fu_102_out_i_0_d1;
-wire   [6:0] grp_fft_stage_fu_102_out_i_1_address0;
-wire    grp_fft_stage_fu_102_out_i_1_ce0;
-wire    grp_fft_stage_fu_102_out_i_1_we0;
-wire   [63:0] grp_fft_stage_fu_102_out_i_1_d0;
-wire   [6:0] grp_fft_stage_fu_102_out_i_2_address0;
-wire    grp_fft_stage_fu_102_out_i_2_ce0;
-wire    grp_fft_stage_fu_102_out_i_2_we0;
-wire   [63:0] grp_fft_stage_fu_102_out_i_2_d0;
-wire   [6:0] grp_fft_stage_fu_102_out_i_3_address0;
-wire    grp_fft_stage_fu_102_out_i_3_ce0;
-wire    grp_fft_stage_fu_102_out_i_3_we0;
-wire   [63:0] grp_fft_stage_fu_102_out_i_3_d0;
-wire   [63:0] grp_fft_stage_fu_102_grp_fu_186_p_din0;
-wire   [63:0] grp_fft_stage_fu_102_grp_fu_186_p_din1;
-wire   [1:0] grp_fft_stage_fu_102_grp_fu_186_p_opcode;
-wire    grp_fft_stage_fu_102_grp_fu_186_p_ce;
-wire   [63:0] grp_fft_stage_fu_102_grp_fu_190_p_din0;
-wire   [63:0] grp_fft_stage_fu_102_grp_fu_190_p_din1;
-wire   [1:0] grp_fft_stage_fu_102_grp_fu_190_p_opcode;
-wire    grp_fft_stage_fu_102_grp_fu_190_p_ce;
-wire   [63:0] grp_fft_stage_fu_102_grp_fu_194_p_din0;
-wire   [63:0] grp_fft_stage_fu_102_grp_fu_194_p_din1;
-wire   [1:0] grp_fft_stage_fu_102_grp_fu_194_p_opcode;
-wire    grp_fft_stage_fu_102_grp_fu_194_p_ce;
-wire   [63:0] grp_fft_stage_fu_102_grp_fu_198_p_din0;
-wire   [63:0] grp_fft_stage_fu_102_grp_fu_198_p_din1;
-wire   [1:0] grp_fft_stage_fu_102_grp_fu_198_p_opcode;
-wire    grp_fft_stage_fu_102_grp_fu_198_p_ce;
-wire   [63:0] grp_fft_stage_fu_102_grp_fu_202_p_din0;
-wire   [63:0] grp_fft_stage_fu_102_grp_fu_202_p_din1;
-wire   [1:0] grp_fft_stage_fu_102_grp_fu_202_p_opcode;
-wire    grp_fft_stage_fu_102_grp_fu_202_p_ce;
-wire   [63:0] grp_fft_stage_fu_102_grp_fu_206_p_din0;
-wire   [63:0] grp_fft_stage_fu_102_grp_fu_206_p_din1;
-wire   [1:0] grp_fft_stage_fu_102_grp_fu_206_p_opcode;
-wire    grp_fft_stage_fu_102_grp_fu_206_p_ce;
-wire   [63:0] grp_fft_stage_fu_102_grp_fu_210_p_din0;
-wire   [63:0] grp_fft_stage_fu_102_grp_fu_210_p_din1;
-wire    grp_fft_stage_fu_102_grp_fu_210_p_ce;
-wire   [63:0] grp_fft_stage_fu_102_grp_fu_214_p_din0;
-wire   [63:0] grp_fft_stage_fu_102_grp_fu_214_p_din1;
-wire    grp_fft_stage_fu_102_grp_fu_214_p_ce;
-wire    grp_fft_stage_clone_fu_126_ap_start;
-wire    grp_fft_stage_clone_fu_126_ap_done;
-wire    grp_fft_stage_clone_fu_126_ap_idle;
-wire    grp_fft_stage_clone_fu_126_ap_ready;
-wire   [6:0] grp_fft_stage_clone_fu_126_in_r_0_address0;
-wire    grp_fft_stage_clone_fu_126_in_r_0_ce0;
-reg   [63:0] grp_fft_stage_clone_fu_126_in_r_0_q0;
-wire   [6:0] grp_fft_stage_clone_fu_126_in_r_0_address1;
-wire    grp_fft_stage_clone_fu_126_in_r_0_ce1;
-reg   [63:0] grp_fft_stage_clone_fu_126_in_r_0_q1;
-wire   [6:0] grp_fft_stage_clone_fu_126_in_r_1_address0;
-wire    grp_fft_stage_clone_fu_126_in_r_1_ce0;
-reg   [63:0] grp_fft_stage_clone_fu_126_in_r_1_q0;
-wire   [6:0] grp_fft_stage_clone_fu_126_in_r_1_address1;
-wire    grp_fft_stage_clone_fu_126_in_r_1_ce1;
-reg   [63:0] grp_fft_stage_clone_fu_126_in_r_1_q1;
-wire   [6:0] grp_fft_stage_clone_fu_126_in_r_2_address0;
-wire    grp_fft_stage_clone_fu_126_in_r_2_ce0;
-reg   [63:0] grp_fft_stage_clone_fu_126_in_r_2_q0;
-wire   [6:0] grp_fft_stage_clone_fu_126_in_r_2_address1;
-wire    grp_fft_stage_clone_fu_126_in_r_2_ce1;
-reg   [63:0] grp_fft_stage_clone_fu_126_in_r_2_q1;
-wire   [6:0] grp_fft_stage_clone_fu_126_in_r_3_address0;
-wire    grp_fft_stage_clone_fu_126_in_r_3_ce0;
-reg   [63:0] grp_fft_stage_clone_fu_126_in_r_3_q0;
-wire   [6:0] grp_fft_stage_clone_fu_126_in_r_3_address1;
-wire    grp_fft_stage_clone_fu_126_in_r_3_ce1;
-reg   [63:0] grp_fft_stage_clone_fu_126_in_r_3_q1;
-wire   [6:0] grp_fft_stage_clone_fu_126_in_i_0_address0;
-wire    grp_fft_stage_clone_fu_126_in_i_0_ce0;
-reg   [63:0] grp_fft_stage_clone_fu_126_in_i_0_q0;
-wire   [6:0] grp_fft_stage_clone_fu_126_in_i_0_address1;
-wire    grp_fft_stage_clone_fu_126_in_i_0_ce1;
-reg   [63:0] grp_fft_stage_clone_fu_126_in_i_0_q1;
-wire   [6:0] grp_fft_stage_clone_fu_126_in_i_1_address0;
-wire    grp_fft_stage_clone_fu_126_in_i_1_ce0;
-reg   [63:0] grp_fft_stage_clone_fu_126_in_i_1_q0;
-wire   [6:0] grp_fft_stage_clone_fu_126_in_i_1_address1;
-wire    grp_fft_stage_clone_fu_126_in_i_1_ce1;
-reg   [63:0] grp_fft_stage_clone_fu_126_in_i_1_q1;
-wire   [6:0] grp_fft_stage_clone_fu_126_in_i_2_address0;
-wire    grp_fft_stage_clone_fu_126_in_i_2_ce0;
-reg   [63:0] grp_fft_stage_clone_fu_126_in_i_2_q0;
-wire   [6:0] grp_fft_stage_clone_fu_126_in_i_2_address1;
-wire    grp_fft_stage_clone_fu_126_in_i_2_ce1;
-reg   [63:0] grp_fft_stage_clone_fu_126_in_i_2_q1;
-wire   [6:0] grp_fft_stage_clone_fu_126_in_i_3_address0;
-wire    grp_fft_stage_clone_fu_126_in_i_3_ce0;
-reg   [63:0] grp_fft_stage_clone_fu_126_in_i_3_q0;
-wire   [6:0] grp_fft_stage_clone_fu_126_in_i_3_address1;
-wire    grp_fft_stage_clone_fu_126_in_i_3_ce1;
-reg   [63:0] grp_fft_stage_clone_fu_126_in_i_3_q1;
-wire   [6:0] grp_fft_stage_clone_fu_126_out_r_0_address0;
-wire    grp_fft_stage_clone_fu_126_out_r_0_ce0;
-wire    grp_fft_stage_clone_fu_126_out_r_0_we0;
-wire   [63:0] grp_fft_stage_clone_fu_126_out_r_0_d0;
-wire   [6:0] grp_fft_stage_clone_fu_126_out_r_0_address1;
-wire    grp_fft_stage_clone_fu_126_out_r_0_ce1;
-wire    grp_fft_stage_clone_fu_126_out_r_0_we1;
-wire   [63:0] grp_fft_stage_clone_fu_126_out_r_0_d1;
-wire   [6:0] grp_fft_stage_clone_fu_126_out_r_1_address0;
-wire    grp_fft_stage_clone_fu_126_out_r_1_ce0;
-wire    grp_fft_stage_clone_fu_126_out_r_1_we0;
-wire   [63:0] grp_fft_stage_clone_fu_126_out_r_1_d0;
-wire   [6:0] grp_fft_stage_clone_fu_126_out_r_1_address1;
-wire    grp_fft_stage_clone_fu_126_out_r_1_ce1;
-wire    grp_fft_stage_clone_fu_126_out_r_1_we1;
-wire   [63:0] grp_fft_stage_clone_fu_126_out_r_1_d1;
-wire   [6:0] grp_fft_stage_clone_fu_126_out_r_2_address0;
-wire    grp_fft_stage_clone_fu_126_out_r_2_ce0;
-wire    grp_fft_stage_clone_fu_126_out_r_2_we0;
-wire   [63:0] grp_fft_stage_clone_fu_126_out_r_2_d0;
-wire   [6:0] grp_fft_stage_clone_fu_126_out_r_2_address1;
-wire    grp_fft_stage_clone_fu_126_out_r_2_ce1;
-wire    grp_fft_stage_clone_fu_126_out_r_2_we1;
-wire   [63:0] grp_fft_stage_clone_fu_126_out_r_2_d1;
-wire   [6:0] grp_fft_stage_clone_fu_126_out_r_3_address0;
-wire    grp_fft_stage_clone_fu_126_out_r_3_ce0;
-wire    grp_fft_stage_clone_fu_126_out_r_3_we0;
-wire   [63:0] grp_fft_stage_clone_fu_126_out_r_3_d0;
-wire   [6:0] grp_fft_stage_clone_fu_126_out_r_3_address1;
-wire    grp_fft_stage_clone_fu_126_out_r_3_ce1;
-wire    grp_fft_stage_clone_fu_126_out_r_3_we1;
-wire   [63:0] grp_fft_stage_clone_fu_126_out_r_3_d1;
-wire   [6:0] grp_fft_stage_clone_fu_126_out_i_0_address0;
-wire    grp_fft_stage_clone_fu_126_out_i_0_ce0;
-wire    grp_fft_stage_clone_fu_126_out_i_0_we0;
-wire   [63:0] grp_fft_stage_clone_fu_126_out_i_0_d0;
-wire   [6:0] grp_fft_stage_clone_fu_126_out_i_0_address1;
-wire    grp_fft_stage_clone_fu_126_out_i_0_ce1;
-wire    grp_fft_stage_clone_fu_126_out_i_0_we1;
-wire   [63:0] grp_fft_stage_clone_fu_126_out_i_0_d1;
-wire   [6:0] grp_fft_stage_clone_fu_126_out_i_1_address0;
-wire    grp_fft_stage_clone_fu_126_out_i_1_ce0;
-wire    grp_fft_stage_clone_fu_126_out_i_1_we0;
-wire   [63:0] grp_fft_stage_clone_fu_126_out_i_1_d0;
-wire   [6:0] grp_fft_stage_clone_fu_126_out_i_1_address1;
-wire    grp_fft_stage_clone_fu_126_out_i_1_ce1;
-wire    grp_fft_stage_clone_fu_126_out_i_1_we1;
-wire   [63:0] grp_fft_stage_clone_fu_126_out_i_1_d1;
-wire   [6:0] grp_fft_stage_clone_fu_126_out_i_2_address0;
-wire    grp_fft_stage_clone_fu_126_out_i_2_ce0;
-wire    grp_fft_stage_clone_fu_126_out_i_2_we0;
-wire   [63:0] grp_fft_stage_clone_fu_126_out_i_2_d0;
-wire   [6:0] grp_fft_stage_clone_fu_126_out_i_2_address1;
-wire    grp_fft_stage_clone_fu_126_out_i_2_ce1;
-wire    grp_fft_stage_clone_fu_126_out_i_2_we1;
-wire   [63:0] grp_fft_stage_clone_fu_126_out_i_2_d1;
-wire   [6:0] grp_fft_stage_clone_fu_126_out_i_3_address0;
-wire    grp_fft_stage_clone_fu_126_out_i_3_ce0;
-wire    grp_fft_stage_clone_fu_126_out_i_3_we0;
-wire   [63:0] grp_fft_stage_clone_fu_126_out_i_3_d0;
-wire   [6:0] grp_fft_stage_clone_fu_126_out_i_3_address1;
-wire    grp_fft_stage_clone_fu_126_out_i_3_ce1;
-wire    grp_fft_stage_clone_fu_126_out_i_3_we1;
-wire   [63:0] grp_fft_stage_clone_fu_126_out_i_3_d1;
-reg   [8:0] grp_fft_stage_clone_fu_126_t;
-reg   [8:0] grp_fft_stage_clone_fu_126_m;
-wire    grp_fft_stage_clone_clone_fu_166_ap_start;
-wire    grp_fft_stage_clone_clone_fu_166_ap_done;
-wire    grp_fft_stage_clone_clone_fu_166_ap_idle;
-wire    grp_fft_stage_clone_clone_fu_166_ap_ready;
-wire   [6:0] grp_fft_stage_clone_clone_fu_166_in_r_0_address0;
-wire    grp_fft_stage_clone_clone_fu_166_in_r_0_ce0;
-wire   [6:0] grp_fft_stage_clone_clone_fu_166_in_r_0_address1;
-wire    grp_fft_stage_clone_clone_fu_166_in_r_0_ce1;
-wire   [6:0] grp_fft_stage_clone_clone_fu_166_in_r_1_address0;
-wire    grp_fft_stage_clone_clone_fu_166_in_r_1_ce0;
-wire   [6:0] grp_fft_stage_clone_clone_fu_166_in_r_1_address1;
-wire    grp_fft_stage_clone_clone_fu_166_in_r_1_ce1;
-wire   [6:0] grp_fft_stage_clone_clone_fu_166_in_r_2_address0;
-wire    grp_fft_stage_clone_clone_fu_166_in_r_2_ce0;
-wire   [6:0] grp_fft_stage_clone_clone_fu_166_in_r_2_address1;
-wire    grp_fft_stage_clone_clone_fu_166_in_r_2_ce1;
-wire   [6:0] grp_fft_stage_clone_clone_fu_166_in_r_3_address0;
-wire    grp_fft_stage_clone_clone_fu_166_in_r_3_ce0;
-wire   [6:0] grp_fft_stage_clone_clone_fu_166_in_r_3_address1;
-wire    grp_fft_stage_clone_clone_fu_166_in_r_3_ce1;
-wire   [6:0] grp_fft_stage_clone_clone_fu_166_in_i_0_address0;
-wire    grp_fft_stage_clone_clone_fu_166_in_i_0_ce0;
-wire   [6:0] grp_fft_stage_clone_clone_fu_166_in_i_0_address1;
-wire    grp_fft_stage_clone_clone_fu_166_in_i_0_ce1;
-wire   [6:0] grp_fft_stage_clone_clone_fu_166_in_i_1_address0;
-wire    grp_fft_stage_clone_clone_fu_166_in_i_1_ce0;
-wire   [6:0] grp_fft_stage_clone_clone_fu_166_in_i_1_address1;
-wire    grp_fft_stage_clone_clone_fu_166_in_i_1_ce1;
-wire   [6:0] grp_fft_stage_clone_clone_fu_166_in_i_2_address0;
-wire    grp_fft_stage_clone_clone_fu_166_in_i_2_ce0;
-wire   [6:0] grp_fft_stage_clone_clone_fu_166_in_i_2_address1;
-wire    grp_fft_stage_clone_clone_fu_166_in_i_2_ce1;
-wire   [6:0] grp_fft_stage_clone_clone_fu_166_in_i_3_address0;
-wire    grp_fft_stage_clone_clone_fu_166_in_i_3_ce0;
-wire   [6:0] grp_fft_stage_clone_clone_fu_166_in_i_3_address1;
-wire    grp_fft_stage_clone_clone_fu_166_in_i_3_ce1;
-wire   [8:0] grp_fft_stage_clone_clone_fu_166_out_r_address0;
-wire    grp_fft_stage_clone_clone_fu_166_out_r_ce0;
-wire    grp_fft_stage_clone_clone_fu_166_out_r_we0;
-wire   [63:0] grp_fft_stage_clone_clone_fu_166_out_r_d0;
-wire   [8:0] grp_fft_stage_clone_clone_fu_166_out_r_address1;
-wire    grp_fft_stage_clone_clone_fu_166_out_r_ce1;
-wire    grp_fft_stage_clone_clone_fu_166_out_r_we1;
-wire   [63:0] grp_fft_stage_clone_clone_fu_166_out_r_d1;
-wire   [8:0] grp_fft_stage_clone_clone_fu_166_out_i_address0;
-wire    grp_fft_stage_clone_clone_fu_166_out_i_ce0;
-wire    grp_fft_stage_clone_clone_fu_166_out_i_we0;
-wire   [63:0] grp_fft_stage_clone_clone_fu_166_out_i_d0;
-wire   [8:0] grp_fft_stage_clone_clone_fu_166_out_i_address1;
-wire    grp_fft_stage_clone_clone_fu_166_out_i_ce1;
-wire    grp_fft_stage_clone_clone_fu_166_out_i_we1;
-wire   [63:0] grp_fft_stage_clone_clone_fu_166_out_i_d1;
-wire   [63:0] grp_fft_stage_clone_clone_fu_166_grp_fu_186_p_din0;
-wire   [63:0] grp_fft_stage_clone_clone_fu_166_grp_fu_186_p_din1;
-wire   [1:0] grp_fft_stage_clone_clone_fu_166_grp_fu_186_p_opcode;
-wire    grp_fft_stage_clone_clone_fu_166_grp_fu_186_p_ce;
-wire   [63:0] grp_fft_stage_clone_clone_fu_166_grp_fu_190_p_din0;
-wire   [63:0] grp_fft_stage_clone_clone_fu_166_grp_fu_190_p_din1;
-wire   [1:0] grp_fft_stage_clone_clone_fu_166_grp_fu_190_p_opcode;
-wire    grp_fft_stage_clone_clone_fu_166_grp_fu_190_p_ce;
-wire   [63:0] grp_fft_stage_clone_clone_fu_166_grp_fu_194_p_din0;
-wire   [63:0] grp_fft_stage_clone_clone_fu_166_grp_fu_194_p_din1;
-wire   [1:0] grp_fft_stage_clone_clone_fu_166_grp_fu_194_p_opcode;
-wire    grp_fft_stage_clone_clone_fu_166_grp_fu_194_p_ce;
-wire   [63:0] grp_fft_stage_clone_clone_fu_166_grp_fu_198_p_din0;
-wire   [63:0] grp_fft_stage_clone_clone_fu_166_grp_fu_198_p_din1;
-wire   [1:0] grp_fft_stage_clone_clone_fu_166_grp_fu_198_p_opcode;
-wire    grp_fft_stage_clone_clone_fu_166_grp_fu_198_p_ce;
-wire   [63:0] grp_fft_stage_clone_clone_fu_166_grp_fu_202_p_din0;
-wire   [63:0] grp_fft_stage_clone_clone_fu_166_grp_fu_202_p_din1;
-wire   [1:0] grp_fft_stage_clone_clone_fu_166_grp_fu_202_p_opcode;
-wire    grp_fft_stage_clone_clone_fu_166_grp_fu_202_p_ce;
-wire   [63:0] grp_fft_stage_clone_clone_fu_166_grp_fu_206_p_din0;
-wire   [63:0] grp_fft_stage_clone_clone_fu_166_grp_fu_206_p_din1;
-wire   [1:0] grp_fft_stage_clone_clone_fu_166_grp_fu_206_p_opcode;
-wire    grp_fft_stage_clone_clone_fu_166_grp_fu_206_p_ce;
-wire   [63:0] grp_fft_stage_clone_clone_fu_166_grp_fu_210_p_din0;
-wire   [63:0] grp_fft_stage_clone_clone_fu_166_grp_fu_210_p_din1;
-wire    grp_fft_stage_clone_clone_fu_166_grp_fu_210_p_ce;
-wire   [63:0] grp_fft_stage_clone_clone_fu_166_grp_fu_214_p_din0;
-wire   [63:0] grp_fft_stage_clone_clone_fu_166_grp_fu_214_p_din1;
-wire    grp_fft_stage_clone_clone_fu_166_grp_fu_214_p_ce;
-reg    grp_fft_stage_fu_102_ap_start_reg;
+wire    grp_fft_10_stages_Pipeline_SECTION_fu_96_ap_start;
+wire    grp_fft_10_stages_Pipeline_SECTION_fu_96_ap_done;
+wire    grp_fft_10_stages_Pipeline_SECTION_fu_96_ap_idle;
+wire    grp_fft_10_stages_Pipeline_SECTION_fu_96_ap_ready;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_r_1_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_r_1_ce0;
+wire    grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_r_1_we0;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_r_1_d0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_r_1_address1;
+wire    grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_r_1_ce1;
+wire    grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_r_1_we1;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_r_1_d1;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_r_3_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_r_3_ce0;
+wire    grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_r_3_we0;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_r_3_d0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_r_3_address1;
+wire    grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_r_3_ce1;
+wire    grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_r_3_we1;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_r_3_d1;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_i_1_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_i_1_ce0;
+wire    grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_i_1_we0;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_i_1_d0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_i_1_address1;
+wire    grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_i_1_ce1;
+wire    grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_i_1_we1;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_i_1_d1;
+wire   [8:0] grp_fft_10_stages_Pipeline_SECTION_fu_96_in_r_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION_fu_96_in_r_ce0;
+wire   [8:0] grp_fft_10_stages_Pipeline_SECTION_fu_96_in_r_address1;
+wire    grp_fft_10_stages_Pipeline_SECTION_fu_96_in_r_ce1;
+wire   [8:0] grp_fft_10_stages_Pipeline_SECTION_fu_96_in_i_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION_fu_96_in_i_ce0;
+wire   [8:0] grp_fft_10_stages_Pipeline_SECTION_fu_96_in_i_address1;
+wire    grp_fft_10_stages_Pipeline_SECTION_fu_96_in_i_ce1;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_r_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_r_ce0;
+wire    grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_r_we0;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_r_d0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_r_address1;
+wire    grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_r_ce1;
+wire    grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_r_we1;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_r_d1;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_r_2_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_r_2_ce0;
+wire    grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_r_2_we0;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_r_2_d0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_r_2_address1;
+wire    grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_r_2_ce1;
+wire    grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_r_2_we1;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_r_2_d1;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_i_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_i_ce0;
+wire    grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_i_we0;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_i_d0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_i_address1;
+wire    grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_i_ce1;
+wire    grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_i_we1;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_i_d1;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_i_3_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_i_3_ce0;
+wire    grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_i_3_we0;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_i_3_d0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_i_3_address1;
+wire    grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_i_3_ce1;
+wire    grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_i_3_we1;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_i_3_d1;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_i_2_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_i_2_ce0;
+wire    grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_i_2_we0;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_i_2_d0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_i_2_address1;
+wire    grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_i_2_ce1;
+wire    grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_i_2_we1;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_i_2_d1;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION_fu_96_grp_complex_mul_fu_308_p_din1;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION_fu_96_grp_complex_mul_fu_308_p_din2;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION_fu_96_grp_complex_mul_fu_308_p_din3;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION_fu_96_grp_complex_mul_fu_308_p_din4;
+wire    grp_fft_10_stages_Pipeline_SECTION_fu_96_grp_complex_mul_fu_308_p_ce;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION_fu_96_grp_fu_315_p_din0;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION_fu_96_grp_fu_315_p_din1;
+wire   [1:0] grp_fft_10_stages_Pipeline_SECTION_fu_96_grp_fu_315_p_opcode;
+wire    grp_fft_10_stages_Pipeline_SECTION_fu_96_grp_fu_315_p_ce;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION_fu_96_grp_fu_319_p_din0;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION_fu_96_grp_fu_319_p_din1;
+wire   [1:0] grp_fft_10_stages_Pipeline_SECTION_fu_96_grp_fu_319_p_opcode;
+wire    grp_fft_10_stages_Pipeline_SECTION_fu_96_grp_fu_319_p_ce;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION_fu_96_grp_fu_323_p_din0;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION_fu_96_grp_fu_323_p_din1;
+wire   [1:0] grp_fft_10_stages_Pipeline_SECTION_fu_96_grp_fu_323_p_opcode;
+wire    grp_fft_10_stages_Pipeline_SECTION_fu_96_grp_fu_323_p_ce;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION_fu_96_grp_fu_327_p_din0;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION_fu_96_grp_fu_327_p_din1;
+wire   [1:0] grp_fft_10_stages_Pipeline_SECTION_fu_96_grp_fu_327_p_opcode;
+wire    grp_fft_10_stages_Pipeline_SECTION_fu_96_grp_fu_327_p_ce;
+wire    grp_fft_10_stages_Pipeline_SECTION3_fu_120_ap_start;
+wire    grp_fft_10_stages_Pipeline_SECTION3_fu_120_ap_done;
+wire    grp_fft_10_stages_Pipeline_SECTION3_fu_120_ap_idle;
+wire    grp_fft_10_stages_Pipeline_SECTION3_fu_120_ap_ready;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage1_r_4_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage1_r_4_ce0;
+wire    grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage1_r_4_we0;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage1_r_4_d0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage1_r_6_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage1_r_6_ce0;
+wire    grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage1_r_6_we0;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage1_r_6_d0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage1_i_4_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage1_i_4_ce0;
+wire    grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage1_i_4_we0;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage1_i_4_d0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage0_r_1_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage0_r_1_ce0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage0_r_1_address1;
+wire    grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage0_r_1_ce1;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage0_r_3_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage0_r_3_ce0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage0_r_3_address1;
+wire    grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage0_r_3_ce1;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage0_i_1_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage0_i_1_ce0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage0_i_1_address1;
+wire    grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage0_i_1_ce1;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage0_i_3_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage0_i_3_ce0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage0_i_3_address1;
+wire    grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage0_i_3_ce1;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage1_r_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage1_r_ce0;
+wire    grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage1_r_we0;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage1_r_d0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage1_r_5_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage1_r_5_ce0;
+wire    grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage1_r_5_we0;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage1_r_5_d0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage1_i_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage1_i_ce0;
+wire    grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage1_i_we0;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage1_i_d0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage1_i_6_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage1_i_6_ce0;
+wire    grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage1_i_6_we0;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage1_i_6_d0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage1_i_5_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage1_i_5_ce0;
+wire    grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage1_i_5_we0;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage1_i_5_d0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage0_r_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage0_r_ce0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage0_r_address1;
+wire    grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage0_r_ce1;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage0_r_2_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage0_r_2_ce0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage0_r_2_address1;
+wire    grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage0_r_2_ce1;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage0_i_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage0_i_ce0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage0_i_address1;
+wire    grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage0_i_ce1;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage0_i_2_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage0_i_2_ce0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage0_i_2_address1;
+wire    grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage0_i_2_ce1;
+wire   [9:0] grp_fft_10_stages_Pipeline_SECTION3_fu_120_gm_re_tab_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION3_fu_120_gm_re_tab_ce0;
+wire   [9:0] grp_fft_10_stages_Pipeline_SECTION3_fu_120_gm_im_tab_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION3_fu_120_gm_im_tab_ce0;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION3_fu_120_grp_complex_mul_fu_308_p_din1;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION3_fu_120_grp_complex_mul_fu_308_p_din2;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION3_fu_120_grp_complex_mul_fu_308_p_din3;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION3_fu_120_grp_complex_mul_fu_308_p_din4;
+wire    grp_fft_10_stages_Pipeline_SECTION3_fu_120_grp_complex_mul_fu_308_p_ce;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION3_fu_120_grp_fu_315_p_din0;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION3_fu_120_grp_fu_315_p_din1;
+wire   [1:0] grp_fft_10_stages_Pipeline_SECTION3_fu_120_grp_fu_315_p_opcode;
+wire    grp_fft_10_stages_Pipeline_SECTION3_fu_120_grp_fu_315_p_ce;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION3_fu_120_grp_fu_319_p_din0;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION3_fu_120_grp_fu_319_p_din1;
+wire   [1:0] grp_fft_10_stages_Pipeline_SECTION3_fu_120_grp_fu_319_p_opcode;
+wire    grp_fft_10_stages_Pipeline_SECTION3_fu_120_grp_fu_319_p_ce;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION3_fu_120_grp_fu_323_p_din0;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION3_fu_120_grp_fu_323_p_din1;
+wire   [1:0] grp_fft_10_stages_Pipeline_SECTION3_fu_120_grp_fu_323_p_opcode;
+wire    grp_fft_10_stages_Pipeline_SECTION3_fu_120_grp_fu_323_p_ce;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION3_fu_120_grp_fu_327_p_din0;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION3_fu_120_grp_fu_327_p_din1;
+wire   [1:0] grp_fft_10_stages_Pipeline_SECTION3_fu_120_grp_fu_327_p_opcode;
+wire    grp_fft_10_stages_Pipeline_SECTION3_fu_120_grp_fu_327_p_ce;
+wire    grp_fft_10_stages_Pipeline_SECTION4_fu_144_ap_start;
+wire    grp_fft_10_stages_Pipeline_SECTION4_fu_144_ap_done;
+wire    grp_fft_10_stages_Pipeline_SECTION4_fu_144_ap_idle;
+wire    grp_fft_10_stages_Pipeline_SECTION4_fu_144_ap_ready;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage0_r_1_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage0_r_1_ce0;
+wire    grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage0_r_1_we0;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage0_r_1_d0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage0_r_3_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage0_r_3_ce0;
+wire    grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage0_r_3_we0;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage0_r_3_d0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage0_i_1_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage0_i_1_ce0;
+wire    grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage0_i_1_we0;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage0_i_1_d0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage1_r_4_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage1_r_4_ce0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage1_r_4_address1;
+wire    grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage1_r_4_ce1;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage1_r_6_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage1_r_6_ce0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage1_r_6_address1;
+wire    grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage1_r_6_ce1;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage1_i_4_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage1_i_4_ce0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage1_i_4_address1;
+wire    grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage1_i_4_ce1;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage1_i_6_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage1_i_6_ce0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage1_i_6_address1;
+wire    grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage1_i_6_ce1;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage0_r_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage0_r_ce0;
+wire    grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage0_r_we0;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage0_r_d0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage0_r_2_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage0_r_2_ce0;
+wire    grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage0_r_2_we0;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage0_r_2_d0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage0_i_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage0_i_ce0;
+wire    grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage0_i_we0;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage0_i_d0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage0_i_3_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage0_i_3_ce0;
+wire    grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage0_i_3_we0;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage0_i_3_d0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage0_i_2_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage0_i_2_ce0;
+wire    grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage0_i_2_we0;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage0_i_2_d0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage1_r_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage1_r_ce0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage1_r_address1;
+wire    grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage1_r_ce1;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage1_r_5_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage1_r_5_ce0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage1_r_5_address1;
+wire    grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage1_r_5_ce1;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage1_i_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage1_i_ce0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage1_i_address1;
+wire    grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage1_i_ce1;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage1_i_5_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage1_i_5_ce0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage1_i_5_address1;
+wire    grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage1_i_5_ce1;
+wire   [9:0] grp_fft_10_stages_Pipeline_SECTION4_fu_144_gm_re_tab_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION4_fu_144_gm_re_tab_ce0;
+wire   [9:0] grp_fft_10_stages_Pipeline_SECTION4_fu_144_gm_im_tab_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION4_fu_144_gm_im_tab_ce0;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION4_fu_144_grp_complex_mul_fu_308_p_din1;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION4_fu_144_grp_complex_mul_fu_308_p_din2;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION4_fu_144_grp_complex_mul_fu_308_p_din3;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION4_fu_144_grp_complex_mul_fu_308_p_din4;
+wire    grp_fft_10_stages_Pipeline_SECTION4_fu_144_grp_complex_mul_fu_308_p_ce;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION4_fu_144_grp_fu_315_p_din0;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION4_fu_144_grp_fu_315_p_din1;
+wire   [1:0] grp_fft_10_stages_Pipeline_SECTION4_fu_144_grp_fu_315_p_opcode;
+wire    grp_fft_10_stages_Pipeline_SECTION4_fu_144_grp_fu_315_p_ce;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION4_fu_144_grp_fu_319_p_din0;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION4_fu_144_grp_fu_319_p_din1;
+wire   [1:0] grp_fft_10_stages_Pipeline_SECTION4_fu_144_grp_fu_319_p_opcode;
+wire    grp_fft_10_stages_Pipeline_SECTION4_fu_144_grp_fu_319_p_ce;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION4_fu_144_grp_fu_323_p_din0;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION4_fu_144_grp_fu_323_p_din1;
+wire   [1:0] grp_fft_10_stages_Pipeline_SECTION4_fu_144_grp_fu_323_p_opcode;
+wire    grp_fft_10_stages_Pipeline_SECTION4_fu_144_grp_fu_323_p_ce;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION4_fu_144_grp_fu_327_p_din0;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION4_fu_144_grp_fu_327_p_din1;
+wire   [1:0] grp_fft_10_stages_Pipeline_SECTION4_fu_144_grp_fu_327_p_opcode;
+wire    grp_fft_10_stages_Pipeline_SECTION4_fu_144_grp_fu_327_p_ce;
+wire    grp_fft_10_stages_Pipeline_SECTION5_fu_168_ap_start;
+wire    grp_fft_10_stages_Pipeline_SECTION5_fu_168_ap_done;
+wire    grp_fft_10_stages_Pipeline_SECTION5_fu_168_ap_idle;
+wire    grp_fft_10_stages_Pipeline_SECTION5_fu_168_ap_ready;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage1_r_4_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage1_r_4_ce0;
+wire    grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage1_r_4_we0;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage1_r_4_d0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage1_r_6_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage1_r_6_ce0;
+wire    grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage1_r_6_we0;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage1_r_6_d0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage1_i_4_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage1_i_4_ce0;
+wire    grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage1_i_4_we0;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage1_i_4_d0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage0_r_1_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage0_r_1_ce0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage0_r_1_address1;
+wire    grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage0_r_1_ce1;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage0_r_3_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage0_r_3_ce0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage0_r_3_address1;
+wire    grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage0_r_3_ce1;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage0_i_1_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage0_i_1_ce0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage0_i_1_address1;
+wire    grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage0_i_1_ce1;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage0_i_3_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage0_i_3_ce0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage0_i_3_address1;
+wire    grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage0_i_3_ce1;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage1_r_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage1_r_ce0;
+wire    grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage1_r_we0;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage1_r_d0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage1_r_5_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage1_r_5_ce0;
+wire    grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage1_r_5_we0;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage1_r_5_d0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage1_i_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage1_i_ce0;
+wire    grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage1_i_we0;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage1_i_d0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage1_i_6_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage1_i_6_ce0;
+wire    grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage1_i_6_we0;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage1_i_6_d0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage1_i_5_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage1_i_5_ce0;
+wire    grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage1_i_5_we0;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage1_i_5_d0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage0_r_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage0_r_ce0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage0_r_address1;
+wire    grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage0_r_ce1;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage0_r_2_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage0_r_2_ce0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage0_r_2_address1;
+wire    grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage0_r_2_ce1;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage0_i_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage0_i_ce0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage0_i_address1;
+wire    grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage0_i_ce1;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage0_i_2_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage0_i_2_ce0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage0_i_2_address1;
+wire    grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage0_i_2_ce1;
+wire   [9:0] grp_fft_10_stages_Pipeline_SECTION5_fu_168_gm_re_tab_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION5_fu_168_gm_re_tab_ce0;
+wire   [9:0] grp_fft_10_stages_Pipeline_SECTION5_fu_168_gm_im_tab_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION5_fu_168_gm_im_tab_ce0;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION5_fu_168_grp_complex_mul_fu_308_p_din1;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION5_fu_168_grp_complex_mul_fu_308_p_din2;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION5_fu_168_grp_complex_mul_fu_308_p_din3;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION5_fu_168_grp_complex_mul_fu_308_p_din4;
+wire    grp_fft_10_stages_Pipeline_SECTION5_fu_168_grp_complex_mul_fu_308_p_ce;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION5_fu_168_grp_fu_315_p_din0;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION5_fu_168_grp_fu_315_p_din1;
+wire   [1:0] grp_fft_10_stages_Pipeline_SECTION5_fu_168_grp_fu_315_p_opcode;
+wire    grp_fft_10_stages_Pipeline_SECTION5_fu_168_grp_fu_315_p_ce;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION5_fu_168_grp_fu_319_p_din0;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION5_fu_168_grp_fu_319_p_din1;
+wire   [1:0] grp_fft_10_stages_Pipeline_SECTION5_fu_168_grp_fu_319_p_opcode;
+wire    grp_fft_10_stages_Pipeline_SECTION5_fu_168_grp_fu_319_p_ce;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION5_fu_168_grp_fu_323_p_din0;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION5_fu_168_grp_fu_323_p_din1;
+wire   [1:0] grp_fft_10_stages_Pipeline_SECTION5_fu_168_grp_fu_323_p_opcode;
+wire    grp_fft_10_stages_Pipeline_SECTION5_fu_168_grp_fu_323_p_ce;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION5_fu_168_grp_fu_327_p_din0;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION5_fu_168_grp_fu_327_p_din1;
+wire   [1:0] grp_fft_10_stages_Pipeline_SECTION5_fu_168_grp_fu_327_p_opcode;
+wire    grp_fft_10_stages_Pipeline_SECTION5_fu_168_grp_fu_327_p_ce;
+wire    grp_fft_10_stages_Pipeline_SECTION6_fu_192_ap_start;
+wire    grp_fft_10_stages_Pipeline_SECTION6_fu_192_ap_done;
+wire    grp_fft_10_stages_Pipeline_SECTION6_fu_192_ap_idle;
+wire    grp_fft_10_stages_Pipeline_SECTION6_fu_192_ap_ready;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage0_r_1_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage0_r_1_ce0;
+wire    grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage0_r_1_we0;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage0_r_1_d0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage0_r_3_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage0_r_3_ce0;
+wire    grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage0_r_3_we0;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage0_r_3_d0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage0_i_1_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage0_i_1_ce0;
+wire    grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage0_i_1_we0;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage0_i_1_d0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage1_r_4_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage1_r_4_ce0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage1_r_4_address1;
+wire    grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage1_r_4_ce1;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage1_r_6_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage1_r_6_ce0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage1_r_6_address1;
+wire    grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage1_r_6_ce1;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage1_i_4_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage1_i_4_ce0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage1_i_4_address1;
+wire    grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage1_i_4_ce1;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage1_i_6_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage1_i_6_ce0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage1_i_6_address1;
+wire    grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage1_i_6_ce1;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage0_r_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage0_r_ce0;
+wire    grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage0_r_we0;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage0_r_d0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage0_r_2_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage0_r_2_ce0;
+wire    grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage0_r_2_we0;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage0_r_2_d0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage0_i_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage0_i_ce0;
+wire    grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage0_i_we0;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage0_i_d0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage0_i_3_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage0_i_3_ce0;
+wire    grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage0_i_3_we0;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage0_i_3_d0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage0_i_2_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage0_i_2_ce0;
+wire    grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage0_i_2_we0;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage0_i_2_d0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage1_r_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage1_r_ce0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage1_r_address1;
+wire    grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage1_r_ce1;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage1_r_5_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage1_r_5_ce0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage1_r_5_address1;
+wire    grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage1_r_5_ce1;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage1_i_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage1_i_ce0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage1_i_address1;
+wire    grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage1_i_ce1;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage1_i_5_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage1_i_5_ce0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage1_i_5_address1;
+wire    grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage1_i_5_ce1;
+wire   [9:0] grp_fft_10_stages_Pipeline_SECTION6_fu_192_gm_re_tab_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION6_fu_192_gm_re_tab_ce0;
+wire   [9:0] grp_fft_10_stages_Pipeline_SECTION6_fu_192_gm_im_tab_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION6_fu_192_gm_im_tab_ce0;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION6_fu_192_grp_complex_mul_fu_308_p_din1;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION6_fu_192_grp_complex_mul_fu_308_p_din2;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION6_fu_192_grp_complex_mul_fu_308_p_din3;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION6_fu_192_grp_complex_mul_fu_308_p_din4;
+wire    grp_fft_10_stages_Pipeline_SECTION6_fu_192_grp_complex_mul_fu_308_p_ce;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION6_fu_192_grp_fu_315_p_din0;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION6_fu_192_grp_fu_315_p_din1;
+wire   [1:0] grp_fft_10_stages_Pipeline_SECTION6_fu_192_grp_fu_315_p_opcode;
+wire    grp_fft_10_stages_Pipeline_SECTION6_fu_192_grp_fu_315_p_ce;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION6_fu_192_grp_fu_319_p_din0;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION6_fu_192_grp_fu_319_p_din1;
+wire   [1:0] grp_fft_10_stages_Pipeline_SECTION6_fu_192_grp_fu_319_p_opcode;
+wire    grp_fft_10_stages_Pipeline_SECTION6_fu_192_grp_fu_319_p_ce;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION6_fu_192_grp_fu_323_p_din0;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION6_fu_192_grp_fu_323_p_din1;
+wire   [1:0] grp_fft_10_stages_Pipeline_SECTION6_fu_192_grp_fu_323_p_opcode;
+wire    grp_fft_10_stages_Pipeline_SECTION6_fu_192_grp_fu_323_p_ce;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION6_fu_192_grp_fu_327_p_din0;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION6_fu_192_grp_fu_327_p_din1;
+wire   [1:0] grp_fft_10_stages_Pipeline_SECTION6_fu_192_grp_fu_327_p_opcode;
+wire    grp_fft_10_stages_Pipeline_SECTION6_fu_192_grp_fu_327_p_ce;
+wire    grp_fft_10_stages_Pipeline_SECTION7_fu_216_ap_start;
+wire    grp_fft_10_stages_Pipeline_SECTION7_fu_216_ap_done;
+wire    grp_fft_10_stages_Pipeline_SECTION7_fu_216_ap_idle;
+wire    grp_fft_10_stages_Pipeline_SECTION7_fu_216_ap_ready;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage1_r_4_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage1_r_4_ce0;
+wire    grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage1_r_4_we0;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage1_r_4_d0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage1_r_6_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage1_r_6_ce0;
+wire    grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage1_r_6_we0;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage1_r_6_d0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage1_i_4_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage1_i_4_ce0;
+wire    grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage1_i_4_we0;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage1_i_4_d0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage0_r_1_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage0_r_1_ce0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage0_r_1_address1;
+wire    grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage0_r_1_ce1;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage0_r_3_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage0_r_3_ce0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage0_r_3_address1;
+wire    grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage0_r_3_ce1;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage0_i_1_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage0_i_1_ce0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage0_i_1_address1;
+wire    grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage0_i_1_ce1;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage0_i_3_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage0_i_3_ce0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage0_i_3_address1;
+wire    grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage0_i_3_ce1;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage1_r_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage1_r_ce0;
+wire    grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage1_r_we0;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage1_r_d0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage1_r_5_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage1_r_5_ce0;
+wire    grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage1_r_5_we0;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage1_r_5_d0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage1_i_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage1_i_ce0;
+wire    grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage1_i_we0;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage1_i_d0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage1_i_6_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage1_i_6_ce0;
+wire    grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage1_i_6_we0;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage1_i_6_d0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage1_i_5_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage1_i_5_ce0;
+wire    grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage1_i_5_we0;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage1_i_5_d0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage0_r_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage0_r_ce0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage0_r_address1;
+wire    grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage0_r_ce1;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage0_r_2_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage0_r_2_ce0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage0_r_2_address1;
+wire    grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage0_r_2_ce1;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage0_i_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage0_i_ce0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage0_i_address1;
+wire    grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage0_i_ce1;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage0_i_2_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage0_i_2_ce0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage0_i_2_address1;
+wire    grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage0_i_2_ce1;
+wire   [9:0] grp_fft_10_stages_Pipeline_SECTION7_fu_216_gm_re_tab_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION7_fu_216_gm_re_tab_ce0;
+wire   [9:0] grp_fft_10_stages_Pipeline_SECTION7_fu_216_gm_im_tab_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION7_fu_216_gm_im_tab_ce0;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION7_fu_216_grp_complex_mul_fu_308_p_din1;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION7_fu_216_grp_complex_mul_fu_308_p_din2;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION7_fu_216_grp_complex_mul_fu_308_p_din3;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION7_fu_216_grp_complex_mul_fu_308_p_din4;
+wire    grp_fft_10_stages_Pipeline_SECTION7_fu_216_grp_complex_mul_fu_308_p_ce;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION7_fu_216_grp_fu_315_p_din0;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION7_fu_216_grp_fu_315_p_din1;
+wire   [1:0] grp_fft_10_stages_Pipeline_SECTION7_fu_216_grp_fu_315_p_opcode;
+wire    grp_fft_10_stages_Pipeline_SECTION7_fu_216_grp_fu_315_p_ce;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION7_fu_216_grp_fu_319_p_din0;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION7_fu_216_grp_fu_319_p_din1;
+wire   [1:0] grp_fft_10_stages_Pipeline_SECTION7_fu_216_grp_fu_319_p_opcode;
+wire    grp_fft_10_stages_Pipeline_SECTION7_fu_216_grp_fu_319_p_ce;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION7_fu_216_grp_fu_323_p_din0;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION7_fu_216_grp_fu_323_p_din1;
+wire   [1:0] grp_fft_10_stages_Pipeline_SECTION7_fu_216_grp_fu_323_p_opcode;
+wire    grp_fft_10_stages_Pipeline_SECTION7_fu_216_grp_fu_323_p_ce;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION7_fu_216_grp_fu_327_p_din0;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION7_fu_216_grp_fu_327_p_din1;
+wire   [1:0] grp_fft_10_stages_Pipeline_SECTION7_fu_216_grp_fu_327_p_opcode;
+wire    grp_fft_10_stages_Pipeline_SECTION7_fu_216_grp_fu_327_p_ce;
+wire    grp_fft_10_stages_Pipeline_SECTION8_fu_240_ap_start;
+wire    grp_fft_10_stages_Pipeline_SECTION8_fu_240_ap_done;
+wire    grp_fft_10_stages_Pipeline_SECTION8_fu_240_ap_idle;
+wire    grp_fft_10_stages_Pipeline_SECTION8_fu_240_ap_ready;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage0_r_1_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage0_r_1_ce0;
+wire    grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage0_r_1_we0;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage0_r_1_d0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage0_r_3_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage0_r_3_ce0;
+wire    grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage0_r_3_we0;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage0_r_3_d0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage0_i_1_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage0_i_1_ce0;
+wire    grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage0_i_1_we0;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage0_i_1_d0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage1_r_4_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage1_r_4_ce0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage1_r_4_address1;
+wire    grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage1_r_4_ce1;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage1_r_6_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage1_r_6_ce0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage1_r_6_address1;
+wire    grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage1_r_6_ce1;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage1_i_4_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage1_i_4_ce0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage1_i_4_address1;
+wire    grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage1_i_4_ce1;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage1_i_6_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage1_i_6_ce0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage1_i_6_address1;
+wire    grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage1_i_6_ce1;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage0_r_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage0_r_ce0;
+wire    grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage0_r_we0;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage0_r_d0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage0_r_2_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage0_r_2_ce0;
+wire    grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage0_r_2_we0;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage0_r_2_d0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage0_i_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage0_i_ce0;
+wire    grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage0_i_we0;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage0_i_d0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage0_i_3_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage0_i_3_ce0;
+wire    grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage0_i_3_we0;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage0_i_3_d0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage0_i_2_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage0_i_2_ce0;
+wire    grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage0_i_2_we0;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage0_i_2_d0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage1_r_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage1_r_ce0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage1_r_address1;
+wire    grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage1_r_ce1;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage1_r_5_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage1_r_5_ce0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage1_r_5_address1;
+wire    grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage1_r_5_ce1;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage1_i_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage1_i_ce0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage1_i_address1;
+wire    grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage1_i_ce1;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage1_i_5_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage1_i_5_ce0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage1_i_5_address1;
+wire    grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage1_i_5_ce1;
+wire   [9:0] grp_fft_10_stages_Pipeline_SECTION8_fu_240_gm_re_tab_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION8_fu_240_gm_re_tab_ce0;
+wire   [9:0] grp_fft_10_stages_Pipeline_SECTION8_fu_240_gm_im_tab_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION8_fu_240_gm_im_tab_ce0;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION8_fu_240_grp_complex_mul_fu_308_p_din1;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION8_fu_240_grp_complex_mul_fu_308_p_din2;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION8_fu_240_grp_complex_mul_fu_308_p_din3;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION8_fu_240_grp_complex_mul_fu_308_p_din4;
+wire    grp_fft_10_stages_Pipeline_SECTION8_fu_240_grp_complex_mul_fu_308_p_ce;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION8_fu_240_grp_fu_315_p_din0;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION8_fu_240_grp_fu_315_p_din1;
+wire   [1:0] grp_fft_10_stages_Pipeline_SECTION8_fu_240_grp_fu_315_p_opcode;
+wire    grp_fft_10_stages_Pipeline_SECTION8_fu_240_grp_fu_315_p_ce;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION8_fu_240_grp_fu_319_p_din0;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION8_fu_240_grp_fu_319_p_din1;
+wire   [1:0] grp_fft_10_stages_Pipeline_SECTION8_fu_240_grp_fu_319_p_opcode;
+wire    grp_fft_10_stages_Pipeline_SECTION8_fu_240_grp_fu_319_p_ce;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION8_fu_240_grp_fu_323_p_din0;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION8_fu_240_grp_fu_323_p_din1;
+wire   [1:0] grp_fft_10_stages_Pipeline_SECTION8_fu_240_grp_fu_323_p_opcode;
+wire    grp_fft_10_stages_Pipeline_SECTION8_fu_240_grp_fu_323_p_ce;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION8_fu_240_grp_fu_327_p_din0;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION8_fu_240_grp_fu_327_p_din1;
+wire   [1:0] grp_fft_10_stages_Pipeline_SECTION8_fu_240_grp_fu_327_p_opcode;
+wire    grp_fft_10_stages_Pipeline_SECTION8_fu_240_grp_fu_327_p_ce;
+wire    grp_fft_10_stages_Pipeline_SECTION9_fu_264_ap_start;
+wire    grp_fft_10_stages_Pipeline_SECTION9_fu_264_ap_done;
+wire    grp_fft_10_stages_Pipeline_SECTION9_fu_264_ap_idle;
+wire    grp_fft_10_stages_Pipeline_SECTION9_fu_264_ap_ready;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage1_i_6_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage1_i_6_ce0;
+wire    grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage1_i_6_we0;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage1_i_6_d0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage1_i_5_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage1_i_5_ce0;
+wire    grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage1_i_5_we0;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage1_i_5_d0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage1_i_4_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage1_i_4_ce0;
+wire    grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage1_i_4_we0;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage1_i_4_d0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage1_i_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage1_i_ce0;
+wire    grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage1_i_we0;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage1_i_d0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage1_r_6_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage1_r_6_ce0;
+wire    grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage1_r_6_we0;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage1_r_6_d0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage1_r_5_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage1_r_5_ce0;
+wire    grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage1_r_5_we0;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage1_r_5_d0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage1_r_4_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage1_r_4_ce0;
+wire    grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage1_r_4_we0;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage1_r_4_d0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage1_r_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage1_r_ce0;
+wire    grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage1_r_we0;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage1_r_d0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage0_r_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage0_r_ce0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage0_i_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage0_i_ce0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage0_r_2_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage0_r_2_ce0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage0_i_2_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage0_i_2_ce0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage0_r_1_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage0_r_1_ce0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage0_i_1_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage0_i_1_ce0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage0_r_3_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage0_r_3_ce0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage0_i_3_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage0_i_3_ce0;
+wire   [9:0] grp_fft_10_stages_Pipeline_SECTION9_fu_264_gm_re_tab_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION9_fu_264_gm_re_tab_ce0;
+wire   [9:0] grp_fft_10_stages_Pipeline_SECTION9_fu_264_gm_im_tab_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION9_fu_264_gm_im_tab_ce0;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION9_fu_264_grp_complex_mul_fu_308_p_din1;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION9_fu_264_grp_complex_mul_fu_308_p_din2;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION9_fu_264_grp_complex_mul_fu_308_p_din3;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION9_fu_264_grp_complex_mul_fu_308_p_din4;
+wire    grp_fft_10_stages_Pipeline_SECTION9_fu_264_grp_complex_mul_fu_308_p_ce;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION9_fu_264_grp_fu_315_p_din0;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION9_fu_264_grp_fu_315_p_din1;
+wire   [1:0] grp_fft_10_stages_Pipeline_SECTION9_fu_264_grp_fu_315_p_opcode;
+wire    grp_fft_10_stages_Pipeline_SECTION9_fu_264_grp_fu_315_p_ce;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION9_fu_264_grp_fu_319_p_din0;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION9_fu_264_grp_fu_319_p_din1;
+wire   [1:0] grp_fft_10_stages_Pipeline_SECTION9_fu_264_grp_fu_319_p_opcode;
+wire    grp_fft_10_stages_Pipeline_SECTION9_fu_264_grp_fu_319_p_ce;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION9_fu_264_grp_fu_323_p_din0;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION9_fu_264_grp_fu_323_p_din1;
+wire   [1:0] grp_fft_10_stages_Pipeline_SECTION9_fu_264_grp_fu_323_p_opcode;
+wire    grp_fft_10_stages_Pipeline_SECTION9_fu_264_grp_fu_323_p_ce;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION9_fu_264_grp_fu_327_p_din0;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION9_fu_264_grp_fu_327_p_din1;
+wire   [1:0] grp_fft_10_stages_Pipeline_SECTION9_fu_264_grp_fu_327_p_opcode;
+wire    grp_fft_10_stages_Pipeline_SECTION9_fu_264_grp_fu_327_p_ce;
+wire    grp_fft_10_stages_Pipeline_SECTION10_fu_288_ap_start;
+wire    grp_fft_10_stages_Pipeline_SECTION10_fu_288_ap_done;
+wire    grp_fft_10_stages_Pipeline_SECTION10_fu_288_ap_idle;
+wire    grp_fft_10_stages_Pipeline_SECTION10_fu_288_ap_ready;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION10_fu_288_stage1_r_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION10_fu_288_stage1_r_ce0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION10_fu_288_stage1_i_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION10_fu_288_stage1_i_ce0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION10_fu_288_stage1_r_4_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION10_fu_288_stage1_r_4_ce0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION10_fu_288_stage1_i_4_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION10_fu_288_stage1_i_4_ce0;
+wire   [8:0] grp_fft_10_stages_Pipeline_SECTION10_fu_288_out_r_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION10_fu_288_out_r_ce0;
+wire    grp_fft_10_stages_Pipeline_SECTION10_fu_288_out_r_we0;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION10_fu_288_out_r_d0;
+wire   [8:0] grp_fft_10_stages_Pipeline_SECTION10_fu_288_out_r_address1;
+wire    grp_fft_10_stages_Pipeline_SECTION10_fu_288_out_r_ce1;
+wire    grp_fft_10_stages_Pipeline_SECTION10_fu_288_out_r_we1;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION10_fu_288_out_r_d1;
+wire   [8:0] grp_fft_10_stages_Pipeline_SECTION10_fu_288_out_i_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION10_fu_288_out_i_ce0;
+wire    grp_fft_10_stages_Pipeline_SECTION10_fu_288_out_i_we0;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION10_fu_288_out_i_d0;
+wire   [8:0] grp_fft_10_stages_Pipeline_SECTION10_fu_288_out_i_address1;
+wire    grp_fft_10_stages_Pipeline_SECTION10_fu_288_out_i_ce1;
+wire    grp_fft_10_stages_Pipeline_SECTION10_fu_288_out_i_we1;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION10_fu_288_out_i_d1;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION10_fu_288_stage1_r_5_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION10_fu_288_stage1_r_5_ce0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION10_fu_288_stage1_i_5_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION10_fu_288_stage1_i_5_ce0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION10_fu_288_stage1_r_6_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION10_fu_288_stage1_r_6_ce0;
+wire   [6:0] grp_fft_10_stages_Pipeline_SECTION10_fu_288_stage1_i_6_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION10_fu_288_stage1_i_6_ce0;
+wire   [9:0] grp_fft_10_stages_Pipeline_SECTION10_fu_288_gm_re_tab_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION10_fu_288_gm_re_tab_ce0;
+wire   [9:0] grp_fft_10_stages_Pipeline_SECTION10_fu_288_gm_im_tab_address0;
+wire    grp_fft_10_stages_Pipeline_SECTION10_fu_288_gm_im_tab_ce0;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION10_fu_288_grp_complex_mul_fu_308_p_din1;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION10_fu_288_grp_complex_mul_fu_308_p_din2;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION10_fu_288_grp_complex_mul_fu_308_p_din3;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION10_fu_288_grp_complex_mul_fu_308_p_din4;
+wire    grp_fft_10_stages_Pipeline_SECTION10_fu_288_grp_complex_mul_fu_308_p_ce;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION10_fu_288_grp_fu_315_p_din0;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION10_fu_288_grp_fu_315_p_din1;
+wire   [1:0] grp_fft_10_stages_Pipeline_SECTION10_fu_288_grp_fu_315_p_opcode;
+wire    grp_fft_10_stages_Pipeline_SECTION10_fu_288_grp_fu_315_p_ce;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION10_fu_288_grp_fu_319_p_din0;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION10_fu_288_grp_fu_319_p_din1;
+wire   [1:0] grp_fft_10_stages_Pipeline_SECTION10_fu_288_grp_fu_319_p_opcode;
+wire    grp_fft_10_stages_Pipeline_SECTION10_fu_288_grp_fu_319_p_ce;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION10_fu_288_grp_fu_323_p_din0;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION10_fu_288_grp_fu_323_p_din1;
+wire   [1:0] grp_fft_10_stages_Pipeline_SECTION10_fu_288_grp_fu_323_p_opcode;
+wire    grp_fft_10_stages_Pipeline_SECTION10_fu_288_grp_fu_323_p_ce;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION10_fu_288_grp_fu_327_p_din0;
+wire   [63:0] grp_fft_10_stages_Pipeline_SECTION10_fu_288_grp_fu_327_p_din1;
+wire   [1:0] grp_fft_10_stages_Pipeline_SECTION10_fu_288_grp_fu_327_p_opcode;
+wire    grp_fft_10_stages_Pipeline_SECTION10_fu_288_grp_fu_327_p_ce;
+reg   [63:0] grp_complex_mul_fu_308_x_re;
+reg   [63:0] grp_complex_mul_fu_308_x_im;
+reg   [63:0] grp_complex_mul_fu_308_y_re;
+reg   [63:0] grp_complex_mul_fu_308_y_im;
+wire   [63:0] grp_complex_mul_fu_308_ap_return_0;
+wire   [63:0] grp_complex_mul_fu_308_ap_return_1;
+reg    grp_complex_mul_fu_308_ap_ce;
+reg    grp_fft_10_stages_Pipeline_SECTION_fu_96_ap_start_reg;
 wire    ap_CS_fsm_state2;
-reg    grp_fft_stage_clone_fu_126_ap_start_reg;
+reg    grp_fft_10_stages_Pipeline_SECTION3_fu_120_ap_start_reg;
 wire    ap_CS_fsm_state3;
-wire    ap_CS_fsm_state5;
-wire    ap_CS_fsm_state7;
-wire    ap_CS_fsm_state9;
-wire    ap_CS_fsm_state11;
-wire    ap_CS_fsm_state13;
-wire    ap_CS_fsm_state15;
 wire    ap_CS_fsm_state4;
+reg    grp_fft_10_stages_Pipeline_SECTION4_fu_144_ap_start_reg;
+wire    ap_CS_fsm_state5;
 wire    ap_CS_fsm_state6;
+reg    grp_fft_10_stages_Pipeline_SECTION5_fu_168_ap_start_reg;
+wire    ap_CS_fsm_state7;
 wire    ap_CS_fsm_state8;
+reg    grp_fft_10_stages_Pipeline_SECTION6_fu_192_ap_start_reg;
+wire    ap_CS_fsm_state9;
 wire    ap_CS_fsm_state10;
+reg    grp_fft_10_stages_Pipeline_SECTION7_fu_216_ap_start_reg;
+wire    ap_CS_fsm_state11;
 wire    ap_CS_fsm_state12;
+reg    grp_fft_10_stages_Pipeline_SECTION8_fu_240_ap_start_reg;
+wire    ap_CS_fsm_state13;
 wire    ap_CS_fsm_state14;
+reg    grp_fft_10_stages_Pipeline_SECTION9_fu_264_ap_start_reg;
+wire    ap_CS_fsm_state15;
 wire    ap_CS_fsm_state16;
-reg    grp_fft_stage_clone_clone_fu_166_ap_start_reg;
+reg    grp_fft_10_stages_Pipeline_SECTION10_fu_288_ap_start_reg;
 wire    ap_CS_fsm_state17;
 wire    ap_CS_fsm_state18;
-wire   [63:0] grp_fu_186_p2;
-reg   [63:0] grp_fu_186_p0;
-reg   [63:0] grp_fu_186_p1;
-reg    grp_fu_186_ce;
-wire   [63:0] grp_fu_190_p2;
-reg   [63:0] grp_fu_190_p0;
-reg   [63:0] grp_fu_190_p1;
-reg    grp_fu_190_ce;
-wire   [63:0] grp_fu_194_p2;
-reg   [63:0] grp_fu_194_p0;
-reg   [63:0] grp_fu_194_p1;
-reg    grp_fu_194_ce;
-wire   [63:0] grp_fu_198_p2;
-reg   [63:0] grp_fu_198_p0;
-reg   [63:0] grp_fu_198_p1;
-reg    grp_fu_198_ce;
-wire   [63:0] grp_fu_202_p2;
-reg   [63:0] grp_fu_202_p0;
-reg   [63:0] grp_fu_202_p1;
-reg    grp_fu_202_ce;
-wire   [63:0] grp_fu_206_p2;
-reg   [63:0] grp_fu_206_p0;
-reg   [63:0] grp_fu_206_p1;
-reg    grp_fu_206_ce;
-wire   [63:0] grp_fu_210_p2;
-reg   [63:0] grp_fu_210_p0;
-reg   [63:0] grp_fu_210_p1;
-reg    grp_fu_210_ce;
-wire   [63:0] grp_fu_214_p2;
-reg   [63:0] grp_fu_214_p0;
-reg   [63:0] grp_fu_214_p1;
-reg    grp_fu_214_ce;
+wire   [63:0] grp_fu_315_p2;
+reg   [63:0] grp_fu_315_p0;
+reg   [63:0] grp_fu_315_p1;
+reg    grp_fu_315_ce;
+wire   [63:0] grp_fu_319_p2;
+reg   [63:0] grp_fu_319_p0;
+reg   [63:0] grp_fu_319_p1;
+reg    grp_fu_319_ce;
+wire   [63:0] grp_fu_323_p2;
+reg   [63:0] grp_fu_323_p0;
+reg   [63:0] grp_fu_323_p1;
+reg    grp_fu_323_ce;
+wire   [63:0] grp_fu_327_p2;
+reg   [63:0] grp_fu_327_p0;
+reg   [63:0] grp_fu_327_p1;
+reg    grp_fu_327_ce;
 reg   [17:0] ap_NS_fsm;
 reg    ap_ST_fsm_state1_blk;
 reg    ap_ST_fsm_state2_blk;
@@ -600,10 +1112,40 @@ wire    ap_ce_reg;
 // power-on initialization
 initial begin
 #0 ap_CS_fsm = 18'd1;
-#0 grp_fft_stage_fu_102_ap_start_reg = 1'b0;
-#0 grp_fft_stage_clone_fu_126_ap_start_reg = 1'b0;
-#0 grp_fft_stage_clone_clone_fu_166_ap_start_reg = 1'b0;
+#0 grp_fft_10_stages_Pipeline_SECTION_fu_96_ap_start_reg = 1'b0;
+#0 grp_fft_10_stages_Pipeline_SECTION3_fu_120_ap_start_reg = 1'b0;
+#0 grp_fft_10_stages_Pipeline_SECTION4_fu_144_ap_start_reg = 1'b0;
+#0 grp_fft_10_stages_Pipeline_SECTION5_fu_168_ap_start_reg = 1'b0;
+#0 grp_fft_10_stages_Pipeline_SECTION6_fu_192_ap_start_reg = 1'b0;
+#0 grp_fft_10_stages_Pipeline_SECTION7_fu_216_ap_start_reg = 1'b0;
+#0 grp_fft_10_stages_Pipeline_SECTION8_fu_240_ap_start_reg = 1'b0;
+#0 grp_fft_10_stages_Pipeline_SECTION9_fu_264_ap_start_reg = 1'b0;
+#0 grp_fft_10_stages_Pipeline_SECTION10_fu_288_ap_start_reg = 1'b0;
 end
+
+FFT_fft_10_stages_gm_re_tab_ROM_AUTO_1R #(
+    .DataWidth( 64 ),
+    .AddressRange( 1024 ),
+    .AddressWidth( 10 ))
+gm_re_tab_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(gm_re_tab_address0),
+    .ce0(gm_re_tab_ce0),
+    .q0(gm_re_tab_q0)
+);
+
+FFT_fft_10_stages_gm_im_tab_ROM_AUTO_1R #(
+    .DataWidth( 64 ),
+    .AddressRange( 1024 ),
+    .AddressWidth( 10 ))
+gm_im_tab_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(gm_im_tab_address0),
+    .ce0(gm_im_tab_ce0),
+    .q0(gm_im_tab_q0)
+);
 
 FFT_fft_10_stages_stage0_r_RAM_AUTO_1R1W #(
     .DataWidth( 64 ),
@@ -620,7 +1162,7 @@ stage0_r_U(
     .address1(stage0_r_address1),
     .ce1(stage0_r_ce1),
     .we1(stage0_r_we1),
-    .d1(stage0_r_d1),
+    .d1(grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_r_d1),
     .q1(stage0_r_q1)
 );
 
@@ -639,7 +1181,7 @@ stage0_r_1_U(
     .address1(stage0_r_1_address1),
     .ce1(stage0_r_1_ce1),
     .we1(stage0_r_1_we1),
-    .d1(grp_fft_stage_clone_fu_126_out_r_1_d1),
+    .d1(grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_r_1_d1),
     .q1(stage0_r_1_q1)
 );
 
@@ -658,7 +1200,7 @@ stage0_r_2_U(
     .address1(stage0_r_2_address1),
     .ce1(stage0_r_2_ce1),
     .we1(stage0_r_2_we1),
-    .d1(grp_fft_stage_clone_fu_126_out_r_2_d1),
+    .d1(grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_r_2_d1),
     .q1(stage0_r_2_q1)
 );
 
@@ -677,7 +1219,7 @@ stage0_r_3_U(
     .address1(stage0_r_3_address1),
     .ce1(stage0_r_3_ce1),
     .we1(stage0_r_3_we1),
-    .d1(grp_fft_stage_clone_fu_126_out_r_3_d1),
+    .d1(grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_r_3_d1),
     .q1(stage0_r_3_q1)
 );
 
@@ -696,7 +1238,7 @@ stage0_i_U(
     .address1(stage0_i_address1),
     .ce1(stage0_i_ce1),
     .we1(stage0_i_we1),
-    .d1(stage0_i_d1),
+    .d1(grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_i_d1),
     .q1(stage0_i_q1)
 );
 
@@ -715,7 +1257,7 @@ stage0_i_1_U(
     .address1(stage0_i_1_address1),
     .ce1(stage0_i_1_ce1),
     .we1(stage0_i_1_we1),
-    .d1(grp_fft_stage_clone_fu_126_out_i_1_d1),
+    .d1(grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_i_1_d1),
     .q1(stage0_i_1_q1)
 );
 
@@ -734,7 +1276,7 @@ stage0_i_2_U(
     .address1(stage0_i_2_address1),
     .ce1(stage0_i_2_ce1),
     .we1(stage0_i_2_we1),
-    .d1(grp_fft_stage_clone_fu_126_out_i_2_d1),
+    .d1(grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_i_2_d1),
     .q1(stage0_i_2_q1)
 );
 
@@ -753,11 +1295,11 @@ stage0_i_3_U(
     .address1(stage0_i_3_address1),
     .ce1(stage0_i_3_ce1),
     .we1(stage0_i_3_we1),
-    .d1(grp_fft_stage_clone_fu_126_out_i_3_d1),
+    .d1(grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_i_3_d1),
     .q1(stage0_i_3_q1)
 );
 
-FFT_fft_10_stages_stage0_r_RAM_AUTO_1R1W #(
+FFT_fft_10_stages_stage1_r_RAM_AUTO_1R1W #(
     .DataWidth( 64 ),
     .AddressRange( 128 ),
     .AddressWidth( 7 ))
@@ -767,16 +1309,14 @@ stage1_r_U(
     .address0(stage1_r_address0),
     .ce0(stage1_r_ce0),
     .we0(stage1_r_we0),
-    .d0(grp_fft_stage_clone_fu_126_out_r_0_d0),
+    .d0(stage1_r_d0),
     .q0(stage1_r_q0),
     .address1(stage1_r_address1),
     .ce1(stage1_r_ce1),
-    .we1(stage1_r_we1),
-    .d1(grp_fft_stage_clone_fu_126_out_r_0_d1),
     .q1(stage1_r_q1)
 );
 
-FFT_fft_10_stages_stage0_r_RAM_AUTO_1R1W #(
+FFT_fft_10_stages_stage1_r_RAM_AUTO_1R1W #(
     .DataWidth( 64 ),
     .AddressRange( 128 ),
     .AddressWidth( 7 ))
@@ -786,16 +1326,14 @@ stage1_r_1_U(
     .address0(stage1_r_1_address0),
     .ce0(stage1_r_1_ce0),
     .we0(stage1_r_1_we0),
-    .d0(grp_fft_stage_clone_fu_126_out_r_1_d0),
+    .d0(stage1_r_1_d0),
     .q0(stage1_r_1_q0),
     .address1(stage1_r_1_address1),
     .ce1(stage1_r_1_ce1),
-    .we1(stage1_r_1_we1),
-    .d1(grp_fft_stage_clone_fu_126_out_r_1_d1),
     .q1(stage1_r_1_q1)
 );
 
-FFT_fft_10_stages_stage0_r_RAM_AUTO_1R1W #(
+FFT_fft_10_stages_stage1_r_RAM_AUTO_1R1W #(
     .DataWidth( 64 ),
     .AddressRange( 128 ),
     .AddressWidth( 7 ))
@@ -805,16 +1343,14 @@ stage1_r_2_U(
     .address0(stage1_r_2_address0),
     .ce0(stage1_r_2_ce0),
     .we0(stage1_r_2_we0),
-    .d0(grp_fft_stage_clone_fu_126_out_r_2_d0),
+    .d0(stage1_r_2_d0),
     .q0(stage1_r_2_q0),
     .address1(stage1_r_2_address1),
     .ce1(stage1_r_2_ce1),
-    .we1(stage1_r_2_we1),
-    .d1(grp_fft_stage_clone_fu_126_out_r_2_d1),
     .q1(stage1_r_2_q1)
 );
 
-FFT_fft_10_stages_stage0_r_RAM_AUTO_1R1W #(
+FFT_fft_10_stages_stage1_r_RAM_AUTO_1R1W #(
     .DataWidth( 64 ),
     .AddressRange( 128 ),
     .AddressWidth( 7 ))
@@ -824,16 +1360,14 @@ stage1_r_3_U(
     .address0(stage1_r_3_address0),
     .ce0(stage1_r_3_ce0),
     .we0(stage1_r_3_we0),
-    .d0(grp_fft_stage_clone_fu_126_out_r_3_d0),
+    .d0(stage1_r_3_d0),
     .q0(stage1_r_3_q0),
     .address1(stage1_r_3_address1),
     .ce1(stage1_r_3_ce1),
-    .we1(stage1_r_3_we1),
-    .d1(grp_fft_stage_clone_fu_126_out_r_3_d1),
     .q1(stage1_r_3_q1)
 );
 
-FFT_fft_10_stages_stage0_r_RAM_AUTO_1R1W #(
+FFT_fft_10_stages_stage1_r_RAM_AUTO_1R1W #(
     .DataWidth( 64 ),
     .AddressRange( 128 ),
     .AddressWidth( 7 ))
@@ -843,16 +1377,14 @@ stage1_i_U(
     .address0(stage1_i_address0),
     .ce0(stage1_i_ce0),
     .we0(stage1_i_we0),
-    .d0(grp_fft_stage_clone_fu_126_out_i_0_d0),
+    .d0(stage1_i_d0),
     .q0(stage1_i_q0),
     .address1(stage1_i_address1),
     .ce1(stage1_i_ce1),
-    .we1(stage1_i_we1),
-    .d1(grp_fft_stage_clone_fu_126_out_i_0_d1),
     .q1(stage1_i_q1)
 );
 
-FFT_fft_10_stages_stage0_r_RAM_AUTO_1R1W #(
+FFT_fft_10_stages_stage1_r_RAM_AUTO_1R1W #(
     .DataWidth( 64 ),
     .AddressRange( 128 ),
     .AddressWidth( 7 ))
@@ -862,16 +1394,14 @@ stage1_i_1_U(
     .address0(stage1_i_1_address0),
     .ce0(stage1_i_1_ce0),
     .we0(stage1_i_1_we0),
-    .d0(grp_fft_stage_clone_fu_126_out_i_1_d0),
+    .d0(stage1_i_1_d0),
     .q0(stage1_i_1_q0),
     .address1(stage1_i_1_address1),
     .ce1(stage1_i_1_ce1),
-    .we1(stage1_i_1_we1),
-    .d1(grp_fft_stage_clone_fu_126_out_i_1_d1),
     .q1(stage1_i_1_q1)
 );
 
-FFT_fft_10_stages_stage0_r_RAM_AUTO_1R1W #(
+FFT_fft_10_stages_stage1_r_RAM_AUTO_1R1W #(
     .DataWidth( 64 ),
     .AddressRange( 128 ),
     .AddressWidth( 7 ))
@@ -881,16 +1411,14 @@ stage1_i_2_U(
     .address0(stage1_i_2_address0),
     .ce0(stage1_i_2_ce0),
     .we0(stage1_i_2_we0),
-    .d0(grp_fft_stage_clone_fu_126_out_i_2_d0),
+    .d0(stage1_i_2_d0),
     .q0(stage1_i_2_q0),
     .address1(stage1_i_2_address1),
     .ce1(stage1_i_2_ce1),
-    .we1(stage1_i_2_we1),
-    .d1(grp_fft_stage_clone_fu_126_out_i_2_d1),
     .q1(stage1_i_2_q1)
 );
 
-FFT_fft_10_stages_stage0_r_RAM_AUTO_1R1W #(
+FFT_fft_10_stages_stage1_r_RAM_AUTO_1R1W #(
     .DataWidth( 64 ),
     .AddressRange( 128 ),
     .AddressWidth( 7 ))
@@ -900,466 +1428,1107 @@ stage1_i_3_U(
     .address0(stage1_i_3_address0),
     .ce0(stage1_i_3_ce0),
     .we0(stage1_i_3_we0),
-    .d0(grp_fft_stage_clone_fu_126_out_i_3_d0),
+    .d0(stage1_i_3_d0),
     .q0(stage1_i_3_q0),
     .address1(stage1_i_3_address1),
     .ce1(stage1_i_3_ce1),
-    .we1(stage1_i_3_we1),
-    .d1(grp_fft_stage_clone_fu_126_out_i_3_d1),
     .q1(stage1_i_3_q1)
 );
 
-FFT_fft_stage grp_fft_stage_fu_102(
+FFT_fft_10_stages_Pipeline_SECTION grp_fft_10_stages_Pipeline_SECTION_fu_96(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst),
-    .ap_start(grp_fft_stage_fu_102_ap_start),
-    .ap_done(grp_fft_stage_fu_102_ap_done),
-    .ap_idle(grp_fft_stage_fu_102_ap_idle),
-    .ap_ready(grp_fft_stage_fu_102_ap_ready),
-    .in_r_address0(grp_fft_stage_fu_102_in_r_address0),
-    .in_r_ce0(grp_fft_stage_fu_102_in_r_ce0),
+    .ap_start(grp_fft_10_stages_Pipeline_SECTION_fu_96_ap_start),
+    .ap_done(grp_fft_10_stages_Pipeline_SECTION_fu_96_ap_done),
+    .ap_idle(grp_fft_10_stages_Pipeline_SECTION_fu_96_ap_idle),
+    .ap_ready(grp_fft_10_stages_Pipeline_SECTION_fu_96_ap_ready),
+    .stage0_r_1_address0(grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_r_1_address0),
+    .stage0_r_1_ce0(grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_r_1_ce0),
+    .stage0_r_1_we0(grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_r_1_we0),
+    .stage0_r_1_d0(grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_r_1_d0),
+    .stage0_r_1_address1(grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_r_1_address1),
+    .stage0_r_1_ce1(grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_r_1_ce1),
+    .stage0_r_1_we1(grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_r_1_we1),
+    .stage0_r_1_d1(grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_r_1_d1),
+    .stage0_r_3_address0(grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_r_3_address0),
+    .stage0_r_3_ce0(grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_r_3_ce0),
+    .stage0_r_3_we0(grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_r_3_we0),
+    .stage0_r_3_d0(grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_r_3_d0),
+    .stage0_r_3_address1(grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_r_3_address1),
+    .stage0_r_3_ce1(grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_r_3_ce1),
+    .stage0_r_3_we1(grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_r_3_we1),
+    .stage0_r_3_d1(grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_r_3_d1),
+    .stage0_i_1_address0(grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_i_1_address0),
+    .stage0_i_1_ce0(grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_i_1_ce0),
+    .stage0_i_1_we0(grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_i_1_we0),
+    .stage0_i_1_d0(grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_i_1_d0),
+    .stage0_i_1_address1(grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_i_1_address1),
+    .stage0_i_1_ce1(grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_i_1_ce1),
+    .stage0_i_1_we1(grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_i_1_we1),
+    .stage0_i_1_d1(grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_i_1_d1),
+    .in_r_address0(grp_fft_10_stages_Pipeline_SECTION_fu_96_in_r_address0),
+    .in_r_ce0(grp_fft_10_stages_Pipeline_SECTION_fu_96_in_r_ce0),
     .in_r_q0(in_r_q0),
-    .in_r_address1(grp_fft_stage_fu_102_in_r_address1),
-    .in_r_ce1(grp_fft_stage_fu_102_in_r_ce1),
+    .in_r_address1(grp_fft_10_stages_Pipeline_SECTION_fu_96_in_r_address1),
+    .in_r_ce1(grp_fft_10_stages_Pipeline_SECTION_fu_96_in_r_ce1),
     .in_r_q1(in_r_q1),
-    .in_i_address0(grp_fft_stage_fu_102_in_i_address0),
-    .in_i_ce0(grp_fft_stage_fu_102_in_i_ce0),
+    .in_i_address0(grp_fft_10_stages_Pipeline_SECTION_fu_96_in_i_address0),
+    .in_i_ce0(grp_fft_10_stages_Pipeline_SECTION_fu_96_in_i_ce0),
     .in_i_q0(in_i_q0),
-    .in_i_address1(grp_fft_stage_fu_102_in_i_address1),
-    .in_i_ce1(grp_fft_stage_fu_102_in_i_ce1),
+    .in_i_address1(grp_fft_10_stages_Pipeline_SECTION_fu_96_in_i_address1),
+    .in_i_ce1(grp_fft_10_stages_Pipeline_SECTION_fu_96_in_i_ce1),
     .in_i_q1(in_i_q1),
-    .out_r_0_address0(grp_fft_stage_fu_102_out_r_0_address0),
-    .out_r_0_ce0(grp_fft_stage_fu_102_out_r_0_ce0),
-    .out_r_0_we0(grp_fft_stage_fu_102_out_r_0_we0),
-    .out_r_0_d0(grp_fft_stage_fu_102_out_r_0_d0),
-    .out_r_0_address1(grp_fft_stage_fu_102_out_r_0_address1),
-    .out_r_0_ce1(grp_fft_stage_fu_102_out_r_0_ce1),
-    .out_r_0_we1(grp_fft_stage_fu_102_out_r_0_we1),
-    .out_r_0_d1(grp_fft_stage_fu_102_out_r_0_d1),
-    .out_r_1_address0(grp_fft_stage_fu_102_out_r_1_address0),
-    .out_r_1_ce0(grp_fft_stage_fu_102_out_r_1_ce0),
-    .out_r_1_we0(grp_fft_stage_fu_102_out_r_1_we0),
-    .out_r_1_d0(grp_fft_stage_fu_102_out_r_1_d0),
-    .out_r_2_address0(grp_fft_stage_fu_102_out_r_2_address0),
-    .out_r_2_ce0(grp_fft_stage_fu_102_out_r_2_ce0),
-    .out_r_2_we0(grp_fft_stage_fu_102_out_r_2_we0),
-    .out_r_2_d0(grp_fft_stage_fu_102_out_r_2_d0),
-    .out_r_3_address0(grp_fft_stage_fu_102_out_r_3_address0),
-    .out_r_3_ce0(grp_fft_stage_fu_102_out_r_3_ce0),
-    .out_r_3_we0(grp_fft_stage_fu_102_out_r_3_we0),
-    .out_r_3_d0(grp_fft_stage_fu_102_out_r_3_d0),
-    .out_i_0_address0(grp_fft_stage_fu_102_out_i_0_address0),
-    .out_i_0_ce0(grp_fft_stage_fu_102_out_i_0_ce0),
-    .out_i_0_we0(grp_fft_stage_fu_102_out_i_0_we0),
-    .out_i_0_d0(grp_fft_stage_fu_102_out_i_0_d0),
-    .out_i_0_address1(grp_fft_stage_fu_102_out_i_0_address1),
-    .out_i_0_ce1(grp_fft_stage_fu_102_out_i_0_ce1),
-    .out_i_0_we1(grp_fft_stage_fu_102_out_i_0_we1),
-    .out_i_0_d1(grp_fft_stage_fu_102_out_i_0_d1),
-    .out_i_1_address0(grp_fft_stage_fu_102_out_i_1_address0),
-    .out_i_1_ce0(grp_fft_stage_fu_102_out_i_1_ce0),
-    .out_i_1_we0(grp_fft_stage_fu_102_out_i_1_we0),
-    .out_i_1_d0(grp_fft_stage_fu_102_out_i_1_d0),
-    .out_i_2_address0(grp_fft_stage_fu_102_out_i_2_address0),
-    .out_i_2_ce0(grp_fft_stage_fu_102_out_i_2_ce0),
-    .out_i_2_we0(grp_fft_stage_fu_102_out_i_2_we0),
-    .out_i_2_d0(grp_fft_stage_fu_102_out_i_2_d0),
-    .out_i_3_address0(grp_fft_stage_fu_102_out_i_3_address0),
-    .out_i_3_ce0(grp_fft_stage_fu_102_out_i_3_ce0),
-    .out_i_3_we0(grp_fft_stage_fu_102_out_i_3_we0),
-    .out_i_3_d0(grp_fft_stage_fu_102_out_i_3_d0),
-    .grp_fu_186_p_din0(grp_fft_stage_fu_102_grp_fu_186_p_din0),
-    .grp_fu_186_p_din1(grp_fft_stage_fu_102_grp_fu_186_p_din1),
-    .grp_fu_186_p_opcode(grp_fft_stage_fu_102_grp_fu_186_p_opcode),
-    .grp_fu_186_p_dout0(grp_fu_186_p2),
-    .grp_fu_186_p_ce(grp_fft_stage_fu_102_grp_fu_186_p_ce),
-    .grp_fu_190_p_din0(grp_fft_stage_fu_102_grp_fu_190_p_din0),
-    .grp_fu_190_p_din1(grp_fft_stage_fu_102_grp_fu_190_p_din1),
-    .grp_fu_190_p_opcode(grp_fft_stage_fu_102_grp_fu_190_p_opcode),
-    .grp_fu_190_p_dout0(grp_fu_190_p2),
-    .grp_fu_190_p_ce(grp_fft_stage_fu_102_grp_fu_190_p_ce),
-    .grp_fu_194_p_din0(grp_fft_stage_fu_102_grp_fu_194_p_din0),
-    .grp_fu_194_p_din1(grp_fft_stage_fu_102_grp_fu_194_p_din1),
-    .grp_fu_194_p_opcode(grp_fft_stage_fu_102_grp_fu_194_p_opcode),
-    .grp_fu_194_p_dout0(grp_fu_194_p2),
-    .grp_fu_194_p_ce(grp_fft_stage_fu_102_grp_fu_194_p_ce),
-    .grp_fu_198_p_din0(grp_fft_stage_fu_102_grp_fu_198_p_din0),
-    .grp_fu_198_p_din1(grp_fft_stage_fu_102_grp_fu_198_p_din1),
-    .grp_fu_198_p_opcode(grp_fft_stage_fu_102_grp_fu_198_p_opcode),
-    .grp_fu_198_p_dout0(grp_fu_198_p2),
-    .grp_fu_198_p_ce(grp_fft_stage_fu_102_grp_fu_198_p_ce),
-    .grp_fu_202_p_din0(grp_fft_stage_fu_102_grp_fu_202_p_din0),
-    .grp_fu_202_p_din1(grp_fft_stage_fu_102_grp_fu_202_p_din1),
-    .grp_fu_202_p_opcode(grp_fft_stage_fu_102_grp_fu_202_p_opcode),
-    .grp_fu_202_p_dout0(grp_fu_202_p2),
-    .grp_fu_202_p_ce(grp_fft_stage_fu_102_grp_fu_202_p_ce),
-    .grp_fu_206_p_din0(grp_fft_stage_fu_102_grp_fu_206_p_din0),
-    .grp_fu_206_p_din1(grp_fft_stage_fu_102_grp_fu_206_p_din1),
-    .grp_fu_206_p_opcode(grp_fft_stage_fu_102_grp_fu_206_p_opcode),
-    .grp_fu_206_p_dout0(grp_fu_206_p2),
-    .grp_fu_206_p_ce(grp_fft_stage_fu_102_grp_fu_206_p_ce),
-    .grp_fu_210_p_din0(grp_fft_stage_fu_102_grp_fu_210_p_din0),
-    .grp_fu_210_p_din1(grp_fft_stage_fu_102_grp_fu_210_p_din1),
-    .grp_fu_210_p_dout0(grp_fu_210_p2),
-    .grp_fu_210_p_ce(grp_fft_stage_fu_102_grp_fu_210_p_ce),
-    .grp_fu_214_p_din0(grp_fft_stage_fu_102_grp_fu_214_p_din0),
-    .grp_fu_214_p_din1(grp_fft_stage_fu_102_grp_fu_214_p_din1),
-    .grp_fu_214_p_dout0(grp_fu_214_p2),
-    .grp_fu_214_p_ce(grp_fft_stage_fu_102_grp_fu_214_p_ce)
+    .stage0_r_address0(grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_r_address0),
+    .stage0_r_ce0(grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_r_ce0),
+    .stage0_r_we0(grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_r_we0),
+    .stage0_r_d0(grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_r_d0),
+    .stage0_r_address1(grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_r_address1),
+    .stage0_r_ce1(grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_r_ce1),
+    .stage0_r_we1(grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_r_we1),
+    .stage0_r_d1(grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_r_d1),
+    .stage0_r_2_address0(grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_r_2_address0),
+    .stage0_r_2_ce0(grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_r_2_ce0),
+    .stage0_r_2_we0(grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_r_2_we0),
+    .stage0_r_2_d0(grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_r_2_d0),
+    .stage0_r_2_address1(grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_r_2_address1),
+    .stage0_r_2_ce1(grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_r_2_ce1),
+    .stage0_r_2_we1(grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_r_2_we1),
+    .stage0_r_2_d1(grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_r_2_d1),
+    .stage0_i_address0(grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_i_address0),
+    .stage0_i_ce0(grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_i_ce0),
+    .stage0_i_we0(grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_i_we0),
+    .stage0_i_d0(grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_i_d0),
+    .stage0_i_address1(grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_i_address1),
+    .stage0_i_ce1(grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_i_ce1),
+    .stage0_i_we1(grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_i_we1),
+    .stage0_i_d1(grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_i_d1),
+    .stage0_i_3_address0(grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_i_3_address0),
+    .stage0_i_3_ce0(grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_i_3_ce0),
+    .stage0_i_3_we0(grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_i_3_we0),
+    .stage0_i_3_d0(grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_i_3_d0),
+    .stage0_i_3_address1(grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_i_3_address1),
+    .stage0_i_3_ce1(grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_i_3_ce1),
+    .stage0_i_3_we1(grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_i_3_we1),
+    .stage0_i_3_d1(grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_i_3_d1),
+    .stage0_i_2_address0(grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_i_2_address0),
+    .stage0_i_2_ce0(grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_i_2_ce0),
+    .stage0_i_2_we0(grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_i_2_we0),
+    .stage0_i_2_d0(grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_i_2_d0),
+    .stage0_i_2_address1(grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_i_2_address1),
+    .stage0_i_2_ce1(grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_i_2_ce1),
+    .stage0_i_2_we1(grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_i_2_we1),
+    .stage0_i_2_d1(grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_i_2_d1),
+    .grp_complex_mul_fu_308_p_din1(grp_fft_10_stages_Pipeline_SECTION_fu_96_grp_complex_mul_fu_308_p_din1),
+    .grp_complex_mul_fu_308_p_din2(grp_fft_10_stages_Pipeline_SECTION_fu_96_grp_complex_mul_fu_308_p_din2),
+    .grp_complex_mul_fu_308_p_din3(grp_fft_10_stages_Pipeline_SECTION_fu_96_grp_complex_mul_fu_308_p_din3),
+    .grp_complex_mul_fu_308_p_din4(grp_fft_10_stages_Pipeline_SECTION_fu_96_grp_complex_mul_fu_308_p_din4),
+    .grp_complex_mul_fu_308_p_dout0_0(grp_complex_mul_fu_308_ap_return_0),
+    .grp_complex_mul_fu_308_p_dout0_1(grp_complex_mul_fu_308_ap_return_1),
+    .grp_complex_mul_fu_308_p_ce(grp_fft_10_stages_Pipeline_SECTION_fu_96_grp_complex_mul_fu_308_p_ce),
+    .grp_fu_315_p_din0(grp_fft_10_stages_Pipeline_SECTION_fu_96_grp_fu_315_p_din0),
+    .grp_fu_315_p_din1(grp_fft_10_stages_Pipeline_SECTION_fu_96_grp_fu_315_p_din1),
+    .grp_fu_315_p_opcode(grp_fft_10_stages_Pipeline_SECTION_fu_96_grp_fu_315_p_opcode),
+    .grp_fu_315_p_dout0(grp_fu_315_p2),
+    .grp_fu_315_p_ce(grp_fft_10_stages_Pipeline_SECTION_fu_96_grp_fu_315_p_ce),
+    .grp_fu_319_p_din0(grp_fft_10_stages_Pipeline_SECTION_fu_96_grp_fu_319_p_din0),
+    .grp_fu_319_p_din1(grp_fft_10_stages_Pipeline_SECTION_fu_96_grp_fu_319_p_din1),
+    .grp_fu_319_p_opcode(grp_fft_10_stages_Pipeline_SECTION_fu_96_grp_fu_319_p_opcode),
+    .grp_fu_319_p_dout0(grp_fu_319_p2),
+    .grp_fu_319_p_ce(grp_fft_10_stages_Pipeline_SECTION_fu_96_grp_fu_319_p_ce),
+    .grp_fu_323_p_din0(grp_fft_10_stages_Pipeline_SECTION_fu_96_grp_fu_323_p_din0),
+    .grp_fu_323_p_din1(grp_fft_10_stages_Pipeline_SECTION_fu_96_grp_fu_323_p_din1),
+    .grp_fu_323_p_opcode(grp_fft_10_stages_Pipeline_SECTION_fu_96_grp_fu_323_p_opcode),
+    .grp_fu_323_p_dout0(grp_fu_323_p2),
+    .grp_fu_323_p_ce(grp_fft_10_stages_Pipeline_SECTION_fu_96_grp_fu_323_p_ce),
+    .grp_fu_327_p_din0(grp_fft_10_stages_Pipeline_SECTION_fu_96_grp_fu_327_p_din0),
+    .grp_fu_327_p_din1(grp_fft_10_stages_Pipeline_SECTION_fu_96_grp_fu_327_p_din1),
+    .grp_fu_327_p_opcode(grp_fft_10_stages_Pipeline_SECTION_fu_96_grp_fu_327_p_opcode),
+    .grp_fu_327_p_dout0(grp_fu_327_p2),
+    .grp_fu_327_p_ce(grp_fft_10_stages_Pipeline_SECTION_fu_96_grp_fu_327_p_ce)
 );
 
-FFT_fft_stage_clone grp_fft_stage_clone_fu_126(
+FFT_fft_10_stages_Pipeline_SECTION3 grp_fft_10_stages_Pipeline_SECTION3_fu_120(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst),
-    .ap_start(grp_fft_stage_clone_fu_126_ap_start),
-    .ap_done(grp_fft_stage_clone_fu_126_ap_done),
-    .ap_idle(grp_fft_stage_clone_fu_126_ap_idle),
-    .ap_ready(grp_fft_stage_clone_fu_126_ap_ready),
-    .in_r_0_address0(grp_fft_stage_clone_fu_126_in_r_0_address0),
-    .in_r_0_ce0(grp_fft_stage_clone_fu_126_in_r_0_ce0),
-    .in_r_0_q0(grp_fft_stage_clone_fu_126_in_r_0_q0),
-    .in_r_0_address1(grp_fft_stage_clone_fu_126_in_r_0_address1),
-    .in_r_0_ce1(grp_fft_stage_clone_fu_126_in_r_0_ce1),
-    .in_r_0_q1(grp_fft_stage_clone_fu_126_in_r_0_q1),
-    .in_r_1_address0(grp_fft_stage_clone_fu_126_in_r_1_address0),
-    .in_r_1_ce0(grp_fft_stage_clone_fu_126_in_r_1_ce0),
-    .in_r_1_q0(grp_fft_stage_clone_fu_126_in_r_1_q0),
-    .in_r_1_address1(grp_fft_stage_clone_fu_126_in_r_1_address1),
-    .in_r_1_ce1(grp_fft_stage_clone_fu_126_in_r_1_ce1),
-    .in_r_1_q1(grp_fft_stage_clone_fu_126_in_r_1_q1),
-    .in_r_2_address0(grp_fft_stage_clone_fu_126_in_r_2_address0),
-    .in_r_2_ce0(grp_fft_stage_clone_fu_126_in_r_2_ce0),
-    .in_r_2_q0(grp_fft_stage_clone_fu_126_in_r_2_q0),
-    .in_r_2_address1(grp_fft_stage_clone_fu_126_in_r_2_address1),
-    .in_r_2_ce1(grp_fft_stage_clone_fu_126_in_r_2_ce1),
-    .in_r_2_q1(grp_fft_stage_clone_fu_126_in_r_2_q1),
-    .in_r_3_address0(grp_fft_stage_clone_fu_126_in_r_3_address0),
-    .in_r_3_ce0(grp_fft_stage_clone_fu_126_in_r_3_ce0),
-    .in_r_3_q0(grp_fft_stage_clone_fu_126_in_r_3_q0),
-    .in_r_3_address1(grp_fft_stage_clone_fu_126_in_r_3_address1),
-    .in_r_3_ce1(grp_fft_stage_clone_fu_126_in_r_3_ce1),
-    .in_r_3_q1(grp_fft_stage_clone_fu_126_in_r_3_q1),
-    .in_i_0_address0(grp_fft_stage_clone_fu_126_in_i_0_address0),
-    .in_i_0_ce0(grp_fft_stage_clone_fu_126_in_i_0_ce0),
-    .in_i_0_q0(grp_fft_stage_clone_fu_126_in_i_0_q0),
-    .in_i_0_address1(grp_fft_stage_clone_fu_126_in_i_0_address1),
-    .in_i_0_ce1(grp_fft_stage_clone_fu_126_in_i_0_ce1),
-    .in_i_0_q1(grp_fft_stage_clone_fu_126_in_i_0_q1),
-    .in_i_1_address0(grp_fft_stage_clone_fu_126_in_i_1_address0),
-    .in_i_1_ce0(grp_fft_stage_clone_fu_126_in_i_1_ce0),
-    .in_i_1_q0(grp_fft_stage_clone_fu_126_in_i_1_q0),
-    .in_i_1_address1(grp_fft_stage_clone_fu_126_in_i_1_address1),
-    .in_i_1_ce1(grp_fft_stage_clone_fu_126_in_i_1_ce1),
-    .in_i_1_q1(grp_fft_stage_clone_fu_126_in_i_1_q1),
-    .in_i_2_address0(grp_fft_stage_clone_fu_126_in_i_2_address0),
-    .in_i_2_ce0(grp_fft_stage_clone_fu_126_in_i_2_ce0),
-    .in_i_2_q0(grp_fft_stage_clone_fu_126_in_i_2_q0),
-    .in_i_2_address1(grp_fft_stage_clone_fu_126_in_i_2_address1),
-    .in_i_2_ce1(grp_fft_stage_clone_fu_126_in_i_2_ce1),
-    .in_i_2_q1(grp_fft_stage_clone_fu_126_in_i_2_q1),
-    .in_i_3_address0(grp_fft_stage_clone_fu_126_in_i_3_address0),
-    .in_i_3_ce0(grp_fft_stage_clone_fu_126_in_i_3_ce0),
-    .in_i_3_q0(grp_fft_stage_clone_fu_126_in_i_3_q0),
-    .in_i_3_address1(grp_fft_stage_clone_fu_126_in_i_3_address1),
-    .in_i_3_ce1(grp_fft_stage_clone_fu_126_in_i_3_ce1),
-    .in_i_3_q1(grp_fft_stage_clone_fu_126_in_i_3_q1),
-    .out_r_0_address0(grp_fft_stage_clone_fu_126_out_r_0_address0),
-    .out_r_0_ce0(grp_fft_stage_clone_fu_126_out_r_0_ce0),
-    .out_r_0_we0(grp_fft_stage_clone_fu_126_out_r_0_we0),
-    .out_r_0_d0(grp_fft_stage_clone_fu_126_out_r_0_d0),
-    .out_r_0_address1(grp_fft_stage_clone_fu_126_out_r_0_address1),
-    .out_r_0_ce1(grp_fft_stage_clone_fu_126_out_r_0_ce1),
-    .out_r_0_we1(grp_fft_stage_clone_fu_126_out_r_0_we1),
-    .out_r_0_d1(grp_fft_stage_clone_fu_126_out_r_0_d1),
-    .out_r_1_address0(grp_fft_stage_clone_fu_126_out_r_1_address0),
-    .out_r_1_ce0(grp_fft_stage_clone_fu_126_out_r_1_ce0),
-    .out_r_1_we0(grp_fft_stage_clone_fu_126_out_r_1_we0),
-    .out_r_1_d0(grp_fft_stage_clone_fu_126_out_r_1_d0),
-    .out_r_1_address1(grp_fft_stage_clone_fu_126_out_r_1_address1),
-    .out_r_1_ce1(grp_fft_stage_clone_fu_126_out_r_1_ce1),
-    .out_r_1_we1(grp_fft_stage_clone_fu_126_out_r_1_we1),
-    .out_r_1_d1(grp_fft_stage_clone_fu_126_out_r_1_d1),
-    .out_r_2_address0(grp_fft_stage_clone_fu_126_out_r_2_address0),
-    .out_r_2_ce0(grp_fft_stage_clone_fu_126_out_r_2_ce0),
-    .out_r_2_we0(grp_fft_stage_clone_fu_126_out_r_2_we0),
-    .out_r_2_d0(grp_fft_stage_clone_fu_126_out_r_2_d0),
-    .out_r_2_address1(grp_fft_stage_clone_fu_126_out_r_2_address1),
-    .out_r_2_ce1(grp_fft_stage_clone_fu_126_out_r_2_ce1),
-    .out_r_2_we1(grp_fft_stage_clone_fu_126_out_r_2_we1),
-    .out_r_2_d1(grp_fft_stage_clone_fu_126_out_r_2_d1),
-    .out_r_3_address0(grp_fft_stage_clone_fu_126_out_r_3_address0),
-    .out_r_3_ce0(grp_fft_stage_clone_fu_126_out_r_3_ce0),
-    .out_r_3_we0(grp_fft_stage_clone_fu_126_out_r_3_we0),
-    .out_r_3_d0(grp_fft_stage_clone_fu_126_out_r_3_d0),
-    .out_r_3_address1(grp_fft_stage_clone_fu_126_out_r_3_address1),
-    .out_r_3_ce1(grp_fft_stage_clone_fu_126_out_r_3_ce1),
-    .out_r_3_we1(grp_fft_stage_clone_fu_126_out_r_3_we1),
-    .out_r_3_d1(grp_fft_stage_clone_fu_126_out_r_3_d1),
-    .out_i_0_address0(grp_fft_stage_clone_fu_126_out_i_0_address0),
-    .out_i_0_ce0(grp_fft_stage_clone_fu_126_out_i_0_ce0),
-    .out_i_0_we0(grp_fft_stage_clone_fu_126_out_i_0_we0),
-    .out_i_0_d0(grp_fft_stage_clone_fu_126_out_i_0_d0),
-    .out_i_0_address1(grp_fft_stage_clone_fu_126_out_i_0_address1),
-    .out_i_0_ce1(grp_fft_stage_clone_fu_126_out_i_0_ce1),
-    .out_i_0_we1(grp_fft_stage_clone_fu_126_out_i_0_we1),
-    .out_i_0_d1(grp_fft_stage_clone_fu_126_out_i_0_d1),
-    .out_i_1_address0(grp_fft_stage_clone_fu_126_out_i_1_address0),
-    .out_i_1_ce0(grp_fft_stage_clone_fu_126_out_i_1_ce0),
-    .out_i_1_we0(grp_fft_stage_clone_fu_126_out_i_1_we0),
-    .out_i_1_d0(grp_fft_stage_clone_fu_126_out_i_1_d0),
-    .out_i_1_address1(grp_fft_stage_clone_fu_126_out_i_1_address1),
-    .out_i_1_ce1(grp_fft_stage_clone_fu_126_out_i_1_ce1),
-    .out_i_1_we1(grp_fft_stage_clone_fu_126_out_i_1_we1),
-    .out_i_1_d1(grp_fft_stage_clone_fu_126_out_i_1_d1),
-    .out_i_2_address0(grp_fft_stage_clone_fu_126_out_i_2_address0),
-    .out_i_2_ce0(grp_fft_stage_clone_fu_126_out_i_2_ce0),
-    .out_i_2_we0(grp_fft_stage_clone_fu_126_out_i_2_we0),
-    .out_i_2_d0(grp_fft_stage_clone_fu_126_out_i_2_d0),
-    .out_i_2_address1(grp_fft_stage_clone_fu_126_out_i_2_address1),
-    .out_i_2_ce1(grp_fft_stage_clone_fu_126_out_i_2_ce1),
-    .out_i_2_we1(grp_fft_stage_clone_fu_126_out_i_2_we1),
-    .out_i_2_d1(grp_fft_stage_clone_fu_126_out_i_2_d1),
-    .out_i_3_address0(grp_fft_stage_clone_fu_126_out_i_3_address0),
-    .out_i_3_ce0(grp_fft_stage_clone_fu_126_out_i_3_ce0),
-    .out_i_3_we0(grp_fft_stage_clone_fu_126_out_i_3_we0),
-    .out_i_3_d0(grp_fft_stage_clone_fu_126_out_i_3_d0),
-    .out_i_3_address1(grp_fft_stage_clone_fu_126_out_i_3_address1),
-    .out_i_3_ce1(grp_fft_stage_clone_fu_126_out_i_3_ce1),
-    .out_i_3_we1(grp_fft_stage_clone_fu_126_out_i_3_we1),
-    .out_i_3_d1(grp_fft_stage_clone_fu_126_out_i_3_d1),
-    .t(grp_fft_stage_clone_fu_126_t),
-    .m(grp_fft_stage_clone_fu_126_m)
+    .ap_start(grp_fft_10_stages_Pipeline_SECTION3_fu_120_ap_start),
+    .ap_done(grp_fft_10_stages_Pipeline_SECTION3_fu_120_ap_done),
+    .ap_idle(grp_fft_10_stages_Pipeline_SECTION3_fu_120_ap_idle),
+    .ap_ready(grp_fft_10_stages_Pipeline_SECTION3_fu_120_ap_ready),
+    .stage1_r_4_address0(grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage1_r_4_address0),
+    .stage1_r_4_ce0(grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage1_r_4_ce0),
+    .stage1_r_4_we0(grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage1_r_4_we0),
+    .stage1_r_4_d0(grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage1_r_4_d0),
+    .stage1_r_6_address0(grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage1_r_6_address0),
+    .stage1_r_6_ce0(grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage1_r_6_ce0),
+    .stage1_r_6_we0(grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage1_r_6_we0),
+    .stage1_r_6_d0(grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage1_r_6_d0),
+    .stage1_i_4_address0(grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage1_i_4_address0),
+    .stage1_i_4_ce0(grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage1_i_4_ce0),
+    .stage1_i_4_we0(grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage1_i_4_we0),
+    .stage1_i_4_d0(grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage1_i_4_d0),
+    .stage0_r_1_address0(grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage0_r_1_address0),
+    .stage0_r_1_ce0(grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage0_r_1_ce0),
+    .stage0_r_1_q0(stage0_r_1_q0),
+    .stage0_r_1_address1(grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage0_r_1_address1),
+    .stage0_r_1_ce1(grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage0_r_1_ce1),
+    .stage0_r_1_q1(stage0_r_1_q1),
+    .stage0_r_3_address0(grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage0_r_3_address0),
+    .stage0_r_3_ce0(grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage0_r_3_ce0),
+    .stage0_r_3_q0(stage0_r_3_q0),
+    .stage0_r_3_address1(grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage0_r_3_address1),
+    .stage0_r_3_ce1(grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage0_r_3_ce1),
+    .stage0_r_3_q1(stage0_r_3_q1),
+    .stage0_i_1_address0(grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage0_i_1_address0),
+    .stage0_i_1_ce0(grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage0_i_1_ce0),
+    .stage0_i_1_q0(stage0_i_1_q0),
+    .stage0_i_1_address1(grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage0_i_1_address1),
+    .stage0_i_1_ce1(grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage0_i_1_ce1),
+    .stage0_i_1_q1(stage0_i_1_q1),
+    .stage0_i_3_address0(grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage0_i_3_address0),
+    .stage0_i_3_ce0(grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage0_i_3_ce0),
+    .stage0_i_3_q0(stage0_i_3_q0),
+    .stage0_i_3_address1(grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage0_i_3_address1),
+    .stage0_i_3_ce1(grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage0_i_3_ce1),
+    .stage0_i_3_q1(stage0_i_3_q1),
+    .stage1_r_address0(grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage1_r_address0),
+    .stage1_r_ce0(grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage1_r_ce0),
+    .stage1_r_we0(grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage1_r_we0),
+    .stage1_r_d0(grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage1_r_d0),
+    .stage1_r_5_address0(grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage1_r_5_address0),
+    .stage1_r_5_ce0(grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage1_r_5_ce0),
+    .stage1_r_5_we0(grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage1_r_5_we0),
+    .stage1_r_5_d0(grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage1_r_5_d0),
+    .stage1_i_address0(grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage1_i_address0),
+    .stage1_i_ce0(grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage1_i_ce0),
+    .stage1_i_we0(grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage1_i_we0),
+    .stage1_i_d0(grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage1_i_d0),
+    .stage1_i_6_address0(grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage1_i_6_address0),
+    .stage1_i_6_ce0(grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage1_i_6_ce0),
+    .stage1_i_6_we0(grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage1_i_6_we0),
+    .stage1_i_6_d0(grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage1_i_6_d0),
+    .stage1_i_5_address0(grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage1_i_5_address0),
+    .stage1_i_5_ce0(grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage1_i_5_ce0),
+    .stage1_i_5_we0(grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage1_i_5_we0),
+    .stage1_i_5_d0(grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage1_i_5_d0),
+    .stage0_r_address0(grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage0_r_address0),
+    .stage0_r_ce0(grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage0_r_ce0),
+    .stage0_r_q0(stage0_r_q0),
+    .stage0_r_address1(grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage0_r_address1),
+    .stage0_r_ce1(grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage0_r_ce1),
+    .stage0_r_q1(stage0_r_q1),
+    .stage0_r_2_address0(grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage0_r_2_address0),
+    .stage0_r_2_ce0(grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage0_r_2_ce0),
+    .stage0_r_2_q0(stage0_r_2_q0),
+    .stage0_r_2_address1(grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage0_r_2_address1),
+    .stage0_r_2_ce1(grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage0_r_2_ce1),
+    .stage0_r_2_q1(stage0_r_2_q1),
+    .stage0_i_address0(grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage0_i_address0),
+    .stage0_i_ce0(grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage0_i_ce0),
+    .stage0_i_q0(stage0_i_q0),
+    .stage0_i_address1(grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage0_i_address1),
+    .stage0_i_ce1(grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage0_i_ce1),
+    .stage0_i_q1(stage0_i_q1),
+    .stage0_i_2_address0(grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage0_i_2_address0),
+    .stage0_i_2_ce0(grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage0_i_2_ce0),
+    .stage0_i_2_q0(stage0_i_2_q0),
+    .stage0_i_2_address1(grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage0_i_2_address1),
+    .stage0_i_2_ce1(grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage0_i_2_ce1),
+    .stage0_i_2_q1(stage0_i_2_q1),
+    .gm_re_tab_address0(grp_fft_10_stages_Pipeline_SECTION3_fu_120_gm_re_tab_address0),
+    .gm_re_tab_ce0(grp_fft_10_stages_Pipeline_SECTION3_fu_120_gm_re_tab_ce0),
+    .gm_re_tab_q0(gm_re_tab_q0),
+    .gm_im_tab_address0(grp_fft_10_stages_Pipeline_SECTION3_fu_120_gm_im_tab_address0),
+    .gm_im_tab_ce0(grp_fft_10_stages_Pipeline_SECTION3_fu_120_gm_im_tab_ce0),
+    .gm_im_tab_q0(gm_im_tab_q0),
+    .grp_complex_mul_fu_308_p_din1(grp_fft_10_stages_Pipeline_SECTION3_fu_120_grp_complex_mul_fu_308_p_din1),
+    .grp_complex_mul_fu_308_p_din2(grp_fft_10_stages_Pipeline_SECTION3_fu_120_grp_complex_mul_fu_308_p_din2),
+    .grp_complex_mul_fu_308_p_din3(grp_fft_10_stages_Pipeline_SECTION3_fu_120_grp_complex_mul_fu_308_p_din3),
+    .grp_complex_mul_fu_308_p_din4(grp_fft_10_stages_Pipeline_SECTION3_fu_120_grp_complex_mul_fu_308_p_din4),
+    .grp_complex_mul_fu_308_p_dout0_0(grp_complex_mul_fu_308_ap_return_0),
+    .grp_complex_mul_fu_308_p_dout0_1(grp_complex_mul_fu_308_ap_return_1),
+    .grp_complex_mul_fu_308_p_ce(grp_fft_10_stages_Pipeline_SECTION3_fu_120_grp_complex_mul_fu_308_p_ce),
+    .grp_fu_315_p_din0(grp_fft_10_stages_Pipeline_SECTION3_fu_120_grp_fu_315_p_din0),
+    .grp_fu_315_p_din1(grp_fft_10_stages_Pipeline_SECTION3_fu_120_grp_fu_315_p_din1),
+    .grp_fu_315_p_opcode(grp_fft_10_stages_Pipeline_SECTION3_fu_120_grp_fu_315_p_opcode),
+    .grp_fu_315_p_dout0(grp_fu_315_p2),
+    .grp_fu_315_p_ce(grp_fft_10_stages_Pipeline_SECTION3_fu_120_grp_fu_315_p_ce),
+    .grp_fu_319_p_din0(grp_fft_10_stages_Pipeline_SECTION3_fu_120_grp_fu_319_p_din0),
+    .grp_fu_319_p_din1(grp_fft_10_stages_Pipeline_SECTION3_fu_120_grp_fu_319_p_din1),
+    .grp_fu_319_p_opcode(grp_fft_10_stages_Pipeline_SECTION3_fu_120_grp_fu_319_p_opcode),
+    .grp_fu_319_p_dout0(grp_fu_319_p2),
+    .grp_fu_319_p_ce(grp_fft_10_stages_Pipeline_SECTION3_fu_120_grp_fu_319_p_ce),
+    .grp_fu_323_p_din0(grp_fft_10_stages_Pipeline_SECTION3_fu_120_grp_fu_323_p_din0),
+    .grp_fu_323_p_din1(grp_fft_10_stages_Pipeline_SECTION3_fu_120_grp_fu_323_p_din1),
+    .grp_fu_323_p_opcode(grp_fft_10_stages_Pipeline_SECTION3_fu_120_grp_fu_323_p_opcode),
+    .grp_fu_323_p_dout0(grp_fu_323_p2),
+    .grp_fu_323_p_ce(grp_fft_10_stages_Pipeline_SECTION3_fu_120_grp_fu_323_p_ce),
+    .grp_fu_327_p_din0(grp_fft_10_stages_Pipeline_SECTION3_fu_120_grp_fu_327_p_din0),
+    .grp_fu_327_p_din1(grp_fft_10_stages_Pipeline_SECTION3_fu_120_grp_fu_327_p_din1),
+    .grp_fu_327_p_opcode(grp_fft_10_stages_Pipeline_SECTION3_fu_120_grp_fu_327_p_opcode),
+    .grp_fu_327_p_dout0(grp_fu_327_p2),
+    .grp_fu_327_p_ce(grp_fft_10_stages_Pipeline_SECTION3_fu_120_grp_fu_327_p_ce)
 );
 
-FFT_fft_stage_clone_clone grp_fft_stage_clone_clone_fu_166(
+FFT_fft_10_stages_Pipeline_SECTION4 grp_fft_10_stages_Pipeline_SECTION4_fu_144(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst),
-    .ap_start(grp_fft_stage_clone_clone_fu_166_ap_start),
-    .ap_done(grp_fft_stage_clone_clone_fu_166_ap_done),
-    .ap_idle(grp_fft_stage_clone_clone_fu_166_ap_idle),
-    .ap_ready(grp_fft_stage_clone_clone_fu_166_ap_ready),
-    .in_r_0_address0(grp_fft_stage_clone_clone_fu_166_in_r_0_address0),
-    .in_r_0_ce0(grp_fft_stage_clone_clone_fu_166_in_r_0_ce0),
-    .in_r_0_q0(stage1_r_q0),
-    .in_r_0_address1(grp_fft_stage_clone_clone_fu_166_in_r_0_address1),
-    .in_r_0_ce1(grp_fft_stage_clone_clone_fu_166_in_r_0_ce1),
-    .in_r_0_q1(stage1_r_q1),
-    .in_r_1_address0(grp_fft_stage_clone_clone_fu_166_in_r_1_address0),
-    .in_r_1_ce0(grp_fft_stage_clone_clone_fu_166_in_r_1_ce0),
-    .in_r_1_q0(stage1_r_1_q0),
-    .in_r_1_address1(grp_fft_stage_clone_clone_fu_166_in_r_1_address1),
-    .in_r_1_ce1(grp_fft_stage_clone_clone_fu_166_in_r_1_ce1),
-    .in_r_1_q1(stage1_r_1_q1),
-    .in_r_2_address0(grp_fft_stage_clone_clone_fu_166_in_r_2_address0),
-    .in_r_2_ce0(grp_fft_stage_clone_clone_fu_166_in_r_2_ce0),
-    .in_r_2_q0(stage1_r_2_q0),
-    .in_r_2_address1(grp_fft_stage_clone_clone_fu_166_in_r_2_address1),
-    .in_r_2_ce1(grp_fft_stage_clone_clone_fu_166_in_r_2_ce1),
-    .in_r_2_q1(stage1_r_2_q1),
-    .in_r_3_address0(grp_fft_stage_clone_clone_fu_166_in_r_3_address0),
-    .in_r_3_ce0(grp_fft_stage_clone_clone_fu_166_in_r_3_ce0),
-    .in_r_3_q0(stage1_r_3_q0),
-    .in_r_3_address1(grp_fft_stage_clone_clone_fu_166_in_r_3_address1),
-    .in_r_3_ce1(grp_fft_stage_clone_clone_fu_166_in_r_3_ce1),
-    .in_r_3_q1(stage1_r_3_q1),
-    .in_i_0_address0(grp_fft_stage_clone_clone_fu_166_in_i_0_address0),
-    .in_i_0_ce0(grp_fft_stage_clone_clone_fu_166_in_i_0_ce0),
-    .in_i_0_q0(stage1_i_q0),
-    .in_i_0_address1(grp_fft_stage_clone_clone_fu_166_in_i_0_address1),
-    .in_i_0_ce1(grp_fft_stage_clone_clone_fu_166_in_i_0_ce1),
-    .in_i_0_q1(stage1_i_q1),
-    .in_i_1_address0(grp_fft_stage_clone_clone_fu_166_in_i_1_address0),
-    .in_i_1_ce0(grp_fft_stage_clone_clone_fu_166_in_i_1_ce0),
-    .in_i_1_q0(stage1_i_1_q0),
-    .in_i_1_address1(grp_fft_stage_clone_clone_fu_166_in_i_1_address1),
-    .in_i_1_ce1(grp_fft_stage_clone_clone_fu_166_in_i_1_ce1),
-    .in_i_1_q1(stage1_i_1_q1),
-    .in_i_2_address0(grp_fft_stage_clone_clone_fu_166_in_i_2_address0),
-    .in_i_2_ce0(grp_fft_stage_clone_clone_fu_166_in_i_2_ce0),
-    .in_i_2_q0(stage1_i_2_q0),
-    .in_i_2_address1(grp_fft_stage_clone_clone_fu_166_in_i_2_address1),
-    .in_i_2_ce1(grp_fft_stage_clone_clone_fu_166_in_i_2_ce1),
-    .in_i_2_q1(stage1_i_2_q1),
-    .in_i_3_address0(grp_fft_stage_clone_clone_fu_166_in_i_3_address0),
-    .in_i_3_ce0(grp_fft_stage_clone_clone_fu_166_in_i_3_ce0),
-    .in_i_3_q0(stage1_i_3_q0),
-    .in_i_3_address1(grp_fft_stage_clone_clone_fu_166_in_i_3_address1),
-    .in_i_3_ce1(grp_fft_stage_clone_clone_fu_166_in_i_3_ce1),
-    .in_i_3_q1(stage1_i_3_q1),
-    .out_r_address0(grp_fft_stage_clone_clone_fu_166_out_r_address0),
-    .out_r_ce0(grp_fft_stage_clone_clone_fu_166_out_r_ce0),
-    .out_r_we0(grp_fft_stage_clone_clone_fu_166_out_r_we0),
-    .out_r_d0(grp_fft_stage_clone_clone_fu_166_out_r_d0),
-    .out_r_address1(grp_fft_stage_clone_clone_fu_166_out_r_address1),
-    .out_r_ce1(grp_fft_stage_clone_clone_fu_166_out_r_ce1),
-    .out_r_we1(grp_fft_stage_clone_clone_fu_166_out_r_we1),
-    .out_r_d1(grp_fft_stage_clone_clone_fu_166_out_r_d1),
-    .out_i_address0(grp_fft_stage_clone_clone_fu_166_out_i_address0),
-    .out_i_ce0(grp_fft_stage_clone_clone_fu_166_out_i_ce0),
-    .out_i_we0(grp_fft_stage_clone_clone_fu_166_out_i_we0),
-    .out_i_d0(grp_fft_stage_clone_clone_fu_166_out_i_d0),
-    .out_i_address1(grp_fft_stage_clone_clone_fu_166_out_i_address1),
-    .out_i_ce1(grp_fft_stage_clone_clone_fu_166_out_i_ce1),
-    .out_i_we1(grp_fft_stage_clone_clone_fu_166_out_i_we1),
-    .out_i_d1(grp_fft_stage_clone_clone_fu_166_out_i_d1),
-    .grp_fu_186_p_din0(grp_fft_stage_clone_clone_fu_166_grp_fu_186_p_din0),
-    .grp_fu_186_p_din1(grp_fft_stage_clone_clone_fu_166_grp_fu_186_p_din1),
-    .grp_fu_186_p_opcode(grp_fft_stage_clone_clone_fu_166_grp_fu_186_p_opcode),
-    .grp_fu_186_p_dout0(grp_fu_186_p2),
-    .grp_fu_186_p_ce(grp_fft_stage_clone_clone_fu_166_grp_fu_186_p_ce),
-    .grp_fu_190_p_din0(grp_fft_stage_clone_clone_fu_166_grp_fu_190_p_din0),
-    .grp_fu_190_p_din1(grp_fft_stage_clone_clone_fu_166_grp_fu_190_p_din1),
-    .grp_fu_190_p_opcode(grp_fft_stage_clone_clone_fu_166_grp_fu_190_p_opcode),
-    .grp_fu_190_p_dout0(grp_fu_190_p2),
-    .grp_fu_190_p_ce(grp_fft_stage_clone_clone_fu_166_grp_fu_190_p_ce),
-    .grp_fu_194_p_din0(grp_fft_stage_clone_clone_fu_166_grp_fu_194_p_din0),
-    .grp_fu_194_p_din1(grp_fft_stage_clone_clone_fu_166_grp_fu_194_p_din1),
-    .grp_fu_194_p_opcode(grp_fft_stage_clone_clone_fu_166_grp_fu_194_p_opcode),
-    .grp_fu_194_p_dout0(grp_fu_194_p2),
-    .grp_fu_194_p_ce(grp_fft_stage_clone_clone_fu_166_grp_fu_194_p_ce),
-    .grp_fu_198_p_din0(grp_fft_stage_clone_clone_fu_166_grp_fu_198_p_din0),
-    .grp_fu_198_p_din1(grp_fft_stage_clone_clone_fu_166_grp_fu_198_p_din1),
-    .grp_fu_198_p_opcode(grp_fft_stage_clone_clone_fu_166_grp_fu_198_p_opcode),
-    .grp_fu_198_p_dout0(grp_fu_198_p2),
-    .grp_fu_198_p_ce(grp_fft_stage_clone_clone_fu_166_grp_fu_198_p_ce),
-    .grp_fu_202_p_din0(grp_fft_stage_clone_clone_fu_166_grp_fu_202_p_din0),
-    .grp_fu_202_p_din1(grp_fft_stage_clone_clone_fu_166_grp_fu_202_p_din1),
-    .grp_fu_202_p_opcode(grp_fft_stage_clone_clone_fu_166_grp_fu_202_p_opcode),
-    .grp_fu_202_p_dout0(grp_fu_202_p2),
-    .grp_fu_202_p_ce(grp_fft_stage_clone_clone_fu_166_grp_fu_202_p_ce),
-    .grp_fu_206_p_din0(grp_fft_stage_clone_clone_fu_166_grp_fu_206_p_din0),
-    .grp_fu_206_p_din1(grp_fft_stage_clone_clone_fu_166_grp_fu_206_p_din1),
-    .grp_fu_206_p_opcode(grp_fft_stage_clone_clone_fu_166_grp_fu_206_p_opcode),
-    .grp_fu_206_p_dout0(grp_fu_206_p2),
-    .grp_fu_206_p_ce(grp_fft_stage_clone_clone_fu_166_grp_fu_206_p_ce),
-    .grp_fu_210_p_din0(grp_fft_stage_clone_clone_fu_166_grp_fu_210_p_din0),
-    .grp_fu_210_p_din1(grp_fft_stage_clone_clone_fu_166_grp_fu_210_p_din1),
-    .grp_fu_210_p_dout0(grp_fu_210_p2),
-    .grp_fu_210_p_ce(grp_fft_stage_clone_clone_fu_166_grp_fu_210_p_ce),
-    .grp_fu_214_p_din0(grp_fft_stage_clone_clone_fu_166_grp_fu_214_p_din0),
-    .grp_fu_214_p_din1(grp_fft_stage_clone_clone_fu_166_grp_fu_214_p_din1),
-    .grp_fu_214_p_dout0(grp_fu_214_p2),
-    .grp_fu_214_p_ce(grp_fft_stage_clone_clone_fu_166_grp_fu_214_p_ce)
+    .ap_start(grp_fft_10_stages_Pipeline_SECTION4_fu_144_ap_start),
+    .ap_done(grp_fft_10_stages_Pipeline_SECTION4_fu_144_ap_done),
+    .ap_idle(grp_fft_10_stages_Pipeline_SECTION4_fu_144_ap_idle),
+    .ap_ready(grp_fft_10_stages_Pipeline_SECTION4_fu_144_ap_ready),
+    .stage0_r_1_address0(grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage0_r_1_address0),
+    .stage0_r_1_ce0(grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage0_r_1_ce0),
+    .stage0_r_1_we0(grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage0_r_1_we0),
+    .stage0_r_1_d0(grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage0_r_1_d0),
+    .stage0_r_3_address0(grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage0_r_3_address0),
+    .stage0_r_3_ce0(grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage0_r_3_ce0),
+    .stage0_r_3_we0(grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage0_r_3_we0),
+    .stage0_r_3_d0(grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage0_r_3_d0),
+    .stage0_i_1_address0(grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage0_i_1_address0),
+    .stage0_i_1_ce0(grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage0_i_1_ce0),
+    .stage0_i_1_we0(grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage0_i_1_we0),
+    .stage0_i_1_d0(grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage0_i_1_d0),
+    .stage1_r_4_address0(grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage1_r_4_address0),
+    .stage1_r_4_ce0(grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage1_r_4_ce0),
+    .stage1_r_4_q0(stage1_r_1_q0),
+    .stage1_r_4_address1(grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage1_r_4_address1),
+    .stage1_r_4_ce1(grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage1_r_4_ce1),
+    .stage1_r_4_q1(stage1_r_1_q1),
+    .stage1_r_6_address0(grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage1_r_6_address0),
+    .stage1_r_6_ce0(grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage1_r_6_ce0),
+    .stage1_r_6_q0(stage1_r_3_q0),
+    .stage1_r_6_address1(grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage1_r_6_address1),
+    .stage1_r_6_ce1(grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage1_r_6_ce1),
+    .stage1_r_6_q1(stage1_r_3_q1),
+    .stage1_i_4_address0(grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage1_i_4_address0),
+    .stage1_i_4_ce0(grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage1_i_4_ce0),
+    .stage1_i_4_q0(stage1_i_1_q0),
+    .stage1_i_4_address1(grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage1_i_4_address1),
+    .stage1_i_4_ce1(grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage1_i_4_ce1),
+    .stage1_i_4_q1(stage1_i_1_q1),
+    .stage1_i_6_address0(grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage1_i_6_address0),
+    .stage1_i_6_ce0(grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage1_i_6_ce0),
+    .stage1_i_6_q0(stage1_i_3_q0),
+    .stage1_i_6_address1(grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage1_i_6_address1),
+    .stage1_i_6_ce1(grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage1_i_6_ce1),
+    .stage1_i_6_q1(stage1_i_3_q1),
+    .stage0_r_address0(grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage0_r_address0),
+    .stage0_r_ce0(grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage0_r_ce0),
+    .stage0_r_we0(grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage0_r_we0),
+    .stage0_r_d0(grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage0_r_d0),
+    .stage0_r_2_address0(grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage0_r_2_address0),
+    .stage0_r_2_ce0(grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage0_r_2_ce0),
+    .stage0_r_2_we0(grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage0_r_2_we0),
+    .stage0_r_2_d0(grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage0_r_2_d0),
+    .stage0_i_address0(grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage0_i_address0),
+    .stage0_i_ce0(grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage0_i_ce0),
+    .stage0_i_we0(grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage0_i_we0),
+    .stage0_i_d0(grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage0_i_d0),
+    .stage0_i_3_address0(grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage0_i_3_address0),
+    .stage0_i_3_ce0(grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage0_i_3_ce0),
+    .stage0_i_3_we0(grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage0_i_3_we0),
+    .stage0_i_3_d0(grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage0_i_3_d0),
+    .stage0_i_2_address0(grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage0_i_2_address0),
+    .stage0_i_2_ce0(grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage0_i_2_ce0),
+    .stage0_i_2_we0(grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage0_i_2_we0),
+    .stage0_i_2_d0(grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage0_i_2_d0),
+    .stage1_r_address0(grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage1_r_address0),
+    .stage1_r_ce0(grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage1_r_ce0),
+    .stage1_r_q0(stage1_r_q0),
+    .stage1_r_address1(grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage1_r_address1),
+    .stage1_r_ce1(grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage1_r_ce1),
+    .stage1_r_q1(stage1_r_q1),
+    .stage1_r_5_address0(grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage1_r_5_address0),
+    .stage1_r_5_ce0(grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage1_r_5_ce0),
+    .stage1_r_5_q0(stage1_r_2_q0),
+    .stage1_r_5_address1(grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage1_r_5_address1),
+    .stage1_r_5_ce1(grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage1_r_5_ce1),
+    .stage1_r_5_q1(stage1_r_2_q1),
+    .stage1_i_address0(grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage1_i_address0),
+    .stage1_i_ce0(grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage1_i_ce0),
+    .stage1_i_q0(stage1_i_q0),
+    .stage1_i_address1(grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage1_i_address1),
+    .stage1_i_ce1(grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage1_i_ce1),
+    .stage1_i_q1(stage1_i_q1),
+    .stage1_i_5_address0(grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage1_i_5_address0),
+    .stage1_i_5_ce0(grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage1_i_5_ce0),
+    .stage1_i_5_q0(stage1_i_2_q0),
+    .stage1_i_5_address1(grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage1_i_5_address1),
+    .stage1_i_5_ce1(grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage1_i_5_ce1),
+    .stage1_i_5_q1(stage1_i_2_q1),
+    .gm_re_tab_address0(grp_fft_10_stages_Pipeline_SECTION4_fu_144_gm_re_tab_address0),
+    .gm_re_tab_ce0(grp_fft_10_stages_Pipeline_SECTION4_fu_144_gm_re_tab_ce0),
+    .gm_re_tab_q0(gm_re_tab_q0),
+    .gm_im_tab_address0(grp_fft_10_stages_Pipeline_SECTION4_fu_144_gm_im_tab_address0),
+    .gm_im_tab_ce0(grp_fft_10_stages_Pipeline_SECTION4_fu_144_gm_im_tab_ce0),
+    .gm_im_tab_q0(gm_im_tab_q0),
+    .grp_complex_mul_fu_308_p_din1(grp_fft_10_stages_Pipeline_SECTION4_fu_144_grp_complex_mul_fu_308_p_din1),
+    .grp_complex_mul_fu_308_p_din2(grp_fft_10_stages_Pipeline_SECTION4_fu_144_grp_complex_mul_fu_308_p_din2),
+    .grp_complex_mul_fu_308_p_din3(grp_fft_10_stages_Pipeline_SECTION4_fu_144_grp_complex_mul_fu_308_p_din3),
+    .grp_complex_mul_fu_308_p_din4(grp_fft_10_stages_Pipeline_SECTION4_fu_144_grp_complex_mul_fu_308_p_din4),
+    .grp_complex_mul_fu_308_p_dout0_0(grp_complex_mul_fu_308_ap_return_0),
+    .grp_complex_mul_fu_308_p_dout0_1(grp_complex_mul_fu_308_ap_return_1),
+    .grp_complex_mul_fu_308_p_ce(grp_fft_10_stages_Pipeline_SECTION4_fu_144_grp_complex_mul_fu_308_p_ce),
+    .grp_fu_315_p_din0(grp_fft_10_stages_Pipeline_SECTION4_fu_144_grp_fu_315_p_din0),
+    .grp_fu_315_p_din1(grp_fft_10_stages_Pipeline_SECTION4_fu_144_grp_fu_315_p_din1),
+    .grp_fu_315_p_opcode(grp_fft_10_stages_Pipeline_SECTION4_fu_144_grp_fu_315_p_opcode),
+    .grp_fu_315_p_dout0(grp_fu_315_p2),
+    .grp_fu_315_p_ce(grp_fft_10_stages_Pipeline_SECTION4_fu_144_grp_fu_315_p_ce),
+    .grp_fu_319_p_din0(grp_fft_10_stages_Pipeline_SECTION4_fu_144_grp_fu_319_p_din0),
+    .grp_fu_319_p_din1(grp_fft_10_stages_Pipeline_SECTION4_fu_144_grp_fu_319_p_din1),
+    .grp_fu_319_p_opcode(grp_fft_10_stages_Pipeline_SECTION4_fu_144_grp_fu_319_p_opcode),
+    .grp_fu_319_p_dout0(grp_fu_319_p2),
+    .grp_fu_319_p_ce(grp_fft_10_stages_Pipeline_SECTION4_fu_144_grp_fu_319_p_ce),
+    .grp_fu_323_p_din0(grp_fft_10_stages_Pipeline_SECTION4_fu_144_grp_fu_323_p_din0),
+    .grp_fu_323_p_din1(grp_fft_10_stages_Pipeline_SECTION4_fu_144_grp_fu_323_p_din1),
+    .grp_fu_323_p_opcode(grp_fft_10_stages_Pipeline_SECTION4_fu_144_grp_fu_323_p_opcode),
+    .grp_fu_323_p_dout0(grp_fu_323_p2),
+    .grp_fu_323_p_ce(grp_fft_10_stages_Pipeline_SECTION4_fu_144_grp_fu_323_p_ce),
+    .grp_fu_327_p_din0(grp_fft_10_stages_Pipeline_SECTION4_fu_144_grp_fu_327_p_din0),
+    .grp_fu_327_p_din1(grp_fft_10_stages_Pipeline_SECTION4_fu_144_grp_fu_327_p_din1),
+    .grp_fu_327_p_opcode(grp_fft_10_stages_Pipeline_SECTION4_fu_144_grp_fu_327_p_opcode),
+    .grp_fu_327_p_dout0(grp_fu_327_p2),
+    .grp_fu_327_p_ce(grp_fft_10_stages_Pipeline_SECTION4_fu_144_grp_fu_327_p_ce)
 );
 
-FFT_dsub_64ns_64ns_64_5_full_dsp_1 #(
+FFT_fft_10_stages_Pipeline_SECTION5 grp_fft_10_stages_Pipeline_SECTION5_fu_168(
+    .ap_clk(ap_clk),
+    .ap_rst(ap_rst),
+    .ap_start(grp_fft_10_stages_Pipeline_SECTION5_fu_168_ap_start),
+    .ap_done(grp_fft_10_stages_Pipeline_SECTION5_fu_168_ap_done),
+    .ap_idle(grp_fft_10_stages_Pipeline_SECTION5_fu_168_ap_idle),
+    .ap_ready(grp_fft_10_stages_Pipeline_SECTION5_fu_168_ap_ready),
+    .stage1_r_4_address0(grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage1_r_4_address0),
+    .stage1_r_4_ce0(grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage1_r_4_ce0),
+    .stage1_r_4_we0(grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage1_r_4_we0),
+    .stage1_r_4_d0(grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage1_r_4_d0),
+    .stage1_r_6_address0(grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage1_r_6_address0),
+    .stage1_r_6_ce0(grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage1_r_6_ce0),
+    .stage1_r_6_we0(grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage1_r_6_we0),
+    .stage1_r_6_d0(grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage1_r_6_d0),
+    .stage1_i_4_address0(grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage1_i_4_address0),
+    .stage1_i_4_ce0(grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage1_i_4_ce0),
+    .stage1_i_4_we0(grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage1_i_4_we0),
+    .stage1_i_4_d0(grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage1_i_4_d0),
+    .stage0_r_1_address0(grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage0_r_1_address0),
+    .stage0_r_1_ce0(grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage0_r_1_ce0),
+    .stage0_r_1_q0(stage0_r_1_q0),
+    .stage0_r_1_address1(grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage0_r_1_address1),
+    .stage0_r_1_ce1(grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage0_r_1_ce1),
+    .stage0_r_1_q1(stage0_r_1_q1),
+    .stage0_r_3_address0(grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage0_r_3_address0),
+    .stage0_r_3_ce0(grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage0_r_3_ce0),
+    .stage0_r_3_q0(stage0_r_3_q0),
+    .stage0_r_3_address1(grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage0_r_3_address1),
+    .stage0_r_3_ce1(grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage0_r_3_ce1),
+    .stage0_r_3_q1(stage0_r_3_q1),
+    .stage0_i_1_address0(grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage0_i_1_address0),
+    .stage0_i_1_ce0(grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage0_i_1_ce0),
+    .stage0_i_1_q0(stage0_i_1_q0),
+    .stage0_i_1_address1(grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage0_i_1_address1),
+    .stage0_i_1_ce1(grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage0_i_1_ce1),
+    .stage0_i_1_q1(stage0_i_1_q1),
+    .stage0_i_3_address0(grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage0_i_3_address0),
+    .stage0_i_3_ce0(grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage0_i_3_ce0),
+    .stage0_i_3_q0(stage0_i_3_q0),
+    .stage0_i_3_address1(grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage0_i_3_address1),
+    .stage0_i_3_ce1(grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage0_i_3_ce1),
+    .stage0_i_3_q1(stage0_i_3_q1),
+    .stage1_r_address0(grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage1_r_address0),
+    .stage1_r_ce0(grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage1_r_ce0),
+    .stage1_r_we0(grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage1_r_we0),
+    .stage1_r_d0(grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage1_r_d0),
+    .stage1_r_5_address0(grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage1_r_5_address0),
+    .stage1_r_5_ce0(grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage1_r_5_ce0),
+    .stage1_r_5_we0(grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage1_r_5_we0),
+    .stage1_r_5_d0(grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage1_r_5_d0),
+    .stage1_i_address0(grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage1_i_address0),
+    .stage1_i_ce0(grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage1_i_ce0),
+    .stage1_i_we0(grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage1_i_we0),
+    .stage1_i_d0(grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage1_i_d0),
+    .stage1_i_6_address0(grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage1_i_6_address0),
+    .stage1_i_6_ce0(grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage1_i_6_ce0),
+    .stage1_i_6_we0(grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage1_i_6_we0),
+    .stage1_i_6_d0(grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage1_i_6_d0),
+    .stage1_i_5_address0(grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage1_i_5_address0),
+    .stage1_i_5_ce0(grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage1_i_5_ce0),
+    .stage1_i_5_we0(grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage1_i_5_we0),
+    .stage1_i_5_d0(grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage1_i_5_d0),
+    .stage0_r_address0(grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage0_r_address0),
+    .stage0_r_ce0(grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage0_r_ce0),
+    .stage0_r_q0(stage0_r_q0),
+    .stage0_r_address1(grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage0_r_address1),
+    .stage0_r_ce1(grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage0_r_ce1),
+    .stage0_r_q1(stage0_r_q1),
+    .stage0_r_2_address0(grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage0_r_2_address0),
+    .stage0_r_2_ce0(grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage0_r_2_ce0),
+    .stage0_r_2_q0(stage0_r_2_q0),
+    .stage0_r_2_address1(grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage0_r_2_address1),
+    .stage0_r_2_ce1(grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage0_r_2_ce1),
+    .stage0_r_2_q1(stage0_r_2_q1),
+    .stage0_i_address0(grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage0_i_address0),
+    .stage0_i_ce0(grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage0_i_ce0),
+    .stage0_i_q0(stage0_i_q0),
+    .stage0_i_address1(grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage0_i_address1),
+    .stage0_i_ce1(grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage0_i_ce1),
+    .stage0_i_q1(stage0_i_q1),
+    .stage0_i_2_address0(grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage0_i_2_address0),
+    .stage0_i_2_ce0(grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage0_i_2_ce0),
+    .stage0_i_2_q0(stage0_i_2_q0),
+    .stage0_i_2_address1(grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage0_i_2_address1),
+    .stage0_i_2_ce1(grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage0_i_2_ce1),
+    .stage0_i_2_q1(stage0_i_2_q1),
+    .gm_re_tab_address0(grp_fft_10_stages_Pipeline_SECTION5_fu_168_gm_re_tab_address0),
+    .gm_re_tab_ce0(grp_fft_10_stages_Pipeline_SECTION5_fu_168_gm_re_tab_ce0),
+    .gm_re_tab_q0(gm_re_tab_q0),
+    .gm_im_tab_address0(grp_fft_10_stages_Pipeline_SECTION5_fu_168_gm_im_tab_address0),
+    .gm_im_tab_ce0(grp_fft_10_stages_Pipeline_SECTION5_fu_168_gm_im_tab_ce0),
+    .gm_im_tab_q0(gm_im_tab_q0),
+    .grp_complex_mul_fu_308_p_din1(grp_fft_10_stages_Pipeline_SECTION5_fu_168_grp_complex_mul_fu_308_p_din1),
+    .grp_complex_mul_fu_308_p_din2(grp_fft_10_stages_Pipeline_SECTION5_fu_168_grp_complex_mul_fu_308_p_din2),
+    .grp_complex_mul_fu_308_p_din3(grp_fft_10_stages_Pipeline_SECTION5_fu_168_grp_complex_mul_fu_308_p_din3),
+    .grp_complex_mul_fu_308_p_din4(grp_fft_10_stages_Pipeline_SECTION5_fu_168_grp_complex_mul_fu_308_p_din4),
+    .grp_complex_mul_fu_308_p_dout0_0(grp_complex_mul_fu_308_ap_return_0),
+    .grp_complex_mul_fu_308_p_dout0_1(grp_complex_mul_fu_308_ap_return_1),
+    .grp_complex_mul_fu_308_p_ce(grp_fft_10_stages_Pipeline_SECTION5_fu_168_grp_complex_mul_fu_308_p_ce),
+    .grp_fu_315_p_din0(grp_fft_10_stages_Pipeline_SECTION5_fu_168_grp_fu_315_p_din0),
+    .grp_fu_315_p_din1(grp_fft_10_stages_Pipeline_SECTION5_fu_168_grp_fu_315_p_din1),
+    .grp_fu_315_p_opcode(grp_fft_10_stages_Pipeline_SECTION5_fu_168_grp_fu_315_p_opcode),
+    .grp_fu_315_p_dout0(grp_fu_315_p2),
+    .grp_fu_315_p_ce(grp_fft_10_stages_Pipeline_SECTION5_fu_168_grp_fu_315_p_ce),
+    .grp_fu_319_p_din0(grp_fft_10_stages_Pipeline_SECTION5_fu_168_grp_fu_319_p_din0),
+    .grp_fu_319_p_din1(grp_fft_10_stages_Pipeline_SECTION5_fu_168_grp_fu_319_p_din1),
+    .grp_fu_319_p_opcode(grp_fft_10_stages_Pipeline_SECTION5_fu_168_grp_fu_319_p_opcode),
+    .grp_fu_319_p_dout0(grp_fu_319_p2),
+    .grp_fu_319_p_ce(grp_fft_10_stages_Pipeline_SECTION5_fu_168_grp_fu_319_p_ce),
+    .grp_fu_323_p_din0(grp_fft_10_stages_Pipeline_SECTION5_fu_168_grp_fu_323_p_din0),
+    .grp_fu_323_p_din1(grp_fft_10_stages_Pipeline_SECTION5_fu_168_grp_fu_323_p_din1),
+    .grp_fu_323_p_opcode(grp_fft_10_stages_Pipeline_SECTION5_fu_168_grp_fu_323_p_opcode),
+    .grp_fu_323_p_dout0(grp_fu_323_p2),
+    .grp_fu_323_p_ce(grp_fft_10_stages_Pipeline_SECTION5_fu_168_grp_fu_323_p_ce),
+    .grp_fu_327_p_din0(grp_fft_10_stages_Pipeline_SECTION5_fu_168_grp_fu_327_p_din0),
+    .grp_fu_327_p_din1(grp_fft_10_stages_Pipeline_SECTION5_fu_168_grp_fu_327_p_din1),
+    .grp_fu_327_p_opcode(grp_fft_10_stages_Pipeline_SECTION5_fu_168_grp_fu_327_p_opcode),
+    .grp_fu_327_p_dout0(grp_fu_327_p2),
+    .grp_fu_327_p_ce(grp_fft_10_stages_Pipeline_SECTION5_fu_168_grp_fu_327_p_ce)
+);
+
+FFT_fft_10_stages_Pipeline_SECTION6 grp_fft_10_stages_Pipeline_SECTION6_fu_192(
+    .ap_clk(ap_clk),
+    .ap_rst(ap_rst),
+    .ap_start(grp_fft_10_stages_Pipeline_SECTION6_fu_192_ap_start),
+    .ap_done(grp_fft_10_stages_Pipeline_SECTION6_fu_192_ap_done),
+    .ap_idle(grp_fft_10_stages_Pipeline_SECTION6_fu_192_ap_idle),
+    .ap_ready(grp_fft_10_stages_Pipeline_SECTION6_fu_192_ap_ready),
+    .stage0_r_1_address0(grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage0_r_1_address0),
+    .stage0_r_1_ce0(grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage0_r_1_ce0),
+    .stage0_r_1_we0(grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage0_r_1_we0),
+    .stage0_r_1_d0(grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage0_r_1_d0),
+    .stage0_r_3_address0(grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage0_r_3_address0),
+    .stage0_r_3_ce0(grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage0_r_3_ce0),
+    .stage0_r_3_we0(grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage0_r_3_we0),
+    .stage0_r_3_d0(grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage0_r_3_d0),
+    .stage0_i_1_address0(grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage0_i_1_address0),
+    .stage0_i_1_ce0(grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage0_i_1_ce0),
+    .stage0_i_1_we0(grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage0_i_1_we0),
+    .stage0_i_1_d0(grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage0_i_1_d0),
+    .stage1_r_4_address0(grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage1_r_4_address0),
+    .stage1_r_4_ce0(grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage1_r_4_ce0),
+    .stage1_r_4_q0(stage1_r_1_q0),
+    .stage1_r_4_address1(grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage1_r_4_address1),
+    .stage1_r_4_ce1(grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage1_r_4_ce1),
+    .stage1_r_4_q1(stage1_r_1_q1),
+    .stage1_r_6_address0(grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage1_r_6_address0),
+    .stage1_r_6_ce0(grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage1_r_6_ce0),
+    .stage1_r_6_q0(stage1_r_3_q0),
+    .stage1_r_6_address1(grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage1_r_6_address1),
+    .stage1_r_6_ce1(grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage1_r_6_ce1),
+    .stage1_r_6_q1(stage1_r_3_q1),
+    .stage1_i_4_address0(grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage1_i_4_address0),
+    .stage1_i_4_ce0(grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage1_i_4_ce0),
+    .stage1_i_4_q0(stage1_i_1_q0),
+    .stage1_i_4_address1(grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage1_i_4_address1),
+    .stage1_i_4_ce1(grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage1_i_4_ce1),
+    .stage1_i_4_q1(stage1_i_1_q1),
+    .stage1_i_6_address0(grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage1_i_6_address0),
+    .stage1_i_6_ce0(grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage1_i_6_ce0),
+    .stage1_i_6_q0(stage1_i_3_q0),
+    .stage1_i_6_address1(grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage1_i_6_address1),
+    .stage1_i_6_ce1(grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage1_i_6_ce1),
+    .stage1_i_6_q1(stage1_i_3_q1),
+    .stage0_r_address0(grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage0_r_address0),
+    .stage0_r_ce0(grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage0_r_ce0),
+    .stage0_r_we0(grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage0_r_we0),
+    .stage0_r_d0(grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage0_r_d0),
+    .stage0_r_2_address0(grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage0_r_2_address0),
+    .stage0_r_2_ce0(grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage0_r_2_ce0),
+    .stage0_r_2_we0(grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage0_r_2_we0),
+    .stage0_r_2_d0(grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage0_r_2_d0),
+    .stage0_i_address0(grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage0_i_address0),
+    .stage0_i_ce0(grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage0_i_ce0),
+    .stage0_i_we0(grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage0_i_we0),
+    .stage0_i_d0(grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage0_i_d0),
+    .stage0_i_3_address0(grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage0_i_3_address0),
+    .stage0_i_3_ce0(grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage0_i_3_ce0),
+    .stage0_i_3_we0(grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage0_i_3_we0),
+    .stage0_i_3_d0(grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage0_i_3_d0),
+    .stage0_i_2_address0(grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage0_i_2_address0),
+    .stage0_i_2_ce0(grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage0_i_2_ce0),
+    .stage0_i_2_we0(grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage0_i_2_we0),
+    .stage0_i_2_d0(grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage0_i_2_d0),
+    .stage1_r_address0(grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage1_r_address0),
+    .stage1_r_ce0(grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage1_r_ce0),
+    .stage1_r_q0(stage1_r_q0),
+    .stage1_r_address1(grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage1_r_address1),
+    .stage1_r_ce1(grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage1_r_ce1),
+    .stage1_r_q1(stage1_r_q1),
+    .stage1_r_5_address0(grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage1_r_5_address0),
+    .stage1_r_5_ce0(grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage1_r_5_ce0),
+    .stage1_r_5_q0(stage1_r_2_q0),
+    .stage1_r_5_address1(grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage1_r_5_address1),
+    .stage1_r_5_ce1(grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage1_r_5_ce1),
+    .stage1_r_5_q1(stage1_r_2_q1),
+    .stage1_i_address0(grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage1_i_address0),
+    .stage1_i_ce0(grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage1_i_ce0),
+    .stage1_i_q0(stage1_i_q0),
+    .stage1_i_address1(grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage1_i_address1),
+    .stage1_i_ce1(grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage1_i_ce1),
+    .stage1_i_q1(stage1_i_q1),
+    .stage1_i_5_address0(grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage1_i_5_address0),
+    .stage1_i_5_ce0(grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage1_i_5_ce0),
+    .stage1_i_5_q0(stage1_i_2_q0),
+    .stage1_i_5_address1(grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage1_i_5_address1),
+    .stage1_i_5_ce1(grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage1_i_5_ce1),
+    .stage1_i_5_q1(stage1_i_2_q1),
+    .gm_re_tab_address0(grp_fft_10_stages_Pipeline_SECTION6_fu_192_gm_re_tab_address0),
+    .gm_re_tab_ce0(grp_fft_10_stages_Pipeline_SECTION6_fu_192_gm_re_tab_ce0),
+    .gm_re_tab_q0(gm_re_tab_q0),
+    .gm_im_tab_address0(grp_fft_10_stages_Pipeline_SECTION6_fu_192_gm_im_tab_address0),
+    .gm_im_tab_ce0(grp_fft_10_stages_Pipeline_SECTION6_fu_192_gm_im_tab_ce0),
+    .gm_im_tab_q0(gm_im_tab_q0),
+    .grp_complex_mul_fu_308_p_din1(grp_fft_10_stages_Pipeline_SECTION6_fu_192_grp_complex_mul_fu_308_p_din1),
+    .grp_complex_mul_fu_308_p_din2(grp_fft_10_stages_Pipeline_SECTION6_fu_192_grp_complex_mul_fu_308_p_din2),
+    .grp_complex_mul_fu_308_p_din3(grp_fft_10_stages_Pipeline_SECTION6_fu_192_grp_complex_mul_fu_308_p_din3),
+    .grp_complex_mul_fu_308_p_din4(grp_fft_10_stages_Pipeline_SECTION6_fu_192_grp_complex_mul_fu_308_p_din4),
+    .grp_complex_mul_fu_308_p_dout0_0(grp_complex_mul_fu_308_ap_return_0),
+    .grp_complex_mul_fu_308_p_dout0_1(grp_complex_mul_fu_308_ap_return_1),
+    .grp_complex_mul_fu_308_p_ce(grp_fft_10_stages_Pipeline_SECTION6_fu_192_grp_complex_mul_fu_308_p_ce),
+    .grp_fu_315_p_din0(grp_fft_10_stages_Pipeline_SECTION6_fu_192_grp_fu_315_p_din0),
+    .grp_fu_315_p_din1(grp_fft_10_stages_Pipeline_SECTION6_fu_192_grp_fu_315_p_din1),
+    .grp_fu_315_p_opcode(grp_fft_10_stages_Pipeline_SECTION6_fu_192_grp_fu_315_p_opcode),
+    .grp_fu_315_p_dout0(grp_fu_315_p2),
+    .grp_fu_315_p_ce(grp_fft_10_stages_Pipeline_SECTION6_fu_192_grp_fu_315_p_ce),
+    .grp_fu_319_p_din0(grp_fft_10_stages_Pipeline_SECTION6_fu_192_grp_fu_319_p_din0),
+    .grp_fu_319_p_din1(grp_fft_10_stages_Pipeline_SECTION6_fu_192_grp_fu_319_p_din1),
+    .grp_fu_319_p_opcode(grp_fft_10_stages_Pipeline_SECTION6_fu_192_grp_fu_319_p_opcode),
+    .grp_fu_319_p_dout0(grp_fu_319_p2),
+    .grp_fu_319_p_ce(grp_fft_10_stages_Pipeline_SECTION6_fu_192_grp_fu_319_p_ce),
+    .grp_fu_323_p_din0(grp_fft_10_stages_Pipeline_SECTION6_fu_192_grp_fu_323_p_din0),
+    .grp_fu_323_p_din1(grp_fft_10_stages_Pipeline_SECTION6_fu_192_grp_fu_323_p_din1),
+    .grp_fu_323_p_opcode(grp_fft_10_stages_Pipeline_SECTION6_fu_192_grp_fu_323_p_opcode),
+    .grp_fu_323_p_dout0(grp_fu_323_p2),
+    .grp_fu_323_p_ce(grp_fft_10_stages_Pipeline_SECTION6_fu_192_grp_fu_323_p_ce),
+    .grp_fu_327_p_din0(grp_fft_10_stages_Pipeline_SECTION6_fu_192_grp_fu_327_p_din0),
+    .grp_fu_327_p_din1(grp_fft_10_stages_Pipeline_SECTION6_fu_192_grp_fu_327_p_din1),
+    .grp_fu_327_p_opcode(grp_fft_10_stages_Pipeline_SECTION6_fu_192_grp_fu_327_p_opcode),
+    .grp_fu_327_p_dout0(grp_fu_327_p2),
+    .grp_fu_327_p_ce(grp_fft_10_stages_Pipeline_SECTION6_fu_192_grp_fu_327_p_ce)
+);
+
+FFT_fft_10_stages_Pipeline_SECTION7 grp_fft_10_stages_Pipeline_SECTION7_fu_216(
+    .ap_clk(ap_clk),
+    .ap_rst(ap_rst),
+    .ap_start(grp_fft_10_stages_Pipeline_SECTION7_fu_216_ap_start),
+    .ap_done(grp_fft_10_stages_Pipeline_SECTION7_fu_216_ap_done),
+    .ap_idle(grp_fft_10_stages_Pipeline_SECTION7_fu_216_ap_idle),
+    .ap_ready(grp_fft_10_stages_Pipeline_SECTION7_fu_216_ap_ready),
+    .stage1_r_4_address0(grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage1_r_4_address0),
+    .stage1_r_4_ce0(grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage1_r_4_ce0),
+    .stage1_r_4_we0(grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage1_r_4_we0),
+    .stage1_r_4_d0(grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage1_r_4_d0),
+    .stage1_r_6_address0(grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage1_r_6_address0),
+    .stage1_r_6_ce0(grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage1_r_6_ce0),
+    .stage1_r_6_we0(grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage1_r_6_we0),
+    .stage1_r_6_d0(grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage1_r_6_d0),
+    .stage1_i_4_address0(grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage1_i_4_address0),
+    .stage1_i_4_ce0(grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage1_i_4_ce0),
+    .stage1_i_4_we0(grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage1_i_4_we0),
+    .stage1_i_4_d0(grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage1_i_4_d0),
+    .stage0_r_1_address0(grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage0_r_1_address0),
+    .stage0_r_1_ce0(grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage0_r_1_ce0),
+    .stage0_r_1_q0(stage0_r_1_q0),
+    .stage0_r_1_address1(grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage0_r_1_address1),
+    .stage0_r_1_ce1(grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage0_r_1_ce1),
+    .stage0_r_1_q1(stage0_r_1_q1),
+    .stage0_r_3_address0(grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage0_r_3_address0),
+    .stage0_r_3_ce0(grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage0_r_3_ce0),
+    .stage0_r_3_q0(stage0_r_3_q0),
+    .stage0_r_3_address1(grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage0_r_3_address1),
+    .stage0_r_3_ce1(grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage0_r_3_ce1),
+    .stage0_r_3_q1(stage0_r_3_q1),
+    .stage0_i_1_address0(grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage0_i_1_address0),
+    .stage0_i_1_ce0(grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage0_i_1_ce0),
+    .stage0_i_1_q0(stage0_i_1_q0),
+    .stage0_i_1_address1(grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage0_i_1_address1),
+    .stage0_i_1_ce1(grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage0_i_1_ce1),
+    .stage0_i_1_q1(stage0_i_1_q1),
+    .stage0_i_3_address0(grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage0_i_3_address0),
+    .stage0_i_3_ce0(grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage0_i_3_ce0),
+    .stage0_i_3_q0(stage0_i_3_q0),
+    .stage0_i_3_address1(grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage0_i_3_address1),
+    .stage0_i_3_ce1(grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage0_i_3_ce1),
+    .stage0_i_3_q1(stage0_i_3_q1),
+    .stage1_r_address0(grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage1_r_address0),
+    .stage1_r_ce0(grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage1_r_ce0),
+    .stage1_r_we0(grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage1_r_we0),
+    .stage1_r_d0(grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage1_r_d0),
+    .stage1_r_5_address0(grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage1_r_5_address0),
+    .stage1_r_5_ce0(grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage1_r_5_ce0),
+    .stage1_r_5_we0(grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage1_r_5_we0),
+    .stage1_r_5_d0(grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage1_r_5_d0),
+    .stage1_i_address0(grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage1_i_address0),
+    .stage1_i_ce0(grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage1_i_ce0),
+    .stage1_i_we0(grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage1_i_we0),
+    .stage1_i_d0(grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage1_i_d0),
+    .stage1_i_6_address0(grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage1_i_6_address0),
+    .stage1_i_6_ce0(grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage1_i_6_ce0),
+    .stage1_i_6_we0(grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage1_i_6_we0),
+    .stage1_i_6_d0(grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage1_i_6_d0),
+    .stage1_i_5_address0(grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage1_i_5_address0),
+    .stage1_i_5_ce0(grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage1_i_5_ce0),
+    .stage1_i_5_we0(grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage1_i_5_we0),
+    .stage1_i_5_d0(grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage1_i_5_d0),
+    .stage0_r_address0(grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage0_r_address0),
+    .stage0_r_ce0(grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage0_r_ce0),
+    .stage0_r_q0(stage0_r_q0),
+    .stage0_r_address1(grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage0_r_address1),
+    .stage0_r_ce1(grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage0_r_ce1),
+    .stage0_r_q1(stage0_r_q1),
+    .stage0_r_2_address0(grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage0_r_2_address0),
+    .stage0_r_2_ce0(grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage0_r_2_ce0),
+    .stage0_r_2_q0(stage0_r_2_q0),
+    .stage0_r_2_address1(grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage0_r_2_address1),
+    .stage0_r_2_ce1(grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage0_r_2_ce1),
+    .stage0_r_2_q1(stage0_r_2_q1),
+    .stage0_i_address0(grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage0_i_address0),
+    .stage0_i_ce0(grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage0_i_ce0),
+    .stage0_i_q0(stage0_i_q0),
+    .stage0_i_address1(grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage0_i_address1),
+    .stage0_i_ce1(grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage0_i_ce1),
+    .stage0_i_q1(stage0_i_q1),
+    .stage0_i_2_address0(grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage0_i_2_address0),
+    .stage0_i_2_ce0(grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage0_i_2_ce0),
+    .stage0_i_2_q0(stage0_i_2_q0),
+    .stage0_i_2_address1(grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage0_i_2_address1),
+    .stage0_i_2_ce1(grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage0_i_2_ce1),
+    .stage0_i_2_q1(stage0_i_2_q1),
+    .gm_re_tab_address0(grp_fft_10_stages_Pipeline_SECTION7_fu_216_gm_re_tab_address0),
+    .gm_re_tab_ce0(grp_fft_10_stages_Pipeline_SECTION7_fu_216_gm_re_tab_ce0),
+    .gm_re_tab_q0(gm_re_tab_q0),
+    .gm_im_tab_address0(grp_fft_10_stages_Pipeline_SECTION7_fu_216_gm_im_tab_address0),
+    .gm_im_tab_ce0(grp_fft_10_stages_Pipeline_SECTION7_fu_216_gm_im_tab_ce0),
+    .gm_im_tab_q0(gm_im_tab_q0),
+    .grp_complex_mul_fu_308_p_din1(grp_fft_10_stages_Pipeline_SECTION7_fu_216_grp_complex_mul_fu_308_p_din1),
+    .grp_complex_mul_fu_308_p_din2(grp_fft_10_stages_Pipeline_SECTION7_fu_216_grp_complex_mul_fu_308_p_din2),
+    .grp_complex_mul_fu_308_p_din3(grp_fft_10_stages_Pipeline_SECTION7_fu_216_grp_complex_mul_fu_308_p_din3),
+    .grp_complex_mul_fu_308_p_din4(grp_fft_10_stages_Pipeline_SECTION7_fu_216_grp_complex_mul_fu_308_p_din4),
+    .grp_complex_mul_fu_308_p_dout0_0(grp_complex_mul_fu_308_ap_return_0),
+    .grp_complex_mul_fu_308_p_dout0_1(grp_complex_mul_fu_308_ap_return_1),
+    .grp_complex_mul_fu_308_p_ce(grp_fft_10_stages_Pipeline_SECTION7_fu_216_grp_complex_mul_fu_308_p_ce),
+    .grp_fu_315_p_din0(grp_fft_10_stages_Pipeline_SECTION7_fu_216_grp_fu_315_p_din0),
+    .grp_fu_315_p_din1(grp_fft_10_stages_Pipeline_SECTION7_fu_216_grp_fu_315_p_din1),
+    .grp_fu_315_p_opcode(grp_fft_10_stages_Pipeline_SECTION7_fu_216_grp_fu_315_p_opcode),
+    .grp_fu_315_p_dout0(grp_fu_315_p2),
+    .grp_fu_315_p_ce(grp_fft_10_stages_Pipeline_SECTION7_fu_216_grp_fu_315_p_ce),
+    .grp_fu_319_p_din0(grp_fft_10_stages_Pipeline_SECTION7_fu_216_grp_fu_319_p_din0),
+    .grp_fu_319_p_din1(grp_fft_10_stages_Pipeline_SECTION7_fu_216_grp_fu_319_p_din1),
+    .grp_fu_319_p_opcode(grp_fft_10_stages_Pipeline_SECTION7_fu_216_grp_fu_319_p_opcode),
+    .grp_fu_319_p_dout0(grp_fu_319_p2),
+    .grp_fu_319_p_ce(grp_fft_10_stages_Pipeline_SECTION7_fu_216_grp_fu_319_p_ce),
+    .grp_fu_323_p_din0(grp_fft_10_stages_Pipeline_SECTION7_fu_216_grp_fu_323_p_din0),
+    .grp_fu_323_p_din1(grp_fft_10_stages_Pipeline_SECTION7_fu_216_grp_fu_323_p_din1),
+    .grp_fu_323_p_opcode(grp_fft_10_stages_Pipeline_SECTION7_fu_216_grp_fu_323_p_opcode),
+    .grp_fu_323_p_dout0(grp_fu_323_p2),
+    .grp_fu_323_p_ce(grp_fft_10_stages_Pipeline_SECTION7_fu_216_grp_fu_323_p_ce),
+    .grp_fu_327_p_din0(grp_fft_10_stages_Pipeline_SECTION7_fu_216_grp_fu_327_p_din0),
+    .grp_fu_327_p_din1(grp_fft_10_stages_Pipeline_SECTION7_fu_216_grp_fu_327_p_din1),
+    .grp_fu_327_p_opcode(grp_fft_10_stages_Pipeline_SECTION7_fu_216_grp_fu_327_p_opcode),
+    .grp_fu_327_p_dout0(grp_fu_327_p2),
+    .grp_fu_327_p_ce(grp_fft_10_stages_Pipeline_SECTION7_fu_216_grp_fu_327_p_ce)
+);
+
+FFT_fft_10_stages_Pipeline_SECTION8 grp_fft_10_stages_Pipeline_SECTION8_fu_240(
+    .ap_clk(ap_clk),
+    .ap_rst(ap_rst),
+    .ap_start(grp_fft_10_stages_Pipeline_SECTION8_fu_240_ap_start),
+    .ap_done(grp_fft_10_stages_Pipeline_SECTION8_fu_240_ap_done),
+    .ap_idle(grp_fft_10_stages_Pipeline_SECTION8_fu_240_ap_idle),
+    .ap_ready(grp_fft_10_stages_Pipeline_SECTION8_fu_240_ap_ready),
+    .stage0_r_1_address0(grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage0_r_1_address0),
+    .stage0_r_1_ce0(grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage0_r_1_ce0),
+    .stage0_r_1_we0(grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage0_r_1_we0),
+    .stage0_r_1_d0(grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage0_r_1_d0),
+    .stage0_r_3_address0(grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage0_r_3_address0),
+    .stage0_r_3_ce0(grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage0_r_3_ce0),
+    .stage0_r_3_we0(grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage0_r_3_we0),
+    .stage0_r_3_d0(grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage0_r_3_d0),
+    .stage0_i_1_address0(grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage0_i_1_address0),
+    .stage0_i_1_ce0(grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage0_i_1_ce0),
+    .stage0_i_1_we0(grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage0_i_1_we0),
+    .stage0_i_1_d0(grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage0_i_1_d0),
+    .stage1_r_4_address0(grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage1_r_4_address0),
+    .stage1_r_4_ce0(grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage1_r_4_ce0),
+    .stage1_r_4_q0(stage1_r_1_q0),
+    .stage1_r_4_address1(grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage1_r_4_address1),
+    .stage1_r_4_ce1(grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage1_r_4_ce1),
+    .stage1_r_4_q1(stage1_r_1_q1),
+    .stage1_r_6_address0(grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage1_r_6_address0),
+    .stage1_r_6_ce0(grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage1_r_6_ce0),
+    .stage1_r_6_q0(stage1_r_3_q0),
+    .stage1_r_6_address1(grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage1_r_6_address1),
+    .stage1_r_6_ce1(grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage1_r_6_ce1),
+    .stage1_r_6_q1(stage1_r_3_q1),
+    .stage1_i_4_address0(grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage1_i_4_address0),
+    .stage1_i_4_ce0(grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage1_i_4_ce0),
+    .stage1_i_4_q0(stage1_i_1_q0),
+    .stage1_i_4_address1(grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage1_i_4_address1),
+    .stage1_i_4_ce1(grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage1_i_4_ce1),
+    .stage1_i_4_q1(stage1_i_1_q1),
+    .stage1_i_6_address0(grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage1_i_6_address0),
+    .stage1_i_6_ce0(grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage1_i_6_ce0),
+    .stage1_i_6_q0(stage1_i_3_q0),
+    .stage1_i_6_address1(grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage1_i_6_address1),
+    .stage1_i_6_ce1(grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage1_i_6_ce1),
+    .stage1_i_6_q1(stage1_i_3_q1),
+    .stage0_r_address0(grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage0_r_address0),
+    .stage0_r_ce0(grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage0_r_ce0),
+    .stage0_r_we0(grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage0_r_we0),
+    .stage0_r_d0(grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage0_r_d0),
+    .stage0_r_2_address0(grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage0_r_2_address0),
+    .stage0_r_2_ce0(grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage0_r_2_ce0),
+    .stage0_r_2_we0(grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage0_r_2_we0),
+    .stage0_r_2_d0(grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage0_r_2_d0),
+    .stage0_i_address0(grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage0_i_address0),
+    .stage0_i_ce0(grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage0_i_ce0),
+    .stage0_i_we0(grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage0_i_we0),
+    .stage0_i_d0(grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage0_i_d0),
+    .stage0_i_3_address0(grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage0_i_3_address0),
+    .stage0_i_3_ce0(grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage0_i_3_ce0),
+    .stage0_i_3_we0(grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage0_i_3_we0),
+    .stage0_i_3_d0(grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage0_i_3_d0),
+    .stage0_i_2_address0(grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage0_i_2_address0),
+    .stage0_i_2_ce0(grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage0_i_2_ce0),
+    .stage0_i_2_we0(grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage0_i_2_we0),
+    .stage0_i_2_d0(grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage0_i_2_d0),
+    .stage1_r_address0(grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage1_r_address0),
+    .stage1_r_ce0(grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage1_r_ce0),
+    .stage1_r_q0(stage1_r_q0),
+    .stage1_r_address1(grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage1_r_address1),
+    .stage1_r_ce1(grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage1_r_ce1),
+    .stage1_r_q1(stage1_r_q1),
+    .stage1_r_5_address0(grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage1_r_5_address0),
+    .stage1_r_5_ce0(grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage1_r_5_ce0),
+    .stage1_r_5_q0(stage1_r_2_q0),
+    .stage1_r_5_address1(grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage1_r_5_address1),
+    .stage1_r_5_ce1(grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage1_r_5_ce1),
+    .stage1_r_5_q1(stage1_r_2_q1),
+    .stage1_i_address0(grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage1_i_address0),
+    .stage1_i_ce0(grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage1_i_ce0),
+    .stage1_i_q0(stage1_i_q0),
+    .stage1_i_address1(grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage1_i_address1),
+    .stage1_i_ce1(grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage1_i_ce1),
+    .stage1_i_q1(stage1_i_q1),
+    .stage1_i_5_address0(grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage1_i_5_address0),
+    .stage1_i_5_ce0(grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage1_i_5_ce0),
+    .stage1_i_5_q0(stage1_i_2_q0),
+    .stage1_i_5_address1(grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage1_i_5_address1),
+    .stage1_i_5_ce1(grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage1_i_5_ce1),
+    .stage1_i_5_q1(stage1_i_2_q1),
+    .gm_re_tab_address0(grp_fft_10_stages_Pipeline_SECTION8_fu_240_gm_re_tab_address0),
+    .gm_re_tab_ce0(grp_fft_10_stages_Pipeline_SECTION8_fu_240_gm_re_tab_ce0),
+    .gm_re_tab_q0(gm_re_tab_q0),
+    .gm_im_tab_address0(grp_fft_10_stages_Pipeline_SECTION8_fu_240_gm_im_tab_address0),
+    .gm_im_tab_ce0(grp_fft_10_stages_Pipeline_SECTION8_fu_240_gm_im_tab_ce0),
+    .gm_im_tab_q0(gm_im_tab_q0),
+    .grp_complex_mul_fu_308_p_din1(grp_fft_10_stages_Pipeline_SECTION8_fu_240_grp_complex_mul_fu_308_p_din1),
+    .grp_complex_mul_fu_308_p_din2(grp_fft_10_stages_Pipeline_SECTION8_fu_240_grp_complex_mul_fu_308_p_din2),
+    .grp_complex_mul_fu_308_p_din3(grp_fft_10_stages_Pipeline_SECTION8_fu_240_grp_complex_mul_fu_308_p_din3),
+    .grp_complex_mul_fu_308_p_din4(grp_fft_10_stages_Pipeline_SECTION8_fu_240_grp_complex_mul_fu_308_p_din4),
+    .grp_complex_mul_fu_308_p_dout0_0(grp_complex_mul_fu_308_ap_return_0),
+    .grp_complex_mul_fu_308_p_dout0_1(grp_complex_mul_fu_308_ap_return_1),
+    .grp_complex_mul_fu_308_p_ce(grp_fft_10_stages_Pipeline_SECTION8_fu_240_grp_complex_mul_fu_308_p_ce),
+    .grp_fu_315_p_din0(grp_fft_10_stages_Pipeline_SECTION8_fu_240_grp_fu_315_p_din0),
+    .grp_fu_315_p_din1(grp_fft_10_stages_Pipeline_SECTION8_fu_240_grp_fu_315_p_din1),
+    .grp_fu_315_p_opcode(grp_fft_10_stages_Pipeline_SECTION8_fu_240_grp_fu_315_p_opcode),
+    .grp_fu_315_p_dout0(grp_fu_315_p2),
+    .grp_fu_315_p_ce(grp_fft_10_stages_Pipeline_SECTION8_fu_240_grp_fu_315_p_ce),
+    .grp_fu_319_p_din0(grp_fft_10_stages_Pipeline_SECTION8_fu_240_grp_fu_319_p_din0),
+    .grp_fu_319_p_din1(grp_fft_10_stages_Pipeline_SECTION8_fu_240_grp_fu_319_p_din1),
+    .grp_fu_319_p_opcode(grp_fft_10_stages_Pipeline_SECTION8_fu_240_grp_fu_319_p_opcode),
+    .grp_fu_319_p_dout0(grp_fu_319_p2),
+    .grp_fu_319_p_ce(grp_fft_10_stages_Pipeline_SECTION8_fu_240_grp_fu_319_p_ce),
+    .grp_fu_323_p_din0(grp_fft_10_stages_Pipeline_SECTION8_fu_240_grp_fu_323_p_din0),
+    .grp_fu_323_p_din1(grp_fft_10_stages_Pipeline_SECTION8_fu_240_grp_fu_323_p_din1),
+    .grp_fu_323_p_opcode(grp_fft_10_stages_Pipeline_SECTION8_fu_240_grp_fu_323_p_opcode),
+    .grp_fu_323_p_dout0(grp_fu_323_p2),
+    .grp_fu_323_p_ce(grp_fft_10_stages_Pipeline_SECTION8_fu_240_grp_fu_323_p_ce),
+    .grp_fu_327_p_din0(grp_fft_10_stages_Pipeline_SECTION8_fu_240_grp_fu_327_p_din0),
+    .grp_fu_327_p_din1(grp_fft_10_stages_Pipeline_SECTION8_fu_240_grp_fu_327_p_din1),
+    .grp_fu_327_p_opcode(grp_fft_10_stages_Pipeline_SECTION8_fu_240_grp_fu_327_p_opcode),
+    .grp_fu_327_p_dout0(grp_fu_327_p2),
+    .grp_fu_327_p_ce(grp_fft_10_stages_Pipeline_SECTION8_fu_240_grp_fu_327_p_ce)
+);
+
+FFT_fft_10_stages_Pipeline_SECTION9 grp_fft_10_stages_Pipeline_SECTION9_fu_264(
+    .ap_clk(ap_clk),
+    .ap_rst(ap_rst),
+    .ap_start(grp_fft_10_stages_Pipeline_SECTION9_fu_264_ap_start),
+    .ap_done(grp_fft_10_stages_Pipeline_SECTION9_fu_264_ap_done),
+    .ap_idle(grp_fft_10_stages_Pipeline_SECTION9_fu_264_ap_idle),
+    .ap_ready(grp_fft_10_stages_Pipeline_SECTION9_fu_264_ap_ready),
+    .stage1_i_6_address0(grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage1_i_6_address0),
+    .stage1_i_6_ce0(grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage1_i_6_ce0),
+    .stage1_i_6_we0(grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage1_i_6_we0),
+    .stage1_i_6_d0(grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage1_i_6_d0),
+    .stage1_i_5_address0(grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage1_i_5_address0),
+    .stage1_i_5_ce0(grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage1_i_5_ce0),
+    .stage1_i_5_we0(grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage1_i_5_we0),
+    .stage1_i_5_d0(grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage1_i_5_d0),
+    .stage1_i_4_address0(grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage1_i_4_address0),
+    .stage1_i_4_ce0(grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage1_i_4_ce0),
+    .stage1_i_4_we0(grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage1_i_4_we0),
+    .stage1_i_4_d0(grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage1_i_4_d0),
+    .stage1_i_address0(grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage1_i_address0),
+    .stage1_i_ce0(grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage1_i_ce0),
+    .stage1_i_we0(grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage1_i_we0),
+    .stage1_i_d0(grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage1_i_d0),
+    .stage1_r_6_address0(grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage1_r_6_address0),
+    .stage1_r_6_ce0(grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage1_r_6_ce0),
+    .stage1_r_6_we0(grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage1_r_6_we0),
+    .stage1_r_6_d0(grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage1_r_6_d0),
+    .stage1_r_5_address0(grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage1_r_5_address0),
+    .stage1_r_5_ce0(grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage1_r_5_ce0),
+    .stage1_r_5_we0(grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage1_r_5_we0),
+    .stage1_r_5_d0(grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage1_r_5_d0),
+    .stage1_r_4_address0(grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage1_r_4_address0),
+    .stage1_r_4_ce0(grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage1_r_4_ce0),
+    .stage1_r_4_we0(grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage1_r_4_we0),
+    .stage1_r_4_d0(grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage1_r_4_d0),
+    .stage1_r_address0(grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage1_r_address0),
+    .stage1_r_ce0(grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage1_r_ce0),
+    .stage1_r_we0(grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage1_r_we0),
+    .stage1_r_d0(grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage1_r_d0),
+    .stage0_r_address0(grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage0_r_address0),
+    .stage0_r_ce0(grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage0_r_ce0),
+    .stage0_r_q0(stage0_r_q0),
+    .stage0_i_address0(grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage0_i_address0),
+    .stage0_i_ce0(grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage0_i_ce0),
+    .stage0_i_q0(stage0_i_q0),
+    .stage0_r_2_address0(grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage0_r_2_address0),
+    .stage0_r_2_ce0(grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage0_r_2_ce0),
+    .stage0_r_2_q0(stage0_r_2_q0),
+    .stage0_i_2_address0(grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage0_i_2_address0),
+    .stage0_i_2_ce0(grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage0_i_2_ce0),
+    .stage0_i_2_q0(stage0_i_2_q0),
+    .stage0_r_1_address0(grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage0_r_1_address0),
+    .stage0_r_1_ce0(grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage0_r_1_ce0),
+    .stage0_r_1_q0(stage0_r_1_q0),
+    .stage0_i_1_address0(grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage0_i_1_address0),
+    .stage0_i_1_ce0(grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage0_i_1_ce0),
+    .stage0_i_1_q0(stage0_i_1_q0),
+    .stage0_r_3_address0(grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage0_r_3_address0),
+    .stage0_r_3_ce0(grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage0_r_3_ce0),
+    .stage0_r_3_q0(stage0_r_3_q0),
+    .stage0_i_3_address0(grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage0_i_3_address0),
+    .stage0_i_3_ce0(grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage0_i_3_ce0),
+    .stage0_i_3_q0(stage0_i_3_q0),
+    .gm_re_tab_address0(grp_fft_10_stages_Pipeline_SECTION9_fu_264_gm_re_tab_address0),
+    .gm_re_tab_ce0(grp_fft_10_stages_Pipeline_SECTION9_fu_264_gm_re_tab_ce0),
+    .gm_re_tab_q0(gm_re_tab_q0),
+    .gm_im_tab_address0(grp_fft_10_stages_Pipeline_SECTION9_fu_264_gm_im_tab_address0),
+    .gm_im_tab_ce0(grp_fft_10_stages_Pipeline_SECTION9_fu_264_gm_im_tab_ce0),
+    .gm_im_tab_q0(gm_im_tab_q0),
+    .grp_complex_mul_fu_308_p_din1(grp_fft_10_stages_Pipeline_SECTION9_fu_264_grp_complex_mul_fu_308_p_din1),
+    .grp_complex_mul_fu_308_p_din2(grp_fft_10_stages_Pipeline_SECTION9_fu_264_grp_complex_mul_fu_308_p_din2),
+    .grp_complex_mul_fu_308_p_din3(grp_fft_10_stages_Pipeline_SECTION9_fu_264_grp_complex_mul_fu_308_p_din3),
+    .grp_complex_mul_fu_308_p_din4(grp_fft_10_stages_Pipeline_SECTION9_fu_264_grp_complex_mul_fu_308_p_din4),
+    .grp_complex_mul_fu_308_p_dout0_0(grp_complex_mul_fu_308_ap_return_0),
+    .grp_complex_mul_fu_308_p_dout0_1(grp_complex_mul_fu_308_ap_return_1),
+    .grp_complex_mul_fu_308_p_ce(grp_fft_10_stages_Pipeline_SECTION9_fu_264_grp_complex_mul_fu_308_p_ce),
+    .grp_fu_315_p_din0(grp_fft_10_stages_Pipeline_SECTION9_fu_264_grp_fu_315_p_din0),
+    .grp_fu_315_p_din1(grp_fft_10_stages_Pipeline_SECTION9_fu_264_grp_fu_315_p_din1),
+    .grp_fu_315_p_opcode(grp_fft_10_stages_Pipeline_SECTION9_fu_264_grp_fu_315_p_opcode),
+    .grp_fu_315_p_dout0(grp_fu_315_p2),
+    .grp_fu_315_p_ce(grp_fft_10_stages_Pipeline_SECTION9_fu_264_grp_fu_315_p_ce),
+    .grp_fu_319_p_din0(grp_fft_10_stages_Pipeline_SECTION9_fu_264_grp_fu_319_p_din0),
+    .grp_fu_319_p_din1(grp_fft_10_stages_Pipeline_SECTION9_fu_264_grp_fu_319_p_din1),
+    .grp_fu_319_p_opcode(grp_fft_10_stages_Pipeline_SECTION9_fu_264_grp_fu_319_p_opcode),
+    .grp_fu_319_p_dout0(grp_fu_319_p2),
+    .grp_fu_319_p_ce(grp_fft_10_stages_Pipeline_SECTION9_fu_264_grp_fu_319_p_ce),
+    .grp_fu_323_p_din0(grp_fft_10_stages_Pipeline_SECTION9_fu_264_grp_fu_323_p_din0),
+    .grp_fu_323_p_din1(grp_fft_10_stages_Pipeline_SECTION9_fu_264_grp_fu_323_p_din1),
+    .grp_fu_323_p_opcode(grp_fft_10_stages_Pipeline_SECTION9_fu_264_grp_fu_323_p_opcode),
+    .grp_fu_323_p_dout0(grp_fu_323_p2),
+    .grp_fu_323_p_ce(grp_fft_10_stages_Pipeline_SECTION9_fu_264_grp_fu_323_p_ce),
+    .grp_fu_327_p_din0(grp_fft_10_stages_Pipeline_SECTION9_fu_264_grp_fu_327_p_din0),
+    .grp_fu_327_p_din1(grp_fft_10_stages_Pipeline_SECTION9_fu_264_grp_fu_327_p_din1),
+    .grp_fu_327_p_opcode(grp_fft_10_stages_Pipeline_SECTION9_fu_264_grp_fu_327_p_opcode),
+    .grp_fu_327_p_dout0(grp_fu_327_p2),
+    .grp_fu_327_p_ce(grp_fft_10_stages_Pipeline_SECTION9_fu_264_grp_fu_327_p_ce)
+);
+
+FFT_fft_10_stages_Pipeline_SECTION10 grp_fft_10_stages_Pipeline_SECTION10_fu_288(
+    .ap_clk(ap_clk),
+    .ap_rst(ap_rst),
+    .ap_start(grp_fft_10_stages_Pipeline_SECTION10_fu_288_ap_start),
+    .ap_done(grp_fft_10_stages_Pipeline_SECTION10_fu_288_ap_done),
+    .ap_idle(grp_fft_10_stages_Pipeline_SECTION10_fu_288_ap_idle),
+    .ap_ready(grp_fft_10_stages_Pipeline_SECTION10_fu_288_ap_ready),
+    .stage1_r_address0(grp_fft_10_stages_Pipeline_SECTION10_fu_288_stage1_r_address0),
+    .stage1_r_ce0(grp_fft_10_stages_Pipeline_SECTION10_fu_288_stage1_r_ce0),
+    .stage1_r_q0(stage1_r_q0),
+    .stage1_i_address0(grp_fft_10_stages_Pipeline_SECTION10_fu_288_stage1_i_address0),
+    .stage1_i_ce0(grp_fft_10_stages_Pipeline_SECTION10_fu_288_stage1_i_ce0),
+    .stage1_i_q0(stage1_i_q0),
+    .stage1_r_4_address0(grp_fft_10_stages_Pipeline_SECTION10_fu_288_stage1_r_4_address0),
+    .stage1_r_4_ce0(grp_fft_10_stages_Pipeline_SECTION10_fu_288_stage1_r_4_ce0),
+    .stage1_r_4_q0(stage1_r_1_q0),
+    .stage1_i_4_address0(grp_fft_10_stages_Pipeline_SECTION10_fu_288_stage1_i_4_address0),
+    .stage1_i_4_ce0(grp_fft_10_stages_Pipeline_SECTION10_fu_288_stage1_i_4_ce0),
+    .stage1_i_4_q0(stage1_i_1_q0),
+    .out_r_address0(grp_fft_10_stages_Pipeline_SECTION10_fu_288_out_r_address0),
+    .out_r_ce0(grp_fft_10_stages_Pipeline_SECTION10_fu_288_out_r_ce0),
+    .out_r_we0(grp_fft_10_stages_Pipeline_SECTION10_fu_288_out_r_we0),
+    .out_r_d0(grp_fft_10_stages_Pipeline_SECTION10_fu_288_out_r_d0),
+    .out_r_address1(grp_fft_10_stages_Pipeline_SECTION10_fu_288_out_r_address1),
+    .out_r_ce1(grp_fft_10_stages_Pipeline_SECTION10_fu_288_out_r_ce1),
+    .out_r_we1(grp_fft_10_stages_Pipeline_SECTION10_fu_288_out_r_we1),
+    .out_r_d1(grp_fft_10_stages_Pipeline_SECTION10_fu_288_out_r_d1),
+    .out_i_address0(grp_fft_10_stages_Pipeline_SECTION10_fu_288_out_i_address0),
+    .out_i_ce0(grp_fft_10_stages_Pipeline_SECTION10_fu_288_out_i_ce0),
+    .out_i_we0(grp_fft_10_stages_Pipeline_SECTION10_fu_288_out_i_we0),
+    .out_i_d0(grp_fft_10_stages_Pipeline_SECTION10_fu_288_out_i_d0),
+    .out_i_address1(grp_fft_10_stages_Pipeline_SECTION10_fu_288_out_i_address1),
+    .out_i_ce1(grp_fft_10_stages_Pipeline_SECTION10_fu_288_out_i_ce1),
+    .out_i_we1(grp_fft_10_stages_Pipeline_SECTION10_fu_288_out_i_we1),
+    .out_i_d1(grp_fft_10_stages_Pipeline_SECTION10_fu_288_out_i_d1),
+    .stage1_r_5_address0(grp_fft_10_stages_Pipeline_SECTION10_fu_288_stage1_r_5_address0),
+    .stage1_r_5_ce0(grp_fft_10_stages_Pipeline_SECTION10_fu_288_stage1_r_5_ce0),
+    .stage1_r_5_q0(stage1_r_2_q0),
+    .stage1_i_5_address0(grp_fft_10_stages_Pipeline_SECTION10_fu_288_stage1_i_5_address0),
+    .stage1_i_5_ce0(grp_fft_10_stages_Pipeline_SECTION10_fu_288_stage1_i_5_ce0),
+    .stage1_i_5_q0(stage1_i_2_q0),
+    .stage1_r_6_address0(grp_fft_10_stages_Pipeline_SECTION10_fu_288_stage1_r_6_address0),
+    .stage1_r_6_ce0(grp_fft_10_stages_Pipeline_SECTION10_fu_288_stage1_r_6_ce0),
+    .stage1_r_6_q0(stage1_r_3_q0),
+    .stage1_i_6_address0(grp_fft_10_stages_Pipeline_SECTION10_fu_288_stage1_i_6_address0),
+    .stage1_i_6_ce0(grp_fft_10_stages_Pipeline_SECTION10_fu_288_stage1_i_6_ce0),
+    .stage1_i_6_q0(stage1_i_3_q0),
+    .gm_re_tab_address0(grp_fft_10_stages_Pipeline_SECTION10_fu_288_gm_re_tab_address0),
+    .gm_re_tab_ce0(grp_fft_10_stages_Pipeline_SECTION10_fu_288_gm_re_tab_ce0),
+    .gm_re_tab_q0(gm_re_tab_q0),
+    .gm_im_tab_address0(grp_fft_10_stages_Pipeline_SECTION10_fu_288_gm_im_tab_address0),
+    .gm_im_tab_ce0(grp_fft_10_stages_Pipeline_SECTION10_fu_288_gm_im_tab_ce0),
+    .gm_im_tab_q0(gm_im_tab_q0),
+    .grp_complex_mul_fu_308_p_din1(grp_fft_10_stages_Pipeline_SECTION10_fu_288_grp_complex_mul_fu_308_p_din1),
+    .grp_complex_mul_fu_308_p_din2(grp_fft_10_stages_Pipeline_SECTION10_fu_288_grp_complex_mul_fu_308_p_din2),
+    .grp_complex_mul_fu_308_p_din3(grp_fft_10_stages_Pipeline_SECTION10_fu_288_grp_complex_mul_fu_308_p_din3),
+    .grp_complex_mul_fu_308_p_din4(grp_fft_10_stages_Pipeline_SECTION10_fu_288_grp_complex_mul_fu_308_p_din4),
+    .grp_complex_mul_fu_308_p_dout0_0(grp_complex_mul_fu_308_ap_return_0),
+    .grp_complex_mul_fu_308_p_dout0_1(grp_complex_mul_fu_308_ap_return_1),
+    .grp_complex_mul_fu_308_p_ce(grp_fft_10_stages_Pipeline_SECTION10_fu_288_grp_complex_mul_fu_308_p_ce),
+    .grp_fu_315_p_din0(grp_fft_10_stages_Pipeline_SECTION10_fu_288_grp_fu_315_p_din0),
+    .grp_fu_315_p_din1(grp_fft_10_stages_Pipeline_SECTION10_fu_288_grp_fu_315_p_din1),
+    .grp_fu_315_p_opcode(grp_fft_10_stages_Pipeline_SECTION10_fu_288_grp_fu_315_p_opcode),
+    .grp_fu_315_p_dout0(grp_fu_315_p2),
+    .grp_fu_315_p_ce(grp_fft_10_stages_Pipeline_SECTION10_fu_288_grp_fu_315_p_ce),
+    .grp_fu_319_p_din0(grp_fft_10_stages_Pipeline_SECTION10_fu_288_grp_fu_319_p_din0),
+    .grp_fu_319_p_din1(grp_fft_10_stages_Pipeline_SECTION10_fu_288_grp_fu_319_p_din1),
+    .grp_fu_319_p_opcode(grp_fft_10_stages_Pipeline_SECTION10_fu_288_grp_fu_319_p_opcode),
+    .grp_fu_319_p_dout0(grp_fu_319_p2),
+    .grp_fu_319_p_ce(grp_fft_10_stages_Pipeline_SECTION10_fu_288_grp_fu_319_p_ce),
+    .grp_fu_323_p_din0(grp_fft_10_stages_Pipeline_SECTION10_fu_288_grp_fu_323_p_din0),
+    .grp_fu_323_p_din1(grp_fft_10_stages_Pipeline_SECTION10_fu_288_grp_fu_323_p_din1),
+    .grp_fu_323_p_opcode(grp_fft_10_stages_Pipeline_SECTION10_fu_288_grp_fu_323_p_opcode),
+    .grp_fu_323_p_dout0(grp_fu_323_p2),
+    .grp_fu_323_p_ce(grp_fft_10_stages_Pipeline_SECTION10_fu_288_grp_fu_323_p_ce),
+    .grp_fu_327_p_din0(grp_fft_10_stages_Pipeline_SECTION10_fu_288_grp_fu_327_p_din0),
+    .grp_fu_327_p_din1(grp_fft_10_stages_Pipeline_SECTION10_fu_288_grp_fu_327_p_din1),
+    .grp_fu_327_p_opcode(grp_fft_10_stages_Pipeline_SECTION10_fu_288_grp_fu_327_p_opcode),
+    .grp_fu_327_p_dout0(grp_fu_327_p2),
+    .grp_fu_327_p_ce(grp_fft_10_stages_Pipeline_SECTION10_fu_288_grp_fu_327_p_ce)
+);
+
+FFT_complex_mul grp_complex_mul_fu_308(
+    .ap_clk(ap_clk),
+    .ap_rst(ap_rst),
+    .x_re(grp_complex_mul_fu_308_x_re),
+    .x_im(grp_complex_mul_fu_308_x_im),
+    .y_re(grp_complex_mul_fu_308_y_re),
+    .y_im(grp_complex_mul_fu_308_y_im),
+    .ap_return_0(grp_complex_mul_fu_308_ap_return_0),
+    .ap_return_1(grp_complex_mul_fu_308_ap_return_1),
+    .ap_ce(grp_complex_mul_fu_308_ap_ce)
+);
+
+FFT_dadd_64ns_64ns_64_5_full_dsp_0 #(
     .ID( 1 ),
     .NUM_STAGE( 5 ),
     .din0_WIDTH( 64 ),
     .din1_WIDTH( 64 ),
     .dout_WIDTH( 64 ))
-dsub_64ns_64ns_64_5_full_dsp_1_U106(
+dadd_64ns_64ns_64_5_full_dsp_0_U261(
     .clk(ap_clk),
     .reset(ap_rst),
-    .din0(grp_fu_186_p0),
-    .din1(grp_fu_186_p1),
-    .ce(grp_fu_186_ce),
-    .dout(grp_fu_186_p2)
+    .din0(grp_fu_315_p0),
+    .din1(grp_fu_315_p1),
+    .ce(grp_fu_315_ce),
+    .dout(grp_fu_315_p2)
 );
 
-FFT_dadd_64ns_64ns_64_5_full_dsp_1 #(
+FFT_dadd_64ns_64ns_64_5_full_dsp_0 #(
     .ID( 1 ),
     .NUM_STAGE( 5 ),
     .din0_WIDTH( 64 ),
     .din1_WIDTH( 64 ),
     .dout_WIDTH( 64 ))
-dadd_64ns_64ns_64_5_full_dsp_1_U107(
+dadd_64ns_64ns_64_5_full_dsp_0_U262(
     .clk(ap_clk),
     .reset(ap_rst),
-    .din0(grp_fu_190_p0),
-    .din1(grp_fu_190_p1),
-    .ce(grp_fu_190_ce),
-    .dout(grp_fu_190_p2)
+    .din0(grp_fu_319_p0),
+    .din1(grp_fu_319_p1),
+    .ce(grp_fu_319_ce),
+    .dout(grp_fu_319_p2)
 );
 
-FFT_dadd_64ns_64ns_64_5_full_dsp_1 #(
+FFT_dsub_64ns_64ns_64_5_full_dsp_0 #(
     .ID( 1 ),
     .NUM_STAGE( 5 ),
     .din0_WIDTH( 64 ),
     .din1_WIDTH( 64 ),
     .dout_WIDTH( 64 ))
-dadd_64ns_64ns_64_5_full_dsp_1_U108(
+dsub_64ns_64ns_64_5_full_dsp_0_U263(
     .clk(ap_clk),
     .reset(ap_rst),
-    .din0(grp_fu_194_p0),
-    .din1(grp_fu_194_p1),
-    .ce(grp_fu_194_ce),
-    .dout(grp_fu_194_p2)
+    .din0(grp_fu_323_p0),
+    .din1(grp_fu_323_p1),
+    .ce(grp_fu_323_ce),
+    .dout(grp_fu_323_p2)
 );
 
-FFT_dadd_64ns_64ns_64_5_full_dsp_1 #(
+FFT_dsub_64ns_64ns_64_5_full_dsp_0 #(
     .ID( 1 ),
     .NUM_STAGE( 5 ),
     .din0_WIDTH( 64 ),
     .din1_WIDTH( 64 ),
     .dout_WIDTH( 64 ))
-dadd_64ns_64ns_64_5_full_dsp_1_U109(
+dsub_64ns_64ns_64_5_full_dsp_0_U264(
     .clk(ap_clk),
     .reset(ap_rst),
-    .din0(grp_fu_198_p0),
-    .din1(grp_fu_198_p1),
-    .ce(grp_fu_198_ce),
-    .dout(grp_fu_198_p2)
-);
-
-FFT_dsub_64ns_64ns_64_5_full_dsp_1 #(
-    .ID( 1 ),
-    .NUM_STAGE( 5 ),
-    .din0_WIDTH( 64 ),
-    .din1_WIDTH( 64 ),
-    .dout_WIDTH( 64 ))
-dsub_64ns_64ns_64_5_full_dsp_1_U110(
-    .clk(ap_clk),
-    .reset(ap_rst),
-    .din0(grp_fu_202_p0),
-    .din1(grp_fu_202_p1),
-    .ce(grp_fu_202_ce),
-    .dout(grp_fu_202_p2)
-);
-
-FFT_dsub_64ns_64ns_64_5_full_dsp_1 #(
-    .ID( 1 ),
-    .NUM_STAGE( 5 ),
-    .din0_WIDTH( 64 ),
-    .din1_WIDTH( 64 ),
-    .dout_WIDTH( 64 ))
-dsub_64ns_64ns_64_5_full_dsp_1_U111(
-    .clk(ap_clk),
-    .reset(ap_rst),
-    .din0(grp_fu_206_p0),
-    .din1(grp_fu_206_p1),
-    .ce(grp_fu_206_ce),
-    .dout(grp_fu_206_p2)
-);
-
-FFT_dmul_64ns_64ns_64_5_max_dsp_1 #(
-    .ID( 1 ),
-    .NUM_STAGE( 5 ),
-    .din0_WIDTH( 64 ),
-    .din1_WIDTH( 64 ),
-    .dout_WIDTH( 64 ))
-dmul_64ns_64ns_64_5_max_dsp_1_U112(
-    .clk(ap_clk),
-    .reset(ap_rst),
-    .din0(grp_fu_210_p0),
-    .din1(grp_fu_210_p1),
-    .ce(grp_fu_210_ce),
-    .dout(grp_fu_210_p2)
-);
-
-FFT_dmul_64ns_64ns_64_5_max_dsp_1 #(
-    .ID( 1 ),
-    .NUM_STAGE( 5 ),
-    .din0_WIDTH( 64 ),
-    .din1_WIDTH( 64 ),
-    .dout_WIDTH( 64 ))
-dmul_64ns_64ns_64_5_max_dsp_1_U113(
-    .clk(ap_clk),
-    .reset(ap_rst),
-    .din0(grp_fu_214_p0),
-    .din1(grp_fu_214_p1),
-    .ce(grp_fu_214_ce),
-    .dout(grp_fu_214_p2)
+    .din0(grp_fu_327_p0),
+    .din1(grp_fu_327_p1),
+    .ce(grp_fu_327_ce),
+    .dout(grp_fu_327_p2)
 );
 
 always @ (posedge ap_clk) begin
@@ -1372,42 +2541,114 @@ end
 
 always @ (posedge ap_clk) begin
     if (ap_rst == 1'b1) begin
-        grp_fft_stage_clone_clone_fu_166_ap_start_reg <= 1'b0;
+        grp_fft_10_stages_Pipeline_SECTION10_fu_288_ap_start_reg <= 1'b0;
     end else begin
         if ((1'b1 == ap_CS_fsm_state17)) begin
-            grp_fft_stage_clone_clone_fu_166_ap_start_reg <= 1'b1;
-        end else if ((grp_fft_stage_clone_clone_fu_166_ap_ready == 1'b1)) begin
-            grp_fft_stage_clone_clone_fu_166_ap_start_reg <= 1'b0;
+            grp_fft_10_stages_Pipeline_SECTION10_fu_288_ap_start_reg <= 1'b1;
+        end else if ((grp_fft_10_stages_Pipeline_SECTION10_fu_288_ap_ready == 1'b1)) begin
+            grp_fft_10_stages_Pipeline_SECTION10_fu_288_ap_start_reg <= 1'b0;
         end
     end
 end
 
 always @ (posedge ap_clk) begin
     if (ap_rst == 1'b1) begin
-        grp_fft_stage_clone_fu_126_ap_start_reg <= 1'b0;
+        grp_fft_10_stages_Pipeline_SECTION3_fu_120_ap_start_reg <= 1'b0;
     end else begin
-        if (((1'b1 == ap_CS_fsm_state15) | (1'b1 == ap_CS_fsm_state13) | (1'b1 == ap_CS_fsm_state11) | (1'b1 == ap_CS_fsm_state9) | (1'b1 == ap_CS_fsm_state7) | (1'b1 == ap_CS_fsm_state5) | (1'b1 == ap_CS_fsm_state3))) begin
-            grp_fft_stage_clone_fu_126_ap_start_reg <= 1'b1;
-        end else if ((grp_fft_stage_clone_fu_126_ap_ready == 1'b1)) begin
-            grp_fft_stage_clone_fu_126_ap_start_reg <= 1'b0;
+        if ((1'b1 == ap_CS_fsm_state3)) begin
+            grp_fft_10_stages_Pipeline_SECTION3_fu_120_ap_start_reg <= 1'b1;
+        end else if ((grp_fft_10_stages_Pipeline_SECTION3_fu_120_ap_ready == 1'b1)) begin
+            grp_fft_10_stages_Pipeline_SECTION3_fu_120_ap_start_reg <= 1'b0;
         end
     end
 end
 
 always @ (posedge ap_clk) begin
     if (ap_rst == 1'b1) begin
-        grp_fft_stage_fu_102_ap_start_reg <= 1'b0;
+        grp_fft_10_stages_Pipeline_SECTION4_fu_144_ap_start_reg <= 1'b0;
+    end else begin
+        if ((1'b1 == ap_CS_fsm_state5)) begin
+            grp_fft_10_stages_Pipeline_SECTION4_fu_144_ap_start_reg <= 1'b1;
+        end else if ((grp_fft_10_stages_Pipeline_SECTION4_fu_144_ap_ready == 1'b1)) begin
+            grp_fft_10_stages_Pipeline_SECTION4_fu_144_ap_start_reg <= 1'b0;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst == 1'b1) begin
+        grp_fft_10_stages_Pipeline_SECTION5_fu_168_ap_start_reg <= 1'b0;
+    end else begin
+        if ((1'b1 == ap_CS_fsm_state7)) begin
+            grp_fft_10_stages_Pipeline_SECTION5_fu_168_ap_start_reg <= 1'b1;
+        end else if ((grp_fft_10_stages_Pipeline_SECTION5_fu_168_ap_ready == 1'b1)) begin
+            grp_fft_10_stages_Pipeline_SECTION5_fu_168_ap_start_reg <= 1'b0;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst == 1'b1) begin
+        grp_fft_10_stages_Pipeline_SECTION6_fu_192_ap_start_reg <= 1'b0;
+    end else begin
+        if ((1'b1 == ap_CS_fsm_state9)) begin
+            grp_fft_10_stages_Pipeline_SECTION6_fu_192_ap_start_reg <= 1'b1;
+        end else if ((grp_fft_10_stages_Pipeline_SECTION6_fu_192_ap_ready == 1'b1)) begin
+            grp_fft_10_stages_Pipeline_SECTION6_fu_192_ap_start_reg <= 1'b0;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst == 1'b1) begin
+        grp_fft_10_stages_Pipeline_SECTION7_fu_216_ap_start_reg <= 1'b0;
+    end else begin
+        if ((1'b1 == ap_CS_fsm_state11)) begin
+            grp_fft_10_stages_Pipeline_SECTION7_fu_216_ap_start_reg <= 1'b1;
+        end else if ((grp_fft_10_stages_Pipeline_SECTION7_fu_216_ap_ready == 1'b1)) begin
+            grp_fft_10_stages_Pipeline_SECTION7_fu_216_ap_start_reg <= 1'b0;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst == 1'b1) begin
+        grp_fft_10_stages_Pipeline_SECTION8_fu_240_ap_start_reg <= 1'b0;
+    end else begin
+        if ((1'b1 == ap_CS_fsm_state13)) begin
+            grp_fft_10_stages_Pipeline_SECTION8_fu_240_ap_start_reg <= 1'b1;
+        end else if ((grp_fft_10_stages_Pipeline_SECTION8_fu_240_ap_ready == 1'b1)) begin
+            grp_fft_10_stages_Pipeline_SECTION8_fu_240_ap_start_reg <= 1'b0;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst == 1'b1) begin
+        grp_fft_10_stages_Pipeline_SECTION9_fu_264_ap_start_reg <= 1'b0;
+    end else begin
+        if ((1'b1 == ap_CS_fsm_state15)) begin
+            grp_fft_10_stages_Pipeline_SECTION9_fu_264_ap_start_reg <= 1'b1;
+        end else if ((grp_fft_10_stages_Pipeline_SECTION9_fu_264_ap_ready == 1'b1)) begin
+            grp_fft_10_stages_Pipeline_SECTION9_fu_264_ap_start_reg <= 1'b0;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst == 1'b1) begin
+        grp_fft_10_stages_Pipeline_SECTION_fu_96_ap_start_reg <= 1'b0;
     end else begin
         if (((ap_start == 1'b1) & (1'b1 == ap_CS_fsm_state1))) begin
-            grp_fft_stage_fu_102_ap_start_reg <= 1'b1;
-        end else if ((grp_fft_stage_fu_102_ap_ready == 1'b1)) begin
-            grp_fft_stage_fu_102_ap_start_reg <= 1'b0;
+            grp_fft_10_stages_Pipeline_SECTION_fu_96_ap_start_reg <= 1'b1;
+        end else if ((grp_fft_10_stages_Pipeline_SECTION_fu_96_ap_ready == 1'b1)) begin
+            grp_fft_10_stages_Pipeline_SECTION_fu_96_ap_start_reg <= 1'b0;
         end
     end
 end
 
 always @ (*) begin
-    if ((grp_fft_stage_clone_fu_126_ap_done == 1'b0)) begin
+    if ((grp_fft_10_stages_Pipeline_SECTION6_fu_192_ap_done == 1'b0)) begin
         ap_ST_fsm_state10_blk = 1'b1;
     end else begin
         ap_ST_fsm_state10_blk = 1'b0;
@@ -1417,7 +2658,7 @@ end
 assign ap_ST_fsm_state11_blk = 1'b0;
 
 always @ (*) begin
-    if ((grp_fft_stage_clone_fu_126_ap_done == 1'b0)) begin
+    if ((grp_fft_10_stages_Pipeline_SECTION7_fu_216_ap_done == 1'b0)) begin
         ap_ST_fsm_state12_blk = 1'b1;
     end else begin
         ap_ST_fsm_state12_blk = 1'b0;
@@ -1427,7 +2668,7 @@ end
 assign ap_ST_fsm_state13_blk = 1'b0;
 
 always @ (*) begin
-    if ((grp_fft_stage_clone_fu_126_ap_done == 1'b0)) begin
+    if ((grp_fft_10_stages_Pipeline_SECTION8_fu_240_ap_done == 1'b0)) begin
         ap_ST_fsm_state14_blk = 1'b1;
     end else begin
         ap_ST_fsm_state14_blk = 1'b0;
@@ -1437,7 +2678,7 @@ end
 assign ap_ST_fsm_state15_blk = 1'b0;
 
 always @ (*) begin
-    if ((grp_fft_stage_clone_fu_126_ap_done == 1'b0)) begin
+    if ((grp_fft_10_stages_Pipeline_SECTION9_fu_264_ap_done == 1'b0)) begin
         ap_ST_fsm_state16_blk = 1'b1;
     end else begin
         ap_ST_fsm_state16_blk = 1'b0;
@@ -1447,7 +2688,7 @@ end
 assign ap_ST_fsm_state17_blk = 1'b0;
 
 always @ (*) begin
-    if ((grp_fft_stage_clone_clone_fu_166_ap_done == 1'b0)) begin
+    if ((grp_fft_10_stages_Pipeline_SECTION10_fu_288_ap_done == 1'b0)) begin
         ap_ST_fsm_state18_blk = 1'b1;
     end else begin
         ap_ST_fsm_state18_blk = 1'b0;
@@ -1463,7 +2704,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((grp_fft_stage_fu_102_ap_done == 1'b0)) begin
+    if ((grp_fft_10_stages_Pipeline_SECTION_fu_96_ap_done == 1'b0)) begin
         ap_ST_fsm_state2_blk = 1'b1;
     end else begin
         ap_ST_fsm_state2_blk = 1'b0;
@@ -1473,7 +2714,7 @@ end
 assign ap_ST_fsm_state3_blk = 1'b0;
 
 always @ (*) begin
-    if ((grp_fft_stage_clone_fu_126_ap_done == 1'b0)) begin
+    if ((grp_fft_10_stages_Pipeline_SECTION3_fu_120_ap_done == 1'b0)) begin
         ap_ST_fsm_state4_blk = 1'b1;
     end else begin
         ap_ST_fsm_state4_blk = 1'b0;
@@ -1483,7 +2724,7 @@ end
 assign ap_ST_fsm_state5_blk = 1'b0;
 
 always @ (*) begin
-    if ((grp_fft_stage_clone_fu_126_ap_done == 1'b0)) begin
+    if ((grp_fft_10_stages_Pipeline_SECTION4_fu_144_ap_done == 1'b0)) begin
         ap_ST_fsm_state6_blk = 1'b1;
     end else begin
         ap_ST_fsm_state6_blk = 1'b0;
@@ -1493,7 +2734,7 @@ end
 assign ap_ST_fsm_state7_blk = 1'b0;
 
 always @ (*) begin
-    if ((grp_fft_stage_clone_fu_126_ap_done == 1'b0)) begin
+    if ((grp_fft_10_stages_Pipeline_SECTION5_fu_168_ap_done == 1'b0)) begin
         ap_ST_fsm_state8_blk = 1'b1;
     end else begin
         ap_ST_fsm_state8_blk = 1'b0;
@@ -1503,7 +2744,7 @@ end
 assign ap_ST_fsm_state9_blk = 1'b0;
 
 always @ (*) begin
-    if ((((grp_fft_stage_clone_clone_fu_166_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state18)) | ((ap_start == 1'b0) & (1'b1 == ap_CS_fsm_state1)))) begin
+    if ((((ap_start == 1'b0) & (1'b1 == ap_CS_fsm_state1)) | ((1'b1 == ap_CS_fsm_state18) & (grp_fft_10_stages_Pipeline_SECTION10_fu_288_ap_done == 1'b1)))) begin
         ap_done = 1'b1;
     end else begin
         ap_done = 1'b0;
@@ -1519,7 +2760,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((grp_fft_stage_clone_clone_fu_166_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state18))) begin
+    if (((1'b1 == ap_CS_fsm_state18) & (grp_fft_10_stages_Pipeline_SECTION10_fu_288_ap_done == 1'b1))) begin
         ap_ready = 1'b1;
     end else begin
         ap_ready = 1'b0;
@@ -1527,1048 +2768,1362 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state6))) begin
-        grp_fft_stage_clone_fu_126_in_i_0_q0 = stage1_i_q0;
-    end else if (((1'b1 == ap_CS_fsm_state16) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state4))) begin
-        grp_fft_stage_clone_fu_126_in_i_0_q0 = stage0_i_q0;
+    if ((1'b1 == ap_CS_fsm_state18)) begin
+        gm_im_tab_address0 = grp_fft_10_stages_Pipeline_SECTION10_fu_288_gm_im_tab_address0;
+    end else if ((1'b1 == ap_CS_fsm_state16)) begin
+        gm_im_tab_address0 = grp_fft_10_stages_Pipeline_SECTION9_fu_264_gm_im_tab_address0;
+    end else if ((1'b1 == ap_CS_fsm_state14)) begin
+        gm_im_tab_address0 = grp_fft_10_stages_Pipeline_SECTION8_fu_240_gm_im_tab_address0;
+    end else if ((1'b1 == ap_CS_fsm_state12)) begin
+        gm_im_tab_address0 = grp_fft_10_stages_Pipeline_SECTION7_fu_216_gm_im_tab_address0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        gm_im_tab_address0 = grp_fft_10_stages_Pipeline_SECTION6_fu_192_gm_im_tab_address0;
+    end else if ((1'b1 == ap_CS_fsm_state8)) begin
+        gm_im_tab_address0 = grp_fft_10_stages_Pipeline_SECTION5_fu_168_gm_im_tab_address0;
+    end else if ((1'b1 == ap_CS_fsm_state6)) begin
+        gm_im_tab_address0 = grp_fft_10_stages_Pipeline_SECTION4_fu_144_gm_im_tab_address0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        gm_im_tab_address0 = grp_fft_10_stages_Pipeline_SECTION3_fu_120_gm_im_tab_address0;
     end else begin
-        grp_fft_stage_clone_fu_126_in_i_0_q0 = 'bx;
+        gm_im_tab_address0 = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state6))) begin
-        grp_fft_stage_clone_fu_126_in_i_0_q1 = stage1_i_q1;
-    end else if (((1'b1 == ap_CS_fsm_state16) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state4))) begin
-        grp_fft_stage_clone_fu_126_in_i_0_q1 = stage0_i_q1;
+    if ((1'b1 == ap_CS_fsm_state18)) begin
+        gm_im_tab_ce0 = grp_fft_10_stages_Pipeline_SECTION10_fu_288_gm_im_tab_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state16)) begin
+        gm_im_tab_ce0 = grp_fft_10_stages_Pipeline_SECTION9_fu_264_gm_im_tab_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state14)) begin
+        gm_im_tab_ce0 = grp_fft_10_stages_Pipeline_SECTION8_fu_240_gm_im_tab_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state12)) begin
+        gm_im_tab_ce0 = grp_fft_10_stages_Pipeline_SECTION7_fu_216_gm_im_tab_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        gm_im_tab_ce0 = grp_fft_10_stages_Pipeline_SECTION6_fu_192_gm_im_tab_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state8)) begin
+        gm_im_tab_ce0 = grp_fft_10_stages_Pipeline_SECTION5_fu_168_gm_im_tab_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state6)) begin
+        gm_im_tab_ce0 = grp_fft_10_stages_Pipeline_SECTION4_fu_144_gm_im_tab_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        gm_im_tab_ce0 = grp_fft_10_stages_Pipeline_SECTION3_fu_120_gm_im_tab_ce0;
     end else begin
-        grp_fft_stage_clone_fu_126_in_i_0_q1 = 'bx;
+        gm_im_tab_ce0 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state6))) begin
-        grp_fft_stage_clone_fu_126_in_i_1_q0 = stage1_i_1_q0;
-    end else if (((1'b1 == ap_CS_fsm_state16) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state4))) begin
-        grp_fft_stage_clone_fu_126_in_i_1_q0 = stage0_i_1_q0;
+    if ((1'b1 == ap_CS_fsm_state18)) begin
+        gm_re_tab_address0 = grp_fft_10_stages_Pipeline_SECTION10_fu_288_gm_re_tab_address0;
+    end else if ((1'b1 == ap_CS_fsm_state16)) begin
+        gm_re_tab_address0 = grp_fft_10_stages_Pipeline_SECTION9_fu_264_gm_re_tab_address0;
+    end else if ((1'b1 == ap_CS_fsm_state14)) begin
+        gm_re_tab_address0 = grp_fft_10_stages_Pipeline_SECTION8_fu_240_gm_re_tab_address0;
+    end else if ((1'b1 == ap_CS_fsm_state12)) begin
+        gm_re_tab_address0 = grp_fft_10_stages_Pipeline_SECTION7_fu_216_gm_re_tab_address0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        gm_re_tab_address0 = grp_fft_10_stages_Pipeline_SECTION6_fu_192_gm_re_tab_address0;
+    end else if ((1'b1 == ap_CS_fsm_state8)) begin
+        gm_re_tab_address0 = grp_fft_10_stages_Pipeline_SECTION5_fu_168_gm_re_tab_address0;
+    end else if ((1'b1 == ap_CS_fsm_state6)) begin
+        gm_re_tab_address0 = grp_fft_10_stages_Pipeline_SECTION4_fu_144_gm_re_tab_address0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        gm_re_tab_address0 = grp_fft_10_stages_Pipeline_SECTION3_fu_120_gm_re_tab_address0;
     end else begin
-        grp_fft_stage_clone_fu_126_in_i_1_q0 = 'bx;
+        gm_re_tab_address0 = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state6))) begin
-        grp_fft_stage_clone_fu_126_in_i_1_q1 = stage1_i_1_q1;
-    end else if (((1'b1 == ap_CS_fsm_state16) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state4))) begin
-        grp_fft_stage_clone_fu_126_in_i_1_q1 = stage0_i_1_q1;
+    if ((1'b1 == ap_CS_fsm_state18)) begin
+        gm_re_tab_ce0 = grp_fft_10_stages_Pipeline_SECTION10_fu_288_gm_re_tab_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state16)) begin
+        gm_re_tab_ce0 = grp_fft_10_stages_Pipeline_SECTION9_fu_264_gm_re_tab_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state14)) begin
+        gm_re_tab_ce0 = grp_fft_10_stages_Pipeline_SECTION8_fu_240_gm_re_tab_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state12)) begin
+        gm_re_tab_ce0 = grp_fft_10_stages_Pipeline_SECTION7_fu_216_gm_re_tab_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        gm_re_tab_ce0 = grp_fft_10_stages_Pipeline_SECTION6_fu_192_gm_re_tab_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state8)) begin
+        gm_re_tab_ce0 = grp_fft_10_stages_Pipeline_SECTION5_fu_168_gm_re_tab_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state6)) begin
+        gm_re_tab_ce0 = grp_fft_10_stages_Pipeline_SECTION4_fu_144_gm_re_tab_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        gm_re_tab_ce0 = grp_fft_10_stages_Pipeline_SECTION3_fu_120_gm_re_tab_ce0;
     end else begin
-        grp_fft_stage_clone_fu_126_in_i_1_q1 = 'bx;
+        gm_re_tab_ce0 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state6))) begin
-        grp_fft_stage_clone_fu_126_in_i_2_q0 = stage1_i_2_q0;
-    end else if (((1'b1 == ap_CS_fsm_state16) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state4))) begin
-        grp_fft_stage_clone_fu_126_in_i_2_q0 = stage0_i_2_q0;
+    if ((1'b1 == ap_CS_fsm_state18)) begin
+        grp_complex_mul_fu_308_ap_ce = grp_fft_10_stages_Pipeline_SECTION10_fu_288_grp_complex_mul_fu_308_p_ce;
+    end else if ((1'b1 == ap_CS_fsm_state16)) begin
+        grp_complex_mul_fu_308_ap_ce = grp_fft_10_stages_Pipeline_SECTION9_fu_264_grp_complex_mul_fu_308_p_ce;
+    end else if ((1'b1 == ap_CS_fsm_state14)) begin
+        grp_complex_mul_fu_308_ap_ce = grp_fft_10_stages_Pipeline_SECTION8_fu_240_grp_complex_mul_fu_308_p_ce;
+    end else if ((1'b1 == ap_CS_fsm_state12)) begin
+        grp_complex_mul_fu_308_ap_ce = grp_fft_10_stages_Pipeline_SECTION7_fu_216_grp_complex_mul_fu_308_p_ce;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        grp_complex_mul_fu_308_ap_ce = grp_fft_10_stages_Pipeline_SECTION6_fu_192_grp_complex_mul_fu_308_p_ce;
+    end else if ((1'b1 == ap_CS_fsm_state8)) begin
+        grp_complex_mul_fu_308_ap_ce = grp_fft_10_stages_Pipeline_SECTION5_fu_168_grp_complex_mul_fu_308_p_ce;
+    end else if ((1'b1 == ap_CS_fsm_state6)) begin
+        grp_complex_mul_fu_308_ap_ce = grp_fft_10_stages_Pipeline_SECTION4_fu_144_grp_complex_mul_fu_308_p_ce;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        grp_complex_mul_fu_308_ap_ce = grp_fft_10_stages_Pipeline_SECTION3_fu_120_grp_complex_mul_fu_308_p_ce;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        grp_complex_mul_fu_308_ap_ce = grp_fft_10_stages_Pipeline_SECTION_fu_96_grp_complex_mul_fu_308_p_ce;
+    end else if (~(1'b1 == 1'b1)) begin
+        grp_complex_mul_fu_308_ap_ce = 1'b0;
     end else begin
-        grp_fft_stage_clone_fu_126_in_i_2_q0 = 'bx;
+        grp_complex_mul_fu_308_ap_ce = 1'b1;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state6))) begin
-        grp_fft_stage_clone_fu_126_in_i_2_q1 = stage1_i_2_q1;
-    end else if (((1'b1 == ap_CS_fsm_state16) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state4))) begin
-        grp_fft_stage_clone_fu_126_in_i_2_q1 = stage0_i_2_q1;
+    if ((1'b1 == ap_CS_fsm_state18)) begin
+        grp_complex_mul_fu_308_x_im = grp_fft_10_stages_Pipeline_SECTION10_fu_288_grp_complex_mul_fu_308_p_din2;
+    end else if ((1'b1 == ap_CS_fsm_state16)) begin
+        grp_complex_mul_fu_308_x_im = grp_fft_10_stages_Pipeline_SECTION9_fu_264_grp_complex_mul_fu_308_p_din2;
+    end else if ((1'b1 == ap_CS_fsm_state14)) begin
+        grp_complex_mul_fu_308_x_im = grp_fft_10_stages_Pipeline_SECTION8_fu_240_grp_complex_mul_fu_308_p_din2;
+    end else if ((1'b1 == ap_CS_fsm_state12)) begin
+        grp_complex_mul_fu_308_x_im = grp_fft_10_stages_Pipeline_SECTION7_fu_216_grp_complex_mul_fu_308_p_din2;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        grp_complex_mul_fu_308_x_im = grp_fft_10_stages_Pipeline_SECTION6_fu_192_grp_complex_mul_fu_308_p_din2;
+    end else if ((1'b1 == ap_CS_fsm_state8)) begin
+        grp_complex_mul_fu_308_x_im = grp_fft_10_stages_Pipeline_SECTION5_fu_168_grp_complex_mul_fu_308_p_din2;
+    end else if ((1'b1 == ap_CS_fsm_state6)) begin
+        grp_complex_mul_fu_308_x_im = grp_fft_10_stages_Pipeline_SECTION4_fu_144_grp_complex_mul_fu_308_p_din2;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        grp_complex_mul_fu_308_x_im = grp_fft_10_stages_Pipeline_SECTION3_fu_120_grp_complex_mul_fu_308_p_din2;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        grp_complex_mul_fu_308_x_im = grp_fft_10_stages_Pipeline_SECTION_fu_96_grp_complex_mul_fu_308_p_din2;
     end else begin
-        grp_fft_stage_clone_fu_126_in_i_2_q1 = 'bx;
+        grp_complex_mul_fu_308_x_im = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state6))) begin
-        grp_fft_stage_clone_fu_126_in_i_3_q0 = stage1_i_3_q0;
-    end else if (((1'b1 == ap_CS_fsm_state16) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state4))) begin
-        grp_fft_stage_clone_fu_126_in_i_3_q0 = stage0_i_3_q0;
+    if ((1'b1 == ap_CS_fsm_state18)) begin
+        grp_complex_mul_fu_308_x_re = grp_fft_10_stages_Pipeline_SECTION10_fu_288_grp_complex_mul_fu_308_p_din1;
+    end else if ((1'b1 == ap_CS_fsm_state16)) begin
+        grp_complex_mul_fu_308_x_re = grp_fft_10_stages_Pipeline_SECTION9_fu_264_grp_complex_mul_fu_308_p_din1;
+    end else if ((1'b1 == ap_CS_fsm_state14)) begin
+        grp_complex_mul_fu_308_x_re = grp_fft_10_stages_Pipeline_SECTION8_fu_240_grp_complex_mul_fu_308_p_din1;
+    end else if ((1'b1 == ap_CS_fsm_state12)) begin
+        grp_complex_mul_fu_308_x_re = grp_fft_10_stages_Pipeline_SECTION7_fu_216_grp_complex_mul_fu_308_p_din1;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        grp_complex_mul_fu_308_x_re = grp_fft_10_stages_Pipeline_SECTION6_fu_192_grp_complex_mul_fu_308_p_din1;
+    end else if ((1'b1 == ap_CS_fsm_state8)) begin
+        grp_complex_mul_fu_308_x_re = grp_fft_10_stages_Pipeline_SECTION5_fu_168_grp_complex_mul_fu_308_p_din1;
+    end else if ((1'b1 == ap_CS_fsm_state6)) begin
+        grp_complex_mul_fu_308_x_re = grp_fft_10_stages_Pipeline_SECTION4_fu_144_grp_complex_mul_fu_308_p_din1;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        grp_complex_mul_fu_308_x_re = grp_fft_10_stages_Pipeline_SECTION3_fu_120_grp_complex_mul_fu_308_p_din1;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        grp_complex_mul_fu_308_x_re = grp_fft_10_stages_Pipeline_SECTION_fu_96_grp_complex_mul_fu_308_p_din1;
     end else begin
-        grp_fft_stage_clone_fu_126_in_i_3_q0 = 'bx;
+        grp_complex_mul_fu_308_x_re = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state6))) begin
-        grp_fft_stage_clone_fu_126_in_i_3_q1 = stage1_i_3_q1;
-    end else if (((1'b1 == ap_CS_fsm_state16) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state4))) begin
-        grp_fft_stage_clone_fu_126_in_i_3_q1 = stage0_i_3_q1;
+    if ((1'b1 == ap_CS_fsm_state18)) begin
+        grp_complex_mul_fu_308_y_im = grp_fft_10_stages_Pipeline_SECTION10_fu_288_grp_complex_mul_fu_308_p_din4;
+    end else if ((1'b1 == ap_CS_fsm_state16)) begin
+        grp_complex_mul_fu_308_y_im = grp_fft_10_stages_Pipeline_SECTION9_fu_264_grp_complex_mul_fu_308_p_din4;
+    end else if ((1'b1 == ap_CS_fsm_state14)) begin
+        grp_complex_mul_fu_308_y_im = grp_fft_10_stages_Pipeline_SECTION8_fu_240_grp_complex_mul_fu_308_p_din4;
+    end else if ((1'b1 == ap_CS_fsm_state12)) begin
+        grp_complex_mul_fu_308_y_im = grp_fft_10_stages_Pipeline_SECTION7_fu_216_grp_complex_mul_fu_308_p_din4;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        grp_complex_mul_fu_308_y_im = grp_fft_10_stages_Pipeline_SECTION6_fu_192_grp_complex_mul_fu_308_p_din4;
+    end else if ((1'b1 == ap_CS_fsm_state8)) begin
+        grp_complex_mul_fu_308_y_im = grp_fft_10_stages_Pipeline_SECTION5_fu_168_grp_complex_mul_fu_308_p_din4;
+    end else if ((1'b1 == ap_CS_fsm_state6)) begin
+        grp_complex_mul_fu_308_y_im = grp_fft_10_stages_Pipeline_SECTION4_fu_144_grp_complex_mul_fu_308_p_din4;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        grp_complex_mul_fu_308_y_im = grp_fft_10_stages_Pipeline_SECTION3_fu_120_grp_complex_mul_fu_308_p_din4;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        grp_complex_mul_fu_308_y_im = grp_fft_10_stages_Pipeline_SECTION_fu_96_grp_complex_mul_fu_308_p_din4;
     end else begin
-        grp_fft_stage_clone_fu_126_in_i_3_q1 = 'bx;
+        grp_complex_mul_fu_308_y_im = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state6))) begin
-        grp_fft_stage_clone_fu_126_in_r_0_q0 = stage1_r_q0;
-    end else if (((1'b1 == ap_CS_fsm_state16) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state4))) begin
-        grp_fft_stage_clone_fu_126_in_r_0_q0 = stage0_r_q0;
+    if ((1'b1 == ap_CS_fsm_state18)) begin
+        grp_complex_mul_fu_308_y_re = grp_fft_10_stages_Pipeline_SECTION10_fu_288_grp_complex_mul_fu_308_p_din3;
+    end else if ((1'b1 == ap_CS_fsm_state16)) begin
+        grp_complex_mul_fu_308_y_re = grp_fft_10_stages_Pipeline_SECTION9_fu_264_grp_complex_mul_fu_308_p_din3;
+    end else if ((1'b1 == ap_CS_fsm_state14)) begin
+        grp_complex_mul_fu_308_y_re = grp_fft_10_stages_Pipeline_SECTION8_fu_240_grp_complex_mul_fu_308_p_din3;
+    end else if ((1'b1 == ap_CS_fsm_state12)) begin
+        grp_complex_mul_fu_308_y_re = grp_fft_10_stages_Pipeline_SECTION7_fu_216_grp_complex_mul_fu_308_p_din3;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        grp_complex_mul_fu_308_y_re = grp_fft_10_stages_Pipeline_SECTION6_fu_192_grp_complex_mul_fu_308_p_din3;
+    end else if ((1'b1 == ap_CS_fsm_state8)) begin
+        grp_complex_mul_fu_308_y_re = grp_fft_10_stages_Pipeline_SECTION5_fu_168_grp_complex_mul_fu_308_p_din3;
+    end else if ((1'b1 == ap_CS_fsm_state6)) begin
+        grp_complex_mul_fu_308_y_re = grp_fft_10_stages_Pipeline_SECTION4_fu_144_grp_complex_mul_fu_308_p_din3;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        grp_complex_mul_fu_308_y_re = grp_fft_10_stages_Pipeline_SECTION3_fu_120_grp_complex_mul_fu_308_p_din3;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        grp_complex_mul_fu_308_y_re = grp_fft_10_stages_Pipeline_SECTION_fu_96_grp_complex_mul_fu_308_p_din3;
     end else begin
-        grp_fft_stage_clone_fu_126_in_r_0_q0 = 'bx;
+        grp_complex_mul_fu_308_y_re = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state6))) begin
-        grp_fft_stage_clone_fu_126_in_r_0_q1 = stage1_r_q1;
-    end else if (((1'b1 == ap_CS_fsm_state16) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state4))) begin
-        grp_fft_stage_clone_fu_126_in_r_0_q1 = stage0_r_q1;
+    if ((1'b1 == ap_CS_fsm_state18)) begin
+        grp_fu_315_ce = grp_fft_10_stages_Pipeline_SECTION10_fu_288_grp_fu_315_p_ce;
+    end else if ((1'b1 == ap_CS_fsm_state16)) begin
+        grp_fu_315_ce = grp_fft_10_stages_Pipeline_SECTION9_fu_264_grp_fu_315_p_ce;
+    end else if ((1'b1 == ap_CS_fsm_state14)) begin
+        grp_fu_315_ce = grp_fft_10_stages_Pipeline_SECTION8_fu_240_grp_fu_315_p_ce;
+    end else if ((1'b1 == ap_CS_fsm_state12)) begin
+        grp_fu_315_ce = grp_fft_10_stages_Pipeline_SECTION7_fu_216_grp_fu_315_p_ce;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        grp_fu_315_ce = grp_fft_10_stages_Pipeline_SECTION6_fu_192_grp_fu_315_p_ce;
+    end else if ((1'b1 == ap_CS_fsm_state8)) begin
+        grp_fu_315_ce = grp_fft_10_stages_Pipeline_SECTION5_fu_168_grp_fu_315_p_ce;
+    end else if ((1'b1 == ap_CS_fsm_state6)) begin
+        grp_fu_315_ce = grp_fft_10_stages_Pipeline_SECTION4_fu_144_grp_fu_315_p_ce;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        grp_fu_315_ce = grp_fft_10_stages_Pipeline_SECTION3_fu_120_grp_fu_315_p_ce;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        grp_fu_315_ce = grp_fft_10_stages_Pipeline_SECTION_fu_96_grp_fu_315_p_ce;
     end else begin
-        grp_fft_stage_clone_fu_126_in_r_0_q1 = 'bx;
+        grp_fu_315_ce = 1'b1;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state6))) begin
-        grp_fft_stage_clone_fu_126_in_r_1_q0 = stage1_r_1_q0;
-    end else if (((1'b1 == ap_CS_fsm_state16) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state4))) begin
-        grp_fft_stage_clone_fu_126_in_r_1_q0 = stage0_r_1_q0;
+    if ((1'b1 == ap_CS_fsm_state18)) begin
+        grp_fu_315_p0 = grp_fft_10_stages_Pipeline_SECTION10_fu_288_grp_fu_315_p_din0;
+    end else if ((1'b1 == ap_CS_fsm_state16)) begin
+        grp_fu_315_p0 = grp_fft_10_stages_Pipeline_SECTION9_fu_264_grp_fu_315_p_din0;
+    end else if ((1'b1 == ap_CS_fsm_state14)) begin
+        grp_fu_315_p0 = grp_fft_10_stages_Pipeline_SECTION8_fu_240_grp_fu_315_p_din0;
+    end else if ((1'b1 == ap_CS_fsm_state12)) begin
+        grp_fu_315_p0 = grp_fft_10_stages_Pipeline_SECTION7_fu_216_grp_fu_315_p_din0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        grp_fu_315_p0 = grp_fft_10_stages_Pipeline_SECTION6_fu_192_grp_fu_315_p_din0;
+    end else if ((1'b1 == ap_CS_fsm_state8)) begin
+        grp_fu_315_p0 = grp_fft_10_stages_Pipeline_SECTION5_fu_168_grp_fu_315_p_din0;
+    end else if ((1'b1 == ap_CS_fsm_state6)) begin
+        grp_fu_315_p0 = grp_fft_10_stages_Pipeline_SECTION4_fu_144_grp_fu_315_p_din0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        grp_fu_315_p0 = grp_fft_10_stages_Pipeline_SECTION3_fu_120_grp_fu_315_p_din0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        grp_fu_315_p0 = grp_fft_10_stages_Pipeline_SECTION_fu_96_grp_fu_315_p_din0;
     end else begin
-        grp_fft_stage_clone_fu_126_in_r_1_q0 = 'bx;
+        grp_fu_315_p0 = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state6))) begin
-        grp_fft_stage_clone_fu_126_in_r_1_q1 = stage1_r_1_q1;
-    end else if (((1'b1 == ap_CS_fsm_state16) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state4))) begin
-        grp_fft_stage_clone_fu_126_in_r_1_q1 = stage0_r_1_q1;
+    if ((1'b1 == ap_CS_fsm_state18)) begin
+        grp_fu_315_p1 = grp_fft_10_stages_Pipeline_SECTION10_fu_288_grp_fu_315_p_din1;
+    end else if ((1'b1 == ap_CS_fsm_state16)) begin
+        grp_fu_315_p1 = grp_fft_10_stages_Pipeline_SECTION9_fu_264_grp_fu_315_p_din1;
+    end else if ((1'b1 == ap_CS_fsm_state14)) begin
+        grp_fu_315_p1 = grp_fft_10_stages_Pipeline_SECTION8_fu_240_grp_fu_315_p_din1;
+    end else if ((1'b1 == ap_CS_fsm_state12)) begin
+        grp_fu_315_p1 = grp_fft_10_stages_Pipeline_SECTION7_fu_216_grp_fu_315_p_din1;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        grp_fu_315_p1 = grp_fft_10_stages_Pipeline_SECTION6_fu_192_grp_fu_315_p_din1;
+    end else if ((1'b1 == ap_CS_fsm_state8)) begin
+        grp_fu_315_p1 = grp_fft_10_stages_Pipeline_SECTION5_fu_168_grp_fu_315_p_din1;
+    end else if ((1'b1 == ap_CS_fsm_state6)) begin
+        grp_fu_315_p1 = grp_fft_10_stages_Pipeline_SECTION4_fu_144_grp_fu_315_p_din1;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        grp_fu_315_p1 = grp_fft_10_stages_Pipeline_SECTION3_fu_120_grp_fu_315_p_din1;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        grp_fu_315_p1 = grp_fft_10_stages_Pipeline_SECTION_fu_96_grp_fu_315_p_din1;
     end else begin
-        grp_fft_stage_clone_fu_126_in_r_1_q1 = 'bx;
+        grp_fu_315_p1 = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state6))) begin
-        grp_fft_stage_clone_fu_126_in_r_2_q0 = stage1_r_2_q0;
-    end else if (((1'b1 == ap_CS_fsm_state16) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state4))) begin
-        grp_fft_stage_clone_fu_126_in_r_2_q0 = stage0_r_2_q0;
+    if ((1'b1 == ap_CS_fsm_state18)) begin
+        grp_fu_319_ce = grp_fft_10_stages_Pipeline_SECTION10_fu_288_grp_fu_319_p_ce;
+    end else if ((1'b1 == ap_CS_fsm_state16)) begin
+        grp_fu_319_ce = grp_fft_10_stages_Pipeline_SECTION9_fu_264_grp_fu_319_p_ce;
+    end else if ((1'b1 == ap_CS_fsm_state14)) begin
+        grp_fu_319_ce = grp_fft_10_stages_Pipeline_SECTION8_fu_240_grp_fu_319_p_ce;
+    end else if ((1'b1 == ap_CS_fsm_state12)) begin
+        grp_fu_319_ce = grp_fft_10_stages_Pipeline_SECTION7_fu_216_grp_fu_319_p_ce;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        grp_fu_319_ce = grp_fft_10_stages_Pipeline_SECTION6_fu_192_grp_fu_319_p_ce;
+    end else if ((1'b1 == ap_CS_fsm_state8)) begin
+        grp_fu_319_ce = grp_fft_10_stages_Pipeline_SECTION5_fu_168_grp_fu_319_p_ce;
+    end else if ((1'b1 == ap_CS_fsm_state6)) begin
+        grp_fu_319_ce = grp_fft_10_stages_Pipeline_SECTION4_fu_144_grp_fu_319_p_ce;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        grp_fu_319_ce = grp_fft_10_stages_Pipeline_SECTION3_fu_120_grp_fu_319_p_ce;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        grp_fu_319_ce = grp_fft_10_stages_Pipeline_SECTION_fu_96_grp_fu_319_p_ce;
     end else begin
-        grp_fft_stage_clone_fu_126_in_r_2_q0 = 'bx;
+        grp_fu_319_ce = 1'b1;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state6))) begin
-        grp_fft_stage_clone_fu_126_in_r_2_q1 = stage1_r_2_q1;
-    end else if (((1'b1 == ap_CS_fsm_state16) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state4))) begin
-        grp_fft_stage_clone_fu_126_in_r_2_q1 = stage0_r_2_q1;
+    if ((1'b1 == ap_CS_fsm_state18)) begin
+        grp_fu_319_p0 = grp_fft_10_stages_Pipeline_SECTION10_fu_288_grp_fu_319_p_din0;
+    end else if ((1'b1 == ap_CS_fsm_state16)) begin
+        grp_fu_319_p0 = grp_fft_10_stages_Pipeline_SECTION9_fu_264_grp_fu_319_p_din0;
+    end else if ((1'b1 == ap_CS_fsm_state14)) begin
+        grp_fu_319_p0 = grp_fft_10_stages_Pipeline_SECTION8_fu_240_grp_fu_319_p_din0;
+    end else if ((1'b1 == ap_CS_fsm_state12)) begin
+        grp_fu_319_p0 = grp_fft_10_stages_Pipeline_SECTION7_fu_216_grp_fu_319_p_din0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        grp_fu_319_p0 = grp_fft_10_stages_Pipeline_SECTION6_fu_192_grp_fu_319_p_din0;
+    end else if ((1'b1 == ap_CS_fsm_state8)) begin
+        grp_fu_319_p0 = grp_fft_10_stages_Pipeline_SECTION5_fu_168_grp_fu_319_p_din0;
+    end else if ((1'b1 == ap_CS_fsm_state6)) begin
+        grp_fu_319_p0 = grp_fft_10_stages_Pipeline_SECTION4_fu_144_grp_fu_319_p_din0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        grp_fu_319_p0 = grp_fft_10_stages_Pipeline_SECTION3_fu_120_grp_fu_319_p_din0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        grp_fu_319_p0 = grp_fft_10_stages_Pipeline_SECTION_fu_96_grp_fu_319_p_din0;
     end else begin
-        grp_fft_stage_clone_fu_126_in_r_2_q1 = 'bx;
+        grp_fu_319_p0 = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state6))) begin
-        grp_fft_stage_clone_fu_126_in_r_3_q0 = stage1_r_3_q0;
-    end else if (((1'b1 == ap_CS_fsm_state16) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state4))) begin
-        grp_fft_stage_clone_fu_126_in_r_3_q0 = stage0_r_3_q0;
+    if ((1'b1 == ap_CS_fsm_state18)) begin
+        grp_fu_319_p1 = grp_fft_10_stages_Pipeline_SECTION10_fu_288_grp_fu_319_p_din1;
+    end else if ((1'b1 == ap_CS_fsm_state16)) begin
+        grp_fu_319_p1 = grp_fft_10_stages_Pipeline_SECTION9_fu_264_grp_fu_319_p_din1;
+    end else if ((1'b1 == ap_CS_fsm_state14)) begin
+        grp_fu_319_p1 = grp_fft_10_stages_Pipeline_SECTION8_fu_240_grp_fu_319_p_din1;
+    end else if ((1'b1 == ap_CS_fsm_state12)) begin
+        grp_fu_319_p1 = grp_fft_10_stages_Pipeline_SECTION7_fu_216_grp_fu_319_p_din1;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        grp_fu_319_p1 = grp_fft_10_stages_Pipeline_SECTION6_fu_192_grp_fu_319_p_din1;
+    end else if ((1'b1 == ap_CS_fsm_state8)) begin
+        grp_fu_319_p1 = grp_fft_10_stages_Pipeline_SECTION5_fu_168_grp_fu_319_p_din1;
+    end else if ((1'b1 == ap_CS_fsm_state6)) begin
+        grp_fu_319_p1 = grp_fft_10_stages_Pipeline_SECTION4_fu_144_grp_fu_319_p_din1;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        grp_fu_319_p1 = grp_fft_10_stages_Pipeline_SECTION3_fu_120_grp_fu_319_p_din1;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        grp_fu_319_p1 = grp_fft_10_stages_Pipeline_SECTION_fu_96_grp_fu_319_p_din1;
     end else begin
-        grp_fft_stage_clone_fu_126_in_r_3_q0 = 'bx;
+        grp_fu_319_p1 = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state6))) begin
-        grp_fft_stage_clone_fu_126_in_r_3_q1 = stage1_r_3_q1;
-    end else if (((1'b1 == ap_CS_fsm_state16) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state4))) begin
-        grp_fft_stage_clone_fu_126_in_r_3_q1 = stage0_r_3_q1;
+    if ((1'b1 == ap_CS_fsm_state18)) begin
+        grp_fu_323_ce = grp_fft_10_stages_Pipeline_SECTION10_fu_288_grp_fu_323_p_ce;
+    end else if ((1'b1 == ap_CS_fsm_state16)) begin
+        grp_fu_323_ce = grp_fft_10_stages_Pipeline_SECTION9_fu_264_grp_fu_323_p_ce;
+    end else if ((1'b1 == ap_CS_fsm_state14)) begin
+        grp_fu_323_ce = grp_fft_10_stages_Pipeline_SECTION8_fu_240_grp_fu_323_p_ce;
+    end else if ((1'b1 == ap_CS_fsm_state12)) begin
+        grp_fu_323_ce = grp_fft_10_stages_Pipeline_SECTION7_fu_216_grp_fu_323_p_ce;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        grp_fu_323_ce = grp_fft_10_stages_Pipeline_SECTION6_fu_192_grp_fu_323_p_ce;
+    end else if ((1'b1 == ap_CS_fsm_state8)) begin
+        grp_fu_323_ce = grp_fft_10_stages_Pipeline_SECTION5_fu_168_grp_fu_323_p_ce;
+    end else if ((1'b1 == ap_CS_fsm_state6)) begin
+        grp_fu_323_ce = grp_fft_10_stages_Pipeline_SECTION4_fu_144_grp_fu_323_p_ce;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        grp_fu_323_ce = grp_fft_10_stages_Pipeline_SECTION3_fu_120_grp_fu_323_p_ce;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        grp_fu_323_ce = grp_fft_10_stages_Pipeline_SECTION_fu_96_grp_fu_323_p_ce;
     end else begin
-        grp_fft_stage_clone_fu_126_in_r_3_q1 = 'bx;
+        grp_fu_323_ce = 1'b1;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state18)) begin
+        grp_fu_323_p0 = grp_fft_10_stages_Pipeline_SECTION10_fu_288_grp_fu_323_p_din0;
+    end else if ((1'b1 == ap_CS_fsm_state16)) begin
+        grp_fu_323_p0 = grp_fft_10_stages_Pipeline_SECTION9_fu_264_grp_fu_323_p_din0;
+    end else if ((1'b1 == ap_CS_fsm_state14)) begin
+        grp_fu_323_p0 = grp_fft_10_stages_Pipeline_SECTION8_fu_240_grp_fu_323_p_din0;
+    end else if ((1'b1 == ap_CS_fsm_state12)) begin
+        grp_fu_323_p0 = grp_fft_10_stages_Pipeline_SECTION7_fu_216_grp_fu_323_p_din0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        grp_fu_323_p0 = grp_fft_10_stages_Pipeline_SECTION6_fu_192_grp_fu_323_p_din0;
+    end else if ((1'b1 == ap_CS_fsm_state8)) begin
+        grp_fu_323_p0 = grp_fft_10_stages_Pipeline_SECTION5_fu_168_grp_fu_323_p_din0;
+    end else if ((1'b1 == ap_CS_fsm_state6)) begin
+        grp_fu_323_p0 = grp_fft_10_stages_Pipeline_SECTION4_fu_144_grp_fu_323_p_din0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        grp_fu_323_p0 = grp_fft_10_stages_Pipeline_SECTION3_fu_120_grp_fu_323_p_din0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        grp_fu_323_p0 = grp_fft_10_stages_Pipeline_SECTION_fu_96_grp_fu_323_p_din0;
+    end else begin
+        grp_fu_323_p0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state18)) begin
+        grp_fu_323_p1 = grp_fft_10_stages_Pipeline_SECTION10_fu_288_grp_fu_323_p_din1;
+    end else if ((1'b1 == ap_CS_fsm_state16)) begin
+        grp_fu_323_p1 = grp_fft_10_stages_Pipeline_SECTION9_fu_264_grp_fu_323_p_din1;
+    end else if ((1'b1 == ap_CS_fsm_state14)) begin
+        grp_fu_323_p1 = grp_fft_10_stages_Pipeline_SECTION8_fu_240_grp_fu_323_p_din1;
+    end else if ((1'b1 == ap_CS_fsm_state12)) begin
+        grp_fu_323_p1 = grp_fft_10_stages_Pipeline_SECTION7_fu_216_grp_fu_323_p_din1;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        grp_fu_323_p1 = grp_fft_10_stages_Pipeline_SECTION6_fu_192_grp_fu_323_p_din1;
+    end else if ((1'b1 == ap_CS_fsm_state8)) begin
+        grp_fu_323_p1 = grp_fft_10_stages_Pipeline_SECTION5_fu_168_grp_fu_323_p_din1;
+    end else if ((1'b1 == ap_CS_fsm_state6)) begin
+        grp_fu_323_p1 = grp_fft_10_stages_Pipeline_SECTION4_fu_144_grp_fu_323_p_din1;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        grp_fu_323_p1 = grp_fft_10_stages_Pipeline_SECTION3_fu_120_grp_fu_323_p_din1;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        grp_fu_323_p1 = grp_fft_10_stages_Pipeline_SECTION_fu_96_grp_fu_323_p_din1;
+    end else begin
+        grp_fu_323_p1 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state18)) begin
+        grp_fu_327_ce = grp_fft_10_stages_Pipeline_SECTION10_fu_288_grp_fu_327_p_ce;
+    end else if ((1'b1 == ap_CS_fsm_state16)) begin
+        grp_fu_327_ce = grp_fft_10_stages_Pipeline_SECTION9_fu_264_grp_fu_327_p_ce;
+    end else if ((1'b1 == ap_CS_fsm_state14)) begin
+        grp_fu_327_ce = grp_fft_10_stages_Pipeline_SECTION8_fu_240_grp_fu_327_p_ce;
+    end else if ((1'b1 == ap_CS_fsm_state12)) begin
+        grp_fu_327_ce = grp_fft_10_stages_Pipeline_SECTION7_fu_216_grp_fu_327_p_ce;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        grp_fu_327_ce = grp_fft_10_stages_Pipeline_SECTION6_fu_192_grp_fu_327_p_ce;
+    end else if ((1'b1 == ap_CS_fsm_state8)) begin
+        grp_fu_327_ce = grp_fft_10_stages_Pipeline_SECTION5_fu_168_grp_fu_327_p_ce;
+    end else if ((1'b1 == ap_CS_fsm_state6)) begin
+        grp_fu_327_ce = grp_fft_10_stages_Pipeline_SECTION4_fu_144_grp_fu_327_p_ce;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        grp_fu_327_ce = grp_fft_10_stages_Pipeline_SECTION3_fu_120_grp_fu_327_p_ce;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        grp_fu_327_ce = grp_fft_10_stages_Pipeline_SECTION_fu_96_grp_fu_327_p_ce;
+    end else begin
+        grp_fu_327_ce = 1'b1;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state18)) begin
+        grp_fu_327_p0 = grp_fft_10_stages_Pipeline_SECTION10_fu_288_grp_fu_327_p_din0;
+    end else if ((1'b1 == ap_CS_fsm_state16)) begin
+        grp_fu_327_p0 = grp_fft_10_stages_Pipeline_SECTION9_fu_264_grp_fu_327_p_din0;
+    end else if ((1'b1 == ap_CS_fsm_state14)) begin
+        grp_fu_327_p0 = grp_fft_10_stages_Pipeline_SECTION8_fu_240_grp_fu_327_p_din0;
+    end else if ((1'b1 == ap_CS_fsm_state12)) begin
+        grp_fu_327_p0 = grp_fft_10_stages_Pipeline_SECTION7_fu_216_grp_fu_327_p_din0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        grp_fu_327_p0 = grp_fft_10_stages_Pipeline_SECTION6_fu_192_grp_fu_327_p_din0;
+    end else if ((1'b1 == ap_CS_fsm_state8)) begin
+        grp_fu_327_p0 = grp_fft_10_stages_Pipeline_SECTION5_fu_168_grp_fu_327_p_din0;
+    end else if ((1'b1 == ap_CS_fsm_state6)) begin
+        grp_fu_327_p0 = grp_fft_10_stages_Pipeline_SECTION4_fu_144_grp_fu_327_p_din0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        grp_fu_327_p0 = grp_fft_10_stages_Pipeline_SECTION3_fu_120_grp_fu_327_p_din0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        grp_fu_327_p0 = grp_fft_10_stages_Pipeline_SECTION_fu_96_grp_fu_327_p_din0;
+    end else begin
+        grp_fu_327_p0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state18)) begin
+        grp_fu_327_p1 = grp_fft_10_stages_Pipeline_SECTION10_fu_288_grp_fu_327_p_din1;
+    end else if ((1'b1 == ap_CS_fsm_state16)) begin
+        grp_fu_327_p1 = grp_fft_10_stages_Pipeline_SECTION9_fu_264_grp_fu_327_p_din1;
+    end else if ((1'b1 == ap_CS_fsm_state14)) begin
+        grp_fu_327_p1 = grp_fft_10_stages_Pipeline_SECTION8_fu_240_grp_fu_327_p_din1;
+    end else if ((1'b1 == ap_CS_fsm_state12)) begin
+        grp_fu_327_p1 = grp_fft_10_stages_Pipeline_SECTION7_fu_216_grp_fu_327_p_din1;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        grp_fu_327_p1 = grp_fft_10_stages_Pipeline_SECTION6_fu_192_grp_fu_327_p_din1;
+    end else if ((1'b1 == ap_CS_fsm_state8)) begin
+        grp_fu_327_p1 = grp_fft_10_stages_Pipeline_SECTION5_fu_168_grp_fu_327_p_din1;
+    end else if ((1'b1 == ap_CS_fsm_state6)) begin
+        grp_fu_327_p1 = grp_fft_10_stages_Pipeline_SECTION4_fu_144_grp_fu_327_p_din1;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        grp_fu_327_p1 = grp_fft_10_stages_Pipeline_SECTION3_fu_120_grp_fu_327_p_din1;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        grp_fu_327_p1 = grp_fft_10_stages_Pipeline_SECTION_fu_96_grp_fu_327_p_din1;
+    end else begin
+        grp_fu_327_p1 = 'bx;
     end
 end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state16)) begin
-        grp_fft_stage_clone_fu_126_m = 9'd256;
+        stage0_i_1_address0 = grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage0_i_1_address0;
     end else if ((1'b1 == ap_CS_fsm_state14)) begin
-        grp_fft_stage_clone_fu_126_m = 9'd128;
+        stage0_i_1_address0 = grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage0_i_1_address0;
     end else if ((1'b1 == ap_CS_fsm_state12)) begin
-        grp_fft_stage_clone_fu_126_m = 9'd64;
+        stage0_i_1_address0 = grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage0_i_1_address0;
     end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        grp_fft_stage_clone_fu_126_m = 9'd32;
+        stage0_i_1_address0 = grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage0_i_1_address0;
     end else if ((1'b1 == ap_CS_fsm_state8)) begin
-        grp_fft_stage_clone_fu_126_m = 9'd16;
+        stage0_i_1_address0 = grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage0_i_1_address0;
     end else if ((1'b1 == ap_CS_fsm_state6)) begin
-        grp_fft_stage_clone_fu_126_m = 9'd8;
+        stage0_i_1_address0 = grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage0_i_1_address0;
     end else if ((1'b1 == ap_CS_fsm_state4)) begin
-        grp_fft_stage_clone_fu_126_m = 9'd4;
-    end else begin
-        grp_fft_stage_clone_fu_126_m = 'bx;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state16)) begin
-        grp_fft_stage_clone_fu_126_t = 9'd4;
-    end else if ((1'b1 == ap_CS_fsm_state14)) begin
-        grp_fft_stage_clone_fu_126_t = 9'd8;
-    end else if ((1'b1 == ap_CS_fsm_state12)) begin
-        grp_fft_stage_clone_fu_126_t = 9'd16;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        grp_fft_stage_clone_fu_126_t = 9'd32;
-    end else if ((1'b1 == ap_CS_fsm_state8)) begin
-        grp_fft_stage_clone_fu_126_t = 9'd64;
-    end else if ((1'b1 == ap_CS_fsm_state6)) begin
-        grp_fft_stage_clone_fu_126_t = 9'd128;
-    end else if ((1'b1 == ap_CS_fsm_state4)) begin
-        grp_fft_stage_clone_fu_126_t = 9'd256;
-    end else begin
-        grp_fft_stage_clone_fu_126_t = 'bx;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state18)) begin
-        grp_fu_186_ce = grp_fft_stage_clone_clone_fu_166_grp_fu_186_p_ce;
+        stage0_i_1_address0 = grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage0_i_1_address0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        grp_fu_186_ce = grp_fft_stage_fu_102_grp_fu_186_p_ce;
-    end else begin
-        grp_fu_186_ce = 1'b1;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state18)) begin
-        grp_fu_186_p0 = grp_fft_stage_clone_clone_fu_166_grp_fu_186_p_din0;
-    end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        grp_fu_186_p0 = grp_fft_stage_fu_102_grp_fu_186_p_din0;
-    end else begin
-        grp_fu_186_p0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state18)) begin
-        grp_fu_186_p1 = grp_fft_stage_clone_clone_fu_166_grp_fu_186_p_din1;
-    end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        grp_fu_186_p1 = grp_fft_stage_fu_102_grp_fu_186_p_din1;
-    end else begin
-        grp_fu_186_p1 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state18)) begin
-        grp_fu_190_ce = grp_fft_stage_clone_clone_fu_166_grp_fu_190_p_ce;
-    end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        grp_fu_190_ce = grp_fft_stage_fu_102_grp_fu_190_p_ce;
-    end else begin
-        grp_fu_190_ce = 1'b1;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state18)) begin
-        grp_fu_190_p0 = grp_fft_stage_clone_clone_fu_166_grp_fu_190_p_din0;
-    end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        grp_fu_190_p0 = grp_fft_stage_fu_102_grp_fu_190_p_din0;
-    end else begin
-        grp_fu_190_p0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state18)) begin
-        grp_fu_190_p1 = grp_fft_stage_clone_clone_fu_166_grp_fu_190_p_din1;
-    end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        grp_fu_190_p1 = grp_fft_stage_fu_102_grp_fu_190_p_din1;
-    end else begin
-        grp_fu_190_p1 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state18)) begin
-        grp_fu_194_ce = grp_fft_stage_clone_clone_fu_166_grp_fu_194_p_ce;
-    end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        grp_fu_194_ce = grp_fft_stage_fu_102_grp_fu_194_p_ce;
-    end else begin
-        grp_fu_194_ce = 1'b1;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state18)) begin
-        grp_fu_194_p0 = grp_fft_stage_clone_clone_fu_166_grp_fu_194_p_din0;
-    end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        grp_fu_194_p0 = grp_fft_stage_fu_102_grp_fu_194_p_din0;
-    end else begin
-        grp_fu_194_p0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state18)) begin
-        grp_fu_194_p1 = grp_fft_stage_clone_clone_fu_166_grp_fu_194_p_din1;
-    end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        grp_fu_194_p1 = grp_fft_stage_fu_102_grp_fu_194_p_din1;
-    end else begin
-        grp_fu_194_p1 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state18)) begin
-        grp_fu_198_ce = grp_fft_stage_clone_clone_fu_166_grp_fu_198_p_ce;
-    end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        grp_fu_198_ce = grp_fft_stage_fu_102_grp_fu_198_p_ce;
-    end else begin
-        grp_fu_198_ce = 1'b1;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state18)) begin
-        grp_fu_198_p0 = grp_fft_stage_clone_clone_fu_166_grp_fu_198_p_din0;
-    end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        grp_fu_198_p0 = grp_fft_stage_fu_102_grp_fu_198_p_din0;
-    end else begin
-        grp_fu_198_p0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state18)) begin
-        grp_fu_198_p1 = grp_fft_stage_clone_clone_fu_166_grp_fu_198_p_din1;
-    end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        grp_fu_198_p1 = grp_fft_stage_fu_102_grp_fu_198_p_din1;
-    end else begin
-        grp_fu_198_p1 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state18)) begin
-        grp_fu_202_ce = grp_fft_stage_clone_clone_fu_166_grp_fu_202_p_ce;
-    end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        grp_fu_202_ce = grp_fft_stage_fu_102_grp_fu_202_p_ce;
-    end else begin
-        grp_fu_202_ce = 1'b1;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state18)) begin
-        grp_fu_202_p0 = grp_fft_stage_clone_clone_fu_166_grp_fu_202_p_din0;
-    end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        grp_fu_202_p0 = grp_fft_stage_fu_102_grp_fu_202_p_din0;
-    end else begin
-        grp_fu_202_p0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state18)) begin
-        grp_fu_202_p1 = grp_fft_stage_clone_clone_fu_166_grp_fu_202_p_din1;
-    end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        grp_fu_202_p1 = grp_fft_stage_fu_102_grp_fu_202_p_din1;
-    end else begin
-        grp_fu_202_p1 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state18)) begin
-        grp_fu_206_ce = grp_fft_stage_clone_clone_fu_166_grp_fu_206_p_ce;
-    end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        grp_fu_206_ce = grp_fft_stage_fu_102_grp_fu_206_p_ce;
-    end else begin
-        grp_fu_206_ce = 1'b1;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state18)) begin
-        grp_fu_206_p0 = grp_fft_stage_clone_clone_fu_166_grp_fu_206_p_din0;
-    end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        grp_fu_206_p0 = grp_fft_stage_fu_102_grp_fu_206_p_din0;
-    end else begin
-        grp_fu_206_p0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state18)) begin
-        grp_fu_206_p1 = grp_fft_stage_clone_clone_fu_166_grp_fu_206_p_din1;
-    end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        grp_fu_206_p1 = grp_fft_stage_fu_102_grp_fu_206_p_din1;
-    end else begin
-        grp_fu_206_p1 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state18)) begin
-        grp_fu_210_ce = grp_fft_stage_clone_clone_fu_166_grp_fu_210_p_ce;
-    end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        grp_fu_210_ce = grp_fft_stage_fu_102_grp_fu_210_p_ce;
-    end else begin
-        grp_fu_210_ce = 1'b1;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state18)) begin
-        grp_fu_210_p0 = grp_fft_stage_clone_clone_fu_166_grp_fu_210_p_din0;
-    end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        grp_fu_210_p0 = grp_fft_stage_fu_102_grp_fu_210_p_din0;
-    end else begin
-        grp_fu_210_p0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state18)) begin
-        grp_fu_210_p1 = grp_fft_stage_clone_clone_fu_166_grp_fu_210_p_din1;
-    end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        grp_fu_210_p1 = grp_fft_stage_fu_102_grp_fu_210_p_din1;
-    end else begin
-        grp_fu_210_p1 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state18)) begin
-        grp_fu_214_ce = grp_fft_stage_clone_clone_fu_166_grp_fu_214_p_ce;
-    end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        grp_fu_214_ce = grp_fft_stage_fu_102_grp_fu_214_p_ce;
-    end else begin
-        grp_fu_214_ce = 1'b1;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state18)) begin
-        grp_fu_214_p0 = grp_fft_stage_clone_clone_fu_166_grp_fu_214_p_din0;
-    end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        grp_fu_214_p0 = grp_fft_stage_fu_102_grp_fu_214_p_din0;
-    end else begin
-        grp_fu_214_p0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state18)) begin
-        grp_fu_214_p1 = grp_fft_stage_clone_clone_fu_166_grp_fu_214_p_din1;
-    end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        grp_fu_214_p1 = grp_fft_stage_fu_102_grp_fu_214_p_din1;
-    end else begin
-        grp_fu_214_p1 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state6))) begin
-        stage0_i_1_address0 = grp_fft_stage_clone_fu_126_out_i_1_address0;
-    end else if (((1'b1 == ap_CS_fsm_state16) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state4))) begin
-        stage0_i_1_address0 = grp_fft_stage_clone_fu_126_in_i_1_address0;
-    end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        stage0_i_1_address0 = grp_fft_stage_fu_102_out_i_1_address0;
+        stage0_i_1_address0 = grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_i_1_address0;
     end else begin
         stage0_i_1_address0 = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state6))) begin
-        stage0_i_1_address1 = grp_fft_stage_clone_fu_126_out_i_1_address1;
-    end else if (((1'b1 == ap_CS_fsm_state16) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state4))) begin
-        stage0_i_1_address1 = grp_fft_stage_clone_fu_126_in_i_1_address1;
+    if ((1'b1 == ap_CS_fsm_state12)) begin
+        stage0_i_1_address1 = grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage0_i_1_address1;
+    end else if ((1'b1 == ap_CS_fsm_state8)) begin
+        stage0_i_1_address1 = grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage0_i_1_address1;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        stage0_i_1_address1 = grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage0_i_1_address1;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        stage0_i_1_address1 = grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_i_1_address1;
     end else begin
         stage0_i_1_address1 = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state6))) begin
-        stage0_i_1_ce0 = grp_fft_stage_clone_fu_126_out_i_1_ce0;
-    end else if (((1'b1 == ap_CS_fsm_state16) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state4))) begin
-        stage0_i_1_ce0 = grp_fft_stage_clone_fu_126_in_i_1_ce0;
+    if ((1'b1 == ap_CS_fsm_state16)) begin
+        stage0_i_1_ce0 = grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage0_i_1_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state14)) begin
+        stage0_i_1_ce0 = grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage0_i_1_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state12)) begin
+        stage0_i_1_ce0 = grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage0_i_1_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        stage0_i_1_ce0 = grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage0_i_1_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state8)) begin
+        stage0_i_1_ce0 = grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage0_i_1_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state6)) begin
+        stage0_i_1_ce0 = grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage0_i_1_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        stage0_i_1_ce0 = grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage0_i_1_ce0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        stage0_i_1_ce0 = grp_fft_stage_fu_102_out_i_1_ce0;
+        stage0_i_1_ce0 = grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_i_1_ce0;
     end else begin
         stage0_i_1_ce0 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state6))) begin
-        stage0_i_1_ce1 = grp_fft_stage_clone_fu_126_out_i_1_ce1;
-    end else if (((1'b1 == ap_CS_fsm_state16) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state4))) begin
-        stage0_i_1_ce1 = grp_fft_stage_clone_fu_126_in_i_1_ce1;
+    if ((1'b1 == ap_CS_fsm_state12)) begin
+        stage0_i_1_ce1 = grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage0_i_1_ce1;
+    end else if ((1'b1 == ap_CS_fsm_state8)) begin
+        stage0_i_1_ce1 = grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage0_i_1_ce1;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        stage0_i_1_ce1 = grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage0_i_1_ce1;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        stage0_i_1_ce1 = grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_i_1_ce1;
     end else begin
         stage0_i_1_ce1 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state6))) begin
-        stage0_i_1_d0 = grp_fft_stage_clone_fu_126_out_i_1_d0;
+    if ((1'b1 == ap_CS_fsm_state14)) begin
+        stage0_i_1_d0 = grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage0_i_1_d0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        stage0_i_1_d0 = grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage0_i_1_d0;
+    end else if ((1'b1 == ap_CS_fsm_state6)) begin
+        stage0_i_1_d0 = grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage0_i_1_d0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        stage0_i_1_d0 = grp_fft_stage_fu_102_out_i_1_d0;
+        stage0_i_1_d0 = grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_i_1_d0;
     end else begin
         stage0_i_1_d0 = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state6))) begin
-        stage0_i_1_we0 = grp_fft_stage_clone_fu_126_out_i_1_we0;
+    if ((1'b1 == ap_CS_fsm_state14)) begin
+        stage0_i_1_we0 = grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage0_i_1_we0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        stage0_i_1_we0 = grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage0_i_1_we0;
+    end else if ((1'b1 == ap_CS_fsm_state6)) begin
+        stage0_i_1_we0 = grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage0_i_1_we0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        stage0_i_1_we0 = grp_fft_stage_fu_102_out_i_1_we0;
+        stage0_i_1_we0 = grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_i_1_we0;
     end else begin
         stage0_i_1_we0 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state6))) begin
-        stage0_i_1_we1 = grp_fft_stage_clone_fu_126_out_i_1_we1;
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        stage0_i_1_we1 = grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_i_1_we1;
     end else begin
         stage0_i_1_we1 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state6))) begin
-        stage0_i_2_address0 = grp_fft_stage_clone_fu_126_out_i_2_address0;
-    end else if (((1'b1 == ap_CS_fsm_state16) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state4))) begin
-        stage0_i_2_address0 = grp_fft_stage_clone_fu_126_in_i_2_address0;
+    if ((1'b1 == ap_CS_fsm_state16)) begin
+        stage0_i_2_address0 = grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage0_i_2_address0;
+    end else if ((1'b1 == ap_CS_fsm_state14)) begin
+        stage0_i_2_address0 = grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage0_i_2_address0;
+    end else if ((1'b1 == ap_CS_fsm_state12)) begin
+        stage0_i_2_address0 = grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage0_i_2_address0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        stage0_i_2_address0 = grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage0_i_2_address0;
+    end else if ((1'b1 == ap_CS_fsm_state8)) begin
+        stage0_i_2_address0 = grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage0_i_2_address0;
+    end else if ((1'b1 == ap_CS_fsm_state6)) begin
+        stage0_i_2_address0 = grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage0_i_2_address0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        stage0_i_2_address0 = grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage0_i_2_address0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        stage0_i_2_address0 = grp_fft_stage_fu_102_out_i_2_address0;
+        stage0_i_2_address0 = grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_i_2_address0;
     end else begin
         stage0_i_2_address0 = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state6))) begin
-        stage0_i_2_address1 = grp_fft_stage_clone_fu_126_out_i_2_address1;
-    end else if (((1'b1 == ap_CS_fsm_state16) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state4))) begin
-        stage0_i_2_address1 = grp_fft_stage_clone_fu_126_in_i_2_address1;
+    if ((1'b1 == ap_CS_fsm_state12)) begin
+        stage0_i_2_address1 = grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage0_i_2_address1;
+    end else if ((1'b1 == ap_CS_fsm_state8)) begin
+        stage0_i_2_address1 = grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage0_i_2_address1;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        stage0_i_2_address1 = grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage0_i_2_address1;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        stage0_i_2_address1 = grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_i_2_address1;
     end else begin
         stage0_i_2_address1 = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state6))) begin
-        stage0_i_2_ce0 = grp_fft_stage_clone_fu_126_out_i_2_ce0;
-    end else if (((1'b1 == ap_CS_fsm_state16) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state4))) begin
-        stage0_i_2_ce0 = grp_fft_stage_clone_fu_126_in_i_2_ce0;
+    if ((1'b1 == ap_CS_fsm_state16)) begin
+        stage0_i_2_ce0 = grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage0_i_2_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state14)) begin
+        stage0_i_2_ce0 = grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage0_i_2_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state12)) begin
+        stage0_i_2_ce0 = grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage0_i_2_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        stage0_i_2_ce0 = grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage0_i_2_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state8)) begin
+        stage0_i_2_ce0 = grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage0_i_2_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state6)) begin
+        stage0_i_2_ce0 = grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage0_i_2_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        stage0_i_2_ce0 = grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage0_i_2_ce0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        stage0_i_2_ce0 = grp_fft_stage_fu_102_out_i_2_ce0;
+        stage0_i_2_ce0 = grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_i_2_ce0;
     end else begin
         stage0_i_2_ce0 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state6))) begin
-        stage0_i_2_ce1 = grp_fft_stage_clone_fu_126_out_i_2_ce1;
-    end else if (((1'b1 == ap_CS_fsm_state16) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state4))) begin
-        stage0_i_2_ce1 = grp_fft_stage_clone_fu_126_in_i_2_ce1;
+    if ((1'b1 == ap_CS_fsm_state12)) begin
+        stage0_i_2_ce1 = grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage0_i_2_ce1;
+    end else if ((1'b1 == ap_CS_fsm_state8)) begin
+        stage0_i_2_ce1 = grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage0_i_2_ce1;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        stage0_i_2_ce1 = grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage0_i_2_ce1;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        stage0_i_2_ce1 = grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_i_2_ce1;
     end else begin
         stage0_i_2_ce1 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state6))) begin
-        stage0_i_2_d0 = grp_fft_stage_clone_fu_126_out_i_2_d0;
+    if ((1'b1 == ap_CS_fsm_state14)) begin
+        stage0_i_2_d0 = grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage0_i_2_d0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        stage0_i_2_d0 = grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage0_i_2_d0;
+    end else if ((1'b1 == ap_CS_fsm_state6)) begin
+        stage0_i_2_d0 = grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage0_i_2_d0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        stage0_i_2_d0 = grp_fft_stage_fu_102_out_i_2_d0;
+        stage0_i_2_d0 = grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_i_2_d0;
     end else begin
         stage0_i_2_d0 = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state6))) begin
-        stage0_i_2_we0 = grp_fft_stage_clone_fu_126_out_i_2_we0;
+    if ((1'b1 == ap_CS_fsm_state14)) begin
+        stage0_i_2_we0 = grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage0_i_2_we0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        stage0_i_2_we0 = grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage0_i_2_we0;
+    end else if ((1'b1 == ap_CS_fsm_state6)) begin
+        stage0_i_2_we0 = grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage0_i_2_we0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        stage0_i_2_we0 = grp_fft_stage_fu_102_out_i_2_we0;
+        stage0_i_2_we0 = grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_i_2_we0;
     end else begin
         stage0_i_2_we0 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state6))) begin
-        stage0_i_2_we1 = grp_fft_stage_clone_fu_126_out_i_2_we1;
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        stage0_i_2_we1 = grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_i_2_we1;
     end else begin
         stage0_i_2_we1 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state6))) begin
-        stage0_i_3_address0 = grp_fft_stage_clone_fu_126_out_i_3_address0;
-    end else if (((1'b1 == ap_CS_fsm_state16) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state4))) begin
-        stage0_i_3_address0 = grp_fft_stage_clone_fu_126_in_i_3_address0;
+    if ((1'b1 == ap_CS_fsm_state16)) begin
+        stage0_i_3_address0 = grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage0_i_3_address0;
+    end else if ((1'b1 == ap_CS_fsm_state14)) begin
+        stage0_i_3_address0 = grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage0_i_3_address0;
+    end else if ((1'b1 == ap_CS_fsm_state12)) begin
+        stage0_i_3_address0 = grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage0_i_3_address0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        stage0_i_3_address0 = grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage0_i_3_address0;
+    end else if ((1'b1 == ap_CS_fsm_state8)) begin
+        stage0_i_3_address0 = grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage0_i_3_address0;
+    end else if ((1'b1 == ap_CS_fsm_state6)) begin
+        stage0_i_3_address0 = grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage0_i_3_address0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        stage0_i_3_address0 = grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage0_i_3_address0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        stage0_i_3_address0 = grp_fft_stage_fu_102_out_i_3_address0;
+        stage0_i_3_address0 = grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_i_3_address0;
     end else begin
         stage0_i_3_address0 = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state6))) begin
-        stage0_i_3_address1 = grp_fft_stage_clone_fu_126_out_i_3_address1;
-    end else if (((1'b1 == ap_CS_fsm_state16) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state4))) begin
-        stage0_i_3_address1 = grp_fft_stage_clone_fu_126_in_i_3_address1;
+    if ((1'b1 == ap_CS_fsm_state12)) begin
+        stage0_i_3_address1 = grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage0_i_3_address1;
+    end else if ((1'b1 == ap_CS_fsm_state8)) begin
+        stage0_i_3_address1 = grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage0_i_3_address1;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        stage0_i_3_address1 = grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage0_i_3_address1;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        stage0_i_3_address1 = grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_i_3_address1;
     end else begin
         stage0_i_3_address1 = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state6))) begin
-        stage0_i_3_ce0 = grp_fft_stage_clone_fu_126_out_i_3_ce0;
-    end else if (((1'b1 == ap_CS_fsm_state16) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state4))) begin
-        stage0_i_3_ce0 = grp_fft_stage_clone_fu_126_in_i_3_ce0;
+    if ((1'b1 == ap_CS_fsm_state16)) begin
+        stage0_i_3_ce0 = grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage0_i_3_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state14)) begin
+        stage0_i_3_ce0 = grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage0_i_3_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state12)) begin
+        stage0_i_3_ce0 = grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage0_i_3_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        stage0_i_3_ce0 = grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage0_i_3_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state8)) begin
+        stage0_i_3_ce0 = grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage0_i_3_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state6)) begin
+        stage0_i_3_ce0 = grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage0_i_3_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        stage0_i_3_ce0 = grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage0_i_3_ce0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        stage0_i_3_ce0 = grp_fft_stage_fu_102_out_i_3_ce0;
+        stage0_i_3_ce0 = grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_i_3_ce0;
     end else begin
         stage0_i_3_ce0 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state6))) begin
-        stage0_i_3_ce1 = grp_fft_stage_clone_fu_126_out_i_3_ce1;
-    end else if (((1'b1 == ap_CS_fsm_state16) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state4))) begin
-        stage0_i_3_ce1 = grp_fft_stage_clone_fu_126_in_i_3_ce1;
+    if ((1'b1 == ap_CS_fsm_state12)) begin
+        stage0_i_3_ce1 = grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage0_i_3_ce1;
+    end else if ((1'b1 == ap_CS_fsm_state8)) begin
+        stage0_i_3_ce1 = grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage0_i_3_ce1;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        stage0_i_3_ce1 = grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage0_i_3_ce1;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        stage0_i_3_ce1 = grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_i_3_ce1;
     end else begin
         stage0_i_3_ce1 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state6))) begin
-        stage0_i_3_d0 = grp_fft_stage_clone_fu_126_out_i_3_d0;
+    if ((1'b1 == ap_CS_fsm_state14)) begin
+        stage0_i_3_d0 = grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage0_i_3_d0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        stage0_i_3_d0 = grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage0_i_3_d0;
+    end else if ((1'b1 == ap_CS_fsm_state6)) begin
+        stage0_i_3_d0 = grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage0_i_3_d0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        stage0_i_3_d0 = grp_fft_stage_fu_102_out_i_3_d0;
+        stage0_i_3_d0 = grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_i_3_d0;
     end else begin
         stage0_i_3_d0 = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state6))) begin
-        stage0_i_3_we0 = grp_fft_stage_clone_fu_126_out_i_3_we0;
+    if ((1'b1 == ap_CS_fsm_state14)) begin
+        stage0_i_3_we0 = grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage0_i_3_we0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        stage0_i_3_we0 = grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage0_i_3_we0;
+    end else if ((1'b1 == ap_CS_fsm_state6)) begin
+        stage0_i_3_we0 = grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage0_i_3_we0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        stage0_i_3_we0 = grp_fft_stage_fu_102_out_i_3_we0;
+        stage0_i_3_we0 = grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_i_3_we0;
     end else begin
         stage0_i_3_we0 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state6))) begin
-        stage0_i_3_we1 = grp_fft_stage_clone_fu_126_out_i_3_we1;
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        stage0_i_3_we1 = grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_i_3_we1;
     end else begin
         stage0_i_3_we1 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state6))) begin
-        stage0_i_address0 = grp_fft_stage_clone_fu_126_out_i_0_address0;
-    end else if (((1'b1 == ap_CS_fsm_state16) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state4))) begin
-        stage0_i_address0 = grp_fft_stage_clone_fu_126_in_i_0_address0;
+    if ((1'b1 == ap_CS_fsm_state16)) begin
+        stage0_i_address0 = grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage0_i_address0;
+    end else if ((1'b1 == ap_CS_fsm_state14)) begin
+        stage0_i_address0 = grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage0_i_address0;
+    end else if ((1'b1 == ap_CS_fsm_state12)) begin
+        stage0_i_address0 = grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage0_i_address0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        stage0_i_address0 = grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage0_i_address0;
+    end else if ((1'b1 == ap_CS_fsm_state8)) begin
+        stage0_i_address0 = grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage0_i_address0;
+    end else if ((1'b1 == ap_CS_fsm_state6)) begin
+        stage0_i_address0 = grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage0_i_address0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        stage0_i_address0 = grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage0_i_address0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        stage0_i_address0 = grp_fft_stage_fu_102_out_i_0_address0;
+        stage0_i_address0 = grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_i_address0;
     end else begin
         stage0_i_address0 = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state6))) begin
-        stage0_i_address1 = grp_fft_stage_clone_fu_126_out_i_0_address1;
-    end else if (((1'b1 == ap_CS_fsm_state16) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state4))) begin
-        stage0_i_address1 = grp_fft_stage_clone_fu_126_in_i_0_address1;
+    if ((1'b1 == ap_CS_fsm_state12)) begin
+        stage0_i_address1 = grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage0_i_address1;
+    end else if ((1'b1 == ap_CS_fsm_state8)) begin
+        stage0_i_address1 = grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage0_i_address1;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        stage0_i_address1 = grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage0_i_address1;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        stage0_i_address1 = grp_fft_stage_fu_102_out_i_0_address1;
+        stage0_i_address1 = grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_i_address1;
     end else begin
         stage0_i_address1 = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state6))) begin
-        stage0_i_ce0 = grp_fft_stage_clone_fu_126_out_i_0_ce0;
-    end else if (((1'b1 == ap_CS_fsm_state16) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state4))) begin
-        stage0_i_ce0 = grp_fft_stage_clone_fu_126_in_i_0_ce0;
+    if ((1'b1 == ap_CS_fsm_state16)) begin
+        stage0_i_ce0 = grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage0_i_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state14)) begin
+        stage0_i_ce0 = grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage0_i_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state12)) begin
+        stage0_i_ce0 = grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage0_i_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        stage0_i_ce0 = grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage0_i_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state8)) begin
+        stage0_i_ce0 = grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage0_i_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state6)) begin
+        stage0_i_ce0 = grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage0_i_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        stage0_i_ce0 = grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage0_i_ce0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        stage0_i_ce0 = grp_fft_stage_fu_102_out_i_0_ce0;
+        stage0_i_ce0 = grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_i_ce0;
     end else begin
         stage0_i_ce0 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state6))) begin
-        stage0_i_ce1 = grp_fft_stage_clone_fu_126_out_i_0_ce1;
-    end else if (((1'b1 == ap_CS_fsm_state16) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state4))) begin
-        stage0_i_ce1 = grp_fft_stage_clone_fu_126_in_i_0_ce1;
+    if ((1'b1 == ap_CS_fsm_state12)) begin
+        stage0_i_ce1 = grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage0_i_ce1;
+    end else if ((1'b1 == ap_CS_fsm_state8)) begin
+        stage0_i_ce1 = grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage0_i_ce1;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        stage0_i_ce1 = grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage0_i_ce1;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        stage0_i_ce1 = grp_fft_stage_fu_102_out_i_0_ce1;
+        stage0_i_ce1 = grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_i_ce1;
     end else begin
         stage0_i_ce1 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state6))) begin
-        stage0_i_d0 = grp_fft_stage_clone_fu_126_out_i_0_d0;
+    if ((1'b1 == ap_CS_fsm_state14)) begin
+        stage0_i_d0 = grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage0_i_d0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        stage0_i_d0 = grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage0_i_d0;
+    end else if ((1'b1 == ap_CS_fsm_state6)) begin
+        stage0_i_d0 = grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage0_i_d0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        stage0_i_d0 = grp_fft_stage_fu_102_out_i_0_d0;
+        stage0_i_d0 = grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_i_d0;
     end else begin
         stage0_i_d0 = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state6))) begin
-        stage0_i_d1 = grp_fft_stage_clone_fu_126_out_i_0_d1;
+    if ((1'b1 == ap_CS_fsm_state14)) begin
+        stage0_i_we0 = grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage0_i_we0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        stage0_i_we0 = grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage0_i_we0;
+    end else if ((1'b1 == ap_CS_fsm_state6)) begin
+        stage0_i_we0 = grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage0_i_we0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        stage0_i_d1 = grp_fft_stage_fu_102_out_i_0_d1;
-    end else begin
-        stage0_i_d1 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state6))) begin
-        stage0_i_we0 = grp_fft_stage_clone_fu_126_out_i_0_we0;
-    end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        stage0_i_we0 = grp_fft_stage_fu_102_out_i_0_we0;
+        stage0_i_we0 = grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_i_we0;
     end else begin
         stage0_i_we0 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state6))) begin
-        stage0_i_we1 = grp_fft_stage_clone_fu_126_out_i_0_we1;
-    end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        stage0_i_we1 = grp_fft_stage_fu_102_out_i_0_we1;
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        stage0_i_we1 = grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_i_we1;
     end else begin
         stage0_i_we1 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state6))) begin
-        stage0_r_1_address0 = grp_fft_stage_clone_fu_126_out_r_1_address0;
-    end else if (((1'b1 == ap_CS_fsm_state16) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state4))) begin
-        stage0_r_1_address0 = grp_fft_stage_clone_fu_126_in_r_1_address0;
+    if ((1'b1 == ap_CS_fsm_state16)) begin
+        stage0_r_1_address0 = grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage0_r_1_address0;
+    end else if ((1'b1 == ap_CS_fsm_state14)) begin
+        stage0_r_1_address0 = grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage0_r_1_address0;
+    end else if ((1'b1 == ap_CS_fsm_state12)) begin
+        stage0_r_1_address0 = grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage0_r_1_address0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        stage0_r_1_address0 = grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage0_r_1_address0;
+    end else if ((1'b1 == ap_CS_fsm_state8)) begin
+        stage0_r_1_address0 = grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage0_r_1_address0;
+    end else if ((1'b1 == ap_CS_fsm_state6)) begin
+        stage0_r_1_address0 = grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage0_r_1_address0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        stage0_r_1_address0 = grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage0_r_1_address0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        stage0_r_1_address0 = grp_fft_stage_fu_102_out_r_1_address0;
+        stage0_r_1_address0 = grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_r_1_address0;
     end else begin
         stage0_r_1_address0 = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state6))) begin
-        stage0_r_1_address1 = grp_fft_stage_clone_fu_126_out_r_1_address1;
-    end else if (((1'b1 == ap_CS_fsm_state16) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state4))) begin
-        stage0_r_1_address1 = grp_fft_stage_clone_fu_126_in_r_1_address1;
+    if ((1'b1 == ap_CS_fsm_state12)) begin
+        stage0_r_1_address1 = grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage0_r_1_address1;
+    end else if ((1'b1 == ap_CS_fsm_state8)) begin
+        stage0_r_1_address1 = grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage0_r_1_address1;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        stage0_r_1_address1 = grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage0_r_1_address1;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        stage0_r_1_address1 = grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_r_1_address1;
     end else begin
         stage0_r_1_address1 = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state6))) begin
-        stage0_r_1_ce0 = grp_fft_stage_clone_fu_126_out_r_1_ce0;
-    end else if (((1'b1 == ap_CS_fsm_state16) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state4))) begin
-        stage0_r_1_ce0 = grp_fft_stage_clone_fu_126_in_r_1_ce0;
+    if ((1'b1 == ap_CS_fsm_state16)) begin
+        stage0_r_1_ce0 = grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage0_r_1_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state14)) begin
+        stage0_r_1_ce0 = grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage0_r_1_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state12)) begin
+        stage0_r_1_ce0 = grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage0_r_1_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        stage0_r_1_ce0 = grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage0_r_1_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state8)) begin
+        stage0_r_1_ce0 = grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage0_r_1_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state6)) begin
+        stage0_r_1_ce0 = grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage0_r_1_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        stage0_r_1_ce0 = grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage0_r_1_ce0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        stage0_r_1_ce0 = grp_fft_stage_fu_102_out_r_1_ce0;
+        stage0_r_1_ce0 = grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_r_1_ce0;
     end else begin
         stage0_r_1_ce0 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state6))) begin
-        stage0_r_1_ce1 = grp_fft_stage_clone_fu_126_out_r_1_ce1;
-    end else if (((1'b1 == ap_CS_fsm_state16) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state4))) begin
-        stage0_r_1_ce1 = grp_fft_stage_clone_fu_126_in_r_1_ce1;
+    if ((1'b1 == ap_CS_fsm_state12)) begin
+        stage0_r_1_ce1 = grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage0_r_1_ce1;
+    end else if ((1'b1 == ap_CS_fsm_state8)) begin
+        stage0_r_1_ce1 = grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage0_r_1_ce1;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        stage0_r_1_ce1 = grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage0_r_1_ce1;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        stage0_r_1_ce1 = grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_r_1_ce1;
     end else begin
         stage0_r_1_ce1 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state6))) begin
-        stage0_r_1_d0 = grp_fft_stage_clone_fu_126_out_r_1_d0;
+    if ((1'b1 == ap_CS_fsm_state14)) begin
+        stage0_r_1_d0 = grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage0_r_1_d0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        stage0_r_1_d0 = grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage0_r_1_d0;
+    end else if ((1'b1 == ap_CS_fsm_state6)) begin
+        stage0_r_1_d0 = grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage0_r_1_d0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        stage0_r_1_d0 = grp_fft_stage_fu_102_out_r_1_d0;
+        stage0_r_1_d0 = grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_r_1_d0;
     end else begin
         stage0_r_1_d0 = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state6))) begin
-        stage0_r_1_we0 = grp_fft_stage_clone_fu_126_out_r_1_we0;
+    if ((1'b1 == ap_CS_fsm_state14)) begin
+        stage0_r_1_we0 = grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage0_r_1_we0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        stage0_r_1_we0 = grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage0_r_1_we0;
+    end else if ((1'b1 == ap_CS_fsm_state6)) begin
+        stage0_r_1_we0 = grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage0_r_1_we0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        stage0_r_1_we0 = grp_fft_stage_fu_102_out_r_1_we0;
+        stage0_r_1_we0 = grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_r_1_we0;
     end else begin
         stage0_r_1_we0 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state6))) begin
-        stage0_r_1_we1 = grp_fft_stage_clone_fu_126_out_r_1_we1;
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        stage0_r_1_we1 = grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_r_1_we1;
     end else begin
         stage0_r_1_we1 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state6))) begin
-        stage0_r_2_address0 = grp_fft_stage_clone_fu_126_out_r_2_address0;
-    end else if (((1'b1 == ap_CS_fsm_state16) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state4))) begin
-        stage0_r_2_address0 = grp_fft_stage_clone_fu_126_in_r_2_address0;
+    if ((1'b1 == ap_CS_fsm_state16)) begin
+        stage0_r_2_address0 = grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage0_r_2_address0;
+    end else if ((1'b1 == ap_CS_fsm_state14)) begin
+        stage0_r_2_address0 = grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage0_r_2_address0;
+    end else if ((1'b1 == ap_CS_fsm_state12)) begin
+        stage0_r_2_address0 = grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage0_r_2_address0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        stage0_r_2_address0 = grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage0_r_2_address0;
+    end else if ((1'b1 == ap_CS_fsm_state8)) begin
+        stage0_r_2_address0 = grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage0_r_2_address0;
+    end else if ((1'b1 == ap_CS_fsm_state6)) begin
+        stage0_r_2_address0 = grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage0_r_2_address0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        stage0_r_2_address0 = grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage0_r_2_address0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        stage0_r_2_address0 = grp_fft_stage_fu_102_out_r_2_address0;
+        stage0_r_2_address0 = grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_r_2_address0;
     end else begin
         stage0_r_2_address0 = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state6))) begin
-        stage0_r_2_address1 = grp_fft_stage_clone_fu_126_out_r_2_address1;
-    end else if (((1'b1 == ap_CS_fsm_state16) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state4))) begin
-        stage0_r_2_address1 = grp_fft_stage_clone_fu_126_in_r_2_address1;
+    if ((1'b1 == ap_CS_fsm_state12)) begin
+        stage0_r_2_address1 = grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage0_r_2_address1;
+    end else if ((1'b1 == ap_CS_fsm_state8)) begin
+        stage0_r_2_address1 = grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage0_r_2_address1;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        stage0_r_2_address1 = grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage0_r_2_address1;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        stage0_r_2_address1 = grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_r_2_address1;
     end else begin
         stage0_r_2_address1 = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state6))) begin
-        stage0_r_2_ce0 = grp_fft_stage_clone_fu_126_out_r_2_ce0;
-    end else if (((1'b1 == ap_CS_fsm_state16) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state4))) begin
-        stage0_r_2_ce0 = grp_fft_stage_clone_fu_126_in_r_2_ce0;
+    if ((1'b1 == ap_CS_fsm_state16)) begin
+        stage0_r_2_ce0 = grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage0_r_2_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state14)) begin
+        stage0_r_2_ce0 = grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage0_r_2_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state12)) begin
+        stage0_r_2_ce0 = grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage0_r_2_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        stage0_r_2_ce0 = grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage0_r_2_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state8)) begin
+        stage0_r_2_ce0 = grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage0_r_2_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state6)) begin
+        stage0_r_2_ce0 = grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage0_r_2_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        stage0_r_2_ce0 = grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage0_r_2_ce0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        stage0_r_2_ce0 = grp_fft_stage_fu_102_out_r_2_ce0;
+        stage0_r_2_ce0 = grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_r_2_ce0;
     end else begin
         stage0_r_2_ce0 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state6))) begin
-        stage0_r_2_ce1 = grp_fft_stage_clone_fu_126_out_r_2_ce1;
-    end else if (((1'b1 == ap_CS_fsm_state16) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state4))) begin
-        stage0_r_2_ce1 = grp_fft_stage_clone_fu_126_in_r_2_ce1;
+    if ((1'b1 == ap_CS_fsm_state12)) begin
+        stage0_r_2_ce1 = grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage0_r_2_ce1;
+    end else if ((1'b1 == ap_CS_fsm_state8)) begin
+        stage0_r_2_ce1 = grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage0_r_2_ce1;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        stage0_r_2_ce1 = grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage0_r_2_ce1;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        stage0_r_2_ce1 = grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_r_2_ce1;
     end else begin
         stage0_r_2_ce1 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state6))) begin
-        stage0_r_2_d0 = grp_fft_stage_clone_fu_126_out_r_2_d0;
+    if ((1'b1 == ap_CS_fsm_state14)) begin
+        stage0_r_2_d0 = grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage0_r_2_d0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        stage0_r_2_d0 = grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage0_r_2_d0;
+    end else if ((1'b1 == ap_CS_fsm_state6)) begin
+        stage0_r_2_d0 = grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage0_r_2_d0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        stage0_r_2_d0 = grp_fft_stage_fu_102_out_r_2_d0;
+        stage0_r_2_d0 = grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_r_2_d0;
     end else begin
         stage0_r_2_d0 = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state6))) begin
-        stage0_r_2_we0 = grp_fft_stage_clone_fu_126_out_r_2_we0;
+    if ((1'b1 == ap_CS_fsm_state14)) begin
+        stage0_r_2_we0 = grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage0_r_2_we0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        stage0_r_2_we0 = grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage0_r_2_we0;
+    end else if ((1'b1 == ap_CS_fsm_state6)) begin
+        stage0_r_2_we0 = grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage0_r_2_we0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        stage0_r_2_we0 = grp_fft_stage_fu_102_out_r_2_we0;
+        stage0_r_2_we0 = grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_r_2_we0;
     end else begin
         stage0_r_2_we0 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state6))) begin
-        stage0_r_2_we1 = grp_fft_stage_clone_fu_126_out_r_2_we1;
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        stage0_r_2_we1 = grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_r_2_we1;
     end else begin
         stage0_r_2_we1 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state6))) begin
-        stage0_r_3_address0 = grp_fft_stage_clone_fu_126_out_r_3_address0;
-    end else if (((1'b1 == ap_CS_fsm_state16) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state4))) begin
-        stage0_r_3_address0 = grp_fft_stage_clone_fu_126_in_r_3_address0;
+    if ((1'b1 == ap_CS_fsm_state16)) begin
+        stage0_r_3_address0 = grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage0_r_3_address0;
+    end else if ((1'b1 == ap_CS_fsm_state14)) begin
+        stage0_r_3_address0 = grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage0_r_3_address0;
+    end else if ((1'b1 == ap_CS_fsm_state12)) begin
+        stage0_r_3_address0 = grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage0_r_3_address0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        stage0_r_3_address0 = grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage0_r_3_address0;
+    end else if ((1'b1 == ap_CS_fsm_state8)) begin
+        stage0_r_3_address0 = grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage0_r_3_address0;
+    end else if ((1'b1 == ap_CS_fsm_state6)) begin
+        stage0_r_3_address0 = grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage0_r_3_address0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        stage0_r_3_address0 = grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage0_r_3_address0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        stage0_r_3_address0 = grp_fft_stage_fu_102_out_r_3_address0;
+        stage0_r_3_address0 = grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_r_3_address0;
     end else begin
         stage0_r_3_address0 = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state6))) begin
-        stage0_r_3_address1 = grp_fft_stage_clone_fu_126_out_r_3_address1;
-    end else if (((1'b1 == ap_CS_fsm_state16) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state4))) begin
-        stage0_r_3_address1 = grp_fft_stage_clone_fu_126_in_r_3_address1;
+    if ((1'b1 == ap_CS_fsm_state12)) begin
+        stage0_r_3_address1 = grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage0_r_3_address1;
+    end else if ((1'b1 == ap_CS_fsm_state8)) begin
+        stage0_r_3_address1 = grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage0_r_3_address1;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        stage0_r_3_address1 = grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage0_r_3_address1;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        stage0_r_3_address1 = grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_r_3_address1;
     end else begin
         stage0_r_3_address1 = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state6))) begin
-        stage0_r_3_ce0 = grp_fft_stage_clone_fu_126_out_r_3_ce0;
-    end else if (((1'b1 == ap_CS_fsm_state16) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state4))) begin
-        stage0_r_3_ce0 = grp_fft_stage_clone_fu_126_in_r_3_ce0;
+    if ((1'b1 == ap_CS_fsm_state16)) begin
+        stage0_r_3_ce0 = grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage0_r_3_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state14)) begin
+        stage0_r_3_ce0 = grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage0_r_3_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state12)) begin
+        stage0_r_3_ce0 = grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage0_r_3_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        stage0_r_3_ce0 = grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage0_r_3_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state8)) begin
+        stage0_r_3_ce0 = grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage0_r_3_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state6)) begin
+        stage0_r_3_ce0 = grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage0_r_3_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        stage0_r_3_ce0 = grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage0_r_3_ce0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        stage0_r_3_ce0 = grp_fft_stage_fu_102_out_r_3_ce0;
+        stage0_r_3_ce0 = grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_r_3_ce0;
     end else begin
         stage0_r_3_ce0 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state6))) begin
-        stage0_r_3_ce1 = grp_fft_stage_clone_fu_126_out_r_3_ce1;
-    end else if (((1'b1 == ap_CS_fsm_state16) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state4))) begin
-        stage0_r_3_ce1 = grp_fft_stage_clone_fu_126_in_r_3_ce1;
+    if ((1'b1 == ap_CS_fsm_state12)) begin
+        stage0_r_3_ce1 = grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage0_r_3_ce1;
+    end else if ((1'b1 == ap_CS_fsm_state8)) begin
+        stage0_r_3_ce1 = grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage0_r_3_ce1;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        stage0_r_3_ce1 = grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage0_r_3_ce1;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        stage0_r_3_ce1 = grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_r_3_ce1;
     end else begin
         stage0_r_3_ce1 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state6))) begin
-        stage0_r_3_d0 = grp_fft_stage_clone_fu_126_out_r_3_d0;
+    if ((1'b1 == ap_CS_fsm_state14)) begin
+        stage0_r_3_d0 = grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage0_r_3_d0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        stage0_r_3_d0 = grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage0_r_3_d0;
+    end else if ((1'b1 == ap_CS_fsm_state6)) begin
+        stage0_r_3_d0 = grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage0_r_3_d0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        stage0_r_3_d0 = grp_fft_stage_fu_102_out_r_3_d0;
+        stage0_r_3_d0 = grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_r_3_d0;
     end else begin
         stage0_r_3_d0 = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state6))) begin
-        stage0_r_3_we0 = grp_fft_stage_clone_fu_126_out_r_3_we0;
+    if ((1'b1 == ap_CS_fsm_state14)) begin
+        stage0_r_3_we0 = grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage0_r_3_we0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        stage0_r_3_we0 = grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage0_r_3_we0;
+    end else if ((1'b1 == ap_CS_fsm_state6)) begin
+        stage0_r_3_we0 = grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage0_r_3_we0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        stage0_r_3_we0 = grp_fft_stage_fu_102_out_r_3_we0;
+        stage0_r_3_we0 = grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_r_3_we0;
     end else begin
         stage0_r_3_we0 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state6))) begin
-        stage0_r_3_we1 = grp_fft_stage_clone_fu_126_out_r_3_we1;
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        stage0_r_3_we1 = grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_r_3_we1;
     end else begin
         stage0_r_3_we1 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state6))) begin
-        stage0_r_address0 = grp_fft_stage_clone_fu_126_out_r_0_address0;
-    end else if (((1'b1 == ap_CS_fsm_state16) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state4))) begin
-        stage0_r_address0 = grp_fft_stage_clone_fu_126_in_r_0_address0;
+    if ((1'b1 == ap_CS_fsm_state16)) begin
+        stage0_r_address0 = grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage0_r_address0;
+    end else if ((1'b1 == ap_CS_fsm_state14)) begin
+        stage0_r_address0 = grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage0_r_address0;
+    end else if ((1'b1 == ap_CS_fsm_state12)) begin
+        stage0_r_address0 = grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage0_r_address0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        stage0_r_address0 = grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage0_r_address0;
+    end else if ((1'b1 == ap_CS_fsm_state8)) begin
+        stage0_r_address0 = grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage0_r_address0;
+    end else if ((1'b1 == ap_CS_fsm_state6)) begin
+        stage0_r_address0 = grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage0_r_address0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        stage0_r_address0 = grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage0_r_address0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        stage0_r_address0 = grp_fft_stage_fu_102_out_r_0_address0;
+        stage0_r_address0 = grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_r_address0;
     end else begin
         stage0_r_address0 = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state6))) begin
-        stage0_r_address1 = grp_fft_stage_clone_fu_126_out_r_0_address1;
-    end else if (((1'b1 == ap_CS_fsm_state16) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state4))) begin
-        stage0_r_address1 = grp_fft_stage_clone_fu_126_in_r_0_address1;
+    if ((1'b1 == ap_CS_fsm_state12)) begin
+        stage0_r_address1 = grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage0_r_address1;
+    end else if ((1'b1 == ap_CS_fsm_state8)) begin
+        stage0_r_address1 = grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage0_r_address1;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        stage0_r_address1 = grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage0_r_address1;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        stage0_r_address1 = grp_fft_stage_fu_102_out_r_0_address1;
+        stage0_r_address1 = grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_r_address1;
     end else begin
         stage0_r_address1 = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state6))) begin
-        stage0_r_ce0 = grp_fft_stage_clone_fu_126_out_r_0_ce0;
-    end else if (((1'b1 == ap_CS_fsm_state16) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state4))) begin
-        stage0_r_ce0 = grp_fft_stage_clone_fu_126_in_r_0_ce0;
+    if ((1'b1 == ap_CS_fsm_state16)) begin
+        stage0_r_ce0 = grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage0_r_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state14)) begin
+        stage0_r_ce0 = grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage0_r_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state12)) begin
+        stage0_r_ce0 = grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage0_r_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        stage0_r_ce0 = grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage0_r_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state8)) begin
+        stage0_r_ce0 = grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage0_r_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state6)) begin
+        stage0_r_ce0 = grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage0_r_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        stage0_r_ce0 = grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage0_r_ce0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        stage0_r_ce0 = grp_fft_stage_fu_102_out_r_0_ce0;
+        stage0_r_ce0 = grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_r_ce0;
     end else begin
         stage0_r_ce0 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state6))) begin
-        stage0_r_ce1 = grp_fft_stage_clone_fu_126_out_r_0_ce1;
-    end else if (((1'b1 == ap_CS_fsm_state16) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state4))) begin
-        stage0_r_ce1 = grp_fft_stage_clone_fu_126_in_r_0_ce1;
+    if ((1'b1 == ap_CS_fsm_state12)) begin
+        stage0_r_ce1 = grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage0_r_ce1;
+    end else if ((1'b1 == ap_CS_fsm_state8)) begin
+        stage0_r_ce1 = grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage0_r_ce1;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        stage0_r_ce1 = grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage0_r_ce1;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        stage0_r_ce1 = grp_fft_stage_fu_102_out_r_0_ce1;
+        stage0_r_ce1 = grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_r_ce1;
     end else begin
         stage0_r_ce1 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state6))) begin
-        stage0_r_d0 = grp_fft_stage_clone_fu_126_out_r_0_d0;
+    if ((1'b1 == ap_CS_fsm_state14)) begin
+        stage0_r_d0 = grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage0_r_d0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        stage0_r_d0 = grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage0_r_d0;
+    end else if ((1'b1 == ap_CS_fsm_state6)) begin
+        stage0_r_d0 = grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage0_r_d0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        stage0_r_d0 = grp_fft_stage_fu_102_out_r_0_d0;
+        stage0_r_d0 = grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_r_d0;
     end else begin
         stage0_r_d0 = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state6))) begin
-        stage0_r_d1 = grp_fft_stage_clone_fu_126_out_r_0_d1;
+    if ((1'b1 == ap_CS_fsm_state14)) begin
+        stage0_r_we0 = grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage0_r_we0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        stage0_r_we0 = grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage0_r_we0;
+    end else if ((1'b1 == ap_CS_fsm_state6)) begin
+        stage0_r_we0 = grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage0_r_we0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        stage0_r_d1 = grp_fft_stage_fu_102_out_r_0_d1;
-    end else begin
-        stage0_r_d1 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state6))) begin
-        stage0_r_we0 = grp_fft_stage_clone_fu_126_out_r_0_we0;
-    end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        stage0_r_we0 = grp_fft_stage_fu_102_out_r_0_we0;
+        stage0_r_we0 = grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_r_we0;
     end else begin
         stage0_r_we0 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state6))) begin
-        stage0_r_we1 = grp_fft_stage_clone_fu_126_out_r_0_we1;
-    end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        stage0_r_we1 = grp_fft_stage_fu_102_out_r_0_we1;
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        stage0_r_we1 = grp_fft_10_stages_Pipeline_SECTION_fu_96_stage0_r_we1;
     end else begin
         stage0_r_we1 = 1'b0;
     end
@@ -2576,23 +4131,33 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state18)) begin
-        stage1_i_1_address0 = grp_fft_stage_clone_clone_fu_166_in_i_1_address0;
-    end else if (((1'b1 == ap_CS_fsm_state16) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state4))) begin
-        stage1_i_1_address0 = grp_fft_stage_clone_fu_126_out_i_1_address0;
-    end else if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state6))) begin
-        stage1_i_1_address0 = grp_fft_stage_clone_fu_126_in_i_1_address0;
+        stage1_i_1_address0 = grp_fft_10_stages_Pipeline_SECTION10_fu_288_stage1_i_4_address0;
+    end else if ((1'b1 == ap_CS_fsm_state16)) begin
+        stage1_i_1_address0 = grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage1_i_4_address0;
+    end else if ((1'b1 == ap_CS_fsm_state14)) begin
+        stage1_i_1_address0 = grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage1_i_4_address0;
+    end else if ((1'b1 == ap_CS_fsm_state12)) begin
+        stage1_i_1_address0 = grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage1_i_4_address0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        stage1_i_1_address0 = grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage1_i_4_address0;
+    end else if ((1'b1 == ap_CS_fsm_state8)) begin
+        stage1_i_1_address0 = grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage1_i_4_address0;
+    end else if ((1'b1 == ap_CS_fsm_state6)) begin
+        stage1_i_1_address0 = grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage1_i_4_address0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        stage1_i_1_address0 = grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage1_i_4_address0;
     end else begin
         stage1_i_1_address0 = 'bx;
     end
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state18)) begin
-        stage1_i_1_address1 = grp_fft_stage_clone_clone_fu_166_in_i_1_address1;
-    end else if (((1'b1 == ap_CS_fsm_state16) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state4))) begin
-        stage1_i_1_address1 = grp_fft_stage_clone_fu_126_out_i_1_address1;
-    end else if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state6))) begin
-        stage1_i_1_address1 = grp_fft_stage_clone_fu_126_in_i_1_address1;
+    if ((1'b1 == ap_CS_fsm_state14)) begin
+        stage1_i_1_address1 = grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage1_i_4_address1;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        stage1_i_1_address1 = grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage1_i_4_address1;
+    end else if ((1'b1 == ap_CS_fsm_state6)) begin
+        stage1_i_1_address1 = grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage1_i_4_address1;
     end else begin
         stage1_i_1_address1 = 'bx;
     end
@@ -2600,63 +4165,95 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state18)) begin
-        stage1_i_1_ce0 = grp_fft_stage_clone_clone_fu_166_in_i_1_ce0;
-    end else if (((1'b1 == ap_CS_fsm_state16) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state4))) begin
-        stage1_i_1_ce0 = grp_fft_stage_clone_fu_126_out_i_1_ce0;
-    end else if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state6))) begin
-        stage1_i_1_ce0 = grp_fft_stage_clone_fu_126_in_i_1_ce0;
+        stage1_i_1_ce0 = grp_fft_10_stages_Pipeline_SECTION10_fu_288_stage1_i_4_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state16)) begin
+        stage1_i_1_ce0 = grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage1_i_4_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state14)) begin
+        stage1_i_1_ce0 = grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage1_i_4_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state12)) begin
+        stage1_i_1_ce0 = grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage1_i_4_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        stage1_i_1_ce0 = grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage1_i_4_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state8)) begin
+        stage1_i_1_ce0 = grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage1_i_4_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state6)) begin
+        stage1_i_1_ce0 = grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage1_i_4_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        stage1_i_1_ce0 = grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage1_i_4_ce0;
     end else begin
         stage1_i_1_ce0 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state18)) begin
-        stage1_i_1_ce1 = grp_fft_stage_clone_clone_fu_166_in_i_1_ce1;
-    end else if (((1'b1 == ap_CS_fsm_state16) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state4))) begin
-        stage1_i_1_ce1 = grp_fft_stage_clone_fu_126_out_i_1_ce1;
-    end else if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state6))) begin
-        stage1_i_1_ce1 = grp_fft_stage_clone_fu_126_in_i_1_ce1;
+    if ((1'b1 == ap_CS_fsm_state14)) begin
+        stage1_i_1_ce1 = grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage1_i_4_ce1;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        stage1_i_1_ce1 = grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage1_i_4_ce1;
+    end else if ((1'b1 == ap_CS_fsm_state6)) begin
+        stage1_i_1_ce1 = grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage1_i_4_ce1;
     end else begin
         stage1_i_1_ce1 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state16) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state4))) begin
-        stage1_i_1_we0 = grp_fft_stage_clone_fu_126_out_i_1_we0;
+    if ((1'b1 == ap_CS_fsm_state16)) begin
+        stage1_i_1_d0 = grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage1_i_4_d0;
+    end else if ((1'b1 == ap_CS_fsm_state12)) begin
+        stage1_i_1_d0 = grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage1_i_4_d0;
+    end else if ((1'b1 == ap_CS_fsm_state8)) begin
+        stage1_i_1_d0 = grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage1_i_4_d0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        stage1_i_1_d0 = grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage1_i_4_d0;
+    end else begin
+        stage1_i_1_d0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state16)) begin
+        stage1_i_1_we0 = grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage1_i_4_we0;
+    end else if ((1'b1 == ap_CS_fsm_state12)) begin
+        stage1_i_1_we0 = grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage1_i_4_we0;
+    end else if ((1'b1 == ap_CS_fsm_state8)) begin
+        stage1_i_1_we0 = grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage1_i_4_we0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        stage1_i_1_we0 = grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage1_i_4_we0;
     end else begin
         stage1_i_1_we0 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state16) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state4))) begin
-        stage1_i_1_we1 = grp_fft_stage_clone_fu_126_out_i_1_we1;
-    end else begin
-        stage1_i_1_we1 = 1'b0;
-    end
-end
-
-always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state18)) begin
-        stage1_i_2_address0 = grp_fft_stage_clone_clone_fu_166_in_i_2_address0;
-    end else if (((1'b1 == ap_CS_fsm_state16) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state4))) begin
-        stage1_i_2_address0 = grp_fft_stage_clone_fu_126_out_i_2_address0;
-    end else if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state6))) begin
-        stage1_i_2_address0 = grp_fft_stage_clone_fu_126_in_i_2_address0;
+        stage1_i_2_address0 = grp_fft_10_stages_Pipeline_SECTION10_fu_288_stage1_i_5_address0;
+    end else if ((1'b1 == ap_CS_fsm_state16)) begin
+        stage1_i_2_address0 = grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage1_i_5_address0;
+    end else if ((1'b1 == ap_CS_fsm_state14)) begin
+        stage1_i_2_address0 = grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage1_i_5_address0;
+    end else if ((1'b1 == ap_CS_fsm_state12)) begin
+        stage1_i_2_address0 = grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage1_i_5_address0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        stage1_i_2_address0 = grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage1_i_5_address0;
+    end else if ((1'b1 == ap_CS_fsm_state8)) begin
+        stage1_i_2_address0 = grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage1_i_5_address0;
+    end else if ((1'b1 == ap_CS_fsm_state6)) begin
+        stage1_i_2_address0 = grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage1_i_5_address0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        stage1_i_2_address0 = grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage1_i_5_address0;
     end else begin
         stage1_i_2_address0 = 'bx;
     end
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state18)) begin
-        stage1_i_2_address1 = grp_fft_stage_clone_clone_fu_166_in_i_2_address1;
-    end else if (((1'b1 == ap_CS_fsm_state16) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state4))) begin
-        stage1_i_2_address1 = grp_fft_stage_clone_fu_126_out_i_2_address1;
-    end else if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state6))) begin
-        stage1_i_2_address1 = grp_fft_stage_clone_fu_126_in_i_2_address1;
+    if ((1'b1 == ap_CS_fsm_state14)) begin
+        stage1_i_2_address1 = grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage1_i_5_address1;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        stage1_i_2_address1 = grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage1_i_5_address1;
+    end else if ((1'b1 == ap_CS_fsm_state6)) begin
+        stage1_i_2_address1 = grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage1_i_5_address1;
     end else begin
         stage1_i_2_address1 = 'bx;
     end
@@ -2664,63 +4261,95 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state18)) begin
-        stage1_i_2_ce0 = grp_fft_stage_clone_clone_fu_166_in_i_2_ce0;
-    end else if (((1'b1 == ap_CS_fsm_state16) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state4))) begin
-        stage1_i_2_ce0 = grp_fft_stage_clone_fu_126_out_i_2_ce0;
-    end else if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state6))) begin
-        stage1_i_2_ce0 = grp_fft_stage_clone_fu_126_in_i_2_ce0;
+        stage1_i_2_ce0 = grp_fft_10_stages_Pipeline_SECTION10_fu_288_stage1_i_5_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state16)) begin
+        stage1_i_2_ce0 = grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage1_i_5_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state14)) begin
+        stage1_i_2_ce0 = grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage1_i_5_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state12)) begin
+        stage1_i_2_ce0 = grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage1_i_5_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        stage1_i_2_ce0 = grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage1_i_5_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state8)) begin
+        stage1_i_2_ce0 = grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage1_i_5_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state6)) begin
+        stage1_i_2_ce0 = grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage1_i_5_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        stage1_i_2_ce0 = grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage1_i_5_ce0;
     end else begin
         stage1_i_2_ce0 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state18)) begin
-        stage1_i_2_ce1 = grp_fft_stage_clone_clone_fu_166_in_i_2_ce1;
-    end else if (((1'b1 == ap_CS_fsm_state16) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state4))) begin
-        stage1_i_2_ce1 = grp_fft_stage_clone_fu_126_out_i_2_ce1;
-    end else if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state6))) begin
-        stage1_i_2_ce1 = grp_fft_stage_clone_fu_126_in_i_2_ce1;
+    if ((1'b1 == ap_CS_fsm_state14)) begin
+        stage1_i_2_ce1 = grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage1_i_5_ce1;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        stage1_i_2_ce1 = grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage1_i_5_ce1;
+    end else if ((1'b1 == ap_CS_fsm_state6)) begin
+        stage1_i_2_ce1 = grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage1_i_5_ce1;
     end else begin
         stage1_i_2_ce1 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state16) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state4))) begin
-        stage1_i_2_we0 = grp_fft_stage_clone_fu_126_out_i_2_we0;
+    if ((1'b1 == ap_CS_fsm_state16)) begin
+        stage1_i_2_d0 = grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage1_i_5_d0;
+    end else if ((1'b1 == ap_CS_fsm_state12)) begin
+        stage1_i_2_d0 = grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage1_i_5_d0;
+    end else if ((1'b1 == ap_CS_fsm_state8)) begin
+        stage1_i_2_d0 = grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage1_i_5_d0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        stage1_i_2_d0 = grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage1_i_5_d0;
+    end else begin
+        stage1_i_2_d0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state16)) begin
+        stage1_i_2_we0 = grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage1_i_5_we0;
+    end else if ((1'b1 == ap_CS_fsm_state12)) begin
+        stage1_i_2_we0 = grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage1_i_5_we0;
+    end else if ((1'b1 == ap_CS_fsm_state8)) begin
+        stage1_i_2_we0 = grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage1_i_5_we0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        stage1_i_2_we0 = grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage1_i_5_we0;
     end else begin
         stage1_i_2_we0 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state16) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state4))) begin
-        stage1_i_2_we1 = grp_fft_stage_clone_fu_126_out_i_2_we1;
-    end else begin
-        stage1_i_2_we1 = 1'b0;
-    end
-end
-
-always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state18)) begin
-        stage1_i_3_address0 = grp_fft_stage_clone_clone_fu_166_in_i_3_address0;
-    end else if (((1'b1 == ap_CS_fsm_state16) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state4))) begin
-        stage1_i_3_address0 = grp_fft_stage_clone_fu_126_out_i_3_address0;
-    end else if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state6))) begin
-        stage1_i_3_address0 = grp_fft_stage_clone_fu_126_in_i_3_address0;
+        stage1_i_3_address0 = grp_fft_10_stages_Pipeline_SECTION10_fu_288_stage1_i_6_address0;
+    end else if ((1'b1 == ap_CS_fsm_state16)) begin
+        stage1_i_3_address0 = grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage1_i_6_address0;
+    end else if ((1'b1 == ap_CS_fsm_state14)) begin
+        stage1_i_3_address0 = grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage1_i_6_address0;
+    end else if ((1'b1 == ap_CS_fsm_state12)) begin
+        stage1_i_3_address0 = grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage1_i_6_address0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        stage1_i_3_address0 = grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage1_i_6_address0;
+    end else if ((1'b1 == ap_CS_fsm_state8)) begin
+        stage1_i_3_address0 = grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage1_i_6_address0;
+    end else if ((1'b1 == ap_CS_fsm_state6)) begin
+        stage1_i_3_address0 = grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage1_i_6_address0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        stage1_i_3_address0 = grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage1_i_6_address0;
     end else begin
         stage1_i_3_address0 = 'bx;
     end
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state18)) begin
-        stage1_i_3_address1 = grp_fft_stage_clone_clone_fu_166_in_i_3_address1;
-    end else if (((1'b1 == ap_CS_fsm_state16) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state4))) begin
-        stage1_i_3_address1 = grp_fft_stage_clone_fu_126_out_i_3_address1;
-    end else if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state6))) begin
-        stage1_i_3_address1 = grp_fft_stage_clone_fu_126_in_i_3_address1;
+    if ((1'b1 == ap_CS_fsm_state14)) begin
+        stage1_i_3_address1 = grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage1_i_6_address1;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        stage1_i_3_address1 = grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage1_i_6_address1;
+    end else if ((1'b1 == ap_CS_fsm_state6)) begin
+        stage1_i_3_address1 = grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage1_i_6_address1;
     end else begin
         stage1_i_3_address1 = 'bx;
     end
@@ -2728,63 +4357,95 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state18)) begin
-        stage1_i_3_ce0 = grp_fft_stage_clone_clone_fu_166_in_i_3_ce0;
-    end else if (((1'b1 == ap_CS_fsm_state16) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state4))) begin
-        stage1_i_3_ce0 = grp_fft_stage_clone_fu_126_out_i_3_ce0;
-    end else if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state6))) begin
-        stage1_i_3_ce0 = grp_fft_stage_clone_fu_126_in_i_3_ce0;
+        stage1_i_3_ce0 = grp_fft_10_stages_Pipeline_SECTION10_fu_288_stage1_i_6_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state16)) begin
+        stage1_i_3_ce0 = grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage1_i_6_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state14)) begin
+        stage1_i_3_ce0 = grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage1_i_6_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state12)) begin
+        stage1_i_3_ce0 = grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage1_i_6_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        stage1_i_3_ce0 = grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage1_i_6_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state8)) begin
+        stage1_i_3_ce0 = grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage1_i_6_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state6)) begin
+        stage1_i_3_ce0 = grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage1_i_6_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        stage1_i_3_ce0 = grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage1_i_6_ce0;
     end else begin
         stage1_i_3_ce0 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state18)) begin
-        stage1_i_3_ce1 = grp_fft_stage_clone_clone_fu_166_in_i_3_ce1;
-    end else if (((1'b1 == ap_CS_fsm_state16) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state4))) begin
-        stage1_i_3_ce1 = grp_fft_stage_clone_fu_126_out_i_3_ce1;
-    end else if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state6))) begin
-        stage1_i_3_ce1 = grp_fft_stage_clone_fu_126_in_i_3_ce1;
+    if ((1'b1 == ap_CS_fsm_state14)) begin
+        stage1_i_3_ce1 = grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage1_i_6_ce1;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        stage1_i_3_ce1 = grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage1_i_6_ce1;
+    end else if ((1'b1 == ap_CS_fsm_state6)) begin
+        stage1_i_3_ce1 = grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage1_i_6_ce1;
     end else begin
         stage1_i_3_ce1 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state16) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state4))) begin
-        stage1_i_3_we0 = grp_fft_stage_clone_fu_126_out_i_3_we0;
+    if ((1'b1 == ap_CS_fsm_state16)) begin
+        stage1_i_3_d0 = grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage1_i_6_d0;
+    end else if ((1'b1 == ap_CS_fsm_state12)) begin
+        stage1_i_3_d0 = grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage1_i_6_d0;
+    end else if ((1'b1 == ap_CS_fsm_state8)) begin
+        stage1_i_3_d0 = grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage1_i_6_d0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        stage1_i_3_d0 = grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage1_i_6_d0;
+    end else begin
+        stage1_i_3_d0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state16)) begin
+        stage1_i_3_we0 = grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage1_i_6_we0;
+    end else if ((1'b1 == ap_CS_fsm_state12)) begin
+        stage1_i_3_we0 = grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage1_i_6_we0;
+    end else if ((1'b1 == ap_CS_fsm_state8)) begin
+        stage1_i_3_we0 = grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage1_i_6_we0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        stage1_i_3_we0 = grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage1_i_6_we0;
     end else begin
         stage1_i_3_we0 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state16) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state4))) begin
-        stage1_i_3_we1 = grp_fft_stage_clone_fu_126_out_i_3_we1;
-    end else begin
-        stage1_i_3_we1 = 1'b0;
-    end
-end
-
-always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state18)) begin
-        stage1_i_address0 = grp_fft_stage_clone_clone_fu_166_in_i_0_address0;
-    end else if (((1'b1 == ap_CS_fsm_state16) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state4))) begin
-        stage1_i_address0 = grp_fft_stage_clone_fu_126_out_i_0_address0;
-    end else if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state6))) begin
-        stage1_i_address0 = grp_fft_stage_clone_fu_126_in_i_0_address0;
+        stage1_i_address0 = grp_fft_10_stages_Pipeline_SECTION10_fu_288_stage1_i_address0;
+    end else if ((1'b1 == ap_CS_fsm_state16)) begin
+        stage1_i_address0 = grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage1_i_address0;
+    end else if ((1'b1 == ap_CS_fsm_state14)) begin
+        stage1_i_address0 = grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage1_i_address0;
+    end else if ((1'b1 == ap_CS_fsm_state12)) begin
+        stage1_i_address0 = grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage1_i_address0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        stage1_i_address0 = grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage1_i_address0;
+    end else if ((1'b1 == ap_CS_fsm_state8)) begin
+        stage1_i_address0 = grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage1_i_address0;
+    end else if ((1'b1 == ap_CS_fsm_state6)) begin
+        stage1_i_address0 = grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage1_i_address0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        stage1_i_address0 = grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage1_i_address0;
     end else begin
         stage1_i_address0 = 'bx;
     end
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state18)) begin
-        stage1_i_address1 = grp_fft_stage_clone_clone_fu_166_in_i_0_address1;
-    end else if (((1'b1 == ap_CS_fsm_state16) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state4))) begin
-        stage1_i_address1 = grp_fft_stage_clone_fu_126_out_i_0_address1;
-    end else if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state6))) begin
-        stage1_i_address1 = grp_fft_stage_clone_fu_126_in_i_0_address1;
+    if ((1'b1 == ap_CS_fsm_state14)) begin
+        stage1_i_address1 = grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage1_i_address1;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        stage1_i_address1 = grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage1_i_address1;
+    end else if ((1'b1 == ap_CS_fsm_state6)) begin
+        stage1_i_address1 = grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage1_i_address1;
     end else begin
         stage1_i_address1 = 'bx;
     end
@@ -2792,63 +4453,95 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state18)) begin
-        stage1_i_ce0 = grp_fft_stage_clone_clone_fu_166_in_i_0_ce0;
-    end else if (((1'b1 == ap_CS_fsm_state16) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state4))) begin
-        stage1_i_ce0 = grp_fft_stage_clone_fu_126_out_i_0_ce0;
-    end else if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state6))) begin
-        stage1_i_ce0 = grp_fft_stage_clone_fu_126_in_i_0_ce0;
+        stage1_i_ce0 = grp_fft_10_stages_Pipeline_SECTION10_fu_288_stage1_i_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state16)) begin
+        stage1_i_ce0 = grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage1_i_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state14)) begin
+        stage1_i_ce0 = grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage1_i_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state12)) begin
+        stage1_i_ce0 = grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage1_i_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        stage1_i_ce0 = grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage1_i_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state8)) begin
+        stage1_i_ce0 = grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage1_i_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state6)) begin
+        stage1_i_ce0 = grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage1_i_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        stage1_i_ce0 = grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage1_i_ce0;
     end else begin
         stage1_i_ce0 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state18)) begin
-        stage1_i_ce1 = grp_fft_stage_clone_clone_fu_166_in_i_0_ce1;
-    end else if (((1'b1 == ap_CS_fsm_state16) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state4))) begin
-        stage1_i_ce1 = grp_fft_stage_clone_fu_126_out_i_0_ce1;
-    end else if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state6))) begin
-        stage1_i_ce1 = grp_fft_stage_clone_fu_126_in_i_0_ce1;
+    if ((1'b1 == ap_CS_fsm_state14)) begin
+        stage1_i_ce1 = grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage1_i_ce1;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        stage1_i_ce1 = grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage1_i_ce1;
+    end else if ((1'b1 == ap_CS_fsm_state6)) begin
+        stage1_i_ce1 = grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage1_i_ce1;
     end else begin
         stage1_i_ce1 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state16) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state4))) begin
-        stage1_i_we0 = grp_fft_stage_clone_fu_126_out_i_0_we0;
+    if ((1'b1 == ap_CS_fsm_state16)) begin
+        stage1_i_d0 = grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage1_i_d0;
+    end else if ((1'b1 == ap_CS_fsm_state12)) begin
+        stage1_i_d0 = grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage1_i_d0;
+    end else if ((1'b1 == ap_CS_fsm_state8)) begin
+        stage1_i_d0 = grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage1_i_d0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        stage1_i_d0 = grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage1_i_d0;
+    end else begin
+        stage1_i_d0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state16)) begin
+        stage1_i_we0 = grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage1_i_we0;
+    end else if ((1'b1 == ap_CS_fsm_state12)) begin
+        stage1_i_we0 = grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage1_i_we0;
+    end else if ((1'b1 == ap_CS_fsm_state8)) begin
+        stage1_i_we0 = grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage1_i_we0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        stage1_i_we0 = grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage1_i_we0;
     end else begin
         stage1_i_we0 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state16) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state4))) begin
-        stage1_i_we1 = grp_fft_stage_clone_fu_126_out_i_0_we1;
-    end else begin
-        stage1_i_we1 = 1'b0;
-    end
-end
-
-always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state18)) begin
-        stage1_r_1_address0 = grp_fft_stage_clone_clone_fu_166_in_r_1_address0;
-    end else if (((1'b1 == ap_CS_fsm_state16) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state4))) begin
-        stage1_r_1_address0 = grp_fft_stage_clone_fu_126_out_r_1_address0;
-    end else if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state6))) begin
-        stage1_r_1_address0 = grp_fft_stage_clone_fu_126_in_r_1_address0;
+        stage1_r_1_address0 = grp_fft_10_stages_Pipeline_SECTION10_fu_288_stage1_r_4_address0;
+    end else if ((1'b1 == ap_CS_fsm_state16)) begin
+        stage1_r_1_address0 = grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage1_r_4_address0;
+    end else if ((1'b1 == ap_CS_fsm_state14)) begin
+        stage1_r_1_address0 = grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage1_r_4_address0;
+    end else if ((1'b1 == ap_CS_fsm_state12)) begin
+        stage1_r_1_address0 = grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage1_r_4_address0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        stage1_r_1_address0 = grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage1_r_4_address0;
+    end else if ((1'b1 == ap_CS_fsm_state8)) begin
+        stage1_r_1_address0 = grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage1_r_4_address0;
+    end else if ((1'b1 == ap_CS_fsm_state6)) begin
+        stage1_r_1_address0 = grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage1_r_4_address0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        stage1_r_1_address0 = grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage1_r_4_address0;
     end else begin
         stage1_r_1_address0 = 'bx;
     end
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state18)) begin
-        stage1_r_1_address1 = grp_fft_stage_clone_clone_fu_166_in_r_1_address1;
-    end else if (((1'b1 == ap_CS_fsm_state16) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state4))) begin
-        stage1_r_1_address1 = grp_fft_stage_clone_fu_126_out_r_1_address1;
-    end else if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state6))) begin
-        stage1_r_1_address1 = grp_fft_stage_clone_fu_126_in_r_1_address1;
+    if ((1'b1 == ap_CS_fsm_state14)) begin
+        stage1_r_1_address1 = grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage1_r_4_address1;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        stage1_r_1_address1 = grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage1_r_4_address1;
+    end else if ((1'b1 == ap_CS_fsm_state6)) begin
+        stage1_r_1_address1 = grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage1_r_4_address1;
     end else begin
         stage1_r_1_address1 = 'bx;
     end
@@ -2856,63 +4549,95 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state18)) begin
-        stage1_r_1_ce0 = grp_fft_stage_clone_clone_fu_166_in_r_1_ce0;
-    end else if (((1'b1 == ap_CS_fsm_state16) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state4))) begin
-        stage1_r_1_ce0 = grp_fft_stage_clone_fu_126_out_r_1_ce0;
-    end else if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state6))) begin
-        stage1_r_1_ce0 = grp_fft_stage_clone_fu_126_in_r_1_ce0;
+        stage1_r_1_ce0 = grp_fft_10_stages_Pipeline_SECTION10_fu_288_stage1_r_4_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state16)) begin
+        stage1_r_1_ce0 = grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage1_r_4_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state14)) begin
+        stage1_r_1_ce0 = grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage1_r_4_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state12)) begin
+        stage1_r_1_ce0 = grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage1_r_4_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        stage1_r_1_ce0 = grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage1_r_4_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state8)) begin
+        stage1_r_1_ce0 = grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage1_r_4_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state6)) begin
+        stage1_r_1_ce0 = grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage1_r_4_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        stage1_r_1_ce0 = grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage1_r_4_ce0;
     end else begin
         stage1_r_1_ce0 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state18)) begin
-        stage1_r_1_ce1 = grp_fft_stage_clone_clone_fu_166_in_r_1_ce1;
-    end else if (((1'b1 == ap_CS_fsm_state16) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state4))) begin
-        stage1_r_1_ce1 = grp_fft_stage_clone_fu_126_out_r_1_ce1;
-    end else if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state6))) begin
-        stage1_r_1_ce1 = grp_fft_stage_clone_fu_126_in_r_1_ce1;
+    if ((1'b1 == ap_CS_fsm_state14)) begin
+        stage1_r_1_ce1 = grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage1_r_4_ce1;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        stage1_r_1_ce1 = grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage1_r_4_ce1;
+    end else if ((1'b1 == ap_CS_fsm_state6)) begin
+        stage1_r_1_ce1 = grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage1_r_4_ce1;
     end else begin
         stage1_r_1_ce1 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state16) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state4))) begin
-        stage1_r_1_we0 = grp_fft_stage_clone_fu_126_out_r_1_we0;
+    if ((1'b1 == ap_CS_fsm_state16)) begin
+        stage1_r_1_d0 = grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage1_r_4_d0;
+    end else if ((1'b1 == ap_CS_fsm_state12)) begin
+        stage1_r_1_d0 = grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage1_r_4_d0;
+    end else if ((1'b1 == ap_CS_fsm_state8)) begin
+        stage1_r_1_d0 = grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage1_r_4_d0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        stage1_r_1_d0 = grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage1_r_4_d0;
+    end else begin
+        stage1_r_1_d0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state16)) begin
+        stage1_r_1_we0 = grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage1_r_4_we0;
+    end else if ((1'b1 == ap_CS_fsm_state12)) begin
+        stage1_r_1_we0 = grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage1_r_4_we0;
+    end else if ((1'b1 == ap_CS_fsm_state8)) begin
+        stage1_r_1_we0 = grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage1_r_4_we0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        stage1_r_1_we0 = grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage1_r_4_we0;
     end else begin
         stage1_r_1_we0 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state16) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state4))) begin
-        stage1_r_1_we1 = grp_fft_stage_clone_fu_126_out_r_1_we1;
-    end else begin
-        stage1_r_1_we1 = 1'b0;
-    end
-end
-
-always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state18)) begin
-        stage1_r_2_address0 = grp_fft_stage_clone_clone_fu_166_in_r_2_address0;
-    end else if (((1'b1 == ap_CS_fsm_state16) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state4))) begin
-        stage1_r_2_address0 = grp_fft_stage_clone_fu_126_out_r_2_address0;
-    end else if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state6))) begin
-        stage1_r_2_address0 = grp_fft_stage_clone_fu_126_in_r_2_address0;
+        stage1_r_2_address0 = grp_fft_10_stages_Pipeline_SECTION10_fu_288_stage1_r_5_address0;
+    end else if ((1'b1 == ap_CS_fsm_state16)) begin
+        stage1_r_2_address0 = grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage1_r_5_address0;
+    end else if ((1'b1 == ap_CS_fsm_state14)) begin
+        stage1_r_2_address0 = grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage1_r_5_address0;
+    end else if ((1'b1 == ap_CS_fsm_state12)) begin
+        stage1_r_2_address0 = grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage1_r_5_address0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        stage1_r_2_address0 = grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage1_r_5_address0;
+    end else if ((1'b1 == ap_CS_fsm_state8)) begin
+        stage1_r_2_address0 = grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage1_r_5_address0;
+    end else if ((1'b1 == ap_CS_fsm_state6)) begin
+        stage1_r_2_address0 = grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage1_r_5_address0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        stage1_r_2_address0 = grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage1_r_5_address0;
     end else begin
         stage1_r_2_address0 = 'bx;
     end
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state18)) begin
-        stage1_r_2_address1 = grp_fft_stage_clone_clone_fu_166_in_r_2_address1;
-    end else if (((1'b1 == ap_CS_fsm_state16) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state4))) begin
-        stage1_r_2_address1 = grp_fft_stage_clone_fu_126_out_r_2_address1;
-    end else if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state6))) begin
-        stage1_r_2_address1 = grp_fft_stage_clone_fu_126_in_r_2_address1;
+    if ((1'b1 == ap_CS_fsm_state14)) begin
+        stage1_r_2_address1 = grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage1_r_5_address1;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        stage1_r_2_address1 = grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage1_r_5_address1;
+    end else if ((1'b1 == ap_CS_fsm_state6)) begin
+        stage1_r_2_address1 = grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage1_r_5_address1;
     end else begin
         stage1_r_2_address1 = 'bx;
     end
@@ -2920,63 +4645,95 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state18)) begin
-        stage1_r_2_ce0 = grp_fft_stage_clone_clone_fu_166_in_r_2_ce0;
-    end else if (((1'b1 == ap_CS_fsm_state16) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state4))) begin
-        stage1_r_2_ce0 = grp_fft_stage_clone_fu_126_out_r_2_ce0;
-    end else if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state6))) begin
-        stage1_r_2_ce0 = grp_fft_stage_clone_fu_126_in_r_2_ce0;
+        stage1_r_2_ce0 = grp_fft_10_stages_Pipeline_SECTION10_fu_288_stage1_r_5_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state16)) begin
+        stage1_r_2_ce0 = grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage1_r_5_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state14)) begin
+        stage1_r_2_ce0 = grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage1_r_5_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state12)) begin
+        stage1_r_2_ce0 = grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage1_r_5_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        stage1_r_2_ce0 = grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage1_r_5_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state8)) begin
+        stage1_r_2_ce0 = grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage1_r_5_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state6)) begin
+        stage1_r_2_ce0 = grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage1_r_5_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        stage1_r_2_ce0 = grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage1_r_5_ce0;
     end else begin
         stage1_r_2_ce0 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state18)) begin
-        stage1_r_2_ce1 = grp_fft_stage_clone_clone_fu_166_in_r_2_ce1;
-    end else if (((1'b1 == ap_CS_fsm_state16) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state4))) begin
-        stage1_r_2_ce1 = grp_fft_stage_clone_fu_126_out_r_2_ce1;
-    end else if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state6))) begin
-        stage1_r_2_ce1 = grp_fft_stage_clone_fu_126_in_r_2_ce1;
+    if ((1'b1 == ap_CS_fsm_state14)) begin
+        stage1_r_2_ce1 = grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage1_r_5_ce1;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        stage1_r_2_ce1 = grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage1_r_5_ce1;
+    end else if ((1'b1 == ap_CS_fsm_state6)) begin
+        stage1_r_2_ce1 = grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage1_r_5_ce1;
     end else begin
         stage1_r_2_ce1 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state16) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state4))) begin
-        stage1_r_2_we0 = grp_fft_stage_clone_fu_126_out_r_2_we0;
+    if ((1'b1 == ap_CS_fsm_state16)) begin
+        stage1_r_2_d0 = grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage1_r_5_d0;
+    end else if ((1'b1 == ap_CS_fsm_state12)) begin
+        stage1_r_2_d0 = grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage1_r_5_d0;
+    end else if ((1'b1 == ap_CS_fsm_state8)) begin
+        stage1_r_2_d0 = grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage1_r_5_d0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        stage1_r_2_d0 = grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage1_r_5_d0;
+    end else begin
+        stage1_r_2_d0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state16)) begin
+        stage1_r_2_we0 = grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage1_r_5_we0;
+    end else if ((1'b1 == ap_CS_fsm_state12)) begin
+        stage1_r_2_we0 = grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage1_r_5_we0;
+    end else if ((1'b1 == ap_CS_fsm_state8)) begin
+        stage1_r_2_we0 = grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage1_r_5_we0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        stage1_r_2_we0 = grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage1_r_5_we0;
     end else begin
         stage1_r_2_we0 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state16) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state4))) begin
-        stage1_r_2_we1 = grp_fft_stage_clone_fu_126_out_r_2_we1;
-    end else begin
-        stage1_r_2_we1 = 1'b0;
-    end
-end
-
-always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state18)) begin
-        stage1_r_3_address0 = grp_fft_stage_clone_clone_fu_166_in_r_3_address0;
-    end else if (((1'b1 == ap_CS_fsm_state16) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state4))) begin
-        stage1_r_3_address0 = grp_fft_stage_clone_fu_126_out_r_3_address0;
-    end else if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state6))) begin
-        stage1_r_3_address0 = grp_fft_stage_clone_fu_126_in_r_3_address0;
+        stage1_r_3_address0 = grp_fft_10_stages_Pipeline_SECTION10_fu_288_stage1_r_6_address0;
+    end else if ((1'b1 == ap_CS_fsm_state16)) begin
+        stage1_r_3_address0 = grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage1_r_6_address0;
+    end else if ((1'b1 == ap_CS_fsm_state14)) begin
+        stage1_r_3_address0 = grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage1_r_6_address0;
+    end else if ((1'b1 == ap_CS_fsm_state12)) begin
+        stage1_r_3_address0 = grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage1_r_6_address0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        stage1_r_3_address0 = grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage1_r_6_address0;
+    end else if ((1'b1 == ap_CS_fsm_state8)) begin
+        stage1_r_3_address0 = grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage1_r_6_address0;
+    end else if ((1'b1 == ap_CS_fsm_state6)) begin
+        stage1_r_3_address0 = grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage1_r_6_address0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        stage1_r_3_address0 = grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage1_r_6_address0;
     end else begin
         stage1_r_3_address0 = 'bx;
     end
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state18)) begin
-        stage1_r_3_address1 = grp_fft_stage_clone_clone_fu_166_in_r_3_address1;
-    end else if (((1'b1 == ap_CS_fsm_state16) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state4))) begin
-        stage1_r_3_address1 = grp_fft_stage_clone_fu_126_out_r_3_address1;
-    end else if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state6))) begin
-        stage1_r_3_address1 = grp_fft_stage_clone_fu_126_in_r_3_address1;
+    if ((1'b1 == ap_CS_fsm_state14)) begin
+        stage1_r_3_address1 = grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage1_r_6_address1;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        stage1_r_3_address1 = grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage1_r_6_address1;
+    end else if ((1'b1 == ap_CS_fsm_state6)) begin
+        stage1_r_3_address1 = grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage1_r_6_address1;
     end else begin
         stage1_r_3_address1 = 'bx;
     end
@@ -2984,63 +4741,95 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state18)) begin
-        stage1_r_3_ce0 = grp_fft_stage_clone_clone_fu_166_in_r_3_ce0;
-    end else if (((1'b1 == ap_CS_fsm_state16) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state4))) begin
-        stage1_r_3_ce0 = grp_fft_stage_clone_fu_126_out_r_3_ce0;
-    end else if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state6))) begin
-        stage1_r_3_ce0 = grp_fft_stage_clone_fu_126_in_r_3_ce0;
+        stage1_r_3_ce0 = grp_fft_10_stages_Pipeline_SECTION10_fu_288_stage1_r_6_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state16)) begin
+        stage1_r_3_ce0 = grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage1_r_6_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state14)) begin
+        stage1_r_3_ce0 = grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage1_r_6_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state12)) begin
+        stage1_r_3_ce0 = grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage1_r_6_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        stage1_r_3_ce0 = grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage1_r_6_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state8)) begin
+        stage1_r_3_ce0 = grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage1_r_6_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state6)) begin
+        stage1_r_3_ce0 = grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage1_r_6_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        stage1_r_3_ce0 = grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage1_r_6_ce0;
     end else begin
         stage1_r_3_ce0 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state18)) begin
-        stage1_r_3_ce1 = grp_fft_stage_clone_clone_fu_166_in_r_3_ce1;
-    end else if (((1'b1 == ap_CS_fsm_state16) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state4))) begin
-        stage1_r_3_ce1 = grp_fft_stage_clone_fu_126_out_r_3_ce1;
-    end else if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state6))) begin
-        stage1_r_3_ce1 = grp_fft_stage_clone_fu_126_in_r_3_ce1;
+    if ((1'b1 == ap_CS_fsm_state14)) begin
+        stage1_r_3_ce1 = grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage1_r_6_ce1;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        stage1_r_3_ce1 = grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage1_r_6_ce1;
+    end else if ((1'b1 == ap_CS_fsm_state6)) begin
+        stage1_r_3_ce1 = grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage1_r_6_ce1;
     end else begin
         stage1_r_3_ce1 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state16) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state4))) begin
-        stage1_r_3_we0 = grp_fft_stage_clone_fu_126_out_r_3_we0;
+    if ((1'b1 == ap_CS_fsm_state16)) begin
+        stage1_r_3_d0 = grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage1_r_6_d0;
+    end else if ((1'b1 == ap_CS_fsm_state12)) begin
+        stage1_r_3_d0 = grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage1_r_6_d0;
+    end else if ((1'b1 == ap_CS_fsm_state8)) begin
+        stage1_r_3_d0 = grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage1_r_6_d0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        stage1_r_3_d0 = grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage1_r_6_d0;
+    end else begin
+        stage1_r_3_d0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state16)) begin
+        stage1_r_3_we0 = grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage1_r_6_we0;
+    end else if ((1'b1 == ap_CS_fsm_state12)) begin
+        stage1_r_3_we0 = grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage1_r_6_we0;
+    end else if ((1'b1 == ap_CS_fsm_state8)) begin
+        stage1_r_3_we0 = grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage1_r_6_we0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        stage1_r_3_we0 = grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage1_r_6_we0;
     end else begin
         stage1_r_3_we0 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state16) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state4))) begin
-        stage1_r_3_we1 = grp_fft_stage_clone_fu_126_out_r_3_we1;
-    end else begin
-        stage1_r_3_we1 = 1'b0;
-    end
-end
-
-always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state18)) begin
-        stage1_r_address0 = grp_fft_stage_clone_clone_fu_166_in_r_0_address0;
-    end else if (((1'b1 == ap_CS_fsm_state16) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state4))) begin
-        stage1_r_address0 = grp_fft_stage_clone_fu_126_out_r_0_address0;
-    end else if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state6))) begin
-        stage1_r_address0 = grp_fft_stage_clone_fu_126_in_r_0_address0;
+        stage1_r_address0 = grp_fft_10_stages_Pipeline_SECTION10_fu_288_stage1_r_address0;
+    end else if ((1'b1 == ap_CS_fsm_state16)) begin
+        stage1_r_address0 = grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage1_r_address0;
+    end else if ((1'b1 == ap_CS_fsm_state14)) begin
+        stage1_r_address0 = grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage1_r_address0;
+    end else if ((1'b1 == ap_CS_fsm_state12)) begin
+        stage1_r_address0 = grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage1_r_address0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        stage1_r_address0 = grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage1_r_address0;
+    end else if ((1'b1 == ap_CS_fsm_state8)) begin
+        stage1_r_address0 = grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage1_r_address0;
+    end else if ((1'b1 == ap_CS_fsm_state6)) begin
+        stage1_r_address0 = grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage1_r_address0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        stage1_r_address0 = grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage1_r_address0;
     end else begin
         stage1_r_address0 = 'bx;
     end
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state18)) begin
-        stage1_r_address1 = grp_fft_stage_clone_clone_fu_166_in_r_0_address1;
-    end else if (((1'b1 == ap_CS_fsm_state16) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state4))) begin
-        stage1_r_address1 = grp_fft_stage_clone_fu_126_out_r_0_address1;
-    end else if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state6))) begin
-        stage1_r_address1 = grp_fft_stage_clone_fu_126_in_r_0_address1;
+    if ((1'b1 == ap_CS_fsm_state14)) begin
+        stage1_r_address1 = grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage1_r_address1;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        stage1_r_address1 = grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage1_r_address1;
+    end else if ((1'b1 == ap_CS_fsm_state6)) begin
+        stage1_r_address1 = grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage1_r_address1;
     end else begin
         stage1_r_address1 = 'bx;
     end
@@ -3048,41 +4837,63 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state18)) begin
-        stage1_r_ce0 = grp_fft_stage_clone_clone_fu_166_in_r_0_ce0;
-    end else if (((1'b1 == ap_CS_fsm_state16) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state4))) begin
-        stage1_r_ce0 = grp_fft_stage_clone_fu_126_out_r_0_ce0;
-    end else if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state6))) begin
-        stage1_r_ce0 = grp_fft_stage_clone_fu_126_in_r_0_ce0;
+        stage1_r_ce0 = grp_fft_10_stages_Pipeline_SECTION10_fu_288_stage1_r_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state16)) begin
+        stage1_r_ce0 = grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage1_r_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state14)) begin
+        stage1_r_ce0 = grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage1_r_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state12)) begin
+        stage1_r_ce0 = grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage1_r_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        stage1_r_ce0 = grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage1_r_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state8)) begin
+        stage1_r_ce0 = grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage1_r_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state6)) begin
+        stage1_r_ce0 = grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage1_r_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        stage1_r_ce0 = grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage1_r_ce0;
     end else begin
         stage1_r_ce0 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state18)) begin
-        stage1_r_ce1 = grp_fft_stage_clone_clone_fu_166_in_r_0_ce1;
-    end else if (((1'b1 == ap_CS_fsm_state16) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state4))) begin
-        stage1_r_ce1 = grp_fft_stage_clone_fu_126_out_r_0_ce1;
-    end else if (((1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state6))) begin
-        stage1_r_ce1 = grp_fft_stage_clone_fu_126_in_r_0_ce1;
+    if ((1'b1 == ap_CS_fsm_state14)) begin
+        stage1_r_ce1 = grp_fft_10_stages_Pipeline_SECTION8_fu_240_stage1_r_ce1;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        stage1_r_ce1 = grp_fft_10_stages_Pipeline_SECTION6_fu_192_stage1_r_ce1;
+    end else if ((1'b1 == ap_CS_fsm_state6)) begin
+        stage1_r_ce1 = grp_fft_10_stages_Pipeline_SECTION4_fu_144_stage1_r_ce1;
     end else begin
         stage1_r_ce1 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state16) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state4))) begin
-        stage1_r_we0 = grp_fft_stage_clone_fu_126_out_r_0_we0;
+    if ((1'b1 == ap_CS_fsm_state16)) begin
+        stage1_r_d0 = grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage1_r_d0;
+    end else if ((1'b1 == ap_CS_fsm_state12)) begin
+        stage1_r_d0 = grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage1_r_d0;
+    end else if ((1'b1 == ap_CS_fsm_state8)) begin
+        stage1_r_d0 = grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage1_r_d0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        stage1_r_d0 = grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage1_r_d0;
     end else begin
-        stage1_r_we0 = 1'b0;
+        stage1_r_d0 = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state16) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state4))) begin
-        stage1_r_we1 = grp_fft_stage_clone_fu_126_out_r_0_we1;
+    if ((1'b1 == ap_CS_fsm_state16)) begin
+        stage1_r_we0 = grp_fft_10_stages_Pipeline_SECTION9_fu_264_stage1_r_we0;
+    end else if ((1'b1 == ap_CS_fsm_state12)) begin
+        stage1_r_we0 = grp_fft_10_stages_Pipeline_SECTION7_fu_216_stage1_r_we0;
+    end else if ((1'b1 == ap_CS_fsm_state8)) begin
+        stage1_r_we0 = grp_fft_10_stages_Pipeline_SECTION5_fu_168_stage1_r_we0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        stage1_r_we0 = grp_fft_10_stages_Pipeline_SECTION3_fu_120_stage1_r_we0;
     end else begin
-        stage1_r_we1 = 1'b0;
+        stage1_r_we0 = 1'b0;
     end
 end
 
@@ -3096,7 +4907,7 @@ always @ (*) begin
             end
         end
         ap_ST_fsm_state2 : begin
-            if (((grp_fft_stage_fu_102_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state2))) begin
+            if (((grp_fft_10_stages_Pipeline_SECTION_fu_96_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state2))) begin
                 ap_NS_fsm = ap_ST_fsm_state3;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state2;
@@ -3106,7 +4917,7 @@ always @ (*) begin
             ap_NS_fsm = ap_ST_fsm_state4;
         end
         ap_ST_fsm_state4 : begin
-            if (((grp_fft_stage_clone_fu_126_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state4))) begin
+            if (((grp_fft_10_stages_Pipeline_SECTION3_fu_120_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state4))) begin
                 ap_NS_fsm = ap_ST_fsm_state5;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state4;
@@ -3116,7 +4927,7 @@ always @ (*) begin
             ap_NS_fsm = ap_ST_fsm_state6;
         end
         ap_ST_fsm_state6 : begin
-            if (((grp_fft_stage_clone_fu_126_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state6))) begin
+            if (((grp_fft_10_stages_Pipeline_SECTION4_fu_144_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state6))) begin
                 ap_NS_fsm = ap_ST_fsm_state7;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state6;
@@ -3126,7 +4937,7 @@ always @ (*) begin
             ap_NS_fsm = ap_ST_fsm_state8;
         end
         ap_ST_fsm_state8 : begin
-            if (((grp_fft_stage_clone_fu_126_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state8))) begin
+            if (((grp_fft_10_stages_Pipeline_SECTION5_fu_168_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state8))) begin
                 ap_NS_fsm = ap_ST_fsm_state9;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state8;
@@ -3136,7 +4947,7 @@ always @ (*) begin
             ap_NS_fsm = ap_ST_fsm_state10;
         end
         ap_ST_fsm_state10 : begin
-            if (((grp_fft_stage_clone_fu_126_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state10))) begin
+            if (((grp_fft_10_stages_Pipeline_SECTION6_fu_192_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state10))) begin
                 ap_NS_fsm = ap_ST_fsm_state11;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state10;
@@ -3146,7 +4957,7 @@ always @ (*) begin
             ap_NS_fsm = ap_ST_fsm_state12;
         end
         ap_ST_fsm_state12 : begin
-            if (((grp_fft_stage_clone_fu_126_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state12))) begin
+            if (((grp_fft_10_stages_Pipeline_SECTION7_fu_216_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state12))) begin
                 ap_NS_fsm = ap_ST_fsm_state13;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state12;
@@ -3156,7 +4967,7 @@ always @ (*) begin
             ap_NS_fsm = ap_ST_fsm_state14;
         end
         ap_ST_fsm_state14 : begin
-            if (((grp_fft_stage_clone_fu_126_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state14))) begin
+            if (((1'b1 == ap_CS_fsm_state14) & (grp_fft_10_stages_Pipeline_SECTION8_fu_240_ap_done == 1'b1))) begin
                 ap_NS_fsm = ap_ST_fsm_state15;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state14;
@@ -3166,7 +4977,7 @@ always @ (*) begin
             ap_NS_fsm = ap_ST_fsm_state16;
         end
         ap_ST_fsm_state16 : begin
-            if (((grp_fft_stage_clone_fu_126_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state16))) begin
+            if (((1'b1 == ap_CS_fsm_state16) & (grp_fft_10_stages_Pipeline_SECTION9_fu_264_ap_done == 1'b1))) begin
                 ap_NS_fsm = ap_ST_fsm_state17;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state16;
@@ -3176,7 +4987,7 @@ always @ (*) begin
             ap_NS_fsm = ap_ST_fsm_state18;
         end
         ap_ST_fsm_state18 : begin
-            if (((grp_fft_stage_clone_clone_fu_166_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state18))) begin
+            if (((1'b1 == ap_CS_fsm_state18) & (grp_fft_10_stages_Pipeline_SECTION10_fu_288_ap_done == 1'b1))) begin
                 ap_NS_fsm = ap_ST_fsm_state1;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state18;
@@ -3224,58 +5035,70 @@ assign ap_CS_fsm_state8 = ap_CS_fsm[32'd7];
 
 assign ap_CS_fsm_state9 = ap_CS_fsm[32'd8];
 
-assign grp_fft_stage_clone_clone_fu_166_ap_start = grp_fft_stage_clone_clone_fu_166_ap_start_reg;
+assign grp_fft_10_stages_Pipeline_SECTION10_fu_288_ap_start = grp_fft_10_stages_Pipeline_SECTION10_fu_288_ap_start_reg;
 
-assign grp_fft_stage_clone_fu_126_ap_start = grp_fft_stage_clone_fu_126_ap_start_reg;
+assign grp_fft_10_stages_Pipeline_SECTION3_fu_120_ap_start = grp_fft_10_stages_Pipeline_SECTION3_fu_120_ap_start_reg;
 
-assign grp_fft_stage_fu_102_ap_start = grp_fft_stage_fu_102_ap_start_reg;
+assign grp_fft_10_stages_Pipeline_SECTION4_fu_144_ap_start = grp_fft_10_stages_Pipeline_SECTION4_fu_144_ap_start_reg;
 
-assign in_i_address0 = grp_fft_stage_fu_102_in_i_address0;
+assign grp_fft_10_stages_Pipeline_SECTION5_fu_168_ap_start = grp_fft_10_stages_Pipeline_SECTION5_fu_168_ap_start_reg;
 
-assign in_i_address1 = grp_fft_stage_fu_102_in_i_address1;
+assign grp_fft_10_stages_Pipeline_SECTION6_fu_192_ap_start = grp_fft_10_stages_Pipeline_SECTION6_fu_192_ap_start_reg;
 
-assign in_i_ce0 = grp_fft_stage_fu_102_in_i_ce0;
+assign grp_fft_10_stages_Pipeline_SECTION7_fu_216_ap_start = grp_fft_10_stages_Pipeline_SECTION7_fu_216_ap_start_reg;
 
-assign in_i_ce1 = grp_fft_stage_fu_102_in_i_ce1;
+assign grp_fft_10_stages_Pipeline_SECTION8_fu_240_ap_start = grp_fft_10_stages_Pipeline_SECTION8_fu_240_ap_start_reg;
 
-assign in_r_address0 = grp_fft_stage_fu_102_in_r_address0;
+assign grp_fft_10_stages_Pipeline_SECTION9_fu_264_ap_start = grp_fft_10_stages_Pipeline_SECTION9_fu_264_ap_start_reg;
 
-assign in_r_address1 = grp_fft_stage_fu_102_in_r_address1;
+assign grp_fft_10_stages_Pipeline_SECTION_fu_96_ap_start = grp_fft_10_stages_Pipeline_SECTION_fu_96_ap_start_reg;
 
-assign in_r_ce0 = grp_fft_stage_fu_102_in_r_ce0;
+assign in_i_address0 = grp_fft_10_stages_Pipeline_SECTION_fu_96_in_i_address0;
 
-assign in_r_ce1 = grp_fft_stage_fu_102_in_r_ce1;
+assign in_i_address1 = grp_fft_10_stages_Pipeline_SECTION_fu_96_in_i_address1;
 
-assign out_i_address0 = grp_fft_stage_clone_clone_fu_166_out_i_address0;
+assign in_i_ce0 = grp_fft_10_stages_Pipeline_SECTION_fu_96_in_i_ce0;
 
-assign out_i_address1 = grp_fft_stage_clone_clone_fu_166_out_i_address1;
+assign in_i_ce1 = grp_fft_10_stages_Pipeline_SECTION_fu_96_in_i_ce1;
 
-assign out_i_ce0 = grp_fft_stage_clone_clone_fu_166_out_i_ce0;
+assign in_r_address0 = grp_fft_10_stages_Pipeline_SECTION_fu_96_in_r_address0;
 
-assign out_i_ce1 = grp_fft_stage_clone_clone_fu_166_out_i_ce1;
+assign in_r_address1 = grp_fft_10_stages_Pipeline_SECTION_fu_96_in_r_address1;
 
-assign out_i_d0 = grp_fft_stage_clone_clone_fu_166_out_i_d0;
+assign in_r_ce0 = grp_fft_10_stages_Pipeline_SECTION_fu_96_in_r_ce0;
 
-assign out_i_d1 = grp_fft_stage_clone_clone_fu_166_out_i_d1;
+assign in_r_ce1 = grp_fft_10_stages_Pipeline_SECTION_fu_96_in_r_ce1;
 
-assign out_i_we0 = grp_fft_stage_clone_clone_fu_166_out_i_we0;
+assign out_i_address0 = grp_fft_10_stages_Pipeline_SECTION10_fu_288_out_i_address0;
 
-assign out_i_we1 = grp_fft_stage_clone_clone_fu_166_out_i_we1;
+assign out_i_address1 = grp_fft_10_stages_Pipeline_SECTION10_fu_288_out_i_address1;
 
-assign out_r_address0 = grp_fft_stage_clone_clone_fu_166_out_r_address0;
+assign out_i_ce0 = grp_fft_10_stages_Pipeline_SECTION10_fu_288_out_i_ce0;
 
-assign out_r_address1 = grp_fft_stage_clone_clone_fu_166_out_r_address1;
+assign out_i_ce1 = grp_fft_10_stages_Pipeline_SECTION10_fu_288_out_i_ce1;
 
-assign out_r_ce0 = grp_fft_stage_clone_clone_fu_166_out_r_ce0;
+assign out_i_d0 = grp_fft_10_stages_Pipeline_SECTION10_fu_288_out_i_d0;
 
-assign out_r_ce1 = grp_fft_stage_clone_clone_fu_166_out_r_ce1;
+assign out_i_d1 = grp_fft_10_stages_Pipeline_SECTION10_fu_288_out_i_d1;
 
-assign out_r_d0 = grp_fft_stage_clone_clone_fu_166_out_r_d0;
+assign out_i_we0 = grp_fft_10_stages_Pipeline_SECTION10_fu_288_out_i_we0;
 
-assign out_r_d1 = grp_fft_stage_clone_clone_fu_166_out_r_d1;
+assign out_i_we1 = grp_fft_10_stages_Pipeline_SECTION10_fu_288_out_i_we1;
 
-assign out_r_we0 = grp_fft_stage_clone_clone_fu_166_out_r_we0;
+assign out_r_address0 = grp_fft_10_stages_Pipeline_SECTION10_fu_288_out_r_address0;
 
-assign out_r_we1 = grp_fft_stage_clone_clone_fu_166_out_r_we1;
+assign out_r_address1 = grp_fft_10_stages_Pipeline_SECTION10_fu_288_out_r_address1;
+
+assign out_r_ce0 = grp_fft_10_stages_Pipeline_SECTION10_fu_288_out_r_ce0;
+
+assign out_r_ce1 = grp_fft_10_stages_Pipeline_SECTION10_fu_288_out_r_ce1;
+
+assign out_r_d0 = grp_fft_10_stages_Pipeline_SECTION10_fu_288_out_r_d0;
+
+assign out_r_d1 = grp_fft_10_stages_Pipeline_SECTION10_fu_288_out_r_d1;
+
+assign out_r_we0 = grp_fft_10_stages_Pipeline_SECTION10_fu_288_out_r_we0;
+
+assign out_r_we1 = grp_fft_10_stages_Pipeline_SECTION10_fu_288_out_r_we1;
 
 endmodule //FFT_fft_10_stages
