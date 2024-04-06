@@ -20,8 +20,6 @@ void NTT(uint16_t *a) {
 void ntt_10_stages(uint16_t in_buf[SIZE], uint16_t out_buf[SIZE]) {
 	const unsigned short factor = FACTOR;
 	uint16_t stage0[SIZE], stage1[SIZE];
-#pragma HLS ARRAY_PARTITION variable=stage0 type=cyclic factor=factor
-#pragma HLS ARRAY_PARTITION variable=stage1 type=cyclic factor=factor
 #pragma HLS INLINE off
 	ntt_stage(in_buf, stage0, 1024, 1);
 	ntt_stage(stage0, stage1, 512,  2);
@@ -42,8 +40,7 @@ void ntt_stage(uint16_t in_buf[SIZE], uint16_t out_buf[SIZE], unsigned short t, 
 	uint32_t u, v;
 	uint32_t tmp1, tmp2;
 	for (int n = 0; n < 512; n++) {
-#pragma HLS UNROLL factor=2
-#pragma HLS PIPELINE II=2
+#pragma HLS PIPELINE II=1
 #pragma HLS INLINE
 		unsigned short i = n + ((n / ht) * ht);
 		unsigned short i_gm = n / ht;
