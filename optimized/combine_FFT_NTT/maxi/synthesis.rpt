@@ -1,0 +1,226 @@
+
+
+================================================================
+== Synthesis Summary Report of 'FFT_NTT'
+================================================================
++ General Information: 
+    * Date:           Sat Apr  6 07:44:21 2024
+    * Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
+    * Project:        optimized_hls
+    * Solution:       solution3_combine (Vivado IP Flow Target)
+    * Product family: zynquplus
+    * Target device:  xck26-sfvc784-2LV-c
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +-------------------------------+------+------+---------+-----------+----------+---------+------+----------+---------+---------+-----------+-----------+-----+
+    |            Modules            | Issue|      | Latency |  Latency  | Iteration|         | Trip |          |         |         |           |           |     |
+    |            & Loops            | Type | Slack| (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined|  BRAM   |   DSP   |     FF    |    LUT    | URAM|
+    +-------------------------------+------+------+---------+-----------+----------+---------+------+----------+---------+---------+-----------+-----------+-----+
+    |+ FFT_NTT                      |     -|  0.00|    13774|  1.377e+05|         -|    13775|     -|        no|  25 (8%)|  41 (3%)|  6841 (2%)|  8637 (7%)|    -|
+    | + FFT_NTT_Pipeline_INMEMCPY   |     -|  0.00|     1033|  1.033e+04|         -|     1033|     -|        no|        -|        -|  107 (~0%)|  163 (~0%)|    -|
+    |  o INMEMCPY                   |     -|  7.30|     1025|  1.025e+04|         3|        1|  1024|       yes|        -|        -|          -|          -|    -|
+    | + combine_stages_1            |     -|  0.26|    10679|  1.068e+05|         -|    10679|     -|        no|  17 (5%)|  41 (3%)|  5509 (2%)|  6344 (5%)|    -|
+    |  + stage_1                    |     -|  0.26|     1066|  1.066e+04|         -|     1066|     -|        no|   9 (3%)|  41 (3%)|  5487 (2%)|  5851 (4%)|    -|
+    |   o SECTION                   |     -|  7.30|     1064|  1.064e+04|        41|        2|   512|       yes|        -|        -|          -|          -|    -|
+    |    + complex_mul              |     -|  0.26|       15|    150.000|         -|        2|     -|       yes|        -|  31 (2%)|  2711 (1%)|  2971 (2%)|    -|
+    | + FFT_NTT_Pipeline_OUTMEMCPY  |     -|  0.00|     2056|  2.056e+04|         -|     2056|     -|        no|        -|        -|  212 (~0%)|  311 (~0%)|    -|
+    |  o OUTMEMCPY                  |     -|  7.30|     2054|  2.054e+04|         9|        2|  1024|       yes|        -|        -|          -|          -|    -|
+    +-------------------------------+------+------+---------+-----------+----------+---------+------+----------+---------+---------+-----------+-----------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* M_AXI
++-------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+
+| Interface   | Data Width | Address Width | Latency | Offset | Register | Max Widen | Max Read     | Max Write    | Num Read    | Num Write   |
+|             | (SW->HW)   |               |         |        |          | Bitwidth  | Burst Length | Burst Length | Outstanding | Outstanding |
++-------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+
+| m_axi_gmem0 | 64 -> 64   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          |
++-------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+
+
+* S_AXILITE Interfaces
++---------------+------------+---------------+--------+----------+
+| Interface     | Data Width | Address Width | Offset | Register |
++---------------+------------+---------------+--------+----------+
+| s_axi_control | 32         | 6             | 16     | 0        |
++---------------+------------+---------------+--------+----------+
+
+* S_AXILITE Registers
++---------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| Interface     | Register | Offset | Width | Access | Description                      | Bit Fields                                                           |
++---------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| s_axi_control | CTRL     | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 9=INTERRUPT |
+| s_axi_control | GIER     | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                             |
+| s_axi_control | IP_IER   | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                        |
+| s_axi_control | IP_ISR   | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                        |
+| s_axi_control | in_r_1   | 0x10   | 32    | W      | Data signal of in_r              |                                                                      |
+| s_axi_control | in_r_2   | 0x14   | 32    | W      | Data signal of in_r              |                                                                      |
+| s_axi_control | mode     | 0x1c   | 32    | W      | Data signal of mode              |                                                                      |
++---------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------+
+| Interface | Type       | Ports     |
++-----------+------------+-----------+
+| ap_clk    | clock      | ap_clk    |
+| ap_rst_n  | reset      | ap_rst_n  |
+| interrupt | interrupt  | interrupt |
+| ap_ctrl   | ap_ctrl_hs |           |
++-----------+------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+----------+
+| Argument | Direction | Datatype |
++----------+-----------+----------+
+| in       | inout     | pointer  |
+| mode     | in        | _Bool    |
++----------+-----------+----------+
+
+* SW-to-HW Mapping
++----------+---------------+-----------+----------+--------------------------------+
+| Argument | HW Interface  | HW Type   | HW Usage | HW Info                        |
++----------+---------------+-----------+----------+--------------------------------+
+| in       | m_axi_gmem0   | interface |          |                                |
+| in       | s_axi_control | interface | offset   |                                |
+| mode     | s_axi_control | register  |          | name=mode offset=0x1c range=32 |
++----------+---------------+-----------+----------+--------------------------------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+* Inferred Bursts and Widening Missed
++--------------+----------+-----------+-------------------------------------------+------------+-------------------------------+
+| HW Interface | Variable | Loop      | Problem                                   | Resolution | Location                      |
++--------------+----------+-----------+-------------------------------------------+------------+-------------------------------+
+| m_axi_gmem0  | in       | INMEMCPY  | Access load is in the conditional branch  | 214-232    | optimized_hls/FFT_NTT.c:25:12 |
+| m_axi_gmem0  | in       | INMEMCPY  | Access load is in the conditional branch  | 214-232    | optimized_hls/FFT_NTT.c:25:12 |
+| m_axi_gmem0  | in       | OUTMEMCPY | Access store is in the conditional branch | 214-232    | optimized_hls/FFT_NTT.c:35:13 |
+| m_axi_gmem0  | in       | OUTMEMCPY | Access store is in the conditional branch | 214-232    | optimized_hls/FFT_NTT.c:35:13 |
++--------------+----------+-----------+-------------------------------------------+------------+-------------------------------+
+
+    * Resolution URL: www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=XXX-YYY.html (replace XXX-YYY with column value)
+
+================================================================
+== Bind Op Report
+================================================================
++----------------------------------------------+-----+--------+-------------------+------+---------+---------+
+| Name                                         | DSP | Pragma | Variable          | Op   | Impl    | Latency |
++----------------------------------------------+-----+--------+-------------------+------+---------+---------+
+| + FFT_NTT                                    | 41  |        |                   |      |         |         |
+|  + FFT_NTT_Pipeline_INMEMCPY                 | 0   |        |                   |      |         |         |
+|    add_ln25_fu_141_p2                        | -   |        | add_ln25          | add  | fabric  | 0       |
+|  + combine_stages_1                          | 41  |        |                   |      |         |         |
+|   + stage_1                                  | 41  |        |                   |      |         |         |
+|     n_2_fu_294_p2                            | -   |        | n_2               | add  | fabric  | 0       |
+|     mac_muladd_10s_10s_10ns_10_4_1_U22       | 1   |        | mul_ln84          | mul  | dsp48   | 3       |
+|     mac_muladd_10s_10s_10ns_10_4_1_U22       | 1   |        | i                 | add  | dsp48   | 3       |
+|     add_ln87_fu_317_p2                       | -   |        | add_ln87          | add  | fabric  | 0       |
+|     add_ln110_fu_328_p2                      | -   |        | add_ln110         | add  | fabric  | 0       |
+|     mul_mul_16ns_14ns_30_4_1_U23             | 1   |        | tmp2              | mul  | dsp48   | 3       |
+|     mul_mul_16s_14ns_16_4_1_U24              | 1   |        | mul_ln111         | mul  | dsp48   | 3       |
+|     mac_muladd_16ns_14ns_30ns_31_4_1_U25     | 1   |        | tmp1              | mul  | dsp48   | 3       |
+|     mac_muladd_16ns_14ns_30ns_31_4_1_U25     | 1   |        | add_ln112         | add  | dsp48   | 3       |
+|     tmp2_1_fu_429_p2                         | -   |        | tmp2_1            | add  | fabric  | 0       |
+|     tmp2_3_fu_454_p2                         | -   |        | tmp2_3            | add  | fabric  | 0       |
+|     add_ln117_fu_464_p2                      | -   |        | add_ln117         | add  | fabric  | 0       |
+|     tmp1_1_fu_474_p2                         | -   |        | tmp1_1            | add  | fabric  | 0       |
+|     add_ln119_1_fu_488_p2                    | -   |        | add_ln119_1       | add  | fabric  | 0       |
+|     tmp1_2_fu_518_p2                         | -   |        | tmp1_2            | sub  | fabric  | 0       |
+|     add_ln123_fu_544_p2                      | -   |        | add_ln123         | add  | fabric  | 0       |
+|     dadddsub_64ns_64ns_64_5_full_dsp_1_x_U19 | 3   |        | add               | dadd | fulldsp | 4       |
+|     dadddsub_64ns_64ns_64_5_full_dsp_1_x_U20 | 3   |        | add1              | dadd | fulldsp | 4       |
+|     dadddsub_64ns_64ns_64_5_full_dsp_1_x_U19 | 3   |        | sub               | dadd | fulldsp | 4       |
+|     dadddsub_64ns_64ns_64_5_full_dsp_1_x_U20 | 3   |        | sub1              | dadd | fulldsp | 4       |
+|    + complex_mul                             | 31  |        |                   |      |         |         |
+|      dadddsub_64ns_64ns_64_5_full_dsp_1_U6   | 3   |        | sub_y             | dsub | fulldsp | 4       |
+|      dadd_64ns_64ns_64_5_full_dsp_1_U7       | 3   |        | add_y             | dadd | fulldsp | 4       |
+|      dsub_64ns_64ns_64_5_full_dsp_1_U8       | 3   |        | sub_x             | dsub | fulldsp | 4       |
+|      dmul_64ns_64ns_64_5_max_dsp_1_U9        | 11  |        | mul1              | dmul | maxdsp  | 4       |
+|      dmul_64ns_64ns_64_5_max_dsp_1_U10       | 11  |        | mul2              | dmul | maxdsp  | 4       |
+|      dmul_64ns_64ns_64_5_max_dsp_1_U9        | 11  |        | mul3              | dmul | maxdsp  | 4       |
+|      dadddsub_64ns_64ns_64_5_full_dsp_1_U6   | 3   |        | z_re_write_assign | dsub | fulldsp | 4       |
+|      dadd_64ns_64ns_64_5_full_dsp_1_U7       | 3   |        | z_im_write_assign | dadd | fulldsp | 4       |
+|  + FFT_NTT_Pipeline_OUTMEMCPY                | 0   |        |                   |      |         |         |
+|    add_ln35_fu_151_p2                        | -   |        | add_ln35          | add  | fabric  | 0       |
+|    add_ln38_fu_178_p2                        | -   |        | add_ln38          | add  | fabric  | 0       |
++----------------------------------------------+-----+--------+-------------------+------+---------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
++---------------------+------+------+--------+-----------+---------+------+---------+
+| Name                | BRAM | URAM | Pragma | Variable  | Storage | Impl | Latency |
++---------------------+------+------+--------+-----------+---------+------+---------+
+| + FFT_NTT           | 25   | 0    |        |           |         |      |         |
+|   in_buf_U          | 4    | -    |        | in_buf    | ram_s2p | auto | 1       |
+|   out_buf_U         | 4    | -    |        | out_buf   | ram_t2p | auto | 1       |
+|  + combine_stages_1 | 17   | 0    |        |           |         |      |         |
+|    stage0_U         | 4    | -    |        | stage0    | ram_t2p | auto | 1       |
+|    stage1_U         | 4    | -    |        | stage1    | ram_t2p | auto | 1       |
+|   + stage_1         | 9    | 0    |        |           |         |      |         |
+|     gm_re_tab_U     | 4    | -    |        | gm_re_tab | rom_1p  | auto | 1       |
+|     gm_im_tab_U     | 4    | -    |        | gm_im_tab | rom_1p  | auto | 1       |
+|     GMb_U           | 1    | -    |        | GMb       | rom_1p  | auto | 1       |
++---------------------+------+------+--------+-----------+---------+------+---------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Pragmas with Warnings
++----------+---------+-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Type     | Options | Location                          | Messages                                                                                                                                                                           |
++----------+---------+-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| dataflow |         | optimized_hls/NTT.c:11 in old_ntt | Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region |
++----------+---------+-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+* Valid Pragma Syntax
++------------+----------------------------------------------------+--------------------------------------------------------+
+| Type       | Options                                            | Location                                               |
++------------+----------------------------------------------------+--------------------------------------------------------+
+| interface  | m_axi port=in bundle=gmem0 offset=slave depth=1024 | optimized_hls/FFT_NTT.c:8 in fft_ntt, in               |
+| interface  | s_axilite port=mode                                | optimized_hls/FFT_NTT.c:9 in fft_ntt, mode             |
+| interface  | s_axilite port=return                              | optimized_hls/FFT_NTT.c:10 in fft_ntt, return          |
+| inline     |                                                    | optimized_hls/FFT_NTT.c:15 in fft_ntt                  |
+| pipeline   | II=1                                               | optimized_hls/FFT_NTT.c:26 in in_copy                  |
+| pipeline   | II=2                                               | optimized_hls/FFT_NTT.c:36 in out_copy                 |
+| dependence | dependent=false type=inter variable=stage0         | optimized_hls/FFT_NTT.c:46 in combine_stages, stage0   |
+| dependence | dependent=false type=inter variable=stage1         | optimized_hls/FFT_NTT.c:47 in combine_stages, stage1   |
+| inline     | off                                                | optimized_hls/FFT_NTT.c:48 in combine_stages           |
+| dependence | dependent=false type=inter variable=in             | optimized_hls/FFT_NTT.c:68 in stage, in                |
+| dependence | dependent=false type=inter variable=out            | optimized_hls/FFT_NTT.c:69 in stage, out               |
+| pipeline   | II=2                                               | optimized_hls/FFT_NTT.c:82 in stage                    |
+| inline     | off                                                | optimized_hls/FFT_NTT.c:83 in stage                    |
+| interface  | m_axi port=f bundle=gmem0 offset=slave depth=1024  | optimized_hls/FFT_optimized.c:28 in fft, f             |
+| interface  | s_axilite port=return                              | optimized_hls/FFT_optimized.c:31 in fft, return        |
+| inline     | off                                                | optimized_hls/FFT_optimized.c:57 in fft_10_stages      |
+| dependence | dependent=false type=inter variable=out_r          | optimized_hls/FFT_optimized.c:71 in fft_stage, out_r   |
+| dependence | dependent=false type=inter variable=out_i          | optimized_hls/FFT_optimized.c:72 in fft_stage, out_i   |
+| pipeline   | II=1                                               | optimized_hls/FFT_optimized.c:82 in fft_stage          |
+| inline     | off                                                | optimized_hls/FFT_optimized.c:104 in complex_mul       |
+| interface  | m_axi port=a bundle=gmem0 offset=slave depth=1024  | optimized_hls/NTT.c:6 in old_ntt, a                    |
+| interface  | s_axilite port=logn                                | optimized_hls/NTT.c:7 in old_ntt, logn                 |
+| interface  | s_axilite port=return                              | optimized_hls/NTT.c:8 in old_ntt, return               |
+| inline     | off                                                | optimized_hls/NTT.c:10 in old_ntt                      |
+| interface  | mode=m_axi port=a offset=slave depth=1024          | optimized_hls/NTT_optimized.c:5 in ntt, a              |
+| interface  | s_axilite port=return                              | optimized_hls/NTT_optimized.c:8 in ntt, return         |
+| dataflow   |                                                    | optimized_hls/NTT_optimized.c:10 in ntt                |
+| inline     | off                                                | optimized_hls/NTT_optimized.c:25 in ntt_10_stages      |
+| dependence | dependent=false type=inter variable=out_buf        | optimized_hls/NTT_optimized.c:39 in ntt_stage, out_buf |
+| pipeline   | II=1                                               | optimized_hls/NTT_optimized.c:46 in ntt_stage          |
+| inline     |                                                    | optimized_hls/NTT_optimized.c:47 in ntt_stage          |
++------------+----------------------------------------------------+--------------------------------------------------------+
+
+
