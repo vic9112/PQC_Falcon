@@ -123,7 +123,8 @@ void stage(memcell in[SIZE], memcell out[SIZE], unsigned short int t, unsigned s
 			out[i + ht].u16.n0 = (uint16_t)tmp1;
 		}
 	}
-	
+}
+
 void complex_mul(fpr *z_re, fpr *z_im, fpr x_re, fpr x_im, fpr y_re, fpr y_im) {
 #pragma HLS INLINE off
 	//*z_re = (x_re * y_re) - (x_im * y_im);
@@ -147,6 +148,5 @@ fpr multiplier(fpr a, fpr b) {
 	return (a * b);
 }
 
-}
 
 
