@@ -23,5 +23,11 @@
 
 ![result](https://github.com/vic9112/PQC_Falcon/assets/137171415/1b97f53f-02b6-4baa-baeb-2487722306fe)
 
+### Update:
+
+- Ver1:
+  - Replace the multiplication of iFFT into `double_shifter`
+  - Initial Interval of `OUTMEMCPY` from **3** to **1**
+  - DSP usage: from **78** to **67**
 
 

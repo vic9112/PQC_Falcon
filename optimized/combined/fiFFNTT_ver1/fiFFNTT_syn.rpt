@@ -1,0 +1,260 @@
+
+
+================================================================
+== Synthesis Summary Report of 'fiFFNTT'
+================================================================
++ General Information: 
+    * Date:           Mon Apr  8 14:02:35 2024
+    * Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
+    * Project:        optimized_hls
+    * Solution:       solution3_combine (Vivado IP Flow Target)
+    * Product family: zynquplus
+    * Target device:  xck26-sfvc784-2LV-c
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +-------------------+------+------+---------+-----------+----------+---------+------+----------+---------+---------+------------+-------------+-----+
+    |      Modules      | Issue|      | Latency |  Latency  | Iteration|         | Trip |          |         |         |            |             |     |
+    |      & Loops      | Type | Slack| (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined|  BRAM   |   DSP   |     FF     |     LUT     | URAM|
+    +-------------------+------+------+---------+-----------+----------+---------+------+----------+---------+---------+------------+-------------+-----+
+    |+ fiFFNTT          |     -|  0.00|    12760|  1.276e+05|         -|    12761|     -|        no|  26 (9%)|  67 (5%)|  11253 (4%)|  13303 (11%)|    -|
+    | + in_copy_1       |     -|  0.00|     1033|  1.033e+04|         -|     1033|     -|        no|        -|        -|   107 (~0%)|    163 (~0%)|    -|
+    |  o INMEMCPY       |     -|  7.30|     1025|  1.025e+04|         3|        1|  1024|       yes|        -|        -|           -|            -|    -|
+    | + stages_1        |     -|  0.26|    10679|  1.068e+05|         -|    10679|     -|        no|  18 (6%)|  64 (5%)|   9625 (4%)|   10751 (9%)|    -|
+    |  + PE_1           |     -|  0.26|     1066|  1.066e+04|         -|     1066|     -|        no|  10 (3%)|  64 (5%)|   9603 (4%)|   10258 (8%)|    -|
+    |   o BUTTERFLY     |     -|  7.30|     1064|  1.064e+04|        41|        2|   512|       yes|        -|        -|           -|            -|    -|
+    |    + monty_mul    |     -|  4.94|        9|     90.000|         -|        1|     -|       yes|        -|  3 (~0%)|   146 (~0%)|    108 (~0%)|    -|
+    |    + complex_mul  |     -|  0.26|       14|    140.000|         -|        1|     -|       yes|        -|  48 (3%)|   4275 (1%)|    4643 (3%)|    -|
+    | + out_copy_1      |     -|  0.00|     1042|  1.042e+04|         -|     1042|     -|        no|        -|  3 (~0%)|   561 (~0%)|    549 (~0%)|    -|
+    |  o OUTMEMCPY      |     -|  7.30|     1040|  1.040e+04|        18|        1|  1024|       yes|        -|        -|           -|            -|    -|
+    |   + monty_mul     |     -|  4.94|        9|     90.000|         -|        1|     -|       yes|        -|  3 (~0%)|   146 (~0%)|    108 (~0%)|    -|
+    +-------------------+------+------+---------+-----------+----------+---------+------+----------+---------+---------+------------+-------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* M_AXI
++-------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+
+| Interface   | Data Width | Address Width | Latency | Offset | Register | Max Widen | Max Read     | Max Write    | Num Read    | Num Write   |
+|             | (SW->HW)   |               |         |        |          | Bitwidth  | Burst Length | Burst Length | Outstanding | Outstanding |
++-------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+
+| m_axi_gmem0 | 64 -> 64   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          |
++-------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+
+
+* S_AXILITE Interfaces
++---------------+------------+---------------+--------+----------+
+| Interface     | Data Width | Address Width | Offset | Register |
++---------------+------------+---------------+--------+----------+
+| s_axi_control | 32         | 6             | 16     | 0        |
++---------------+------------+---------------+--------+----------+
+
+* S_AXILITE Registers
++---------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| Interface     | Register | Offset | Width | Access | Description                      | Bit Fields                                                           |
++---------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| s_axi_control | CTRL     | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 9=INTERRUPT |
+| s_axi_control | GIER     | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                             |
+| s_axi_control | IP_IER   | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                        |
+| s_axi_control | IP_ISR   | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                        |
+| s_axi_control | in_r_1   | 0x10   | 32    | W      | Data signal of in_r              |                                                                      |
+| s_axi_control | in_r_2   | 0x14   | 32    | W      | Data signal of in_r              |                                                                      |
+| s_axi_control | mode     | 0x1c   | 32    | W      | Data signal of mode              |                                                                      |
+| s_axi_control | inverse  | 0x24   | 32    | W      | Data signal of inverse           |                                                                      |
++---------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------+
+| Interface | Type       | Ports     |
++-----------+------------+-----------+
+| ap_clk    | clock      | ap_clk    |
+| ap_rst_n  | reset      | ap_rst_n  |
+| interrupt | interrupt  | interrupt |
+| ap_ctrl   | ap_ctrl_hs |           |
++-----------+------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+----------+
+| Argument | Direction | Datatype |
++----------+-----------+----------+
+| in       | inout     | pointer  |
+| mode     | in        | _Bool    |
+| inverse  | in        | _Bool    |
++----------+-----------+----------+
+
+* SW-to-HW Mapping
++----------+---------------+-----------+----------+-----------------------------------+
+| Argument | HW Interface  | HW Type   | HW Usage | HW Info                           |
++----------+---------------+-----------+----------+-----------------------------------+
+| in       | m_axi_gmem0   | interface |          |                                   |
+| in       | s_axi_control | interface | offset   |                                   |
+| mode     | s_axi_control | register  |          | name=mode offset=0x1c range=32    |
+| inverse  | s_axi_control | register  |          | name=inverse offset=0x24 range=32 |
++----------+---------------+-----------+----------+-----------------------------------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+* Inferred Bursts and Widening Missed
++--------------+----------+-----------+-------------------------------------------+------------+-------------------------------+
+| HW Interface | Variable | Loop      | Problem                                   | Resolution | Location                      |
++--------------+----------+-----------+-------------------------------------------+------------+-------------------------------+
+| m_axi_gmem0  | in_buf   | INMEMCPY  | Access load is in the conditional branch  | 214-232    | optimized_hls/fiFFNTT.c:27:12 |
+| m_axi_gmem0  | in_buf   | INMEMCPY  | Access load is in the conditional branch  | 214-232    | optimized_hls/fiFFNTT.c:27:12 |
+| m_axi_gmem0  | out_buf  | OUTMEMCPY | Access store is in the conditional branch | 214-232    | optimized_hls/fiFFNTT.c:45:13 |
+| m_axi_gmem0  | out_buf  | OUTMEMCPY | Access store is in the conditional branch | 214-232    | optimized_hls/fiFFNTT.c:45:13 |
+| m_axi_gmem0  | out_buf  | OUTMEMCPY | Access store is in the conditional branch | 214-232    | optimized_hls/fiFFNTT.c:45:13 |
+| m_axi_gmem0  | out_buf  | OUTMEMCPY | Access store is in the conditional branch | 214-232    | optimized_hls/fiFFNTT.c:45:13 |
++--------------+----------+-----------+-------------------------------------------+------------+-------------------------------+
+
+    * Resolution URL: www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=XXX-YYY.html (replace XXX-YYY with column value)
+
+================================================================
+== Bind Op Report
+================================================================
++-----------------------------------------+-----+--------+-------------------+------+---------+---------+
+| Name                                    | DSP | Pragma | Variable          | Op   | Impl    | Latency |
++-----------------------------------------+-----+--------+-------------------+------+---------+---------+
+| + fiFFNTT                               | 67  |        |                   |      |         |         |
+|  + in_copy_1                            | 0   |        |                   |      |         |         |
+|    add_ln27_fu_145_p2                   | -   |        | add_ln27          | add  | fabric  | 0       |
+|  + stages_1                             | 64  |        |                   |      |         |         |
+|   + PE_1                                | 64  |        |                   |      |         |         |
+|     n_2_fu_514_p2                       | -   |        | n_2               | add  | fabric  | 0       |
+|     mac_muladd_10s_10s_10ns_10_4_1_U33  | 1   |        | mul_ln120         | mul  | dsp48   | 3       |
+|     mac_muladd_10s_10s_10ns_10_4_1_U33  | 1   |        | i                 | add  | dsp48   | 3       |
+|     add_ln124_fu_537_p2                 | -   |        | add_ln124         | add  | fabric  | 0       |
+|     add_ln128_fu_547_p2                 | -   |        | add_ln128         | add  | fabric  | 0       |
+|     grp_fu_388_p2                       | -   |        | add_ln184         | add  | fabric  | 0       |
+|     add_ln192_fu_750_p2                 | -   |        | add_ln192         | add  | fabric  | 0       |
+|     tmp1_3_fu_759_p2                    | -   |        | tmp1_3            | add  | fabric  | 0       |
+|     tmp1_4_fu_792_p2                    | -   |        | tmp1_4            | sub  | fabric  | 0       |
+|     add_ln198_fu_818_p2                 | -   |        | add_ln198         | add  | fabric  | 0       |
+|     grp_fu_392_p2                       | -   |        | add_ln173         | add  | fabric  | 0       |
+|     add_ln175_fu_824_p2                 | -   |        | add_ln175         | add  | fabric  | 0       |
+|     tmp1_fu_833_p2                      | -   |        | tmp1              | add  | fabric  | 0       |
+|     tmp1_1_fu_694_p2                    | -   |        | tmp1_1            | sub  | fabric  | 0       |
+|     tmp1_5_fu_720_p2                    | -   |        | tmp1_5            | add  | fabric  | 0       |
+|     grp_fu_388_p2                       | -   |        | add_ln151         | add  | fabric  | 0       |
+|     dadd_64ns_64ns_64_5_full_dsp_0_U28  | 3   |        | add2              | dadd | fulldsp | 4       |
+|     dadd_64ns_64ns_64_5_full_dsp_0_U29  | 3   |        | add3              | dadd | fulldsp | 4       |
+|     dsub_64ns_64ns_64_5_full_dsp_0_U30  | 3   |        | sub               | dsub | fulldsp | 4       |
+|     dsub_64ns_64ns_64_5_full_dsp_0_U31  | 3   |        | sub1              | dsub | fulldsp | 4       |
+|     grp_fu_392_p2                       | -   |        | add_ln138         | add  | fabric  | 0       |
+|     dadd_64ns_64ns_64_5_full_dsp_0_U28  | 3   |        | add               | dadd | fulldsp | 4       |
+|     dadd_64ns_64ns_64_5_full_dsp_0_U29  | 3   |        | add1              | dadd | fulldsp | 4       |
+|     dsub_64ns_64ns_64_5_full_dsp_0_U30  | 3   |        | x_re_2            | dsub | fulldsp | 4       |
+|     dsub_64ns_64ns_64_5_full_dsp_0_U31  | 3   |        | x_im_2            | dsub | fulldsp | 4       |
+|    + monty_mul (grp_monty_mul_fu_358)   | 3   |        |                   |      |         |         |
+|      mul_mul_14ns_18s_32_4_0_U5         | 1   |        | tmp2              | mul  | dsp48   | 3       |
+|      mul_mul_16s_14ns_16_4_0_U6         | 1   |        | mul_ln226         | mul  | dsp48   | 3       |
+|      mac_muladd_16ns_14ns_32s_32_4_0_U7 | 1   |        | tmp1              | mul  | dsp48   | 3       |
+|      mac_muladd_16ns_14ns_32s_32_4_0_U7 | 1   |        | add_ln227         | add  | dsp48   | 3       |
+|      tmp2_1_fu_65_p2                    | -   |        | tmp2_1            | add  | fabric  | 0       |
+|      tmp2_2_fu_87_p2                    | -   |        | tmp2_2            | add  | fabric  | 0       |
+|    + complex_mul                        | 48  |        |                   |      |         |         |
+|      dsub_64ns_64ns_64_5_full_dsp_0_U13 | 3   |        | sub_y             | dsub | fulldsp | 4       |
+|      dadd_64ns_64ns_64_5_full_dsp_0_U14 | 3   |        | add_y             | dadd | fulldsp | 4       |
+|      dsub_64ns_64ns_64_5_full_dsp_0_U15 | 3   |        | sub_x             | dsub | fulldsp | 4       |
+|      dmul_64ns_64ns_64_5_max_dsp_0_U18  | 11  |        | mul1              | dmul | maxdsp  | 4       |
+|      dmul_64ns_64ns_64_5_max_dsp_0_U19  | 11  |        | mul2              | dmul | maxdsp  | 4       |
+|      dmul_64ns_64ns_64_5_max_dsp_0_U20  | 11  |        | mul3              | dmul | maxdsp  | 4       |
+|      dadd_64ns_64ns_64_5_full_dsp_0_U16 | 3   |        | z_re_write_assign | dadd | fulldsp | 4       |
+|      dadd_64ns_64ns_64_5_full_dsp_0_U17 | 3   |        | z_im_write_assign | dadd | fulldsp | 4       |
+|  + out_copy_1                           | 3   |        |                   |      |         |         |
+|    add_ln45_fu_228_p2                   | -   |        | add_ln45          | add  | fabric  | 0       |
+|    grp_fu_196_p2                        | -   |        | add_ln58          | add  | fabric  | 0       |
+|    grp_fu_196_p2                        | -   |        | add_ln56          | add  | fabric  | 0       |
+|    grp_fu_196_p2                        | -   |        | add_ln49          | add  | fabric  | 0       |
+|    exponent_1_fu_320_p2                 | -   |        | exponent_1        | add  | fabric  | 0       |
+|    add_ln245_fu_326_p2                  | -   |        | add_ln245         | add  | fabric  | 0       |
+|   + monty_mul (grp_monty_mul_fu_189)    | 3   |        |                   |      |         |         |
+|     mul_mul_14ns_18s_32_4_0_U5          | 1   |        | tmp2              | mul  | dsp48   | 3       |
+|     mul_mul_16s_14ns_16_4_0_U6          | 1   |        | mul_ln226         | mul  | dsp48   | 3       |
+|     mac_muladd_16ns_14ns_32s_32_4_0_U7  | 1   |        | tmp1              | mul  | dsp48   | 3       |
+|     mac_muladd_16ns_14ns_32s_32_4_0_U7  | 1   |        | add_ln227         | add  | dsp48   | 3       |
+|     tmp2_1_fu_65_p2                     | -   |        | tmp2_1            | add  | fabric  | 0       |
+|     tmp2_2_fu_87_p2                     | -   |        | tmp2_2            | add  | fabric  | 0       |
++-----------------------------------------+-----+--------+-------------------+------+---------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
++-----------------+------+------+--------+-----------+---------+------+---------+
+| Name            | BRAM | URAM | Pragma | Variable  | Storage | Impl | Latency |
++-----------------+------+------+--------+-----------+---------+------+---------+
+| + fiFFNTT       | 26   | 0    |        |           |         |      |         |
+|   in_buf_U      | 4    | -    |        | in_buf    | ram_s2p | auto | 1       |
+|   out_buf_U     | 4    | -    |        | out_buf   | ram_t2p | auto | 1       |
+|  + stages_1     | 18   | 0    |        |           |         |      |         |
+|    stage0_U     | 4    | -    |        | stage0    | ram_t2p | auto | 1       |
+|    stage1_U     | 4    | -    |        | stage1    | ram_t2p | auto | 1       |
+|   + PE_1        | 10   | 0    |        |           |         |      |         |
+|     gm_im_tab_U | 4    | -    |        | gm_im_tab | rom_1p  | auto | 1       |
+|     iGMb_U      | 1    | -    |        | iGMb      | rom_1p  | auto | 1       |
+|     GMb_U       | 1    | -    |        | GMb       | rom_1p  | auto | 1       |
+|     gm_re_tab_U | 4    | -    |        | gm_re_tab | rom_1p  | auto | 1       |
++-----------------+------+------+--------+-----------+---------+------+---------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Pragmas with Warnings
++----------+---------+-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Type     | Options | Location                          | Messages                                                                                                                                                                           |
++----------+---------+-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| dataflow |         | optimized_hls/NTT.c:11 in old_ntt | Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region |
++----------+---------+-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+* Valid Pragma Syntax
++------------+----------------------------------------------------+--------------------------------------------------------+
+| Type       | Options                                            | Location                                               |
++------------+----------------------------------------------------+--------------------------------------------------------+
+| interface  | m_axi port=f bundle=gmem0 offset=slave depth=1024  | optimized_hls/FFT_optimized.c:28 in fft, f             |
+| interface  | s_axilite port=return                              | optimized_hls/FFT_optimized.c:31 in fft, return        |
+| inline     | off                                                | optimized_hls/FFT_optimized.c:57 in fft_10_stages      |
+| dependence | dependent=false type=inter variable=out_r          | optimized_hls/FFT_optimized.c:71 in fft_stage, out_r   |
+| dependence | dependent=false type=inter variable=out_i          | optimized_hls/FFT_optimized.c:72 in fft_stage, out_i   |
+| pipeline   | II=1                                               | optimized_hls/FFT_optimized.c:82 in fft_stage          |
+| interface  | m_axi port=in bundle=gmem0 offset=slave depth=1024 | optimized_hls/fiFFNTT.c:8 in fiffntt, in               |
+| interface  | s_axilite port=mode                                | optimized_hls/fiFFNTT.c:9 in fiffntt, mode             |
+| interface  | s_axilite port=inverse                             | optimized_hls/fiFFNTT.c:10 in fiffntt, inverse         |
+| interface  | s_axilite port=return                              | optimized_hls/fiFFNTT.c:11 in fiffntt, return          |
+| inline     | off                                                | optimized_hls/fiFFNTT.c:16 in fiffntt                  |
+| inline     | off                                                | optimized_hls/fiFFNTT.c:26 in in_copy                  |
+| pipeline   | II=1                                               | optimized_hls/fiFFNTT.c:28 in in_copy                  |
+| inline     | off                                                | optimized_hls/fiFFNTT.c:37 in out_copy                 |
+| pipeline   | II=1                                               | optimized_hls/fiFFNTT.c:46 in out_copy                 |
+| dependence | dependent=false type=inter variable=stage0         | optimized_hls/fiFFNTT.c:66 in stages, stage0           |
+| dependence | dependent=false type=inter variable=stage1         | optimized_hls/fiFFNTT.c:67 in stages, stage1           |
+| inline     | off                                                | optimized_hls/fiFFNTT.c:68 in stages                   |
+| dependence | dependent=false type=inter variable=in             | optimized_hls/fiFFNTT.c:88 in pe, in                   |
+| dependence | dependent=false type=inter variable=out            | optimized_hls/fiFFNTT.c:89 in pe, out                  |
+| pipeline   | II=2                                               | optimized_hls/fiFFNTT.c:119 in pe                      |
+| inline     | off                                                | optimized_hls/fiFFNTT.c:205 in complex_mul             |
+| inline     | off                                                | optimized_hls/fiFFNTT.c:223 in monty_mul               |
+| interface  | m_axi port=a bundle=gmem0 offset=slave depth=1024  | optimized_hls/NTT.c:6 in old_ntt, a                    |
+| interface  | s_axilite port=logn                                | optimized_hls/NTT.c:7 in old_ntt, logn                 |
+| interface  | s_axilite port=return                              | optimized_hls/NTT.c:8 in old_ntt, return               |
+| inline     | off                                                | optimized_hls/NTT.c:10 in old_ntt                      |
+| interface  | mode=m_axi port=a offset=slave depth=1024          | optimized_hls/NTT_optimized.c:5 in ntt, a              |
+| interface  | s_axilite port=return                              | optimized_hls/NTT_optimized.c:8 in ntt, return         |
+| dataflow   |                                                    | optimized_hls/NTT_optimized.c:10 in ntt                |
+| inline     | off                                                | optimized_hls/NTT_optimized.c:25 in ntt_10_stages      |
+| dependence | dependent=false type=inter variable=out_buf        | optimized_hls/NTT_optimized.c:39 in ntt_stage, out_buf |
+| pipeline   | II=1                                               | optimized_hls/NTT_optimized.c:46 in ntt_stage          |
+| inline     |                                                    | optimized_hls/NTT_optimized.c:47 in ntt_stage          |
++------------+----------------------------------------------------+--------------------------------------------------------+
+
+
