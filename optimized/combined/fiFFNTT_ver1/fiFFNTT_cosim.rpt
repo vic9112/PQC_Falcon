@@ -10,3 +10,5 @@ Simulation tool   : xsim.
 |      VHDL|        NA|             NA|             NA|             NA|             NA|             NA|             NA|                    NA|
 |   Verilog|      Pass|           8976|          11823|          14668|           8976|          10876|          14668|                 47292|
 +----------+----------+-----------------------------------------------+-----------------------------------------------+----------------------+
+
+Notice that "Total Execution Time" is the sum of execution times of FFT, iFFT, NTT, iNTT 
