@@ -1,4 +1,4 @@
-# Combine Forward/Inverse FFT & NTT and Share the Memory
+# Combining Forward/Inverse FFT & NTT and Share their Memories
 
 ## Improvement
 
