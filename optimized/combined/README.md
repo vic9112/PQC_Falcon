@@ -11,7 +11,7 @@
 - Ver1:
   - Replace the multiplication of iFFT into `double_shifter`
   - Initial Interval of `OUTMEMCPY` from **3** to **1**
-  - DSP usage: from **78** to **67**
+  - DSP usage: from **78** to **67** (eliminate the usage of 64-bit floating-multiplication for "dividing N" in the iFFT)
 - Ver2:
   - Add the `fft_adj` and `fft_mul` mode for falcon's flow
 
