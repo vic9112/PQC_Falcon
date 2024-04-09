@@ -15,9 +15,10 @@
 - Ver2:
   - Add the `fft_adj` and `fft_mul` mode for falcon's flow
 - Ver3:
-  - Add C++ code and add double negate function and unroll adj
-
-
+  - Add C++ code and add double negate function and unroll negate of fft_adj
+- Ver4:
+  - Delete negate of fft_adj unroll
+  - let dadd and dmul use LUT (default use dsp)
 ## Interface Description
 
 - For FFT/iFFT: 
