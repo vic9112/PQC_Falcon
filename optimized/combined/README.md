@@ -6,6 +6,17 @@
 - Combine two algorithms(FFT/NTT) in one hardware (`~/FFT_NTT`)
 - Improve the memory usage by sharing their buffer
 
+### Update:
+
+- Ver1:
+  - Replace the multiplication of iFFT into `double_shifter`
+  - Initial Interval of `OUTMEMCPY` from **3** to **1**
+  - DSP usage: from **78** to **67**
+- Ver2:
+  - Add the `fft_adj` and `fft_mul` mode for falcon's flow
+
+
+
 ## Interface Description
 
 - For FFT/iFFT: 
@@ -22,13 +33,4 @@
 ### Result:
 
 ![result](https://github.com/vic9112/PQC_Falcon/assets/137171415/1b97f53f-02b6-4baa-baeb-2487722306fe)
-
-### Update:
-
-- Ver1:
-  - Replace the multiplication of iFFT into `double_shifter`
-  - Initial Interval of `OUTMEMCPY` from **3** to **1**
-  - DSP usage: from **78** to **67**
-- Ver2:
-  - Add the `fft_adj` and `fft_mul` mode for falcon's flow
 
