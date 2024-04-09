@@ -14,7 +14,8 @@
   - DSP usage: from **78** to **67** (eliminate the usage of 64-bit floating-multiplication for "dividing N" in iFFT)
 - Ver2:
   - Add the `fft_adj` and `fft_mul` mode for falcon's flow
-
+- Ver3:
+  - Add C++ code and add double negate function
 
 
 ## Interface Description
