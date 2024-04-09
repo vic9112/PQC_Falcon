@@ -15,7 +15,7 @@
 - Ver2:
   - Add the `fft_adj` and `fft_mul` mode for falcon's flow
 - Ver3:
-  - Add C++ code and add double negate function
+  - Add C++ code and add double negate function and unroll adj
 
 
 ## Interface Description
