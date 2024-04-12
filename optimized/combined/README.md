@@ -19,6 +19,10 @@
 - Ver4:
   - Delete negate of fft_adj unroll
   - let dadd and dmul use LUT (default use dsp)
+- Ver5:
+  - Use only one buffer for in/out (inplace buffer)
+  - Re-construct the code structure
+  
 ## Interface Description
 
 - For FFT/iFFT: 
