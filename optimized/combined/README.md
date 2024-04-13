@@ -22,6 +22,8 @@
 - Ver5:
   - Use only one buffer for in/out (inplace buffer)
   - Re-construct the code structure
+- Ver6:
+  - share the adder of FFT/iFFT/NTT/iNTT
   
 ## Interface Description
 
