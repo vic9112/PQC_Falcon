@@ -24,6 +24,10 @@
   - Re-construct the code structure
 - Ver6:
   - share the adder of FFT/iFFT/NTT/iNTT
+- Ver7:
+  - Some unfixed issues
+- Ver8:
+  - Share the multiplier of FFT/iFFT/NTT/iNTT
   
 ## Interface Description
 
