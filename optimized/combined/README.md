@@ -23,11 +23,17 @@
   - Use only one buffer for in/out (inplace buffer)
   - Re-construct the code structure
 - Ver6:
-  - share the adder of FFT/iFFT/NTT/iNTT
+  - share the adder of FFT/iFFT/NTT/iNTT (20000 cycles)
 - Ver7:
   - Some unfixed issues
 - Ver8:
   - Share the multiplier of FFT/iFFT/NTT/iNTT
+  - Control the lantecy to approximately 10000 cycles
+- Ver9:
+  - Create a wrapper for falcon flows which includes fiFFNTT
+  - Change the interface signals (input buffer, mode select(6 modes))
+  - See under `~/fiFFNTT_ver9/ip/drivers/top_v1_0/src/xtop_hw.h` or `~/fiFFNTT_ver9/hls_code/fiFFNTT_wrapper.cpp` for more details about interface signals
+  - See under `~/fiFFNTT_ver9` for synthesis report & co-simulation log file/report
   
 ## Interface Description
 
