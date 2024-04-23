@@ -31,16 +31,17 @@ attribute shreg_extract : string;
     signal ap_block_state2_pp0_stage0_iter1 : BOOLEAN;
     signal ap_block_state3_pp0_stage0_iter2 : BOOLEAN;
     signal ap_block_state4_pp0_stage0_iter3 : BOOLEAN;
+    signal ap_block_state5_pp0_stage0_iter4 : BOOLEAN;
     signal ap_block_pp0_stage0_11001 : BOOLEAN;
     signal ap_block_pp0_stage0 : BOOLEAN;
-    signal grp_fu_32_p2 : STD_LOGIC_VECTOR (63 downto 0);
-    signal grp_fu_32_ce : STD_LOGIC;
+    signal grp_fu_18_p2 : STD_LOGIC_VECTOR (63 downto 0);
+    signal grp_fu_18_ce : STD_LOGIC;
     signal ap_ce_reg : STD_LOGIC;
     signal a_int_reg : STD_LOGIC_VECTOR (63 downto 0);
     signal b_int_reg : STD_LOGIC_VECTOR (63 downto 0);
     signal ap_return_int_reg : STD_LOGIC_VECTOR (63 downto 0);
 
-    component top_dadd_64ns_64ns_64_4_no_dsp_0 IS
+    component top_dadd_64ns_64ns_64_5_full_dsp_0 IS
     generic (
         ID : INTEGER;
         NUM_STAGE : INTEGER;
@@ -59,10 +60,10 @@ attribute shreg_extract : string;
 
 
 begin
-    dadd_64ns_64ns_64_4_no_dsp_0_U11 : component top_dadd_64ns_64ns_64_4_no_dsp_0
+    dadd_64ns_64ns_64_5_full_dsp_0_U11 : component top_dadd_64ns_64ns_64_5_full_dsp_0
     generic map (
         ID => 1,
-        NUM_STAGE => 4,
+        NUM_STAGE => 5,
         din0_WIDTH => 64,
         din1_WIDTH => 64,
         dout_WIDTH => 64)
@@ -71,8 +72,8 @@ begin
         reset => ap_rst,
         din0 => a_int_reg,
         din1 => b_int_reg,
-        ce => grp_fu_32_ce,
-        dout => grp_fu_32_p2);
+        ce => grp_fu_18_ce,
+        dout => grp_fu_18_p2);
 
 
 
@@ -97,7 +98,7 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if ((ap_const_logic_1 = ap_ce_reg)) then
-                ap_return_int_reg <= grp_fu_32_p2;
+                ap_return_int_reg <= grp_fu_18_p2;
             end if;
         end if;
     end process;
@@ -107,25 +108,26 @@ begin
         ap_block_state2_pp0_stage0_iter1 <= not((ap_const_boolean_1 = ap_const_boolean_1));
         ap_block_state3_pp0_stage0_iter2 <= not((ap_const_boolean_1 = ap_const_boolean_1));
         ap_block_state4_pp0_stage0_iter3 <= not((ap_const_boolean_1 = ap_const_boolean_1));
+        ap_block_state5_pp0_stage0_iter4 <= not((ap_const_boolean_1 = ap_const_boolean_1));
 
-    ap_return_assign_proc : process(grp_fu_32_p2, ap_ce_reg, ap_return_int_reg)
+    ap_return_assign_proc : process(grp_fu_18_p2, ap_ce_reg, ap_return_int_reg)
     begin
         if ((ap_const_logic_0 = ap_ce_reg)) then 
             ap_return <= ap_return_int_reg;
         elsif ((ap_const_logic_1 = ap_ce_reg)) then 
-            ap_return <= grp_fu_32_p2;
+            ap_return <= grp_fu_18_p2;
         else 
             ap_return <= "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
         end if; 
     end process;
 
 
-    grp_fu_32_ce_assign_proc : process(ap_block_pp0_stage0_11001, ap_ce_reg)
+    grp_fu_18_ce_assign_proc : process(ap_block_pp0_stage0_11001, ap_ce_reg)
     begin
         if (((ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_const_logic_1 = ap_ce_reg))) then 
-            grp_fu_32_ce <= ap_const_logic_1;
+            grp_fu_18_ce <= ap_const_logic_1;
         else 
-            grp_fu_32_ce <= ap_const_logic_0;
+            grp_fu_18_ce <= ap_const_logic_0;
         end if; 
     end process;
 

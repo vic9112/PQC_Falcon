@@ -6,6 +6,6 @@
   <xd:arg xd:name="*(in2)" xd:originalName="in2" xd:direction="inout" xd:interfaceRef="m_axi_gmem0" xd:busTypeRef="aximm" xd:dataWidth="64" xd:bufferDirection="inout"/>
   <xd:arg xd:name="in2" xd:originalName="in2" xd:direction="in" xd:interfaceRef="s_axi_control" xd:busTypeRef="axilite" xd:offset="0x1C" xd:dataWidth="32" xd:aximmInterfaceRef="m_axi_gmem0"/>
   <xd:arg xd:name="mode" xd:originalName="mode" xd:direction="in" xd:interfaceRef="s_axi_control" xd:busTypeRef="axilite" xd:offset="0x28" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
-  <xd:latencyEstimates xd:best-case="2557" xd:worst-case="35386" xd:average-case="9945"/>
-  <xd:resourceEstimates xd:LUT="44269" xd:FF="30070" xd:BRAM="0" xd:DSP="8"/>
+  <xd:latencyEstimates xd:best-case="2584" xd:worst-case="35478" xd:average-case="9987"/>
+  <xd:resourceEstimates xd:LUT="24929" xd:FF="30079" xd:BRAM="0" xd:DSP="135"/>
 </xd:acceleratorMap>

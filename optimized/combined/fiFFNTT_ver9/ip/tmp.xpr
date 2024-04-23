@@ -6,7 +6,7 @@
 <Project Version="7" Minor="60" Path="/home/ubuntu/PQC-Falcon/C++/fiFFNTT_wrapper/solution1/impl/ip/tmp.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="899a5515893042e8bba5ba6051c2dfd1"/>
+    <Option Name="Id" Val="e5027016f40c4257a00eb505bee2f49d"/>
     <Option Name="Part" Val="xck26-sfvc784-2LV-c"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>
@@ -87,14 +87,14 @@
   <FileSets Version="1" Minor="31">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
       <Filter Type="Srcs"/>
-      <File Path="$PSRCDIR/sources_1/ip/top_dadd_64ns_64ns_64_4_no_dsp_0_ip/top_dadd_64ns_64ns_64_4_no_dsp_0_ip.xci">
+      <File Path="$PSRCDIR/sources_1/ip/top_dadd_64ns_64ns_64_5_full_dsp_0_ip/top_dadd_64ns_64ns_64_5_full_dsp_0_ip.xci">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/ip/top_dmul_64ns_64ns_64_4_no_dsp_0_ip/top_dmul_64ns_64ns_64_4_no_dsp_0_ip.xci">
+      <File Path="$PSRCDIR/sources_1/ip/top_dmul_64ns_64ns_64_5_max_dsp_0_ip/top_dmul_64ns_64ns_64_5_max_dsp_0_ip.xci">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
