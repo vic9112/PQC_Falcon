@@ -55,15 +55,15 @@ attribute shreg_extract : string;
     signal tmp_u_add_fu_40_b : STD_LOGIC_VECTOR (31 downto 0);
     signal tmp_u_add_fu_40_ap_return : STD_LOGIC_VECTOR (31 downto 0);
     signal ap_block_pp0_stage0 : BOOLEAN;
-    signal zext_ln234_fu_50_p0 : STD_LOGIC_VECTOR (15 downto 0);
+    signal zext_ln235_fu_50_p0 : STD_LOGIC_VECTOR (15 downto 0);
     signal grp_fu_109_p2 : STD_LOGIC_VECTOR (15 downto 0);
     signal grp_fu_116_p2 : STD_LOGIC_VECTOR (29 downto 0);
     signal trunc_ln5_fu_61_p4 : STD_LOGIC_VECTOR (15 downto 0);
-    signal zext_ln232_2_fu_71_p1 : STD_LOGIC_VECTOR (16 downto 0);
+    signal zext_ln233_2_fu_71_p1 : STD_LOGIC_VECTOR (16 downto 0);
     signal tmp2_1_fu_75_p2 : STD_LOGIC_VECTOR (16 downto 0);
-    signal tmp_11_fu_87_p3 : STD_LOGIC_VECTOR (0 downto 0);
-    signal select_ln232_fu_95_p3 : STD_LOGIC_VECTOR (15 downto 0);
-    signal add_ln232_fu_81_p2 : STD_LOGIC_VECTOR (15 downto 0);
+    signal tmp_15_fu_87_p3 : STD_LOGIC_VECTOR (0 downto 0);
+    signal select_ln233_fu_95_p3 : STD_LOGIC_VECTOR (15 downto 0);
+    signal add_ln233_fu_81_p2 : STD_LOGIC_VECTOR (15 downto 0);
     signal grp_fu_109_p0 : STD_LOGIC_VECTOR (15 downto 0);
     signal grp_fu_109_p1 : STD_LOGIC_VECTOR (13 downto 0);
     signal grp_fu_116_p0 : STD_LOGIC_VECTOR (15 downto 0);
@@ -142,7 +142,7 @@ begin
         b => tmp_u_add_fu_40_b,
         ap_return => tmp_u_add_fu_40_ap_return);
 
-    mul_mul_16s_14ns_16_4_1_U50 : component top_mul_mul_16s_14ns_16_4_1
+    mul_mul_16s_14ns_16_4_1_U47 : component top_mul_mul_16s_14ns_16_4_1
     generic map (
         ID => 1,
         NUM_STAGE => 4,
@@ -157,7 +157,7 @@ begin
         ce => grp_fu_109_ce,
         dout => grp_fu_109_p2);
 
-    mul_mul_16ns_14ns_30_4_1_U51 : component top_mul_mul_16ns_14ns_30_4_1
+    mul_mul_16ns_14ns_30_4_1_U48 : component top_mul_mul_16ns_14ns_30_4_1
     generic map (
         ID => 1,
         NUM_STAGE => 4,
@@ -211,7 +211,7 @@ begin
             end if;
         end if;
     end process;
-    add_ln232_fu_81_p2 <= std_logic_vector(unsigned(trunc_ln5_fu_61_p4) + unsigned(ap_const_lv16_CFFF));
+    add_ln233_fu_81_p2 <= std_logic_vector(unsigned(trunc_ln5_fu_61_p4) + unsigned(ap_const_lv16_CFFF));
         ap_block_pp0_stage0 <= not((ap_const_boolean_1 = ap_const_boolean_1));
         ap_block_pp0_stage0_11001 <= not((ap_const_boolean_1 = ap_const_boolean_1));
         ap_block_state1_pp0_stage0_iter0 <= not((ap_const_boolean_1 = ap_const_boolean_1));
@@ -256,17 +256,17 @@ begin
     end process;
 
     grp_fu_116_p0 <= grp_fu_116_p00(16 - 1 downto 0);
-    grp_fu_116_p00 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(zext_ln234_fu_50_p0),30));
+    grp_fu_116_p00 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(zext_ln235_fu_50_p0),30));
     grp_fu_116_p1 <= ap_const_lv30_3001(14 - 1 downto 0);
-    select_ln232_fu_95_p3 <= 
-        ap_const_lv16_3001 when (tmp_11_fu_87_p3(0) = '1') else 
+    select_ln233_fu_95_p3 <= 
+        ap_const_lv16_3001 when (tmp_15_fu_87_p3(0) = '1') else 
         ap_const_lv16_0;
-    tmp2_1_fu_75_p2 <= std_logic_vector(unsigned(zext_ln232_2_fu_71_p1) + unsigned(ap_const_lv17_1CFFF));
-    tmp2_2_fu_103_p2 <= std_logic_vector(unsigned(select_ln232_fu_95_p3) + unsigned(add_ln232_fu_81_p2));
-    tmp_11_fu_87_p3 <= tmp2_1_fu_75_p2(16 downto 16);
+    tmp2_1_fu_75_p2 <= std_logic_vector(unsigned(zext_ln233_2_fu_71_p1) + unsigned(ap_const_lv17_1CFFF));
+    tmp2_2_fu_103_p2 <= std_logic_vector(unsigned(select_ln233_fu_95_p3) + unsigned(add_ln233_fu_81_p2));
+    tmp_15_fu_87_p3 <= tmp2_1_fu_75_p2(16 downto 16);
     tmp_u_add_fu_40_a <= std_logic_vector(IEEE.numeric_std.resize(unsigned(tmp2_reg_123_pp0_iter5_reg),32));
     tmp_u_add_fu_40_b <= std_logic_vector(IEEE.numeric_std.resize(unsigned(grp_fu_116_p2),32));
     trunc_ln5_fu_61_p4 <= tmp_u_add_fu_40_ap_return(31 downto 16);
-    zext_ln232_2_fu_71_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(trunc_ln5_fu_61_p4),17));
-    zext_ln234_fu_50_p0 <= grp_fu_109_p2;
+    zext_ln233_2_fu_71_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(trunc_ln5_fu_61_p4),17));
+    zext_ln235_fu_50_p0 <= grp_fu_109_p2;
 end behav;

@@ -68,7 +68,7 @@ port (
     buf1_ce0 : OUT STD_LOGIC;
     buf1_we0 : OUT STD_LOGIC_VECTOR (7 downto 0);
     buf1_d0 : OUT STD_LOGIC_VECTOR (63 downto 0);
-    mode : IN STD_LOGIC_VECTOR (0 downto 0) );
+    mode : IN STD_LOGIC );
 end;
 
 
@@ -494,7 +494,7 @@ begin
     m_axi_gmem0_WSTRB <= ap_const_lv8_0;
     m_axi_gmem0_WUSER <= ap_const_lv1_0;
     m_axi_gmem0_WVALID <= ap_const_logic_0;
-    mode_read_read_fu_87_p2 <= mode;
+    mode_read_read_fu_87_p2 <= (0=>mode, others=>'-');
         sext_ln27_fu_120_p1 <= std_logic_vector(IEEE.numeric_std.resize(signed(trunc_ln_fu_110_p4),64));
 
     trunc_ln35_fu_161_p1 <= gmem0_addr_read_reg_194(16 - 1 downto 0);

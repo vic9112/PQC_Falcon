@@ -14,13 +14,12 @@
 #ifdef wrapper
 void test_adj(void){
 	    fpr 	 fft_out[SIZE];
-		fpr      ifft_out[SIZE];
 		memcell  in_fft[SIZE];
-		memcell  in_ifft[SIZE];
+		memcell  tmp[SIZE];
 		int error_cnt = 0;
 		for (int i = 0; i < SIZE; i++)
 			in_fft[i].f = py_f[i];
-		top(in_fft, 0, 4); // adj_FFT
+		top(in_fft, tmp, 4); // adj_FFT
 		for (int j = 0; j < SIZE; j++)
 			fft_out[j] = in_fft[j].f;
 		fpr fft_adj, golden_adj;
@@ -42,10 +41,10 @@ void test_adj(void){
 void test_mul(void){
 	    fpr 	 fft_out1[SIZE];
 	    fpr 	 fft_out2[SIZE];
-		fpr      ifft_out[SIZE];
+	    fpr      ifft_out[SIZE];
+		fpr      tmp[SIZE];
 		memcell  in1_fft[SIZE];
 		memcell  in2_fft[SIZE];
-		memcell  in_ifft[SIZE];
 		int error_cnt = 0;
 		for (int i = 0; i < SIZE; i++){
 			in1_fft[i].f = py_f[i];
@@ -78,16 +77,17 @@ void test_iFFT(void) {
 	fpr      ifft_out[SIZE];
 	memcell  in_fft[SIZE];
 	memcell  in_ifft[SIZE];
+	memcell  tmp[SIZE];
 	int error_cnt = 0;
 	for (int i = 0; i < SIZE; i++)
 		in_fft[i].f = FFT_in[i];
-	top(in_fft, 0, 0); // FFT
+	top(in_fft, tmp, 0); // FFT
 	for (int j = 0; j < SIZE; j++)
 		fft_out[j] = in_fft[j].f;
 
 	for (int k = 0; k < SIZE; k++)
 		in_ifft[k].f = fft_out[k];
-	top(in_ifft, 0, 1); // iFFT
+	top(in_ifft, tmp, 1); // iFFT
 	for (int l = 0; l < SIZE; l++)
 		ifft_out[l] = in_ifft[l].f;
 
@@ -118,16 +118,17 @@ void test_iNTT(void) {
 	fpr      intt_out[SIZE];
 	memcell  in_ntt[SIZE];
 	memcell  in_intt[SIZE];
+	memcell  tmp[SIZE];
 	int error_cnt = 0;
 	for (int i = 0; i < SIZE; i++)
 		in_ntt[i].u16.n0 = NTT_in[i];
-	top(in_ntt, 0, 2); // NTT
+	top(in_ntt, tmp, 2); // NTT
 	for (int j = 0; j < SIZE; j++)
 		ntt_out[j] = in_ntt[j].u16.n0;
 
 	for (int k = 0; k < SIZE; k++)
 		in_intt[k].u16.n0 = ntt_out[k];
-	top(in_intt, 0, 3); // iNTT
+	top(in_intt, tmp, 3); // iNTT
 	for (int l = 0; l < SIZE; l++)
 		intt_out[l] = in_intt[l].u16.n0;
 

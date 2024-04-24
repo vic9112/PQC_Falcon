@@ -83,6 +83,7 @@ void stages(memcell in[SIZE], memcell out[SIZE], bool mode, bool inverse) {
 	PE(stage1,    out, 2, 512, mode, inverse);
 }
 
+// Processing Element
 void PE(memcell in[SIZE], memcell out[SIZE], unsigned short int in_t, unsigned short int in_m, bool mode, bool inverse) {
 #pragma HLS DEPENDENCE dependent=false type=inter variable=in
 #pragma HLS DEPENDENCE dependent=false type=inter variable=out
@@ -320,6 +321,7 @@ inline fpr negate(fpr input) {
 
 	return converter.f;
 }
+
 
 
 

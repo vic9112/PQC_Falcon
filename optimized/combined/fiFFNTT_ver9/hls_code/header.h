@@ -19,7 +19,7 @@
 
 #define wrapper
 //== Can choose whether using DSP ==/
-#define NO_DSP
+//#define NO_DSP
 //==================================/
 
 typedef double   fpr;

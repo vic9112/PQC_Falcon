@@ -4,7 +4,7 @@
 == Synthesis Summary Report of 'top'
 ================================================================
 + General Information: 
-    * Date:           Tue Apr 23 12:53:36 2024
+    * Date:           Wed Apr 24 02:51:03 2024
     * Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
     * Project:        fiFFNTT_wrapper
     * Solution:       solution1 (Vivado IP Flow Target)
@@ -15,43 +15,37 @@
 + Performance & Resource Estimates: 
     
     PS: '+' for module; 'o' for loop; '*' for dataflow
-    +------------------------+------+------+---------+-----------+----------+---------+------+----------+----------+---------+-------------+-------------+-----+
-    |         Modules        | Issue|      | Latency |  Latency  | Iteration|         | Trip |          |          |         |             |             |     |
-    |         & Loops        | Type | Slack| (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined|   BRAM   |   DSP   |      FF     |     LUT     | URAM|
-    +------------------------+------+------+---------+-----------+----------+---------+------+----------+----------+---------+-------------+-------------+-----+
-    |+ top                   |     -|  0.00|    35386|  3.539e+05|         -|    35387|     -|        no|  48 (16%)|  8 (~0%)|  30070 (12%)|  44269 (37%)|    -|
-    | + fiFFNTT              |     -|  0.21|    10750|  1.075e+05|         -|    10750|     -|        no|   18 (6%)|  3 (~0%)|   12645 (5%)|  17131 (14%)|    -|
-    |  + stages              |     -|  0.21|    10749|  1.075e+05|         -|    10749|     -|        no|   18 (6%)|  3 (~0%)|   12642 (5%)|  17117 (14%)|    -|
-    |   + PE                 |     -|  0.21|     1073|  1.073e+04|         -|     1073|     -|        no|   10 (3%)|  3 (~0%)|   12620 (5%)|  16604 (14%)|    -|
-    |    o BUTTERFLY         |     -|  7.30|     1071|  1.071e+04|        48|        2|   512|       yes|         -|        -|            -|            -|    -|
-    |     + d_add            |     -|  0.95|        3|     30.000|         -|        1|     -|       yes|         -|        -|    521 (~0%)|    824 (~0%)|    -|
-    |     + d_add            |     -|  0.95|        3|     30.000|         -|        1|     -|       yes|         -|        -|    521 (~0%)|    824 (~0%)|    -|
-    |     + d_add            |     -|  0.95|        3|     30.000|         -|        1|     -|       yes|         -|        -|    521 (~0%)|    824 (~0%)|    -|
-    |     + d_add            |     -|  0.95|        3|     30.000|         -|        1|     -|       yes|         -|        -|    521 (~0%)|    824 (~0%)|    -|
-    |     + d_add            |     -|  0.95|        3|     30.000|         -|        1|     -|       yes|         -|        -|    521 (~0%)|    824 (~0%)|    -|
-    |     + d_add            |     -|  0.95|        3|     30.000|         -|        1|     -|       yes|         -|        -|    521 (~0%)|    824 (~0%)|    -|
-    |     + u_add            |     -|  6.28|        0|      0.000|         -|        1|     -|       yes|         -|        -|            -|     39 (~0%)|    -|
-    |     + d_mul            |     -|  0.63|        3|     30.000|         -|        1|     -|       yes|         -|        -|    670 (~0%)|    2655 (2%)|    -|
-    | + in_copy              |     -|  0.00|     1033|  1.033e+04|         -|     1033|     -|        no|         -|        -|    107 (~0%)|    163 (~0%)|    -|
-    |  o INMEMCPY            |     -|  7.30|     1025|  1.025e+04|         3|        1|  1024|       yes|         -|        -|            -|            -|    -|
-    | + top_Pipeline_MUL_RE  |     -|  0.63|      525|  5.250e+03|         -|      525|     -|        no|         -|        -|    557 (~0%)|    109 (~0%)|    -|
-    |  o MUL_RE              |     -|  7.30|      523|  5.230e+03|        13|        1|   512|       yes|         -|        -|            -|            -|    -|
-    |   + d_mul              |     -|  0.63|        3|     30.000|         -|        1|     -|       yes|         -|        -|    670 (~0%)|    2655 (2%)|    -|
-    |   + d_mul              |     -|  0.63|        3|     30.000|         -|        1|     -|       yes|         -|        -|    670 (~0%)|    2655 (2%)|    -|
-    |   + d_add              |     -|  0.95|        3|     30.000|         -|        1|     -|       yes|         -|        -|    521 (~0%)|    824 (~0%)|    -|
-    | + top_Pipeline_MUL_IM  |     -|  0.63|      525|  5.250e+03|         -|      525|     -|        no|         -|        -|    559 (~0%)|    109 (~0%)|    -|
-    |  o MUL_IM              |     -|  7.30|      523|  5.230e+03|        13|        1|   512|       yes|         -|        -|            -|            -|    -|
-    |   + d_mul              |     -|  0.63|        3|     30.000|         -|        1|     -|       yes|         -|        -|    670 (~0%)|    2655 (2%)|    -|
-    |   + d_mul              |     -|  0.63|        3|     30.000|         -|        1|     -|       yes|         -|        -|    670 (~0%)|    2655 (2%)|    -|
-    |   + d_add              |     -|  0.95|        3|     30.000|         -|        1|     -|       yes|         -|        -|    521 (~0%)|    824 (~0%)|    -|
-    | + out_copy             |     -|  0.00|     1039|  1.039e+04|         -|     1039|     -|        no|         -|  2 (~0%)|    528 (~0%)|    596 (~0%)|    -|
-    |  o OUTMEMCPY           |     -|  7.30|     1037|  1.037e+04|        15|        1|  1024|       yes|         -|        -|            -|            -|    -|
-    |   + monty_mul          |     -|  4.45|        6|     60.000|         -|        1|     -|       yes|         -|  2 (~0%)|    119 (~0%)|    155 (~0%)|    -|
-    |    + u_mul             |     -|  7.30|        0|      0.000|         -|        1|     -|       yes|         -|        -|            -|            -|    -|
-    |    + u_add             |     -|  6.28|        0|      0.000|         -|        1|     -|       yes|         -|        -|            -|     39 (~0%)|    -|
-    | + top_Pipeline_NEGATE  |     -|  4.54|      514|  5.140e+03|         -|      514|     -|        no|         -|        -|     24 (~0%)|     79 (~0%)|    -|
-    |  o NEGATE              |     -|  7.30|      512|  5.120e+03|         2|        1|   512|       yes|         -|        -|            -|            -|    -|
-    +------------------------+------+------+---------+-----------+----------+---------+------+----------+----------+---------+-------------+-------------+-----+
+    +-----------------------------+------+------+---------+-----------+----------+---------+------+----------+----------+---------+-------------+-------------+-----+
+    |           Modules           | Issue|      | Latency |  Latency  | Iteration|         | Trip |          |          |         |             |             |     |
+    |           & Loops           | Type | Slack| (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined|   BRAM   |   DSP   |      FF     |     LUT     | URAM|
+    +-----------------------------+------+------+---------+-----------+----------+---------+------+----------+----------+---------+-------------+-------------+-----+
+    |+ top                        |     -|  0.00|    35890|  3.589e+05|         -|    35891|     -|        no|  48 (16%)|  8 (~0%)|  30368 (12%)|  42787 (36%)|    -|
+    | + in_copy                   |     -|  0.00|     1033|  1.033e+04|         -|     1033|     -|        no|         -|        -|    107 (~0%)|    163 (~0%)|    -|
+    |  o INMEMCPY                 |     -|  7.30|     1025|  1.025e+04|         3|        1|  1024|       yes|         -|        -|            -|            -|    -|
+    | + fiFFNTT                   |     -|  0.21|    10750|  1.075e+05|         -|    10750|     -|        no|   18 (6%)|  3 (~0%)|   12645 (5%)|  17131 (14%)|    -|
+    |  + stages                   |     -|  0.21|    10749|  1.075e+05|         -|    10749|     -|        no|   18 (6%)|  3 (~0%)|   12642 (5%)|  17117 (14%)|    -|
+    |   + PE                      |     -|  0.21|     1073|  1.073e+04|         -|     1073|     -|        no|   10 (3%)|  3 (~0%)|   12620 (5%)|  16604 (14%)|    -|
+    |    o BUTTERFLY              |     -|  7.30|     1071|  1.071e+04|        48|        2|   512|       yes|         -|        -|            -|            -|    -|
+    |     + d_add                 |     -|  0.95|        3|     30.000|         -|        1|     -|       yes|         -|        -|    521 (~0%)|    824 (~0%)|    -|
+    |     + d_add                 |     -|  0.95|        3|     30.000|         -|        1|     -|       yes|         -|        -|    521 (~0%)|    824 (~0%)|    -|
+    |     + d_add                 |     -|  0.95|        3|     30.000|         -|        1|     -|       yes|         -|        -|    521 (~0%)|    824 (~0%)|    -|
+    |     + d_add                 |     -|  0.95|        3|     30.000|         -|        1|     -|       yes|         -|        -|    521 (~0%)|    824 (~0%)|    -|
+    |     + d_add                 |     -|  0.95|        3|     30.000|         -|        1|     -|       yes|         -|        -|    521 (~0%)|    824 (~0%)|    -|
+    |     + d_add                 |     -|  0.95|        3|     30.000|         -|        1|     -|       yes|         -|        -|    521 (~0%)|    824 (~0%)|    -|
+    |     + u_add                 |     -|  6.28|        0|      0.000|         -|        1|     -|       yes|         -|        -|            -|     39 (~0%)|    -|
+    |     + d_mul                 |     -|  0.63|        3|     30.000|         -|        1|     -|       yes|         -|        -|    670 (~0%)|    2655 (2%)|    -|
+    | + out_copy                  |     -|  0.00|     1039|  1.039e+04|         -|     1039|     -|        no|         -|  2 (~0%)|    528 (~0%)|    596 (~0%)|    -|
+    |  o OUTMEMCPY                |     -|  7.30|     1037|  1.037e+04|        15|        1|  1024|       yes|         -|        -|            -|            -|    -|
+    |   + monty_mul               |     -|  4.45|        6|     60.000|         -|        1|     -|       yes|         -|  2 (~0%)|    119 (~0%)|    155 (~0%)|    -|
+    |    + u_mul                  |     -|  7.30|        0|      0.000|         -|        1|     -|       yes|         -|        -|            -|            -|    -|
+    |    + u_add                  |     -|  6.28|        0|      0.000|         -|        1|     -|       yes|         -|        -|            -|     39 (~0%)|    -|
+    | + top_Pipeline_COMPLEX_MUL  |     -|  0.63|     1556|  1.556e+04|         -|     1556|     -|        no|         -|        -|    3170 (1%)|    4866 (4%)|    -|
+    |  o COMPLEX_MUL              |     -|  7.30|     1554|  1.554e+04|        22|        3|   512|       yes|         -|        -|            -|            -|    -|
+    |   + d_add                   |     -|  0.95|        3|     30.000|         -|        1|     -|       yes|         -|        -|    521 (~0%)|    824 (~0%)|    -|
+    |   + d_mul                   |     -|  0.63|        3|     30.000|         -|        1|     -|       yes|         -|        -|    670 (~0%)|    2655 (2%)|    -|
+    | + top_Pipeline_NEGATE       |     -|  4.54|      514|  5.140e+03|         -|      514|     -|        no|         -|        -|     24 (~0%)|     79 (~0%)|    -|
+    |  o NEGATE                   |     -|  7.30|      512|  5.120e+03|         2|        1|   512|       yes|         -|        -|            -|            -|    -|
+    +-----------------------------+------+------+---------+-----------+----------+---------+------+----------+----------+---------+-------------+-------------+-----+
 
 
 ================================================================
@@ -150,49 +144,37 @@
 | Name                                    | DSP | Pragma | Variable   | Op   | Impl   | Latency |
 +-----------------------------------------+-----+--------+------------+------+--------+---------+
 | + top                                   | 8   |        |            |      |        |         |
-|  + in_copy                              | 0   |        |            |      |        |         |
-|    add_ln30_fu_145_p2                   | -   |        | add_ln30   | add  | fabric | 0       |
-|  + top_Pipeline_MUL_RE                  | 0   |        |            |      |        |         |
-|    add_ln67_fu_148_p2                   | -   |        | add_ln67   | add  | fabric | 0       |
-|   + d_mul (grp_d_mul_fu_116)            | 0   |        |            |      |        |         |
-|     dmul_64ns_64ns_64_4_no_dsp_0_U7     | -   | yes    | tmp        | dmul | fabric | 3       |
-|   + d_mul (grp_d_mul_fu_122)            | 0   |        |            |      |        |         |
-|     dmul_64ns_64ns_64_4_no_dsp_0_U7     | -   | yes    | tmp        | dmul | fabric | 3       |
-|   + d_add (grp_d_add_fu_128)            | 0   |        |            |      |        |         |
+|  + top_Pipeline_COMPLEX_MUL             | 0   |        |            |      |        |         |
+|    add_ln67_fu_217_p2                   | -   |        | add_ln67   | add  | fabric | 0       |
+|   + d_add (grp_d_add_fu_135)            | 0   |        |            |      |        |         |
 |     dadd_64ns_64ns_64_4_no_dsp_0_U11    | -   | yes    | tmp        | dadd | fabric | 3       |
-|  + top_Pipeline_MUL_IM                  | 0   |        |            |      |        |         |
-|    add_ln70_fu_166_p2                   | -   |        | add_ln70   | add  | fabric | 0       |
-|   + d_mul (grp_d_mul_fu_110)            | 0   |        |            |      |        |         |
+|   + d_mul (grp_d_mul_fu_182)            | 0   |        |            |      |        |         |
 |     dmul_64ns_64ns_64_4_no_dsp_0_U7     | -   | yes    | tmp        | dmul | fabric | 3       |
-|   + d_mul (grp_d_mul_fu_116)            | 0   |        |            |      |        |         |
-|     dmul_64ns_64ns_64_4_no_dsp_0_U7     | -   | yes    | tmp        | dmul | fabric | 3       |
-|   + d_add (grp_d_add_fu_122)            | 0   |        |            |      |        |         |
-|     dadd_64ns_64ns_64_4_no_dsp_0_U11    | -   | yes    | tmp        | dadd | fabric | 3       |
 |  + fiFFNTT                              | 3   |        |            |      |        |         |
 |   + stages                              | 3   |        |            |      |        |         |
 |    + PE                                 | 3   |        |            |      |        |         |
 |      n_2_fu_1042_p2                     | -   |        | n_2        | add  | fabric | 0       |
-|      mac_muladd_10s_10s_10ns_10_4_1_U18 | 1   |        | mul_ln117  | mul  | dsp48  | 3       |
+|      mac_muladd_10s_10s_10ns_10_4_1_U18 | 1   |        | mul_ln118  | mul  | dsp48  | 3       |
 |      mac_muladd_10s_10s_10ns_10_4_1_U18 | 1   |        | i          | add  | dsp48  | 3       |
 |      ifr_fu_1159_p2                     | -   |        | ifr        | add  | fabric | 0       |
 |      fry_fu_1168_p2                     | -   |        | fry        | add  | fabric | 0       |
-|      add_ln123_fu_1065_p2               | -   |        | add_ln123  | add  | fabric | 0       |
-|      add_ln127_fu_1076_p2               | -   |        | add_ln127  | add  | fabric | 0       |
+|      add_ln124_fu_1065_p2               | -   |        | add_ln124  | add  | fabric | 0       |
+|      add_ln128_fu_1076_p2               | -   |        | add_ln128  | add  | fabric | 0       |
 |      tmp1_fu_1263_p2                    | -   |        | tmp1       | add  | fabric | 0       |
-|      add_ln161_fu_1285_p2               | -   |        | add_ln161  | add  | fabric | 0       |
-|      sub_ln163_fu_1291_p2               | -   |        | sub_ln163  | sub  | fabric | 0       |
+|      add_ln162_fu_1285_p2               | -   |        | add_ln162  | add  | fabric | 0       |
+|      sub_ln164_fu_1291_p2               | -   |        | sub_ln164  | sub  | fabric | 0       |
 |      tmp1_6_fu_1318_p2                  | -   |        | tmp1_6     | add  | fabric | 0       |
 |      add_ln515_fu_1479_p2               | -   |        | add_ln515  | add  | fabric | 0       |
 |      sub_ln1512_fu_1493_p2              | -   |        | sub_ln1512 | sub  | fabric | 0       |
-|      mul_mul_16s_14ns_16_4_1_U19        | 1   |        | mul_ln187  | mul  | dsp48  | 3       |
+|      mul_mul_16s_14ns_16_4_1_U19        | 1   |        | mul_ln188  | mul  | dsp48  | 3       |
 |      mul_mul_16ns_14ns_30_4_1_U20       | 1   |        | tmp1_3     | mul  | dsp48  | 3       |
 |      tmp2_4_fu_1585_p2                  | -   |        | tmp2_4     | add  | fabric | 0       |
 |      tmp2_fu_1607_p2                    | -   |        | tmp2       | add  | fabric | 0       |
 |      tmp1_4_fu_1622_p2                  | -   |        | tmp1_4     | add  | fabric | 0       |
-|      add_ln219_fu_1644_p2               | -   |        | add_ln219  | add  | fabric | 0       |
-|      sub_ln221_fu_1664_p2               | -   |        | sub_ln221  | sub  | fabric | 0       |
-|      add_ln223_fu_1694_p2               | -   |        | add_ln223  | add  | fabric | 0       |
-|      add_ln213_fu_1658_p2               | -   |        | add_ln213  | add  | fabric | 0       |
+|      add_ln220_fu_1644_p2               | -   |        | add_ln220  | add  | fabric | 0       |
+|      sub_ln222_fu_1664_p2               | -   |        | sub_ln222  | sub  | fabric | 0       |
+|      add_ln224_fu_1694_p2               | -   |        | add_ln224  | add  | fabric | 0       |
+|      add_ln214_fu_1658_p2               | -   |        | add_ln214  | add  | fabric | 0       |
 |     + d_add (grp_d_add_fu_469)          | 0   |        |            |      |        |         |
 |       dadd_64ns_64ns_64_4_no_dsp_0_U11  | -   | yes    | tmp        | dadd | fabric | 3       |
 |     + d_add (grp_d_add_fu_466)          | 0   |        |            |      |        |         |
@@ -215,15 +197,17 @@
 |    grp_fu_192_p2                        | -   |        | add_ln57   | add  | fabric | 0       |
 |    grp_fu_192_p2                        | -   |        | add_ln50   | add  | fabric | 0       |
 |    exponent_1_fu_308_p2                 | -   |        | exponent_1 | add  | fabric | 0       |
-|    add_ln298_fu_314_p2                  | -   |        | add_ln298  | add  | fabric | 0       |
+|    add_ln299_fu_314_p2                  | -   |        | add_ln299  | add  | fabric | 0       |
 |   + monty_mul                           | 2   |        |            |      |        |         |
-|     mul_mul_16s_14ns_16_4_1_U50         | 1   |        | mul_ln234  | mul  | dsp48  | 3       |
-|     mul_mul_16ns_14ns_30_4_1_U51        | 1   |        | tmp1       | mul  | dsp48  | 3       |
+|     mul_mul_16s_14ns_16_4_1_U47         | 1   |        | mul_ln235  | mul  | dsp48  | 3       |
+|     mul_mul_16ns_14ns_30_4_1_U48        | 1   |        | tmp1       | mul  | dsp48  | 3       |
 |     tmp2_1_fu_75_p2                     | -   |        | tmp2_1     | add  | fabric | 0       |
 |    + u_add (tmp_u_add_fu_40)            | 0   |        |            |      |        |         |
 |      ap_return                          | -   | yes    | tmp        | add  | fabric | 0       |
 |  + top_Pipeline_NEGATE                  | 0   |        |            |      |        |         |
-|    add_ln55_fu_80_p2                    | -   |        | add_ln55   | add  | fabric | 0       |
+|    add_ln52_fu_80_p2                    | -   |        | add_ln52   | add  | fabric | 0       |
+|  + in_copy                              | 0   |        |            |      |        |         |
+|    add_ln30_fu_145_p2                   | -   |        | add_ln30   | add  | fabric | 0       |
 +-----------------------------------------+-----+--------+------------+------+--------+---------+
 
 
@@ -268,32 +252,36 @@
 | dependence | dependent=false type=inter variable=stage0          | fiFFNTT.cpp:67 in stages, stage0      |
 | dependence | dependent=false type=inter variable=stage1          | fiFFNTT.cpp:68 in stages, stage1      |
 | inline     | off                                                 | fiFFNTT.cpp:69 in stages              |
-| dependence | dependent=false type=inter variable=in              | fiFFNTT.cpp:87 in pe, in              |
-| dependence | dependent=false type=inter variable=out             | fiFFNTT.cpp:88 in pe, out             |
-| allocation | function instances=d_mul limit=3                    | fiFFNTT.cpp:90 in pe                  |
-| allocation | function instances=d_add limit=6                    | fiFFNTT.cpp:91 in pe                  |
-| allocation | function instances=u_add limit=4                    | fiFFNTT.cpp:93 in pe                  |
-| pipeline   | II=2                                                | fiFFNTT.cpp:116 in pe                 |
-| inline     | off                                                 | fiFFNTT.cpp:231 in monty_mul          |
-| inline     | off                                                 | fiFFNTT.cpp:243 in d_mul              |
-| bind_op    | variable=tmp op=dmul impl=fabric                    | fiFFNTT.cpp:245 in d_mul, tmp         |
-| inline     | off                                                 | fiFFNTT.cpp:255 in d_add              |
-| bind_op    | variable=tmp op=dadd impl=fabric                    | fiFFNTT.cpp:257 in d_add, tmp         |
-| inline     | off                                                 | fiFFNTT.cpp:267 in u_mul              |
-| bind_op    | variable=tmp op=mul impl=fabric                     | fiFFNTT.cpp:269 in u_mul, tmp         |
-| inline     | off                                                 | fiFFNTT.cpp:279 in u_add              |
-| bind_op    | variable=tmp op=add impl=fabric                     | fiFFNTT.cpp:281 in u_add, tmp         |
-| inline     |                                                     | fiFFNTT.cpp:290 in d_shift            |
-| inline     |                                                     | fiFFNTT.cpp:310 in negate             |
+| dependence | dependent=false type=inter variable=in              | fiFFNTT.cpp:88 in pe, in              |
+| dependence | dependent=false type=inter variable=out             | fiFFNTT.cpp:89 in pe, out             |
+| allocation | function instances=d_mul limit=3                    | fiFFNTT.cpp:91 in pe                  |
+| allocation | function instances=d_add limit=6                    | fiFFNTT.cpp:92 in pe                  |
+| allocation | function instances=u_add limit=4                    | fiFFNTT.cpp:94 in pe                  |
+| pipeline   | II=2                                                | fiFFNTT.cpp:117 in pe                 |
+| inline     | off                                                 | fiFFNTT.cpp:232 in monty_mul          |
+| inline     | off                                                 | fiFFNTT.cpp:244 in d_mul              |
+| bind_op    | variable=tmp op=dmul impl=fabric                    | fiFFNTT.cpp:246 in d_mul, tmp         |
+| inline     | off                                                 | fiFFNTT.cpp:256 in d_add              |
+| bind_op    | variable=tmp op=dadd impl=fabric                    | fiFFNTT.cpp:258 in d_add, tmp         |
+| inline     | off                                                 | fiFFNTT.cpp:268 in u_mul              |
+| bind_op    | variable=tmp op=mul impl=fabric                     | fiFFNTT.cpp:270 in u_mul, tmp         |
+| inline     | off                                                 | fiFFNTT.cpp:280 in u_add              |
+| bind_op    | variable=tmp op=add impl=fabric                     | fiFFNTT.cpp:282 in u_add, tmp         |
+| inline     |                                                     | fiFFNTT.cpp:291 in d_shift            |
+| inline     |                                                     | fiFFNTT.cpp:311 in negate             |
 | interface  | m_axi port=in1 bundle=gmem0 offset=slave depth=1024 | fiFFNTT_wrapper.cpp:15 in top, in1    |
 | interface  | m_axi port=in2 bundle=gmem0 offset=slave depth=1024 | fiFFNTT_wrapper.cpp:16 in top, in2    |
 | interface  | s_axilite port=mode                                 | fiFFNTT_wrapper.cpp:17 in top, mode   |
 | interface  | s_axilite port=return                               | fiFFNTT_wrapper.cpp:18 in top, return |
 | allocation | function instances=fiFFNTT limit=2                  | fiFFNTT_wrapper.cpp:20 in top         |
-| inline     | off                                                 | fiFFNTT_wrapper.cpp:22 in top         |
-| pipeline   | II=1                                                | fiFFNTT_wrapper.cpp:56 in top         |
-| pipeline   | II=1                                                | fiFFNTT_wrapper.cpp:68 in top         |
-| pipeline   | II=1                                                | fiFFNTT_wrapper.cpp:71 in top         |
+| allocation | function instances=in_copy limit=2                  | fiFFNTT_wrapper.cpp:21 in top         |
+| allocation | function instances=out_copy limit=1                 | fiFFNTT_wrapper.cpp:22 in top         |
+| inline     | off                                                 | fiFFNTT_wrapper.cpp:24 in top         |
+| pipeline   | II=1                                                | fiFFNTT_wrapper.cpp:53 in top         |
+| pipeline   | II=3                                                | fiFFNTT_wrapper.cpp:68 in top         |
+| allocation | function instances=d_mul limit=1                    | fiFFNTT_wrapper.cpp:69 in top         |
+| allocation | function instances=d_add limit=2                    | fiFFNTT_wrapper.cpp:70 in top         |
+| inline     |                                                     | fiFFNTT_wrapper.cpp:96 in negate      |
 +------------+-----------------------------------------------------+---------------------------------------+
 
 

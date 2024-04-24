@@ -1098,7 +1098,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>e20bc265</spirit:value>
+            <spirit:value>166cc62e</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1117,7 +1117,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>797d2699</spirit:value>
+            <spirit:value>efd5b6e3</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1136,7 +1136,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>08329307</spirit:value>
+            <spirit:value>16ce60da</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1155,7 +1155,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>e5889f6e</spirit:value>
+            <spirit:value>2c708af5</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -2547,11 +2547,7 @@
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/top_top_Pipeline_MUL_IM.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/top_top_Pipeline_MUL_RE.v</spirit:name>
+        <spirit:name>hdl/verilog/top_top_Pipeline_COMPLEX_MUL.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -2718,12 +2714,7 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/top_top_Pipeline_MUL_IM.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/top_top_Pipeline_MUL_RE.v</spirit:name>
+        <spirit:name>hdl/verilog/top_top_Pipeline_COMPLEX_MUL.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -2891,11 +2882,7 @@
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/top_top_Pipeline_MUL_IM.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/vhdl/top_top_Pipeline_MUL_RE.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/top_top_Pipeline_COMPLEX_MUL.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -2921,7 +2908,7 @@
       <spirit:file>
         <spirit:name>hdl/vhdl/top.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_9523d6f4</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_1184fa22</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -3047,12 +3034,7 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/top_top_Pipeline_MUL_IM.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/vhdl/top_top_Pipeline_MUL_RE.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/top_top_Pipeline_COMPLEX_MUL.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -3325,8 +3307,8 @@
       </xilinx:taxonomies>
       <xilinx:displayName>Top</xilinx:displayName>
       <xilinx:definitionSource>HLS</xilinx:definitionSource>
-      <xilinx:coreRevision>2113527065</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2024-04-23T18:05:36Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>2113527876</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2024-04-24T07:36:37Z</xilinx:coreCreationDateTime>
       <xilinx:sdxKernelAttributes>
         <xilinx:sdx_kernel>true</xilinx:sdx_kernel>
         <xilinx:sdx_kernel_type>hls</xilinx:sdx_kernel_type>
@@ -3337,7 +3319,7 @@
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="223f88db"/>
       <xilinx:checksum xilinx:scope="addressSpaces" xilinx:value="02c0c7c5"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="eaec78a8"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="20c42eeb"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="b4a6a4ee"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="28670b18"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="48dd6ef1"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="9f43f5ba"/>

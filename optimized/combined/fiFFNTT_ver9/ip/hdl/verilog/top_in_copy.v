@@ -135,7 +135,7 @@ output  [9:0] buf1_address0;
 output   buf1_ce0;
 output  [7:0] buf1_we0;
 output  [63:0] buf1_d0;
-input  [0:0] mode;
+input   mode;
 
 reg ap_done;
 reg ap_idle;
