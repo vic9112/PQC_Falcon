@@ -270,6 +270,7 @@ inline double Negate(double input){
 }
 
 // if req, do two 32-bit operation: [a1, a2] + [b1, b2] = [a1 + b1, a1 - b1]
+
 uint64_t adder(uint64_t a, uint64_t b, int req)
 {
 #pragma HLS INLINE off
