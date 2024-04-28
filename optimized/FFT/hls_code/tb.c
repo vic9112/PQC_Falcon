@@ -8,7 +8,7 @@
 #include "header.h"
 #include "tb_data.h"
 
-
+/*
 void test_FFT(void)
 {
 	fpr fft_out[1024];
@@ -24,7 +24,8 @@ void test_FFT(void)
     else				printf("Failed!!\n");
     printf("Test Finished \n");
 }
-
+*/
+/*
 void test_NTT(void) {
 	uint16_t *ntt_in1, *ntt_in2, *ntt_out1;
 	ntt_in1 = (uint16_t *)NTT_in;
@@ -46,9 +47,9 @@ void test_NTT(void) {
 	else				printf("Failed!!");
 	printf("\n\n");
 }
+*/
 
 
-/*
 void test_iFFT(void) {
 	iFFT(FFT_out, 10);
 	int fo, fi;
@@ -63,7 +64,7 @@ void test_iFFT(void) {
 	}
 	printf("Test Finished \n");
 }
-*/
+
 
 void test_index(int t, int m) {
 	int hm, ht;
@@ -142,9 +143,9 @@ main(void) {
 
 	// test_python_h();
 	// test_FFT();
-	test_NTT();
+	// test_NTT();
 	// test_gm();
-	// test_iFFT();
+	test_iFFT();
 	// test_FFT_skeleton();
 /*
 	test_index(512, 2);

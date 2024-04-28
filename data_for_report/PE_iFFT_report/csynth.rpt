@@ -1,0 +1,248 @@
+
+
+================================================================
+== Synthesis Summary Report of 'iFFT_stub'
+================================================================
++ General Information: 
+    * Date:           Sun Apr 28 09:08:39 2024
+    * Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
+    * Project:        test
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: zynquplus
+    * Target device:  xck26-sfvc784-2LV-c
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +-------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+----------+---------+------------+-------------+-----+
+    |                  Modules                  | Issue|      | Latency |  Latency  | Iteration|         | Trip |          |          |         |            |             |     |
+    |                  & Loops                  | Type | Slack| (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined|   BRAM   |   DSP   |     FF     |     LUT     | URAM|
+    +-------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+----------+---------+------------+-------------+-----+
+    |+ iFFT_stub*                               |     -|  0.26|    13589|  1.359e+05|         -|    13590|     -|  dataflow|  80 (27%)|  62 (4%)|  13140 (5%)|  13027 (11%)|    -|
+    | + Loop_1_proc1                            |     -|  0.26|    13589|  1.359e+05|         -|    13589|     -|        no|  80 (27%)|  62 (4%)|  13140 (5%)|  13027 (11%)|    -|
+    |  + Loop_1_proc1_Pipeline_1                |     -|  4.83|      514|  5.140e+03|         -|      514|     -|        no|         -|        -|    23 (~0%)|     66 (~0%)|    -|
+    |   o Loop 1                                |     -|  7.30|      512|  5.120e+03|         2|        1|   512|       yes|         -|        -|           -|            -|    -|
+    |  + Loop_1_proc1_Pipeline_2                |     -|  4.83|      514|  5.140e+03|         -|      514|     -|        no|         -|        -|    23 (~0%)|     66 (~0%)|    -|
+    |   o Loop 1                                |     -|  7.30|      512|  5.120e+03|         2|        1|   512|       yes|         -|        -|           -|            -|    -|
+    |  + iFFT_stage_1                           |     -|  0.26|     5121|  5.121e+04|         -|     5121|     -|        no|    8 (2%)|        -|  1172 (~0%)|    544 (~0%)|    -|
+    |   o loop2                                 |     -|  7.30|     5120|  5.120e+04|        20|        -|   256|        no|         -|        -|           -|            -|    -|
+    |    + iFFT_stage_1_Pipeline_loop3          |     -|  0.26|       17|    170.000|         -|       17|     -|        no|         -|        -|  1002 (~0%)|    266 (~0%)|    -|
+    |     o loop3                               |     -|  7.30|       15|    150.000|        16|        1|     1|       yes|         -|        -|           -|            -|    -|
+    |  + iFFT_stage_2                           |     -|  0.26|     2689|  2.689e+04|         -|     2689|     -|        no|    8 (2%)|        -|  1006 (~0%)|    485 (~0%)|    -|
+    |   o loop2                                 |     -|  7.30|     2688|  2.688e+04|        21|        -|   128|        no|         -|        -|           -|            -|    -|
+    |    + iFFT_stage_2_Pipeline_loop3          |     -|  0.26|       18|    180.000|         -|       18|     -|        no|         -|        -|   826 (~0%)|    209 (~0%)|    -|
+    |     o loop3                               |     -|  7.30|       16|    160.000|        16|        1|     2|       yes|         -|        -|           -|            -|    -|
+    |  + iFFT_stage_3                           |     -|  0.26|     1473|  1.473e+04|         -|     1473|     -|        no|    8 (2%)|        -|  1005 (~0%)|    483 (~0%)|    -|
+    |   o loop2                                 |     -|  7.30|     1472|  1.472e+04|        23|        -|    64|        no|         -|        -|           -|            -|    -|
+    |    + iFFT_stage_3_Pipeline_loop3          |     -|  0.26|       20|    200.000|         -|       20|     -|        no|         -|        -|   826 (~0%)|    209 (~0%)|    -|
+    |     o loop3                               |     -|  7.30|       18|    180.000|        16|        1|     4|       yes|         -|        -|           -|            -|    -|
+    |  + iFFT_stage_4                           |     -|  0.26|      865|  8.650e+03|         -|      865|     -|        no|    8 (2%)|        -|  1004 (~0%)|    480 (~0%)|    -|
+    |   o loop2                                 |     -|  7.30|      864|  8.640e+03|        27|        -|    32|        no|         -|        -|           -|            -|    -|
+    |    + iFFT_stage_4_Pipeline_loop3          |     -|  0.26|       24|    240.000|         -|       24|     -|        no|         -|        -|   826 (~0%)|    209 (~0%)|    -|
+    |     o loop3                               |     -|  7.30|       22|    220.000|        16|        1|     8|       yes|         -|        -|           -|            -|    -|
+    |  + iFFT_stage_5                           |     -|  0.26|      561|  5.610e+03|         -|      561|     -|        no|    8 (2%)|        -|  1003 (~0%)|    478 (~0%)|    -|
+    |   o loop2                                 |     -|  7.30|      560|  5.600e+03|        35|        -|    16|        no|         -|        -|           -|            -|    -|
+    |    + iFFT_stage_5_Pipeline_loop3          |     -|  0.26|       32|    320.000|         -|       32|     -|        no|         -|        -|   826 (~0%)|    209 (~0%)|    -|
+    |     o loop3                               |     -|  7.30|       30|    300.000|        16|        1|    16|       yes|         -|        -|           -|            -|    -|
+    |  + iFFT_stage_6                           |     -|  0.26|      409|  4.090e+03|         -|      409|     -|        no|    8 (2%)|        -|  1002 (~0%)|    476 (~0%)|    -|
+    |   o loop2                                 |     -|  7.30|      408|  4.080e+03|        51|        -|     8|        no|         -|        -|           -|            -|    -|
+    |    + iFFT_stage_6_Pipeline_loop3          |     -|  0.26|       48|    480.000|         -|       48|     -|        no|         -|        -|   826 (~0%)|    209 (~0%)|    -|
+    |     o loop3                               |     -|  7.30|       46|    460.000|        16|        1|    32|       yes|         -|        -|           -|            -|    -|
+    |  + iFFT_stage_7                           |     -|  0.26|      333|  3.330e+03|         -|      333|     -|        no|    8 (2%)|        -|  1001 (~0%)|    473 (~0%)|    -|
+    |   o loop2                                 |     -|  7.30|      332|  3.320e+03|        83|        -|     4|        no|         -|        -|           -|            -|    -|
+    |    + iFFT_stage_7_Pipeline_loop3          |     -|  0.26|       80|    800.000|         -|       80|     -|        no|         -|        -|   826 (~0%)|    209 (~0%)|    -|
+    |     o loop3                               |     -|  7.30|       78|    780.000|        16|        1|    64|       yes|         -|        -|           -|            -|    -|
+    |  + iFFT_stage_8                           |     -|  0.26|      295|  2.950e+03|         -|      295|     -|        no|    8 (2%)|        -|  1000 (~0%)|    470 (~0%)|    -|
+    |   o loop2                                 |     -|  7.30|      294|  2.940e+03|       147|        -|     2|        no|         -|        -|           -|            -|    -|
+    |    + iFFT_stage_8_Pipeline_loop3          |     -|  0.26|      144|  1.440e+03|         -|      144|     -|        no|         -|        -|   826 (~0%)|    209 (~0%)|    -|
+    |     o loop3                               |     -|  7.30|      142|  1.420e+03|        16|        1|   128|       yes|         -|        -|           -|            -|    -|
+    |  + Loop_1_proc1_Pipeline_loop3            |     -|  0.26|      272|  2.720e+03|         -|      272|     -|        no|         -|        -|   570 (~0%)|    139 (~0%)|    -|
+    |   o loop3                                 |     -|  7.30|      270|  2.700e+03|        16|        1|   256|       yes|         -|        -|           -|            -|    -|
+    |  + Loop_1_proc1_Pipeline_VITIS_LOOP_53_2  |     -|  0.26|      520|  5.200e+03|         -|      520|     -|        no|         -|        -|   428 (~0%)|    130 (~0%)|    -|
+    |   o VITIS_LOOP_53_2                       |     -|  7.30|      518|  5.180e+03|         8|        1|   512|       yes|         -|        -|           -|            -|    -|
+    +-------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+----------+---------+------------+-------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* AP_MEMORY
++------------+----------+
+| Interface  | Bitwidth |
++------------+----------+
+| f_address0 | 10       |
+| f_address1 | 10       |
+| f_d0       | 64       |
+| f_d1       | 64       |
+| f_q0       | 64       |
+| f_q1       | 64       |
++------------+----------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------------------------------+
+| Interface | Type       | Ports                             |
++-----------+------------+-----------------------------------+
+| ap_clk    | clock      | ap_clk                            |
+| ap_rst    | reset      | ap_rst                            |
+| ap_ctrl   | ap_ctrl_hs | ap_done ap_idle ap_ready ap_start |
++-----------+------------+-----------------------------------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+----------+
+| Argument | Direction | Datatype |
++----------+-----------+----------+
+| f        | inout     | double*  |
++----------+-----------+----------+
+
+* SW-to-HW Mapping
++----------+--------------+---------+----------+
+| Argument | HW Interface | HW Type | HW Usage |
++----------+--------------+---------+----------+
+| f        | f_address0   | port    | offset   |
+| f        | f_ce0        | port    |          |
+| f        | f_d0         | port    |          |
+| f        | f_q0         | port    |          |
+| f        | f_we0        | port    |          |
+| f        | f_address1   | port    | offset   |
+| f        | f_ce1        | port    |          |
+| f        | f_d1         | port    |          |
+| f        | f_q1         | port    |          |
+| f        | f_we1        | port    |          |
++----------+--------------+---------+----------+
+
+
+================================================================
+== Bind Op Report
+================================================================
++-------------------------------------------+-----+--------+-------------+-----+--------+---------+
+| Name                                      | DSP | Pragma | Variable    | Op  | Impl   | Latency |
++-------------------------------------------+-----+--------+-------------+-----+--------+---------+
+| + iFFT_stub                               | 62  |        |             |     |        |         |
+|  + Loop_1_proc1                           | 62  |        |             |     |        |         |
+|   + Loop_1_proc1_Pipeline_1               | 0   |        |             |     |        |         |
+|     empty_fu_76_p2                        | -   |        | empty       | add | fabric | 0       |
+|   + Loop_1_proc1_Pipeline_2               | 0   |        |             |     |        |         |
+|     empty_fu_80_p2                        | -   |        | empty       | add | fabric | 0       |
+|   + iFFT_stage_1                          | 0   |        |             |     |        |         |
+|     add_ln62_fu_115_p2                    | -   |        | add_ln62    | add | fabric | 0       |
+|     add_ln72_fu_203_p2                    | -   |        | add_ln72    | add | fabric | 0       |
+|     add_ln62_15_fu_210_p2                 | -   |        | add_ln62_15 | add | fabric | 0       |
+|    + iFFT_stage_1_Pipeline_loop3          | 0   |        |             |     |        |         |
+|      j_9_fu_238_p2                        | -   |        | j_9         | add | fabric | 0       |
+|   + iFFT_stage_2                          | 0   |        |             |     |        |         |
+|     add_ln62_fu_124_p2                    | -   |        | add_ln62    | add | fabric | 0       |
+|     add_ln62_13_fu_206_p2                 | -   |        | add_ln62_13 | add | fabric | 0       |
+|     add_ln62_14_fu_212_p2                 | -   |        | add_ln62_14 | add | fabric | 0       |
+|    + iFFT_stage_2_Pipeline_loop3          | 0   |        |             |     |        |         |
+|      add_ln75_fu_248_p2                   | -   |        | add_ln75    | add | fabric | 0       |
+|      j_8_fu_260_p2                        | -   |        | j_8         | add | fabric | 0       |
+|   + iFFT_stage_3                          | 0   |        |             |     |        |         |
+|     add_ln62_fu_124_p2                    | -   |        | add_ln62    | add | fabric | 0       |
+|     add_ln62_11_fu_206_p2                 | -   |        | add_ln62_11 | add | fabric | 0       |
+|     add_ln62_12_fu_212_p2                 | -   |        | add_ln62_12 | add | fabric | 0       |
+|    + iFFT_stage_3_Pipeline_loop3          | 0   |        |             |     |        |         |
+|      add_ln75_fu_248_p2                   | -   |        | add_ln75    | add | fabric | 0       |
+|      j_7_fu_260_p2                        | -   |        | j_7         | add | fabric | 0       |
+|   + iFFT_stage_4                          | 0   |        |             |     |        |         |
+|     add_ln62_fu_124_p2                    | -   |        | add_ln62    | add | fabric | 0       |
+|     add_ln62_9_fu_206_p2                  | -   |        | add_ln62_9  | add | fabric | 0       |
+|     add_ln62_10_fu_212_p2                 | -   |        | add_ln62_10 | add | fabric | 0       |
+|    + iFFT_stage_4_Pipeline_loop3          | 0   |        |             |     |        |         |
+|      add_ln75_fu_248_p2                   | -   |        | add_ln75    | add | fabric | 0       |
+|      j_6_fu_260_p2                        | -   |        | j_6         | add | fabric | 0       |
+|   + iFFT_stage_5                          | 0   |        |             |     |        |         |
+|     add_ln62_fu_124_p2                    | -   |        | add_ln62    | add | fabric | 0       |
+|     add_ln62_7_fu_206_p2                  | -   |        | add_ln62_7  | add | fabric | 0       |
+|     add_ln62_8_fu_212_p2                  | -   |        | add_ln62_8  | add | fabric | 0       |
+|    + iFFT_stage_5_Pipeline_loop3          | 0   |        |             |     |        |         |
+|      add_ln75_fu_248_p2                   | -   |        | add_ln75    | add | fabric | 0       |
+|      j_5_fu_260_p2                        | -   |        | j_5         | add | fabric | 0       |
+|   + iFFT_stage_6                          | 0   |        |             |     |        |         |
+|     add_ln62_fu_124_p2                    | -   |        | add_ln62    | add | fabric | 0       |
+|     add_ln62_5_fu_206_p2                  | -   |        | add_ln62_5  | add | fabric | 0       |
+|     add_ln62_6_fu_212_p2                  | -   |        | add_ln62_6  | add | fabric | 0       |
+|    + iFFT_stage_6_Pipeline_loop3          | 0   |        |             |     |        |         |
+|      add_ln75_fu_248_p2                   | -   |        | add_ln75    | add | fabric | 0       |
+|      j_4_fu_260_p2                        | -   |        | j_4         | add | fabric | 0       |
+|   + iFFT_stage_7                          | 0   |        |             |     |        |         |
+|     add_ln62_fu_124_p2                    | -   |        | add_ln62    | add | fabric | 0       |
+|     add_ln62_3_fu_206_p2                  | -   |        | add_ln62_3  | add | fabric | 0       |
+|     add_ln62_4_fu_212_p2                  | -   |        | add_ln62_4  | add | fabric | 0       |
+|    + iFFT_stage_7_Pipeline_loop3          | 0   |        |             |     |        |         |
+|      add_ln75_fu_248_p2                   | -   |        | add_ln75    | add | fabric | 0       |
+|      j_3_fu_260_p2                        | -   |        | j_3         | add | fabric | 0       |
+|   + iFFT_stage_8                          | 0   |        |             |     |        |         |
+|     add_ln62_fu_122_p2                    | -   |        | add_ln62    | add | fabric | 0       |
+|     add_ln62_1_fu_204_p2                  | -   |        | add_ln62_1  | add | fabric | 0       |
+|     add_ln62_2_fu_210_p2                  | -   |        | add_ln62_2  | add | fabric | 0       |
+|    + iFFT_stage_8_Pipeline_loop3          | 0   |        |             |     |        |         |
+|      add_ln75_fu_248_p2                   | -   |        | add_ln75    | add | fabric | 0       |
+|      j_2_fu_260_p2                        | -   |        | j_2         | add | fabric | 0       |
+|   + Loop_1_proc1_Pipeline_loop3           | 0   |        |             |     |        |         |
+|     add_ln72_fu_212_p2                    | -   |        | add_ln72    | add | fabric | 0       |
+|   + Loop_1_proc1_Pipeline_VITIS_LOOP_53_2 | 0   |        |             |     |        |         |
+|     u_2_fu_123_p2                         | -   |        | u_2         | add | fabric | 0       |
++-------------------------------------------+-----+--------+-------------+-----+--------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
++-------------------+------+------+--------+-------------+---------+------+---------+
+| Name              | BRAM | URAM | Pragma | Variable    | Storage | Impl | Latency |
++-------------------+------+------+--------+-------------+---------+------+---------+
+| + iFFT_stub       | 80   | 0    |        |             |         |      |         |
+|  + Loop_1_proc1   | 80   | 0    |        |             |         |      |         |
+|    Stage_R_U      | 4    | -    |        | Stage_R     | ram_t2p | auto | 1       |
+|    Stage_I_U      | 4    | -    |        | Stage_I     | ram_t2p | auto | 1       |
+|    Stage_R_1_U    | 4    | -    |        | Stage_R_1   | ram_t2p | auto | 1       |
+|    Stage_I_1_U    | 4    | -    |        | Stage_I_1   | ram_t2p | auto | 1       |
+|   + iFFT_stage_1  | 8    | 0    |        |             |         |      |         |
+|     fpr_gm_tab_U  | 8    | -    |        | fpr_gm_tab  | rom_2p  | auto | 1       |
+|   + iFFT_stage_2  | 8    | 0    |        |             |         |      |         |
+|     fpr_gm_tab2_U | 8    | -    |        | fpr_gm_tab2 | rom_2p  | auto | 1       |
+|   + iFFT_stage_3  | 8    | 0    |        |             |         |      |         |
+|     fpr_gm_tab3_U | 8    | -    |        | fpr_gm_tab3 | rom_2p  | auto | 1       |
+|   + iFFT_stage_4  | 8    | 0    |        |             |         |      |         |
+|     fpr_gm_tab4_U | 8    | -    |        | fpr_gm_tab4 | rom_2p  | auto | 1       |
+|   + iFFT_stage_5  | 8    | 0    |        |             |         |      |         |
+|     fpr_gm_tab5_U | 8    | -    |        | fpr_gm_tab5 | rom_2p  | auto | 1       |
+|   + iFFT_stage_6  | 8    | 0    |        |             |         |      |         |
+|     fpr_gm_tab6_U | 8    | -    |        | fpr_gm_tab6 | rom_2p  | auto | 1       |
+|   + iFFT_stage_7  | 8    | 0    |        |             |         |      |         |
+|     fpr_gm_tab7_U | 8    | -    |        | fpr_gm_tab7 | rom_2p  | auto | 1       |
+|   + iFFT_stage_8  | 8    | 0    |        |             |         |      |         |
+|     fpr_gm_tab8_U | 8    | -    |        | fpr_gm_tab8 | rom_2p  | auto | 1       |
++-------------------+------+------+--------+-------------+---------+------+---------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Pragmas with Warnings
++----------+---------+---------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Type     | Options | Location                                                            | Messages                                                                                                                                                                           |
++----------+---------+---------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| dataflow |         | collabrate_repository/optimized/IFFT/hls_code/fft.c:19 in ifft_stub | Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region |
+|          |         |                                                                     | There are a total of 8 such instances of non-canonical statements in the dataflow region                                                                                           |
++----------+---------+---------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+* Valid Pragma Syntax
++-----------------+---------------------------------+------------------------------------------------------------------------------+
+| Type            | Options                         | Location                                                                     |
++-----------------+---------------------------------+------------------------------------------------------------------------------+
+| array_partition | variable=Stage_R dim=1 complete | collabrate_repository/optimized/IFFT/hls_code/fft.c:24 in ifft_stub, Stage_R |
+| array_partition | variable=Stage_I dim=1 complete | collabrate_repository/optimized/IFFT/hls_code/fft.c:25 in ifft_stub, Stage_I |
+| unroll          |                                 | collabrate_repository/optimized/IFFT/hls_code/fft.c:37 in ifft_stub          |
+| pipeline        |                                 | collabrate_repository/optimized/IFFT/hls_code/fft.c:73 in ifft_stage         |
+| loop_tripcount  | max=1                           | collabrate_repository/optimized/IFFT/hls_code/fft.c:74 in ifft_stage         |
+| inline          | off                             | collabrate_repository/optimized/IFFT/hls_code/fpr.c:47 in fpr_of             |
+| inline          | off                             | collabrate_repository/optimized/IFFT/hls_code/fpr.c:113 in fpr_floor         |
++-----------------+---------------------------------+------------------------------------------------------------------------------+
+
+

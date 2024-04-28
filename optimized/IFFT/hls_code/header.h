@@ -145,7 +145,7 @@ void FFT(fpr f[1024], unsigned logn);
 void FFT_streaming(fpr f[1024], unsigned logn);
 void iFFT_streaming(fpr f[1024], unsigned logn);
 void iFFT_stage(fpr in_r[], fpr in_i[],fpr out_r[],fpr out_i[], int hn, int dt, int t, int hm);
-void iFFT_top(fpr f[1024]);
+void iFFT_stub(fpr f[1024]);
 
 // void FFT_streaming(fpr f[1024], unsigned logn);
 void FFT_stage(fpr in_r[512], fpr in_i[512],fpr out_r[512],fpr out_i[512], int hm, int ht, int t, int m);

@@ -1,0 +1,203 @@
+
+
+================================================================
+== Synthesis Summary Report of 'FFT'
+================================================================
++ General Information: 
+    * Date:           Sun Apr 28 08:40:00 2024
+    * Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
+    * Project:        test
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: zynquplus
+    * Target device:  xck26-sfvc784-2LVI-i
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +-------------------+------+------+---------+-----------+----------+---------+------+----------+----------+---------+-----------+------------+-----+
+    |      Modules      | Issue|      | Latency |  Latency  | Iteration|         | Trip |          |          |         |           |            |     |
+    |      & Loops      | Type | Slack| (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined|   BRAM   |   DSP   |     FF    |     LUT    | URAM|
+    +-------------------+------+------+---------+-----------+----------+---------+------+----------+----------+---------+-----------+------------+-----+
+    |+ FFT              |     -|  0.00|     4757|  4.757e+04|         -|     4758|     -|        no|  40 (13%)|  61 (4%)|  8414 (3%)|  11456 (9%)|    -|
+    | + FFT_Pipeline_1  |     -|  0.00|      515|  5.150e+03|         -|      515|     -|        no|         -|        -|  100 (~0%)|    79 (~0%)|    -|
+    |  o Loop 1         |     -|  7.30|      513|  5.130e+03|         3|        1|   512|       yes|         -|        -|          -|           -|    -|
+    | + FFT_Pipeline_2  |     -|  0.00|      515|  5.150e+03|         -|      515|     -|        no|         -|        -|  100 (~0%)|    79 (~0%)|    -|
+    |  o Loop 1         |     -|  7.30|      513|  5.130e+03|         3|        1|   512|       yes|         -|        -|          -|           -|    -|
+    | + fft_10_stages   |     -|  0.26|     2663|  2.663e+04|         -|     2663|     -|        no|   24 (8%)|  61 (4%)|  6894 (2%)|   8846 (7%)|    -|
+    |  + fft_stage      |     -|  0.26|      294|  2.940e+03|         -|      294|     -|        no|    8 (2%)|  61 (4%)|  6875 (2%)|   8157 (6%)|    -|
+    |   o SECTION       |     -|  7.30|      292|  2.920e+03|        38|        1|   256|       yes|         -|        -|          -|           -|    -|
+    |    + complex_mul  |     -|  0.26|       14|    140.000|         -|        1|     -|       yes|         -|  48 (3%)|  4146 (1%)|   4615 (3%)|    -|
+    | + FFT_Pipeline_3  |     -|  0.00|      515|  5.150e+03|         -|      515|     -|        no|         -|        -|   80 (~0%)|    77 (~0%)|    -|
+    |  o Loop 1         |     -|  7.30|      513|  5.130e+03|         3|        1|   512|       yes|         -|        -|          -|           -|    -|
+    | + FFT_Pipeline_4  |     -|  0.00|      515|  5.150e+03|         -|      515|     -|        no|         -|        -|   80 (~0%)|    77 (~0%)|    -|
+    |  o Loop 1         |     -|  7.30|      513|  5.130e+03|         3|        1|   512|       yes|         -|        -|          -|           -|    -|
+    +-------------------+------+------+---------+-----------+----------+---------+------+----------+----------+---------+-----------+------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* M_AXI
++-------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+
+| Interface   | Data Width | Address Width | Latency | Offset | Register | Max Widen | Max Read     | Max Write    | Num Read    | Num Write   |
+|             | (SW->HW)   |               |         |        |          | Bitwidth  | Burst Length | Burst Length | Outstanding | Outstanding |
++-------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+
+| m_axi_gmem0 | 64 -> 64   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          |
++-------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+
+
+* S_AXILITE Interfaces
++---------------+------------+---------------+--------+----------+
+| Interface     | Data Width | Address Width | Offset | Register |
++---------------+------------+---------------+--------+----------+
+| s_axi_control | 32         | 5             | 16     | 0        |
++---------------+------------+---------------+--------+----------+
+
+* S_AXILITE Registers
++---------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| Interface     | Register | Offset | Width | Access | Description                      | Bit Fields                                                           |
++---------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| s_axi_control | CTRL     | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 9=INTERRUPT |
+| s_axi_control | GIER     | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                             |
+| s_axi_control | IP_IER   | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                        |
+| s_axi_control | IP_ISR   | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                        |
+| s_axi_control | f_1      | 0x10   | 32    | W      | Data signal of f                 |                                                                      |
+| s_axi_control | f_2      | 0x14   | 32    | W      | Data signal of f                 |                                                                      |
++---------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------+
+| Interface | Type       | Ports     |
++-----------+------------+-----------+
+| ap_clk    | clock      | ap_clk    |
+| ap_rst_n  | reset      | ap_rst_n  |
+| interrupt | interrupt  | interrupt |
+| ap_ctrl   | ap_ctrl_hs |           |
++-----------+------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+----------+
+| Argument | Direction | Datatype |
++----------+-----------+----------+
+| f        | inout     | double*  |
++----------+-----------+----------+
+
+* SW-to-HW Mapping
++----------+---------------+-----------+----------+-------------------------------+
+| Argument | HW Interface  | HW Type   | HW Usage | HW Info                       |
++----------+---------------+-----------+----------+-------------------------------+
+| f        | m_axi_gmem0   | interface |          |                               |
+| f        | s_axi_control | register  | offset   | name=f_1 offset=0x10 range=32 |
+| f        | s_axi_control | register  | offset   | name=f_2 offset=0x14 range=32 |
++----------+---------------+-----------+----------+-------------------------------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+* Inferred Burst Summary
++--------------+-----------+-----------+--------+-------+-------------------------------------------------------------------+
+| HW Interface | Loop      | Direction | Length | Width | Location                                                          |
++--------------+-----------+-----------+--------+-------+-------------------------------------------------------------------+
+| m_axi_gmem0  | anonymous | read      | 512    | 64    | collabrate_repository/optimized/FFT/hls_code/FFT_optimized.c:38:2 |
+| m_axi_gmem0  | anonymous | read      | 512    | 64    | collabrate_repository/optimized/FFT/hls_code/FFT_optimized.c:39:2 |
+| m_axi_gmem0  | anonymous | write     | 512    | 64    | collabrate_repository/optimized/FFT/hls_code/FFT_optimized.c:44:2 |
+| m_axi_gmem0  | anonymous | write     | 512    | 64    | collabrate_repository/optimized/FFT/hls_code/FFT_optimized.c:45:2 |
++--------------+-----------+-----------+--------+-------+-------------------------------------------------------------------+
+
+* Inferred Bursts and Widening Missed
++--------------+----------+-----------+----------------------------------------------------------------------------------------------------------+------------+-------------------------------------------------------------------+
+| HW Interface | Variable | Loop      | Problem                                                                                                  | Resolution | Location                                                          |
++--------------+----------+-----------+----------------------------------------------------------------------------------------------------------+------------+-------------------------------------------------------------------+
+| m_axi_gmem0  | f        | anonymous | Could not widen since type double size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | collabrate_repository/optimized/FFT/hls_code/FFT_optimized.c:45:2 |
+| m_axi_gmem0  | f        | anonymous | Could not widen since type double size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | collabrate_repository/optimized/FFT/hls_code/FFT_optimized.c:44:2 |
+| m_axi_gmem0  | f        | anonymous | Could not widen since type double size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | collabrate_repository/optimized/FFT/hls_code/FFT_optimized.c:39:2 |
+| m_axi_gmem0  | f        | anonymous | Could not widen since type double size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | collabrate_repository/optimized/FFT/hls_code/FFT_optimized.c:38:2 |
++--------------+----------+-----------+----------------------------------------------------------------------------------------------------------+------------+-------------------------------------------------------------------+
+
+    * Resolution URL: www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=XXX-YYY.html (replace XXX-YYY with column value)
+
+================================================================
+== Bind Op Report
+================================================================
++------------------------------------------+-----+--------+-------------------+------+---------+---------+
+| Name                                     | DSP | Pragma | Variable          | Op   | Impl    | Latency |
++------------------------------------------+-----+--------+-------------------+------+---------+---------+
+| + FFT                                    | 61  |        |                   |      |         |         |
+|   add_ln39_fu_166_p2                     | -   |        | add_ln39          | add  | fabric  | 0       |
+|  + FFT_Pipeline_1                        | 0   |        |                   |      |         |         |
+|    empty_25_fu_94_p2                     | -   |        | empty_25          | add  | fabric  | 0       |
+|  + FFT_Pipeline_2                        | 0   |        |                   |      |         |         |
+|    empty_23_fu_94_p2                     | -   |        | empty_23          | add  | fabric  | 0       |
+|  + fft_10_stages                         | 61  |        |                   |      |         |         |
+|   + fft_stage                            | 61  |        |                   |      |         |         |
+|     n_2_fu_248_p2                        | -   |        | n_2               | add  | fabric  | 0       |
+|     mac_muladd_9ns_9s_9ns_9_4_1_U27      | 1   |        | mul_ln84          | mul  | dsp48   | 3       |
+|     mac_muladd_9ns_9s_9ns_9_4_1_U27      | 1   |        | i                 | add  | dsp48   | 3       |
+|     add_ln86_fu_268_p2                   | -   |        | add_ln86          | add  | fabric  | 0       |
+|     add_ln90_fu_279_p2                   | -   |        | add_ln90          | add  | fabric  | 0       |
+|     dadd_64ns_64ns_64_5_full_dsp_1_x_U22 | 3   |        | add               | dadd | fulldsp | 4       |
+|     dadd_64ns_64ns_64_5_full_dsp_1_x_U23 | 3   |        | add1              | dadd | fulldsp | 4       |
+|     dsub_64ns_64ns_64_5_full_dsp_1_x_U24 | 3   |        | sub               | dsub | fulldsp | 4       |
+|     dsub_64ns_64ns_64_5_full_dsp_1_x_U25 | 3   |        | sub1              | dsub | fulldsp | 4       |
+|    + complex_mul                         | 48  |        |                   |      |         |         |
+|      dsub_64ns_64ns_64_5_full_dsp_1_U7   | 3   |        | sub_y             | dsub | fulldsp | 4       |
+|      dadd_64ns_64ns_64_5_full_dsp_1_U8   | 3   |        | add_y             | dadd | fulldsp | 4       |
+|      dsub_64ns_64ns_64_5_full_dsp_1_U9   | 3   |        | sub_x             | dsub | fulldsp | 4       |
+|      dmul_64ns_64ns_64_5_max_dsp_1_U12   | 11  |        | mul1              | dmul | maxdsp  | 4       |
+|      dmul_64ns_64ns_64_5_max_dsp_1_U13   | 11  |        | mul2              | dmul | maxdsp  | 4       |
+|      dmul_64ns_64ns_64_5_max_dsp_1_U14   | 11  |        | mul3              | dmul | maxdsp  | 4       |
+|      dadd_64ns_64ns_64_5_full_dsp_1_U10  | 3   |        | z_re_write_assign | dadd | fulldsp | 4       |
+|      dadd_64ns_64ns_64_5_full_dsp_1_U11  | 3   |        | z_im_write_assign | dadd | fulldsp | 4       |
+|  + FFT_Pipeline_3                        | 0   |        |                   |      |         |         |
+|    empty_21_fu_99_p2                     | -   |        | empty_21          | add  | fabric  | 0       |
+|  + FFT_Pipeline_4                        | 0   |        |                   |      |         |         |
+|    empty_19_fu_99_p2                     | -   |        | empty_19          | add  | fabric  | 0       |
++------------------------------------------+-----+--------+-------------------+------+---------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
++------------------+------+------+--------+-----------+---------+------+---------+
+| Name             | BRAM | URAM | Pragma | Variable  | Storage | Impl | Latency |
++------------------+------+------+--------+-----------+---------+------+---------+
+| + FFT            | 40   | 0    |        |           |         |      |         |
+|   in_buf_r_U     | 4    | -    |        | in_buf_r  | ram_s2p | auto | 1       |
+|   in_buf_i_U     | 4    | -    |        | in_buf_i  | ram_s2p | auto | 1       |
+|   out_buf_r_U    | 4    | -    |        | out_buf_r | ram_t2p | auto | 1       |
+|   out_buf_i_U    | 4    | -    |        | out_buf_i | ram_t2p | auto | 1       |
+|  + fft_10_stages | 24   | 0    |        |           |         |      |         |
+|    stage0_r_U    | 4    | -    |        | stage0_r  | ram_t2p | auto | 1       |
+|    stage0_i_U    | 4    | -    |        | stage0_i  | ram_t2p | auto | 1       |
+|    stage1_r_U    | 4    | -    |        | stage1_r  | ram_t2p | auto | 1       |
+|    stage1_i_U    | 4    | -    |        | stage1_i  | ram_t2p | auto | 1       |
+|   + fft_stage    | 8    | 0    |        |           |         |      |         |
+|     gm_re_tab_U  | 4    | -    |        | gm_re_tab | rom_1p  | auto | 1       |
+|     gm_im_tab_U  | 4    | -    |        | gm_im_tab | rom_1p  | auto | 1       |
++------------------+------+------+--------+-----------+---------+------+---------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++------------+---------------------------------------------------+-------------------------------------------------------------------------------------+
+| Type       | Options                                           | Location                                                                            |
++------------+---------------------------------------------------+-------------------------------------------------------------------------------------+
+| interface  | m_axi port=f bundle=gmem0 offset=slave depth=1024 | collabrate_repository/optimized/FFT/hls_code/FFT_optimized.c:28 in fft, f           |
+| interface  | s_axilite port=return                             | collabrate_repository/optimized/FFT/hls_code/FFT_optimized.c:31 in fft, return      |
+| inline     | off                                               | collabrate_repository/optimized/FFT/hls_code/FFT_optimized.c:57 in fft_10_stages    |
+| dependence | dependent=false type=inter variable=out_r         | collabrate_repository/optimized/FFT/hls_code/FFT_optimized.c:71 in fft_stage, out_r |
+| dependence | dependent=false type=inter variable=out_i         | collabrate_repository/optimized/FFT/hls_code/FFT_optimized.c:72 in fft_stage, out_i |
+| pipeline   | II=1                                              | collabrate_repository/optimized/FFT/hls_code/FFT_optimized.c:82 in fft_stage        |
+| inline     | off                                               | collabrate_repository/optimized/FFT/hls_code/FFT_optimized.c:104 in complex_mul     |
++------------+---------------------------------------------------+-------------------------------------------------------------------------------------+
+
+

@@ -1,0 +1,339 @@
+
+
+================================================================
+== Synthesis Summary Report of 'iNTT'
+================================================================
++ General Information: 
+    * Date:           Sun Apr 28 11:21:14 2024
+    * Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
+    * Project:        test
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: zynquplus
+    * Target device:  xck26-sfvc784-2LV-c
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +------------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+--------+---------+-----------+-----------+-----+
+    |                     Modules                    | Issue|      | Latency |  Latency  | Iteration|         | Trip |          |        |         |           |           |     |
+    |                     & Loops                    | Type | Slack| (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined|  BRAM  |   DSP   |     FF    |    LUT    | URAM|
+    +------------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+--------+---------+-----------+-----------+-----+
+    |+ iNTT*                                         |     -|  0.00|     8350|  8.350e+04|         -|     8351|     -|  dataflow|  5 (1%)|  31 (2%)|  4787 (2%)|  7594 (6%)|    -|
+    | + Block_entry4_proc                            |     -|  7.30|        0|      0.000|         -|        0|     -|        no|       -|        -|   65 (~0%)|   20 (~0%)|    -|
+    | + Loop_1_proc                                  |     -|  0.00|     8350|  8.350e+04|         -|     8350|     -|        no|  5 (1%)|  31 (2%)|  3780 (1%)|  5938 (5%)|    -|
+    |  + Loop_1_proc_Pipeline_1                      |     -|  0.00|     1027|  1.027e+04|         -|     1027|     -|        no|       -|        -|   54 (~0%)|   79 (~0%)|    -|
+    |   o Loop 1                                     |     -|  7.30|     1025|  1.025e+04|         3|        1|  1024|       yes|       -|        -|          -|          -|    -|
+    |  + intt_10_stages                              |     -|  1.52|     6278|  6.278e+04|         -|     6278|     -|        no|  3 (1%)|  31 (2%)|  3608 (1%)|  5280 (4%)|    -|
+    |   + intt_10_stages_Pipeline_VITIS_LOOP_60_1    |     -|  1.52|      523|  5.230e+03|         -|      523|     -|        no|       -|  3 (~0%)|  209 (~0%)|  336 (~0%)|    -|
+    |    o VITIS_LOOP_60_1                           |     -|  7.30|      521|  5.210e+03|        11|        1|   512|       yes|       -|        -|          -|          -|    -|
+    |   + intt_10_stages_Pipeline_VITIS_LOOP_60_12   |     -|  1.52|      523|  5.230e+03|         -|      523|     -|        no|       -|  3 (~0%)|  355 (~0%)|  424 (~0%)|    -|
+    |    o VITIS_LOOP_60_1                           |     -|  7.30|      521|  5.210e+03|        11|        1|   512|       yes|       -|        -|          -|          -|    -|
+    |   + intt_10_stages_Pipeline_VITIS_LOOP_60_13   |     -|  1.52|      523|  5.230e+03|         -|      523|     -|        no|       -|  3 (~0%)|  355 (~0%)|  424 (~0%)|    -|
+    |    o VITIS_LOOP_60_1                           |     -|  7.30|      521|  5.210e+03|        11|        1|   512|       yes|       -|        -|          -|          -|    -|
+    |   + intt_10_stages_Pipeline_VITIS_LOOP_60_14   |     -|  1.52|      523|  5.230e+03|         -|      523|     -|        no|       -|  3 (~0%)|  355 (~0%)|  424 (~0%)|    -|
+    |    o VITIS_LOOP_60_1                           |     -|  7.30|      521|  5.210e+03|        11|        1|   512|       yes|       -|        -|          -|          -|    -|
+    |   + intt_10_stages_Pipeline_VITIS_LOOP_60_15   |     -|  1.52|      523|  5.230e+03|         -|      523|     -|        no|       -|  3 (~0%)|  355 (~0%)|  424 (~0%)|    -|
+    |    o VITIS_LOOP_60_1                           |     -|  7.30|      521|  5.210e+03|        11|        1|   512|       yes|       -|        -|          -|          -|    -|
+    |   + intt_10_stages_Pipeline_VITIS_LOOP_60_16   |     -|  1.52|      523|  5.230e+03|         -|      523|     -|        no|       -|  3 (~0%)|  355 (~0%)|  424 (~0%)|    -|
+    |    o VITIS_LOOP_60_1                           |     -|  7.30|      521|  5.210e+03|        11|        1|   512|       yes|       -|        -|          -|          -|    -|
+    |   + intt_10_stages_Pipeline_VITIS_LOOP_60_17   |     -|  1.52|      523|  5.230e+03|         -|      523|     -|        no|       -|  3 (~0%)|  355 (~0%)|  424 (~0%)|    -|
+    |    o VITIS_LOOP_60_1                           |     -|  7.30|      521|  5.210e+03|        11|        1|   512|       yes|       -|        -|          -|          -|    -|
+    |   + intt_10_stages_Pipeline_VITIS_LOOP_60_18   |     -|  1.52|      523|  5.230e+03|         -|      523|     -|        no|       -|  3 (~0%)|  355 (~0%)|  424 (~0%)|    -|
+    |    o VITIS_LOOP_60_1                           |     -|  7.30|      521|  5.210e+03|        11|        1|   512|       yes|       -|        -|          -|          -|    -|
+    |   + intt_10_stages_Pipeline_VITIS_LOOP_60_19   |     -|  1.52|      523|  5.230e+03|         -|      523|     -|        no|       -|  3 (~0%)|  355 (~0%)|  424 (~0%)|    -|
+    |    o VITIS_LOOP_60_1                           |     -|  7.30|      521|  5.210e+03|        11|        1|   512|       yes|       -|        -|          -|          -|    -|
+    |   + intt_10_stages_Pipeline_VITIS_LOOP_60_110  |     -|  3.36|      521|  5.210e+03|         -|      521|     -|        no|       -|  3 (~0%)|  399 (~0%)|  459 (~0%)|    -|
+    |    o VITIS_LOOP_60_1                           |     -|  7.30|      519|  5.190e+03|         9|        1|   512|       yes|       -|        -|          -|          -|    -|
+    |   + intt_10_stages_Pipeline_VITIS_LOOP_42_2    |     -|  3.37|     1029|  1.029e+04|         -|     1029|     -|        no|       -|  1 (~0%)|  127 (~0%)|  159 (~0%)|    -|
+    |    o VITIS_LOOP_42_2                           |     -|  7.30|     1027|  1.027e+04|         5|        1|  1024|       yes|       -|        -|          -|          -|    -|
+    |  + Loop_1_proc_Pipeline_2                      |     -|  0.00|     1027|  1.027e+04|         -|     1027|     -|        no|       -|        -|   31 (~0%)|   79 (~0%)|    -|
+    |   o Loop 1                                     |     -|  7.30|     1025|  1.025e+04|         3|        1|  1024|       yes|       -|        -|          -|          -|    -|
+    +------------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+--------+---------+-----------+-----------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* M_AXI
++------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+
+| Interface  | Data Width | Address Width | Latency | Offset | Register | Max Widen | Max Read     | Max Write    | Num Read    | Num Write   |
+|            | (SW->HW)   |               |         |        |          | Bitwidth  | Burst Length | Burst Length | Outstanding | Outstanding |
++------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+
+| m_axi_gmem | 16 -> 16   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          |
++------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+
+
+* S_AXILITE Interfaces
++---------------+------------+---------------+--------+----------+
+| Interface     | Data Width | Address Width | Offset | Register |
++---------------+------------+---------------+--------+----------+
+| s_axi_control | 32         | 5             | 16     | 0        |
++---------------+------------+---------------+--------+----------+
+
+* S_AXILITE Registers
++---------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| Interface     | Register | Offset | Width | Access | Description                      | Bit Fields                                                           |
++---------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| s_axi_control | CTRL     | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 9=INTERRUPT |
+| s_axi_control | GIER     | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                             |
+| s_axi_control | IP_IER   | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                        |
+| s_axi_control | IP_ISR   | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                        |
+| s_axi_control | a_1      | 0x10   | 32    | W      | Data signal of a                 |                                                                      |
+| s_axi_control | a_2      | 0x14   | 32    | W      | Data signal of a                 |                                                                      |
++---------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------+
+| Interface | Type       | Ports     |
++-----------+------------+-----------+
+| ap_clk    | clock      | ap_clk    |
+| ap_rst_n  | reset      | ap_rst_n  |
+| interrupt | interrupt  | interrupt |
+| ap_ctrl   | ap_ctrl_hs |           |
++-----------+------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+-----------------+
+| Argument | Direction | Datatype        |
++----------+-----------+-----------------+
+| a        | inout     | unsigned short* |
++----------+-----------+-----------------+
+
+* SW-to-HW Mapping
++----------+---------------+-----------+----------+-------------------------------+
+| Argument | HW Interface  | HW Type   | HW Usage | HW Info                       |
++----------+---------------+-----------+----------+-------------------------------+
+| a        | m_axi_gmem    | interface |          |                               |
+| a        | s_axi_control | register  | offset   | name=a_1 offset=0x10 range=32 |
+| a        | s_axi_control | register  | offset   | name=a_2 offset=0x14 range=32 |
++----------+---------------+-----------+----------+-------------------------------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+* Inferred Burst Summary
++--------------+-----------+-----------+--------+-------+---------------------------------------------------------------------+
+| HW Interface | Loop      | Direction | Length | Width | Location                                                            |
++--------------+-----------+-----------+--------+-------+---------------------------------------------------------------------+
+| m_axi_gmem   | anonymous | read      | 1024   | 16    | collabrate_repository/optimized/INTT/hls_code/INTT_optimized.c:13:2 |
+| m_axi_gmem   | anonymous | write     | 1024   | 16    | collabrate_repository/optimized/INTT/hls_code/INTT_optimized.c:17:2 |
++--------------+-----------+-----------+--------+-------+---------------------------------------------------------------------+
+
+* Inferred Bursts and Widening Missed
++--------------+----------+-----------+-------------------------------------------------------------------------------------------------------+------------+---------------------------------------------------------------------+
+| HW Interface | Variable | Loop      | Problem                                                                                               | Resolution | Location                                                            |
++--------------+----------+-----------+-------------------------------------------------------------------------------------------------------+------------+---------------------------------------------------------------------+
+| m_axi_gmem   | a        | anonymous | Could not widen since type i16 size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | collabrate_repository/optimized/INTT/hls_code/INTT_optimized.c:17:2 |
+| m_axi_gmem   | a        | anonymous | Could not widen since type i16 size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | collabrate_repository/optimized/INTT/hls_code/INTT_optimized.c:13:2 |
++--------------+----------+-----------+-------------------------------------------------------------------------------------------------------+------------+---------------------------------------------------------------------+
+
+    * Resolution URL: www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=XXX-YYY.html (replace XXX-YYY with column value)
+
+================================================================
+== Bind Op Report
+================================================================
++--------------------------------------------------+-----+--------+-----------------------+------+--------+---------+
+| Name                                             | DSP | Pragma | Variable              | Op   | Impl   | Latency |
++--------------------------------------------------+-----+--------+-----------------------+------+--------+---------+
+| + iNTT                                           | 31  |        |                       |      |        |         |
+|   sext_ln13_loc_channel_U                        | -   |        | sext_ln13_loc_channel | fifo | srl    | 0       |
+|  + Loop_1_proc                                   | 31  |        |                       |      |        |         |
+|   + Loop_1_proc_Pipeline_1                       | 0   |        |                       |      |        |         |
+|     empty_96_fu_98_p2                            | -   |        | empty_96              | add  | fabric | 0       |
+|   + intt_10_stages                               | 31  |        |                       |      |        |         |
+|    + intt_10_stages_Pipeline_VITIS_LOOP_60_1     | 3   |        |                       |      |        |         |
+|      n_16_fu_141_p2                              | -   |        | n_16                  | add  | fabric | 0       |
+|      add_ln71_fu_207_p2                          | -   |        | add_ln71              | add  | fabric | 0       |
+|      tmp1_fu_217_p2                              | -   |        | tmp1                  | add  | fabric | 0       |
+|      tmp1_28_fu_252_p2                           | -   |        | tmp1_28               | sub  | fabric | 0       |
+|      am_addmul_15s_17s_14ns_32_4_1_U5            | 1   |        | tmp1_29               | add  | dsp48  | 3       |
+|      am_addmul_15s_17s_14ns_32_4_1_U5            | 1   |        | tmp2                  | mul  | dsp48  | 3       |
+|      mul_mul_16s_14ns_16_4_1_U6                  | 1   |        | mul_ln84              | mul  | dsp48  | 3       |
+|      mac_muladd_16ns_14ns_32s_32_4_1_U7          | 1   |        | tmp1_30               | mul  | dsp48  | 3       |
+|      mac_muladd_16ns_14ns_32s_32_4_1_U7          | 1   |        | add_ln85              | add  | dsp48  | 3       |
+|      tmp2_10_fu_297_p2                           | -   |        | tmp2_10               | add  | fabric | 0       |
+|      stage0_d0                                   | -   |        | add_ln90              | add  | fabric | 0       |
+|    + intt_10_stages_Pipeline_VITIS_LOOP_60_12    | 3   |        |                       |      |        |         |
+|      n_12_fu_151_p2                              | -   |        | n_12                  | add  | fabric | 0       |
+|      i_fu_187_p2                                 | -   |        | i                     | add  | fabric | 0       |
+|      add_ln68_fu_211_p2                          | -   |        | add_ln68              | add  | fabric | 0       |
+|      add_ln71_2_fu_243_p2                        | -   |        | add_ln71_2            | add  | fabric | 0       |
+|      tmp1_fu_253_p2                              | -   |        | tmp1                  | add  | fabric | 0       |
+|      tmp1_22_fu_287_p2                           | -   |        | tmp1_22               | sub  | fabric | 0       |
+|      am_addmul_15s_17s_14ns_32_4_1_U14           | 1   |        | tmp1_23               | add  | dsp48  | 3       |
+|      am_addmul_15s_17s_14ns_32_4_1_U14           | 1   |        | tmp2                  | mul  | dsp48  | 3       |
+|      mul_mul_16s_14ns_16_4_1_U15                 | 1   |        | mul_ln84_2            | mul  | dsp48  | 3       |
+|      mac_muladd_16ns_14ns_32s_32_4_1_U16         | 1   |        | tmp1_24               | mul  | dsp48  | 3       |
+|      mac_muladd_16ns_14ns_32s_32_4_1_U16         | 1   |        | add_ln85              | add  | dsp48  | 3       |
+|      tmp2_8_fu_332_p2                            | -   |        | tmp2_8                | add  | fabric | 0       |
+|      stage1_d0                                   | -   |        | add_ln90              | add  | fabric | 0       |
+|    + intt_10_stages_Pipeline_VITIS_LOOP_60_13    | 3   |        |                       |      |        |         |
+|      n_11_fu_153_p2                              | -   |        | n_11                  | add  | fabric | 0       |
+|      i_fu_189_p2                                 | -   |        | i                     | add  | fabric | 0       |
+|      add_ln68_fu_213_p2                          | -   |        | add_ln68              | add  | fabric | 0       |
+|      add_ln71_4_fu_245_p2                        | -   |        | add_ln71_4            | add  | fabric | 0       |
+|      tmp1_fu_255_p2                              | -   |        | tmp1                  | add  | fabric | 0       |
+|      tmp1_19_fu_289_p2                           | -   |        | tmp1_19               | sub  | fabric | 0       |
+|      am_addmul_15s_17s_14ns_32_4_1_U20           | 1   |        | tmp1_20               | add  | dsp48  | 3       |
+|      am_addmul_15s_17s_14ns_32_4_1_U20           | 1   |        | tmp2                  | mul  | dsp48  | 3       |
+|      mul_mul_16s_14ns_16_4_1_U21                 | 1   |        | mul_ln84_4            | mul  | dsp48  | 3       |
+|      mac_muladd_16ns_14ns_32s_32_4_1_U22         | 1   |        | tmp1_21               | mul  | dsp48  | 3       |
+|      mac_muladd_16ns_14ns_32s_32_4_1_U22         | 1   |        | add_ln85              | add  | dsp48  | 3       |
+|      tmp2_7_fu_334_p2                            | -   |        | tmp2_7                | add  | fabric | 0       |
+|      stage0_d0                                   | -   |        | add_ln90              | add  | fabric | 0       |
+|    + intt_10_stages_Pipeline_VITIS_LOOP_60_14    | 3   |        |                       |      |        |         |
+|      n_10_fu_153_p2                              | -   |        | n_10                  | add  | fabric | 0       |
+|      i_fu_189_p2                                 | -   |        | i                     | add  | fabric | 0       |
+|      add_ln68_fu_213_p2                          | -   |        | add_ln68              | add  | fabric | 0       |
+|      add_ln71_fu_245_p2                          | -   |        | add_ln71              | add  | fabric | 0       |
+|      tmp1_fu_255_p2                              | -   |        | tmp1                  | add  | fabric | 0       |
+|      tmp1_16_fu_289_p2                           | -   |        | tmp1_16               | sub  | fabric | 0       |
+|      am_addmul_15s_17s_14ns_32_4_1_U26           | 1   |        | tmp1_17               | add  | dsp48  | 3       |
+|      am_addmul_15s_17s_14ns_32_4_1_U26           | 1   |        | tmp2                  | mul  | dsp48  | 3       |
+|      mul_mul_16s_14ns_16_4_1_U27                 | 1   |        | mul_ln84              | mul  | dsp48  | 3       |
+|      mac_muladd_16ns_14ns_32s_32_4_1_U28         | 1   |        | tmp1_18               | mul  | dsp48  | 3       |
+|      mac_muladd_16ns_14ns_32s_32_4_1_U28         | 1   |        | add_ln85              | add  | dsp48  | 3       |
+|      tmp2_6_fu_334_p2                            | -   |        | tmp2_6                | add  | fabric | 0       |
+|      stage1_d0                                   | -   |        | add_ln90              | add  | fabric | 0       |
+|    + intt_10_stages_Pipeline_VITIS_LOOP_60_15    | 3   |        |                       |      |        |         |
+|      n_9_fu_153_p2                               | -   |        | n_9                   | add  | fabric | 0       |
+|      i_fu_189_p2                                 | -   |        | i                     | add  | fabric | 0       |
+|      add_ln68_fu_213_p2                          | -   |        | add_ln68              | add  | fabric | 0       |
+|      add_ln71_fu_245_p2                          | -   |        | add_ln71              | add  | fabric | 0       |
+|      tmp1_fu_255_p2                              | -   |        | tmp1                  | add  | fabric | 0       |
+|      tmp1_13_fu_289_p2                           | -   |        | tmp1_13               | sub  | fabric | 0       |
+|      am_addmul_15s_17s_14ns_32_4_1_U32           | 1   |        | tmp1_14               | add  | dsp48  | 3       |
+|      am_addmul_15s_17s_14ns_32_4_1_U32           | 1   |        | tmp2                  | mul  | dsp48  | 3       |
+|      mul_mul_16s_14ns_16_4_1_U33                 | 1   |        | mul_ln84              | mul  | dsp48  | 3       |
+|      mac_muladd_16ns_14ns_32s_32_4_1_U34         | 1   |        | tmp1_15               | mul  | dsp48  | 3       |
+|      mac_muladd_16ns_14ns_32s_32_4_1_U34         | 1   |        | add_ln85              | add  | dsp48  | 3       |
+|      tmp2_5_fu_334_p2                            | -   |        | tmp2_5                | add  | fabric | 0       |
+|      stage0_d0                                   | -   |        | add_ln90              | add  | fabric | 0       |
+|    + intt_10_stages_Pipeline_VITIS_LOOP_60_16    | 3   |        |                       |      |        |         |
+|      n_8_fu_153_p2                               | -   |        | n_8                   | add  | fabric | 0       |
+|      i_fu_189_p2                                 | -   |        | i                     | add  | fabric | 0       |
+|      add_ln68_fu_213_p2                          | -   |        | add_ln68              | add  | fabric | 0       |
+|      add_ln71_fu_245_p2                          | -   |        | add_ln71              | add  | fabric | 0       |
+|      tmp1_fu_255_p2                              | -   |        | tmp1                  | add  | fabric | 0       |
+|      tmp1_10_fu_289_p2                           | -   |        | tmp1_10               | sub  | fabric | 0       |
+|      am_addmul_15s_17s_14ns_32_4_1_U38           | 1   |        | tmp1_11               | add  | dsp48  | 3       |
+|      am_addmul_15s_17s_14ns_32_4_1_U38           | 1   |        | tmp2                  | mul  | dsp48  | 3       |
+|      mul_mul_16s_14ns_16_4_1_U39                 | 1   |        | mul_ln84              | mul  | dsp48  | 3       |
+|      mac_muladd_16ns_14ns_32s_32_4_1_U40         | 1   |        | tmp1_12               | mul  | dsp48  | 3       |
+|      mac_muladd_16ns_14ns_32s_32_4_1_U40         | 1   |        | add_ln85              | add  | dsp48  | 3       |
+|      tmp2_4_fu_334_p2                            | -   |        | tmp2_4                | add  | fabric | 0       |
+|      stage1_d0                                   | -   |        | add_ln90              | add  | fabric | 0       |
+|    + intt_10_stages_Pipeline_VITIS_LOOP_60_17    | 3   |        |                       |      |        |         |
+|      n_6_fu_153_p2                               | -   |        | n_6                   | add  | fabric | 0       |
+|      i_fu_189_p2                                 | -   |        | i                     | add  | fabric | 0       |
+|      add_ln68_fu_213_p2                          | -   |        | add_ln68              | add  | fabric | 0       |
+|      add_ln71_fu_245_p2                          | -   |        | add_ln71              | add  | fabric | 0       |
+|      tmp1_fu_255_p2                              | -   |        | tmp1                  | add  | fabric | 0       |
+|      tmp1_7_fu_289_p2                            | -   |        | tmp1_7                | sub  | fabric | 0       |
+|      am_addmul_15s_17s_14ns_32_4_1_U44           | 1   |        | tmp1_8                | add  | dsp48  | 3       |
+|      am_addmul_15s_17s_14ns_32_4_1_U44           | 1   |        | tmp2                  | mul  | dsp48  | 3       |
+|      mul_mul_16s_14ns_16_4_1_U45                 | 1   |        | mul_ln84              | mul  | dsp48  | 3       |
+|      mac_muladd_16ns_14ns_32s_32_4_1_U46         | 1   |        | tmp1_9                | mul  | dsp48  | 3       |
+|      mac_muladd_16ns_14ns_32s_32_4_1_U46         | 1   |        | add_ln85              | add  | dsp48  | 3       |
+|      tmp2_3_fu_334_p2                            | -   |        | tmp2_3                | add  | fabric | 0       |
+|      stage0_d0                                   | -   |        | add_ln90              | add  | fabric | 0       |
+|    + intt_10_stages_Pipeline_VITIS_LOOP_60_18    | 3   |        |                       |      |        |         |
+|      n_4_fu_153_p2                               | -   |        | n_4                   | add  | fabric | 0       |
+|      i_fu_189_p2                                 | -   |        | i                     | add  | fabric | 0       |
+|      add_ln68_fu_213_p2                          | -   |        | add_ln68              | add  | fabric | 0       |
+|      add_ln71_fu_245_p2                          | -   |        | add_ln71              | add  | fabric | 0       |
+|      tmp1_fu_255_p2                              | -   |        | tmp1                  | add  | fabric | 0       |
+|      tmp1_4_fu_289_p2                            | -   |        | tmp1_4                | sub  | fabric | 0       |
+|      am_addmul_15s_17s_14ns_32_4_1_U50           | 1   |        | tmp1_5                | add  | dsp48  | 3       |
+|      am_addmul_15s_17s_14ns_32_4_1_U50           | 1   |        | tmp2                  | mul  | dsp48  | 3       |
+|      mul_mul_16s_14ns_16_4_1_U51                 | 1   |        | mul_ln84              | mul  | dsp48  | 3       |
+|      mac_muladd_16ns_14ns_32s_32_4_1_U52         | 1   |        | tmp1_6                | mul  | dsp48  | 3       |
+|      mac_muladd_16ns_14ns_32s_32_4_1_U52         | 1   |        | add_ln85              | add  | dsp48  | 3       |
+|      tmp2_2_fu_334_p2                            | -   |        | tmp2_2                | add  | fabric | 0       |
+|      stage1_d0                                   | -   |        | add_ln90              | add  | fabric | 0       |
+|    + intt_10_stages_Pipeline_VITIS_LOOP_60_19    | 3   |        |                       |      |        |         |
+|      n_2_fu_151_p2                               | -   |        | n_2                   | add  | fabric | 0       |
+|      i_fu_185_p2                                 | -   |        | i                     | add  | fabric | 0       |
+|      add_ln68_fu_209_p2                          | -   |        | add_ln68              | add  | fabric | 0       |
+|      add_ln71_fu_241_p2                          | -   |        | add_ln71              | add  | fabric | 0       |
+|      tmp1_fu_251_p2                              | -   |        | tmp1                  | add  | fabric | 0       |
+|      tmp1_1_fu_285_p2                            | -   |        | tmp1_1                | sub  | fabric | 0       |
+|      am_addmul_15s_17s_14ns_32_4_1_U56           | 1   |        | tmp1_2                | add  | dsp48  | 3       |
+|      am_addmul_15s_17s_14ns_32_4_1_U56           | 1   |        | tmp2                  | mul  | dsp48  | 3       |
+|      mul_mul_16s_14ns_16_4_1_U57                 | 1   |        | mul_ln84              | mul  | dsp48  | 3       |
+|      mac_muladd_16ns_14ns_32s_32_4_1_U58         | 1   |        | tmp1_3                | mul  | dsp48  | 3       |
+|      mac_muladd_16ns_14ns_32s_32_4_1_U58         | 1   |        | add_ln85              | add  | dsp48  | 3       |
+|      tmp2_1_fu_330_p2                            | -   |        | tmp2_1                | add  | fabric | 0       |
+|      stage0_d0                                   | -   |        | add_ln90              | add  | fabric | 0       |
+|    + intt_10_stages_Pipeline_VITIS_LOOP_60_110   | 3   |        |                       |      |        |         |
+|      n_14_fu_130_p2                              | -   |        | n_14                  | add  | fabric | 0       |
+|      add_ln71_fu_175_p2                          | -   |        | add_ln71              | add  | fabric | 0       |
+|      tmp1_fu_185_p2                              | -   |        | tmp1                  | add  | fabric | 0       |
+|      tmp1_25_fu_219_p2                           | -   |        | tmp1_25               | sub  | fabric | 0       |
+|      ama_addmuladd_15s_17s_13ns_30ns_32_4_1_U64  | 1   |        | tmp1_26               | add  | dsp48  | 3       |
+|      ama_addmuladd_15s_17s_13ns_30ns_32_4_1_U64  | 1   |        | tmp2                  | mul  | dsp48  | 3       |
+|      grp_fu_309_p0                               | -   |        | add_ln84              | add  | fabric | 0       |
+|      mul_mul_16s_13ns_16_4_1_U62                 | 1   |        | mul_ln84              | mul  | dsp48  | 3       |
+|      mul_mul_16ns_14ns_30_4_1_U63                | 1   |        | tmp1_27               | mul  | dsp48  | 3       |
+|      ama_addmuladd_15s_17s_13ns_30ns_32_4_1_U64  | 1   |        | add_ln85              | add  | dsp48  | 3       |
+|      tmp2_9_fu_280_p2                            | -   |        | tmp2_9                | add  | fabric | 0       |
+|      stage1_d0                                   | -   |        | add_ln90              | add  | fabric | 0       |
+|    + intt_10_stages_Pipeline_VITIS_LOOP_42_2     | 1   |        |                       |      |        |         |
+|      add_ln42_fu_98_p2                           | -   |        | add_ln42              | add  | fabric | 0       |
+|      ama_submuladd_1ns_16ns_14ns_22ns_30_4_1_U70 | 1   |        | sub_ln44              | sub  | dsp48  | 3       |
+|      ama_submuladd_1ns_16ns_14ns_22ns_30_4_1_U70 | 1   |        | tmp1                  | mul  | dsp48  | 3       |
+|      ama_submuladd_1ns_16ns_14ns_22ns_30_4_1_U70 | 1   |        | add_ln45              | add  | dsp48  | 3       |
+|      tmp2_11_fu_144_p2                           | -   |        | tmp2_11               | add  | fabric | 0       |
+|      out_buf_d0                                  | -   |        | add_ln48              | add  | fabric | 0       |
+|   + Loop_1_proc_Pipeline_2                       | 0   |        |                       |      |        |         |
+|     empty_95_fu_103_p2                           | -   |        | empty_95              | add  | fabric | 0       |
++--------------------------------------------------+-----+--------+-----------------------+------+--------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
++--------------------+------+------+--------+----------+---------+------+---------+
+| Name               | BRAM | URAM | Pragma | Variable | Storage | Impl | Latency |
++--------------------+------+------+--------+----------+---------+------+---------+
+| + iNTT             | 5    | 0    |        |          |         |      |         |
+|  + Loop_1_proc     | 5    | 0    |        |          |         |      |         |
+|    in_buf_U        | 1    | -    |        | in_buf   | ram_s2p | auto | 1       |
+|    out_buf_U       | 1    | -    |        | out_buf  | ram_1p  | auto | 1       |
+|   + intt_10_stages | 3    | 0    |        |          |         |      |         |
+|     stage0_U       | 1    | -    |        | stage0   | ram_t2p | auto | 1       |
+|     stage1_U       | 1    | -    |        | stage1   | ram_t2p | auto | 1       |
+|     iGMb_U         | 1    | -    |        | iGMb     | rom_1p  | auto | 1       |
++--------------------+------+------+--------+----------+---------+------+---------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Pragmas with Warnings
++------------+---------------------------------------------+------------------------------------------------------------------------------------------+----------------------------------------------------------------+
+| Type       | Options                                     | Location                                                                                 | Messages                                                       |
++------------+---------------------------------------------+------------------------------------------------------------------------------------------+----------------------------------------------------------------+
+| dependence | dependent=false type=inter variable=out_buf | collabrate_repository/optimized/INTT/hls_code/INTT_optimized.c:54 in intt_stage, out_buf | Ignoring dependence pragma on local scalar variable 'out_buf'. |
++------------+---------------------------------------------+------------------------------------------------------------------------------------------+----------------------------------------------------------------+
+
+* Valid Pragma Syntax
++-----------+-------------------------------------------+-------------------------------------------------------------------------------------+
+| Type      | Options                                   | Location                                                                            |
++-----------+-------------------------------------------+-------------------------------------------------------------------------------------+
+| interface | mode=m_axi port=a offset=slave depth=1024 | collabrate_repository/optimized/INTT/hls_code/INTT_optimized.c:5 in intt, a         |
+| interface | s_axilite port=return                     | collabrate_repository/optimized/INTT/hls_code/INTT_optimized.c:8 in intt, return    |
+| dataflow  |                                           | collabrate_repository/optimized/INTT/hls_code/INTT_optimized.c:10 in intt           |
+| inline    | off                                       | collabrate_repository/optimized/INTT/hls_code/INTT_optimized.c:25 in intt_10_stages |
+| pipeline  | II=1                                      | collabrate_repository/optimized/INTT/hls_code/INTT_optimized.c:61 in intt_stage     |
+| inline    |                                           | collabrate_repository/optimized/INTT/hls_code/INTT_optimized.c:62 in intt_stage     |
++-----------+-------------------------------------------+-------------------------------------------------------------------------------------+
+
+
