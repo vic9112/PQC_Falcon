@@ -34,9 +34,6 @@
   - Change the interface signals (input buffer, mode select(6 modes))
   - See under `~/fiFFNTT_ver9/ip/drivers/top_v1_0/src/xtop_hw.h` or `~/fiFFNTT_ver9/hls_code/fiFFNTT_wrapper.cpp` for more details about interface signals
   - See under `~/fiFFNTT_ver9` for synthesis report & co-simulation log file/report
-- Ver10:
-  - Change the output of NTT from uint to float64
-  - Thus we don't need to handle two buffer types in host code
   
 ## Interface Description
 
