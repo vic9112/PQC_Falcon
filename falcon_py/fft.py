@@ -61,7 +61,7 @@ def fft(f, state=1):
     """
     n = len(f)
     if state == 1:
-    	print (n)
+    	print (n, end = ' ')
     if (n > 2):
         f0, f1 = split(f)
         f0_fft = fft(f0, 0)
@@ -84,7 +84,7 @@ def ifft(f_fft, state=1):
     """
     n = len(f_fft)
     if state == 1:
-    	print(n)
+    	print(n, end = ' ')
     if (n > 2):
         f0_fft, f1_fft = split_fft(f_fft)
         f0 = ifft(f0_fft, 0)

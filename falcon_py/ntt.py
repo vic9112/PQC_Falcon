@@ -65,7 +65,7 @@ def ntt(f, stage = 1):
     """
     n = len(f)
     if stage == 1:
-    	print(n)
+    	print(n, end = ' ')
     if (n > 2):
         f0, f1 = split(f)
         f0_ntt = ntt(f0, 0)
@@ -88,7 +88,7 @@ def intt(f_ntt, stage = 1):
     """
     n = len(f_ntt)
     if stage == 1:
-    	print(n)
+    	print(n, end = ' ')
     if (n > 2):
         f0_ntt, f1_ntt = split_ntt(f_ntt)
         f0 = intt(f0_ntt, 0)
