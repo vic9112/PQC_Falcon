@@ -51,7 +51,7 @@ def merge_fft(f_list_fft):
     return f_fft
 
 
-def fft(f):
+def fft(f, state=1):
     """Compute the FFT of a polynomial mod (x ** n + 1).
 
     Args:
@@ -60,10 +60,12 @@ def fft(f):
     Format: input as coefficients, output as FFT
     """
     n = len(f)
+    if state == 1:
+    	print (n)
     if (n > 2):
         f0, f1 = split(f)
-        f0_fft = fft(f0)
-        f1_fft = fft(f1)
+        f0_fft = fft(f0, 0)
+        f1_fft = fft(f1, 0)
         f_fft = merge_fft([f0_fft, f1_fft])
     elif (n == 2):
         f_fft = [0] * n
@@ -72,7 +74,7 @@ def fft(f):
     return f_fft
 
 
-def ifft(f_fft):
+def ifft(f_fft, state=1):
     """Compute the inverse FFT of a polynomial mod (x ** n + 1).
 
     Args:
@@ -81,10 +83,12 @@ def ifft(f_fft):
     Format: input as FFT, output as coefficients
     """
     n = len(f_fft)
+    if state == 1:
+    	print(n)
     if (n > 2):
         f0_fft, f1_fft = split_fft(f_fft)
-        f0 = ifft(f0_fft)
-        f1 = ifft(f1_fft)
+        f0 = ifft(f0_fft, 0)
+        f1 = ifft(f1_fft, 0)
         f = merge([f0, f1])
     elif (n == 2):
         f = [0] * n

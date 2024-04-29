@@ -55,7 +55,7 @@ def merge_ntt(f_list_ntt):
     return f_ntt
 
 
-def ntt(f):
+def ntt(f, stage = 1):
     """Compute the NTT of a polynomial.
 
     Args:
@@ -64,10 +64,12 @@ def ntt(f):
     Format: input as coefficients, output as NTT
     """
     n = len(f)
+    if stage == 1:
+    	print(n)
     if (n > 2):
         f0, f1 = split(f)
-        f0_ntt = ntt(f0)
-        f1_ntt = ntt(f1)
+        f0_ntt = ntt(f0, 0)
+        f1_ntt = ntt(f1, 0)
         f_ntt = merge_ntt([f0_ntt, f1_ntt])
     elif (n == 2):
         f_ntt = [0] * n
@@ -76,7 +78,7 @@ def ntt(f):
     return f_ntt
 
 
-def intt(f_ntt):
+def intt(f_ntt, stage = 1):
     """Compute the inverse NTT of a polynomial.
 
     Args:
@@ -85,10 +87,12 @@ def intt(f_ntt):
     Format: input as NTT, output as coefficients
     """
     n = len(f_ntt)
+    if stage == 1:
+    	print(n)
     if (n > 2):
         f0_ntt, f1_ntt = split_ntt(f_ntt)
-        f0 = intt(f0_ntt)
-        f1 = intt(f1_ntt)
+        f0 = intt(f0_ntt, 0)
+        f1 = intt(f1_ntt, 0)
         f = merge([f0, f1])
     elif (n == 2):
         f = [0] * n
