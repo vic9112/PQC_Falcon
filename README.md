@@ -7,10 +7,13 @@
 - [KennyWang](https://github.com/kenny0916)
 - [LukasChen](https://github.com/lukaschen1010)
 
-## Specification
+## Folder Explanations
+
+- `~/init_impl` is the initial implementation
+- `~/optimized` is the optimized implementation
+- `~/meeting` records the history of some meeting contents
 
 ## Reference
 - [Official FALCON Code](https://github.com/algorand/falcon/tree/main)
 - [Reference Code - Falcon Take Off](https://gitlab.ost.ch/imes/public/papers/FalconHLS)
 
-## Hi
