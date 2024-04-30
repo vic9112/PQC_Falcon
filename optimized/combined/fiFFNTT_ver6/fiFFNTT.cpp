@@ -222,6 +222,16 @@ void complex_mul(fpr *z_re, fpr *z_im, fpr x_re, fpr x_im, fpr y_re, fpr y_im) {
 	*z_im = mul2 + mul3;
 }
 
+/*inline fpr int32_to_double(uint32_t f)
+{
+	return *(fpr *)&f;
+}
+
+inline uint32_t double_to_int32(double d)
+{
+	return *(uint32_t *)&d;
+}
+*/
 void monty_mul(uint32_t *z, uint32_t x, uint32_t y) {
 #pragma HLS INLINE off
 	uint32_t tmp1, tmp2;

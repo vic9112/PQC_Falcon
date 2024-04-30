@@ -51,6 +51,9 @@ uint64_t adder(uint64_t a, uint64_t b, int req);
 inline fpr float64_to_double(uint64_t f);
 inline uint64_t double_to_float64(double d);
 
+//inline fpr int32_to_double(uint64_t f);
+//inline uint32_t double_to_int32(double d);
+
 static const fpr gm_re_tab[] = {
 		0,
 		-0.000000000000000000000000000,
