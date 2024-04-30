@@ -13,8 +13,8 @@
 
 
 void iFFT_stub(fpr f[1024]/*, unsigned logn*/) {
-// #pragma HLS INTERFACE m_axi port=f bundle=gmem0 offset=slave depth=1024
-// #pragma HLS INTERFACE s_axilite port=return
+#pragma HLS INTERFACE m_axi port=f bundle=gmem0 offset=slave depth=1024
+#pragma HLS INTERFACE s_axilite port=return
 
 #pragma HLS dataflow
 

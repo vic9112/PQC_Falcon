@@ -2,16 +2,20 @@
 # Vivado v2022.1 (64-bit)
 # SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
 # IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
-# Start of session at: Mon Apr  1 03:58:51 2024
-# Process ID: 90034
-# Current directory: /home/ubuntu/PQC-Falcon/optimized_hls/solution2_ntt/impl/ip
-# Command line: vivado -notrace -mode batch -source run_ippack.tcl
-# Log file: /home/ubuntu/PQC-Falcon/optimized_hls/solution2_ntt/impl/ip/vivado.log
-# Journal file: /home/ubuntu/PQC-Falcon/optimized_hls/solution2_ntt/impl/ip/vivado.jou
-# Running On: ubuntu2004, OS: Linux, CPU Frequency: 2591.996 MHz, CPU Physical cores: 2, Host memory: 10425 MB
+# Start of session at: Tue Apr 30 12:14:32 2024
+# Process ID: 25852
+# Current directory: /home/ubuntu/Desktop/collabrate_repository/optimized/NTT/maxi/ip
+# Command line: vivado
+# Log file: /home/ubuntu/Desktop/collabrate_repository/optimized/NTT/maxi/ip/vivado.log
+# Journal file: /home/ubuntu/Desktop/collabrate_repository/optimized/NTT/maxi/ip/vivado.jou
+# Running On: ubuntu2004, OS: Linux, CPU Frequency: 3094.184 MHz, CPU Physical cores: 2, Host memory: 16766 MB
 #-----------------------------------------------------------
-source run_ippack.tcl -notrace
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1704] No user IP repositories specified
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2022.1/data/ip'.
-INFO: [Common 17-206] Exiting Vivado at Mon Apr  1 03:59:00 2024...
+start_gui
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es:part0:1.2 available at /tools/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/es/1.2/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es_revb:part0:1.0 available at /tools/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120_revb/es/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at /tools/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at /tools/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at /tools/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/2.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at /tools/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Apr 30 12:16:46 2024...
