@@ -18,10 +18,14 @@ typedef double fpr;
 #define Q0I   12287
 
 
-void iNTT(uint16_t *a);
-void intt_10_stages(uint16_t in_buf[SIZE], uint16_t out_buf[SIZE]);
-void intt_stage(uint16_t in_buf[SIZE], uint16_t out_buf[SIZE], unsigned short t, unsigned short m);
+void iNTT(uint16_t a[SIZE]);
 void out_copy(uint16_t out_buf[SIZE],uint16_t in_buf[SIZE]);
+void in_copy(uint16_t in_buf[SIZE], uint16_t out_buf[SIZE]);
+void stages(uint16_t in[SIZE], uint16_t out[SIZE]);
+void PE(uint16_t in[SIZE], uint16_t out[SIZE], unsigned short int t, unsigned short int m);
+void monty_mul(uint32_t *z, uint32_t x, uint32_t y);
+
+
 
 static const uint16_t iGMb[] = {
 	 4091,  4401,  1081,  1229,  2530,  6014,  7947,  5329,

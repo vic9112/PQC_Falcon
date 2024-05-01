@@ -11,19 +11,13 @@
 
 
 void test_iNTT(void) {
-	uint16_t *intt_in1, *intt_in2, *intt_out1;
-	intt_in1 = (uint16_t *) iNTT_in;
-	uint16_t tmp[1024];
-	intt_out1 = (uint16_t *) tmp;
-
 	int error_cnt = 0;
 
-	iNTT(intt_in1);
+	iNTT(iNTT_in);
 
 	for (int j = 0; j < 1024; j++) {
-		if (intt_in1[j] != iNTT_out[j]) {
-			//printf("Error at %d\n", j);
-			printf("%d %d \n", intt_in1[j], iNTT_out[j]);
+		if (iNTT_in[j] != iNTT_out[j]) {
+			printf("%d %d \n", iNTT_in[j], iNTT_out[j]);
 			error_cnt += 1;
 		}
 	}
