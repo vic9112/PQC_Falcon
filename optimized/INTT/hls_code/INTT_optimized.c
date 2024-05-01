@@ -4,11 +4,9 @@ void iNTT(uint16_t *a) {
 #pragma HLS INTERFACE mode=m_axi port=a offset=slave depth=1024
 #pragma HLS INTERFACE s_axilite port=return
 
-#pragma HLS DATAFLOW
+#pragma HLS INLINE off
 	uint16_t in_buf[SIZE], out_buf[SIZE];
 	uint16_t stage0[SIZE], stage1[SIZE];
-	const unsigned short factor = FACTOR;
-
 
 	memcpy(in_buf, a, SIZE * sizeof(uint16_t));
 
@@ -24,25 +22,8 @@ void iNTT(uint16_t *a) {
 	intt_stage(stage0, stage1,512,  2);
 
 
-	uint32_t ni = 4091;
+	out_copy(a, stage1);
 
-	for (int i = SIZE; i > 1; i >>= 1) {
-		ni += Q & -(ni & 1);
-		ni = (ni >> 1);
-	}
-
-	uint32_t tmp1, tmp2;
-
-	for (int j = 0; j < SIZE; j++) {
-		tmp2 = stage1[j] * ni;
-		tmp1 = ((tmp2 * Q0I) & 0xFFFF) * Q;
-		tmp2 = (tmp2 + tmp1) >> 16;
-		tmp2 -= Q;
-		tmp2 += Q & -(tmp2 >> 31);
-		out_buf[j] = tmp2;
-	}
-
-	memcpy(a, out_buf, SIZE * sizeof(uint16_t));
 }
 
 void intt_stage(uint16_t in_buf[SIZE], uint16_t out_buf[SIZE], unsigned short t, unsigned short m) {
@@ -53,6 +34,7 @@ void intt_stage(uint16_t in_buf[SIZE], uint16_t out_buf[SIZE], unsigned short t,
 	uint32_t tmp1, tmp2;
 	for (int n = 0; n < 512; n++) {
 #pragma HLS PIPELINE
+#pragma HLS INLINE off
 		unsigned short i = n + ((n / t) * t);
 		unsigned short i_gm = n / t;
 		gm = iGMb[hm + i_gm];
@@ -76,7 +58,29 @@ void intt_stage(uint16_t in_buf[SIZE], uint16_t out_buf[SIZE], unsigned short t,
 		tmp2 -= Q;
 		tmp2 += Q & -(tmp2 >> 31);
 		out_buf[i + t] = (uint32_t)tmp2;
-
 	}
 
 }
+
+void out_copy(uint16_t out_buf[SIZE],uint16_t in_buf[SIZE]) {
+#pragma HLS INLINE off
+	unsigned short logn = 10;
+	uint32_t ni = 4091;
+	uint32_t tmp1, tmp2;
+	niCONST: for (int i = SIZE; i > 1; i >>= 1) {
+		ni += Q & -(ni & 1);
+		ni = (ni >> 1);
+	}
+	OUTMEMCPY:
+
+	for (int j = 0; j < SIZE; j++) {
+		tmp2 = in_buf[j] * ni;
+		tmp1 = ((tmp2 * Q0I) & 0xFFFF) * Q;
+		tmp2 = (tmp2 + tmp1) >> 16;
+		tmp2 -= Q;
+		tmp2 += Q & -(tmp2 >> 31);
+		out_buf[j] = tmp2;
+	}
+}
+
+
