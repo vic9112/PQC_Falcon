@@ -4657,8 +4657,6 @@ def get_ifft1024(ifft_in):
 def get_ntt(a):
     '''Change the order of the output generated from NTT_IP'''
     a_py = [0 for i in range(1024)]
-    for i in range(1024):
-        a[i] = np.uint16(a[i])
     a_py[0]=a[624]
     a_py[1]=a[625]
     a_py[2]=a[626]
@@ -5688,8 +5686,6 @@ def get_ntt(a):
 def get_intt(a):
     '''Change the order of the iNTT input to match the python NTT'''
     a_py = [0 for i in range(1024)]
-    for i in range(1024):
-        a[i] = np.uint16(a[i])
     a_py[0]=a[928]
     a_py[1]=a[929]
     a_py[2]=a[930]
