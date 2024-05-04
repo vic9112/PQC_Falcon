@@ -1,10 +1,10 @@
 #ifndef __HEADER_H__
 #define __HEADER_H__
-#include <gmp.h>  // First include GMP
-#ifndef __gmp_const
-#define __gmp_const const
-#endif
-#include <mpfr.h>  // Then include MPFR
+//#include <gmp.h>  // First include GMP
+//#ifndef __gmp_const
+//#define __gmp_const const
+//#endif
+//#include <mpfr.h>  // Then include MPFR
 #include <stdint.h>
 #include <stdlib.h>
 #include <string.h>

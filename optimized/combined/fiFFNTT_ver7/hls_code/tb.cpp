@@ -100,7 +100,7 @@ void test_iNTT(void) {
 int
 main(void) {
 
-	//test_iFFT();
+	test_iFFT();
 	test_iNTT();
 
 	return 0;
