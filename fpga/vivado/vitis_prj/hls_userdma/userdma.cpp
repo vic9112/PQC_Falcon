@@ -5,14 +5,21 @@ void streamtoparallelwithburst(hls::stream<data> &in_stream, hls::stream<int> &i
 	ap_uint<2> kernel_mode, memcell *out_memory) {
 
 	data in_val;
-	int count;
-	static bool out_sts = 0;
-	static ap_uint<32> final_s2m_len = 0;
-	static ap_uint<32> s2m_len;
-
+	int count = 0;
+	bool out_sts = 0;
+	ap_uint<32> final_s2m_len = 0;
+	ap_uint<32> s2m_len;
 	buf_sts = 0;
 	s2m_len = ((kernel_mode == 0) || (kernel_mode == 1))? 2048 :
 			  ((kernel_mode == 2) || (kernel_mode == 3))? 1024 : 0;
+
+#ifdef csim
+	printf("\n======================== Before ==========================\n");
+	printf("Current number of elements the in_counts is holding %d\n", in_counts.size());
+	printf("Current number of elements the in_stream is holding %d\n", in_stream.size());
+	printf("Current s2m_buf_status = %d", buf_sts);
+	printf("\n==========================================================\n");
+#endif
 
 	do {
 		count = in_counts.read();
@@ -35,24 +42,35 @@ void streamtoparallelwithburst(hls::stream<data> &in_stream, hls::stream<int> &i
 		| If "loading to lower bits" counts to 1024, |
 		|     switch to "loading to higher bits"     |
 		\*------------------------------------------*/
-		if ((s2m_len == 2048) && (final_s2m_len == 1024)) {
+		if ((final_s2m_len == 1024)) {
 			out_memory -= 1024;
 		}
 
-		if (final_s2m_len == s2m_len){
+		if (final_s2m_len == s2m_len)
 			out_sts = 1;
-		}
+		else
+			out_sts = 0;
+
 		buf_sts = out_sts;
 
 	} while(final_s2m_len < s2m_len);
+
+#ifdef csim
+	printf("\n======================== After ===========================\n");
+	printf("Current number of elements the in_counts is holding %d\n", in_counts.size());
+	printf("Current number of elements the in_stream is holding %d\n", in_stream.size());
+	printf("Current s2m_buf_status = %d", buf_sts);
+	printf("\n==========================================================\n");
+#endif
+
 }
 
 void getinstream(hls::stream<trans_pkt> &in_stream, ap_uint<2> kernel_mode, ap_uint<2> &s2m_err,
 	hls::stream<data > &out_stream, hls::stream<int>& out_counts) {
 
 	int count = 0;
-    static ap_uint<32> in_len = 0;
-	static ap_uint<32> s2m_len;
+    ap_uint<32> in_len = 0;
+	ap_uint<32> s2m_len;
     trans_pkt in_val;
     s2m_err = 0;
     in_len = 0;
@@ -76,7 +94,7 @@ void getinstream(hls::stream<trans_pkt> &in_stream, ap_uint<2> kernel_mode, ap_u
 		count += 1;
 		in_len += 1;
 
-		if ((count >= MAX_BURST_LENGTH) || (in_val.last == 1)) {
+		if ((count == MAX_BURST_LENGTH) || (in_val.last == 1)) {
 			out_counts.write(count);
 			count = 0;
 		}
@@ -87,11 +105,11 @@ void getinstream(hls::stream<trans_pkt> &in_stream, ap_uint<2> kernel_mode, ap_u
 //Read MM
 void paralleltostreamwithburst(memcell *in_memory, ap_uint<2> kernel_mode, hls::stream<out_data> &out_stream) {
 
-	out_data  out_val;
+	out_data out_val;
 	int count;
-	static bool out_sts = 0;
-	static int  m2s_len = 0;
-	static int  final_m2s_len = 0;
+	bool out_sts = 0;
+	int  m2s_len = 0;
+	int  final_m2s_len = 0;
 	m2s_len = ((kernel_mode == 0) || (kernel_mode == 1))? 2048 :
 			  ((kernel_mode == 2) || (kernel_mode == 3))? 1024 : 0;
 	final_m2s_len = m2s_len;
@@ -148,6 +166,7 @@ void sendoutstream(hls::stream<out_data> &in_stream, bool &buf_sts, hls::stream<
 
 	int count = 0;
     trans_pkt out_val;
+    buf_sts = 0;
 
     do {
 		#pragma HLS PIPELINE
@@ -185,9 +204,9 @@ void userdma(
 
 #pragma HLS DATAFLOW
 
-	hls::stream<data, DATA_DEPTH> inbuf;
-	hls::stream<int, COUNT_DEPTH> incount;
-	hls::stream<out_data, DATA_DEPTH> outbuf;
+	hls::stream<data, DATA_DEPTH> inbuf ("in_stream_buf");
+	hls::stream<int, COUNT_DEPTH> incount ("in_count");
+	hls::stream<out_data, DATA_DEPTH> outbuf ("out_stream_buf");
   
 	getinstream(inStreamTop, kernel_mode, *s2m_err, inbuf, incount);
 	streamtoparallelwithburst(inbuf, incount, *s2m_buf_sts, kernel_mode, s2mbuf);

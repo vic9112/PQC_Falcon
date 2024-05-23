@@ -1,6 +1,16 @@
+#ifndef __HEADER_H__
+#define __HEADER_H__
+#include <gmp.h>  // First include GMP
+#ifndef __gmp_const
+#define __gmp_const const
+#endif
+#include <mpfr.h>  // Then include MPFR
+
 #include "ap_int.h"
 #include "ap_axi_sdata.h"
 #include "hls_stream.h"
+
+// #define csim
 
 #define BUF_LEN 1024
 
@@ -42,3 +52,4 @@ struct out_data {
 	ap_int<1> last;
 };
 
+#endif

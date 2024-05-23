@@ -71,7 +71,7 @@ all: $(TARGET)
 
 $(ObjDir)/userdma_test.o: ../../../../userdma_test.cpp $(ObjDir)/.dir
 	$(Echo) "   Compiling ../../../../userdma_test.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CC) ${CCFLAG} -c -MMD -Wno-unknown-pragmas -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
+	$(Verb)  $(CC) ${CCFLAG} -c -MMD -Wno-unknown-pragmas -DCSIM_MODE -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
 -include $(ObjDir)/userdma_test.d
 

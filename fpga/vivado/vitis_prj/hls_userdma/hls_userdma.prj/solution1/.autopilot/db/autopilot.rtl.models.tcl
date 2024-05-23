@@ -1,6 +1,6 @@
 set SynModuleInfo {
   {SRCNAME entry_proc MODELNAME entry_proc RTLNAME userdma_entry_proc}
-  {SRCNAME getinstream_Pipeline_VITIS_LOOP_62_1 MODELNAME getinstream_Pipeline_VITIS_LOOP_62_1 RTLNAME userdma_getinstream_Pipeline_VITIS_LOOP_62_1
+  {SRCNAME getinstream_Pipeline_VITIS_LOOP_80_1 MODELNAME getinstream_Pipeline_VITIS_LOOP_80_1 RTLNAME userdma_getinstream_Pipeline_VITIS_LOOP_80_1
     SUBMODULES {
       {MODELNAME userdma_flow_control_loop_pipe_sequential_init RTLNAME userdma_flow_control_loop_pipe_sequential_init BINDTYPE interface TYPE internal_upc_flow_control INSTNAME userdma_flow_control_loop_pipe_sequential_init_U}
     }
@@ -10,9 +10,9 @@ set SynModuleInfo {
       {MODELNAME userdma_regslice_both RTLNAME userdma_regslice_both BINDTYPE interface TYPE interface_regslice INSTNAME userdma_regslice_both_U}
     }
   }
-  {SRCNAME streamtoparallelwithburst_Pipeline_VITIS_LOOP_20_2 MODELNAME streamtoparallelwithburst_Pipeline_VITIS_LOOP_20_2 RTLNAME userdma_streamtoparallelwithburst_Pipeline_VITIS_LOOP_20_2}
+  {SRCNAME streamtoparallelwithburst_Pipeline_VITIS_LOOP_27_2 MODELNAME streamtoparallelwithburst_Pipeline_VITIS_LOOP_27_2 RTLNAME userdma_streamtoparallelwithburst_Pipeline_VITIS_LOOP_27_2}
   {SRCNAME streamtoparallelwithburst MODELNAME streamtoparallelwithburst RTLNAME userdma_streamtoparallelwithburst}
-  {SRCNAME paralleltostreamwithburst_Pipeline_VITIS_LOOP_113_2 MODELNAME paralleltostreamwithburst_Pipeline_VITIS_LOOP_113_2 RTLNAME userdma_paralleltostreamwithburst_Pipeline_VITIS_LOOP_113_2}
+  {SRCNAME paralleltostreamwithburst_Pipeline_VITIS_LOOP_131_2 MODELNAME paralleltostreamwithburst_Pipeline_VITIS_LOOP_131_2 RTLNAME userdma_paralleltostreamwithburst_Pipeline_VITIS_LOOP_131_2}
   {SRCNAME paralleltostreamwithburst MODELNAME paralleltostreamwithburst RTLNAME userdma_paralleltostreamwithburst
     SUBMODULES {
       {MODELNAME userdma_mux_42_32_1_1 RTLNAME userdma_mux_42_32_1_1 BINDTYPE op TYPE mux IMPL auto LATENCY 0 ALLOW_PRAGMA 1}

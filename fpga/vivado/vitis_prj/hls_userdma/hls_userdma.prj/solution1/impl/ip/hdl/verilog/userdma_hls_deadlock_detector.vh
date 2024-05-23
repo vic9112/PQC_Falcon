@@ -293,7 +293,7 @@ end
         .token_out_vec(token_out_vec_1),
         .dl_detect_out(dl_in_vec[1]));
 
-    assign proc_1_data_FIFO_blk[0] = 1'b0 | (~getinstream_U0.grp_getinstream_Pipeline_VITIS_LOOP_62_1_fu_93.inbuf_blk_n) | (~getinstream_U0.grp_getinstream_Pipeline_VITIS_LOOP_62_1_fu_93.incount25_blk_n) | (~getinstream_U0.kernel_mode_c_blk_n);
+    assign proc_1_data_FIFO_blk[0] = 1'b0 | (~getinstream_U0.grp_getinstream_Pipeline_VITIS_LOOP_80_1_fu_93.inbuf_blk_n) | (~getinstream_U0.grp_getinstream_Pipeline_VITIS_LOOP_80_1_fu_93.incount25_blk_n) | (~getinstream_U0.kernel_mode_c_blk_n);
     assign proc_1_data_PIPO_blk[0] = 1'b0;
     assign proc_1_start_FIFO_blk[0] = 1'b0;
     assign proc_1_TLF_FIFO_blk[0] = 1'b0;
@@ -370,7 +370,7 @@ end
         .token_out_vec(token_out_vec_2),
         .dl_detect_out(dl_in_vec[2]));
 
-    assign proc_2_data_FIFO_blk[0] = 1'b0 | (~streamtoparallelwithburst_U0.grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_20_2_fu_111.inbuf_blk_n) | (~streamtoparallelwithburst_U0.incount25_blk_n) | (~streamtoparallelwithburst_U0.kernel_mode_blk_n);
+    assign proc_2_data_FIFO_blk[0] = 1'b0 | (~streamtoparallelwithburst_U0.grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_27_2_fu_115.inbuf_blk_n) | (~streamtoparallelwithburst_U0.incount25_blk_n) | (~streamtoparallelwithburst_U0.kernel_mode_blk_n);
     assign proc_2_data_PIPO_blk[0] = 1'b0;
     assign proc_2_start_FIFO_blk[0] = 1'b0;
     assign proc_2_TLF_FIFO_blk[0] = 1'b0;

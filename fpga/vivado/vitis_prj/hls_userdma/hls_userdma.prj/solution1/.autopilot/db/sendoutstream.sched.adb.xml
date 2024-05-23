@@ -25,7 +25,7 @@
 
 <Node id="8" bw="0" op_0_bw="0" op_1_bw="35" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32">
 <![CDATA[
-entry:0 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i35 %outbuf, void @empty_5, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0
+entry:0 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i35 %outbuf, void @empty_16, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3, i32 4294967295, i32 0
 
 ]]></Node>
 <StgValue><ssdm name="specinterface_ln0"/></StgValue>
@@ -40,7 +40,7 @@ entry:0 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i35 %ou
 
 <Node id="9" bw="0" op_0_bw="0" op_1_bw="1" op_2_bw="2" op_3_bw="4" op_4_bw="4" op_5_bw="32" op_6_bw="0" op_7_bw="32" op_8_bw="32" op_9_bw="0" op_10_bw="32" op_11_bw="32" op_12_bw="0" op_13_bw="0" op_14_bw="0" op_15_bw="32" op_16_bw="32" op_17_bw="32" op_18_bw="32" op_19_bw="0" op_20_bw="0" op_21_bw="32" op_22_bw="32">
 <![CDATA[
-entry:1 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %outStreamTop_V_last_V, i2 %outStreamTop_V_user_V, i4 %outStreamTop_V_strb_V, i4 %outStreamTop_V_keep_V, i32 %outStreamTop_V_data_V, void @empty_13, i32 1, i32 1, void @empty_22, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0
+entry:1 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %outStreamTop_V_last_V, i2 %outStreamTop_V_user_V, i4 %outStreamTop_V_strb_V, i4 %outStreamTop_V_keep_V, i32 %outStreamTop_V_data_V, void @empty_19, i32 1, i32 1, void @empty_20, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3, i32 4294967295, i32 0
 
 ]]></Node>
 <StgValue><ssdm name="specinterface_ln0"/></StgValue>
@@ -55,10 +55,10 @@ entry:1 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %out
 
 <Node id="10" bw="0" op_0_bw="0">
 <![CDATA[
-entry:2 %br_ln152 = br void %do.cond
+entry:2 %br_ln171 = br void %do.cond
 
 ]]></Node>
-<StgValue><ssdm name="br_ln152"/></StgValue>
+<StgValue><ssdm name="br_ln171"/></StgValue>
 </operation>
 
 <operation id="8" st_id="1" stage="1" lat="1">
@@ -145,10 +145,10 @@ do.cond:6 %write_ln304 = write void @_ssdm_op_Write.axis.volatile.i32P0A.i4P0A.i
 
 <Node id="19" bw="0" op_0_bw="1" op_1_bw="0" op_2_bw="0">
 <![CDATA[
-do.cond:7 %br_ln159 = br i1 %tmp_last_V, void %do.cond, void %do.end
+do.cond:7 %br_ln178 = br i1 %tmp_last_V, void %do.cond, void %do.end
 
 ]]></Node>
-<StgValue><ssdm name="br_ln159"/></StgValue>
+<StgValue><ssdm name="br_ln178"/></StgValue>
 </operation>
 </state>
 
@@ -163,10 +163,10 @@ do.cond:7 %br_ln159 = br i1 %tmp_last_V, void %do.cond, void %do.end
 
 <Node id="12" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="0">
 <![CDATA[
-do.cond:0 %specpipeline_ln153 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 0, i32 0, void @empty_1
+do.cond:0 %specpipeline_ln172 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 0, i32 0, void @empty_3
 
 ]]></Node>
-<StgValue><ssdm name="specpipeline_ln153"/></StgValue>
+<StgValue><ssdm name="specpipeline_ln172"/></StgValue>
 </operation>
 
 <operation id="15" st_id="2" stage="1" lat="1">
@@ -178,7 +178,7 @@ do.cond:0 %specpipeline_ln153 = specpipeline void @_ssdm_op_SpecPipeline, i32 42
 
 <Node id="13" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-do.cond:1 %specloopname_ln145 = specloopname void @_ssdm_op_SpecLoopName, void @empty_11
+do.cond:1 %specloopname_ln145 = specloopname void @_ssdm_op_SpecLoopName, void @empty_13
 
 ]]></Node>
 <StgValue><ssdm name="specloopname_ln145"/></StgValue>
@@ -209,10 +209,10 @@ do.cond:6 %write_ln304 = write void @_ssdm_op_Write.axis.volatile.i32P0A.i4P0A.i
 
 <Node id="21" bw="0" op_0_bw="0" op_1_bw="1" op_2_bw="1">
 <![CDATA[
-do.end:0 %write_ln161 = write void @_ssdm_op_Write.ap_auto.i1P0A, i1 %m2s_buf_sts, i1 1
+do.end:0 %write_ln180 = write void @_ssdm_op_Write.ap_auto.i1P0A, i1 %m2s_buf_sts, i1 1
 
 ]]></Node>
-<StgValue><ssdm name="write_ln161"/></StgValue>
+<StgValue><ssdm name="write_ln180"/></StgValue>
 </operation>
 
 <operation id="18" st_id="2" stage="1" lat="1">
@@ -225,10 +225,10 @@ do.end:0 %write_ln161 = write void @_ssdm_op_Write.ap_auto.i1P0A, i1 %m2s_buf_st
 
 <Node id="22" bw="0">
 <![CDATA[
-do.end:1 %ret_ln163 = ret
+do.end:1 %ret_ln182 = ret
 
 ]]></Node>
-<StgValue><ssdm name="ret_ln163"/></StgValue>
+<StgValue><ssdm name="ret_ln182"/></StgValue>
 </operation>
 </state>
 </state_list>

@@ -12,5 +12,5 @@
   <xd:arg xd:name="m2sbuf" xd:originalName="m2sbuf" xd:direction="in" xd:interfaceRef="s_axi_control" xd:busTypeRef="axilite" xd:offset="0x44" xd:dataWidth="32" xd:aximmInterfaceRef="m_axi_gmem1"/>
   <xd:arg xd:name="*(s2m_err)" xd:originalName="s2m_err" xd:direction="out" xd:interfaceRef="s_axi_control" xd:busTypeRef="axilite" xd:offset="0x50" xd:statusOffset="0x54" xd:handshakeRef="ap_vld" xd:dataWidth="32"/>
   <xd:latencyEstimates xd:best-case="undef" xd:worst-case="undef" xd:average-case="undef"/>
-  <xd:resourceEstimates xd:LUT="6070" xd:FF="5321" xd:BRAM="0" xd:DSP="0"/>
+  <xd:resourceEstimates xd:LUT="6030" xd:FF="5255" xd:BRAM="0" xd:DSP="0"/>
 </xd:acceleratorMap>

@@ -1,5 +1,5 @@
 INFO: [HLS 200-10] Running '/tools/Xilinx/Vitis_HLS/2022.1/bin/unwrapped/lnx64.o/vitis_hls'
-INFO: [HLS 200-10] For user 'ubuntu' on host 'ubuntu2004.linuxvmimages.local' (Linux_x86_64 version 5.15.0-107-generic) on Thu May 23 07:50:36 EDT 2024
+INFO: [HLS 200-10] For user 'ubuntu' on host 'ubuntu2004.linuxvmimages.local' (Linux_x86_64 version 5.15.0-107-generic) on Thu May 23 13:17:29 EDT 2024
 INFO: [HLS 200-10] On os Ubuntu 20.04.4 LTS
 INFO: [HLS 200-10] In directory '/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma'
 Sourcing Tcl script '/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma/hls_userdma.prj/solution1/export.tcl'
@@ -7,13 +7,13 @@ INFO: [HLS 200-1510] Running: source /home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_
 INFO: [HLS 200-1510] Running: open_project hls_userdma.prj 
 INFO: [HLS 200-10] Opening project '/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma/hls_userdma.prj'.
 INFO: [HLS 200-1510] Running: set_top userdma 
-INFO: [HLS 200-1510] Running: add_files userdma.cpp 
-INFO: [HLS 200-10] Adding design file 'userdma.cpp' to the project
 INFO: [HLS 200-1510] Running: add_files userdma.h 
 INFO: [HLS 200-10] Adding design file 'userdma.h' to the project
-INFO: [HLS 200-1510] Running: add_files -tb test_data.h 
+INFO: [HLS 200-1510] Running: add_files userdma.cpp 
+INFO: [HLS 200-10] Adding design file 'userdma.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb test_data.h -cflags -Wno-unknown-pragmas -csimflags -DCSIM_MODE 
 INFO: [HLS 200-10] Adding test bench file 'test_data.h' to the project
-INFO: [HLS 200-1510] Running: add_files -tb userdma_test.cpp -cflags -Wno-unknown-pragmas -csimflags -Wno-unknown-pragmas 
+INFO: [HLS 200-1510] Running: add_files -tb userdma_test.cpp -cflags -Wno-unknown-pragmas -csimflags -DCSIM_MODE 
 INFO: [HLS 200-10] Adding test bench file 'userdma_test.cpp' to the project
 INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vivado 
 INFO: [HLS 200-10] Opening solution '/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma/hls_userdma.prj/solution1'.
@@ -40,7 +40,7 @@ source run_ippack.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2022.1/data/ip'.
-INFO: [Common 17-206] Exiting Vivado at Thu May 23 07:51:01 2024...
+INFO: [Common 17-206] Exiting Vivado at Thu May 23 13:17:42 2024...
 INFO: [HLS 200-802] Generated output file hls_userdma.prj/solution1/impl/export.zip
-INFO: [HLS 200-111] Finished Command export_design CPU user time: 12.62 seconds. CPU system time: 1.93 seconds. Elapsed time: 22.99 seconds; current allocated memory: -1022.512 MB.
-INFO: [HLS 200-112] Total CPU user time: 15.69 seconds. Total CPU system time: 2.72 seconds. Total elapsed time: 28.65 seconds; peak allocated memory: 473.672 MB.
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 11.53 seconds. CPU system time: 1.11 seconds. Elapsed time: 13.48 seconds; current allocated memory: -1022.430 MB.
+INFO: [HLS 200-112] Total CPU user time: 14.19 seconds. Total CPU system time: 1.75 seconds. Total elapsed time: 16.82 seconds; peak allocated memory: 473.656 MB.

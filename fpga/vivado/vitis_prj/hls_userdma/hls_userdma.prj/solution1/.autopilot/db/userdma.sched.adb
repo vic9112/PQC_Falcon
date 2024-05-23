@@ -106,7 +106,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3091252768</coreId>
+						<coreId>2831309744</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -178,7 +178,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>370118192</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>4</bitwidth>
@@ -250,7 +250,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1007225406</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -286,7 +286,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>119873392</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -322,7 +322,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1330007625</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>4</bitwidth>
@@ -358,7 +358,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>369924304</coreId>
+						<coreId>119889936</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>4</bitwidth>
@@ -394,7 +394,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>368398208</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>2</bitwidth>
@@ -430,7 +430,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>369151760</coreId>
+						<coreId>119537984</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -466,7 +466,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>368206880</coreId>
+						<coreId>775106614</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>2</bitwidth>
@@ -502,7 +502,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>370643456</coreId>
+						<coreId>8</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -538,7 +538,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>304</coreId>
+						<coreId>119539472</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -574,7 +574,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1140851888</coreId>
+						<coreId>118686592</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>64</bitwidth>
@@ -610,7 +610,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1140851584</coreId>
+						<coreId>119209040</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>64</bitwidth>
@@ -646,7 +646,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>27</coreId>
+						<coreId>1314013527</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>2</bitwidth>
@@ -667,11 +667,11 @@
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>21</id>
+						<id>19</id>
 						<name>m2sbuf_read</name>
 						<fileName>userdma.cpp</fileName>
 						<fileDirectory>/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma</fileDirectory>
-						<lineNumber>186</lineNumber>
+						<lineNumber>205</lineNumber>
 						<contextFuncName>userdma</contextFuncName>
 						<contextNormFuncName>userdma</contextNormFuncName>
 						<inlineStackInfo>
@@ -687,7 +687,7 @@
 											<first>userdma.cpp</first>
 											<second>userdma</second>
 										</first>
-										<second>186</second>
+										<second>205</second>
 									</item>
 								</second>
 							</item>
@@ -700,7 +700,64 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>370285632</coreId>
+						<coreId>119546544</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>64</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>2</count>
+					<item_version>0</item_version>
+					<item>80</item>
+					<item>81</item>
+				</oprand_edges>
+				<opcode>read</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>1.00</m_delay>
+				<m_topoIndex>6</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_20">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>20</id>
+						<name>s2mbuf_read</name>
+						<fileName>userdma.cpp</fileName>
+						<fileDirectory>/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma</fileDirectory>
+						<lineNumber>205</lineNumber>
+						<contextFuncName>userdma</contextFuncName>
+						<contextNormFuncName>userdma</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>userdma.cpp</first>
+											<second>userdma</second>
+										</first>
+										<second>205</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>119547168</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>64</bitwidth>
@@ -717,63 +774,6 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>1.00</m_delay>
-				<m_topoIndex>6</m_topoIndex>
-				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_20">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>22</id>
-						<name>s2mbuf_read</name>
-						<fileName>userdma.cpp</fileName>
-						<fileDirectory>/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma</fileDirectory>
-						<lineNumber>186</lineNumber>
-						<contextFuncName>userdma</contextFuncName>
-						<contextNormFuncName>userdma</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>userdma.cpp</first>
-											<second>userdma</second>
-										</first>
-										<second>186</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>1713403759</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>64</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>2</count>
-					<item_version>0</item_version>
-					<item>84</item>
-					<item>85</item>
-				</oprand_edges>
-				<opcode>read</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.00</m_delay>
 				<m_topoIndex>7</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -781,11 +781,11 @@
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>23</id>
+						<id>21</id>
 						<name>kernel_mode_read</name>
 						<fileName>userdma.cpp</fileName>
 						<fileDirectory>/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma</fileDirectory>
-						<lineNumber>186</lineNumber>
+						<lineNumber>205</lineNumber>
 						<contextFuncName>userdma</contextFuncName>
 						<contextNormFuncName>userdma</contextNormFuncName>
 						<inlineStackInfo>
@@ -801,7 +801,7 @@
 											<first>userdma.cpp</first>
 											<second>userdma</second>
 										</first>
-										<second>186</second>
+										<second>205</second>
 									</item>
 								</second>
 							</item>
@@ -814,7 +814,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>118910176</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>2</bitwidth>
@@ -822,8 +822,8 @@
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>87</item>
-					<item>88</item>
+					<item>85</item>
+					<item>86</item>
 				</oprand_edges>
 				<opcode>read</opcode>
 				<m_Display>0</m_Display>
@@ -838,11 +838,11 @@
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>24</id>
+						<id>22</id>
 						<name>s2mbuf_c</name>
 						<fileName>userdma.cpp</fileName>
 						<fileDirectory>/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma</fileDirectory>
-						<lineNumber>186</lineNumber>
+						<lineNumber>205</lineNumber>
 						<contextFuncName>userdma</contextFuncName>
 						<contextNormFuncName>userdma</contextNormFuncName>
 						<inlineStackInfo>
@@ -858,7 +858,7 @@
 											<first>userdma.cpp</first>
 											<second>userdma</second>
 										</first>
-										<second>186</second>
+										<second>205</second>
 									</item>
 								</second>
 							</item>
@@ -871,7 +871,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>369962224</coreId>
+						<coreId>119540336</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>64</bitwidth>
@@ -879,7 +879,7 @@
 				<oprand_edges>
 					<count>1</count>
 					<item_version>0</item_version>
-					<item>90</item>
+					<item>88</item>
 				</oprand_edges>
 				<opcode>alloca</opcode>
 				<m_Display>0</m_Display>
@@ -894,11 +894,11 @@
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>27</id>
+						<id>25</id>
 						<name>kernel_mode_c</name>
 						<fileName>userdma.cpp</fileName>
 						<fileDirectory>/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma</fileDirectory>
-						<lineNumber>186</lineNumber>
+						<lineNumber>205</lineNumber>
 						<contextFuncName>userdma</contextFuncName>
 						<contextNormFuncName>userdma</contextNormFuncName>
 						<inlineStackInfo>
@@ -914,7 +914,7 @@
 											<first>userdma.cpp</first>
 											<second>userdma</second>
 										</first>
-										<second>186</second>
+										<second>205</second>
 									</item>
 								</second>
 							</item>
@@ -927,7 +927,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>544370464</coreId>
+						<coreId>30</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>2</bitwidth>
@@ -935,7 +935,7 @@
 				<oprand_edges>
 					<count>1</count>
 					<item_version>0</item_version>
-					<item>91</item>
+					<item>89</item>
 				</oprand_edges>
 				<opcode>alloca</opcode>
 				<m_Display>0</m_Display>
@@ -950,7 +950,7 @@
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>65</id>
+						<id>63</id>
 						<name>inbuf</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
@@ -969,7 +969,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>370276352</coreId>
+						<coreId>119023104</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>33</bitwidth>
@@ -977,7 +977,7 @@
 				<oprand_edges>
 					<count>1</count>
 					<item_version>0</item_version>
-					<item>92</item>
+					<item>90</item>
 				</oprand_edges>
 				<opcode>alloca</opcode>
 				<m_Display>0</m_Display>
@@ -992,11 +992,11 @@
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>68</id>
+						<id>66</id>
 						<name>incount</name>
 						<fileName>userdma.cpp</fileName>
 						<fileDirectory>/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma</fileDirectory>
-						<lineNumber>189</lineNumber>
+						<lineNumber>208</lineNumber>
 						<contextFuncName>userdma</contextFuncName>
 						<contextNormFuncName>userdma</contextNormFuncName>
 						<inlineStackInfo>
@@ -1012,7 +1012,7 @@
 											<first>userdma.cpp</first>
 											<second>userdma</second>
 										</first>
-										<second>189</second>
+										<second>208</second>
 									</item>
 								</second>
 							</item>
@@ -1033,7 +1033,7 @@
 				<oprand_edges>
 					<count>1</count>
 					<item_version>0</item_version>
-					<item>93</item>
+					<item>91</item>
 				</oprand_edges>
 				<opcode>alloca</opcode>
 				<m_Display>0</m_Display>
@@ -1048,7 +1048,7 @@
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>71</id>
+						<id>69</id>
 						<name>outbuf</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
@@ -1067,7 +1067,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>370277904</coreId>
+						<coreId>119939488</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>35</bitwidth>
@@ -1075,7 +1075,7 @@
 				<oprand_edges>
 					<count>1</count>
 					<item_version>0</item_version>
-					<item>94</item>
+					<item>92</item>
 				</oprand_edges>
 				<opcode>alloca</opcode>
 				<m_Display>0</m_Display>
@@ -1090,11 +1090,11 @@
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>74</id>
-						<name>_ln186</name>
+						<id>72</id>
+						<name>_ln205</name>
 						<fileName>userdma.cpp</fileName>
 						<fileDirectory>/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma</fileDirectory>
-						<lineNumber>186</lineNumber>
+						<lineNumber>205</lineNumber>
 						<contextFuncName>userdma</contextFuncName>
 						<contextNormFuncName>userdma</contextNormFuncName>
 						<inlineStackInfo>
@@ -1110,7 +1110,7 @@
 											<first>userdma.cpp</first>
 											<second>userdma</second>
 										</first>
-										<second>186</second>
+										<second>205</second>
 									</item>
 								</second>
 							</item>
@@ -1123,7 +1123,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>980642816</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -1131,9 +1131,9 @@
 				<oprand_edges>
 					<count>3</count>
 					<item_version>0</item_version>
+					<item>94</item>
+					<item>95</item>
 					<item>96</item>
-					<item>97</item>
-					<item>98</item>
 				</oprand_edges>
 				<opcode>call</opcode>
 				<m_Display>0</m_Display>
@@ -1148,11 +1148,11 @@
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>75</id>
-						<name>_ln192</name>
+						<id>73</id>
+						<name>_ln211</name>
 						<fileName>userdma.cpp</fileName>
 						<fileDirectory>/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma</fileDirectory>
-						<lineNumber>192</lineNumber>
+						<lineNumber>211</lineNumber>
 						<contextFuncName>userdma</contextFuncName>
 						<contextNormFuncName>userdma</contextNormFuncName>
 						<inlineStackInfo>
@@ -1168,7 +1168,7 @@
 											<first>userdma.cpp</first>
 											<second>userdma</second>
 										</first>
-										<second>192</second>
+										<second>211</second>
 									</item>
 								</second>
 							</item>
@@ -1181,7 +1181,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>119940512</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -1189,6 +1189,8 @@
 				<oprand_edges>
 					<count>11</count>
 					<item_version>0</item_version>
+					<item>98</item>
+					<item>99</item>
 					<item>100</item>
 					<item>101</item>
 					<item>102</item>
@@ -1198,8 +1200,6 @@
 					<item>106</item>
 					<item>107</item>
 					<item>108</item>
-					<item>109</item>
-					<item>110</item>
 				</oprand_edges>
 				<opcode>call</opcode>
 				<m_Display>0</m_Display>
@@ -1214,11 +1214,11 @@
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>76</id>
-						<name>_ln193</name>
+						<id>74</id>
+						<name>_ln212</name>
 						<fileName>userdma.cpp</fileName>
 						<fileDirectory>/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma</fileDirectory>
-						<lineNumber>193</lineNumber>
+						<lineNumber>212</lineNumber>
 						<contextFuncName>userdma</contextFuncName>
 						<contextNormFuncName>userdma</contextNormFuncName>
 						<inlineStackInfo>
@@ -1234,7 +1234,7 @@
 											<first>userdma.cpp</first>
 											<second>userdma</second>
 										</first>
-										<second>193</second>
+										<second>212</second>
 									</item>
 								</second>
 							</item>
@@ -1247,26 +1247,24 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>118910176</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
 				</Value>
 				<oprand_edges>
-					<count>12</count>
+					<count>10</count>
 					<item_version>0</item_version>
+					<item>110</item>
+					<item>111</item>
 					<item>112</item>
 					<item>113</item>
 					<item>114</item>
 					<item>115</item>
 					<item>116</item>
-					<item>117</item>
-					<item>118</item>
-					<item>134</item>
-					<item>135</item>
-					<item>687</item>
-					<item>688</item>
-					<item>689</item>
+					<item>683</item>
+					<item>684</item>
+					<item>685</item>
 				</oprand_edges>
 				<opcode>call</opcode>
 				<m_Display>0</m_Display>
@@ -1281,11 +1279,11 @@
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>77</id>
-						<name>_ln194</name>
+						<id>75</id>
+						<name>_ln213</name>
 						<fileName>userdma.cpp</fileName>
 						<fileDirectory>/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma</fileDirectory>
-						<lineNumber>194</lineNumber>
+						<lineNumber>213</lineNumber>
 						<contextFuncName>userdma</contextFuncName>
 						<contextNormFuncName>userdma</contextNormFuncName>
 						<inlineStackInfo>
@@ -1301,7 +1299,7 @@
 											<first>userdma.cpp</first>
 											<second>userdma</second>
 										</first>
-										<second>194</second>
+										<second>213</second>
 									</item>
 								</second>
 							</item>
@@ -1314,7 +1312,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>176</coreId>
+						<coreId>119534896</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -1322,11 +1320,11 @@
 				<oprand_edges>
 					<count>5</count>
 					<item_version>0</item_version>
+					<item>118</item>
+					<item>119</item>
 					<item>120</item>
 					<item>121</item>
 					<item>122</item>
-					<item>123</item>
-					<item>124</item>
 				</oprand_edges>
 				<opcode>call</opcode>
 				<m_Display>0</m_Display>
@@ -1341,11 +1339,11 @@
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>78</id>
-						<name>_ln195</name>
+						<id>76</id>
+						<name>_ln214</name>
 						<fileName>userdma.cpp</fileName>
 						<fileDirectory>/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma</fileDirectory>
-						<lineNumber>195</lineNumber>
+						<lineNumber>214</lineNumber>
 						<contextFuncName>userdma</contextFuncName>
 						<contextNormFuncName>userdma</contextNormFuncName>
 						<inlineStackInfo>
@@ -1361,7 +1359,7 @@
 											<first>userdma.cpp</first>
 											<second>userdma</second>
 										</first>
-										<second>195</second>
+										<second>214</second>
 									</item>
 								</second>
 							</item>
@@ -1374,7 +1372,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>370281800</coreId>
+						<coreId>119097648</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -1382,15 +1380,15 @@
 				<oprand_edges>
 					<count>9</count>
 					<item_version>0</item_version>
+					<item>124</item>
+					<item>125</item>
 					<item>126</item>
 					<item>127</item>
 					<item>128</item>
 					<item>129</item>
 					<item>130</item>
 					<item>131</item>
-					<item>132</item>
-					<item>133</item>
-					<item>686</item>
+					<item>682</item>
 				</oprand_edges>
 				<opcode>call</opcode>
 				<m_Display>0</m_Display>
@@ -1405,11 +1403,11 @@
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>79</id>
-						<name>_ln197</name>
+						<id>77</id>
+						<name>_ln216</name>
 						<fileName>userdma.cpp</fileName>
 						<fileDirectory>/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma</fileDirectory>
-						<lineNumber>197</lineNumber>
+						<lineNumber>216</lineNumber>
 						<contextFuncName>userdma</contextFuncName>
 						<contextNormFuncName>userdma</contextNormFuncName>
 						<inlineStackInfo>
@@ -1425,7 +1423,7 @@
 											<first>userdma.cpp</first>
 											<second>userdma</second>
 										</first>
-										<second>197</second>
+										<second>216</second>
 									</item>
 								</second>
 							</item>
@@ -1438,7 +1436,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>370280496</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -1464,7 +1462,7 @@
 				<Value>
 					<Obj>
 						<type>2</type>
-						<id>89</id>
+						<id>87</id>
 						<name>empty</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
@@ -1483,7 +1481,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>368461040</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>64</bitwidth>
@@ -1495,7 +1493,7 @@
 				<Value>
 					<Obj>
 						<type>2</type>
-						<id>95</id>
+						<id>93</id>
 						<name>entry_proc</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
@@ -1514,7 +1512,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>370578304</coreId>
+						<coreId>119945200</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -1526,8 +1524,70 @@
 				<Value>
 					<Obj>
 						<type>2</type>
-						<id>99</id>
+						<id>97</id>
 						<name>getinstream</name>
+						<fileName></fileName>
+						<fileDirectory></fileDirectory>
+						<lineNumber>0</lineNumber>
+						<contextFuncName></contextFuncName>
+						<contextNormFuncName></contextNormFuncName>
+						<inlineStackInfo>
+							<count>0</count>
+							<item_version>0</item_version>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>119945704</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>0</bitwidth>
+				</Value>
+				<const_type>6</const_type>
+				<content>&lt;constant:getinstream&gt;</content>
+			</item>
+			<item class_id_reference="16" object_id="_36">
+				<Value>
+					<Obj>
+						<type>2</type>
+						<id>109</id>
+						<name>streamtoparallelwithburst</name>
+						<fileName></fileName>
+						<fileDirectory></fileDirectory>
+						<lineNumber>0</lineNumber>
+						<contextFuncName></contextFuncName>
+						<contextNormFuncName></contextNormFuncName>
+						<inlineStackInfo>
+							<count>0</count>
+							<item_version>0</item_version>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>118515184</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>0</bitwidth>
+				</Value>
+				<const_type>6</const_type>
+				<content>&lt;constant:streamtoparallelwithburst&gt;</content>
+			</item>
+			<item class_id_reference="16" object_id="_37">
+				<Value>
+					<Obj>
+						<type>2</type>
+						<id>117</id>
+						<name>paralleltostreamwithburst</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -1551,45 +1611,14 @@
 					<bitwidth>0</bitwidth>
 				</Value>
 				<const_type>6</const_type>
-				<content>&lt;constant:getinstream&gt;</content>
+				<content>&lt;constant:paralleltostreamwithburst&gt;</content>
 			</item>
-			<item class_id_reference="16" object_id="_36">
+			<item class_id_reference="16" object_id="_38">
 				<Value>
 					<Obj>
 						<type>2</type>
-						<id>111</id>
-						<name>streamtoparallelwithburst</name>
-						<fileName></fileName>
-						<fileDirectory></fileDirectory>
-						<lineNumber>0</lineNumber>
-						<contextFuncName></contextFuncName>
-						<contextNormFuncName></contextNormFuncName>
-						<inlineStackInfo>
-							<count>0</count>
-							<item_version>0</item_version>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>370594848</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>0</bitwidth>
-				</Value>
-				<const_type>6</const_type>
-				<content>&lt;constant:streamtoparallelwithburst&gt;</content>
-			</item>
-			<item class_id_reference="16" object_id="_37">
-				<Value>
-					<Obj>
-						<type>2</type>
-						<id>119</id>
-						<name>paralleltostreamwithburst</name>
+						<id>123</id>
+						<name>sendoutstream</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -1613,37 +1642,6 @@
 					<bitwidth>0</bitwidth>
 				</Value>
 				<const_type>6</const_type>
-				<content>&lt;constant:paralleltostreamwithburst&gt;</content>
-			</item>
-			<item class_id_reference="16" object_id="_38">
-				<Value>
-					<Obj>
-						<type>2</type>
-						<id>125</id>
-						<name>sendoutstream</name>
-						<fileName></fileName>
-						<fileDirectory></fileDirectory>
-						<lineNumber>0</lineNumber>
-						<contextFuncName></contextFuncName>
-						<contextNormFuncName></contextNormFuncName>
-						<inlineStackInfo>
-							<count>0</count>
-							<item_version>0</item_version>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>370596552</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>0</bitwidth>
-				</Value>
-				<const_type>6</const_type>
 				<content>&lt;constant:sendoutstream&gt;</content>
 			</item>
 		</consts>
@@ -1653,7 +1651,7 @@
 			<item class_id="18" tracking_level="1" version="0" object_id="_39">
 				<Obj>
 					<type>3</type>
-					<id>80</id>
+					<id>78</id>
 					<name>userdma</name>
 					<fileName></fileName>
 					<fileDirectory></fileDirectory>
@@ -1678,360 +1676,346 @@
 				<node_objs>
 					<count>14</count>
 					<item_version>0</item_version>
+					<item>19</item>
+					<item>20</item>
 					<item>21</item>
 					<item>22</item>
-					<item>23</item>
-					<item>24</item>
-					<item>27</item>
-					<item>65</item>
-					<item>68</item>
-					<item>71</item>
+					<item>25</item>
+					<item>63</item>
+					<item>66</item>
+					<item>69</item>
+					<item>72</item>
+					<item>73</item>
 					<item>74</item>
 					<item>75</item>
 					<item>76</item>
 					<item>77</item>
-					<item>78</item>
-					<item>79</item>
 				</node_objs>
 			</item>
 		</blocks>
 		<edges class_id="19" tracking_level="0" version="0">
-			<count>48</count>
+			<count>46</count>
 			<item_version>0</item_version>
 			<item class_id="20" tracking_level="1" version="0" object_id="_40">
-				<id>83</id>
+				<id>81</id>
 				<edge_type>1</edge_type>
 				<source_obj>17</source_obj>
-				<sink_obj>21</sink_obj>
+				<sink_obj>19</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_41">
-				<id>85</id>
+				<id>83</id>
 				<edge_type>1</edge_type>
 				<source_obj>16</source_obj>
-				<sink_obj>22</sink_obj>
+				<sink_obj>20</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_42">
-				<id>88</id>
+				<id>86</id>
 				<edge_type>1</edge_type>
 				<source_obj>13</source_obj>
-				<sink_obj>23</sink_obj>
+				<sink_obj>21</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_43">
-				<id>90</id>
+				<id>88</id>
 				<edge_type>1</edge_type>
-				<source_obj>89</source_obj>
-				<sink_obj>24</sink_obj>
+				<source_obj>87</source_obj>
+				<sink_obj>22</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_44">
-				<id>91</id>
+				<id>89</id>
 				<edge_type>1</edge_type>
-				<source_obj>89</source_obj>
-				<sink_obj>27</sink_obj>
+				<source_obj>87</source_obj>
+				<sink_obj>25</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_45">
-				<id>92</id>
+				<id>90</id>
 				<edge_type>1</edge_type>
-				<source_obj>89</source_obj>
-				<sink_obj>65</sink_obj>
+				<source_obj>87</source_obj>
+				<sink_obj>63</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_46">
-				<id>93</id>
+				<id>91</id>
 				<edge_type>1</edge_type>
-				<source_obj>89</source_obj>
-				<sink_obj>68</sink_obj>
+				<source_obj>87</source_obj>
+				<sink_obj>66</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_47">
-				<id>94</id>
+				<id>92</id>
 				<edge_type>1</edge_type>
-				<source_obj>89</source_obj>
-				<sink_obj>71</sink_obj>
+				<source_obj>87</source_obj>
+				<sink_obj>69</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_48">
-				<id>96</id>
+				<id>94</id>
 				<edge_type>1</edge_type>
-				<source_obj>95</source_obj>
-				<sink_obj>74</sink_obj>
+				<source_obj>93</source_obj>
+				<sink_obj>72</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_49">
-				<id>97</id>
+				<id>95</id>
+				<edge_type>1</edge_type>
+				<source_obj>20</source_obj>
+				<sink_obj>72</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
+			<item class_id_reference="20" object_id="_50">
+				<id>96</id>
+				<edge_type>1</edge_type>
+				<source_obj>22</source_obj>
+				<sink_obj>72</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
+			<item class_id_reference="20" object_id="_51">
+				<id>98</id>
+				<edge_type>1</edge_type>
+				<source_obj>97</source_obj>
+				<sink_obj>73</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
+			<item class_id_reference="20" object_id="_52">
+				<id>99</id>
+				<edge_type>1</edge_type>
+				<source_obj>3</source_obj>
+				<sink_obj>73</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
+			<item class_id_reference="20" object_id="_53">
+				<id>100</id>
+				<edge_type>1</edge_type>
+				<source_obj>4</source_obj>
+				<sink_obj>73</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
+			<item class_id_reference="20" object_id="_54">
+				<id>101</id>
+				<edge_type>1</edge_type>
+				<source_obj>5</source_obj>
+				<sink_obj>73</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
+			<item class_id_reference="20" object_id="_55">
+				<id>102</id>
+				<edge_type>1</edge_type>
+				<source_obj>6</source_obj>
+				<sink_obj>73</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
+			<item class_id_reference="20" object_id="_56">
+				<id>103</id>
+				<edge_type>1</edge_type>
+				<source_obj>7</source_obj>
+				<sink_obj>73</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
+			<item class_id_reference="20" object_id="_57">
+				<id>104</id>
+				<edge_type>1</edge_type>
+				<source_obj>21</source_obj>
+				<sink_obj>73</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
+			<item class_id_reference="20" object_id="_58">
+				<id>105</id>
+				<edge_type>1</edge_type>
+				<source_obj>18</source_obj>
+				<sink_obj>73</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
+			<item class_id_reference="20" object_id="_59">
+				<id>106</id>
+				<edge_type>1</edge_type>
+				<source_obj>63</source_obj>
+				<sink_obj>73</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
+			<item class_id_reference="20" object_id="_60">
+				<id>107</id>
+				<edge_type>1</edge_type>
+				<source_obj>66</source_obj>
+				<sink_obj>73</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
+			<item class_id_reference="20" object_id="_61">
+				<id>108</id>
+				<edge_type>1</edge_type>
+				<source_obj>25</source_obj>
+				<sink_obj>73</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
+			<item class_id_reference="20" object_id="_62">
+				<id>110</id>
+				<edge_type>1</edge_type>
+				<source_obj>109</source_obj>
+				<sink_obj>74</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
+			<item class_id_reference="20" object_id="_63">
+				<id>111</id>
+				<edge_type>1</edge_type>
+				<source_obj>63</source_obj>
+				<sink_obj>74</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
+			<item class_id_reference="20" object_id="_64">
+				<id>112</id>
+				<edge_type>1</edge_type>
+				<source_obj>66</source_obj>
+				<sink_obj>74</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
+			<item class_id_reference="20" object_id="_65">
+				<id>113</id>
+				<edge_type>1</edge_type>
+				<source_obj>14</source_obj>
+				<sink_obj>74</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
+			<item class_id_reference="20" object_id="_66">
+				<id>114</id>
+				<edge_type>1</edge_type>
+				<source_obj>25</source_obj>
+				<sink_obj>74</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
+			<item class_id_reference="20" object_id="_67">
+				<id>115</id>
+				<edge_type>1</edge_type>
+				<source_obj>1</source_obj>
+				<sink_obj>74</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
+			<item class_id_reference="20" object_id="_68">
+				<id>116</id>
 				<edge_type>1</edge_type>
 				<source_obj>22</source_obj>
 				<sink_obj>74</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_50">
-				<id>98</id>
-				<edge_type>1</edge_type>
-				<source_obj>24</source_obj>
-				<sink_obj>74</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
-			<item class_id_reference="20" object_id="_51">
-				<id>100</id>
-				<edge_type>1</edge_type>
-				<source_obj>99</source_obj>
-				<sink_obj>75</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
-			<item class_id_reference="20" object_id="_52">
-				<id>101</id>
-				<edge_type>1</edge_type>
-				<source_obj>3</source_obj>
-				<sink_obj>75</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
-			<item class_id_reference="20" object_id="_53">
-				<id>102</id>
-				<edge_type>1</edge_type>
-				<source_obj>4</source_obj>
-				<sink_obj>75</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
-			<item class_id_reference="20" object_id="_54">
-				<id>103</id>
-				<edge_type>1</edge_type>
-				<source_obj>5</source_obj>
-				<sink_obj>75</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
-			<item class_id_reference="20" object_id="_55">
-				<id>104</id>
-				<edge_type>1</edge_type>
-				<source_obj>6</source_obj>
-				<sink_obj>75</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
-			<item class_id_reference="20" object_id="_56">
-				<id>105</id>
-				<edge_type>1</edge_type>
-				<source_obj>7</source_obj>
-				<sink_obj>75</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
-			<item class_id_reference="20" object_id="_57">
-				<id>106</id>
-				<edge_type>1</edge_type>
-				<source_obj>23</source_obj>
-				<sink_obj>75</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
-			<item class_id_reference="20" object_id="_58">
-				<id>107</id>
-				<edge_type>1</edge_type>
-				<source_obj>18</source_obj>
-				<sink_obj>75</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
-			<item class_id_reference="20" object_id="_59">
-				<id>108</id>
-				<edge_type>1</edge_type>
-				<source_obj>65</source_obj>
-				<sink_obj>75</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
-			<item class_id_reference="20" object_id="_60">
-				<id>109</id>
-				<edge_type>1</edge_type>
-				<source_obj>68</source_obj>
-				<sink_obj>75</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
-			<item class_id_reference="20" object_id="_61">
-				<id>110</id>
-				<edge_type>1</edge_type>
-				<source_obj>27</source_obj>
-				<sink_obj>75</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
-			<item class_id_reference="20" object_id="_62">
-				<id>112</id>
-				<edge_type>1</edge_type>
-				<source_obj>111</source_obj>
-				<sink_obj>76</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
-			<item class_id_reference="20" object_id="_63">
-				<id>113</id>
-				<edge_type>1</edge_type>
-				<source_obj>65</source_obj>
-				<sink_obj>76</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
-			<item class_id_reference="20" object_id="_64">
-				<id>114</id>
-				<edge_type>1</edge_type>
-				<source_obj>68</source_obj>
-				<sink_obj>76</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
-			<item class_id_reference="20" object_id="_65">
-				<id>115</id>
-				<edge_type>1</edge_type>
-				<source_obj>14</source_obj>
-				<sink_obj>76</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
-			<item class_id_reference="20" object_id="_66">
-				<id>116</id>
-				<edge_type>1</edge_type>
-				<source_obj>27</source_obj>
-				<sink_obj>76</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
-			<item class_id_reference="20" object_id="_67">
-				<id>117</id>
-				<edge_type>1</edge_type>
-				<source_obj>1</source_obj>
-				<sink_obj>76</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
-			<item class_id_reference="20" object_id="_68">
+			<item class_id_reference="20" object_id="_69">
 				<id>118</id>
 				<edge_type>1</edge_type>
-				<source_obj>24</source_obj>
-				<sink_obj>76</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
-			<item class_id_reference="20" object_id="_69">
-				<id>120</id>
-				<edge_type>1</edge_type>
-				<source_obj>119</source_obj>
-				<sink_obj>77</sink_obj>
+				<source_obj>117</source_obj>
+				<sink_obj>75</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_70">
-				<id>121</id>
+				<id>119</id>
 				<edge_type>1</edge_type>
 				<source_obj>2</source_obj>
-				<sink_obj>77</sink_obj>
+				<sink_obj>75</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_71">
-				<id>122</id>
+				<id>120</id>
 				<edge_type>1</edge_type>
-				<source_obj>21</source_obj>
-				<sink_obj>77</sink_obj>
+				<source_obj>19</source_obj>
+				<sink_obj>75</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_72">
-				<id>123</id>
+				<id>121</id>
 				<edge_type>1</edge_type>
-				<source_obj>23</source_obj>
-				<sink_obj>77</sink_obj>
+				<source_obj>21</source_obj>
+				<sink_obj>75</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_73">
-				<id>124</id>
+				<id>122</id>
 				<edge_type>1</edge_type>
-				<source_obj>71</source_obj>
-				<sink_obj>77</sink_obj>
+				<source_obj>69</source_obj>
+				<sink_obj>75</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_74">
-				<id>126</id>
+				<id>124</id>
 				<edge_type>1</edge_type>
-				<source_obj>125</source_obj>
-				<sink_obj>78</sink_obj>
+				<source_obj>123</source_obj>
+				<sink_obj>76</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_75">
-				<id>127</id>
+				<id>125</id>
 				<edge_type>1</edge_type>
-				<source_obj>71</source_obj>
-				<sink_obj>78</sink_obj>
+				<source_obj>69</source_obj>
+				<sink_obj>76</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_76">
-				<id>128</id>
+				<id>126</id>
 				<edge_type>1</edge_type>
 				<source_obj>15</source_obj>
-				<sink_obj>78</sink_obj>
+				<sink_obj>76</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_77">
-				<id>129</id>
+				<id>127</id>
 				<edge_type>1</edge_type>
 				<source_obj>8</source_obj>
-				<sink_obj>78</sink_obj>
+				<sink_obj>76</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_78">
-				<id>130</id>
+				<id>128</id>
 				<edge_type>1</edge_type>
 				<source_obj>9</source_obj>
-				<sink_obj>78</sink_obj>
+				<sink_obj>76</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_79">
-				<id>131</id>
+				<id>129</id>
 				<edge_type>1</edge_type>
 				<source_obj>10</source_obj>
-				<sink_obj>78</sink_obj>
+				<sink_obj>76</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_80">
-				<id>132</id>
+				<id>130</id>
 				<edge_type>1</edge_type>
 				<source_obj>11</source_obj>
-				<sink_obj>78</sink_obj>
+				<sink_obj>76</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_81">
-				<id>133</id>
+				<id>131</id>
 				<edge_type>1</edge_type>
 				<source_obj>12</source_obj>
-				<sink_obj>78</sink_obj>
+				<sink_obj>76</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_82">
-				<id>134</id>
-				<edge_type>1</edge_type>
-				<source_obj>19</source_obj>
-				<sink_obj>76</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
-			<item class_id_reference="20" object_id="_83">
-				<id>135</id>
-				<edge_type>1</edge_type>
-				<source_obj>20</source_obj>
-				<sink_obj>76</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
-			<item class_id_reference="20" object_id="_84">
-				<id>686</id>
-				<edge_type>4</edge_type>
-				<source_obj>77</source_obj>
-				<sink_obj>78</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
-			<item class_id_reference="20" object_id="_85">
-				<id>687</id>
+				<id>682</id>
 				<edge_type>4</edge_type>
 				<source_obj>75</source_obj>
 				<sink_obj>76</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_86">
-				<id>688</id>
+			<item class_id_reference="20" object_id="_83">
+				<id>683</id>
 				<edge_type>4</edge_type>
-				<source_obj>74</source_obj>
-				<sink_obj>76</sink_obj>
+				<source_obj>73</source_obj>
+				<sink_obj>74</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_87">
-				<id>689</id>
+			<item class_id_reference="20" object_id="_84">
+				<id>684</id>
 				<edge_type>4</edge_type>
-				<source_obj>74</source_obj>
-				<sink_obj>76</sink_obj>
+				<source_obj>72</source_obj>
+				<sink_obj>74</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
+			<item class_id_reference="20" object_id="_85">
+				<id>685</id>
+				<edge_type>4</edge_type>
+				<source_obj>72</source_obj>
+				<sink_obj>74</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 		</edges>
@@ -2039,7 +2023,7 @@
 	<cdfg_regions class_id="21" tracking_level="0" version="0">
 		<count>1</count>
 		<item_version>0</item_version>
-		<item class_id="22" tracking_level="1" version="0" object_id="_88">
+		<item class_id="22" tracking_level="1" version="0" object_id="_86">
 			<mId>1</mId>
 			<mTag>userdma</mTag>
 			<mNormTag>userdma</mNormTag>
@@ -2051,7 +2035,7 @@
 			<basic_blocks>
 				<count>1</count>
 				<item_version>0</item_version>
-				<item>80</item>
+				<item>78</item>
 			</basic_blocks>
 			<mII>-1</mII>
 			<mDepth>-1</mDepth>
@@ -2060,11 +2044,11 @@
 			<mMinLatency>-1</mMinLatency>
 			<mMaxLatency>-1</mMaxLatency>
 			<mIsDfPipe>1</mIsDfPipe>
-			<mDfPipe class_id="23" tracking_level="1" version="0" object_id="_89">
+			<mDfPipe class_id="23" tracking_level="1" version="0" object_id="_87">
 				<port_list class_id="24" tracking_level="0" version="0">
 					<count>18</count>
 					<item_version>0</item_version>
-					<item class_id="25" tracking_level="1" version="0" object_id="_90">
+					<item class_id="25" tracking_level="1" version="0" object_id="_88">
 						<name>gmem0</name>
 						<dir>1</dir>
 						<type>1</type>
@@ -2072,7 +2056,7 @@
 						<top_port class_id="-1"></top_port>
 						<chan class_id="-1"></chan>
 					</item>
-					<item class_id_reference="25" object_id="_91">
+					<item class_id_reference="25" object_id="_89">
 						<name>gmem1</name>
 						<dir>0</dir>
 						<type>1</type>
@@ -2080,7 +2064,7 @@
 						<top_port class_id="-1"></top_port>
 						<chan class_id="-1"></chan>
 					</item>
-					<item class_id_reference="25" object_id="_92">
+					<item class_id_reference="25" object_id="_90">
 						<name>inStreamTop_V_data_V</name>
 						<dir>0</dir>
 						<type>3</type>
@@ -2088,7 +2072,7 @@
 						<top_port class_id="-1"></top_port>
 						<chan class_id="-1"></chan>
 					</item>
-					<item class_id_reference="25" object_id="_93">
+					<item class_id_reference="25" object_id="_91">
 						<name>inStreamTop_V_keep_V</name>
 						<dir>0</dir>
 						<type>3</type>
@@ -2096,7 +2080,7 @@
 						<top_port class_id="-1"></top_port>
 						<chan class_id="-1"></chan>
 					</item>
-					<item class_id_reference="25" object_id="_94">
+					<item class_id_reference="25" object_id="_92">
 						<name>inStreamTop_V_strb_V</name>
 						<dir>0</dir>
 						<type>3</type>
@@ -2104,7 +2088,7 @@
 						<top_port class_id="-1"></top_port>
 						<chan class_id="-1"></chan>
 					</item>
-					<item class_id_reference="25" object_id="_95">
+					<item class_id_reference="25" object_id="_93">
 						<name>inStreamTop_V_user_V</name>
 						<dir>0</dir>
 						<type>3</type>
@@ -2112,7 +2096,7 @@
 						<top_port class_id="-1"></top_port>
 						<chan class_id="-1"></chan>
 					</item>
-					<item class_id_reference="25" object_id="_96">
+					<item class_id_reference="25" object_id="_94">
 						<name>inStreamTop_V_last_V</name>
 						<dir>0</dir>
 						<type>3</type>
@@ -2120,7 +2104,7 @@
 						<top_port class_id="-1"></top_port>
 						<chan class_id="-1"></chan>
 					</item>
-					<item class_id_reference="25" object_id="_97">
+					<item class_id_reference="25" object_id="_95">
 						<name>outStreamTop_V_data_V</name>
 						<dir>1</dir>
 						<type>3</type>
@@ -2128,7 +2112,7 @@
 						<top_port class_id="-1"></top_port>
 						<chan class_id="-1"></chan>
 					</item>
-					<item class_id_reference="25" object_id="_98">
+					<item class_id_reference="25" object_id="_96">
 						<name>outStreamTop_V_keep_V</name>
 						<dir>1</dir>
 						<type>3</type>
@@ -2136,7 +2120,7 @@
 						<top_port class_id="-1"></top_port>
 						<chan class_id="-1"></chan>
 					</item>
-					<item class_id_reference="25" object_id="_99">
+					<item class_id_reference="25" object_id="_97">
 						<name>outStreamTop_V_strb_V</name>
 						<dir>1</dir>
 						<type>3</type>
@@ -2144,7 +2128,7 @@
 						<top_port class_id="-1"></top_port>
 						<chan class_id="-1"></chan>
 					</item>
-					<item class_id_reference="25" object_id="_100">
+					<item class_id_reference="25" object_id="_98">
 						<name>outStreamTop_V_user_V</name>
 						<dir>1</dir>
 						<type>3</type>
@@ -2152,7 +2136,7 @@
 						<top_port class_id="-1"></top_port>
 						<chan class_id="-1"></chan>
 					</item>
-					<item class_id_reference="25" object_id="_101">
+					<item class_id_reference="25" object_id="_99">
 						<name>outStreamTop_V_last_V</name>
 						<dir>1</dir>
 						<type>3</type>
@@ -2160,7 +2144,7 @@
 						<top_port class_id="-1"></top_port>
 						<chan class_id="-1"></chan>
 					</item>
-					<item class_id_reference="25" object_id="_102">
+					<item class_id_reference="25" object_id="_100">
 						<name>kernel_mode</name>
 						<dir>0</dir>
 						<type>3</type>
@@ -2168,7 +2152,7 @@
 						<top_port class_id="-1"></top_port>
 						<chan class_id="-1"></chan>
 					</item>
-					<item class_id_reference="25" object_id="_103">
+					<item class_id_reference="25" object_id="_101">
 						<name>s2m_buf_sts</name>
 						<dir>1</dir>
 						<type>3</type>
@@ -2176,7 +2160,7 @@
 						<top_port class_id="-1"></top_port>
 						<chan class_id="-1"></chan>
 					</item>
-					<item class_id_reference="25" object_id="_104">
+					<item class_id_reference="25" object_id="_102">
 						<name>m2s_buf_sts</name>
 						<dir>1</dir>
 						<type>3</type>
@@ -2184,7 +2168,7 @@
 						<top_port class_id="-1"></top_port>
 						<chan class_id="-1"></chan>
 					</item>
-					<item class_id_reference="25" object_id="_105">
+					<item class_id_reference="25" object_id="_103">
 						<name>s2mbuf</name>
 						<dir>0</dir>
 						<type>3</type>
@@ -2192,7 +2176,7 @@
 						<top_port class_id="-1"></top_port>
 						<chan class_id="-1"></chan>
 					</item>
-					<item class_id_reference="25" object_id="_106">
+					<item class_id_reference="25" object_id="_104">
 						<name>m2sbuf</name>
 						<dir>0</dir>
 						<type>3</type>
@@ -2200,7 +2184,7 @@
 						<top_port class_id="-1"></top_port>
 						<chan class_id="-1"></chan>
 					</item>
-					<item class_id_reference="25" object_id="_107">
+					<item class_id_reference="25" object_id="_105">
 						<name>s2m_err</name>
 						<dir>1</dir>
 						<type>3</type>
@@ -2212,26 +2196,26 @@
 				<process_list class_id="27" tracking_level="0" version="0">
 					<count>5</count>
 					<item_version>0</item_version>
-					<item class_id="28" tracking_level="1" version="0" object_id="_108">
+					<item class_id="28" tracking_level="1" version="0" object_id="_106">
 						<type>0</type>
 						<name>entry_proc_U0</name>
-						<ssdmobj_id>74</ssdmobj_id>
+						<ssdmobj_id>72</ssdmobj_id>
 						<pins class_id="29" tracking_level="0" version="0">
 							<count>1</count>
 							<item_version>0</item_version>
-							<item class_id="30" tracking_level="1" version="0" object_id="_109">
-								<port class_id_reference="25" object_id="_110">
+							<item class_id="30" tracking_level="1" version="0" object_id="_107">
+								<port class_id_reference="25" object_id="_108">
 									<name>s2mbuf</name>
 									<dir>0</dir>
 									<type>3</type>
 									<need_hs>1</need_hs>
-									<top_port class_id_reference="25" object_id_reference="_105"></top_port>
+									<top_port class_id_reference="25" object_id_reference="_103"></top_port>
 									<chan class_id="-1"></chan>
 								</port>
-								<inst class_id="31" tracking_level="1" version="0" object_id="_111">
+								<inst class_id="31" tracking_level="1" version="0" object_id="_109">
 									<type>0</type>
 									<name>entry_proc_U0</name>
-									<ssdmobj_id>74</ssdmobj_id>
+									<ssdmobj_id>72</ssdmobj_id>
 								</inst>
 							</item>
 						</pins>
@@ -2239,262 +2223,262 @@
 						<in_sink_join>0</in_sink_join>
 						<flag_in_gui>0</flag_in_gui>
 					</item>
-					<item class_id_reference="28" object_id="_112">
+					<item class_id_reference="28" object_id="_110">
 						<type>0</type>
 						<name>getinstream_U0</name>
-						<ssdmobj_id>75</ssdmobj_id>
+						<ssdmobj_id>73</ssdmobj_id>
 						<pins>
 							<count>7</count>
 							<item_version>0</item_version>
-							<item class_id_reference="30" object_id="_113">
-								<port class_id_reference="25" object_id="_114">
+							<item class_id_reference="30" object_id="_111">
+								<port class_id_reference="25" object_id="_112">
 									<name>inStreamTop_V_data_V</name>
+									<dir>0</dir>
+									<type>3</type>
+									<need_hs>0</need_hs>
+									<top_port class_id_reference="25" object_id_reference="_90"></top_port>
+									<chan class_id="-1"></chan>
+								</port>
+								<inst class_id_reference="31" object_id="_113">
+									<type>0</type>
+									<name>getinstream_U0</name>
+									<ssdmobj_id>73</ssdmobj_id>
+								</inst>
+							</item>
+							<item class_id_reference="30" object_id="_114">
+								<port class_id_reference="25" object_id="_115">
+									<name>inStreamTop_V_keep_V</name>
+									<dir>0</dir>
+									<type>3</type>
+									<need_hs>0</need_hs>
+									<top_port class_id_reference="25" object_id_reference="_91"></top_port>
+									<chan class_id="-1"></chan>
+								</port>
+								<inst class_id_reference="31" object_id_reference="_113"></inst>
+							</item>
+							<item class_id_reference="30" object_id="_116">
+								<port class_id_reference="25" object_id="_117">
+									<name>inStreamTop_V_strb_V</name>
 									<dir>0</dir>
 									<type>3</type>
 									<need_hs>0</need_hs>
 									<top_port class_id_reference="25" object_id_reference="_92"></top_port>
 									<chan class_id="-1"></chan>
 								</port>
-								<inst class_id_reference="31" object_id="_115">
-									<type>0</type>
-									<name>getinstream_U0</name>
-									<ssdmobj_id>75</ssdmobj_id>
-								</inst>
+								<inst class_id_reference="31" object_id_reference="_113"></inst>
 							</item>
-							<item class_id_reference="30" object_id="_116">
-								<port class_id_reference="25" object_id="_117">
-									<name>inStreamTop_V_keep_V</name>
+							<item class_id_reference="30" object_id="_118">
+								<port class_id_reference="25" object_id="_119">
+									<name>inStreamTop_V_user_V</name>
 									<dir>0</dir>
 									<type>3</type>
 									<need_hs>0</need_hs>
 									<top_port class_id_reference="25" object_id_reference="_93"></top_port>
 									<chan class_id="-1"></chan>
 								</port>
-								<inst class_id_reference="31" object_id_reference="_115"></inst>
+								<inst class_id_reference="31" object_id_reference="_113"></inst>
 							</item>
-							<item class_id_reference="30" object_id="_118">
-								<port class_id_reference="25" object_id="_119">
-									<name>inStreamTop_V_strb_V</name>
+							<item class_id_reference="30" object_id="_120">
+								<port class_id_reference="25" object_id="_121">
+									<name>inStreamTop_V_last_V</name>
 									<dir>0</dir>
 									<type>3</type>
 									<need_hs>0</need_hs>
 									<top_port class_id_reference="25" object_id_reference="_94"></top_port>
 									<chan class_id="-1"></chan>
 								</port>
-								<inst class_id_reference="31" object_id_reference="_115"></inst>
-							</item>
-							<item class_id_reference="30" object_id="_120">
-								<port class_id_reference="25" object_id="_121">
-									<name>inStreamTop_V_user_V</name>
-									<dir>0</dir>
-									<type>3</type>
-									<need_hs>0</need_hs>
-									<top_port class_id_reference="25" object_id_reference="_95"></top_port>
-									<chan class_id="-1"></chan>
-								</port>
-								<inst class_id_reference="31" object_id_reference="_115"></inst>
+								<inst class_id_reference="31" object_id_reference="_113"></inst>
 							</item>
 							<item class_id_reference="30" object_id="_122">
 								<port class_id_reference="25" object_id="_123">
-									<name>inStreamTop_V_last_V</name>
-									<dir>0</dir>
-									<type>3</type>
-									<need_hs>0</need_hs>
-									<top_port class_id_reference="25" object_id_reference="_96"></top_port>
-									<chan class_id="-1"></chan>
-								</port>
-								<inst class_id_reference="31" object_id_reference="_115"></inst>
-							</item>
-							<item class_id_reference="30" object_id="_124">
-								<port class_id_reference="25" object_id="_125">
 									<name>kernel_mode</name>
 									<dir>0</dir>
 									<type>3</type>
 									<need_hs>1</need_hs>
-									<top_port class_id_reference="25" object_id_reference="_102"></top_port>
+									<top_port class_id_reference="25" object_id_reference="_100"></top_port>
 									<chan class_id="-1"></chan>
 								</port>
-								<inst class_id_reference="31" object_id_reference="_115"></inst>
+								<inst class_id_reference="31" object_id_reference="_113"></inst>
 							</item>
-							<item class_id_reference="30" object_id="_126">
-								<port class_id_reference="25" object_id="_127">
+							<item class_id_reference="30" object_id="_124">
+								<port class_id_reference="25" object_id="_125">
 									<name>s2m_err</name>
 									<dir>1</dir>
 									<type>3</type>
 									<need_hs>1</need_hs>
-									<top_port class_id_reference="25" object_id_reference="_107"></top_port>
+									<top_port class_id_reference="25" object_id_reference="_105"></top_port>
 									<chan class_id="-1"></chan>
 								</port>
-								<inst class_id_reference="31" object_id_reference="_115"></inst>
+								<inst class_id_reference="31" object_id_reference="_113"></inst>
 							</item>
 						</pins>
 						<in_source_fork>1</in_source_fork>
 						<in_sink_join>1</in_sink_join>
 						<flag_in_gui>1</flag_in_gui>
 					</item>
-					<item class_id_reference="28" object_id="_128">
+					<item class_id_reference="28" object_id="_126">
 						<type>0</type>
 						<name>streamtoparallelwithburst_U0</name>
-						<ssdmobj_id>76</ssdmobj_id>
+						<ssdmobj_id>74</ssdmobj_id>
 						<pins>
 							<count>2</count>
 							<item_version>0</item_version>
-							<item class_id_reference="30" object_id="_129">
-								<port class_id_reference="25" object_id="_130">
+							<item class_id_reference="30" object_id="_127">
+								<port class_id_reference="25" object_id="_128">
 									<name>s2m_buf_sts</name>
 									<dir>1</dir>
 									<type>3</type>
 									<need_hs>1</need_hs>
-									<top_port class_id_reference="25" object_id_reference="_103"></top_port>
+									<top_port class_id_reference="25" object_id_reference="_101"></top_port>
 									<chan class_id="-1"></chan>
 								</port>
-								<inst class_id_reference="31" object_id="_131">
+								<inst class_id_reference="31" object_id="_129">
 									<type>0</type>
 									<name>streamtoparallelwithburst_U0</name>
-									<ssdmobj_id>76</ssdmobj_id>
+									<ssdmobj_id>74</ssdmobj_id>
 								</inst>
 							</item>
-							<item class_id_reference="30" object_id="_132">
-								<port class_id_reference="25" object_id="_133">
+							<item class_id_reference="30" object_id="_130">
+								<port class_id_reference="25" object_id="_131">
 									<name>gmem0</name>
 									<dir>1</dir>
 									<type>1</type>
 									<need_hs>1</need_hs>
-									<top_port class_id_reference="25" object_id_reference="_90"></top_port>
+									<top_port class_id_reference="25" object_id_reference="_88"></top_port>
 									<chan class_id="-1"></chan>
 								</port>
-								<inst class_id_reference="31" object_id_reference="_131"></inst>
+								<inst class_id_reference="31" object_id_reference="_129"></inst>
 							</item>
 						</pins>
 						<in_source_fork>0</in_source_fork>
 						<in_sink_join>1</in_sink_join>
 						<flag_in_gui>0</flag_in_gui>
 					</item>
-					<item class_id_reference="28" object_id="_134">
+					<item class_id_reference="28" object_id="_132">
 						<type>0</type>
 						<name>paralleltostreamwithburst_U0</name>
-						<ssdmobj_id>77</ssdmobj_id>
+						<ssdmobj_id>75</ssdmobj_id>
 						<pins>
 							<count>3</count>
 							<item_version>0</item_version>
-							<item class_id_reference="30" object_id="_135">
-								<port class_id_reference="25" object_id="_136">
+							<item class_id_reference="30" object_id="_133">
+								<port class_id_reference="25" object_id="_134">
 									<name>gmem1</name>
 									<dir>0</dir>
 									<type>1</type>
 									<need_hs>1</need_hs>
-									<top_port class_id_reference="25" object_id_reference="_91"></top_port>
+									<top_port class_id_reference="25" object_id_reference="_89"></top_port>
 									<chan class_id="-1"></chan>
 								</port>
-								<inst class_id_reference="31" object_id="_137">
+								<inst class_id_reference="31" object_id="_135">
 									<type>0</type>
 									<name>paralleltostreamwithburst_U0</name>
-									<ssdmobj_id>77</ssdmobj_id>
+									<ssdmobj_id>75</ssdmobj_id>
 								</inst>
 							</item>
-							<item class_id_reference="30" object_id="_138">
-								<port class_id_reference="25" object_id="_139">
+							<item class_id_reference="30" object_id="_136">
+								<port class_id_reference="25" object_id="_137">
 									<name>in_memory</name>
 									<dir>0</dir>
 									<type>3</type>
 									<need_hs>1</need_hs>
-									<top_port class_id_reference="25" object_id_reference="_106"></top_port>
+									<top_port class_id_reference="25" object_id_reference="_104"></top_port>
 									<chan class_id="-1"></chan>
 								</port>
-								<inst class_id_reference="31" object_id_reference="_137"></inst>
+								<inst class_id_reference="31" object_id_reference="_135"></inst>
 							</item>
-							<item class_id_reference="30" object_id="_140">
-								<port class_id_reference="25" object_id="_141">
+							<item class_id_reference="30" object_id="_138">
+								<port class_id_reference="25" object_id="_139">
 									<name>kernel_mode</name>
 									<dir>0</dir>
 									<type>3</type>
 									<need_hs>1</need_hs>
-									<top_port class_id_reference="25" object_id_reference="_102"></top_port>
+									<top_port class_id_reference="25" object_id_reference="_100"></top_port>
 									<chan class_id="-1"></chan>
 								</port>
-								<inst class_id_reference="31" object_id_reference="_137"></inst>
+								<inst class_id_reference="31" object_id_reference="_135"></inst>
 							</item>
 						</pins>
 						<in_source_fork>1</in_source_fork>
 						<in_sink_join>0</in_sink_join>
 						<flag_in_gui>0</flag_in_gui>
 					</item>
-					<item class_id_reference="28" object_id="_142">
+					<item class_id_reference="28" object_id="_140">
 						<type>0</type>
 						<name>sendoutstream_U0</name>
-						<ssdmobj_id>78</ssdmobj_id>
+						<ssdmobj_id>76</ssdmobj_id>
 						<pins>
 							<count>6</count>
 							<item_version>0</item_version>
-							<item class_id_reference="30" object_id="_143">
-								<port class_id_reference="25" object_id="_144">
+							<item class_id_reference="30" object_id="_141">
+								<port class_id_reference="25" object_id="_142">
 									<name>m2s_buf_sts</name>
 									<dir>1</dir>
 									<type>3</type>
 									<need_hs>1</need_hs>
-									<top_port class_id_reference="25" object_id_reference="_104"></top_port>
+									<top_port class_id_reference="25" object_id_reference="_102"></top_port>
 									<chan class_id="-1"></chan>
 								</port>
-								<inst class_id_reference="31" object_id="_145">
+								<inst class_id_reference="31" object_id="_143">
 									<type>0</type>
 									<name>sendoutstream_U0</name>
-									<ssdmobj_id>78</ssdmobj_id>
+									<ssdmobj_id>76</ssdmobj_id>
 								</inst>
+							</item>
+							<item class_id_reference="30" object_id="_144">
+								<port class_id_reference="25" object_id="_145">
+									<name>outStreamTop_V_data_V</name>
+									<dir>1</dir>
+									<type>3</type>
+									<need_hs>0</need_hs>
+									<top_port class_id_reference="25" object_id_reference="_95"></top_port>
+									<chan class_id="-1"></chan>
+								</port>
+								<inst class_id_reference="31" object_id_reference="_143"></inst>
 							</item>
 							<item class_id_reference="30" object_id="_146">
 								<port class_id_reference="25" object_id="_147">
-									<name>outStreamTop_V_data_V</name>
+									<name>outStreamTop_V_keep_V</name>
+									<dir>1</dir>
+									<type>3</type>
+									<need_hs>0</need_hs>
+									<top_port class_id_reference="25" object_id_reference="_96"></top_port>
+									<chan class_id="-1"></chan>
+								</port>
+								<inst class_id_reference="31" object_id_reference="_143"></inst>
+							</item>
+							<item class_id_reference="30" object_id="_148">
+								<port class_id_reference="25" object_id="_149">
+									<name>outStreamTop_V_strb_V</name>
 									<dir>1</dir>
 									<type>3</type>
 									<need_hs>0</need_hs>
 									<top_port class_id_reference="25" object_id_reference="_97"></top_port>
 									<chan class_id="-1"></chan>
 								</port>
-								<inst class_id_reference="31" object_id_reference="_145"></inst>
+								<inst class_id_reference="31" object_id_reference="_143"></inst>
 							</item>
-							<item class_id_reference="30" object_id="_148">
-								<port class_id_reference="25" object_id="_149">
-									<name>outStreamTop_V_keep_V</name>
+							<item class_id_reference="30" object_id="_150">
+								<port class_id_reference="25" object_id="_151">
+									<name>outStreamTop_V_user_V</name>
 									<dir>1</dir>
 									<type>3</type>
 									<need_hs>0</need_hs>
 									<top_port class_id_reference="25" object_id_reference="_98"></top_port>
 									<chan class_id="-1"></chan>
 								</port>
-								<inst class_id_reference="31" object_id_reference="_145"></inst>
+								<inst class_id_reference="31" object_id_reference="_143"></inst>
 							</item>
-							<item class_id_reference="30" object_id="_150">
-								<port class_id_reference="25" object_id="_151">
-									<name>outStreamTop_V_strb_V</name>
+							<item class_id_reference="30" object_id="_152">
+								<port class_id_reference="25" object_id="_153">
+									<name>outStreamTop_V_last_V</name>
 									<dir>1</dir>
 									<type>3</type>
 									<need_hs>0</need_hs>
 									<top_port class_id_reference="25" object_id_reference="_99"></top_port>
 									<chan class_id="-1"></chan>
 								</port>
-								<inst class_id_reference="31" object_id_reference="_145"></inst>
-							</item>
-							<item class_id_reference="30" object_id="_152">
-								<port class_id_reference="25" object_id="_153">
-									<name>outStreamTop_V_user_V</name>
-									<dir>1</dir>
-									<type>3</type>
-									<need_hs>0</need_hs>
-									<top_port class_id_reference="25" object_id_reference="_100"></top_port>
-									<chan class_id="-1"></chan>
-								</port>
-								<inst class_id_reference="31" object_id_reference="_145"></inst>
-							</item>
-							<item class_id_reference="30" object_id="_154">
-								<port class_id_reference="25" object_id="_155">
-									<name>outStreamTop_V_last_V</name>
-									<dir>1</dir>
-									<type>3</type>
-									<need_hs>0</need_hs>
-									<top_port class_id_reference="25" object_id_reference="_101"></top_port>
-									<chan class_id="-1"></chan>
-								</port>
-								<inst class_id_reference="31" object_id_reference="_145"></inst>
+								<inst class_id_reference="31" object_id_reference="_143"></inst>
 							</item>
 						</pins>
 						<in_source_fork>0</in_source_fork>
@@ -2505,10 +2489,10 @@
 				<channel_list class_id="32" tracking_level="0" version="0">
 					<count>5</count>
 					<item_version>0</item_version>
-					<item class_id="26" tracking_level="1" version="0" object_id="_156">
+					<item class_id="26" tracking_level="1" version="0" object_id="_154">
 						<type>1</type>
 						<name>s2mbuf_c</name>
-						<ssdmobj_id>24</ssdmobj_id>
+						<ssdmobj_id>22</ssdmobj_id>
 						<ctype>0</ctype>
 						<depth>3</depth>
 						<bitwidth>64</bitwidth>
@@ -2517,8 +2501,8 @@
 						<source_list>
 							<count>1</count>
 							<item_version>0</item_version>
-							<item class_id_reference="30" object_id="_157">
-								<port class_id_reference="25" object_id="_158">
+							<item class_id_reference="30" object_id="_155">
+								<port class_id_reference="25" object_id="_156">
 									<name>in</name>
 									<dir>0</dir>
 									<type>3</type>
@@ -2526,14 +2510,14 @@
 									<top_port class_id="-1"></top_port>
 									<chan class_id="-1"></chan>
 								</port>
-								<inst class_id_reference="31" object_id_reference="_111"></inst>
+								<inst class_id_reference="31" object_id_reference="_109"></inst>
 							</item>
 						</source_list>
 						<sink_list>
 							<count>1</count>
 							<item_version>0</item_version>
-							<item class_id_reference="30" object_id="_159">
-								<port class_id_reference="25" object_id="_160">
+							<item class_id_reference="30" object_id="_157">
+								<port class_id_reference="25" object_id="_158">
 									<name>out</name>
 									<dir>1</dir>
 									<type>3</type>
@@ -2541,14 +2525,14 @@
 									<top_port class_id="-1"></top_port>
 									<chan class_id="-1"></chan>
 								</port>
-								<inst class_id_reference="31" object_id_reference="_131"></inst>
+								<inst class_id_reference="31" object_id_reference="_129"></inst>
 							</item>
 						</sink_list>
 					</item>
-					<item class_id_reference="26" object_id="_161">
+					<item class_id_reference="26" object_id="_159">
 						<type>1</type>
 						<name>inbuf</name>
-						<ssdmobj_id>65</ssdmobj_id>
+						<ssdmobj_id>63</ssdmobj_id>
 						<ctype>0</ctype>
 						<depth>32</depth>
 						<bitwidth>33</bitwidth>
@@ -2557,8 +2541,8 @@
 						<source_list>
 							<count>1</count>
 							<item_version>0</item_version>
-							<item class_id_reference="30" object_id="_162">
-								<port class_id_reference="25" object_id="_163">
+							<item class_id_reference="30" object_id="_160">
+								<port class_id_reference="25" object_id="_161">
 									<name>in</name>
 									<dir>0</dir>
 									<type>3</type>
@@ -2566,14 +2550,14 @@
 									<top_port class_id="-1"></top_port>
 									<chan class_id="-1"></chan>
 								</port>
-								<inst class_id_reference="31" object_id_reference="_115"></inst>
+								<inst class_id_reference="31" object_id_reference="_113"></inst>
 							</item>
 						</source_list>
 						<sink_list>
 							<count>1</count>
 							<item_version>0</item_version>
-							<item class_id_reference="30" object_id="_164">
-								<port class_id_reference="25" object_id="_165">
+							<item class_id_reference="30" object_id="_162">
+								<port class_id_reference="25" object_id="_163">
 									<name>out</name>
 									<dir>1</dir>
 									<type>3</type>
@@ -2581,14 +2565,14 @@
 									<top_port class_id="-1"></top_port>
 									<chan class_id="-1"></chan>
 								</port>
-								<inst class_id_reference="31" object_id_reference="_131"></inst>
+								<inst class_id_reference="31" object_id_reference="_129"></inst>
 							</item>
 						</sink_list>
 					</item>
-					<item class_id_reference="26" object_id="_166">
+					<item class_id_reference="26" object_id="_164">
 						<type>1</type>
 						<name>incount</name>
-						<ssdmobj_id>68</ssdmobj_id>
+						<ssdmobj_id>66</ssdmobj_id>
 						<ctype>0</ctype>
 						<depth>2</depth>
 						<bitwidth>32</bitwidth>
@@ -2597,8 +2581,8 @@
 						<source_list>
 							<count>1</count>
 							<item_version>0</item_version>
-							<item class_id_reference="30" object_id="_167">
-								<port class_id_reference="25" object_id="_168">
+							<item class_id_reference="30" object_id="_165">
+								<port class_id_reference="25" object_id="_166">
 									<name>in</name>
 									<dir>0</dir>
 									<type>3</type>
@@ -2606,14 +2590,14 @@
 									<top_port class_id="-1"></top_port>
 									<chan class_id="-1"></chan>
 								</port>
-								<inst class_id_reference="31" object_id_reference="_115"></inst>
+								<inst class_id_reference="31" object_id_reference="_113"></inst>
 							</item>
 						</source_list>
 						<sink_list>
 							<count>1</count>
 							<item_version>0</item_version>
-							<item class_id_reference="30" object_id="_169">
-								<port class_id_reference="25" object_id="_170">
+							<item class_id_reference="30" object_id="_167">
+								<port class_id_reference="25" object_id="_168">
 									<name>out</name>
 									<dir>1</dir>
 									<type>3</type>
@@ -2621,14 +2605,14 @@
 									<top_port class_id="-1"></top_port>
 									<chan class_id="-1"></chan>
 								</port>
-								<inst class_id_reference="31" object_id_reference="_131"></inst>
+								<inst class_id_reference="31" object_id_reference="_129"></inst>
 							</item>
 						</sink_list>
 					</item>
-					<item class_id_reference="26" object_id="_171">
+					<item class_id_reference="26" object_id="_169">
 						<type>1</type>
 						<name>kernel_mode_c</name>
-						<ssdmobj_id>27</ssdmobj_id>
+						<ssdmobj_id>25</ssdmobj_id>
 						<ctype>0</ctype>
 						<depth>2</depth>
 						<bitwidth>2</bitwidth>
@@ -2637,8 +2621,8 @@
 						<source_list>
 							<count>1</count>
 							<item_version>0</item_version>
-							<item class_id_reference="30" object_id="_172">
-								<port class_id_reference="25" object_id="_173">
+							<item class_id_reference="30" object_id="_170">
+								<port class_id_reference="25" object_id="_171">
 									<name>in</name>
 									<dir>0</dir>
 									<type>3</type>
@@ -2646,14 +2630,14 @@
 									<top_port class_id="-1"></top_port>
 									<chan class_id="-1"></chan>
 								</port>
-								<inst class_id_reference="31" object_id_reference="_115"></inst>
+								<inst class_id_reference="31" object_id_reference="_113"></inst>
 							</item>
 						</source_list>
 						<sink_list>
 							<count>1</count>
 							<item_version>0</item_version>
-							<item class_id_reference="30" object_id="_174">
-								<port class_id_reference="25" object_id="_175">
+							<item class_id_reference="30" object_id="_172">
+								<port class_id_reference="25" object_id="_173">
 									<name>out</name>
 									<dir>1</dir>
 									<type>3</type>
@@ -2661,14 +2645,14 @@
 									<top_port class_id="-1"></top_port>
 									<chan class_id="-1"></chan>
 								</port>
-								<inst class_id_reference="31" object_id_reference="_131"></inst>
+								<inst class_id_reference="31" object_id_reference="_129"></inst>
 							</item>
 						</sink_list>
 					</item>
-					<item class_id_reference="26" object_id="_176">
+					<item class_id_reference="26" object_id="_174">
 						<type>1</type>
 						<name>outbuf</name>
-						<ssdmobj_id>71</ssdmobj_id>
+						<ssdmobj_id>69</ssdmobj_id>
 						<ctype>0</ctype>
 						<depth>32</depth>
 						<bitwidth>35</bitwidth>
@@ -2677,8 +2661,8 @@
 						<source_list>
 							<count>1</count>
 							<item_version>0</item_version>
-							<item class_id_reference="30" object_id="_177">
-								<port class_id_reference="25" object_id="_178">
+							<item class_id_reference="30" object_id="_175">
+								<port class_id_reference="25" object_id="_176">
 									<name>in</name>
 									<dir>0</dir>
 									<type>3</type>
@@ -2686,14 +2670,14 @@
 									<top_port class_id="-1"></top_port>
 									<chan class_id="-1"></chan>
 								</port>
-								<inst class_id_reference="31" object_id_reference="_137"></inst>
+								<inst class_id_reference="31" object_id_reference="_135"></inst>
 							</item>
 						</source_list>
 						<sink_list>
 							<count>1</count>
 							<item_version>0</item_version>
-							<item class_id_reference="30" object_id="_179">
-								<port class_id_reference="25" object_id="_180">
+							<item class_id_reference="30" object_id="_177">
+								<port class_id_reference="25" object_id="_178">
 									<name>out</name>
 									<dir>1</dir>
 									<type>3</type>
@@ -2701,7 +2685,7 @@
 									<top_port class_id="-1"></top_port>
 									<chan class_id="-1"></chan>
 								</port>
-								<inst class_id_reference="31" object_id_reference="_145"></inst>
+								<inst class_id_reference="31" object_id_reference="_143"></inst>
 							</item>
 						</sink_list>
 					</item>
@@ -2719,8 +2703,22 @@
 		<count>14</count>
 		<item_version>0</item_version>
 		<item class_id="37" tracking_level="0" version="0">
-			<first>21</first>
+			<first>19</first>
 			<second class_id="38" tracking_level="0" version="0">
+				<first>1</first>
+				<second>0</second>
+			</second>
+		</item>
+		<item>
+			<first>20</first>
+			<second>
+				<first>1</first>
+				<second>0</second>
+			</second>
+		</item>
+		<item>
+			<first>21</first>
+			<second>
 				<first>1</first>
 				<second>0</second>
 			</second>
@@ -2728,57 +2726,57 @@
 		<item>
 			<first>22</first>
 			<second>
+				<first>0</first>
+				<second>0</second>
+			</second>
+		</item>
+		<item>
+			<first>25</first>
+			<second>
+				<first>0</first>
+				<second>0</second>
+			</second>
+		</item>
+		<item>
+			<first>63</first>
+			<second>
+				<first>0</first>
+				<second>0</second>
+			</second>
+		</item>
+		<item>
+			<first>66</first>
+			<second>
+				<first>0</first>
+				<second>0</second>
+			</second>
+		</item>
+		<item>
+			<first>69</first>
+			<second>
+				<first>0</first>
+				<second>0</second>
+			</second>
+		</item>
+		<item>
+			<first>72</first>
+			<second>
 				<first>1</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
-			<first>23</first>
+			<first>73</first>
 			<second>
 				<first>1</first>
-				<second>0</second>
-			</second>
-		</item>
-		<item>
-			<first>24</first>
-			<second>
-				<first>0</first>
-				<second>0</second>
-			</second>
-		</item>
-		<item>
-			<first>27</first>
-			<second>
-				<first>0</first>
-				<second>0</second>
-			</second>
-		</item>
-		<item>
-			<first>65</first>
-			<second>
-				<first>0</first>
-				<second>0</second>
-			</second>
-		</item>
-		<item>
-			<first>68</first>
-			<second>
-				<first>0</first>
-				<second>0</second>
-			</second>
-		</item>
-		<item>
-			<first>71</first>
-			<second>
-				<first>0</first>
-				<second>0</second>
+				<second>1</second>
 			</second>
 		</item>
 		<item>
 			<first>74</first>
 			<second>
-				<first>1</first>
-				<second>0</second>
+				<first>3</first>
+				<second>1</second>
 			</second>
 		</item>
 		<item>
@@ -2798,20 +2796,6 @@
 		<item>
 			<first>77</first>
 			<second>
-				<first>1</first>
-				<second>1</second>
-			</second>
-		</item>
-		<item>
-			<first>78</first>
-			<second>
-				<first>3</first>
-				<second>1</second>
-			</second>
-		</item>
-		<item>
-			<first>79</first>
-			<second>
 				<first>5</first>
 				<second>0</second>
 			</second>
@@ -2821,7 +2805,7 @@
 		<count>1</count>
 		<item_version>0</item_version>
 		<item class_id="40" tracking_level="0" version="0">
-			<first>80</first>
+			<first>78</first>
 			<second class_id="41" tracking_level="0" version="0">
 				<first>0</first>
 				<second>5</second>
@@ -2831,16 +2815,18 @@
 	<regions class_id="42" tracking_level="0" version="0">
 		<count>1</count>
 		<item_version>0</item_version>
-		<item class_id="43" tracking_level="1" version="0" object_id="_181">
+		<item class_id="43" tracking_level="1" version="0" object_id="_179">
 			<region_name>userdma</region_name>
 			<basic_blocks>
 				<count>1</count>
 				<item_version>0</item_version>
-				<item>80</item>
+				<item>78</item>
 			</basic_blocks>
 			<nodes>
 				<count>59</count>
 				<item_version>0</item_version>
+				<item>19</item>
+				<item>20</item>
 				<item>21</item>
 				<item>22</item>
 				<item>23</item>
@@ -2898,8 +2884,6 @@
 				<item>75</item>
 				<item>76</item>
 				<item>77</item>
-				<item>78</item>
-				<item>79</item>
 			</nodes>
 			<anchor_node>-1</anchor_node>
 			<region_type>16</region_type>

@@ -6,8 +6,8 @@ void test_NTT (memcell s2m_buf[BUF_LEN], memcell m2s_buf[BUF_LEN], memcell resul
 	hls::stream<trans_pkt> inStream_t, outStream_t;
 	trans_pkt   dataStream_t;
 
-	bool s2m_buf_sts;
-	bool m2s_buf_sts;
+	bool s2m_buf_sts = 0;
+	bool m2s_buf_sts = 0;
 	ap_uint<2> s2m_err;
 
 	int	j;
@@ -34,20 +34,20 @@ void test_NTT (memcell s2m_buf[BUF_LEN], memcell m2s_buf[BUF_LEN], memcell resul
 
 
 	printf("\n");
-	printf("========================================\n");
-	printf("Before: s2m_buf_sts is %d\n", s2m_buf_sts);
-	printf("Before: m2s_buf_sts is %d\n", m2s_buf_sts);
-	printf("========================================\n");
+	//printf("========================================\n");
+	//printf("Before: s2m_buf_sts is %d\n", s2m_buf_sts);
+	//printf("Before: m2s_buf_sts is %d\n", m2s_buf_sts);
+	//printf("========================================\n");
 	printf("\n");
 	printf("Calling S2MM/MM2S design...\n");
 
 	userdma(inStream_t, outStream_t, 2, &s2m_buf_sts, &m2s_buf_sts, s2m_buf, m2s_buf, &s2m_err);
 
 	printf("\n");
-	printf("========================================\n");
-	printf("After: s2m_buf_sts is %d\n", s2m_buf_sts);
-	printf("After: m2s_buf_sts is %d\n", m2s_buf_sts);
-	printf("========================================");
+	//printf("========================================\n");
+	//printf("After: s2m_buf_sts is %d\n", s2m_buf_sts);
+	//printf("After: m2s_buf_sts is %d\n", m2s_buf_sts);
+	//printf("========================================");
 	printf("\n");
 
 	if(s2m_buf_sts == 1){
@@ -83,8 +83,8 @@ void test_FFT (memcell s2m_buf[BUF_LEN], memcell m2s_buf[BUF_LEN], memcell resul
 	hls::stream<trans_pkt> inStream_t, outStream_t;
 	trans_pkt   dataStream_t;
 
-	bool s2m_buf_sts;
-	bool m2s_buf_sts;
+	bool s2m_buf_sts = 0;
+	bool m2s_buf_sts = 0;
 	ap_uint<2> s2m_err;
 
 	int	j;
@@ -115,22 +115,21 @@ void test_FFT (memcell s2m_buf[BUF_LEN], memcell m2s_buf[BUF_LEN], memcell resul
 		inStream_t.write(dataStream_t);
 	}
 
-
 	printf("\n");
-	printf("========================================\n");
-	printf("Before: s2m_buf_sts is %d\n", s2m_buf_sts);
-	printf("Before: m2s_buf_sts is %d\n", m2s_buf_sts);
-	printf("========================================\n");
+	//printf("========================================\n");
+	//printf("Before: s2m_buf_sts is %d\n", s2m_buf_sts);
+	//printf("Before: m2s_buf_sts is %d\n", m2s_buf_sts);
+	//printf("========================================\n");
 	printf("\n");
 	printf("Calling S2MM/MM2S design...\n");
 
 	userdma(inStream_t, outStream_t, 0, &s2m_buf_sts, &m2s_buf_sts, s2m_buf, m2s_buf, &s2m_err);
 
 	printf("\n");
-	printf("========================================\n");
-	printf("After: s2m_buf_sts is %d\n", s2m_buf_sts);
-	printf("After: m2s_buf_sts is %d\n", m2s_buf_sts);
-	printf("========================================");
+	//printf("========================================\n");
+	//printf("After: s2m_buf_sts is %d\n", s2m_buf_sts);
+	//printf("After: m2s_buf_sts is %d\n", m2s_buf_sts);
+	//printf("========================================");
 	printf("\n");
 
 	if(s2m_buf_sts == 1){

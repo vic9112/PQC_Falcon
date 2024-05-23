@@ -1,90 +1,44 @@
-# 1 "/home/ubuntu/fsic_fpga/vivado/vitis_prj/hls_userdma/userdma_test.cpp"
+# 1 "/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma/userdma_test.cpp"
 # 1 "<built-in>"
 # 1 "<command-line>"
 # 1 "/usr/include/stdc-predef.h" 1 3 4
 # 1 "<command-line>" 2
-# 1 "/home/ubuntu/fsic_fpga/vivado/vitis_prj/hls_userdma/userdma_test.cpp"
-# 1 "/home/ubuntu/fsic_fpga/vivado/vitis_prj/hls_userdma/userdma.h" 1
-# 1 "/tools/Xilinx/Vitis_HLS/2022.1/include/ap_int.h" 1
-# 56 "/tools/Xilinx/Vitis_HLS/2022.1/include/ap_int.h"
-# 1 "/tools/Xilinx/Vitis_HLS/2022.1/include/ap_common.h" 1
-# 87 "/tools/Xilinx/Vitis_HLS/2022.1/include/ap_common.h"
-# 1 "/tools/Xilinx/Vitis_HLS/2022.1/include/ap_decl.h" 1
-# 100 "/tools/Xilinx/Vitis_HLS/2022.1/include/ap_decl.h"
-enum ap_q_mode {
-  AP_RND,
-  AP_RND_ZERO,
-  AP_RND_MIN_INF,
-  AP_RND_INF,
-  AP_RND_CONV,
-  AP_TRN,
-  AP_TRN_ZERO,
-};
-# 122 "/tools/Xilinx/Vitis_HLS/2022.1/include/ap_decl.h"
-enum ap_o_mode {
-  AP_SAT,
-  AP_SAT_ZERO,
-  AP_SAT_SYM,
-  AP_WRAP,
-  AP_WRAP_SM,
-};
-# 179 "/tools/Xilinx/Vitis_HLS/2022.1/include/ap_decl.h"
-template <int _AP_W, bool _AP_S>
-struct ap_int_base;
-
-template <int _AP_W>
-struct ap_int;
-
-template <int _AP_W>
-struct ap_uint;
-
-template <int _AP_W, bool _AP_S>
-struct ap_range_ref;
-
-template <int _AP_W, bool _AP_S>
-struct ap_bit_ref;
-
-template <int _AP_W1, typename _AP_T1, int _AP_W2, typename _AP_T2>
-struct ap_concat_ref;
-
-template <int _AP_W, int _AP_I, bool _AP_S = true, ap_q_mode _AP_Q = AP_TRN,
-          ap_o_mode _AP_O = AP_WRAP, int _AP_N = 0>
-struct ap_fixed_base;
-
-template <int _AP_W, int _AP_I, ap_q_mode _AP_Q = AP_TRN,
-          ap_o_mode _AP_O = AP_WRAP, int _AP_N = 0>
-struct ap_fixed;
-
-template <int _AP_W, int _AP_I, ap_q_mode _AP_Q = AP_TRN,
-          ap_o_mode _AP_O = AP_WRAP, int _AP_N = 0>
-struct ap_ufixed;
-
-template <int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O,
-          int _AP_N>
-struct af_range_ref;
-
-template <int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O,
-          int _AP_N>
-struct af_bit_ref;
+# 1 "/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma/userdma_test.cpp"
+# 1 "/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma/userdma.h" 1
 
 
-enum BaseMode { AP_BIN = 2, AP_OCT = 8, AP_DEC = 10, AP_HEX = 16 };
-# 233 "/tools/Xilinx/Vitis_HLS/2022.1/include/ap_decl.h"
-typedef signed long long ap_slong;
-typedef unsigned long long ap_ulong;
+# 1 "/usr/include/x86_64-linux-gnu/gmp.h" 1
+# 34 "/usr/include/x86_64-linux-gnu/gmp.h"
+# 1 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/iosfwd" 1 3
+# 36 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/iosfwd" 3
+       
+# 37 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/iosfwd" 3
+
+# 1 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/x86_64-pc-linux-gnu/bits/c++config.h" 1 3
+# 236 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/x86_64-pc-linux-gnu/bits/c++config.h" 3
+
+# 236 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/x86_64-pc-linux-gnu/bits/c++config.h" 3
+namespace std
+{
+  typedef long unsigned int size_t;
+  typedef long int ptrdiff_t;
 
 
-enum {
-  _AP_SIZE_char = 8,
-  _AP_SIZE_short = sizeof(short) * 8,
-  _AP_SIZE_int = sizeof(int) * 8,
-  _AP_SIZE_long = sizeof(long) * 8,
-  _AP_SIZE_ap_slong = sizeof(ap_slong) * 8
-};
-# 88 "/tools/Xilinx/Vitis_HLS/2022.1/include/ap_common.h" 2
-# 96 "/tools/Xilinx/Vitis_HLS/2022.1/include/ap_common.h"
-# 1 "/usr/include/assert.h" 1 3 4
-# 35 "/usr/include/assert.h" 3 4
+  typedef decltype(nullptr) nullptr_t;
+
+}
+# 258 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/x86_64-pc-linux-gnu/bits/c++config.h" 3
+namespace std
+{
+  inline namespace __cxx11 __attribute__((__abi_tag__ ("cxx11"))) { }
+}
+namespace __gnu_cxx
+{
+  inline namespace __cxx11 __attribute__((__abi_tag__ ("cxx11"))) { }
+}
+# 508 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/x86_64-pc-linux-gnu/bits/c++config.h" 3
+# 1 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/x86_64-pc-linux-gnu/bits/os_defines.h" 1 3
+# 39 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/x86_64-pc-linux-gnu/bits/os_defines.h" 3
 # 1 "/usr/include/features.h" 1 3 4
 # 461 "/usr/include/features.h" 3 4
 # 1 "/usr/include/x86_64-linux-gnu/sys/cdefs.h" 1 3 4
@@ -100,32 +54,1263 @@ enum {
 # 1 "/usr/include/x86_64-linux-gnu/gnu/stubs-64.h" 1 3 4
 # 11 "/usr/include/x86_64-linux-gnu/gnu/stubs.h" 2 3 4
 # 486 "/usr/include/features.h" 2 3 4
-# 36 "/usr/include/assert.h" 2 3 4
-# 66 "/usr/include/assert.h" 3 4
-
-# 66 "/usr/include/assert.h" 3 4
-extern "C" {
+# 40 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/x86_64-pc-linux-gnu/bits/os_defines.h" 2 3
+# 509 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/x86_64-pc-linux-gnu/bits/c++config.h" 2 3
 
 
-extern void __assert_fail (const char *__assertion, const char *__file,
-      unsigned int __line, const char *__function)
-     throw () __attribute__ ((__noreturn__));
+# 1 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/x86_64-pc-linux-gnu/bits/cpu_defines.h" 1 3
+# 512 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/x86_64-pc-linux-gnu/bits/c++config.h" 2 3
+# 39 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/iosfwd" 2 3
+# 1 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/bits/stringfwd.h" 1 3
+# 37 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/bits/stringfwd.h" 3
+       
+# 38 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/bits/stringfwd.h" 3
 
 
-extern void __assert_perror_fail (int __errnum, const char *__file,
-      unsigned int __line, const char *__function)
-     throw () __attribute__ ((__noreturn__));
+# 1 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/bits/memoryfwd.h" 1 3
+# 46 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/bits/memoryfwd.h" 3
+       
+# 47 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/bits/memoryfwd.h" 3
 
 
 
+namespace std __attribute__ ((__visibility__ ("default")))
+{
 
-extern void __assert (const char *__assertion, const char *__file, int __line)
-     throw () __attribute__ ((__noreturn__));
+# 63 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/bits/memoryfwd.h" 3
+  template<typename>
+    class allocator;
+
+  template<>
+    class allocator<void>;
+
+
+  template<typename, typename>
+    struct uses_allocator;
+
+
 
 
 }
-# 97 "/tools/Xilinx/Vitis_HLS/2022.1/include/ap_common.h" 2
-# 110 "/tools/Xilinx/Vitis_HLS/2022.1/include/ap_common.h"
+# 41 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/bits/stringfwd.h" 2 3
+
+namespace std __attribute__ ((__visibility__ ("default")))
+{
+
+
+
+
+
+
+
+
+  template<class _CharT>
+    struct char_traits;
+
+  template<> struct char_traits<char>;
+
+
+  template<> struct char_traits<wchar_t>;
+
+
+
+
+  template<> struct char_traits<char16_t>;
+  template<> struct char_traits<char32_t>;
+
+
+namespace __cxx11 {
+
+  template<typename _CharT, typename _Traits = char_traits<_CharT>,
+           typename _Alloc = allocator<_CharT> >
+    class basic_string;
+
+
+  typedef basic_string<char> string;
+
+
+
+  typedef basic_string<wchar_t> wstring;
+
+
+
+
+
+  typedef basic_string<char16_t> u16string;
+
+
+  typedef basic_string<char32_t> u32string;
+
+
+}
+
+
+
+
+}
+# 40 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/iosfwd" 2 3
+# 1 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/bits/postypes.h" 1 3
+# 38 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/bits/postypes.h" 3
+       
+# 39 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/bits/postypes.h" 3
+
+# 1 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cwchar" 1 3
+# 39 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cwchar" 3
+       
+# 40 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cwchar" 3
+
+
+
+
+# 1 "/usr/include/wchar.h" 1 3 4
+# 27 "/usr/include/wchar.h" 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/libc-header-start.h" 1 3 4
+# 28 "/usr/include/wchar.h" 2 3 4
+
+
+# 1 "/usr/include/x86_64-linux-gnu/bits/floatn.h" 1 3 4
+# 75 "/usr/include/x86_64-linux-gnu/bits/floatn.h" 3 4
+typedef _Complex float __cfloat128 __attribute__ ((__mode__ (__TC__)));
+# 87 "/usr/include/x86_64-linux-gnu/bits/floatn.h" 3 4
+typedef __float128 _Float128;
+# 120 "/usr/include/x86_64-linux-gnu/bits/floatn.h" 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/floatn-common.h" 1 3 4
+# 24 "/usr/include/x86_64-linux-gnu/bits/floatn-common.h" 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/long-double.h" 1 3 4
+# 25 "/usr/include/x86_64-linux-gnu/bits/floatn-common.h" 2 3 4
+# 214 "/usr/include/x86_64-linux-gnu/bits/floatn-common.h" 3 4
+typedef float _Float32;
+# 251 "/usr/include/x86_64-linux-gnu/bits/floatn-common.h" 3 4
+typedef double _Float64;
+# 268 "/usr/include/x86_64-linux-gnu/bits/floatn-common.h" 3 4
+typedef double _Float32x;
+# 285 "/usr/include/x86_64-linux-gnu/bits/floatn-common.h" 3 4
+typedef long double _Float64x;
+# 121 "/usr/include/x86_64-linux-gnu/bits/floatn.h" 2 3 4
+# 31 "/usr/include/wchar.h" 2 3 4
+
+
+
+
+# 1 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/include/stddef.h" 1 3 4
+# 216 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/include/stddef.h" 3 4
+typedef long unsigned int size_t;
+# 36 "/usr/include/wchar.h" 2 3 4
+
+
+# 1 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/include/stdarg.h" 1 3 4
+# 40 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/include/stdarg.h" 3 4
+typedef __builtin_va_list __gnuc_va_list;
+# 39 "/usr/include/wchar.h" 2 3 4
+
+# 1 "/usr/include/x86_64-linux-gnu/bits/wchar.h" 1 3 4
+# 41 "/usr/include/wchar.h" 2 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/types/wint_t.h" 1 3 4
+# 20 "/usr/include/x86_64-linux-gnu/bits/types/wint_t.h" 3 4
+typedef unsigned int wint_t;
+# 42 "/usr/include/wchar.h" 2 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h" 1 3 4
+
+
+
+# 1 "/usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h" 1 3 4
+# 13 "/usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h" 3 4
+typedef struct
+{
+  int __count;
+  union
+  {
+    unsigned int __wch;
+    char __wchb[4];
+  } __value;
+} __mbstate_t;
+# 5 "/usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h" 2 3 4
+
+typedef __mbstate_t mbstate_t;
+# 43 "/usr/include/wchar.h" 2 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/types/__FILE.h" 1 3 4
+
+
+
+struct _IO_FILE;
+typedef struct _IO_FILE __FILE;
+# 44 "/usr/include/wchar.h" 2 3 4
+
+
+# 1 "/usr/include/x86_64-linux-gnu/bits/types/FILE.h" 1 3 4
+
+
+
+struct _IO_FILE;
+
+
+typedef struct _IO_FILE FILE;
+# 47 "/usr/include/wchar.h" 2 3 4
+
+
+# 1 "/usr/include/x86_64-linux-gnu/bits/types/locale_t.h" 1 3 4
+# 22 "/usr/include/x86_64-linux-gnu/bits/types/locale_t.h" 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/types/__locale_t.h" 1 3 4
+# 28 "/usr/include/x86_64-linux-gnu/bits/types/__locale_t.h" 3 4
+struct __locale_struct
+{
+
+  struct __locale_data *__locales[13];
+
+
+  const unsigned short int *__ctype_b;
+  const int *__ctype_tolower;
+  const int *__ctype_toupper;
+
+
+  const char *__names[13];
+};
+
+typedef struct __locale_struct *__locale_t;
+# 23 "/usr/include/x86_64-linux-gnu/bits/types/locale_t.h" 2 3 4
+
+typedef __locale_t locale_t;
+# 50 "/usr/include/wchar.h" 2 3 4
+# 79 "/usr/include/wchar.h" 3 4
+extern "C" {
+
+
+
+struct tm;
+
+
+
+extern wchar_t *wcscpy (wchar_t *__restrict __dest,
+   const wchar_t *__restrict __src)
+     throw () __attribute__ ((__nonnull__ (1, 2)));
+
+
+extern wchar_t *wcsncpy (wchar_t *__restrict __dest,
+    const wchar_t *__restrict __src, size_t __n)
+     throw () __attribute__ ((__nonnull__ (1, 2)));
+
+
+extern wchar_t *wcscat (wchar_t *__restrict __dest,
+   const wchar_t *__restrict __src)
+     throw () __attribute__ ((__nonnull__ (1, 2)));
+
+extern wchar_t *wcsncat (wchar_t *__restrict __dest,
+    const wchar_t *__restrict __src, size_t __n)
+     throw () __attribute__ ((__nonnull__ (1, 2)));
+
+
+extern int wcscmp (const wchar_t *__s1, const wchar_t *__s2)
+     throw () __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1, 2)));
+
+extern int wcsncmp (const wchar_t *__s1, const wchar_t *__s2, size_t __n)
+     throw () __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1, 2)));
+
+
+
+extern int wcscasecmp (const wchar_t *__s1, const wchar_t *__s2) throw ();
+
+
+extern int wcsncasecmp (const wchar_t *__s1, const wchar_t *__s2,
+   size_t __n) throw ();
+
+
+
+extern int wcscasecmp_l (const wchar_t *__s1, const wchar_t *__s2,
+    locale_t __loc) throw ();
+
+extern int wcsncasecmp_l (const wchar_t *__s1, const wchar_t *__s2,
+     size_t __n, locale_t __loc) throw ();
+
+
+
+
+extern int wcscoll (const wchar_t *__s1, const wchar_t *__s2) throw ();
+
+
+
+extern size_t wcsxfrm (wchar_t *__restrict __s1,
+         const wchar_t *__restrict __s2, size_t __n) throw ();
+
+
+
+
+
+
+
+extern int wcscoll_l (const wchar_t *__s1, const wchar_t *__s2,
+        locale_t __loc) throw ();
+
+
+
+
+extern size_t wcsxfrm_l (wchar_t *__s1, const wchar_t *__s2,
+    size_t __n, locale_t __loc) throw ();
+
+
+extern wchar_t *wcsdup (const wchar_t *__s) throw () __attribute__ ((__malloc__));
+
+
+
+
+extern "C++" wchar_t *wcschr (wchar_t *__wcs, wchar_t __wc)
+     throw () __asm ("wcschr") __attribute__ ((__pure__));
+extern "C++" const wchar_t *wcschr (const wchar_t *__wcs, wchar_t __wc)
+     throw () __asm ("wcschr") __attribute__ ((__pure__));
+
+
+
+
+
+
+extern "C++" wchar_t *wcsrchr (wchar_t *__wcs, wchar_t __wc)
+     throw () __asm ("wcsrchr") __attribute__ ((__pure__));
+extern "C++" const wchar_t *wcsrchr (const wchar_t *__wcs, wchar_t __wc)
+     throw () __asm ("wcsrchr") __attribute__ ((__pure__));
+# 181 "/usr/include/wchar.h" 3 4
+extern wchar_t *wcschrnul (const wchar_t *__s, wchar_t __wc)
+     throw () __attribute__ ((__pure__));
+
+
+
+
+extern size_t wcscspn (const wchar_t *__wcs, const wchar_t *__reject)
+     throw () __attribute__ ((__pure__));
+
+
+extern size_t wcsspn (const wchar_t *__wcs, const wchar_t *__accept)
+     throw () __attribute__ ((__pure__));
+
+
+extern "C++" wchar_t *wcspbrk (wchar_t *__wcs, const wchar_t *__accept)
+     throw () __asm ("wcspbrk") __attribute__ ((__pure__));
+extern "C++" const wchar_t *wcspbrk (const wchar_t *__wcs,
+         const wchar_t *__accept)
+     throw () __asm ("wcspbrk") __attribute__ ((__pure__));
+
+
+
+
+
+
+extern "C++" wchar_t *wcsstr (wchar_t *__haystack, const wchar_t *__needle)
+     throw () __asm ("wcsstr") __attribute__ ((__pure__));
+extern "C++" const wchar_t *wcsstr (const wchar_t *__haystack,
+        const wchar_t *__needle)
+     throw () __asm ("wcsstr") __attribute__ ((__pure__));
+
+
+
+
+
+
+extern wchar_t *wcstok (wchar_t *__restrict __s,
+   const wchar_t *__restrict __delim,
+   wchar_t **__restrict __ptr) throw ();
+
+
+extern size_t wcslen (const wchar_t *__s) throw () __attribute__ ((__pure__));
+
+
+
+
+extern "C++" wchar_t *wcswcs (wchar_t *__haystack, const wchar_t *__needle)
+     throw () __asm ("wcswcs") __attribute__ ((__pure__));
+extern "C++" const wchar_t *wcswcs (const wchar_t *__haystack,
+        const wchar_t *__needle)
+     throw () __asm ("wcswcs") __attribute__ ((__pure__));
+# 240 "/usr/include/wchar.h" 3 4
+extern size_t wcsnlen (const wchar_t *__s, size_t __maxlen)
+     throw () __attribute__ ((__pure__));
+
+
+
+
+
+extern "C++" wchar_t *wmemchr (wchar_t *__s, wchar_t __c, size_t __n)
+     throw () __asm ("wmemchr") __attribute__ ((__pure__));
+extern "C++" const wchar_t *wmemchr (const wchar_t *__s, wchar_t __c,
+         size_t __n)
+     throw () __asm ("wmemchr") __attribute__ ((__pure__));
+
+
+
+
+
+
+extern int wmemcmp (const wchar_t *__s1, const wchar_t *__s2, size_t __n)
+     throw () __attribute__ ((__pure__));
+
+
+extern wchar_t *wmemcpy (wchar_t *__restrict __s1,
+    const wchar_t *__restrict __s2, size_t __n) throw ();
+
+
+
+extern wchar_t *wmemmove (wchar_t *__s1, const wchar_t *__s2, size_t __n)
+     throw ();
+
+
+extern wchar_t *wmemset (wchar_t *__s, wchar_t __c, size_t __n) throw ();
+
+
+
+
+extern wchar_t *wmempcpy (wchar_t *__restrict __s1,
+     const wchar_t *__restrict __s2, size_t __n)
+     throw ();
+
+
+
+
+
+extern wint_t btowc (int __c) throw ();
+
+
+
+extern int wctob (wint_t __c) throw ();
+
+
+
+extern int mbsinit (const mbstate_t *__ps) throw () __attribute__ ((__pure__));
+
+
+
+extern size_t mbrtowc (wchar_t *__restrict __pwc,
+         const char *__restrict __s, size_t __n,
+         mbstate_t *__restrict __p) throw ();
+
+
+extern size_t wcrtomb (char *__restrict __s, wchar_t __wc,
+         mbstate_t *__restrict __ps) throw ();
+
+
+extern size_t __mbrlen (const char *__restrict __s, size_t __n,
+   mbstate_t *__restrict __ps) throw ();
+extern size_t mbrlen (const char *__restrict __s, size_t __n,
+        mbstate_t *__restrict __ps) throw ();
+# 337 "/usr/include/wchar.h" 3 4
+extern size_t mbsrtowcs (wchar_t *__restrict __dst,
+    const char **__restrict __src, size_t __len,
+    mbstate_t *__restrict __ps) throw ();
+
+
+
+extern size_t wcsrtombs (char *__restrict __dst,
+    const wchar_t **__restrict __src, size_t __len,
+    mbstate_t *__restrict __ps) throw ();
+
+
+
+
+
+extern size_t mbsnrtowcs (wchar_t *__restrict __dst,
+     const char **__restrict __src, size_t __nmc,
+     size_t __len, mbstate_t *__restrict __ps) throw ();
+
+
+
+extern size_t wcsnrtombs (char *__restrict __dst,
+     const wchar_t **__restrict __src,
+     size_t __nwc, size_t __len,
+     mbstate_t *__restrict __ps) throw ();
+
+
+
+
+
+
+extern int wcwidth (wchar_t __c) throw ();
+
+
+
+extern int wcswidth (const wchar_t *__s, size_t __n) throw ();
+
+
+
+
+
+extern double wcstod (const wchar_t *__restrict __nptr,
+        wchar_t **__restrict __endptr) throw ();
+
+
+
+extern float wcstof (const wchar_t *__restrict __nptr,
+       wchar_t **__restrict __endptr) throw ();
+extern long double wcstold (const wchar_t *__restrict __nptr,
+       wchar_t **__restrict __endptr) throw ();
+# 396 "/usr/include/wchar.h" 3 4
+extern _Float32 wcstof32 (const wchar_t *__restrict __nptr,
+     wchar_t **__restrict __endptr) throw ();
+
+
+
+extern _Float64 wcstof64 (const wchar_t *__restrict __nptr,
+     wchar_t **__restrict __endptr) throw ();
+
+
+
+extern _Float128 wcstof128 (const wchar_t *__restrict __nptr,
+       wchar_t **__restrict __endptr) throw ();
+
+
+
+extern _Float32x wcstof32x (const wchar_t *__restrict __nptr,
+       wchar_t **__restrict __endptr) throw ();
+
+
+
+extern _Float64x wcstof64x (const wchar_t *__restrict __nptr,
+       wchar_t **__restrict __endptr) throw ();
+# 428 "/usr/include/wchar.h" 3 4
+extern long int wcstol (const wchar_t *__restrict __nptr,
+   wchar_t **__restrict __endptr, int __base) throw ();
+
+
+
+extern unsigned long int wcstoul (const wchar_t *__restrict __nptr,
+      wchar_t **__restrict __endptr, int __base)
+     throw ();
+
+
+
+
+__extension__
+extern long long int wcstoll (const wchar_t *__restrict __nptr,
+         wchar_t **__restrict __endptr, int __base)
+     throw ();
+
+
+
+__extension__
+extern unsigned long long int wcstoull (const wchar_t *__restrict __nptr,
+     wchar_t **__restrict __endptr,
+     int __base) throw ();
+
+
+
+
+
+__extension__
+extern long long int wcstoq (const wchar_t *__restrict __nptr,
+        wchar_t **__restrict __endptr, int __base)
+     throw ();
+
+
+
+__extension__
+extern unsigned long long int wcstouq (const wchar_t *__restrict __nptr,
+           wchar_t **__restrict __endptr,
+           int __base) throw ();
+
+
+
+
+
+
+extern long int wcstol_l (const wchar_t *__restrict __nptr,
+     wchar_t **__restrict __endptr, int __base,
+     locale_t __loc) throw ();
+
+extern unsigned long int wcstoul_l (const wchar_t *__restrict __nptr,
+        wchar_t **__restrict __endptr,
+        int __base, locale_t __loc) throw ();
+
+__extension__
+extern long long int wcstoll_l (const wchar_t *__restrict __nptr,
+    wchar_t **__restrict __endptr,
+    int __base, locale_t __loc) throw ();
+
+__extension__
+extern unsigned long long int wcstoull_l (const wchar_t *__restrict __nptr,
+       wchar_t **__restrict __endptr,
+       int __base, locale_t __loc)
+     throw ();
+
+extern double wcstod_l (const wchar_t *__restrict __nptr,
+   wchar_t **__restrict __endptr, locale_t __loc)
+     throw ();
+
+extern float wcstof_l (const wchar_t *__restrict __nptr,
+         wchar_t **__restrict __endptr, locale_t __loc)
+     throw ();
+
+extern long double wcstold_l (const wchar_t *__restrict __nptr,
+         wchar_t **__restrict __endptr,
+         locale_t __loc) throw ();
+# 511 "/usr/include/wchar.h" 3 4
+extern _Float32 wcstof32_l (const wchar_t *__restrict __nptr,
+       wchar_t **__restrict __endptr,
+       locale_t __loc) throw ();
+
+
+
+extern _Float64 wcstof64_l (const wchar_t *__restrict __nptr,
+       wchar_t **__restrict __endptr,
+       locale_t __loc) throw ();
+
+
+
+extern _Float128 wcstof128_l (const wchar_t *__restrict __nptr,
+         wchar_t **__restrict __endptr,
+         locale_t __loc) throw ();
+
+
+
+extern _Float32x wcstof32x_l (const wchar_t *__restrict __nptr,
+         wchar_t **__restrict __endptr,
+         locale_t __loc) throw ();
+
+
+
+extern _Float64x wcstof64x_l (const wchar_t *__restrict __nptr,
+         wchar_t **__restrict __endptr,
+         locale_t __loc) throw ();
+# 551 "/usr/include/wchar.h" 3 4
+extern wchar_t *wcpcpy (wchar_t *__restrict __dest,
+   const wchar_t *__restrict __src) throw ();
+
+
+
+extern wchar_t *wcpncpy (wchar_t *__restrict __dest,
+    const wchar_t *__restrict __src, size_t __n)
+     throw ();
+# 567 "/usr/include/wchar.h" 3 4
+extern __FILE *open_wmemstream (wchar_t **__bufloc, size_t *__sizeloc) throw ();
+
+
+
+
+
+extern int fwide (__FILE *__fp, int __mode) throw ();
+
+
+
+
+
+
+extern int fwprintf (__FILE *__restrict __stream,
+       const wchar_t *__restrict __format, ...)
+                                                           ;
+
+
+
+
+extern int wprintf (const wchar_t *__restrict __format, ...)
+                                                           ;
+
+extern int swprintf (wchar_t *__restrict __s, size_t __n,
+       const wchar_t *__restrict __format, ...)
+     throw () ;
+
+
+
+
+
+extern int vfwprintf (__FILE *__restrict __s,
+        const wchar_t *__restrict __format,
+        __gnuc_va_list __arg)
+                                                           ;
+
+
+
+
+extern int vwprintf (const wchar_t *__restrict __format,
+       __gnuc_va_list __arg)
+                                                           ;
+
+
+extern int vswprintf (wchar_t *__restrict __s, size_t __n,
+        const wchar_t *__restrict __format,
+        __gnuc_va_list __arg)
+     throw () ;
+
+
+
+
+
+
+extern int fwscanf (__FILE *__restrict __stream,
+      const wchar_t *__restrict __format, ...)
+                                                          ;
+
+
+
+
+extern int wscanf (const wchar_t *__restrict __format, ...)
+                                                          ;
+
+extern int swscanf (const wchar_t *__restrict __s,
+      const wchar_t *__restrict __format, ...)
+     throw () ;
+
+
+
+
+
+
+extern int fwscanf (__FILE *__restrict __stream, const wchar_t *__restrict __format, ...) __asm__ ("" "__isoc99_fwscanf")
+
+
+                                                          ;
+extern int wscanf (const wchar_t *__restrict __format, ...) __asm__ ("" "__isoc99_wscanf")
+
+                                                          ;
+extern int swscanf (const wchar_t *__restrict __s, const wchar_t *__restrict __format, ...) throw () __asm__ ("" "__isoc99_swscanf")
+
+
+                                                          ;
+# 671 "/usr/include/wchar.h" 3 4
+extern int vfwscanf (__FILE *__restrict __s,
+       const wchar_t *__restrict __format,
+       __gnuc_va_list __arg)
+                                                          ;
+
+
+
+
+extern int vwscanf (const wchar_t *__restrict __format,
+      __gnuc_va_list __arg)
+                                                          ;
+
+extern int vswscanf (const wchar_t *__restrict __s,
+       const wchar_t *__restrict __format,
+       __gnuc_va_list __arg)
+     throw () ;
+
+
+
+
+
+
+extern int vfwscanf (__FILE *__restrict __s, const wchar_t *__restrict __format, __gnuc_va_list __arg) __asm__ ("" "__isoc99_vfwscanf")
+
+
+                                                          ;
+extern int vwscanf (const wchar_t *__restrict __format, __gnuc_va_list __arg) __asm__ ("" "__isoc99_vwscanf")
+
+                                                          ;
+extern int vswscanf (const wchar_t *__restrict __s, const wchar_t *__restrict __format, __gnuc_va_list __arg) throw () __asm__ ("" "__isoc99_vswscanf")
+
+
+                                                          ;
+# 726 "/usr/include/wchar.h" 3 4
+extern wint_t fgetwc (__FILE *__stream);
+extern wint_t getwc (__FILE *__stream);
+
+
+
+
+
+extern wint_t getwchar (void);
+
+
+
+
+
+
+extern wint_t fputwc (wchar_t __wc, __FILE *__stream);
+extern wint_t putwc (wchar_t __wc, __FILE *__stream);
+
+
+
+
+
+extern wint_t putwchar (wchar_t __wc);
+
+
+
+
+
+
+
+extern wchar_t *fgetws (wchar_t *__restrict __ws, int __n,
+   __FILE *__restrict __stream);
+
+
+
+
+
+extern int fputws (const wchar_t *__restrict __ws,
+     __FILE *__restrict __stream);
+
+
+
+
+
+
+extern wint_t ungetwc (wint_t __wc, __FILE *__stream);
+# 781 "/usr/include/wchar.h" 3 4
+extern wint_t getwc_unlocked (__FILE *__stream);
+extern wint_t getwchar_unlocked (void);
+
+
+
+
+
+
+
+extern wint_t fgetwc_unlocked (__FILE *__stream);
+
+
+
+
+
+
+
+extern wint_t fputwc_unlocked (wchar_t __wc, __FILE *__stream);
+# 807 "/usr/include/wchar.h" 3 4
+extern wint_t putwc_unlocked (wchar_t __wc, __FILE *__stream);
+extern wint_t putwchar_unlocked (wchar_t __wc);
+# 817 "/usr/include/wchar.h" 3 4
+extern wchar_t *fgetws_unlocked (wchar_t *__restrict __ws, int __n,
+     __FILE *__restrict __stream);
+
+
+
+
+
+
+
+extern int fputws_unlocked (const wchar_t *__restrict __ws,
+       __FILE *__restrict __stream);
+
+
+
+
+
+
+extern size_t wcsftime (wchar_t *__restrict __s, size_t __maxsize,
+   const wchar_t *__restrict __format,
+   const struct tm *__restrict __tp) throw ();
+
+
+
+
+extern size_t wcsftime_l (wchar_t *__restrict __s, size_t __maxsize,
+     const wchar_t *__restrict __format,
+     const struct tm *__restrict __tp,
+     locale_t __loc) throw ();
+# 856 "/usr/include/wchar.h" 3 4
+}
+# 45 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cwchar" 2 3
+# 62 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cwchar" 3
+namespace std
+{
+  using ::mbstate_t;
+}
+# 135 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cwchar" 3
+namespace std __attribute__ ((__visibility__ ("default")))
+{
+
+
+  using ::wint_t;
+
+  using ::btowc;
+  using ::fgetwc;
+  using ::fgetws;
+  using ::fputwc;
+  using ::fputws;
+  using ::fwide;
+  using ::fwprintf;
+  using ::fwscanf;
+  using ::getwc;
+  using ::getwchar;
+  using ::mbrlen;
+  using ::mbrtowc;
+  using ::mbsinit;
+  using ::mbsrtowcs;
+  using ::putwc;
+  using ::putwchar;
+
+  using ::swprintf;
+
+  using ::swscanf;
+  using ::ungetwc;
+  using ::vfwprintf;
+
+  using ::vfwscanf;
+
+
+  using ::vswprintf;
+
+
+  using ::vswscanf;
+
+  using ::vwprintf;
+
+  using ::vwscanf;
+
+  using ::wcrtomb;
+  using ::wcscat;
+  using ::wcscmp;
+  using ::wcscoll;
+  using ::wcscpy;
+  using ::wcscspn;
+  using ::wcsftime;
+  using ::wcslen;
+  using ::wcsncat;
+  using ::wcsncmp;
+  using ::wcsncpy;
+  using ::wcsrtombs;
+  using ::wcsspn;
+  using ::wcstod;
+
+  using ::wcstof;
+
+  using ::wcstok;
+  using ::wcstol;
+  using ::wcstoul;
+  using ::wcsxfrm;
+  using ::wctob;
+  using ::wmemcmp;
+  using ::wmemcpy;
+  using ::wmemmove;
+  using ::wmemset;
+  using ::wprintf;
+  using ::wscanf;
+  using ::wcschr;
+  using ::wcspbrk;
+  using ::wcsrchr;
+  using ::wcsstr;
+  using ::wmemchr;
+# 232 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cwchar" 3
+
+}
+
+
+
+
+
+
+
+namespace __gnu_cxx
+{
+
+
+
+
+
+  using ::wcstold;
+# 257 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cwchar" 3
+  using ::wcstoll;
+  using ::wcstoull;
+
+}
+
+namespace std
+{
+  using ::__gnu_cxx::wcstold;
+  using ::__gnu_cxx::wcstoll;
+  using ::__gnu_cxx::wcstoull;
+}
+# 277 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cwchar" 3
+namespace std
+{
+
+  using std::wcstof;
+
+
+  using std::vfwscanf;
+
+
+  using std::vswscanf;
+
+
+  using std::vwscanf;
+
+
+
+  using std::wcstold;
+  using std::wcstoll;
+  using std::wcstoull;
+
+}
+# 41 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/bits/postypes.h" 2 3
+# 68 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/bits/postypes.h" 3
+namespace std __attribute__ ((__visibility__ ("default")))
+{
+
+# 88 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/bits/postypes.h" 3
+  typedef long streamoff;
+# 98 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/bits/postypes.h" 3
+  typedef ptrdiff_t streamsize;
+# 111 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/bits/postypes.h" 3
+  template<typename _StateT>
+    class fpos
+    {
+    private:
+      streamoff _M_off;
+      _StateT _M_state;
+
+    public:
+
+
+
+
+      fpos()
+      : _M_off(0), _M_state() { }
+# 133 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/bits/postypes.h" 3
+      fpos(streamoff __off)
+      : _M_off(__off), _M_state() { }
+
+
+      operator streamoff() const { return _M_off; }
+
+
+      void
+      state(_StateT __st)
+      { _M_state = __st; }
+
+
+      _StateT
+      state() const
+      { return _M_state; }
+
+
+
+
+
+      fpos&
+      operator+=(streamoff __off)
+      {
+ _M_off += __off;
+ return *this;
+      }
+
+
+
+
+
+      fpos&
+      operator-=(streamoff __off)
+      {
+ _M_off -= __off;
+ return *this;
+      }
+
+
+
+
+
+
+
+      fpos
+      operator+(streamoff __off) const
+      {
+ fpos __pos(*this);
+ __pos += __off;
+ return __pos;
+      }
+
+
+
+
+
+
+
+      fpos
+      operator-(streamoff __off) const
+      {
+ fpos __pos(*this);
+ __pos -= __off;
+ return __pos;
+      }
+
+
+
+
+
+
+      streamoff
+      operator-(const fpos& __other) const
+      { return _M_off - __other._M_off; }
+    };
+
+
+
+
+
+
+  template<typename _StateT>
+    inline bool
+    operator==(const fpos<_StateT>& __lhs, const fpos<_StateT>& __rhs)
+    { return streamoff(__lhs) == streamoff(__rhs); }
+
+  template<typename _StateT>
+    inline bool
+    operator!=(const fpos<_StateT>& __lhs, const fpos<_StateT>& __rhs)
+    { return streamoff(__lhs) != streamoff(__rhs); }
+
+
+
+
+
+  typedef fpos<mbstate_t> streampos;
+
+  typedef fpos<mbstate_t> wstreampos;
+
+
+
+  typedef fpos<mbstate_t> u16streampos;
+
+  typedef fpos<mbstate_t> u32streampos;
+
+
+
+}
+# 41 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/iosfwd" 2 3
+
+namespace std __attribute__ ((__visibility__ ("default")))
+{
+
+# 74 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/iosfwd" 3
+  class ios_base;
+
+  template<typename _CharT, typename _Traits = char_traits<_CharT> >
+    class basic_ios;
+
+  template<typename _CharT, typename _Traits = char_traits<_CharT> >
+    class basic_streambuf;
+
+  template<typename _CharT, typename _Traits = char_traits<_CharT> >
+    class basic_istream;
+
+  template<typename _CharT, typename _Traits = char_traits<_CharT> >
+    class basic_ostream;
+
+  template<typename _CharT, typename _Traits = char_traits<_CharT> >
+    class basic_iostream;
+
+
+namespace __cxx11 {
+
+  template<typename _CharT, typename _Traits = char_traits<_CharT>,
+     typename _Alloc = allocator<_CharT> >
+    class basic_stringbuf;
+
+  template<typename _CharT, typename _Traits = char_traits<_CharT>,
+    typename _Alloc = allocator<_CharT> >
+    class basic_istringstream;
+
+  template<typename _CharT, typename _Traits = char_traits<_CharT>,
+    typename _Alloc = allocator<_CharT> >
+    class basic_ostringstream;
+
+  template<typename _CharT, typename _Traits = char_traits<_CharT>,
+    typename _Alloc = allocator<_CharT> >
+    class basic_stringstream;
+
+}
+
+  template<typename _CharT, typename _Traits = char_traits<_CharT> >
+    class basic_filebuf;
+
+  template<typename _CharT, typename _Traits = char_traits<_CharT> >
+    class basic_ifstream;
+
+  template<typename _CharT, typename _Traits = char_traits<_CharT> >
+    class basic_ofstream;
+
+  template<typename _CharT, typename _Traits = char_traits<_CharT> >
+    class basic_fstream;
+
+  template<typename _CharT, typename _Traits = char_traits<_CharT> >
+    class istreambuf_iterator;
+
+  template<typename _CharT, typename _Traits = char_traits<_CharT> >
+    class ostreambuf_iterator;
+
+
+
+  typedef basic_ios<char> ios;
+
+
+  typedef basic_streambuf<char> streambuf;
+
+
+  typedef basic_istream<char> istream;
+
+
+  typedef basic_ostream<char> ostream;
+
+
+  typedef basic_iostream<char> iostream;
+
+
+  typedef basic_stringbuf<char> stringbuf;
+
+
+  typedef basic_istringstream<char> istringstream;
+
+
+  typedef basic_ostringstream<char> ostringstream;
+
+
+  typedef basic_stringstream<char> stringstream;
+
+
+  typedef basic_filebuf<char> filebuf;
+
+
+  typedef basic_ifstream<char> ifstream;
+
+
+  typedef basic_ofstream<char> ofstream;
+
+
+  typedef basic_fstream<char> fstream;
+
+
+
+  typedef basic_ios<wchar_t> wios;
+
+
+  typedef basic_streambuf<wchar_t> wstreambuf;
+
+
+  typedef basic_istream<wchar_t> wistream;
+
+
+  typedef basic_ostream<wchar_t> wostream;
+
+
+  typedef basic_iostream<wchar_t> wiostream;
+
+
+  typedef basic_stringbuf<wchar_t> wstringbuf;
+
+
+  typedef basic_istringstream<wchar_t> wistringstream;
+
+
+  typedef basic_ostringstream<wchar_t> wostringstream;
+
+
+  typedef basic_stringstream<wchar_t> wstringstream;
+
+
+  typedef basic_filebuf<wchar_t> wfilebuf;
+
+
+  typedef basic_ifstream<wchar_t> wifstream;
+
+
+  typedef basic_ofstream<wchar_t> wofstream;
+
+
+  typedef basic_fstream<wchar_t> wfstream;
+
+
+
+
+}
+# 35 "/usr/include/x86_64-linux-gnu/gmp.h" 2
+# 1 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cstdio" 1 3
+# 39 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cstdio" 3
+       
+# 40 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cstdio" 3
+
+
 # 1 "/usr/include/stdio.h" 1 3 4
 # 27 "/usr/include/stdio.h" 3 4
 # 1 "/usr/include/x86_64-linux-gnu/bits/libc-header-start.h" 1 3 4
@@ -136,14 +1321,10 @@ extern "C" {
 
 
 # 1 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/include/stddef.h" 1 3 4
-# 216 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/include/stddef.h" 3 4
-typedef long unsigned int size_t;
 # 34 "/usr/include/stdio.h" 2 3 4
 
 
 # 1 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/include/stdarg.h" 1 3 4
-# 40 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/include/stdarg.h" 3 4
-typedef __builtin_va_list __gnuc_va_list;
 # 37 "/usr/include/stdio.h" 2 3 4
 
 # 1 "/usr/include/x86_64-linux-gnu/bits/types.h" 1 3 4
@@ -276,26 +1457,7 @@ typedef unsigned int __socklen_t;
 typedef int __sig_atomic_t;
 # 39 "/usr/include/stdio.h" 2 3 4
 # 1 "/usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h" 1 3 4
-
-
-
-
-# 1 "/usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h" 1 3 4
-# 13 "/usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h" 3 4
-typedef struct
-{
-  int __count;
-  union
-  {
-    unsigned int __wch;
-    char __wchb[4];
-  } __value;
-} __mbstate_t;
-# 6 "/usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h" 2 3 4
-
-
-
-
+# 10 "/usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h" 3 4
 typedef struct _G_fpos_t
 {
   __off_t __pos;
@@ -310,22 +1472,8 @@ typedef struct _G_fpos64_t
   __mbstate_t __state;
 } __fpos64_t;
 # 41 "/usr/include/stdio.h" 2 3 4
-# 1 "/usr/include/x86_64-linux-gnu/bits/types/__FILE.h" 1 3 4
 
 
-
-struct _IO_FILE;
-typedef struct _IO_FILE __FILE;
-# 42 "/usr/include/stdio.h" 2 3 4
-# 1 "/usr/include/x86_64-linux-gnu/bits/types/FILE.h" 1 3 4
-
-
-
-struct _IO_FILE;
-
-
-typedef struct _IO_FILE FILE;
-# 43 "/usr/include/stdio.h" 2 3 4
 # 1 "/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h" 1 3 4
 # 35 "/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h" 3 4
 struct _IO_FILE;
@@ -980,43 +2128,2303 @@ extern int __uflow (FILE *);
 extern int __overflow (FILE *, int);
 # 873 "/usr/include/stdio.h" 3 4
 }
-# 111 "/tools/Xilinx/Vitis_HLS/2022.1/include/ap_common.h" 2
+# 43 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cstdio" 2 3
+# 96 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cstdio" 3
+namespace std
+{
+  using ::FILE;
+  using ::fpos_t;
 
+  using ::clearerr;
+  using ::fclose;
+  using ::feof;
+  using ::ferror;
+  using ::fflush;
+  using ::fgetc;
+  using ::fgetpos;
+  using ::fgets;
+  using ::fopen;
+  using ::fprintf;
+  using ::fputc;
+  using ::fputs;
+  using ::fread;
+  using ::freopen;
+  using ::fscanf;
+  using ::fseek;
+  using ::fsetpos;
+  using ::ftell;
+  using ::fwrite;
+  using ::getc;
+  using ::getchar;
+
+
+
+
+  using ::perror;
+  using ::printf;
+  using ::putc;
+  using ::putchar;
+  using ::puts;
+  using ::remove;
+  using ::rename;
+  using ::rewind;
+  using ::scanf;
+  using ::setbuf;
+  using ::setvbuf;
+  using ::sprintf;
+  using ::sscanf;
+  using ::tmpfile;
+
+  using ::tmpnam;
+
+  using ::ungetc;
+  using ::vfprintf;
+  using ::vprintf;
+  using ::vsprintf;
+}
+# 157 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cstdio" 3
+namespace __gnu_cxx
+{
+# 175 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cstdio" 3
+  using ::snprintf;
+  using ::vfscanf;
+  using ::vscanf;
+  using ::vsnprintf;
+  using ::vsscanf;
+
+}
+
+namespace std
+{
+  using ::__gnu_cxx::snprintf;
+  using ::__gnu_cxx::vfscanf;
+  using ::__gnu_cxx::vscanf;
+  using ::__gnu_cxx::vsnprintf;
+  using ::__gnu_cxx::vsscanf;
+}
+# 36 "/usr/include/x86_64-linux-gnu/gmp.h" 2
+# 55 "/usr/include/x86_64-linux-gnu/gmp.h"
+# 1 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/include/stddef.h" 1 3 4
+# 149 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/include/stddef.h" 3 4
+typedef long int ptrdiff_t;
+# 426 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/include/stddef.h" 3 4
+typedef struct {
+  long long __max_align_ll __attribute__((__aligned__(__alignof__(long long))));
+  long double __max_align_ld __attribute__((__aligned__(__alignof__(long double))));
+# 437 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/include/stddef.h" 3 4
+} max_align_t;
+
+
+
+
+
+
+  typedef decltype(nullptr) nullptr_t;
+# 56 "/usr/include/x86_64-linux-gnu/gmp.h" 2
+# 1 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/include-fixed/limits.h" 1 3 4
+# 34 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/include-fixed/limits.h" 3 4
+# 1 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/include-fixed/syslimits.h" 1 3 4
+
+
+
+
+
+
+# 1 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/include-fixed/limits.h" 1 3 4
+# 194 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/include-fixed/limits.h" 3 4
+# 1 "/usr/include/limits.h" 1 3 4
+# 26 "/usr/include/limits.h" 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/libc-header-start.h" 1 3 4
+# 27 "/usr/include/limits.h" 2 3 4
+# 183 "/usr/include/limits.h" 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/posix1_lim.h" 1 3 4
+# 27 "/usr/include/x86_64-linux-gnu/bits/posix1_lim.h" 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/wordsize.h" 1 3 4
+# 28 "/usr/include/x86_64-linux-gnu/bits/posix1_lim.h" 2 3 4
+# 161 "/usr/include/x86_64-linux-gnu/bits/posix1_lim.h" 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/local_lim.h" 1 3 4
+# 38 "/usr/include/x86_64-linux-gnu/bits/local_lim.h" 3 4
+# 1 "/usr/include/linux/limits.h" 1 3 4
+# 39 "/usr/include/x86_64-linux-gnu/bits/local_lim.h" 2 3 4
+# 162 "/usr/include/x86_64-linux-gnu/bits/posix1_lim.h" 2 3 4
+# 184 "/usr/include/limits.h" 2 3 4
+
+
+
+# 1 "/usr/include/x86_64-linux-gnu/bits/posix2_lim.h" 1 3 4
+# 188 "/usr/include/limits.h" 2 3 4
+
+
+
+# 1 "/usr/include/x86_64-linux-gnu/bits/xopen_lim.h" 1 3 4
+# 64 "/usr/include/x86_64-linux-gnu/bits/xopen_lim.h" 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/uio_lim.h" 1 3 4
+# 65 "/usr/include/x86_64-linux-gnu/bits/xopen_lim.h" 2 3 4
+# 192 "/usr/include/limits.h" 2 3 4
+# 195 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/include-fixed/limits.h" 2 3 4
+# 8 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/include-fixed/syslimits.h" 2 3 4
+# 35 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/include-fixed/limits.h" 2 3 4
+# 57 "/usr/include/x86_64-linux-gnu/gmp.h" 2
+# 141 "/usr/include/x86_64-linux-gnu/gmp.h"
+
+# 141 "/usr/include/x86_64-linux-gnu/gmp.h"
+typedef unsigned long int mp_limb_t;
+typedef long int mp_limb_signed_t;
+
+
+typedef unsigned long int mp_bitcnt_t;
+
+
+
+
+typedef struct
+{
+  int _mp_alloc;
+
+  int _mp_size;
+
+
+  mp_limb_t *_mp_d;
+} __mpz_struct;
+
+
+
+
+typedef __mpz_struct MP_INT;
+typedef __mpz_struct mpz_t[1];
+
+typedef mp_limb_t * mp_ptr;
+typedef const mp_limb_t * mp_srcptr;
+
+
+
+
+
+
+
+typedef long int mp_size_t;
+typedef long int mp_exp_t;
+
+
+typedef struct
+{
+  __mpz_struct _mp_num;
+  __mpz_struct _mp_den;
+} __mpq_struct;
+
+typedef __mpq_struct MP_RAT;
+typedef __mpq_struct mpq_t[1];
+
+typedef struct
+{
+  int _mp_prec;
+
+
+
+  int _mp_size;
+
+
+  mp_exp_t _mp_exp;
+  mp_limb_t *_mp_d;
+} __mpf_struct;
+
+
+typedef __mpf_struct mpf_t[1];
+
+
+typedef enum
+{
+  GMP_RAND_ALG_DEFAULT = 0,
+  GMP_RAND_ALG_LC = GMP_RAND_ALG_DEFAULT
+} gmp_randalg_t;
+
+
+typedef struct
+{
+  mpz_t _mp_seed;
+  gmp_randalg_t _mp_alg;
+  union {
+    void *_mp_lc;
+  } _mp_algdata;
+} __gmp_randstate_struct;
+typedef __gmp_randstate_struct gmp_randstate_t[1];
+
+
+
+typedef const __mpz_struct *mpz_srcptr;
+typedef __mpz_struct *mpz_ptr;
+typedef const __mpf_struct *mpf_srcptr;
+typedef __mpf_struct *mpf_ptr;
+typedef const __mpq_struct *mpq_srcptr;
+typedef __mpq_struct *mpq_ptr;
+# 472 "/usr/include/x86_64-linux-gnu/gmp.h"
+extern "C" {
+using std::FILE;
+
+
+
+ void __gmp_set_memory_functions (void *(*) (size_t),
+          void *(*) (void *, size_t, size_t),
+          void (*) (void *, size_t)) noexcept;
+
+
+ void __gmp_get_memory_functions (void *(**) (size_t),
+          void *(**) (void *, size_t, size_t),
+          void (**) (void *, size_t)) noexcept;
+
+
+ extern const int __gmp_bits_per_limb;
+
+
+ extern int __gmp_errno;
+
+
+ extern const char * const __gmp_version;
+
+
+
+
+
+
+ void __gmp_randinit (gmp_randstate_t, gmp_randalg_t, ...);
+
+
+ void __gmp_randinit_default (gmp_randstate_t);
+
+
+ void __gmp_randinit_lc_2exp (gmp_randstate_t, mpz_srcptr, unsigned long int, mp_bitcnt_t);
+
+
+ int __gmp_randinit_lc_2exp_size (gmp_randstate_t, mp_bitcnt_t);
+
+
+ void __gmp_randinit_mt (gmp_randstate_t);
+
+
+ void __gmp_randinit_set (gmp_randstate_t, const __gmp_randstate_struct *);
+
+
+ void __gmp_randseed (gmp_randstate_t, mpz_srcptr);
+
+
+ void __gmp_randseed_ui (gmp_randstate_t, unsigned long int);
+
+
+ void __gmp_randclear (gmp_randstate_t);
+
+
+ unsigned long __gmp_urandomb_ui (gmp_randstate_t, unsigned long);
+
+
+ unsigned long __gmp_urandomm_ui (gmp_randstate_t, unsigned long);
+
+
+
+
+
+ int __gmp_asprintf (char **, const char *, ...);
+
+
+
+ int __gmp_fprintf (FILE *, const char *, ...);
+# 554 "/usr/include/x86_64-linux-gnu/gmp.h"
+ int __gmp_printf (const char *, ...);
+
+
+ int __gmp_snprintf (char *, size_t, const char *, ...);
+
+
+ int __gmp_sprintf (char *, const char *, ...);
+# 592 "/usr/include/x86_64-linux-gnu/gmp.h"
+ int __gmp_fscanf (FILE *, const char *, ...);
+
+
+
+ int __gmp_scanf (const char *, ...);
+
+
+ int __gmp_sscanf (const char *, const char *, ...);
+# 621 "/usr/include/x86_64-linux-gnu/gmp.h"
+ void *__gmpz_realloc (mpz_ptr, mp_size_t);
+
+
+
+ void __gmpz_abs (mpz_ptr, mpz_srcptr);
+
+
+
+ void __gmpz_add (mpz_ptr, mpz_srcptr, mpz_srcptr);
+
+
+ void __gmpz_add_ui (mpz_ptr, mpz_srcptr, unsigned long int);
+
+
+ void __gmpz_addmul (mpz_ptr, mpz_srcptr, mpz_srcptr);
+
+
+ void __gmpz_addmul_ui (mpz_ptr, mpz_srcptr, unsigned long int);
+
+
+ void __gmpz_and (mpz_ptr, mpz_srcptr, mpz_srcptr);
+
+
+ void __gmpz_array_init (mpz_ptr, mp_size_t, mp_size_t);
+
+
+ void __gmpz_bin_ui (mpz_ptr, mpz_srcptr, unsigned long int);
+
+
+ void __gmpz_bin_uiui (mpz_ptr, unsigned long int, unsigned long int);
+
+
+ void __gmpz_cdiv_q (mpz_ptr, mpz_srcptr, mpz_srcptr);
+
+
+ void __gmpz_cdiv_q_2exp (mpz_ptr, mpz_srcptr, mp_bitcnt_t);
+
+
+ unsigned long int __gmpz_cdiv_q_ui (mpz_ptr, mpz_srcptr, unsigned long int);
+
+
+ void __gmpz_cdiv_qr (mpz_ptr, mpz_ptr, mpz_srcptr, mpz_srcptr);
+
+
+ unsigned long int __gmpz_cdiv_qr_ui (mpz_ptr, mpz_ptr, mpz_srcptr, unsigned long int);
+
+
+ void __gmpz_cdiv_r (mpz_ptr, mpz_srcptr, mpz_srcptr);
+
+
+ void __gmpz_cdiv_r_2exp (mpz_ptr, mpz_srcptr, mp_bitcnt_t);
+
+
+ unsigned long int __gmpz_cdiv_r_ui (mpz_ptr, mpz_srcptr, unsigned long int);
+
+
+ unsigned long int __gmpz_cdiv_ui (mpz_srcptr, unsigned long int) __attribute__ ((__pure__));
+
+
+ void __gmpz_clear (mpz_ptr);
+
+
+ void __gmpz_clears (mpz_ptr, ...);
+
+
+ void __gmpz_clrbit (mpz_ptr, mp_bitcnt_t);
+
+
+ int __gmpz_cmp (mpz_srcptr, mpz_srcptr) noexcept __attribute__ ((__pure__));
+
+
+ int __gmpz_cmp_d (mpz_srcptr, double) __attribute__ ((__pure__));
+
+
+ int __gmpz_cmp_si (mpz_srcptr, signed long int) noexcept __attribute__ ((__pure__));
+
+
+ int __gmpz_cmp_ui (mpz_srcptr, unsigned long int) noexcept __attribute__ ((__pure__));
+
+
+ int __gmpz_cmpabs (mpz_srcptr, mpz_srcptr) noexcept __attribute__ ((__pure__));
+
+
+ int __gmpz_cmpabs_d (mpz_srcptr, double) __attribute__ ((__pure__));
+
+
+ int __gmpz_cmpabs_ui (mpz_srcptr, unsigned long int) noexcept __attribute__ ((__pure__));
+
+
+ void __gmpz_com (mpz_ptr, mpz_srcptr);
+
+
+ void __gmpz_combit (mpz_ptr, mp_bitcnt_t);
+
+
+ int __gmpz_congruent_p (mpz_srcptr, mpz_srcptr, mpz_srcptr) __attribute__ ((__pure__));
+
+
+ int __gmpz_congruent_2exp_p (mpz_srcptr, mpz_srcptr, mp_bitcnt_t) noexcept __attribute__ ((__pure__));
+
+
+ int __gmpz_congruent_ui_p (mpz_srcptr, unsigned long, unsigned long) __attribute__ ((__pure__));
+
+
+ void __gmpz_divexact (mpz_ptr, mpz_srcptr, mpz_srcptr);
+
+
+ void __gmpz_divexact_ui (mpz_ptr, mpz_srcptr, unsigned long);
+
+
+ int __gmpz_divisible_p (mpz_srcptr, mpz_srcptr) __attribute__ ((__pure__));
+
+
+ int __gmpz_divisible_ui_p (mpz_srcptr, unsigned long) __attribute__ ((__pure__));
+
+
+ int __gmpz_divisible_2exp_p (mpz_srcptr, mp_bitcnt_t) noexcept __attribute__ ((__pure__));
+
+
+ void __gmpz_dump (mpz_srcptr);
+
+
+ void *__gmpz_export (void *, size_t *, int, size_t, int, size_t, mpz_srcptr);
+
+
+ void __gmpz_fac_ui (mpz_ptr, unsigned long int);
+
+
+ void __gmpz_2fac_ui (mpz_ptr, unsigned long int);
+
+
+ void __gmpz_mfac_uiui (mpz_ptr, unsigned long int, unsigned long int);
+
+
+ void __gmpz_primorial_ui (mpz_ptr, unsigned long int);
+
+
+ void __gmpz_fdiv_q (mpz_ptr, mpz_srcptr, mpz_srcptr);
+
+
+ void __gmpz_fdiv_q_2exp (mpz_ptr, mpz_srcptr, mp_bitcnt_t);
+
+
+ unsigned long int __gmpz_fdiv_q_ui (mpz_ptr, mpz_srcptr, unsigned long int);
+
+
+ void __gmpz_fdiv_qr (mpz_ptr, mpz_ptr, mpz_srcptr, mpz_srcptr);
+
+
+ unsigned long int __gmpz_fdiv_qr_ui (mpz_ptr, mpz_ptr, mpz_srcptr, unsigned long int);
+
+
+ void __gmpz_fdiv_r (mpz_ptr, mpz_srcptr, mpz_srcptr);
+
+
+ void __gmpz_fdiv_r_2exp (mpz_ptr, mpz_srcptr, mp_bitcnt_t);
+
+
+ unsigned long int __gmpz_fdiv_r_ui (mpz_ptr, mpz_srcptr, unsigned long int);
+
+
+ unsigned long int __gmpz_fdiv_ui (mpz_srcptr, unsigned long int) __attribute__ ((__pure__));
+
+
+ void __gmpz_fib_ui (mpz_ptr, unsigned long int);
+
+
+ void __gmpz_fib2_ui (mpz_ptr, mpz_ptr, unsigned long int);
+
+
+ int __gmpz_fits_sint_p (mpz_srcptr) noexcept __attribute__ ((__pure__));
+
+
+ int __gmpz_fits_slong_p (mpz_srcptr) noexcept __attribute__ ((__pure__));
+
+
+ int __gmpz_fits_sshort_p (mpz_srcptr) noexcept __attribute__ ((__pure__));
+
+
+
+ int __gmpz_fits_uint_p (mpz_srcptr) noexcept __attribute__ ((__pure__));
+
+
+
+
+ int __gmpz_fits_ulong_p (mpz_srcptr) noexcept __attribute__ ((__pure__));
+
+
+
+
+ int __gmpz_fits_ushort_p (mpz_srcptr) noexcept __attribute__ ((__pure__));
+
+
+
+ void __gmpz_gcd (mpz_ptr, mpz_srcptr, mpz_srcptr);
+
+
+ unsigned long int __gmpz_gcd_ui (mpz_ptr, mpz_srcptr, unsigned long int);
+
+
+ void __gmpz_gcdext (mpz_ptr, mpz_ptr, mpz_ptr, mpz_srcptr, mpz_srcptr);
+
+
+ double __gmpz_get_d (mpz_srcptr) __attribute__ ((__pure__));
+
+
+ double __gmpz_get_d_2exp (signed long int *, mpz_srcptr);
+
+
+ long int __gmpz_get_si (mpz_srcptr) noexcept __attribute__ ((__pure__));
+
+
+ char *__gmpz_get_str (char *, int, mpz_srcptr);
+
+
+
+ unsigned long int __gmpz_get_ui (mpz_srcptr) noexcept __attribute__ ((__pure__));
+
+
+
+
+ mp_limb_t __gmpz_getlimbn (mpz_srcptr, mp_size_t) noexcept __attribute__ ((__pure__));
+
+
+
+ mp_bitcnt_t __gmpz_hamdist (mpz_srcptr, mpz_srcptr) noexcept __attribute__ ((__pure__));
+
+
+ void __gmpz_import (mpz_ptr, size_t, int, size_t, int, size_t, const void *);
+
+
+ void __gmpz_init (mpz_ptr) noexcept;
+
+
+ void __gmpz_init2 (mpz_ptr, mp_bitcnt_t);
+
+
+ void __gmpz_inits (mpz_ptr, ...) noexcept;
+
+
+ void __gmpz_init_set (mpz_ptr, mpz_srcptr);
+
+
+ void __gmpz_init_set_d (mpz_ptr, double);
+
+
+ void __gmpz_init_set_si (mpz_ptr, signed long int);
+
+
+ int __gmpz_init_set_str (mpz_ptr, const char *, int);
+
+
+ void __gmpz_init_set_ui (mpz_ptr, unsigned long int);
+
+
+
+ size_t __gmpz_inp_raw (mpz_ptr, FILE *);
+
+
+
+
+ size_t __gmpz_inp_str (mpz_ptr, FILE *, int);
+
+
+
+ int __gmpz_invert (mpz_ptr, mpz_srcptr, mpz_srcptr);
+
+
+ void __gmpz_ior (mpz_ptr, mpz_srcptr, mpz_srcptr);
+
+
+ int __gmpz_jacobi (mpz_srcptr, mpz_srcptr) __attribute__ ((__pure__));
+
+
+
+
+ int __gmpz_kronecker_si (mpz_srcptr, long) __attribute__ ((__pure__));
+
+
+ int __gmpz_kronecker_ui (mpz_srcptr, unsigned long) __attribute__ ((__pure__));
+
+
+ int __gmpz_si_kronecker (long, mpz_srcptr) __attribute__ ((__pure__));
+
+
+ int __gmpz_ui_kronecker (unsigned long, mpz_srcptr) __attribute__ ((__pure__));
+
+
+ void __gmpz_lcm (mpz_ptr, mpz_srcptr, mpz_srcptr);
+
+
+ void __gmpz_lcm_ui (mpz_ptr, mpz_srcptr, unsigned long);
+
+
+
+
+ void __gmpz_lucnum_ui (mpz_ptr, unsigned long int);
+
+
+ void __gmpz_lucnum2_ui (mpz_ptr, mpz_ptr, unsigned long int);
+
+
+ int __gmpz_millerrabin (mpz_srcptr, int) __attribute__ ((__pure__));
+
+
+ void __gmpz_mod (mpz_ptr, mpz_srcptr, mpz_srcptr);
+
+
+
+
+ void __gmpz_mul (mpz_ptr, mpz_srcptr, mpz_srcptr);
+
+
+ void __gmpz_mul_2exp (mpz_ptr, mpz_srcptr, mp_bitcnt_t);
+
+
+ void __gmpz_mul_si (mpz_ptr, mpz_srcptr, long int);
+
+
+ void __gmpz_mul_ui (mpz_ptr, mpz_srcptr, unsigned long int);
+
+
+
+ void __gmpz_neg (mpz_ptr, mpz_srcptr);
+
+
+
+ void __gmpz_nextprime (mpz_ptr, mpz_srcptr);
+
+
+
+ size_t __gmpz_out_raw (FILE *, mpz_srcptr);
+
+
+
+
+ size_t __gmpz_out_str (FILE *, int, mpz_srcptr);
+
+
+
+ int __gmpz_perfect_power_p (mpz_srcptr) __attribute__ ((__pure__));
+
+
+
+ int __gmpz_perfect_square_p (mpz_srcptr) __attribute__ ((__pure__));
+
+
+
+
+ mp_bitcnt_t __gmpz_popcount (mpz_srcptr) noexcept __attribute__ ((__pure__));
+
+
+
+ void __gmpz_pow_ui (mpz_ptr, mpz_srcptr, unsigned long int);
+
+
+ void __gmpz_powm (mpz_ptr, mpz_srcptr, mpz_srcptr, mpz_srcptr);
+
+
+ void __gmpz_powm_sec (mpz_ptr, mpz_srcptr, mpz_srcptr, mpz_srcptr);
+
+
+ void __gmpz_powm_ui (mpz_ptr, mpz_srcptr, unsigned long int, mpz_srcptr);
+
+
+ int __gmpz_probab_prime_p (mpz_srcptr, int) __attribute__ ((__pure__));
+
+
+ void __gmpz_random (mpz_ptr, mp_size_t);
+
+
+ void __gmpz_random2 (mpz_ptr, mp_size_t);
+
+
+ void __gmpz_realloc2 (mpz_ptr, mp_bitcnt_t);
+
+
+ mp_bitcnt_t __gmpz_remove (mpz_ptr, mpz_srcptr, mpz_srcptr);
+
+
+ int __gmpz_root (mpz_ptr, mpz_srcptr, unsigned long int);
+
+
+ void __gmpz_rootrem (mpz_ptr, mpz_ptr, mpz_srcptr, unsigned long int);
+
+
+ void __gmpz_rrandomb (mpz_ptr, gmp_randstate_t, mp_bitcnt_t);
+
+
+ mp_bitcnt_t __gmpz_scan0 (mpz_srcptr, mp_bitcnt_t) noexcept __attribute__ ((__pure__));
+
+
+ mp_bitcnt_t __gmpz_scan1 (mpz_srcptr, mp_bitcnt_t) noexcept __attribute__ ((__pure__));
+
+
+ void __gmpz_set (mpz_ptr, mpz_srcptr);
+
+
+ void __gmpz_set_d (mpz_ptr, double);
+
+
+ void __gmpz_set_f (mpz_ptr, mpf_srcptr);
+
+
+
+ void __gmpz_set_q (mpz_ptr, mpq_srcptr);
+
+
+
+ void __gmpz_set_si (mpz_ptr, signed long int);
+
+
+ int __gmpz_set_str (mpz_ptr, const char *, int);
+
+
+ void __gmpz_set_ui (mpz_ptr, unsigned long int);
+
+
+ void __gmpz_setbit (mpz_ptr, mp_bitcnt_t);
+
+
+
+ size_t __gmpz_size (mpz_srcptr) noexcept __attribute__ ((__pure__));
+
+
+
+ size_t __gmpz_sizeinbase (mpz_srcptr, int) noexcept __attribute__ ((__pure__));
+
+
+ void __gmpz_sqrt (mpz_ptr, mpz_srcptr);
+
+
+ void __gmpz_sqrtrem (mpz_ptr, mpz_ptr, mpz_srcptr);
+
+
+ void __gmpz_sub (mpz_ptr, mpz_srcptr, mpz_srcptr);
+
+
+ void __gmpz_sub_ui (mpz_ptr, mpz_srcptr, unsigned long int);
+
+
+ void __gmpz_ui_sub (mpz_ptr, unsigned long int, mpz_srcptr);
+
+
+ void __gmpz_submul (mpz_ptr, mpz_srcptr, mpz_srcptr);
+
+
+ void __gmpz_submul_ui (mpz_ptr, mpz_srcptr, unsigned long int);
+
+
+ void __gmpz_swap (mpz_ptr, mpz_ptr) noexcept;
+
+
+ unsigned long int __gmpz_tdiv_ui (mpz_srcptr, unsigned long int) __attribute__ ((__pure__));
+
+
+ void __gmpz_tdiv_q (mpz_ptr, mpz_srcptr, mpz_srcptr);
+
+
+ void __gmpz_tdiv_q_2exp (mpz_ptr, mpz_srcptr, mp_bitcnt_t);
+
+
+ unsigned long int __gmpz_tdiv_q_ui (mpz_ptr, mpz_srcptr, unsigned long int);
+
+
+ void __gmpz_tdiv_qr (mpz_ptr, mpz_ptr, mpz_srcptr, mpz_srcptr);
+
+
+ unsigned long int __gmpz_tdiv_qr_ui (mpz_ptr, mpz_ptr, mpz_srcptr, unsigned long int);
+
+
+ void __gmpz_tdiv_r (mpz_ptr, mpz_srcptr, mpz_srcptr);
+
+
+ void __gmpz_tdiv_r_2exp (mpz_ptr, mpz_srcptr, mp_bitcnt_t);
+
+
+ unsigned long int __gmpz_tdiv_r_ui (mpz_ptr, mpz_srcptr, unsigned long int);
+
+
+ int __gmpz_tstbit (mpz_srcptr, mp_bitcnt_t) noexcept __attribute__ ((__pure__));
+
+
+ void __gmpz_ui_pow_ui (mpz_ptr, unsigned long int, unsigned long int);
+
+
+ void __gmpz_urandomb (mpz_ptr, gmp_randstate_t, mp_bitcnt_t);
+
+
+ void __gmpz_urandomm (mpz_ptr, gmp_randstate_t, mpz_srcptr);
+
+
+
+ void __gmpz_xor (mpz_ptr, mpz_srcptr, mpz_srcptr);
+
+
+ mp_srcptr __gmpz_limbs_read (mpz_srcptr);
+
+
+ mp_ptr __gmpz_limbs_write (mpz_ptr, mp_size_t);
+
+
+ mp_ptr __gmpz_limbs_modify (mpz_ptr, mp_size_t);
+
+
+ void __gmpz_limbs_finish (mpz_ptr, mp_size_t);
+
+
+ mpz_srcptr __gmpz_roinit_n (mpz_ptr, mp_srcptr, mp_size_t);
+
+
+
+
+
+
+
+ void __gmpq_abs (mpq_ptr, mpq_srcptr);
+
+
+
+ void __gmpq_add (mpq_ptr, mpq_srcptr, mpq_srcptr);
+
+
+ void __gmpq_canonicalize (mpq_ptr);
+
+
+ void __gmpq_clear (mpq_ptr);
+
+
+ void __gmpq_clears (mpq_ptr, ...);
+
+
+ int __gmpq_cmp (mpq_srcptr, mpq_srcptr) __attribute__ ((__pure__));
+
+
+ int __gmpq_cmp_si (mpq_srcptr, long, unsigned long) __attribute__ ((__pure__));
+
+
+ int __gmpq_cmp_ui (mpq_srcptr, unsigned long int, unsigned long int) __attribute__ ((__pure__));
+
+
+ int __gmpq_cmp_z (mpq_srcptr, mpz_srcptr) __attribute__ ((__pure__));
+
+
+ void __gmpq_div (mpq_ptr, mpq_srcptr, mpq_srcptr);
+
+
+ void __gmpq_div_2exp (mpq_ptr, mpq_srcptr, mp_bitcnt_t);
+
+
+ int __gmpq_equal (mpq_srcptr, mpq_srcptr) noexcept __attribute__ ((__pure__));
+
+
+ void __gmpq_get_num (mpz_ptr, mpq_srcptr);
+
+
+ void __gmpq_get_den (mpz_ptr, mpq_srcptr);
+
+
+ double __gmpq_get_d (mpq_srcptr) __attribute__ ((__pure__));
+
+
+ char *__gmpq_get_str (char *, int, mpq_srcptr);
+
+
+ void __gmpq_init (mpq_ptr);
+
+
+ void __gmpq_inits (mpq_ptr, ...);
+
+
+
+ size_t __gmpq_inp_str (mpq_ptr, FILE *, int);
+
+
+
+ void __gmpq_inv (mpq_ptr, mpq_srcptr);
+
+
+ void __gmpq_mul (mpq_ptr, mpq_srcptr, mpq_srcptr);
+
+
+ void __gmpq_mul_2exp (mpq_ptr, mpq_srcptr, mp_bitcnt_t);
+
+
+
+ void __gmpq_neg (mpq_ptr, mpq_srcptr);
+
+
+
+
+ size_t __gmpq_out_str (FILE *, int, mpq_srcptr);
+
+
+
+ void __gmpq_set (mpq_ptr, mpq_srcptr);
+
+
+ void __gmpq_set_d (mpq_ptr, double);
+
+
+ void __gmpq_set_den (mpq_ptr, mpz_srcptr);
+
+
+ void __gmpq_set_f (mpq_ptr, mpf_srcptr);
+
+
+ void __gmpq_set_num (mpq_ptr, mpz_srcptr);
+
+
+ void __gmpq_set_si (mpq_ptr, signed long int, unsigned long int);
+
+
+ int __gmpq_set_str (mpq_ptr, const char *, int);
+
+
+ void __gmpq_set_ui (mpq_ptr, unsigned long int, unsigned long int);
+
+
+ void __gmpq_set_z (mpq_ptr, mpz_srcptr);
+
+
+ void __gmpq_sub (mpq_ptr, mpq_srcptr, mpq_srcptr);
+
+
+ void __gmpq_swap (mpq_ptr, mpq_ptr) noexcept;
+
+
+
+
+
+ void __gmpf_abs (mpf_ptr, mpf_srcptr);
+
+
+ void __gmpf_add (mpf_ptr, mpf_srcptr, mpf_srcptr);
+
+
+ void __gmpf_add_ui (mpf_ptr, mpf_srcptr, unsigned long int);
+
+ void __gmpf_ceil (mpf_ptr, mpf_srcptr);
+
+
+ void __gmpf_clear (mpf_ptr);
+
+
+ void __gmpf_clears (mpf_ptr, ...);
+
+
+ int __gmpf_cmp (mpf_srcptr, mpf_srcptr) noexcept __attribute__ ((__pure__));
+
+
+ int __gmpf_cmp_z (mpf_srcptr, mpz_srcptr) noexcept __attribute__ ((__pure__));
+
+
+ int __gmpf_cmp_d (mpf_srcptr, double) __attribute__ ((__pure__));
+
+
+ int __gmpf_cmp_si (mpf_srcptr, signed long int) noexcept __attribute__ ((__pure__));
+
+
+ int __gmpf_cmp_ui (mpf_srcptr, unsigned long int) noexcept __attribute__ ((__pure__));
+
+
+ void __gmpf_div (mpf_ptr, mpf_srcptr, mpf_srcptr);
+
+
+ void __gmpf_div_2exp (mpf_ptr, mpf_srcptr, mp_bitcnt_t);
+
+
+ void __gmpf_div_ui (mpf_ptr, mpf_srcptr, unsigned long int);
+
+
+ void __gmpf_dump (mpf_srcptr);
+
+
+ int __gmpf_eq (mpf_srcptr, mpf_srcptr, mp_bitcnt_t) __attribute__ ((__pure__));
+
+
+ int __gmpf_fits_sint_p (mpf_srcptr) noexcept __attribute__ ((__pure__));
+
+
+ int __gmpf_fits_slong_p (mpf_srcptr) noexcept __attribute__ ((__pure__));
+
+
+ int __gmpf_fits_sshort_p (mpf_srcptr) noexcept __attribute__ ((__pure__));
+
+
+ int __gmpf_fits_uint_p (mpf_srcptr) noexcept __attribute__ ((__pure__));
+
+
+ int __gmpf_fits_ulong_p (mpf_srcptr) noexcept __attribute__ ((__pure__));
+
+
+ int __gmpf_fits_ushort_p (mpf_srcptr) noexcept __attribute__ ((__pure__));
+
+
+ void __gmpf_floor (mpf_ptr, mpf_srcptr);
+
+
+ double __gmpf_get_d (mpf_srcptr) __attribute__ ((__pure__));
+
+
+ double __gmpf_get_d_2exp (signed long int *, mpf_srcptr);
+
+
+ mp_bitcnt_t __gmpf_get_default_prec (void) noexcept __attribute__ ((__pure__));
+
+
+ mp_bitcnt_t __gmpf_get_prec (mpf_srcptr) noexcept __attribute__ ((__pure__));
+
+
+ long __gmpf_get_si (mpf_srcptr) noexcept __attribute__ ((__pure__));
+
+
+ char *__gmpf_get_str (char *, mp_exp_t *, int, size_t, mpf_srcptr);
+
+
+ unsigned long __gmpf_get_ui (mpf_srcptr) noexcept __attribute__ ((__pure__));
+
+
+ void __gmpf_init (mpf_ptr);
+
+
+ void __gmpf_init2 (mpf_ptr, mp_bitcnt_t);
+
+
+ void __gmpf_inits (mpf_ptr, ...);
+
+
+ void __gmpf_init_set (mpf_ptr, mpf_srcptr);
+
+
+ void __gmpf_init_set_d (mpf_ptr, double);
+
+
+ void __gmpf_init_set_si (mpf_ptr, signed long int);
+
+
+ int __gmpf_init_set_str (mpf_ptr, const char *, int);
+
+
+ void __gmpf_init_set_ui (mpf_ptr, unsigned long int);
+
+
+
+ size_t __gmpf_inp_str (mpf_ptr, FILE *, int);
+
+
+
+ int __gmpf_integer_p (mpf_srcptr) noexcept __attribute__ ((__pure__));
+
+
+ void __gmpf_mul (mpf_ptr, mpf_srcptr, mpf_srcptr);
+
+
+ void __gmpf_mul_2exp (mpf_ptr, mpf_srcptr, mp_bitcnt_t);
+
+
+ void __gmpf_mul_ui (mpf_ptr, mpf_srcptr, unsigned long int);
+
+
+ void __gmpf_neg (mpf_ptr, mpf_srcptr);
+
+
+
+ size_t __gmpf_out_str (FILE *, int, size_t, mpf_srcptr);
+
+
+
+ void __gmpf_pow_ui (mpf_ptr, mpf_srcptr, unsigned long int);
+
+
+ void __gmpf_random2 (mpf_ptr, mp_size_t, mp_exp_t);
+
+
+ void __gmpf_reldiff (mpf_ptr, mpf_srcptr, mpf_srcptr);
+
+
+ void __gmpf_set (mpf_ptr, mpf_srcptr);
+
+
+ void __gmpf_set_d (mpf_ptr, double);
+
+
+ void __gmpf_set_default_prec (mp_bitcnt_t) noexcept;
+
+
+ void __gmpf_set_prec (mpf_ptr, mp_bitcnt_t);
+
+
+ void __gmpf_set_prec_raw (mpf_ptr, mp_bitcnt_t) noexcept;
+
+
+ void __gmpf_set_q (mpf_ptr, mpq_srcptr);
+
+
+ void __gmpf_set_si (mpf_ptr, signed long int);
+
+
+ int __gmpf_set_str (mpf_ptr, const char *, int);
+
+
+ void __gmpf_set_ui (mpf_ptr, unsigned long int);
+
+
+ void __gmpf_set_z (mpf_ptr, mpz_srcptr);
+
+
+ size_t __gmpf_size (mpf_srcptr) noexcept __attribute__ ((__pure__));
+
+
+ void __gmpf_sqrt (mpf_ptr, mpf_srcptr);
+
+
+ void __gmpf_sqrt_ui (mpf_ptr, unsigned long int);
+
+
+ void __gmpf_sub (mpf_ptr, mpf_srcptr, mpf_srcptr);
+
+
+ void __gmpf_sub_ui (mpf_ptr, mpf_srcptr, unsigned long int);
+
+
+ void __gmpf_swap (mpf_ptr, mpf_ptr) noexcept;
+
+
+ void __gmpf_trunc (mpf_ptr, mpf_srcptr);
+
+
+ void __gmpf_ui_div (mpf_ptr, unsigned long int, mpf_srcptr);
+
+
+ void __gmpf_ui_sub (mpf_ptr, unsigned long int, mpf_srcptr);
+
+
+ void __gmpf_urandomb (mpf_t, gmp_randstate_t, mp_bitcnt_t);
+# 1465 "/usr/include/x86_64-linux-gnu/gmp.h"
+ mp_limb_t __gmpn_add (mp_ptr, mp_srcptr, mp_size_t, mp_srcptr, mp_size_t);
+
+
+
+
+ mp_limb_t __gmpn_add_1 (mp_ptr, mp_srcptr, mp_size_t, mp_limb_t) noexcept;
+
+
+
+ mp_limb_t __gmpn_add_n (mp_ptr, mp_srcptr, mp_srcptr, mp_size_t);
+
+
+ mp_limb_t __gmpn_addmul_1 (mp_ptr, mp_srcptr, mp_size_t, mp_limb_t);
+
+
+
+ int __gmpn_cmp (mp_srcptr, mp_srcptr, mp_size_t) noexcept __attribute__ ((__pure__));
+
+
+
+
+ int __gmpn_zero_p (mp_srcptr, mp_size_t) noexcept __attribute__ ((__pure__));
+
+
+
+ void __gmpn_divexact_1 (mp_ptr, mp_srcptr, mp_size_t, mp_limb_t);
+
+
+
+
+
+ mp_limb_t __gmpn_divexact_by3c (mp_ptr, mp_srcptr, mp_size_t, mp_limb_t);
+
+
+
+
+
+ mp_limb_t __gmpn_divrem (mp_ptr, mp_size_t, mp_ptr, mp_size_t, mp_srcptr, mp_size_t);
+
+
+ mp_limb_t __gmpn_divrem_1 (mp_ptr, mp_size_t, mp_srcptr, mp_size_t, mp_limb_t);
+
+
+ mp_limb_t __gmpn_divrem_2 (mp_ptr, mp_size_t, mp_ptr, mp_size_t, mp_srcptr);
+
+
+ mp_limb_t __gmpn_div_qr_1 (mp_ptr, mp_limb_t *, mp_srcptr, mp_size_t, mp_limb_t);
+
+
+ mp_limb_t __gmpn_div_qr_2 (mp_ptr, mp_ptr, mp_srcptr, mp_size_t, mp_srcptr);
+
+
+ mp_size_t __gmpn_gcd (mp_ptr, mp_ptr, mp_size_t, mp_ptr, mp_size_t);
+
+
+ mp_limb_t __gmpn_gcd_11 (mp_limb_t, mp_limb_t) __attribute__ ((__pure__));
+
+
+ mp_limb_t __gmpn_gcd_1 (mp_srcptr, mp_size_t, mp_limb_t) __attribute__ ((__pure__));
+
+
+ mp_limb_t __gmpn_gcdext_1 (mp_limb_signed_t *, mp_limb_signed_t *, mp_limb_t, mp_limb_t);
+
+
+ mp_size_t __gmpn_gcdext (mp_ptr, mp_ptr, mp_size_t *, mp_ptr, mp_size_t, mp_ptr, mp_size_t);
+
+
+ size_t __gmpn_get_str (unsigned char *, int, mp_ptr, mp_size_t);
+
+
+ mp_bitcnt_t __gmpn_hamdist (mp_srcptr, mp_srcptr, mp_size_t) noexcept __attribute__ ((__pure__));
+
+
+ mp_limb_t __gmpn_lshift (mp_ptr, mp_srcptr, mp_size_t, unsigned int);
+
+
+ mp_limb_t __gmpn_mod_1 (mp_srcptr, mp_size_t, mp_limb_t) __attribute__ ((__pure__));
+
+
+ mp_limb_t __gmpn_mul (mp_ptr, mp_srcptr, mp_size_t, mp_srcptr, mp_size_t);
+
+
+ mp_limb_t __gmpn_mul_1 (mp_ptr, mp_srcptr, mp_size_t, mp_limb_t);
+
+
+ void __gmpn_mul_n (mp_ptr, mp_srcptr, mp_srcptr, mp_size_t);
+
+
+ void __gmpn_sqr (mp_ptr, mp_srcptr, mp_size_t);
+
+
+
+ mp_limb_t __gmpn_neg (mp_ptr, mp_srcptr, mp_size_t);
+
+
+
+ void __gmpn_com (mp_ptr, mp_srcptr, mp_size_t);
+
+
+ int __gmpn_perfect_square_p (mp_srcptr, mp_size_t) __attribute__ ((__pure__));
+
+
+ int __gmpn_perfect_power_p (mp_srcptr, mp_size_t) __attribute__ ((__pure__));
+
+
+ mp_bitcnt_t __gmpn_popcount (mp_srcptr, mp_size_t) noexcept __attribute__ ((__pure__));
+
+
+ mp_size_t __gmpn_pow_1 (mp_ptr, mp_srcptr, mp_size_t, mp_limb_t, mp_ptr);
+
+
+
+ mp_limb_t __gmpn_preinv_mod_1 (mp_srcptr, mp_size_t, mp_limb_t, mp_limb_t) __attribute__ ((__pure__));
+
+
+ void __gmpn_random (mp_ptr, mp_size_t);
+
+
+ void __gmpn_random2 (mp_ptr, mp_size_t);
+
+
+ mp_limb_t __gmpn_rshift (mp_ptr, mp_srcptr, mp_size_t, unsigned int);
+
+
+ mp_bitcnt_t __gmpn_scan0 (mp_srcptr, mp_bitcnt_t) __attribute__ ((__pure__));
+
+
+ mp_bitcnt_t __gmpn_scan1 (mp_srcptr, mp_bitcnt_t) __attribute__ ((__pure__));
+
+
+ mp_size_t __gmpn_set_str (mp_ptr, const unsigned char *, size_t, int);
+
+
+ size_t __gmpn_sizeinbase (mp_srcptr, mp_size_t, int);
+
+
+ mp_size_t __gmpn_sqrtrem (mp_ptr, mp_ptr, mp_srcptr, mp_size_t);
+
+
+
+ mp_limb_t __gmpn_sub (mp_ptr, mp_srcptr, mp_size_t, mp_srcptr, mp_size_t);
+
+
+
+
+ mp_limb_t __gmpn_sub_1 (mp_ptr, mp_srcptr, mp_size_t, mp_limb_t) noexcept;
+
+
+
+ mp_limb_t __gmpn_sub_n (mp_ptr, mp_srcptr, mp_srcptr, mp_size_t);
+
+
+ mp_limb_t __gmpn_submul_1 (mp_ptr, mp_srcptr, mp_size_t, mp_limb_t);
+
+
+ void __gmpn_tdiv_qr (mp_ptr, mp_ptr, mp_size_t, mp_srcptr, mp_size_t, mp_srcptr, mp_size_t);
+
+
+ void __gmpn_and_n (mp_ptr, mp_srcptr, mp_srcptr, mp_size_t);
+
+ void __gmpn_andn_n (mp_ptr, mp_srcptr, mp_srcptr, mp_size_t);
+
+ void __gmpn_nand_n (mp_ptr, mp_srcptr, mp_srcptr, mp_size_t);
+
+ void __gmpn_ior_n (mp_ptr, mp_srcptr, mp_srcptr, mp_size_t);
+
+ void __gmpn_iorn_n (mp_ptr, mp_srcptr, mp_srcptr, mp_size_t);
+
+ void __gmpn_nior_n (mp_ptr, mp_srcptr, mp_srcptr, mp_size_t);
+
+ void __gmpn_xor_n (mp_ptr, mp_srcptr, mp_srcptr, mp_size_t);
+
+ void __gmpn_xnor_n (mp_ptr, mp_srcptr, mp_srcptr, mp_size_t);
+
+
+ void __gmpn_copyi (mp_ptr, mp_srcptr, mp_size_t);
+
+ void __gmpn_copyd (mp_ptr, mp_srcptr, mp_size_t);
+
+ void __gmpn_zero (mp_ptr, mp_size_t);
+
+
+ mp_limb_t __gmpn_cnd_add_n (mp_limb_t, mp_ptr, mp_srcptr, mp_srcptr, mp_size_t);
+
+ mp_limb_t __gmpn_cnd_sub_n (mp_limb_t, mp_ptr, mp_srcptr, mp_srcptr, mp_size_t);
+
+
+ mp_limb_t __gmpn_sec_add_1 (mp_ptr, mp_srcptr, mp_size_t, mp_limb_t, mp_ptr);
+
+ mp_size_t __gmpn_sec_add_1_itch (mp_size_t) __attribute__ ((__pure__));
+
+
+ mp_limb_t __gmpn_sec_sub_1 (mp_ptr, mp_srcptr, mp_size_t, mp_limb_t, mp_ptr);
+
+ mp_size_t __gmpn_sec_sub_1_itch (mp_size_t) __attribute__ ((__pure__));
+
+
+ void __gmpn_cnd_swap (mp_limb_t, volatile mp_limb_t *, volatile mp_limb_t *, mp_size_t);
+
+
+ void __gmpn_sec_mul (mp_ptr, mp_srcptr, mp_size_t, mp_srcptr, mp_size_t, mp_ptr);
+
+ mp_size_t __gmpn_sec_mul_itch (mp_size_t, mp_size_t) __attribute__ ((__pure__));
+
+
+ void __gmpn_sec_sqr (mp_ptr, mp_srcptr, mp_size_t, mp_ptr);
+
+ mp_size_t __gmpn_sec_sqr_itch (mp_size_t) __attribute__ ((__pure__));
+
+
+ void __gmpn_sec_powm (mp_ptr, mp_srcptr, mp_size_t, mp_srcptr, mp_bitcnt_t, mp_srcptr, mp_size_t, mp_ptr);
+
+ mp_size_t __gmpn_sec_powm_itch (mp_size_t, mp_bitcnt_t, mp_size_t) __attribute__ ((__pure__));
+
+
+ void __gmpn_sec_tabselect (volatile mp_limb_t *, volatile const mp_limb_t *, mp_size_t, mp_size_t, mp_size_t);
+
+
+ mp_limb_t __gmpn_sec_div_qr (mp_ptr, mp_ptr, mp_size_t, mp_srcptr, mp_size_t, mp_ptr);
+
+ mp_size_t __gmpn_sec_div_qr_itch (mp_size_t, mp_size_t) __attribute__ ((__pure__));
+
+ void __gmpn_sec_div_r (mp_ptr, mp_size_t, mp_srcptr, mp_size_t, mp_ptr);
+
+ mp_size_t __gmpn_sec_div_r_itch (mp_size_t, mp_size_t) __attribute__ ((__pure__));
+
+
+ int __gmpn_sec_invert (mp_ptr, mp_ptr, mp_srcptr, mp_size_t, mp_bitcnt_t, mp_ptr);
+
+ mp_size_t __gmpn_sec_invert_itch (mp_size_t) __attribute__ ((__pure__));
+# 1714 "/usr/include/x86_64-linux-gnu/gmp.h"
+extern __inline__ __attribute__ ((__gnu_inline__)) void
+__gmpz_abs (mpz_ptr __gmp_w, mpz_srcptr __gmp_u)
+{
+  if (__gmp_w != __gmp_u)
+    __gmpz_set (__gmp_w, __gmp_u);
+  __gmp_w->_mp_size = ((__gmp_w->_mp_size) >= 0 ? (__gmp_w->_mp_size) : -(__gmp_w->_mp_size));
+}
+# 1738 "/usr/include/x86_64-linux-gnu/gmp.h"
+extern __inline__ __attribute__ ((__gnu_inline__))
+
+int
+__gmpz_fits_uint_p (mpz_srcptr __gmp_z) noexcept
+{
+  mp_size_t __gmp_n = __gmp_z->_mp_size; mp_ptr __gmp_p = __gmp_z->_mp_d; return (__gmp_n == 0 || (__gmp_n == 1 && __gmp_p[0] <= 
+# 1743 "/usr/include/x86_64-linux-gnu/gmp.h" 3 4
+ (0x7fffffff * 2U + 1U)
+# 1743 "/usr/include/x86_64-linux-gnu/gmp.h"
+ ));;
+}
+
+
+
+
+extern __inline__ __attribute__ ((__gnu_inline__))
+
+int
+__gmpz_fits_ulong_p (mpz_srcptr __gmp_z) noexcept
+{
+  mp_size_t __gmp_n = __gmp_z->_mp_size; mp_ptr __gmp_p = __gmp_z->_mp_d; return (__gmp_n == 0 || (__gmp_n == 1 && __gmp_p[0] <= 
+# 1754 "/usr/include/x86_64-linux-gnu/gmp.h" 3 4
+ (0x7fffffffffffffffL * 2UL + 1UL)
+# 1754 "/usr/include/x86_64-linux-gnu/gmp.h"
+ ));;
+}
+
+
+
+
+extern __inline__ __attribute__ ((__gnu_inline__))
+
+int
+__gmpz_fits_ushort_p (mpz_srcptr __gmp_z) noexcept
+{
+  mp_size_t __gmp_n = __gmp_z->_mp_size; mp_ptr __gmp_p = __gmp_z->_mp_d; return (__gmp_n == 0 || (__gmp_n == 1 && __gmp_p[0] <= 
+# 1765 "/usr/include/x86_64-linux-gnu/gmp.h" 3 4
+ (0x7fff * 2 + 1)
+# 1765 "/usr/include/x86_64-linux-gnu/gmp.h"
+ ));;
+}
+
+
+
+
+extern __inline__ __attribute__ ((__gnu_inline__))
+
+unsigned long
+__gmpz_get_ui (mpz_srcptr __gmp_z) noexcept
+{
+  mp_ptr __gmp_p = __gmp_z->_mp_d;
+  mp_size_t __gmp_n = __gmp_z->_mp_size;
+  mp_limb_t __gmp_l = __gmp_p[0];
+
+
+
+
+
+
+  return (__gmp_n != 0 ? __gmp_l : 0);
+# 1794 "/usr/include/x86_64-linux-gnu/gmp.h"
+}
+
+
+
+
+extern __inline__ __attribute__ ((__gnu_inline__))
+
+mp_limb_t
+__gmpz_getlimbn (mpz_srcptr __gmp_z, mp_size_t __gmp_n) noexcept
+{
+  mp_limb_t __gmp_result = 0;
+  if (__builtin_expect ((__gmp_n >= 0 && __gmp_n < ((__gmp_z->_mp_size) >= 0 ? (__gmp_z->_mp_size) : -(__gmp_z->_mp_size))) != 0, 1))
+    __gmp_result = __gmp_z->_mp_d[__gmp_n];
+  return __gmp_result;
+}
+
+
+
+extern __inline__ __attribute__ ((__gnu_inline__)) void
+__gmpz_neg (mpz_ptr __gmp_w, mpz_srcptr __gmp_u)
+{
+  if (__gmp_w != __gmp_u)
+    __gmpz_set (__gmp_w, __gmp_u);
+  __gmp_w->_mp_size = - __gmp_w->_mp_size;
+}
+
+
+
+
+extern __inline__ __attribute__ ((__gnu_inline__))
+
+int
+__gmpz_perfect_square_p (mpz_srcptr __gmp_a)
+{
+  mp_size_t __gmp_asize;
+  int __gmp_result;
+
+  __gmp_asize = __gmp_a->_mp_size;
+  __gmp_result = (__gmp_asize >= 0);
+  if (__builtin_expect ((__gmp_asize > 0) != 0, 1))
+    __gmp_result = __gmpn_perfect_square_p (__gmp_a->_mp_d, __gmp_asize);
+  return __gmp_result;
+}
+
+
+
+
+extern __inline__ __attribute__ ((__gnu_inline__))
+
+mp_bitcnt_t
+__gmpz_popcount (mpz_srcptr __gmp_u) noexcept
+{
+  mp_size_t __gmp_usize;
+  mp_bitcnt_t __gmp_result;
+
+  __gmp_usize = __gmp_u->_mp_size;
+  __gmp_result = (__gmp_usize < 0 ? ~ (static_cast<mp_bitcnt_t> (0)) : (static_cast<mp_bitcnt_t> (0)));
+  if (__builtin_expect ((__gmp_usize > 0) != 0, 1))
+    __gmp_result = __gmpn_popcount (__gmp_u->_mp_d, __gmp_usize);
+  return __gmp_result;
+}
+
+
+
+
+extern __inline__ __attribute__ ((__gnu_inline__))
+
+void
+__gmpz_set_q (mpz_ptr __gmp_w, mpq_srcptr __gmp_u)
+{
+  __gmpz_tdiv_q (__gmp_w, (&((__gmp_u)->_mp_num)), (&((__gmp_u)->_mp_den)));
+}
+
+
+
+
+extern __inline__ __attribute__ ((__gnu_inline__))
+
+size_t
+__gmpz_size (mpz_srcptr __gmp_z) noexcept
+{
+  return ((__gmp_z->_mp_size) >= 0 ? (__gmp_z->_mp_size) : -(__gmp_z->_mp_size));
+}
+
+
+
+
+
+
+extern __inline__ __attribute__ ((__gnu_inline__)) void
+__gmpq_abs (mpq_ptr __gmp_w, mpq_srcptr __gmp_u)
+{
+  if (__gmp_w != __gmp_u)
+    __gmpq_set (__gmp_w, __gmp_u);
+  __gmp_w->_mp_num._mp_size = ((__gmp_w->_mp_num._mp_size) >= 0 ? (__gmp_w->_mp_num._mp_size) : -(__gmp_w->_mp_num._mp_size));
+}
+
+
+
+extern __inline__ __attribute__ ((__gnu_inline__)) void
+__gmpq_neg (mpq_ptr __gmp_w, mpq_srcptr __gmp_u)
+{
+  if (__gmp_w != __gmp_u)
+    __gmpq_set (__gmp_w, __gmp_u);
+  __gmp_w->_mp_num._mp_size = - __gmp_w->_mp_num._mp_size;
+}
+# 2136 "/usr/include/x86_64-linux-gnu/gmp.h"
+extern __inline__ __attribute__ ((__gnu_inline__))
+
+mp_limb_t
+__gmpn_add (mp_ptr __gmp_wp, mp_srcptr __gmp_xp, mp_size_t __gmp_xsize, mp_srcptr __gmp_yp, mp_size_t __gmp_ysize)
+{
+  mp_limb_t __gmp_c;
+  do { mp_size_t __gmp_i; mp_limb_t __gmp_x; __gmp_i = (__gmp_ysize); if (__gmp_i != 0) { if (__gmpn_add_n (__gmp_wp, __gmp_xp, __gmp_yp, __gmp_i)) { do { if (__gmp_i >= (__gmp_xsize)) { (__gmp_c) = 1; goto __gmp_done; } __gmp_x = (__gmp_xp)[__gmp_i]; } while ((((__gmp_wp)[__gmp_i++] = (__gmp_x + 1) & ((~ (static_cast<mp_limb_t> (0))) >> 0)) == 0)); } } if ((__gmp_wp) != (__gmp_xp)) do { mp_size_t __gmp_j; ; for (__gmp_j = (__gmp_i); __gmp_j < (__gmp_xsize); __gmp_j++) (__gmp_wp)[__gmp_j] = (__gmp_xp)[__gmp_j]; } while (0); (__gmp_c) = 0; __gmp_done: ; } while (0);
+  return __gmp_c;
+}
+
+
+
+
+extern __inline__ __attribute__ ((__gnu_inline__))
+
+mp_limb_t
+__gmpn_add_1 (mp_ptr __gmp_dst, mp_srcptr __gmp_src, mp_size_t __gmp_size, mp_limb_t __gmp_n) noexcept
+{
+  mp_limb_t __gmp_c;
+  do { mp_size_t __gmp_i; mp_limb_t __gmp_x, __gmp_r; __gmp_x = (__gmp_src)[0]; __gmp_r = __gmp_x + (__gmp_n); (__gmp_dst)[0] = __gmp_r; if (((__gmp_r) < ((__gmp_n)))) { (__gmp_c) = 1; for (__gmp_i = 1; __gmp_i < (__gmp_size);) { __gmp_x = (__gmp_src)[__gmp_i]; __gmp_r = __gmp_x + 1; (__gmp_dst)[__gmp_i] = __gmp_r; ++__gmp_i; if (!((__gmp_r) < (1))) { if ((__gmp_src) != (__gmp_dst)) do { mp_size_t __gmp_j; ; for (__gmp_j = (__gmp_i); __gmp_j < (__gmp_size); __gmp_j++) (__gmp_dst)[__gmp_j] = (__gmp_src)[__gmp_j]; } while (0); (__gmp_c) = 0; break; } } } else { if ((__gmp_src) != (__gmp_dst)) do { mp_size_t __gmp_j; ; for (__gmp_j = (1); __gmp_j < (__gmp_size); __gmp_j++) (__gmp_dst)[__gmp_j] = (__gmp_src)[__gmp_j]; } while (0); (__gmp_c) = 0; } } while (0);
+  return __gmp_c;
+}
+
+
+
+
+extern __inline__ __attribute__ ((__gnu_inline__))
+
+int
+__gmpn_cmp (mp_srcptr __gmp_xp, mp_srcptr __gmp_yp, mp_size_t __gmp_size) noexcept
+{
+  int __gmp_result;
+  do { mp_size_t __gmp_i; mp_limb_t __gmp_x, __gmp_y; (__gmp_result) = 0; __gmp_i = (__gmp_size); while (--__gmp_i >= 0) { __gmp_x = (__gmp_xp)[__gmp_i]; __gmp_y = (__gmp_yp)[__gmp_i]; if (__gmp_x != __gmp_y) { (__gmp_result) = (__gmp_x > __gmp_y ? 1 : -1); break; } } } while (0);
+  return __gmp_result;
+}
+
+
+
+
+extern __inline__ __attribute__ ((__gnu_inline__))
+
+int
+__gmpn_zero_p (mp_srcptr __gmp_p, mp_size_t __gmp_n) noexcept
+{
+
+    do {
+      if (__gmp_p[--__gmp_n] != 0)
+ return 0;
+    } while (__gmp_n != 0);
+  return 1;
+}
+
+
+
+
+extern __inline__ __attribute__ ((__gnu_inline__))
+
+mp_limb_t
+__gmpn_sub (mp_ptr __gmp_wp, mp_srcptr __gmp_xp, mp_size_t __gmp_xsize, mp_srcptr __gmp_yp, mp_size_t __gmp_ysize)
+{
+  mp_limb_t __gmp_c;
+  do { mp_size_t __gmp_i; mp_limb_t __gmp_x; __gmp_i = (__gmp_ysize); if (__gmp_i != 0) { if (__gmpn_sub_n (__gmp_wp, __gmp_xp, __gmp_yp, __gmp_i)) { do { if (__gmp_i >= (__gmp_xsize)) { (__gmp_c) = 1; goto __gmp_done; } __gmp_x = (__gmp_xp)[__gmp_i]; } while ((((__gmp_wp)[__gmp_i++] = (__gmp_x - 1) & ((~ (static_cast<mp_limb_t> (0))) >> 0)), __gmp_x == 0)); } } if ((__gmp_wp) != (__gmp_xp)) do { mp_size_t __gmp_j; ; for (__gmp_j = (__gmp_i); __gmp_j < (__gmp_xsize); __gmp_j++) (__gmp_wp)[__gmp_j] = (__gmp_xp)[__gmp_j]; } while (0); (__gmp_c) = 0; __gmp_done: ; } while (0);
+  return __gmp_c;
+}
+
+
+
+
+extern __inline__ __attribute__ ((__gnu_inline__))
+
+mp_limb_t
+__gmpn_sub_1 (mp_ptr __gmp_dst, mp_srcptr __gmp_src, mp_size_t __gmp_size, mp_limb_t __gmp_n) noexcept
+{
+  mp_limb_t __gmp_c;
+  do { mp_size_t __gmp_i; mp_limb_t __gmp_x, __gmp_r; __gmp_x = (__gmp_src)[0]; __gmp_r = __gmp_x - (__gmp_n); (__gmp_dst)[0] = __gmp_r; if (((__gmp_x) < ((__gmp_n)))) { (__gmp_c) = 1; for (__gmp_i = 1; __gmp_i < (__gmp_size);) { __gmp_x = (__gmp_src)[__gmp_i]; __gmp_r = __gmp_x - 1; (__gmp_dst)[__gmp_i] = __gmp_r; ++__gmp_i; if (!((__gmp_x) < (1))) { if ((__gmp_src) != (__gmp_dst)) do { mp_size_t __gmp_j; ; for (__gmp_j = (__gmp_i); __gmp_j < (__gmp_size); __gmp_j++) (__gmp_dst)[__gmp_j] = (__gmp_src)[__gmp_j]; } while (0); (__gmp_c) = 0; break; } } } else { if ((__gmp_src) != (__gmp_dst)) do { mp_size_t __gmp_j; ; for (__gmp_j = (1); __gmp_j < (__gmp_size); __gmp_j++) (__gmp_dst)[__gmp_j] = (__gmp_src)[__gmp_j]; } while (0); (__gmp_c) = 0; } } while (0);
+  return __gmp_c;
+}
+
+
+
+
+extern __inline__ __attribute__ ((__gnu_inline__))
+
+mp_limb_t
+__gmpn_neg (mp_ptr __gmp_rp, mp_srcptr __gmp_up, mp_size_t __gmp_n)
+{
+  while (*__gmp_up == 0)
+    {
+      *__gmp_rp = 0;
+      if (!--__gmp_n)
+ return 0;
+      ++__gmp_up; ++__gmp_rp;
+    }
+
+  *__gmp_rp = (- *__gmp_up) & ((~ (static_cast<mp_limb_t> (0))) >> 0);
+
+  if (--__gmp_n)
+    __gmpn_com (++__gmp_rp, ++__gmp_up, __gmp_n);
+
+  return 1;
+}
+
+
+
+}
+# 2285 "/usr/include/x86_64-linux-gnu/gmp.h"
+ std::ostream& operator<< (std::ostream &, mpz_srcptr);
+ std::ostream& operator<< (std::ostream &, mpq_srcptr);
+ std::ostream& operator<< (std::ostream &, mpf_srcptr);
+ std::istream& operator>> (std::istream &, mpz_ptr);
+ std::istream& operator>> (std::istream &, mpq_ptr);
+ std::istream& operator>> (std::istream &, mpf_ptr);
+# 2316 "/usr/include/x86_64-linux-gnu/gmp.h"
+enum
+{
+  GMP_ERROR_NONE = 0,
+  GMP_ERROR_UNSUPPORTED_ARGUMENT = 1,
+  GMP_ERROR_DIVISION_BY_ZERO = 2,
+  GMP_ERROR_SQRT_OF_NEGATIVE = 4,
+  GMP_ERROR_INVALID_ARGUMENT = 8
+};
+# 4 "/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma/userdma.h" 2
+
+
+
+# 1 "/tools/Xilinx/Vitis_HLS/2022.1/include/mpfr.h" 1
+# 74 "/tools/Xilinx/Vitis_HLS/2022.1/include/mpfr.h"
+typedef void mpfr_void;
+typedef int mpfr_int;
+typedef unsigned int mpfr_uint;
+typedef long mpfr_long;
+typedef unsigned long mpfr_ulong;
+typedef size_t mpfr_size_t;
+# 96 "/tools/Xilinx/Vitis_HLS/2022.1/include/mpfr.h"
+typedef enum {
+  MPFR_RNDN=0,
+  MPFR_RNDZ,
+  MPFR_RNDU,
+  MPFR_RNDD,
+  MPFR_RNDA,
+  MPFR_RNDF,
+  MPFR_RNDNA=-1
+} mpfr_rnd_t;
+# 131 "/tools/Xilinx/Vitis_HLS/2022.1/include/mpfr.h"
+typedef long mpfr_prec_t;
+typedef unsigned long mpfr_uprec_t;
+# 144 "/tools/Xilinx/Vitis_HLS/2022.1/include/mpfr.h"
+typedef int mpfr_sign_t;
+
+
+typedef mp_exp_t mpfr_exp_t;
+
+
+
+
+
+
+typedef struct {
+  mpfr_prec_t _mpfr_prec;
+  mpfr_sign_t _mpfr_sign;
+  mpfr_exp_t _mpfr_exp;
+  mp_limb_t *_mpfr_d;
+} __mpfr_struct;
+# 180 "/tools/Xilinx/Vitis_HLS/2022.1/include/mpfr.h"
+typedef __mpfr_struct mpfr_t[1];
+typedef __mpfr_struct *mpfr_ptr;
+typedef const __mpfr_struct *mpfr_srcptr;
+# 193 "/tools/Xilinx/Vitis_HLS/2022.1/include/mpfr.h"
+typedef enum {
+  MPFR_NAN_KIND = 0,
+  MPFR_INF_KIND = 1, MPFR_ZERO_KIND = 2, MPFR_REGULAR_KIND = 3
+} mpfr_kind_t;
+# 242 "/tools/Xilinx/Vitis_HLS/2022.1/include/mpfr.h"
+extern "C" {
+
+
+ const char * mpfr_get_version (void);
+ const char * mpfr_get_patches (void);
+ int mpfr_buildopt_tls_p (void);
+ int mpfr_buildopt_decimal_p (void);
+
+ mpfr_exp_t mpfr_get_emin (void);
+ int mpfr_set_emin (mpfr_exp_t);
+ mpfr_exp_t mpfr_get_emin_min (void);
+ mpfr_exp_t mpfr_get_emin_max (void);
+ mpfr_exp_t mpfr_get_emax (void);
+ int mpfr_set_emax (mpfr_exp_t);
+ mpfr_exp_t mpfr_get_emax_min (void);
+ mpfr_exp_t mpfr_get_emax_max (void);
+
+ void mpfr_set_default_rounding_mode (mpfr_rnd_t);
+ mpfr_rnd_t mpfr_get_default_rounding_mode (void);
+ const char *
+   mpfr_print_rnd_mode (mpfr_rnd_t);
+
+ void mpfr_clear_flags (void);
+ void mpfr_clear_underflow (void);
+ void mpfr_clear_overflow (void);
+ void mpfr_clear_nanflag (void);
+ void mpfr_clear_inexflag (void);
+ void mpfr_clear_erangeflag (void);
+
+ void mpfr_set_underflow (void);
+ void mpfr_set_overflow (void);
+ void mpfr_set_nanflag (void);
+ void mpfr_set_inexflag (void);
+ void mpfr_set_erangeflag (void);
+
+ int mpfr_underflow_p (void);
+ int mpfr_overflow_p (void);
+ int mpfr_nanflag_p (void);
+ int mpfr_inexflag_p (void);
+ int mpfr_erangeflag_p (void);
+
+ int
+  mpfr_check_range (mpfr_ptr, int, mpfr_rnd_t);
+
+ void mpfr_init2 (mpfr_ptr, mpfr_prec_t);
+ void mpfr_init (mpfr_ptr);
+ void mpfr_clear (mpfr_ptr);
+
+ void
+  mpfr_inits2 (mpfr_prec_t, mpfr_ptr, ...) __attribute__ ((sentinel));
+ void
+  mpfr_inits (mpfr_ptr, ...) __attribute__ ((sentinel));
+ void
+  mpfr_clears (mpfr_ptr, ...) __attribute__ ((sentinel));
+
+ int
+  mpfr_prec_round (mpfr_ptr, mpfr_prec_t, mpfr_rnd_t);
+ int
+  mpfr_can_round (mpfr_srcptr, mpfr_exp_t, mpfr_rnd_t, mpfr_rnd_t, mpfr_prec_t)
+                                            ;
+ mpfr_prec_t mpfr_min_prec (mpfr_srcptr);
+
+ mpfr_exp_t mpfr_get_exp (mpfr_srcptr);
+ int mpfr_set_exp (mpfr_ptr, mpfr_exp_t);
+ mpfr_prec_t mpfr_get_prec (mpfr_srcptr);
+ void mpfr_set_prec (mpfr_ptr, mpfr_prec_t);
+ void mpfr_set_prec_raw (mpfr_ptr, mpfr_prec_t);
+ void mpfr_set_default_prec (mpfr_prec_t);
+ mpfr_prec_t mpfr_get_default_prec (void);
+
+ int mpfr_set_d (mpfr_ptr, double, mpfr_rnd_t);
+ int mpfr_set_flt (mpfr_ptr, float, mpfr_rnd_t);
+
+
+
+
+ int
+  mpfr_set_ld (mpfr_ptr, long double, mpfr_rnd_t);
+ int
+  mpfr_set_z (mpfr_ptr, mpz_srcptr, mpfr_rnd_t);
+ int
+  mpfr_set_z_2exp (mpfr_ptr, mpz_srcptr, mpfr_exp_t, mpfr_rnd_t);
+ void mpfr_set_nan (mpfr_ptr);
+ void mpfr_set_inf (mpfr_ptr, int);
+ void mpfr_set_zero (mpfr_ptr, int);
+ int
+  mpfr_set_f (mpfr_ptr, mpf_srcptr, mpfr_rnd_t);
+ int
+  mpfr_get_f (mpf_ptr, mpfr_srcptr, mpfr_rnd_t);
+ int mpfr_set_si (mpfr_ptr, long, mpfr_rnd_t);
+ int
+  mpfr_set_ui (mpfr_ptr, unsigned long, mpfr_rnd_t);
+ int
+  mpfr_set_si_2exp (mpfr_ptr, long, mpfr_exp_t, mpfr_rnd_t);
+ int
+  mpfr_set_ui_2exp (mpfr_ptr,unsigned long,mpfr_exp_t,mpfr_rnd_t);
+ int
+  mpfr_set_q (mpfr_ptr, mpq_srcptr, mpfr_rnd_t);
+ int
+  mpfr_set_str (mpfr_ptr, const char *, int, mpfr_rnd_t);
+ int
+  mpfr_init_set_str (mpfr_ptr, const char *, int, mpfr_rnd_t)
+                                              ;
+ int
+  mpfr_set4 (mpfr_ptr, mpfr_srcptr, mpfr_rnd_t, int);
+ int
+  mpfr_abs (mpfr_ptr, mpfr_srcptr, mpfr_rnd_t);
+ int
+  mpfr_set (mpfr_ptr, mpfr_srcptr, mpfr_rnd_t);
+ int mpfr_neg (mpfr_ptr, mpfr_srcptr, mpfr_rnd_t);
+ int mpfr_signbit (mpfr_srcptr);
+ int
+  mpfr_setsign (mpfr_ptr, mpfr_srcptr, int, mpfr_rnd_t);
+ int
+  mpfr_copysign (mpfr_ptr, mpfr_srcptr, mpfr_srcptr, mpfr_rnd_t);
+# 375 "/tools/Xilinx/Vitis_HLS/2022.1/include/mpfr.h"
+ mpfr_exp_t mpfr_get_z_2exp (mpz_ptr, mpfr_srcptr);
+ float mpfr_get_flt (mpfr_srcptr, mpfr_rnd_t);
+ double mpfr_get_d (mpfr_srcptr, mpfr_rnd_t);
+
+
+
+
+ long double mpfr_get_ld (mpfr_srcptr, mpfr_rnd_t)
+                                                                  ;
+ double mpfr_get_d1 (mpfr_srcptr);
+ double mpfr_get_d_2exp (long*, mpfr_srcptr, mpfr_rnd_t)
+                                                                 ;
+ long double mpfr_get_ld_2exp (long*, mpfr_srcptr, mpfr_rnd_t)
+                                                                       ;
+ long mpfr_get_si (mpfr_srcptr, mpfr_rnd_t);
+ unsigned long mpfr_get_ui (mpfr_srcptr, mpfr_rnd_t)
+                                                                    ;
+ char*mpfr_get_str (char*, mpfr_exp_t*, int, size_t, mpfr_srcptr, mpfr_rnd_t)
+                                                                         ;
+ int mpfr_get_z (mpz_ptr z, mpfr_srcptr f, mpfr_rnd_t)
+                                                         ;
+
+ void mpfr_free_str (char *);
+
+ int mpfr_urandom (mpfr_ptr, gmp_randstate_t, mpfr_rnd_t)
+                                                           ;
+ int mpfr_urandomb (mpfr_ptr, gmp_randstate_t);
+
+ void mpfr_nextabove (mpfr_ptr);
+ void mpfr_nextbelow (mpfr_ptr);
+ void mpfr_nexttoward (mpfr_ptr, mpfr_srcptr);
+
+
+
+
+ size_t __gmpfr_inp_str (mpfr_ptr, FILE*, int, mpfr_rnd_t)
+                                                              ;
+ size_t __gmpfr_out_str (FILE*, int, size_t, mpfr_srcptr, mpfr_rnd_t)
+                                                                           ;
+
+ int __gmpfr_fprintf (FILE*, const char*, ...)
+                                                    ;
+
+ int mpfr_printf (const char*, ...);
+ int mpfr_asprintf (char**, const char*, ...)
+                                                     ;
+ int mpfr_sprintf (char*, const char*, ...)
+                                                    ;
+ int mpfr_snprintf (char*, size_t, const char*, ...)
+                                                                        ;
+# 445 "/tools/Xilinx/Vitis_HLS/2022.1/include/mpfr.h"
+ int mpfr_pow (mpfr_ptr, mpfr_srcptr, mpfr_srcptr, mpfr_rnd_t)
+                                                                    ;
+ int mpfr_pow_si (mpfr_ptr, mpfr_srcptr, long int, mpfr_rnd_t)
+                                                                    ;
+ int mpfr_pow_ui (mpfr_ptr, mpfr_srcptr, unsigned long int, mpfr_rnd_t)
+                                                                             ;
+ int mpfr_ui_pow_ui (mpfr_ptr, unsigned long int, unsigned long int, mpfr_rnd_t)
+                                                                            ;
+ int mpfr_ui_pow (mpfr_ptr, unsigned long int, mpfr_srcptr, mpfr_rnd_t)
+                                                                       ;
+ int mpfr_pow_z (mpfr_ptr, mpfr_srcptr, mpz_srcptr, mpfr_rnd_t)
+                                                                     ;
+
+ int mpfr_sqrt (mpfr_ptr, mpfr_srcptr, mpfr_rnd_t)
+                                                        ;
+ int mpfr_sqrt_ui (mpfr_ptr, unsigned long, mpfr_rnd_t)
+                                                           ;
+ int mpfr_rec_sqrt (mpfr_ptr, mpfr_srcptr, mpfr_rnd_t)
+                                                            ;
+
+ int mpfr_add (mpfr_ptr, mpfr_srcptr, mpfr_srcptr, mpfr_rnd_t)
+                                                                    ;
+ int mpfr_sub (mpfr_ptr, mpfr_srcptr, mpfr_srcptr, mpfr_rnd_t)
+                                                                    ;
+ int mpfr_mul (mpfr_ptr, mpfr_srcptr, mpfr_srcptr, mpfr_rnd_t)
+                                                                    ;
+ int mpfr_div (mpfr_ptr, mpfr_srcptr, mpfr_srcptr, mpfr_rnd_t)
+                                                                    ;
+
+ int mpfr_add_ui (mpfr_ptr, mpfr_srcptr, unsigned long, mpfr_rnd_t)
+                                                                         ;
+ int mpfr_sub_ui (mpfr_ptr, mpfr_srcptr, unsigned long, mpfr_rnd_t)
+                                                                         ;
+ int mpfr_ui_sub (mpfr_ptr, unsigned long, mpfr_srcptr, mpfr_rnd_t)
+                                                                       ;
+ int mpfr_mul_ui (mpfr_ptr, mpfr_srcptr, unsigned long, mpfr_rnd_t)
+                                                                         ;
+ int mpfr_div_ui (mpfr_ptr, mpfr_srcptr, unsigned long, mpfr_rnd_t)
+                                                                         ;
+ int mpfr_ui_div (mpfr_ptr, unsigned long, mpfr_srcptr, mpfr_rnd_t)
+                                                                       ;
+
+ int mpfr_add_si (mpfr_ptr, mpfr_srcptr, long int, mpfr_rnd_t)
+                                                                    ;
+ int mpfr_sub_si (mpfr_ptr, mpfr_srcptr, long int, mpfr_rnd_t)
+                                                                    ;
+ int mpfr_si_sub (mpfr_ptr, long int, mpfr_srcptr, mpfr_rnd_t)
+                                                                       ;
+ int mpfr_mul_si (mpfr_ptr, mpfr_srcptr, long int, mpfr_rnd_t)
+                                                                    ;
+ int mpfr_div_si (mpfr_ptr, mpfr_srcptr, long int, mpfr_rnd_t)
+                                                                    ;
+ int mpfr_si_div (mpfr_ptr, long int, mpfr_srcptr, mpfr_rnd_t)
+                                                                       ;
+
+ int mpfr_add_d (mpfr_ptr, mpfr_srcptr, double, mpfr_rnd_t)
+                                                                  ;
+ int mpfr_sub_d (mpfr_ptr, mpfr_srcptr, double, mpfr_rnd_t)
+                                                                  ;
+ int mpfr_d_sub (mpfr_ptr, double, mpfr_srcptr, mpfr_rnd_t)
+                                                                       ;
+ int mpfr_mul_d (mpfr_ptr, mpfr_srcptr, double, mpfr_rnd_t)
+                                                                  ;
+ int mpfr_div_d (mpfr_ptr, mpfr_srcptr, double, mpfr_rnd_t)
+                                                                  ;
+ int mpfr_d_div (mpfr_ptr, double, mpfr_srcptr, mpfr_rnd_t)
+                                                                       ;
+
+ int mpfr_sqr (mpfr_ptr, mpfr_srcptr,mpfr_rnd_t);
+
+ int mpfr_const_pi (mpfr_ptr, mpfr_rnd_t);
+ int mpfr_const_log2 (mpfr_ptr, mpfr_rnd_t);
+ int mpfr_const_euler (mpfr_ptr, mpfr_rnd_t);
+ int mpfr_const_catalan (mpfr_ptr, mpfr_rnd_t);
+
+ int mpfr_agm (mpfr_ptr, mpfr_srcptr, mpfr_srcptr, mpfr_rnd_t)
+                                                       ;
+
+ int mpfr_log (mpfr_ptr, mpfr_srcptr,mpfr_rnd_t);
+ int mpfr_log2 (mpfr_ptr,mpfr_srcptr,mpfr_rnd_t);
+ int mpfr_log10 (mpfr_ptr, mpfr_srcptr, mpfr_rnd_t)
+                                                         ;
+ int mpfr_log1p (mpfr_ptr, mpfr_srcptr, mpfr_rnd_t)
+                                                         ;
+
+ int mpfr_exp (mpfr_ptr, mpfr_srcptr,mpfr_rnd_t);
+ int mpfr_exp2 (mpfr_ptr,mpfr_srcptr,mpfr_rnd_t);
+ int mpfr_exp10 (mpfr_ptr, mpfr_srcptr, mpfr_rnd_t)
+                                                         ;
+ int mpfr_expm1 (mpfr_ptr, mpfr_srcptr, mpfr_rnd_t)
+                                                         ;
+ int mpfr_eint (mpfr_ptr,mpfr_srcptr,mpfr_rnd_t);
+ int mpfr_li2 (mpfr_ptr,mpfr_srcptr,mpfr_rnd_t);
+
+ int mpfr_cmp (mpfr_srcptr, mpfr_srcptr);
+ int mpfr_cmp3 (mpfr_srcptr, mpfr_srcptr, int);
+ int mpfr_cmp_d (mpfr_srcptr, double);
+ int mpfr_cmp_ld (mpfr_srcptr, long double);
+ int mpfr_cmpabs (mpfr_srcptr, mpfr_srcptr);
+ int mpfr_cmp_ui (mpfr_srcptr, unsigned long);
+ int mpfr_cmp_si (mpfr_srcptr, long);
+ int mpfr_cmp_ui_2exp (mpfr_srcptr, unsigned long, mpfr_exp_t)
+                                                               ;
+ int mpfr_cmp_si_2exp (mpfr_srcptr, long, mpfr_exp_t)
+                                                               ;
+ void mpfr_reldiff (mpfr_ptr, mpfr_srcptr, mpfr_srcptr, mpfr_rnd_t)
+                                                                         ;
+ int mpfr_eq (mpfr_srcptr, mpfr_srcptr, unsigned long)
+                                                        ;
+ int mpfr_sgn (mpfr_srcptr);
+
+ int mpfr_mul_2exp (mpfr_ptr, mpfr_srcptr, unsigned long, mpfr_rnd_t)
+                                                                           ;
+ int mpfr_div_2exp (mpfr_ptr, mpfr_srcptr, unsigned long, mpfr_rnd_t)
+                                                                           ;
+ int mpfr_mul_2ui (mpfr_ptr, mpfr_srcptr, unsigned long, mpfr_rnd_t)
+                                                                          ;
+ int mpfr_div_2ui (mpfr_ptr, mpfr_srcptr, unsigned long, mpfr_rnd_t)
+                                                                          ;
+ int mpfr_mul_2si (mpfr_ptr, mpfr_srcptr, long, mpfr_rnd_t)
+                                                                 ;
+ int mpfr_div_2si (mpfr_ptr, mpfr_srcptr, long, mpfr_rnd_t)
+                                                                 ;
+
+ int mpfr_rint (mpfr_ptr,mpfr_srcptr, mpfr_rnd_t);
+ int mpfr_round (mpfr_ptr, mpfr_srcptr);
+ int mpfr_trunc (mpfr_ptr, mpfr_srcptr);
+ int mpfr_ceil (mpfr_ptr, mpfr_srcptr);
+ int mpfr_floor (mpfr_ptr, mpfr_srcptr);
+ int mpfr_rint_round (mpfr_ptr, mpfr_srcptr, mpfr_rnd_t)
+                                                              ;
+ int mpfr_rint_trunc (mpfr_ptr, mpfr_srcptr, mpfr_rnd_t)
+                                                              ;
+ int mpfr_rint_ceil (mpfr_ptr, mpfr_srcptr, mpfr_rnd_t)
+                                                             ;
+ int mpfr_rint_floor (mpfr_ptr, mpfr_srcptr, mpfr_rnd_t)
+                                                              ;
+ int mpfr_frac (mpfr_ptr,mpfr_srcptr,mpfr_rnd_t);
+ int mpfr_modf (mpfr_ptr, mpfr_ptr, mpfr_srcptr, mpfr_rnd_t)
+                                                              ;
+ int mpfr_remquo (mpfr_ptr, long*, mpfr_srcptr, mpfr_srcptr, mpfr_rnd_t)
+                                                                       ;
+ int mpfr_remainder (mpfr_ptr, mpfr_srcptr, mpfr_srcptr, mpfr_rnd_t)
+                                                                          ;
+ int mpfr_fmod (mpfr_ptr, mpfr_srcptr, mpfr_srcptr, mpfr_rnd_t)
+                                                                          ;
+
+ int mpfr_fits_ulong_p (mpfr_srcptr, mpfr_rnd_t);
+ int mpfr_fits_slong_p (mpfr_srcptr, mpfr_rnd_t);
+ int mpfr_fits_uint_p (mpfr_srcptr, mpfr_rnd_t);
+ int mpfr_fits_sint_p (mpfr_srcptr, mpfr_rnd_t);
+ int mpfr_fits_ushort_p (mpfr_srcptr, mpfr_rnd_t);
+ int mpfr_fits_sshort_p (mpfr_srcptr, mpfr_rnd_t);
+ int mpfr_fits_uintmax_p (mpfr_srcptr,mpfr_rnd_t);
+ int mpfr_fits_intmax_p (mpfr_srcptr, mpfr_rnd_t);
+
+ void mpfr_extract (mpz_ptr, mpfr_srcptr, unsigned int)
+                                                              ;
+ void mpfr_swap (mpfr_ptr, mpfr_ptr);
+ void mpfr_dump (mpfr_srcptr);
+
+ int mpfr_nan_p (mpfr_srcptr);
+ int mpfr_inf_p (mpfr_srcptr);
+ int mpfr_number_p (mpfr_srcptr);
+ int mpfr_integer_p (mpfr_srcptr);
+ int mpfr_zero_p (mpfr_srcptr);
+ int mpfr_regular_p (mpfr_srcptr);
+
+ int mpfr_greater_p (mpfr_srcptr, mpfr_srcptr);
+ int mpfr_greaterequal_p (mpfr_srcptr, mpfr_srcptr)
+                                                                   ;
+ int mpfr_less_p (mpfr_srcptr, mpfr_srcptr);
+ int mpfr_lessequal_p (mpfr_srcptr, mpfr_srcptr);
+ int mpfr_lessgreater_p (mpfr_srcptr,mpfr_srcptr);
+ int mpfr_equal_p (mpfr_srcptr, mpfr_srcptr);
+ int mpfr_unordered_p (mpfr_srcptr, mpfr_srcptr);
+
+ int mpfr_atanh (mpfr_ptr,mpfr_srcptr,mpfr_rnd_t);
+ int mpfr_acosh (mpfr_ptr,mpfr_srcptr,mpfr_rnd_t);
+ int mpfr_asinh (mpfr_ptr,mpfr_srcptr,mpfr_rnd_t);
+ int mpfr_cosh (mpfr_ptr,mpfr_srcptr, mpfr_rnd_t);
+ int mpfr_sinh (mpfr_ptr,mpfr_srcptr, mpfr_rnd_t);
+ int mpfr_tanh (mpfr_ptr,mpfr_srcptr, mpfr_rnd_t);
+ int mpfr_sinh_cosh (mpfr_ptr, mpfr_ptr, mpfr_srcptr, mpfr_rnd_t)
+                                                                        ;
+
+ int mpfr_sech (mpfr_ptr, mpfr_srcptr,mpfr_rnd_t);
+ int mpfr_csch (mpfr_ptr, mpfr_srcptr,mpfr_rnd_t);
+ int mpfr_coth (mpfr_ptr, mpfr_srcptr,mpfr_rnd_t);
+
+ int mpfr_acos (mpfr_ptr,mpfr_srcptr,mpfr_rnd_t);
+ int mpfr_asin (mpfr_ptr,mpfr_srcptr,mpfr_rnd_t);
+ int mpfr_atan (mpfr_ptr,mpfr_srcptr,mpfr_rnd_t);
+ int mpfr_sin (mpfr_ptr, mpfr_srcptr,mpfr_rnd_t);
+ int mpfr_sin_cos (mpfr_ptr, mpfr_ptr, mpfr_srcptr, mpfr_rnd_t)
+                                                                        ;
+ int mpfr_cos (mpfr_ptr, mpfr_srcptr,mpfr_rnd_t);
+ int mpfr_tan (mpfr_ptr, mpfr_srcptr,mpfr_rnd_t);
+ int mpfr_atan2 (mpfr_ptr,mpfr_srcptr,mpfr_srcptr, mpfr_rnd_t)
+                                                         ;
+ int mpfr_sec (mpfr_ptr, mpfr_srcptr,mpfr_rnd_t);
+ int mpfr_csc (mpfr_ptr, mpfr_srcptr,mpfr_rnd_t);
+ int mpfr_cot (mpfr_ptr, mpfr_srcptr,mpfr_rnd_t);
+
+ int mpfr_hypot (mpfr_ptr, mpfr_srcptr, mpfr_srcptr, mpfr_rnd_t)
+                                                                      ;
+ int mpfr_erf (mpfr_ptr, mpfr_srcptr,mpfr_rnd_t);
+ int mpfr_erfc (mpfr_ptr, mpfr_srcptr,mpfr_rnd_t);
+ int mpfr_cbrt (mpfr_ptr,mpfr_srcptr,mpfr_rnd_t);
+ int mpfr_root (mpfr_ptr,mpfr_srcptr,unsigned long,mpfr_rnd_t);
+ int mpfr_gamma (mpfr_ptr,mpfr_srcptr,mpfr_rnd_t);
+ int mpfr_lngamma (mpfr_ptr,mpfr_srcptr,mpfr_rnd_t);
+ int mpfr_lgamma (mpfr_ptr,int*,mpfr_srcptr,mpfr_rnd_t);
+ int mpfr_digamma (mpfr_ptr,mpfr_srcptr,mpfr_rnd_t);
+ int mpfr_zeta (mpfr_ptr,mpfr_srcptr,mpfr_rnd_t);
+ int mpfr_zeta_ui (mpfr_ptr,unsigned long,mpfr_rnd_t);
+ int mpfr_fac_ui (mpfr_ptr, unsigned long int, mpfr_rnd_t)
+                                                          ;
+ int mpfr_j0 (mpfr_ptr, mpfr_srcptr, mpfr_rnd_t);
+ int mpfr_j1 (mpfr_ptr, mpfr_srcptr, mpfr_rnd_t);
+ int mpfr_jn (mpfr_ptr, long, mpfr_srcptr, mpfr_rnd_t)
+                                                      ;
+ int mpfr_y0 (mpfr_ptr, mpfr_srcptr, mpfr_rnd_t);
+ int mpfr_y1 (mpfr_ptr, mpfr_srcptr, mpfr_rnd_t);
+ int mpfr_yn (mpfr_ptr, long, mpfr_srcptr, mpfr_rnd_t)
+                                                      ;
+
+ int mpfr_ai (mpfr_ptr, mpfr_srcptr, mpfr_rnd_t);
+
+ int mpfr_min (mpfr_ptr, mpfr_srcptr, mpfr_srcptr, mpfr_rnd_t)
+                                                       ;
+ int mpfr_max (mpfr_ptr, mpfr_srcptr, mpfr_srcptr, mpfr_rnd_t)
+                                                       ;
+ int mpfr_dim (mpfr_ptr, mpfr_srcptr, mpfr_srcptr, mpfr_rnd_t)
+                                                       ;
+
+ int mpfr_mul_z (mpfr_ptr, mpfr_srcptr, mpz_srcptr, mpfr_rnd_t)
+                                                                     ;
+ int mpfr_div_z (mpfr_ptr, mpfr_srcptr, mpz_srcptr, mpfr_rnd_t)
+                                                                     ;
+ int mpfr_add_z (mpfr_ptr, mpfr_srcptr, mpz_srcptr, mpfr_rnd_t)
+                                                                     ;
+ int mpfr_sub_z (mpfr_ptr, mpfr_srcptr, mpz_srcptr, mpfr_rnd_t)
+                                                                     ;
+ int mpfr_cmp_z (mpfr_srcptr, mpz_srcptr);
+
+ int mpfr_mul_q (mpfr_ptr, mpfr_srcptr, mpq_srcptr, mpfr_rnd_t)
+                                                                     ;
+ int mpfr_div_q (mpfr_ptr, mpfr_srcptr, mpq_srcptr, mpfr_rnd_t)
+                                                                     ;
+ int mpfr_add_q (mpfr_ptr, mpfr_srcptr, mpq_srcptr, mpfr_rnd_t)
+                                                                     ;
+ int mpfr_sub_q (mpfr_ptr, mpfr_srcptr, mpq_srcptr, mpfr_rnd_t)
+                                                                     ;
+ int mpfr_cmp_q (mpfr_srcptr, mpq_srcptr);
+
+ int mpfr_cmp_f (mpfr_srcptr, mpf_srcptr);
+
+ int mpfr_fma (mpfr_ptr, mpfr_srcptr, mpfr_srcptr, mpfr_srcptr, mpfr_rnd_t)
+                                                                    ;
+ int mpfr_fms (mpfr_ptr, mpfr_srcptr, mpfr_srcptr, mpfr_srcptr, mpfr_rnd_t)
+                                                                    ;
+ int mpfr_sum (mpfr_ptr, mpfr_ptr *const, unsigned long, mpfr_rnd_t)
+                                                                      ;
+
+ void mpfr_free_cache (void);
+
+ int mpfr_subnormalize (mpfr_ptr, int, mpfr_rnd_t)
+                                                                 ;
+
+ int mpfr_strtofr (mpfr_ptr, const char *, char **, int, mpfr_rnd_t)
+                                                                          ;
+
+ size_t mpfr_custom_get_size (mpfr_prec_t);
+ void mpfr_custom_init (void *, mpfr_prec_t);
+ void * mpfr_custom_get_significand (mpfr_srcptr);
+ mpfr_exp_t mpfr_custom_get_exp (mpfr_srcptr);
+ void mpfr_custom_move (mpfr_ptr, void *);
+ void mpfr_custom_init_set (mpfr_ptr, int, mpfr_exp_t, mpfr_prec_t, void *)
+                                                                              ;
+ int mpfr_custom_get_kind (mpfr_srcptr);
+
+
+}
+# 8 "/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma/userdma.h" 2
+
+# 1 "/tools/Xilinx/Vitis_HLS/2022.1/include/ap_int.h" 1
+# 56 "/tools/Xilinx/Vitis_HLS/2022.1/include/ap_int.h"
+# 1 "/tools/Xilinx/Vitis_HLS/2022.1/include/ap_common.h" 1
+# 87 "/tools/Xilinx/Vitis_HLS/2022.1/include/ap_common.h"
+# 1 "/tools/Xilinx/Vitis_HLS/2022.1/include/ap_decl.h" 1
+# 100 "/tools/Xilinx/Vitis_HLS/2022.1/include/ap_decl.h"
+enum ap_q_mode {
+  AP_RND,
+  AP_RND_ZERO,
+  AP_RND_MIN_INF,
+  AP_RND_INF,
+  AP_RND_CONV,
+  AP_TRN,
+  AP_TRN_ZERO,
+};
+# 122 "/tools/Xilinx/Vitis_HLS/2022.1/include/ap_decl.h"
+enum ap_o_mode {
+  AP_SAT,
+  AP_SAT_ZERO,
+  AP_SAT_SYM,
+  AP_WRAP,
+  AP_WRAP_SM,
+};
+# 179 "/tools/Xilinx/Vitis_HLS/2022.1/include/ap_decl.h"
+template <int _AP_W, bool _AP_S>
+struct ap_int_base;
+
+template <int _AP_W>
+struct ap_int;
+
+template <int _AP_W>
+struct ap_uint;
+
+template <int _AP_W, bool _AP_S>
+struct ap_range_ref;
+
+template <int _AP_W, bool _AP_S>
+struct ap_bit_ref;
+
+template <int _AP_W1, typename _AP_T1, int _AP_W2, typename _AP_T2>
+struct ap_concat_ref;
+
+template <int _AP_W, int _AP_I, bool _AP_S = true, ap_q_mode _AP_Q = AP_TRN,
+          ap_o_mode _AP_O = AP_WRAP, int _AP_N = 0>
+struct ap_fixed_base;
+
+template <int _AP_W, int _AP_I, ap_q_mode _AP_Q = AP_TRN,
+          ap_o_mode _AP_O = AP_WRAP, int _AP_N = 0>
+struct ap_fixed;
+
+template <int _AP_W, int _AP_I, ap_q_mode _AP_Q = AP_TRN,
+          ap_o_mode _AP_O = AP_WRAP, int _AP_N = 0>
+struct ap_ufixed;
+
+template <int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O,
+          int _AP_N>
+struct af_range_ref;
+
+template <int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O,
+          int _AP_N>
+struct af_bit_ref;
+
+
+enum BaseMode { AP_BIN = 2, AP_OCT = 8, AP_DEC = 10, AP_HEX = 16 };
+# 233 "/tools/Xilinx/Vitis_HLS/2022.1/include/ap_decl.h"
+typedef signed long long ap_slong;
+typedef unsigned long long ap_ulong;
+
+
+enum {
+  _AP_SIZE_char = 8,
+  _AP_SIZE_short = sizeof(short) * 8,
+  _AP_SIZE_int = sizeof(int) * 8,
+  _AP_SIZE_long = sizeof(long) * 8,
+  _AP_SIZE_ap_slong = sizeof(ap_slong) * 8
+};
+# 88 "/tools/Xilinx/Vitis_HLS/2022.1/include/ap_common.h" 2
+# 96 "/tools/Xilinx/Vitis_HLS/2022.1/include/ap_common.h"
+# 1 "/usr/include/assert.h" 1 3 4
+# 66 "/usr/include/assert.h" 3 4
+
+# 66 "/usr/include/assert.h" 3 4
+extern "C" {
+
+
+extern void __assert_fail (const char *__assertion, const char *__file,
+      unsigned int __line, const char *__function)
+     throw () __attribute__ ((__noreturn__));
+
+
+extern void __assert_perror_fail (int __errnum, const char *__file,
+      unsigned int __line, const char *__function)
+     throw () __attribute__ ((__noreturn__));
+
+
+
+
+extern void __assert (const char *__assertion, const char *__file, int __line)
+     throw () __attribute__ ((__noreturn__));
+
+
+}
+# 97 "/tools/Xilinx/Vitis_HLS/2022.1/include/ap_common.h" 2
+# 112 "/tools/Xilinx/Vitis_HLS/2022.1/include/ap_common.h"
 # 1 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/stdlib.h" 1 3
 # 36 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/stdlib.h" 3
 # 1 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cstdlib" 1 3
 # 39 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cstdlib" 3
        
 # 40 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cstdlib" 3
-
-# 1 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/x86_64-pc-linux-gnu/bits/c++config.h" 1 3
-# 236 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/x86_64-pc-linux-gnu/bits/c++config.h" 3
-namespace std
-{
-  typedef long unsigned int size_t;
-  typedef long int ptrdiff_t;
-
-
-  typedef decltype(nullptr) nullptr_t;
-
-}
-# 258 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/x86_64-pc-linux-gnu/bits/c++config.h" 3
-namespace std
-{
-  inline namespace __cxx11 __attribute__((__abi_tag__ ("cxx11"))) { }
-}
-namespace __gnu_cxx
-{
-  inline namespace __cxx11 __attribute__((__abi_tag__ ("cxx11"))) { }
-}
-# 508 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/x86_64-pc-linux-gnu/bits/c++config.h" 3
-# 1 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/x86_64-pc-linux-gnu/bits/os_defines.h" 1 3
-# 509 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/x86_64-pc-linux-gnu/bits/c++config.h" 2 3
-
-
-# 1 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/x86_64-pc-linux-gnu/bits/cpu_defines.h" 1 3
-# 512 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/x86_64-pc-linux-gnu/bits/c++config.h" 2 3
-# 42 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cstdlib" 2 3
 # 75 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cstdlib" 3
 # 1 "/usr/include/stdlib.h" 1 3 4
 # 25 "/usr/include/stdlib.h" 3 4
@@ -1047,29 +4455,7 @@ typedef enum
 # 40 "/usr/include/stdlib.h" 2 3 4
 # 1 "/usr/include/x86_64-linux-gnu/bits/waitstatus.h" 1 3 4
 # 41 "/usr/include/stdlib.h" 2 3 4
-# 55 "/usr/include/stdlib.h" 3 4
-# 1 "/usr/include/x86_64-linux-gnu/bits/floatn.h" 1 3 4
-# 75 "/usr/include/x86_64-linux-gnu/bits/floatn.h" 3 4
-typedef _Complex float __cfloat128 __attribute__ ((__mode__ (__TC__)));
-# 87 "/usr/include/x86_64-linux-gnu/bits/floatn.h" 3 4
-typedef __float128 _Float128;
-# 120 "/usr/include/x86_64-linux-gnu/bits/floatn.h" 3 4
-# 1 "/usr/include/x86_64-linux-gnu/bits/floatn-common.h" 1 3 4
-# 24 "/usr/include/x86_64-linux-gnu/bits/floatn-common.h" 3 4
-# 1 "/usr/include/x86_64-linux-gnu/bits/long-double.h" 1 3 4
-# 25 "/usr/include/x86_64-linux-gnu/bits/floatn-common.h" 2 3 4
-# 214 "/usr/include/x86_64-linux-gnu/bits/floatn-common.h" 3 4
-typedef float _Float32;
-# 251 "/usr/include/x86_64-linux-gnu/bits/floatn-common.h" 3 4
-typedef double _Float64;
-# 268 "/usr/include/x86_64-linux-gnu/bits/floatn-common.h" 3 4
-typedef double _Float32x;
-# 285 "/usr/include/x86_64-linux-gnu/bits/floatn-common.h" 3 4
-typedef long double _Float64x;
-# 121 "/usr/include/x86_64-linux-gnu/bits/floatn.h" 2 3 4
-# 56 "/usr/include/stdlib.h" 2 3 4
-
-
+# 58 "/usr/include/stdlib.h" 3 4
 typedef struct
   {
     int quot;
@@ -1230,31 +4616,7 @@ extern int strfromf32x (char *__dest, size_t __size, const char * __format,
 extern int strfromf64x (char *__dest, size_t __size, const char * __format,
    _Float64x __f)
      throw () __attribute__ ((__nonnull__ (3)));
-# 272 "/usr/include/stdlib.h" 3 4
-# 1 "/usr/include/x86_64-linux-gnu/bits/types/locale_t.h" 1 3 4
-# 22 "/usr/include/x86_64-linux-gnu/bits/types/locale_t.h" 3 4
-# 1 "/usr/include/x86_64-linux-gnu/bits/types/__locale_t.h" 1 3 4
-# 28 "/usr/include/x86_64-linux-gnu/bits/types/__locale_t.h" 3 4
-struct __locale_struct
-{
-
-  struct __locale_data *__locales[13];
-
-
-  const unsigned short int *__ctype_b;
-  const int *__ctype_tolower;
-  const int *__ctype_toupper;
-
-
-  const char *__names[13];
-};
-
-typedef struct __locale_struct *__locale_t;
-# 23 "/usr/include/x86_64-linux-gnu/bits/types/locale_t.h" 2 3 4
-
-typedef __locale_t locale_t;
-# 273 "/usr/include/stdlib.h" 2 3 4
-
+# 274 "/usr/include/stdlib.h" 3 4
 extern long int strtol_l (const char *__restrict __nptr,
      char **__restrict __endptr, int __base,
      locale_t __loc) throw () __attribute__ ((__nonnull__ (1, 4)));
@@ -2627,1179 +5989,7 @@ using std::wctomb;
        
 # 37 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/ios" 3
 
-# 1 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/iosfwd" 1 3
-# 36 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/iosfwd" 3
-       
-# 37 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/iosfwd" 3
 
-
-# 1 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/bits/stringfwd.h" 1 3
-# 37 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/bits/stringfwd.h" 3
-       
-# 38 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/bits/stringfwd.h" 3
-
-
-# 1 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/bits/memoryfwd.h" 1 3
-# 46 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/bits/memoryfwd.h" 3
-       
-# 47 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/bits/memoryfwd.h" 3
-
-
-
-namespace std __attribute__ ((__visibility__ ("default")))
-{
-
-# 63 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/bits/memoryfwd.h" 3
-  template<typename>
-    class allocator;
-
-  template<>
-    class allocator<void>;
-
-
-  template<typename, typename>
-    struct uses_allocator;
-
-
-
-
-}
-# 41 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/bits/stringfwd.h" 2 3
-
-namespace std __attribute__ ((__visibility__ ("default")))
-{
-
-
-
-
-
-
-
-
-  template<class _CharT>
-    struct char_traits;
-
-  template<> struct char_traits<char>;
-
-
-  template<> struct char_traits<wchar_t>;
-
-
-
-
-  template<> struct char_traits<char16_t>;
-  template<> struct char_traits<char32_t>;
-
-
-namespace __cxx11 {
-
-  template<typename _CharT, typename _Traits = char_traits<_CharT>,
-           typename _Alloc = allocator<_CharT> >
-    class basic_string;
-
-
-  typedef basic_string<char> string;
-
-
-
-  typedef basic_string<wchar_t> wstring;
-
-
-
-
-
-  typedef basic_string<char16_t> u16string;
-
-
-  typedef basic_string<char32_t> u32string;
-
-
-}
-
-
-
-
-}
-# 40 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/iosfwd" 2 3
-# 1 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/bits/postypes.h" 1 3
-# 38 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/bits/postypes.h" 3
-       
-# 39 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/bits/postypes.h" 3
-
-# 1 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cwchar" 1 3
-# 39 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cwchar" 3
-       
-# 40 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cwchar" 3
-
-
-
-
-# 1 "/usr/include/wchar.h" 1 3 4
-# 27 "/usr/include/wchar.h" 3 4
-# 1 "/usr/include/x86_64-linux-gnu/bits/libc-header-start.h" 1 3 4
-# 28 "/usr/include/wchar.h" 2 3 4
-
-
-
-
-
-
-
-# 1 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/include/stddef.h" 1 3 4
-# 36 "/usr/include/wchar.h" 2 3 4
-
-
-# 1 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/include/stdarg.h" 1 3 4
-# 39 "/usr/include/wchar.h" 2 3 4
-
-# 1 "/usr/include/x86_64-linux-gnu/bits/wchar.h" 1 3 4
-# 41 "/usr/include/wchar.h" 2 3 4
-# 1 "/usr/include/x86_64-linux-gnu/bits/types/wint_t.h" 1 3 4
-# 20 "/usr/include/x86_64-linux-gnu/bits/types/wint_t.h" 3 4
-typedef unsigned int wint_t;
-# 42 "/usr/include/wchar.h" 2 3 4
-# 1 "/usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h" 1 3 4
-
-
-
-
-
-typedef __mbstate_t mbstate_t;
-# 43 "/usr/include/wchar.h" 2 3 4
-# 79 "/usr/include/wchar.h" 3 4
-extern "C" {
-
-
-
-struct tm;
-
-
-
-extern wchar_t *wcscpy (wchar_t *__restrict __dest,
-   const wchar_t *__restrict __src)
-     throw () __attribute__ ((__nonnull__ (1, 2)));
-
-
-extern wchar_t *wcsncpy (wchar_t *__restrict __dest,
-    const wchar_t *__restrict __src, size_t __n)
-     throw () __attribute__ ((__nonnull__ (1, 2)));
-
-
-extern wchar_t *wcscat (wchar_t *__restrict __dest,
-   const wchar_t *__restrict __src)
-     throw () __attribute__ ((__nonnull__ (1, 2)));
-
-extern wchar_t *wcsncat (wchar_t *__restrict __dest,
-    const wchar_t *__restrict __src, size_t __n)
-     throw () __attribute__ ((__nonnull__ (1, 2)));
-
-
-extern int wcscmp (const wchar_t *__s1, const wchar_t *__s2)
-     throw () __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1, 2)));
-
-extern int wcsncmp (const wchar_t *__s1, const wchar_t *__s2, size_t __n)
-     throw () __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1, 2)));
-
-
-
-extern int wcscasecmp (const wchar_t *__s1, const wchar_t *__s2) throw ();
-
-
-extern int wcsncasecmp (const wchar_t *__s1, const wchar_t *__s2,
-   size_t __n) throw ();
-
-
-
-extern int wcscasecmp_l (const wchar_t *__s1, const wchar_t *__s2,
-    locale_t __loc) throw ();
-
-extern int wcsncasecmp_l (const wchar_t *__s1, const wchar_t *__s2,
-     size_t __n, locale_t __loc) throw ();
-
-
-
-
-extern int wcscoll (const wchar_t *__s1, const wchar_t *__s2) throw ();
-
-
-
-extern size_t wcsxfrm (wchar_t *__restrict __s1,
-         const wchar_t *__restrict __s2, size_t __n) throw ();
-
-
-
-
-
-
-
-extern int wcscoll_l (const wchar_t *__s1, const wchar_t *__s2,
-        locale_t __loc) throw ();
-
-
-
-
-extern size_t wcsxfrm_l (wchar_t *__s1, const wchar_t *__s2,
-    size_t __n, locale_t __loc) throw ();
-
-
-extern wchar_t *wcsdup (const wchar_t *__s) throw () __attribute__ ((__malloc__));
-
-
-
-
-extern "C++" wchar_t *wcschr (wchar_t *__wcs, wchar_t __wc)
-     throw () __asm ("wcschr") __attribute__ ((__pure__));
-extern "C++" const wchar_t *wcschr (const wchar_t *__wcs, wchar_t __wc)
-     throw () __asm ("wcschr") __attribute__ ((__pure__));
-
-
-
-
-
-
-extern "C++" wchar_t *wcsrchr (wchar_t *__wcs, wchar_t __wc)
-     throw () __asm ("wcsrchr") __attribute__ ((__pure__));
-extern "C++" const wchar_t *wcsrchr (const wchar_t *__wcs, wchar_t __wc)
-     throw () __asm ("wcsrchr") __attribute__ ((__pure__));
-# 181 "/usr/include/wchar.h" 3 4
-extern wchar_t *wcschrnul (const wchar_t *__s, wchar_t __wc)
-     throw () __attribute__ ((__pure__));
-
-
-
-
-extern size_t wcscspn (const wchar_t *__wcs, const wchar_t *__reject)
-     throw () __attribute__ ((__pure__));
-
-
-extern size_t wcsspn (const wchar_t *__wcs, const wchar_t *__accept)
-     throw () __attribute__ ((__pure__));
-
-
-extern "C++" wchar_t *wcspbrk (wchar_t *__wcs, const wchar_t *__accept)
-     throw () __asm ("wcspbrk") __attribute__ ((__pure__));
-extern "C++" const wchar_t *wcspbrk (const wchar_t *__wcs,
-         const wchar_t *__accept)
-     throw () __asm ("wcspbrk") __attribute__ ((__pure__));
-
-
-
-
-
-
-extern "C++" wchar_t *wcsstr (wchar_t *__haystack, const wchar_t *__needle)
-     throw () __asm ("wcsstr") __attribute__ ((__pure__));
-extern "C++" const wchar_t *wcsstr (const wchar_t *__haystack,
-        const wchar_t *__needle)
-     throw () __asm ("wcsstr") __attribute__ ((__pure__));
-
-
-
-
-
-
-extern wchar_t *wcstok (wchar_t *__restrict __s,
-   const wchar_t *__restrict __delim,
-   wchar_t **__restrict __ptr) throw ();
-
-
-extern size_t wcslen (const wchar_t *__s) throw () __attribute__ ((__pure__));
-
-
-
-
-extern "C++" wchar_t *wcswcs (wchar_t *__haystack, const wchar_t *__needle)
-     throw () __asm ("wcswcs") __attribute__ ((__pure__));
-extern "C++" const wchar_t *wcswcs (const wchar_t *__haystack,
-        const wchar_t *__needle)
-     throw () __asm ("wcswcs") __attribute__ ((__pure__));
-# 240 "/usr/include/wchar.h" 3 4
-extern size_t wcsnlen (const wchar_t *__s, size_t __maxlen)
-     throw () __attribute__ ((__pure__));
-
-
-
-
-
-extern "C++" wchar_t *wmemchr (wchar_t *__s, wchar_t __c, size_t __n)
-     throw () __asm ("wmemchr") __attribute__ ((__pure__));
-extern "C++" const wchar_t *wmemchr (const wchar_t *__s, wchar_t __c,
-         size_t __n)
-     throw () __asm ("wmemchr") __attribute__ ((__pure__));
-
-
-
-
-
-
-extern int wmemcmp (const wchar_t *__s1, const wchar_t *__s2, size_t __n)
-     throw () __attribute__ ((__pure__));
-
-
-extern wchar_t *wmemcpy (wchar_t *__restrict __s1,
-    const wchar_t *__restrict __s2, size_t __n) throw ();
-
-
-
-extern wchar_t *wmemmove (wchar_t *__s1, const wchar_t *__s2, size_t __n)
-     throw ();
-
-
-extern wchar_t *wmemset (wchar_t *__s, wchar_t __c, size_t __n) throw ();
-
-
-
-
-extern wchar_t *wmempcpy (wchar_t *__restrict __s1,
-     const wchar_t *__restrict __s2, size_t __n)
-     throw ();
-
-
-
-
-
-extern wint_t btowc (int __c) throw ();
-
-
-
-extern int wctob (wint_t __c) throw ();
-
-
-
-extern int mbsinit (const mbstate_t *__ps) throw () __attribute__ ((__pure__));
-
-
-
-extern size_t mbrtowc (wchar_t *__restrict __pwc,
-         const char *__restrict __s, size_t __n,
-         mbstate_t *__restrict __p) throw ();
-
-
-extern size_t wcrtomb (char *__restrict __s, wchar_t __wc,
-         mbstate_t *__restrict __ps) throw ();
-
-
-extern size_t __mbrlen (const char *__restrict __s, size_t __n,
-   mbstate_t *__restrict __ps) throw ();
-extern size_t mbrlen (const char *__restrict __s, size_t __n,
-        mbstate_t *__restrict __ps) throw ();
-# 337 "/usr/include/wchar.h" 3 4
-extern size_t mbsrtowcs (wchar_t *__restrict __dst,
-    const char **__restrict __src, size_t __len,
-    mbstate_t *__restrict __ps) throw ();
-
-
-
-extern size_t wcsrtombs (char *__restrict __dst,
-    const wchar_t **__restrict __src, size_t __len,
-    mbstate_t *__restrict __ps) throw ();
-
-
-
-
-
-extern size_t mbsnrtowcs (wchar_t *__restrict __dst,
-     const char **__restrict __src, size_t __nmc,
-     size_t __len, mbstate_t *__restrict __ps) throw ();
-
-
-
-extern size_t wcsnrtombs (char *__restrict __dst,
-     const wchar_t **__restrict __src,
-     size_t __nwc, size_t __len,
-     mbstate_t *__restrict __ps) throw ();
-
-
-
-
-
-
-extern int wcwidth (wchar_t __c) throw ();
-
-
-
-extern int wcswidth (const wchar_t *__s, size_t __n) throw ();
-
-
-
-
-
-extern double wcstod (const wchar_t *__restrict __nptr,
-        wchar_t **__restrict __endptr) throw ();
-
-
-
-extern float wcstof (const wchar_t *__restrict __nptr,
-       wchar_t **__restrict __endptr) throw ();
-extern long double wcstold (const wchar_t *__restrict __nptr,
-       wchar_t **__restrict __endptr) throw ();
-# 396 "/usr/include/wchar.h" 3 4
-extern _Float32 wcstof32 (const wchar_t *__restrict __nptr,
-     wchar_t **__restrict __endptr) throw ();
-
-
-
-extern _Float64 wcstof64 (const wchar_t *__restrict __nptr,
-     wchar_t **__restrict __endptr) throw ();
-
-
-
-extern _Float128 wcstof128 (const wchar_t *__restrict __nptr,
-       wchar_t **__restrict __endptr) throw ();
-
-
-
-extern _Float32x wcstof32x (const wchar_t *__restrict __nptr,
-       wchar_t **__restrict __endptr) throw ();
-
-
-
-extern _Float64x wcstof64x (const wchar_t *__restrict __nptr,
-       wchar_t **__restrict __endptr) throw ();
-# 428 "/usr/include/wchar.h" 3 4
-extern long int wcstol (const wchar_t *__restrict __nptr,
-   wchar_t **__restrict __endptr, int __base) throw ();
-
-
-
-extern unsigned long int wcstoul (const wchar_t *__restrict __nptr,
-      wchar_t **__restrict __endptr, int __base)
-     throw ();
-
-
-
-
-__extension__
-extern long long int wcstoll (const wchar_t *__restrict __nptr,
-         wchar_t **__restrict __endptr, int __base)
-     throw ();
-
-
-
-__extension__
-extern unsigned long long int wcstoull (const wchar_t *__restrict __nptr,
-     wchar_t **__restrict __endptr,
-     int __base) throw ();
-
-
-
-
-
-__extension__
-extern long long int wcstoq (const wchar_t *__restrict __nptr,
-        wchar_t **__restrict __endptr, int __base)
-     throw ();
-
-
-
-__extension__
-extern unsigned long long int wcstouq (const wchar_t *__restrict __nptr,
-           wchar_t **__restrict __endptr,
-           int __base) throw ();
-
-
-
-
-
-
-extern long int wcstol_l (const wchar_t *__restrict __nptr,
-     wchar_t **__restrict __endptr, int __base,
-     locale_t __loc) throw ();
-
-extern unsigned long int wcstoul_l (const wchar_t *__restrict __nptr,
-        wchar_t **__restrict __endptr,
-        int __base, locale_t __loc) throw ();
-
-__extension__
-extern long long int wcstoll_l (const wchar_t *__restrict __nptr,
-    wchar_t **__restrict __endptr,
-    int __base, locale_t __loc) throw ();
-
-__extension__
-extern unsigned long long int wcstoull_l (const wchar_t *__restrict __nptr,
-       wchar_t **__restrict __endptr,
-       int __base, locale_t __loc)
-     throw ();
-
-extern double wcstod_l (const wchar_t *__restrict __nptr,
-   wchar_t **__restrict __endptr, locale_t __loc)
-     throw ();
-
-extern float wcstof_l (const wchar_t *__restrict __nptr,
-         wchar_t **__restrict __endptr, locale_t __loc)
-     throw ();
-
-extern long double wcstold_l (const wchar_t *__restrict __nptr,
-         wchar_t **__restrict __endptr,
-         locale_t __loc) throw ();
-# 511 "/usr/include/wchar.h" 3 4
-extern _Float32 wcstof32_l (const wchar_t *__restrict __nptr,
-       wchar_t **__restrict __endptr,
-       locale_t __loc) throw ();
-
-
-
-extern _Float64 wcstof64_l (const wchar_t *__restrict __nptr,
-       wchar_t **__restrict __endptr,
-       locale_t __loc) throw ();
-
-
-
-extern _Float128 wcstof128_l (const wchar_t *__restrict __nptr,
-         wchar_t **__restrict __endptr,
-         locale_t __loc) throw ();
-
-
-
-extern _Float32x wcstof32x_l (const wchar_t *__restrict __nptr,
-         wchar_t **__restrict __endptr,
-         locale_t __loc) throw ();
-
-
-
-extern _Float64x wcstof64x_l (const wchar_t *__restrict __nptr,
-         wchar_t **__restrict __endptr,
-         locale_t __loc) throw ();
-# 551 "/usr/include/wchar.h" 3 4
-extern wchar_t *wcpcpy (wchar_t *__restrict __dest,
-   const wchar_t *__restrict __src) throw ();
-
-
-
-extern wchar_t *wcpncpy (wchar_t *__restrict __dest,
-    const wchar_t *__restrict __src, size_t __n)
-     throw ();
-# 567 "/usr/include/wchar.h" 3 4
-extern __FILE *open_wmemstream (wchar_t **__bufloc, size_t *__sizeloc) throw ();
-
-
-
-
-
-extern int fwide (__FILE *__fp, int __mode) throw ();
-
-
-
-
-
-
-extern int fwprintf (__FILE *__restrict __stream,
-       const wchar_t *__restrict __format, ...)
-                                                           ;
-
-
-
-
-extern int wprintf (const wchar_t *__restrict __format, ...)
-                                                           ;
-
-extern int swprintf (wchar_t *__restrict __s, size_t __n,
-       const wchar_t *__restrict __format, ...)
-     throw () ;
-
-
-
-
-
-extern int vfwprintf (__FILE *__restrict __s,
-        const wchar_t *__restrict __format,
-        __gnuc_va_list __arg)
-                                                           ;
-
-
-
-
-extern int vwprintf (const wchar_t *__restrict __format,
-       __gnuc_va_list __arg)
-                                                           ;
-
-
-extern int vswprintf (wchar_t *__restrict __s, size_t __n,
-        const wchar_t *__restrict __format,
-        __gnuc_va_list __arg)
-     throw () ;
-
-
-
-
-
-
-extern int fwscanf (__FILE *__restrict __stream,
-      const wchar_t *__restrict __format, ...)
-                                                          ;
-
-
-
-
-extern int wscanf (const wchar_t *__restrict __format, ...)
-                                                          ;
-
-extern int swscanf (const wchar_t *__restrict __s,
-      const wchar_t *__restrict __format, ...)
-     throw () ;
-
-
-
-
-
-
-extern int fwscanf (__FILE *__restrict __stream, const wchar_t *__restrict __format, ...) __asm__ ("" "__isoc99_fwscanf")
-
-
-                                                          ;
-extern int wscanf (const wchar_t *__restrict __format, ...) __asm__ ("" "__isoc99_wscanf")
-
-                                                          ;
-extern int swscanf (const wchar_t *__restrict __s, const wchar_t *__restrict __format, ...) throw () __asm__ ("" "__isoc99_swscanf")
-
-
-                                                          ;
-# 671 "/usr/include/wchar.h" 3 4
-extern int vfwscanf (__FILE *__restrict __s,
-       const wchar_t *__restrict __format,
-       __gnuc_va_list __arg)
-                                                          ;
-
-
-
-
-extern int vwscanf (const wchar_t *__restrict __format,
-      __gnuc_va_list __arg)
-                                                          ;
-
-extern int vswscanf (const wchar_t *__restrict __s,
-       const wchar_t *__restrict __format,
-       __gnuc_va_list __arg)
-     throw () ;
-
-
-
-
-
-
-extern int vfwscanf (__FILE *__restrict __s, const wchar_t *__restrict __format, __gnuc_va_list __arg) __asm__ ("" "__isoc99_vfwscanf")
-
-
-                                                          ;
-extern int vwscanf (const wchar_t *__restrict __format, __gnuc_va_list __arg) __asm__ ("" "__isoc99_vwscanf")
-
-                                                          ;
-extern int vswscanf (const wchar_t *__restrict __s, const wchar_t *__restrict __format, __gnuc_va_list __arg) throw () __asm__ ("" "__isoc99_vswscanf")
-
-
-                                                          ;
-# 726 "/usr/include/wchar.h" 3 4
-extern wint_t fgetwc (__FILE *__stream);
-extern wint_t getwc (__FILE *__stream);
-
-
-
-
-
-extern wint_t getwchar (void);
-
-
-
-
-
-
-extern wint_t fputwc (wchar_t __wc, __FILE *__stream);
-extern wint_t putwc (wchar_t __wc, __FILE *__stream);
-
-
-
-
-
-extern wint_t putwchar (wchar_t __wc);
-
-
-
-
-
-
-
-extern wchar_t *fgetws (wchar_t *__restrict __ws, int __n,
-   __FILE *__restrict __stream);
-
-
-
-
-
-extern int fputws (const wchar_t *__restrict __ws,
-     __FILE *__restrict __stream);
-
-
-
-
-
-
-extern wint_t ungetwc (wint_t __wc, __FILE *__stream);
-# 781 "/usr/include/wchar.h" 3 4
-extern wint_t getwc_unlocked (__FILE *__stream);
-extern wint_t getwchar_unlocked (void);
-
-
-
-
-
-
-
-extern wint_t fgetwc_unlocked (__FILE *__stream);
-
-
-
-
-
-
-
-extern wint_t fputwc_unlocked (wchar_t __wc, __FILE *__stream);
-# 807 "/usr/include/wchar.h" 3 4
-extern wint_t putwc_unlocked (wchar_t __wc, __FILE *__stream);
-extern wint_t putwchar_unlocked (wchar_t __wc);
-# 817 "/usr/include/wchar.h" 3 4
-extern wchar_t *fgetws_unlocked (wchar_t *__restrict __ws, int __n,
-     __FILE *__restrict __stream);
-
-
-
-
-
-
-
-extern int fputws_unlocked (const wchar_t *__restrict __ws,
-       __FILE *__restrict __stream);
-
-
-
-
-
-
-extern size_t wcsftime (wchar_t *__restrict __s, size_t __maxsize,
-   const wchar_t *__restrict __format,
-   const struct tm *__restrict __tp) throw ();
-
-
-
-
-extern size_t wcsftime_l (wchar_t *__restrict __s, size_t __maxsize,
-     const wchar_t *__restrict __format,
-     const struct tm *__restrict __tp,
-     locale_t __loc) throw ();
-# 856 "/usr/include/wchar.h" 3 4
-}
-# 45 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cwchar" 2 3
-# 62 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cwchar" 3
-namespace std
-{
-  using ::mbstate_t;
-}
-# 135 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cwchar" 3
-namespace std __attribute__ ((__visibility__ ("default")))
-{
-
-
-  using ::wint_t;
-
-  using ::btowc;
-  using ::fgetwc;
-  using ::fgetws;
-  using ::fputwc;
-  using ::fputws;
-  using ::fwide;
-  using ::fwprintf;
-  using ::fwscanf;
-  using ::getwc;
-  using ::getwchar;
-  using ::mbrlen;
-  using ::mbrtowc;
-  using ::mbsinit;
-  using ::mbsrtowcs;
-  using ::putwc;
-  using ::putwchar;
-
-  using ::swprintf;
-
-  using ::swscanf;
-  using ::ungetwc;
-  using ::vfwprintf;
-
-  using ::vfwscanf;
-
-
-  using ::vswprintf;
-
-
-  using ::vswscanf;
-
-  using ::vwprintf;
-
-  using ::vwscanf;
-
-  using ::wcrtomb;
-  using ::wcscat;
-  using ::wcscmp;
-  using ::wcscoll;
-  using ::wcscpy;
-  using ::wcscspn;
-  using ::wcsftime;
-  using ::wcslen;
-  using ::wcsncat;
-  using ::wcsncmp;
-  using ::wcsncpy;
-  using ::wcsrtombs;
-  using ::wcsspn;
-  using ::wcstod;
-
-  using ::wcstof;
-
-  using ::wcstok;
-  using ::wcstol;
-  using ::wcstoul;
-  using ::wcsxfrm;
-  using ::wctob;
-  using ::wmemcmp;
-  using ::wmemcpy;
-  using ::wmemmove;
-  using ::wmemset;
-  using ::wprintf;
-  using ::wscanf;
-  using ::wcschr;
-  using ::wcspbrk;
-  using ::wcsrchr;
-  using ::wcsstr;
-  using ::wmemchr;
-# 232 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cwchar" 3
-
-}
-
-
-
-
-
-
-
-namespace __gnu_cxx
-{
-
-
-
-
-
-  using ::wcstold;
-# 257 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cwchar" 3
-  using ::wcstoll;
-  using ::wcstoull;
-
-}
-
-namespace std
-{
-  using ::__gnu_cxx::wcstold;
-  using ::__gnu_cxx::wcstoll;
-  using ::__gnu_cxx::wcstoull;
-}
-# 277 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cwchar" 3
-namespace std
-{
-
-  using std::wcstof;
-
-
-  using std::vfwscanf;
-
-
-  using std::vswscanf;
-
-
-  using std::vwscanf;
-
-
-
-  using std::wcstold;
-  using std::wcstoll;
-  using std::wcstoull;
-
-}
-# 41 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/bits/postypes.h" 2 3
-# 68 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/bits/postypes.h" 3
-namespace std __attribute__ ((__visibility__ ("default")))
-{
-
-# 88 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/bits/postypes.h" 3
-  typedef long streamoff;
-# 98 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/bits/postypes.h" 3
-  typedef ptrdiff_t streamsize;
-# 111 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/bits/postypes.h" 3
-  template<typename _StateT>
-    class fpos
-    {
-    private:
-      streamoff _M_off;
-      _StateT _M_state;
-
-    public:
-
-
-
-
-      fpos()
-      : _M_off(0), _M_state() { }
-# 133 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/bits/postypes.h" 3
-      fpos(streamoff __off)
-      : _M_off(__off), _M_state() { }
-
-
-      operator streamoff() const { return _M_off; }
-
-
-      void
-      state(_StateT __st)
-      { _M_state = __st; }
-
-
-      _StateT
-      state() const
-      { return _M_state; }
-
-
-
-
-
-      fpos&
-      operator+=(streamoff __off)
-      {
- _M_off += __off;
- return *this;
-      }
-
-
-
-
-
-      fpos&
-      operator-=(streamoff __off)
-      {
- _M_off -= __off;
- return *this;
-      }
-
-
-
-
-
-
-
-      fpos
-      operator+(streamoff __off) const
-      {
- fpos __pos(*this);
- __pos += __off;
- return __pos;
-      }
-
-
-
-
-
-
-
-      fpos
-      operator-(streamoff __off) const
-      {
- fpos __pos(*this);
- __pos -= __off;
- return __pos;
-      }
-
-
-
-
-
-
-      streamoff
-      operator-(const fpos& __other) const
-      { return _M_off - __other._M_off; }
-    };
-
-
-
-
-
-
-  template<typename _StateT>
-    inline bool
-    operator==(const fpos<_StateT>& __lhs, const fpos<_StateT>& __rhs)
-    { return streamoff(__lhs) == streamoff(__rhs); }
-
-  template<typename _StateT>
-    inline bool
-    operator!=(const fpos<_StateT>& __lhs, const fpos<_StateT>& __rhs)
-    { return streamoff(__lhs) != streamoff(__rhs); }
-
-
-
-
-
-  typedef fpos<mbstate_t> streampos;
-
-  typedef fpos<mbstate_t> wstreampos;
-
-
-
-  typedef fpos<mbstate_t> u16streampos;
-
-  typedef fpos<mbstate_t> u32streampos;
-
-
-
-}
-# 41 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/iosfwd" 2 3
-
-namespace std __attribute__ ((__visibility__ ("default")))
-{
-
-# 74 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/iosfwd" 3
-  class ios_base;
-
-  template<typename _CharT, typename _Traits = char_traits<_CharT> >
-    class basic_ios;
-
-  template<typename _CharT, typename _Traits = char_traits<_CharT> >
-    class basic_streambuf;
-
-  template<typename _CharT, typename _Traits = char_traits<_CharT> >
-    class basic_istream;
-
-  template<typename _CharT, typename _Traits = char_traits<_CharT> >
-    class basic_ostream;
-
-  template<typename _CharT, typename _Traits = char_traits<_CharT> >
-    class basic_iostream;
-
-
-namespace __cxx11 {
-
-  template<typename _CharT, typename _Traits = char_traits<_CharT>,
-     typename _Alloc = allocator<_CharT> >
-    class basic_stringbuf;
-
-  template<typename _CharT, typename _Traits = char_traits<_CharT>,
-    typename _Alloc = allocator<_CharT> >
-    class basic_istringstream;
-
-  template<typename _CharT, typename _Traits = char_traits<_CharT>,
-    typename _Alloc = allocator<_CharT> >
-    class basic_ostringstream;
-
-  template<typename _CharT, typename _Traits = char_traits<_CharT>,
-    typename _Alloc = allocator<_CharT> >
-    class basic_stringstream;
-
-}
-
-  template<typename _CharT, typename _Traits = char_traits<_CharT> >
-    class basic_filebuf;
-
-  template<typename _CharT, typename _Traits = char_traits<_CharT> >
-    class basic_ifstream;
-
-  template<typename _CharT, typename _Traits = char_traits<_CharT> >
-    class basic_ofstream;
-
-  template<typename _CharT, typename _Traits = char_traits<_CharT> >
-    class basic_fstream;
-
-  template<typename _CharT, typename _Traits = char_traits<_CharT> >
-    class istreambuf_iterator;
-
-  template<typename _CharT, typename _Traits = char_traits<_CharT> >
-    class ostreambuf_iterator;
-
-
-
-  typedef basic_ios<char> ios;
-
-
-  typedef basic_streambuf<char> streambuf;
-
-
-  typedef basic_istream<char> istream;
-
-
-  typedef basic_ostream<char> ostream;
-
-
-  typedef basic_iostream<char> iostream;
-
-
-  typedef basic_stringbuf<char> stringbuf;
-
-
-  typedef basic_istringstream<char> istringstream;
-
-
-  typedef basic_ostringstream<char> ostringstream;
-
-
-  typedef basic_stringstream<char> stringstream;
-
-
-  typedef basic_filebuf<char> filebuf;
-
-
-  typedef basic_ifstream<char> ifstream;
-
-
-  typedef basic_ofstream<char> ofstream;
-
-
-  typedef basic_fstream<char> fstream;
-
-
-
-  typedef basic_ios<wchar_t> wios;
-
-
-  typedef basic_streambuf<wchar_t> wstreambuf;
-
-
-  typedef basic_istream<wchar_t> wistream;
-
-
-  typedef basic_ostream<wchar_t> wostream;
-
-
-  typedef basic_iostream<wchar_t> wiostream;
-
-
-  typedef basic_stringbuf<wchar_t> wstringbuf;
-
-
-  typedef basic_istringstream<wchar_t> wistringstream;
-
-
-  typedef basic_ostringstream<wchar_t> wostringstream;
-
-
-  typedef basic_stringstream<wchar_t> wstringstream;
-
-
-  typedef basic_filebuf<wchar_t> wfilebuf;
-
-
-  typedef basic_ifstream<wchar_t> wifstream;
-
-
-  typedef basic_ofstream<wchar_t> wofstream;
-
-
-  typedef basic_fstream<wchar_t> wfstream;
-
-
-
-
-}
-# 39 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/ios" 2 3
 # 1 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/exception" 1 3
 # 33 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/exception" 3
        
@@ -3932,21 +6122,6 @@ namespace __gnu_cxx
 #pragma GCC visibility push(default)
 
 # 1 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/include/stddef.h" 1 3 4
-# 149 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/include/stddef.h" 3 4
-typedef long int ptrdiff_t;
-# 426 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/include/stddef.h" 3 4
-typedef struct {
-  long long __max_align_ll __attribute__((__aligned__(__alignof__(long long))));
-  long double __max_align_ld __attribute__((__aligned__(__alignof__(long double))));
-# 437 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/include/stddef.h" 3 4
-} max_align_t;
-
-
-
-
-
-
-  typedef decltype(nullptr) nullptr_t;
 # 39 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/bits/cxxabi_init_exception.h" 2 3
 # 50 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/bits/cxxabi_init_exception.h" 3
 namespace std
@@ -18070,79 +20245,6 @@ namespace __cxx11 {
 # 39 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cstdio" 3
        
 # 40 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cstdio" 3
-# 96 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cstdio" 3
-namespace std
-{
-  using ::FILE;
-  using ::fpos_t;
-
-  using ::clearerr;
-  using ::fclose;
-  using ::feof;
-  using ::ferror;
-  using ::fflush;
-  using ::fgetc;
-  using ::fgetpos;
-  using ::fgets;
-  using ::fopen;
-  using ::fprintf;
-  using ::fputc;
-  using ::fputs;
-  using ::fread;
-  using ::freopen;
-  using ::fscanf;
-  using ::fseek;
-  using ::fsetpos;
-  using ::ftell;
-  using ::fwrite;
-  using ::getc;
-  using ::getchar;
-
-
-
-
-  using ::perror;
-  using ::printf;
-  using ::putc;
-  using ::putchar;
-  using ::puts;
-  using ::remove;
-  using ::rename;
-  using ::rewind;
-  using ::scanf;
-  using ::setbuf;
-  using ::setvbuf;
-  using ::sprintf;
-  using ::sscanf;
-  using ::tmpfile;
-
-  using ::tmpnam;
-
-  using ::ungetc;
-  using ::vfprintf;
-  using ::vprintf;
-  using ::vsprintf;
-}
-# 157 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cstdio" 3
-namespace __gnu_cxx
-{
-# 175 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cstdio" 3
-  using ::snprintf;
-  using ::vfscanf;
-  using ::vscanf;
-  using ::vsnprintf;
-  using ::vsscanf;
-
-}
-
-namespace std
-{
-  using ::__gnu_cxx::snprintf;
-  using ::__gnu_cxx::vfscanf;
-  using ::__gnu_cxx::vscanf;
-  using ::__gnu_cxx::vsnprintf;
-  using ::__gnu_cxx::vsscanf;
-}
 # 44 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/ext/string_conversions.h" 2 3
 # 1 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cerrno" 1 3
 # 39 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cerrno" 3
@@ -35560,2122 +37662,7 @@ typedef uint64_t xuint64;
 
 # 1 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/include/stdbool.h" 1 3 4
 # 127 "/tools/Xilinx/Vitis_HLS/2022.1/include/floating_point_v7_0_bitacc_cmodel.h" 2
-# 144 "/tools/Xilinx/Vitis_HLS/2022.1/include/floating_point_v7_0_bitacc_cmodel.h"
-# 1 "/usr/include/x86_64-linux-gnu/gmp.h" 1
-# 35 "/usr/include/x86_64-linux-gnu/gmp.h"
-# 1 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cstdio" 1 3
-# 39 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cstdio" 3
-       
-# 40 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cstdio" 3
-# 36 "/usr/include/x86_64-linux-gnu/gmp.h" 2
-# 55 "/usr/include/x86_64-linux-gnu/gmp.h"
-# 1 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/include/stddef.h" 1 3 4
-# 56 "/usr/include/x86_64-linux-gnu/gmp.h" 2
-# 1 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/include-fixed/limits.h" 1 3 4
-# 34 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/include-fixed/limits.h" 3 4
-# 1 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/include-fixed/syslimits.h" 1 3 4
-
-
-
-
-
-
-# 1 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/include-fixed/limits.h" 1 3 4
-# 194 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/include-fixed/limits.h" 3 4
-# 1 "/usr/include/limits.h" 1 3 4
-# 26 "/usr/include/limits.h" 3 4
-# 1 "/usr/include/x86_64-linux-gnu/bits/libc-header-start.h" 1 3 4
-# 27 "/usr/include/limits.h" 2 3 4
-# 183 "/usr/include/limits.h" 3 4
-# 1 "/usr/include/x86_64-linux-gnu/bits/posix1_lim.h" 1 3 4
-# 27 "/usr/include/x86_64-linux-gnu/bits/posix1_lim.h" 3 4
-# 1 "/usr/include/x86_64-linux-gnu/bits/wordsize.h" 1 3 4
-# 28 "/usr/include/x86_64-linux-gnu/bits/posix1_lim.h" 2 3 4
-# 161 "/usr/include/x86_64-linux-gnu/bits/posix1_lim.h" 3 4
-# 1 "/usr/include/x86_64-linux-gnu/bits/local_lim.h" 1 3 4
-# 38 "/usr/include/x86_64-linux-gnu/bits/local_lim.h" 3 4
-# 1 "/usr/include/linux/limits.h" 1 3 4
-# 39 "/usr/include/x86_64-linux-gnu/bits/local_lim.h" 2 3 4
-# 162 "/usr/include/x86_64-linux-gnu/bits/posix1_lim.h" 2 3 4
-# 184 "/usr/include/limits.h" 2 3 4
-
-
-
-# 1 "/usr/include/x86_64-linux-gnu/bits/posix2_lim.h" 1 3 4
-# 188 "/usr/include/limits.h" 2 3 4
-
-
-
-# 1 "/usr/include/x86_64-linux-gnu/bits/xopen_lim.h" 1 3 4
-# 64 "/usr/include/x86_64-linux-gnu/bits/xopen_lim.h" 3 4
-# 1 "/usr/include/x86_64-linux-gnu/bits/uio_lim.h" 1 3 4
-# 65 "/usr/include/x86_64-linux-gnu/bits/xopen_lim.h" 2 3 4
-# 192 "/usr/include/limits.h" 2 3 4
-# 195 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/include-fixed/limits.h" 2 3 4
-# 8 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/include-fixed/syslimits.h" 2 3 4
-# 35 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/include-fixed/limits.h" 2 3 4
-# 57 "/usr/include/x86_64-linux-gnu/gmp.h" 2
-# 141 "/usr/include/x86_64-linux-gnu/gmp.h"
-typedef unsigned long int mp_limb_t;
-typedef long int mp_limb_signed_t;
-
-
-typedef unsigned long int mp_bitcnt_t;
-
-
-
-
-typedef struct
-{
-  int _mp_alloc;
-
-  int _mp_size;
-
-
-  mp_limb_t *_mp_d;
-} __mpz_struct;
-
-
-
-
-typedef __mpz_struct MP_INT;
-typedef __mpz_struct mpz_t[1];
-
-typedef mp_limb_t * mp_ptr;
-typedef const mp_limb_t * mp_srcptr;
-
-
-
-
-
-
-
-typedef long int mp_size_t;
-typedef long int mp_exp_t;
-
-
-typedef struct
-{
-  __mpz_struct _mp_num;
-  __mpz_struct _mp_den;
-} __mpq_struct;
-
-typedef __mpq_struct MP_RAT;
-typedef __mpq_struct mpq_t[1];
-
-typedef struct
-{
-  int _mp_prec;
-
-
-
-  int _mp_size;
-
-
-  mp_exp_t _mp_exp;
-  mp_limb_t *_mp_d;
-} __mpf_struct;
-
-
-typedef __mpf_struct mpf_t[1];
-
-
-typedef enum
-{
-  GMP_RAND_ALG_DEFAULT = 0,
-  GMP_RAND_ALG_LC = GMP_RAND_ALG_DEFAULT
-} gmp_randalg_t;
-
-
-typedef struct
-{
-  mpz_t _mp_seed;
-  gmp_randalg_t _mp_alg;
-  union {
-    void *_mp_lc;
-  } _mp_algdata;
-} __gmp_randstate_struct;
-typedef __gmp_randstate_struct gmp_randstate_t[1];
-
-
-
-typedef const __mpz_struct *mpz_srcptr;
-typedef __mpz_struct *mpz_ptr;
-typedef const __mpf_struct *mpf_srcptr;
-typedef __mpf_struct *mpf_ptr;
-typedef const __mpq_struct *mpq_srcptr;
-typedef __mpq_struct *mpq_ptr;
-# 472 "/usr/include/x86_64-linux-gnu/gmp.h"
-extern "C" {
-using std::FILE;
-
-
-
- void __gmp_set_memory_functions (void *(*) (size_t),
-          void *(*) (void *, size_t, size_t),
-          void (*) (void *, size_t)) noexcept;
-
-
- void __gmp_get_memory_functions (void *(**) (size_t),
-          void *(**) (void *, size_t, size_t),
-          void (**) (void *, size_t)) noexcept;
-
-
- extern const int __gmp_bits_per_limb;
-
-
- extern int __gmp_errno;
-
-
- extern const char * const __gmp_version;
-
-
-
-
-
-
- void __gmp_randinit (gmp_randstate_t, gmp_randalg_t, ...);
-
-
- void __gmp_randinit_default (gmp_randstate_t);
-
-
- void __gmp_randinit_lc_2exp (gmp_randstate_t, mpz_srcptr, unsigned long int, mp_bitcnt_t);
-
-
- int __gmp_randinit_lc_2exp_size (gmp_randstate_t, mp_bitcnt_t);
-
-
- void __gmp_randinit_mt (gmp_randstate_t);
-
-
- void __gmp_randinit_set (gmp_randstate_t, const __gmp_randstate_struct *);
-
-
- void __gmp_randseed (gmp_randstate_t, mpz_srcptr);
-
-
- void __gmp_randseed_ui (gmp_randstate_t, unsigned long int);
-
-
- void __gmp_randclear (gmp_randstate_t);
-
-
- unsigned long __gmp_urandomb_ui (gmp_randstate_t, unsigned long);
-
-
- unsigned long __gmp_urandomm_ui (gmp_randstate_t, unsigned long);
-
-
-
-
-
- int __gmp_asprintf (char **, const char *, ...);
-
-
-
- int __gmp_fprintf (FILE *, const char *, ...);
-# 554 "/usr/include/x86_64-linux-gnu/gmp.h"
- int __gmp_printf (const char *, ...);
-
-
- int __gmp_snprintf (char *, size_t, const char *, ...);
-
-
- int __gmp_sprintf (char *, const char *, ...);
-# 592 "/usr/include/x86_64-linux-gnu/gmp.h"
- int __gmp_fscanf (FILE *, const char *, ...);
-
-
-
- int __gmp_scanf (const char *, ...);
-
-
- int __gmp_sscanf (const char *, const char *, ...);
-# 621 "/usr/include/x86_64-linux-gnu/gmp.h"
- void *__gmpz_realloc (mpz_ptr, mp_size_t);
-
-
-
- void __gmpz_abs (mpz_ptr, mpz_srcptr);
-
-
-
- void __gmpz_add (mpz_ptr, mpz_srcptr, mpz_srcptr);
-
-
- void __gmpz_add_ui (mpz_ptr, mpz_srcptr, unsigned long int);
-
-
- void __gmpz_addmul (mpz_ptr, mpz_srcptr, mpz_srcptr);
-
-
- void __gmpz_addmul_ui (mpz_ptr, mpz_srcptr, unsigned long int);
-
-
- void __gmpz_and (mpz_ptr, mpz_srcptr, mpz_srcptr);
-
-
- void __gmpz_array_init (mpz_ptr, mp_size_t, mp_size_t);
-
-
- void __gmpz_bin_ui (mpz_ptr, mpz_srcptr, unsigned long int);
-
-
- void __gmpz_bin_uiui (mpz_ptr, unsigned long int, unsigned long int);
-
-
- void __gmpz_cdiv_q (mpz_ptr, mpz_srcptr, mpz_srcptr);
-
-
- void __gmpz_cdiv_q_2exp (mpz_ptr, mpz_srcptr, mp_bitcnt_t);
-
-
- unsigned long int __gmpz_cdiv_q_ui (mpz_ptr, mpz_srcptr, unsigned long int);
-
-
- void __gmpz_cdiv_qr (mpz_ptr, mpz_ptr, mpz_srcptr, mpz_srcptr);
-
-
- unsigned long int __gmpz_cdiv_qr_ui (mpz_ptr, mpz_ptr, mpz_srcptr, unsigned long int);
-
-
- void __gmpz_cdiv_r (mpz_ptr, mpz_srcptr, mpz_srcptr);
-
-
- void __gmpz_cdiv_r_2exp (mpz_ptr, mpz_srcptr, mp_bitcnt_t);
-
-
- unsigned long int __gmpz_cdiv_r_ui (mpz_ptr, mpz_srcptr, unsigned long int);
-
-
- unsigned long int __gmpz_cdiv_ui (mpz_srcptr, unsigned long int) __attribute__ ((__pure__));
-
-
- void __gmpz_clear (mpz_ptr);
-
-
- void __gmpz_clears (mpz_ptr, ...);
-
-
- void __gmpz_clrbit (mpz_ptr, mp_bitcnt_t);
-
-
- int __gmpz_cmp (mpz_srcptr, mpz_srcptr) noexcept __attribute__ ((__pure__));
-
-
- int __gmpz_cmp_d (mpz_srcptr, double) __attribute__ ((__pure__));
-
-
- int __gmpz_cmp_si (mpz_srcptr, signed long int) noexcept __attribute__ ((__pure__));
-
-
- int __gmpz_cmp_ui (mpz_srcptr, unsigned long int) noexcept __attribute__ ((__pure__));
-
-
- int __gmpz_cmpabs (mpz_srcptr, mpz_srcptr) noexcept __attribute__ ((__pure__));
-
-
- int __gmpz_cmpabs_d (mpz_srcptr, double) __attribute__ ((__pure__));
-
-
- int __gmpz_cmpabs_ui (mpz_srcptr, unsigned long int) noexcept __attribute__ ((__pure__));
-
-
- void __gmpz_com (mpz_ptr, mpz_srcptr);
-
-
- void __gmpz_combit (mpz_ptr, mp_bitcnt_t);
-
-
- int __gmpz_congruent_p (mpz_srcptr, mpz_srcptr, mpz_srcptr) __attribute__ ((__pure__));
-
-
- int __gmpz_congruent_2exp_p (mpz_srcptr, mpz_srcptr, mp_bitcnt_t) noexcept __attribute__ ((__pure__));
-
-
- int __gmpz_congruent_ui_p (mpz_srcptr, unsigned long, unsigned long) __attribute__ ((__pure__));
-
-
- void __gmpz_divexact (mpz_ptr, mpz_srcptr, mpz_srcptr);
-
-
- void __gmpz_divexact_ui (mpz_ptr, mpz_srcptr, unsigned long);
-
-
- int __gmpz_divisible_p (mpz_srcptr, mpz_srcptr) __attribute__ ((__pure__));
-
-
- int __gmpz_divisible_ui_p (mpz_srcptr, unsigned long) __attribute__ ((__pure__));
-
-
- int __gmpz_divisible_2exp_p (mpz_srcptr, mp_bitcnt_t) noexcept __attribute__ ((__pure__));
-
-
- void __gmpz_dump (mpz_srcptr);
-
-
- void *__gmpz_export (void *, size_t *, int, size_t, int, size_t, mpz_srcptr);
-
-
- void __gmpz_fac_ui (mpz_ptr, unsigned long int);
-
-
- void __gmpz_2fac_ui (mpz_ptr, unsigned long int);
-
-
- void __gmpz_mfac_uiui (mpz_ptr, unsigned long int, unsigned long int);
-
-
- void __gmpz_primorial_ui (mpz_ptr, unsigned long int);
-
-
- void __gmpz_fdiv_q (mpz_ptr, mpz_srcptr, mpz_srcptr);
-
-
- void __gmpz_fdiv_q_2exp (mpz_ptr, mpz_srcptr, mp_bitcnt_t);
-
-
- unsigned long int __gmpz_fdiv_q_ui (mpz_ptr, mpz_srcptr, unsigned long int);
-
-
- void __gmpz_fdiv_qr (mpz_ptr, mpz_ptr, mpz_srcptr, mpz_srcptr);
-
-
- unsigned long int __gmpz_fdiv_qr_ui (mpz_ptr, mpz_ptr, mpz_srcptr, unsigned long int);
-
-
- void __gmpz_fdiv_r (mpz_ptr, mpz_srcptr, mpz_srcptr);
-
-
- void __gmpz_fdiv_r_2exp (mpz_ptr, mpz_srcptr, mp_bitcnt_t);
-
-
- unsigned long int __gmpz_fdiv_r_ui (mpz_ptr, mpz_srcptr, unsigned long int);
-
-
- unsigned long int __gmpz_fdiv_ui (mpz_srcptr, unsigned long int) __attribute__ ((__pure__));
-
-
- void __gmpz_fib_ui (mpz_ptr, unsigned long int);
-
-
- void __gmpz_fib2_ui (mpz_ptr, mpz_ptr, unsigned long int);
-
-
- int __gmpz_fits_sint_p (mpz_srcptr) noexcept __attribute__ ((__pure__));
-
-
- int __gmpz_fits_slong_p (mpz_srcptr) noexcept __attribute__ ((__pure__));
-
-
- int __gmpz_fits_sshort_p (mpz_srcptr) noexcept __attribute__ ((__pure__));
-
-
-
- int __gmpz_fits_uint_p (mpz_srcptr) noexcept __attribute__ ((__pure__));
-
-
-
-
- int __gmpz_fits_ulong_p (mpz_srcptr) noexcept __attribute__ ((__pure__));
-
-
-
-
- int __gmpz_fits_ushort_p (mpz_srcptr) noexcept __attribute__ ((__pure__));
-
-
-
- void __gmpz_gcd (mpz_ptr, mpz_srcptr, mpz_srcptr);
-
-
- unsigned long int __gmpz_gcd_ui (mpz_ptr, mpz_srcptr, unsigned long int);
-
-
- void __gmpz_gcdext (mpz_ptr, mpz_ptr, mpz_ptr, mpz_srcptr, mpz_srcptr);
-
-
- double __gmpz_get_d (mpz_srcptr) __attribute__ ((__pure__));
-
-
- double __gmpz_get_d_2exp (signed long int *, mpz_srcptr);
-
-
- long int __gmpz_get_si (mpz_srcptr) noexcept __attribute__ ((__pure__));
-
-
- char *__gmpz_get_str (char *, int, mpz_srcptr);
-
-
-
- unsigned long int __gmpz_get_ui (mpz_srcptr) noexcept __attribute__ ((__pure__));
-
-
-
-
- mp_limb_t __gmpz_getlimbn (mpz_srcptr, mp_size_t) noexcept __attribute__ ((__pure__));
-
-
-
- mp_bitcnt_t __gmpz_hamdist (mpz_srcptr, mpz_srcptr) noexcept __attribute__ ((__pure__));
-
-
- void __gmpz_import (mpz_ptr, size_t, int, size_t, int, size_t, const void *);
-
-
- void __gmpz_init (mpz_ptr) noexcept;
-
-
- void __gmpz_init2 (mpz_ptr, mp_bitcnt_t);
-
-
- void __gmpz_inits (mpz_ptr, ...) noexcept;
-
-
- void __gmpz_init_set (mpz_ptr, mpz_srcptr);
-
-
- void __gmpz_init_set_d (mpz_ptr, double);
-
-
- void __gmpz_init_set_si (mpz_ptr, signed long int);
-
-
- int __gmpz_init_set_str (mpz_ptr, const char *, int);
-
-
- void __gmpz_init_set_ui (mpz_ptr, unsigned long int);
-
-
-
- size_t __gmpz_inp_raw (mpz_ptr, FILE *);
-
-
-
-
- size_t __gmpz_inp_str (mpz_ptr, FILE *, int);
-
-
-
- int __gmpz_invert (mpz_ptr, mpz_srcptr, mpz_srcptr);
-
-
- void __gmpz_ior (mpz_ptr, mpz_srcptr, mpz_srcptr);
-
-
- int __gmpz_jacobi (mpz_srcptr, mpz_srcptr) __attribute__ ((__pure__));
-
-
-
-
- int __gmpz_kronecker_si (mpz_srcptr, long) __attribute__ ((__pure__));
-
-
- int __gmpz_kronecker_ui (mpz_srcptr, unsigned long) __attribute__ ((__pure__));
-
-
- int __gmpz_si_kronecker (long, mpz_srcptr) __attribute__ ((__pure__));
-
-
- int __gmpz_ui_kronecker (unsigned long, mpz_srcptr) __attribute__ ((__pure__));
-
-
- void __gmpz_lcm (mpz_ptr, mpz_srcptr, mpz_srcptr);
-
-
- void __gmpz_lcm_ui (mpz_ptr, mpz_srcptr, unsigned long);
-
-
-
-
- void __gmpz_lucnum_ui (mpz_ptr, unsigned long int);
-
-
- void __gmpz_lucnum2_ui (mpz_ptr, mpz_ptr, unsigned long int);
-
-
- int __gmpz_millerrabin (mpz_srcptr, int) __attribute__ ((__pure__));
-
-
- void __gmpz_mod (mpz_ptr, mpz_srcptr, mpz_srcptr);
-
-
-
-
- void __gmpz_mul (mpz_ptr, mpz_srcptr, mpz_srcptr);
-
-
- void __gmpz_mul_2exp (mpz_ptr, mpz_srcptr, mp_bitcnt_t);
-
-
- void __gmpz_mul_si (mpz_ptr, mpz_srcptr, long int);
-
-
- void __gmpz_mul_ui (mpz_ptr, mpz_srcptr, unsigned long int);
-
-
-
- void __gmpz_neg (mpz_ptr, mpz_srcptr);
-
-
-
- void __gmpz_nextprime (mpz_ptr, mpz_srcptr);
-
-
-
- size_t __gmpz_out_raw (FILE *, mpz_srcptr);
-
-
-
-
- size_t __gmpz_out_str (FILE *, int, mpz_srcptr);
-
-
-
- int __gmpz_perfect_power_p (mpz_srcptr) __attribute__ ((__pure__));
-
-
-
- int __gmpz_perfect_square_p (mpz_srcptr) __attribute__ ((__pure__));
-
-
-
-
- mp_bitcnt_t __gmpz_popcount (mpz_srcptr) noexcept __attribute__ ((__pure__));
-
-
-
- void __gmpz_pow_ui (mpz_ptr, mpz_srcptr, unsigned long int);
-
-
- void __gmpz_powm (mpz_ptr, mpz_srcptr, mpz_srcptr, mpz_srcptr);
-
-
- void __gmpz_powm_sec (mpz_ptr, mpz_srcptr, mpz_srcptr, mpz_srcptr);
-
-
- void __gmpz_powm_ui (mpz_ptr, mpz_srcptr, unsigned long int, mpz_srcptr);
-
-
- int __gmpz_probab_prime_p (mpz_srcptr, int) __attribute__ ((__pure__));
-
-
- void __gmpz_random (mpz_ptr, mp_size_t);
-
-
- void __gmpz_random2 (mpz_ptr, mp_size_t);
-
-
- void __gmpz_realloc2 (mpz_ptr, mp_bitcnt_t);
-
-
- mp_bitcnt_t __gmpz_remove (mpz_ptr, mpz_srcptr, mpz_srcptr);
-
-
- int __gmpz_root (mpz_ptr, mpz_srcptr, unsigned long int);
-
-
- void __gmpz_rootrem (mpz_ptr, mpz_ptr, mpz_srcptr, unsigned long int);
-
-
- void __gmpz_rrandomb (mpz_ptr, gmp_randstate_t, mp_bitcnt_t);
-
-
- mp_bitcnt_t __gmpz_scan0 (mpz_srcptr, mp_bitcnt_t) noexcept __attribute__ ((__pure__));
-
-
- mp_bitcnt_t __gmpz_scan1 (mpz_srcptr, mp_bitcnt_t) noexcept __attribute__ ((__pure__));
-
-
- void __gmpz_set (mpz_ptr, mpz_srcptr);
-
-
- void __gmpz_set_d (mpz_ptr, double);
-
-
- void __gmpz_set_f (mpz_ptr, mpf_srcptr);
-
-
-
- void __gmpz_set_q (mpz_ptr, mpq_srcptr);
-
-
-
- void __gmpz_set_si (mpz_ptr, signed long int);
-
-
- int __gmpz_set_str (mpz_ptr, const char *, int);
-
-
- void __gmpz_set_ui (mpz_ptr, unsigned long int);
-
-
- void __gmpz_setbit (mpz_ptr, mp_bitcnt_t);
-
-
-
- size_t __gmpz_size (mpz_srcptr) noexcept __attribute__ ((__pure__));
-
-
-
- size_t __gmpz_sizeinbase (mpz_srcptr, int) noexcept __attribute__ ((__pure__));
-
-
- void __gmpz_sqrt (mpz_ptr, mpz_srcptr);
-
-
- void __gmpz_sqrtrem (mpz_ptr, mpz_ptr, mpz_srcptr);
-
-
- void __gmpz_sub (mpz_ptr, mpz_srcptr, mpz_srcptr);
-
-
- void __gmpz_sub_ui (mpz_ptr, mpz_srcptr, unsigned long int);
-
-
- void __gmpz_ui_sub (mpz_ptr, unsigned long int, mpz_srcptr);
-
-
- void __gmpz_submul (mpz_ptr, mpz_srcptr, mpz_srcptr);
-
-
- void __gmpz_submul_ui (mpz_ptr, mpz_srcptr, unsigned long int);
-
-
- void __gmpz_swap (mpz_ptr, mpz_ptr) noexcept;
-
-
- unsigned long int __gmpz_tdiv_ui (mpz_srcptr, unsigned long int) __attribute__ ((__pure__));
-
-
- void __gmpz_tdiv_q (mpz_ptr, mpz_srcptr, mpz_srcptr);
-
-
- void __gmpz_tdiv_q_2exp (mpz_ptr, mpz_srcptr, mp_bitcnt_t);
-
-
- unsigned long int __gmpz_tdiv_q_ui (mpz_ptr, mpz_srcptr, unsigned long int);
-
-
- void __gmpz_tdiv_qr (mpz_ptr, mpz_ptr, mpz_srcptr, mpz_srcptr);
-
-
- unsigned long int __gmpz_tdiv_qr_ui (mpz_ptr, mpz_ptr, mpz_srcptr, unsigned long int);
-
-
- void __gmpz_tdiv_r (mpz_ptr, mpz_srcptr, mpz_srcptr);
-
-
- void __gmpz_tdiv_r_2exp (mpz_ptr, mpz_srcptr, mp_bitcnt_t);
-
-
- unsigned long int __gmpz_tdiv_r_ui (mpz_ptr, mpz_srcptr, unsigned long int);
-
-
- int __gmpz_tstbit (mpz_srcptr, mp_bitcnt_t) noexcept __attribute__ ((__pure__));
-
-
- void __gmpz_ui_pow_ui (mpz_ptr, unsigned long int, unsigned long int);
-
-
- void __gmpz_urandomb (mpz_ptr, gmp_randstate_t, mp_bitcnt_t);
-
-
- void __gmpz_urandomm (mpz_ptr, gmp_randstate_t, mpz_srcptr);
-
-
-
- void __gmpz_xor (mpz_ptr, mpz_srcptr, mpz_srcptr);
-
-
- mp_srcptr __gmpz_limbs_read (mpz_srcptr);
-
-
- mp_ptr __gmpz_limbs_write (mpz_ptr, mp_size_t);
-
-
- mp_ptr __gmpz_limbs_modify (mpz_ptr, mp_size_t);
-
-
- void __gmpz_limbs_finish (mpz_ptr, mp_size_t);
-
-
- mpz_srcptr __gmpz_roinit_n (mpz_ptr, mp_srcptr, mp_size_t);
-
-
-
-
-
-
-
- void __gmpq_abs (mpq_ptr, mpq_srcptr);
-
-
-
- void __gmpq_add (mpq_ptr, mpq_srcptr, mpq_srcptr);
-
-
- void __gmpq_canonicalize (mpq_ptr);
-
-
- void __gmpq_clear (mpq_ptr);
-
-
- void __gmpq_clears (mpq_ptr, ...);
-
-
- int __gmpq_cmp (mpq_srcptr, mpq_srcptr) __attribute__ ((__pure__));
-
-
- int __gmpq_cmp_si (mpq_srcptr, long, unsigned long) __attribute__ ((__pure__));
-
-
- int __gmpq_cmp_ui (mpq_srcptr, unsigned long int, unsigned long int) __attribute__ ((__pure__));
-
-
- int __gmpq_cmp_z (mpq_srcptr, mpz_srcptr) __attribute__ ((__pure__));
-
-
- void __gmpq_div (mpq_ptr, mpq_srcptr, mpq_srcptr);
-
-
- void __gmpq_div_2exp (mpq_ptr, mpq_srcptr, mp_bitcnt_t);
-
-
- int __gmpq_equal (mpq_srcptr, mpq_srcptr) noexcept __attribute__ ((__pure__));
-
-
- void __gmpq_get_num (mpz_ptr, mpq_srcptr);
-
-
- void __gmpq_get_den (mpz_ptr, mpq_srcptr);
-
-
- double __gmpq_get_d (mpq_srcptr) __attribute__ ((__pure__));
-
-
- char *__gmpq_get_str (char *, int, mpq_srcptr);
-
-
- void __gmpq_init (mpq_ptr);
-
-
- void __gmpq_inits (mpq_ptr, ...);
-
-
-
- size_t __gmpq_inp_str (mpq_ptr, FILE *, int);
-
-
-
- void __gmpq_inv (mpq_ptr, mpq_srcptr);
-
-
- void __gmpq_mul (mpq_ptr, mpq_srcptr, mpq_srcptr);
-
-
- void __gmpq_mul_2exp (mpq_ptr, mpq_srcptr, mp_bitcnt_t);
-
-
-
- void __gmpq_neg (mpq_ptr, mpq_srcptr);
-
-
-
-
- size_t __gmpq_out_str (FILE *, int, mpq_srcptr);
-
-
-
- void __gmpq_set (mpq_ptr, mpq_srcptr);
-
-
- void __gmpq_set_d (mpq_ptr, double);
-
-
- void __gmpq_set_den (mpq_ptr, mpz_srcptr);
-
-
- void __gmpq_set_f (mpq_ptr, mpf_srcptr);
-
-
- void __gmpq_set_num (mpq_ptr, mpz_srcptr);
-
-
- void __gmpq_set_si (mpq_ptr, signed long int, unsigned long int);
-
-
- int __gmpq_set_str (mpq_ptr, const char *, int);
-
-
- void __gmpq_set_ui (mpq_ptr, unsigned long int, unsigned long int);
-
-
- void __gmpq_set_z (mpq_ptr, mpz_srcptr);
-
-
- void __gmpq_sub (mpq_ptr, mpq_srcptr, mpq_srcptr);
-
-
- void __gmpq_swap (mpq_ptr, mpq_ptr) noexcept;
-
-
-
-
-
- void __gmpf_abs (mpf_ptr, mpf_srcptr);
-
-
- void __gmpf_add (mpf_ptr, mpf_srcptr, mpf_srcptr);
-
-
- void __gmpf_add_ui (mpf_ptr, mpf_srcptr, unsigned long int);
-
- void __gmpf_ceil (mpf_ptr, mpf_srcptr);
-
-
- void __gmpf_clear (mpf_ptr);
-
-
- void __gmpf_clears (mpf_ptr, ...);
-
-
- int __gmpf_cmp (mpf_srcptr, mpf_srcptr) noexcept __attribute__ ((__pure__));
-
-
- int __gmpf_cmp_z (mpf_srcptr, mpz_srcptr) noexcept __attribute__ ((__pure__));
-
-
- int __gmpf_cmp_d (mpf_srcptr, double) __attribute__ ((__pure__));
-
-
- int __gmpf_cmp_si (mpf_srcptr, signed long int) noexcept __attribute__ ((__pure__));
-
-
- int __gmpf_cmp_ui (mpf_srcptr, unsigned long int) noexcept __attribute__ ((__pure__));
-
-
- void __gmpf_div (mpf_ptr, mpf_srcptr, mpf_srcptr);
-
-
- void __gmpf_div_2exp (mpf_ptr, mpf_srcptr, mp_bitcnt_t);
-
-
- void __gmpf_div_ui (mpf_ptr, mpf_srcptr, unsigned long int);
-
-
- void __gmpf_dump (mpf_srcptr);
-
-
- int __gmpf_eq (mpf_srcptr, mpf_srcptr, mp_bitcnt_t) __attribute__ ((__pure__));
-
-
- int __gmpf_fits_sint_p (mpf_srcptr) noexcept __attribute__ ((__pure__));
-
-
- int __gmpf_fits_slong_p (mpf_srcptr) noexcept __attribute__ ((__pure__));
-
-
- int __gmpf_fits_sshort_p (mpf_srcptr) noexcept __attribute__ ((__pure__));
-
-
- int __gmpf_fits_uint_p (mpf_srcptr) noexcept __attribute__ ((__pure__));
-
-
- int __gmpf_fits_ulong_p (mpf_srcptr) noexcept __attribute__ ((__pure__));
-
-
- int __gmpf_fits_ushort_p (mpf_srcptr) noexcept __attribute__ ((__pure__));
-
-
- void __gmpf_floor (mpf_ptr, mpf_srcptr);
-
-
- double __gmpf_get_d (mpf_srcptr) __attribute__ ((__pure__));
-
-
- double __gmpf_get_d_2exp (signed long int *, mpf_srcptr);
-
-
- mp_bitcnt_t __gmpf_get_default_prec (void) noexcept __attribute__ ((__pure__));
-
-
- mp_bitcnt_t __gmpf_get_prec (mpf_srcptr) noexcept __attribute__ ((__pure__));
-
-
- long __gmpf_get_si (mpf_srcptr) noexcept __attribute__ ((__pure__));
-
-
- char *__gmpf_get_str (char *, mp_exp_t *, int, size_t, mpf_srcptr);
-
-
- unsigned long __gmpf_get_ui (mpf_srcptr) noexcept __attribute__ ((__pure__));
-
-
- void __gmpf_init (mpf_ptr);
-
-
- void __gmpf_init2 (mpf_ptr, mp_bitcnt_t);
-
-
- void __gmpf_inits (mpf_ptr, ...);
-
-
- void __gmpf_init_set (mpf_ptr, mpf_srcptr);
-
-
- void __gmpf_init_set_d (mpf_ptr, double);
-
-
- void __gmpf_init_set_si (mpf_ptr, signed long int);
-
-
- int __gmpf_init_set_str (mpf_ptr, const char *, int);
-
-
- void __gmpf_init_set_ui (mpf_ptr, unsigned long int);
-
-
-
- size_t __gmpf_inp_str (mpf_ptr, FILE *, int);
-
-
-
- int __gmpf_integer_p (mpf_srcptr) noexcept __attribute__ ((__pure__));
-
-
- void __gmpf_mul (mpf_ptr, mpf_srcptr, mpf_srcptr);
-
-
- void __gmpf_mul_2exp (mpf_ptr, mpf_srcptr, mp_bitcnt_t);
-
-
- void __gmpf_mul_ui (mpf_ptr, mpf_srcptr, unsigned long int);
-
-
- void __gmpf_neg (mpf_ptr, mpf_srcptr);
-
-
-
- size_t __gmpf_out_str (FILE *, int, size_t, mpf_srcptr);
-
-
-
- void __gmpf_pow_ui (mpf_ptr, mpf_srcptr, unsigned long int);
-
-
- void __gmpf_random2 (mpf_ptr, mp_size_t, mp_exp_t);
-
-
- void __gmpf_reldiff (mpf_ptr, mpf_srcptr, mpf_srcptr);
-
-
- void __gmpf_set (mpf_ptr, mpf_srcptr);
-
-
- void __gmpf_set_d (mpf_ptr, double);
-
-
- void __gmpf_set_default_prec (mp_bitcnt_t) noexcept;
-
-
- void __gmpf_set_prec (mpf_ptr, mp_bitcnt_t);
-
-
- void __gmpf_set_prec_raw (mpf_ptr, mp_bitcnt_t) noexcept;
-
-
- void __gmpf_set_q (mpf_ptr, mpq_srcptr);
-
-
- void __gmpf_set_si (mpf_ptr, signed long int);
-
-
- int __gmpf_set_str (mpf_ptr, const char *, int);
-
-
- void __gmpf_set_ui (mpf_ptr, unsigned long int);
-
-
- void __gmpf_set_z (mpf_ptr, mpz_srcptr);
-
-
- size_t __gmpf_size (mpf_srcptr) noexcept __attribute__ ((__pure__));
-
-
- void __gmpf_sqrt (mpf_ptr, mpf_srcptr);
-
-
- void __gmpf_sqrt_ui (mpf_ptr, unsigned long int);
-
-
- void __gmpf_sub (mpf_ptr, mpf_srcptr, mpf_srcptr);
-
-
- void __gmpf_sub_ui (mpf_ptr, mpf_srcptr, unsigned long int);
-
-
- void __gmpf_swap (mpf_ptr, mpf_ptr) noexcept;
-
-
- void __gmpf_trunc (mpf_ptr, mpf_srcptr);
-
-
- void __gmpf_ui_div (mpf_ptr, unsigned long int, mpf_srcptr);
-
-
- void __gmpf_ui_sub (mpf_ptr, unsigned long int, mpf_srcptr);
-
-
- void __gmpf_urandomb (mpf_t, gmp_randstate_t, mp_bitcnt_t);
-# 1465 "/usr/include/x86_64-linux-gnu/gmp.h"
- mp_limb_t __gmpn_add (mp_ptr, mp_srcptr, mp_size_t, mp_srcptr, mp_size_t);
-
-
-
-
- mp_limb_t __gmpn_add_1 (mp_ptr, mp_srcptr, mp_size_t, mp_limb_t) noexcept;
-
-
-
- mp_limb_t __gmpn_add_n (mp_ptr, mp_srcptr, mp_srcptr, mp_size_t);
-
-
- mp_limb_t __gmpn_addmul_1 (mp_ptr, mp_srcptr, mp_size_t, mp_limb_t);
-
-
-
- int __gmpn_cmp (mp_srcptr, mp_srcptr, mp_size_t) noexcept __attribute__ ((__pure__));
-
-
-
-
- int __gmpn_zero_p (mp_srcptr, mp_size_t) noexcept __attribute__ ((__pure__));
-
-
-
- void __gmpn_divexact_1 (mp_ptr, mp_srcptr, mp_size_t, mp_limb_t);
-
-
-
-
-
- mp_limb_t __gmpn_divexact_by3c (mp_ptr, mp_srcptr, mp_size_t, mp_limb_t);
-
-
-
-
-
- mp_limb_t __gmpn_divrem (mp_ptr, mp_size_t, mp_ptr, mp_size_t, mp_srcptr, mp_size_t);
-
-
- mp_limb_t __gmpn_divrem_1 (mp_ptr, mp_size_t, mp_srcptr, mp_size_t, mp_limb_t);
-
-
- mp_limb_t __gmpn_divrem_2 (mp_ptr, mp_size_t, mp_ptr, mp_size_t, mp_srcptr);
-
-
- mp_limb_t __gmpn_div_qr_1 (mp_ptr, mp_limb_t *, mp_srcptr, mp_size_t, mp_limb_t);
-
-
- mp_limb_t __gmpn_div_qr_2 (mp_ptr, mp_ptr, mp_srcptr, mp_size_t, mp_srcptr);
-
-
- mp_size_t __gmpn_gcd (mp_ptr, mp_ptr, mp_size_t, mp_ptr, mp_size_t);
-
-
- mp_limb_t __gmpn_gcd_11 (mp_limb_t, mp_limb_t) __attribute__ ((__pure__));
-
-
- mp_limb_t __gmpn_gcd_1 (mp_srcptr, mp_size_t, mp_limb_t) __attribute__ ((__pure__));
-
-
- mp_limb_t __gmpn_gcdext_1 (mp_limb_signed_t *, mp_limb_signed_t *, mp_limb_t, mp_limb_t);
-
-
- mp_size_t __gmpn_gcdext (mp_ptr, mp_ptr, mp_size_t *, mp_ptr, mp_size_t, mp_ptr, mp_size_t);
-
-
- size_t __gmpn_get_str (unsigned char *, int, mp_ptr, mp_size_t);
-
-
- mp_bitcnt_t __gmpn_hamdist (mp_srcptr, mp_srcptr, mp_size_t) noexcept __attribute__ ((__pure__));
-
-
- mp_limb_t __gmpn_lshift (mp_ptr, mp_srcptr, mp_size_t, unsigned int);
-
-
- mp_limb_t __gmpn_mod_1 (mp_srcptr, mp_size_t, mp_limb_t) __attribute__ ((__pure__));
-
-
- mp_limb_t __gmpn_mul (mp_ptr, mp_srcptr, mp_size_t, mp_srcptr, mp_size_t);
-
-
- mp_limb_t __gmpn_mul_1 (mp_ptr, mp_srcptr, mp_size_t, mp_limb_t);
-
-
- void __gmpn_mul_n (mp_ptr, mp_srcptr, mp_srcptr, mp_size_t);
-
-
- void __gmpn_sqr (mp_ptr, mp_srcptr, mp_size_t);
-
-
-
- mp_limb_t __gmpn_neg (mp_ptr, mp_srcptr, mp_size_t);
-
-
-
- void __gmpn_com (mp_ptr, mp_srcptr, mp_size_t);
-
-
- int __gmpn_perfect_square_p (mp_srcptr, mp_size_t) __attribute__ ((__pure__));
-
-
- int __gmpn_perfect_power_p (mp_srcptr, mp_size_t) __attribute__ ((__pure__));
-
-
- mp_bitcnt_t __gmpn_popcount (mp_srcptr, mp_size_t) noexcept __attribute__ ((__pure__));
-
-
- mp_size_t __gmpn_pow_1 (mp_ptr, mp_srcptr, mp_size_t, mp_limb_t, mp_ptr);
-
-
-
- mp_limb_t __gmpn_preinv_mod_1 (mp_srcptr, mp_size_t, mp_limb_t, mp_limb_t) __attribute__ ((__pure__));
-
-
- void __gmpn_random (mp_ptr, mp_size_t);
-
-
- void __gmpn_random2 (mp_ptr, mp_size_t);
-
-
- mp_limb_t __gmpn_rshift (mp_ptr, mp_srcptr, mp_size_t, unsigned int);
-
-
- mp_bitcnt_t __gmpn_scan0 (mp_srcptr, mp_bitcnt_t) __attribute__ ((__pure__));
-
-
- mp_bitcnt_t __gmpn_scan1 (mp_srcptr, mp_bitcnt_t) __attribute__ ((__pure__));
-
-
- mp_size_t __gmpn_set_str (mp_ptr, const unsigned char *, size_t, int);
-
-
- size_t __gmpn_sizeinbase (mp_srcptr, mp_size_t, int);
-
-
- mp_size_t __gmpn_sqrtrem (mp_ptr, mp_ptr, mp_srcptr, mp_size_t);
-
-
-
- mp_limb_t __gmpn_sub (mp_ptr, mp_srcptr, mp_size_t, mp_srcptr, mp_size_t);
-
-
-
-
- mp_limb_t __gmpn_sub_1 (mp_ptr, mp_srcptr, mp_size_t, mp_limb_t) noexcept;
-
-
-
- mp_limb_t __gmpn_sub_n (mp_ptr, mp_srcptr, mp_srcptr, mp_size_t);
-
-
- mp_limb_t __gmpn_submul_1 (mp_ptr, mp_srcptr, mp_size_t, mp_limb_t);
-
-
- void __gmpn_tdiv_qr (mp_ptr, mp_ptr, mp_size_t, mp_srcptr, mp_size_t, mp_srcptr, mp_size_t);
-
-
- void __gmpn_and_n (mp_ptr, mp_srcptr, mp_srcptr, mp_size_t);
-
- void __gmpn_andn_n (mp_ptr, mp_srcptr, mp_srcptr, mp_size_t);
-
- void __gmpn_nand_n (mp_ptr, mp_srcptr, mp_srcptr, mp_size_t);
-
- void __gmpn_ior_n (mp_ptr, mp_srcptr, mp_srcptr, mp_size_t);
-
- void __gmpn_iorn_n (mp_ptr, mp_srcptr, mp_srcptr, mp_size_t);
-
- void __gmpn_nior_n (mp_ptr, mp_srcptr, mp_srcptr, mp_size_t);
-
- void __gmpn_xor_n (mp_ptr, mp_srcptr, mp_srcptr, mp_size_t);
-
- void __gmpn_xnor_n (mp_ptr, mp_srcptr, mp_srcptr, mp_size_t);
-
-
- void __gmpn_copyi (mp_ptr, mp_srcptr, mp_size_t);
-
- void __gmpn_copyd (mp_ptr, mp_srcptr, mp_size_t);
-
- void __gmpn_zero (mp_ptr, mp_size_t);
-
-
- mp_limb_t __gmpn_cnd_add_n (mp_limb_t, mp_ptr, mp_srcptr, mp_srcptr, mp_size_t);
-
- mp_limb_t __gmpn_cnd_sub_n (mp_limb_t, mp_ptr, mp_srcptr, mp_srcptr, mp_size_t);
-
-
- mp_limb_t __gmpn_sec_add_1 (mp_ptr, mp_srcptr, mp_size_t, mp_limb_t, mp_ptr);
-
- mp_size_t __gmpn_sec_add_1_itch (mp_size_t) __attribute__ ((__pure__));
-
-
- mp_limb_t __gmpn_sec_sub_1 (mp_ptr, mp_srcptr, mp_size_t, mp_limb_t, mp_ptr);
-
- mp_size_t __gmpn_sec_sub_1_itch (mp_size_t) __attribute__ ((__pure__));
-
-
- void __gmpn_cnd_swap (mp_limb_t, volatile mp_limb_t *, volatile mp_limb_t *, mp_size_t);
-
-
- void __gmpn_sec_mul (mp_ptr, mp_srcptr, mp_size_t, mp_srcptr, mp_size_t, mp_ptr);
-
- mp_size_t __gmpn_sec_mul_itch (mp_size_t, mp_size_t) __attribute__ ((__pure__));
-
-
- void __gmpn_sec_sqr (mp_ptr, mp_srcptr, mp_size_t, mp_ptr);
-
- mp_size_t __gmpn_sec_sqr_itch (mp_size_t) __attribute__ ((__pure__));
-
-
- void __gmpn_sec_powm (mp_ptr, mp_srcptr, mp_size_t, mp_srcptr, mp_bitcnt_t, mp_srcptr, mp_size_t, mp_ptr);
-
- mp_size_t __gmpn_sec_powm_itch (mp_size_t, mp_bitcnt_t, mp_size_t) __attribute__ ((__pure__));
-
-
- void __gmpn_sec_tabselect (volatile mp_limb_t *, volatile const mp_limb_t *, mp_size_t, mp_size_t, mp_size_t);
-
-
- mp_limb_t __gmpn_sec_div_qr (mp_ptr, mp_ptr, mp_size_t, mp_srcptr, mp_size_t, mp_ptr);
-
- mp_size_t __gmpn_sec_div_qr_itch (mp_size_t, mp_size_t) __attribute__ ((__pure__));
-
- void __gmpn_sec_div_r (mp_ptr, mp_size_t, mp_srcptr, mp_size_t, mp_ptr);
-
- mp_size_t __gmpn_sec_div_r_itch (mp_size_t, mp_size_t) __attribute__ ((__pure__));
-
-
- int __gmpn_sec_invert (mp_ptr, mp_ptr, mp_srcptr, mp_size_t, mp_bitcnt_t, mp_ptr);
-
- mp_size_t __gmpn_sec_invert_itch (mp_size_t) __attribute__ ((__pure__));
-# 1714 "/usr/include/x86_64-linux-gnu/gmp.h"
-extern __inline__ __attribute__ ((__gnu_inline__)) void
-__gmpz_abs (mpz_ptr __gmp_w, mpz_srcptr __gmp_u)
-{
-  if (__gmp_w != __gmp_u)
-    __gmpz_set (__gmp_w, __gmp_u);
-  __gmp_w->_mp_size = ((__gmp_w->_mp_size) >= 0 ? (__gmp_w->_mp_size) : -(__gmp_w->_mp_size));
-}
-# 1738 "/usr/include/x86_64-linux-gnu/gmp.h"
-extern __inline__ __attribute__ ((__gnu_inline__))
-
-int
-__gmpz_fits_uint_p (mpz_srcptr __gmp_z) noexcept
-{
-  mp_size_t __gmp_n = __gmp_z->_mp_size; mp_ptr __gmp_p = __gmp_z->_mp_d; return (__gmp_n == 0 || (__gmp_n == 1 && __gmp_p[0] <= 
-# 1743 "/usr/include/x86_64-linux-gnu/gmp.h" 3 4
- (0x7fffffff * 2U + 1U)
-# 1743 "/usr/include/x86_64-linux-gnu/gmp.h"
- ));;
-}
-
-
-
-
-extern __inline__ __attribute__ ((__gnu_inline__))
-
-int
-__gmpz_fits_ulong_p (mpz_srcptr __gmp_z) noexcept
-{
-  mp_size_t __gmp_n = __gmp_z->_mp_size; mp_ptr __gmp_p = __gmp_z->_mp_d; return (__gmp_n == 0 || (__gmp_n == 1 && __gmp_p[0] <= 
-# 1754 "/usr/include/x86_64-linux-gnu/gmp.h" 3 4
- (0x7fffffffffffffffL * 2UL + 1UL)
-# 1754 "/usr/include/x86_64-linux-gnu/gmp.h"
- ));;
-}
-
-
-
-
-extern __inline__ __attribute__ ((__gnu_inline__))
-
-int
-__gmpz_fits_ushort_p (mpz_srcptr __gmp_z) noexcept
-{
-  mp_size_t __gmp_n = __gmp_z->_mp_size; mp_ptr __gmp_p = __gmp_z->_mp_d; return (__gmp_n == 0 || (__gmp_n == 1 && __gmp_p[0] <= 
-# 1765 "/usr/include/x86_64-linux-gnu/gmp.h" 3 4
- (0x7fff * 2 + 1)
-# 1765 "/usr/include/x86_64-linux-gnu/gmp.h"
- ));;
-}
-
-
-
-
-extern __inline__ __attribute__ ((__gnu_inline__))
-
-unsigned long
-__gmpz_get_ui (mpz_srcptr __gmp_z) noexcept
-{
-  mp_ptr __gmp_p = __gmp_z->_mp_d;
-  mp_size_t __gmp_n = __gmp_z->_mp_size;
-  mp_limb_t __gmp_l = __gmp_p[0];
-
-
-
-
-
-
-  return (__gmp_n != 0 ? __gmp_l : 0);
-# 1794 "/usr/include/x86_64-linux-gnu/gmp.h"
-}
-
-
-
-
-extern __inline__ __attribute__ ((__gnu_inline__))
-
-mp_limb_t
-__gmpz_getlimbn (mpz_srcptr __gmp_z, mp_size_t __gmp_n) noexcept
-{
-  mp_limb_t __gmp_result = 0;
-  if (__builtin_expect ((__gmp_n >= 0 && __gmp_n < ((__gmp_z->_mp_size) >= 0 ? (__gmp_z->_mp_size) : -(__gmp_z->_mp_size))) != 0, 1))
-    __gmp_result = __gmp_z->_mp_d[__gmp_n];
-  return __gmp_result;
-}
-
-
-
-extern __inline__ __attribute__ ((__gnu_inline__)) void
-__gmpz_neg (mpz_ptr __gmp_w, mpz_srcptr __gmp_u)
-{
-  if (__gmp_w != __gmp_u)
-    __gmpz_set (__gmp_w, __gmp_u);
-  __gmp_w->_mp_size = - __gmp_w->_mp_size;
-}
-
-
-
-
-extern __inline__ __attribute__ ((__gnu_inline__))
-
-int
-__gmpz_perfect_square_p (mpz_srcptr __gmp_a)
-{
-  mp_size_t __gmp_asize;
-  int __gmp_result;
-
-  __gmp_asize = __gmp_a->_mp_size;
-  __gmp_result = (__gmp_asize >= 0);
-  if (__builtin_expect ((__gmp_asize > 0) != 0, 1))
-    __gmp_result = __gmpn_perfect_square_p (__gmp_a->_mp_d, __gmp_asize);
-  return __gmp_result;
-}
-
-
-
-
-extern __inline__ __attribute__ ((__gnu_inline__))
-
-mp_bitcnt_t
-__gmpz_popcount (mpz_srcptr __gmp_u) noexcept
-{
-  mp_size_t __gmp_usize;
-  mp_bitcnt_t __gmp_result;
-
-  __gmp_usize = __gmp_u->_mp_size;
-  __gmp_result = (__gmp_usize < 0 ? ~ (static_cast<mp_bitcnt_t> (0)) : (static_cast<mp_bitcnt_t> (0)));
-  if (__builtin_expect ((__gmp_usize > 0) != 0, 1))
-    __gmp_result = __gmpn_popcount (__gmp_u->_mp_d, __gmp_usize);
-  return __gmp_result;
-}
-
-
-
-
-extern __inline__ __attribute__ ((__gnu_inline__))
-
-void
-__gmpz_set_q (mpz_ptr __gmp_w, mpq_srcptr __gmp_u)
-{
-  __gmpz_tdiv_q (__gmp_w, (&((__gmp_u)->_mp_num)), (&((__gmp_u)->_mp_den)));
-}
-
-
-
-
-extern __inline__ __attribute__ ((__gnu_inline__))
-
-size_t
-__gmpz_size (mpz_srcptr __gmp_z) noexcept
-{
-  return ((__gmp_z->_mp_size) >= 0 ? (__gmp_z->_mp_size) : -(__gmp_z->_mp_size));
-}
-
-
-
-
-
-
-extern __inline__ __attribute__ ((__gnu_inline__)) void
-__gmpq_abs (mpq_ptr __gmp_w, mpq_srcptr __gmp_u)
-{
-  if (__gmp_w != __gmp_u)
-    __gmpq_set (__gmp_w, __gmp_u);
-  __gmp_w->_mp_num._mp_size = ((__gmp_w->_mp_num._mp_size) >= 0 ? (__gmp_w->_mp_num._mp_size) : -(__gmp_w->_mp_num._mp_size));
-}
-
-
-
-extern __inline__ __attribute__ ((__gnu_inline__)) void
-__gmpq_neg (mpq_ptr __gmp_w, mpq_srcptr __gmp_u)
-{
-  if (__gmp_w != __gmp_u)
-    __gmpq_set (__gmp_w, __gmp_u);
-  __gmp_w->_mp_num._mp_size = - __gmp_w->_mp_num._mp_size;
-}
-# 2136 "/usr/include/x86_64-linux-gnu/gmp.h"
-extern __inline__ __attribute__ ((__gnu_inline__))
-
-mp_limb_t
-__gmpn_add (mp_ptr __gmp_wp, mp_srcptr __gmp_xp, mp_size_t __gmp_xsize, mp_srcptr __gmp_yp, mp_size_t __gmp_ysize)
-{
-  mp_limb_t __gmp_c;
-  do { mp_size_t __gmp_i; mp_limb_t __gmp_x; __gmp_i = (__gmp_ysize); if (__gmp_i != 0) { if (__gmpn_add_n (__gmp_wp, __gmp_xp, __gmp_yp, __gmp_i)) { do { if (__gmp_i >= (__gmp_xsize)) { (__gmp_c) = 1; goto __gmp_done; } __gmp_x = (__gmp_xp)[__gmp_i]; } while ((((__gmp_wp)[__gmp_i++] = (__gmp_x + 1) & ((~ (static_cast<mp_limb_t> (0))) >> 0)) == 0)); } } if ((__gmp_wp) != (__gmp_xp)) do { mp_size_t __gmp_j; ; for (__gmp_j = (__gmp_i); __gmp_j < (__gmp_xsize); __gmp_j++) (__gmp_wp)[__gmp_j] = (__gmp_xp)[__gmp_j]; } while (0); (__gmp_c) = 0; __gmp_done: ; } while (0);
-  return __gmp_c;
-}
-
-
-
-
-extern __inline__ __attribute__ ((__gnu_inline__))
-
-mp_limb_t
-__gmpn_add_1 (mp_ptr __gmp_dst, mp_srcptr __gmp_src, mp_size_t __gmp_size, mp_limb_t __gmp_n) noexcept
-{
-  mp_limb_t __gmp_c;
-  do { mp_size_t __gmp_i; mp_limb_t __gmp_x, __gmp_r; __gmp_x = (__gmp_src)[0]; __gmp_r = __gmp_x + (__gmp_n); (__gmp_dst)[0] = __gmp_r; if (((__gmp_r) < ((__gmp_n)))) { (__gmp_c) = 1; for (__gmp_i = 1; __gmp_i < (__gmp_size);) { __gmp_x = (__gmp_src)[__gmp_i]; __gmp_r = __gmp_x + 1; (__gmp_dst)[__gmp_i] = __gmp_r; ++__gmp_i; if (!((__gmp_r) < (1))) { if ((__gmp_src) != (__gmp_dst)) do { mp_size_t __gmp_j; ; for (__gmp_j = (__gmp_i); __gmp_j < (__gmp_size); __gmp_j++) (__gmp_dst)[__gmp_j] = (__gmp_src)[__gmp_j]; } while (0); (__gmp_c) = 0; break; } } } else { if ((__gmp_src) != (__gmp_dst)) do { mp_size_t __gmp_j; ; for (__gmp_j = (1); __gmp_j < (__gmp_size); __gmp_j++) (__gmp_dst)[__gmp_j] = (__gmp_src)[__gmp_j]; } while (0); (__gmp_c) = 0; } } while (0);
-  return __gmp_c;
-}
-
-
-
-
-extern __inline__ __attribute__ ((__gnu_inline__))
-
-int
-__gmpn_cmp (mp_srcptr __gmp_xp, mp_srcptr __gmp_yp, mp_size_t __gmp_size) noexcept
-{
-  int __gmp_result;
-  do { mp_size_t __gmp_i; mp_limb_t __gmp_x, __gmp_y; (__gmp_result) = 0; __gmp_i = (__gmp_size); while (--__gmp_i >= 0) { __gmp_x = (__gmp_xp)[__gmp_i]; __gmp_y = (__gmp_yp)[__gmp_i]; if (__gmp_x != __gmp_y) { (__gmp_result) = (__gmp_x > __gmp_y ? 1 : -1); break; } } } while (0);
-  return __gmp_result;
-}
-
-
-
-
-extern __inline__ __attribute__ ((__gnu_inline__))
-
-int
-__gmpn_zero_p (mp_srcptr __gmp_p, mp_size_t __gmp_n) noexcept
-{
-
-    do {
-      if (__gmp_p[--__gmp_n] != 0)
- return 0;
-    } while (__gmp_n != 0);
-  return 1;
-}
-
-
-
-
-extern __inline__ __attribute__ ((__gnu_inline__))
-
-mp_limb_t
-__gmpn_sub (mp_ptr __gmp_wp, mp_srcptr __gmp_xp, mp_size_t __gmp_xsize, mp_srcptr __gmp_yp, mp_size_t __gmp_ysize)
-{
-  mp_limb_t __gmp_c;
-  do { mp_size_t __gmp_i; mp_limb_t __gmp_x; __gmp_i = (__gmp_ysize); if (__gmp_i != 0) { if (__gmpn_sub_n (__gmp_wp, __gmp_xp, __gmp_yp, __gmp_i)) { do { if (__gmp_i >= (__gmp_xsize)) { (__gmp_c) = 1; goto __gmp_done; } __gmp_x = (__gmp_xp)[__gmp_i]; } while ((((__gmp_wp)[__gmp_i++] = (__gmp_x - 1) & ((~ (static_cast<mp_limb_t> (0))) >> 0)), __gmp_x == 0)); } } if ((__gmp_wp) != (__gmp_xp)) do { mp_size_t __gmp_j; ; for (__gmp_j = (__gmp_i); __gmp_j < (__gmp_xsize); __gmp_j++) (__gmp_wp)[__gmp_j] = (__gmp_xp)[__gmp_j]; } while (0); (__gmp_c) = 0; __gmp_done: ; } while (0);
-  return __gmp_c;
-}
-
-
-
-
-extern __inline__ __attribute__ ((__gnu_inline__))
-
-mp_limb_t
-__gmpn_sub_1 (mp_ptr __gmp_dst, mp_srcptr __gmp_src, mp_size_t __gmp_size, mp_limb_t __gmp_n) noexcept
-{
-  mp_limb_t __gmp_c;
-  do { mp_size_t __gmp_i; mp_limb_t __gmp_x, __gmp_r; __gmp_x = (__gmp_src)[0]; __gmp_r = __gmp_x - (__gmp_n); (__gmp_dst)[0] = __gmp_r; if (((__gmp_x) < ((__gmp_n)))) { (__gmp_c) = 1; for (__gmp_i = 1; __gmp_i < (__gmp_size);) { __gmp_x = (__gmp_src)[__gmp_i]; __gmp_r = __gmp_x - 1; (__gmp_dst)[__gmp_i] = __gmp_r; ++__gmp_i; if (!((__gmp_x) < (1))) { if ((__gmp_src) != (__gmp_dst)) do { mp_size_t __gmp_j; ; for (__gmp_j = (__gmp_i); __gmp_j < (__gmp_size); __gmp_j++) (__gmp_dst)[__gmp_j] = (__gmp_src)[__gmp_j]; } while (0); (__gmp_c) = 0; break; } } } else { if ((__gmp_src) != (__gmp_dst)) do { mp_size_t __gmp_j; ; for (__gmp_j = (1); __gmp_j < (__gmp_size); __gmp_j++) (__gmp_dst)[__gmp_j] = (__gmp_src)[__gmp_j]; } while (0); (__gmp_c) = 0; } } while (0);
-  return __gmp_c;
-}
-
-
-
-
-extern __inline__ __attribute__ ((__gnu_inline__))
-
-mp_limb_t
-__gmpn_neg (mp_ptr __gmp_rp, mp_srcptr __gmp_up, mp_size_t __gmp_n)
-{
-  while (*__gmp_up == 0)
-    {
-      *__gmp_rp = 0;
-      if (!--__gmp_n)
- return 0;
-      ++__gmp_up; ++__gmp_rp;
-    }
-
-  *__gmp_rp = (- *__gmp_up) & ((~ (static_cast<mp_limb_t> (0))) >> 0);
-
-  if (--__gmp_n)
-    __gmpn_com (++__gmp_rp, ++__gmp_up, __gmp_n);
-
-  return 1;
-}
-
-
-
-}
-# 2285 "/usr/include/x86_64-linux-gnu/gmp.h"
- std::ostream& operator<< (std::ostream &, mpz_srcptr);
- std::ostream& operator<< (std::ostream &, mpq_srcptr);
- std::ostream& operator<< (std::ostream &, mpf_srcptr);
- std::istream& operator>> (std::istream &, mpz_ptr);
- std::istream& operator>> (std::istream &, mpq_ptr);
- std::istream& operator>> (std::istream &, mpf_ptr);
-# 2316 "/usr/include/x86_64-linux-gnu/gmp.h"
-enum
-{
-  GMP_ERROR_NONE = 0,
-  GMP_ERROR_UNSUPPORTED_ARGUMENT = 1,
-  GMP_ERROR_DIVISION_BY_ZERO = 2,
-  GMP_ERROR_SQRT_OF_NEGATIVE = 4,
-  GMP_ERROR_INVALID_ARGUMENT = 8
-};
-# 145 "/tools/Xilinx/Vitis_HLS/2022.1/include/floating_point_v7_0_bitacc_cmodel.h" 2
-
-
-
-
-# 1 "/tools/Xilinx/Vitis_HLS/2022.1/include/mpfr.h" 1
-# 74 "/tools/Xilinx/Vitis_HLS/2022.1/include/mpfr.h"
-typedef void mpfr_void;
-typedef int mpfr_int;
-typedef unsigned int mpfr_uint;
-typedef long mpfr_long;
-typedef unsigned long mpfr_ulong;
-typedef size_t mpfr_size_t;
-# 96 "/tools/Xilinx/Vitis_HLS/2022.1/include/mpfr.h"
-typedef enum {
-  MPFR_RNDN=0,
-  MPFR_RNDZ,
-  MPFR_RNDU,
-  MPFR_RNDD,
-  MPFR_RNDA,
-  MPFR_RNDF,
-  MPFR_RNDNA=-1
-} mpfr_rnd_t;
-# 131 "/tools/Xilinx/Vitis_HLS/2022.1/include/mpfr.h"
-typedef long mpfr_prec_t;
-typedef unsigned long mpfr_uprec_t;
-# 144 "/tools/Xilinx/Vitis_HLS/2022.1/include/mpfr.h"
-typedef int mpfr_sign_t;
-
-
-typedef mp_exp_t mpfr_exp_t;
-
-
-
-
-
-
-typedef struct {
-  mpfr_prec_t _mpfr_prec;
-  mpfr_sign_t _mpfr_sign;
-  mpfr_exp_t _mpfr_exp;
-  mp_limb_t *_mpfr_d;
-} __mpfr_struct;
-# 180 "/tools/Xilinx/Vitis_HLS/2022.1/include/mpfr.h"
-typedef __mpfr_struct mpfr_t[1];
-typedef __mpfr_struct *mpfr_ptr;
-typedef __gmp_const __mpfr_struct *mpfr_srcptr;
-# 193 "/tools/Xilinx/Vitis_HLS/2022.1/include/mpfr.h"
-typedef enum {
-  MPFR_NAN_KIND = 0,
-  MPFR_INF_KIND = 1, MPFR_ZERO_KIND = 2, MPFR_REGULAR_KIND = 3
-} mpfr_kind_t;
-# 242 "/tools/Xilinx/Vitis_HLS/2022.1/include/mpfr.h"
-extern "C" {
-
-
- __gmp_const char * mpfr_get_version (void);
- __gmp_const char * mpfr_get_patches (void);
- int mpfr_buildopt_tls_p (void);
- int mpfr_buildopt_decimal_p (void);
-
- mpfr_exp_t mpfr_get_emin (void);
- int mpfr_set_emin (mpfr_exp_t);
- mpfr_exp_t mpfr_get_emin_min (void);
- mpfr_exp_t mpfr_get_emin_max (void);
- mpfr_exp_t mpfr_get_emax (void);
- int mpfr_set_emax (mpfr_exp_t);
- mpfr_exp_t mpfr_get_emax_min (void);
- mpfr_exp_t mpfr_get_emax_max (void);
-
- void mpfr_set_default_rounding_mode (mpfr_rnd_t);
- mpfr_rnd_t mpfr_get_default_rounding_mode (void);
- __gmp_const char *
-   mpfr_print_rnd_mode (mpfr_rnd_t);
-
- void mpfr_clear_flags (void);
- void mpfr_clear_underflow (void);
- void mpfr_clear_overflow (void);
- void mpfr_clear_nanflag (void);
- void mpfr_clear_inexflag (void);
- void mpfr_clear_erangeflag (void);
-
- void mpfr_set_underflow (void);
- void mpfr_set_overflow (void);
- void mpfr_set_nanflag (void);
- void mpfr_set_inexflag (void);
- void mpfr_set_erangeflag (void);
-
- int mpfr_underflow_p (void);
- int mpfr_overflow_p (void);
- int mpfr_nanflag_p (void);
- int mpfr_inexflag_p (void);
- int mpfr_erangeflag_p (void);
-
- int
-  mpfr_check_range (mpfr_ptr, int, mpfr_rnd_t);
-
- void mpfr_init2 (mpfr_ptr, mpfr_prec_t);
- void mpfr_init (mpfr_ptr);
- void mpfr_clear (mpfr_ptr);
-
- void
-  mpfr_inits2 (mpfr_prec_t, mpfr_ptr, ...) __attribute__ ((sentinel));
- void
-  mpfr_inits (mpfr_ptr, ...) __attribute__ ((sentinel));
- void
-  mpfr_clears (mpfr_ptr, ...) __attribute__ ((sentinel));
-
- int
-  mpfr_prec_round (mpfr_ptr, mpfr_prec_t, mpfr_rnd_t);
- int
-  mpfr_can_round (mpfr_srcptr, mpfr_exp_t, mpfr_rnd_t, mpfr_rnd_t, mpfr_prec_t)
-                                            ;
- mpfr_prec_t mpfr_min_prec (mpfr_srcptr);
-
- mpfr_exp_t mpfr_get_exp (mpfr_srcptr);
- int mpfr_set_exp (mpfr_ptr, mpfr_exp_t);
- mpfr_prec_t mpfr_get_prec (mpfr_srcptr);
- void mpfr_set_prec (mpfr_ptr, mpfr_prec_t);
- void mpfr_set_prec_raw (mpfr_ptr, mpfr_prec_t);
- void mpfr_set_default_prec (mpfr_prec_t);
- mpfr_prec_t mpfr_get_default_prec (void);
-
- int mpfr_set_d (mpfr_ptr, double, mpfr_rnd_t);
- int mpfr_set_flt (mpfr_ptr, float, mpfr_rnd_t);
-
-
-
-
- int
-  mpfr_set_ld (mpfr_ptr, long double, mpfr_rnd_t);
- int
-  mpfr_set_z (mpfr_ptr, mpz_srcptr, mpfr_rnd_t);
- int
-  mpfr_set_z_2exp (mpfr_ptr, mpz_srcptr, mpfr_exp_t, mpfr_rnd_t);
- void mpfr_set_nan (mpfr_ptr);
- void mpfr_set_inf (mpfr_ptr, int);
- void mpfr_set_zero (mpfr_ptr, int);
- int
-  mpfr_set_f (mpfr_ptr, mpf_srcptr, mpfr_rnd_t);
- int
-  mpfr_get_f (mpf_ptr, mpfr_srcptr, mpfr_rnd_t);
- int mpfr_set_si (mpfr_ptr, long, mpfr_rnd_t);
- int
-  mpfr_set_ui (mpfr_ptr, unsigned long, mpfr_rnd_t);
- int
-  mpfr_set_si_2exp (mpfr_ptr, long, mpfr_exp_t, mpfr_rnd_t);
- int
-  mpfr_set_ui_2exp (mpfr_ptr,unsigned long,mpfr_exp_t,mpfr_rnd_t);
- int
-  mpfr_set_q (mpfr_ptr, mpq_srcptr, mpfr_rnd_t);
- int
-  mpfr_set_str (mpfr_ptr, __gmp_const char *, int, mpfr_rnd_t);
- int
-  mpfr_init_set_str (mpfr_ptr, __gmp_const char *, int, mpfr_rnd_t)
-                                              ;
- int
-  mpfr_set4 (mpfr_ptr, mpfr_srcptr, mpfr_rnd_t, int);
- int
-  mpfr_abs (mpfr_ptr, mpfr_srcptr, mpfr_rnd_t);
- int
-  mpfr_set (mpfr_ptr, mpfr_srcptr, mpfr_rnd_t);
- int mpfr_neg (mpfr_ptr, mpfr_srcptr, mpfr_rnd_t);
- int mpfr_signbit (mpfr_srcptr);
- int
-  mpfr_setsign (mpfr_ptr, mpfr_srcptr, int, mpfr_rnd_t);
- int
-  mpfr_copysign (mpfr_ptr, mpfr_srcptr, mpfr_srcptr, mpfr_rnd_t);
-# 365 "/tools/Xilinx/Vitis_HLS/2022.1/include/mpfr.h"
- int __gmpfr_set_sj (mpfr_t, intmax_t, mpfr_rnd_t);
- int
-  __gmpfr_set_sj_2exp (mpfr_t, intmax_t, intmax_t, mpfr_rnd_t);
- int __gmpfr_set_uj (mpfr_t, uintmax_t, mpfr_rnd_t);
- int
-  __gmpfr_set_uj_2exp (mpfr_t, uintmax_t, intmax_t, mpfr_rnd_t);
- intmax_t __gmpfr_mpfr_get_sj (mpfr_srcptr, mpfr_rnd_t);
- uintmax_t __gmpfr_mpfr_get_uj (mpfr_srcptr, mpfr_rnd_t);
-
-
- mpfr_exp_t mpfr_get_z_2exp (mpz_ptr, mpfr_srcptr);
- float mpfr_get_flt (mpfr_srcptr, mpfr_rnd_t);
- double mpfr_get_d (mpfr_srcptr, mpfr_rnd_t);
-
-
-
-
- long double mpfr_get_ld (mpfr_srcptr, mpfr_rnd_t)
-                                                                  ;
- double mpfr_get_d1 (mpfr_srcptr);
- double mpfr_get_d_2exp (long*, mpfr_srcptr, mpfr_rnd_t)
-                                                                 ;
- long double mpfr_get_ld_2exp (long*, mpfr_srcptr, mpfr_rnd_t)
-                                                                       ;
- long mpfr_get_si (mpfr_srcptr, mpfr_rnd_t);
- unsigned long mpfr_get_ui (mpfr_srcptr, mpfr_rnd_t)
-                                                                    ;
- char*mpfr_get_str (char*, mpfr_exp_t*, int, size_t, mpfr_srcptr, mpfr_rnd_t)
-                                                                         ;
- int mpfr_get_z (mpz_ptr z, mpfr_srcptr f, mpfr_rnd_t)
-                                                         ;
-
- void mpfr_free_str (char *);
-
- int mpfr_urandom (mpfr_ptr, gmp_randstate_t, mpfr_rnd_t)
-                                                           ;
- int mpfr_urandomb (mpfr_ptr, gmp_randstate_t);
-
- void mpfr_nextabove (mpfr_ptr);
- void mpfr_nextbelow (mpfr_ptr);
- void mpfr_nexttoward (mpfr_ptr, mpfr_srcptr);
-
-
-
-
- size_t __gmpfr_inp_str (mpfr_ptr, FILE*, int, mpfr_rnd_t)
-                                                              ;
- size_t __gmpfr_out_str (FILE*, int, size_t, mpfr_srcptr, mpfr_rnd_t)
-                                                                           ;
-
- int __gmpfr_fprintf (FILE*, __gmp_const char*, ...)
-                                                    ;
-
- int mpfr_printf (__gmp_const char*, ...);
- int mpfr_asprintf (char**, __gmp_const char*, ...)
-                                                     ;
- int mpfr_sprintf (char*, __gmp_const char*, ...)
-                                                    ;
- int mpfr_snprintf (char*, size_t, __gmp_const char*, ...)
-                                                                        ;
-# 445 "/tools/Xilinx/Vitis_HLS/2022.1/include/mpfr.h"
- int mpfr_pow (mpfr_ptr, mpfr_srcptr, mpfr_srcptr, mpfr_rnd_t)
-                                                                    ;
- int mpfr_pow_si (mpfr_ptr, mpfr_srcptr, long int, mpfr_rnd_t)
-                                                                    ;
- int mpfr_pow_ui (mpfr_ptr, mpfr_srcptr, unsigned long int, mpfr_rnd_t)
-                                                                             ;
- int mpfr_ui_pow_ui (mpfr_ptr, unsigned long int, unsigned long int, mpfr_rnd_t)
-                                                                            ;
- int mpfr_ui_pow (mpfr_ptr, unsigned long int, mpfr_srcptr, mpfr_rnd_t)
-                                                                       ;
- int mpfr_pow_z (mpfr_ptr, mpfr_srcptr, mpz_srcptr, mpfr_rnd_t)
-                                                                     ;
-
- int mpfr_sqrt (mpfr_ptr, mpfr_srcptr, mpfr_rnd_t)
-                                                        ;
- int mpfr_sqrt_ui (mpfr_ptr, unsigned long, mpfr_rnd_t)
-                                                           ;
- int mpfr_rec_sqrt (mpfr_ptr, mpfr_srcptr, mpfr_rnd_t)
-                                                            ;
-
- int mpfr_add (mpfr_ptr, mpfr_srcptr, mpfr_srcptr, mpfr_rnd_t)
-                                                                    ;
- int mpfr_sub (mpfr_ptr, mpfr_srcptr, mpfr_srcptr, mpfr_rnd_t)
-                                                                    ;
- int mpfr_mul (mpfr_ptr, mpfr_srcptr, mpfr_srcptr, mpfr_rnd_t)
-                                                                    ;
- int mpfr_div (mpfr_ptr, mpfr_srcptr, mpfr_srcptr, mpfr_rnd_t)
-                                                                    ;
-
- int mpfr_add_ui (mpfr_ptr, mpfr_srcptr, unsigned long, mpfr_rnd_t)
-                                                                         ;
- int mpfr_sub_ui (mpfr_ptr, mpfr_srcptr, unsigned long, mpfr_rnd_t)
-                                                                         ;
- int mpfr_ui_sub (mpfr_ptr, unsigned long, mpfr_srcptr, mpfr_rnd_t)
-                                                                       ;
- int mpfr_mul_ui (mpfr_ptr, mpfr_srcptr, unsigned long, mpfr_rnd_t)
-                                                                         ;
- int mpfr_div_ui (mpfr_ptr, mpfr_srcptr, unsigned long, mpfr_rnd_t)
-                                                                         ;
- int mpfr_ui_div (mpfr_ptr, unsigned long, mpfr_srcptr, mpfr_rnd_t)
-                                                                       ;
-
- int mpfr_add_si (mpfr_ptr, mpfr_srcptr, long int, mpfr_rnd_t)
-                                                                    ;
- int mpfr_sub_si (mpfr_ptr, mpfr_srcptr, long int, mpfr_rnd_t)
-                                                                    ;
- int mpfr_si_sub (mpfr_ptr, long int, mpfr_srcptr, mpfr_rnd_t)
-                                                                       ;
- int mpfr_mul_si (mpfr_ptr, mpfr_srcptr, long int, mpfr_rnd_t)
-                                                                    ;
- int mpfr_div_si (mpfr_ptr, mpfr_srcptr, long int, mpfr_rnd_t)
-                                                                    ;
- int mpfr_si_div (mpfr_ptr, long int, mpfr_srcptr, mpfr_rnd_t)
-                                                                       ;
-
- int mpfr_add_d (mpfr_ptr, mpfr_srcptr, double, mpfr_rnd_t)
-                                                                  ;
- int mpfr_sub_d (mpfr_ptr, mpfr_srcptr, double, mpfr_rnd_t)
-                                                                  ;
- int mpfr_d_sub (mpfr_ptr, double, mpfr_srcptr, mpfr_rnd_t)
-                                                                       ;
- int mpfr_mul_d (mpfr_ptr, mpfr_srcptr, double, mpfr_rnd_t)
-                                                                  ;
- int mpfr_div_d (mpfr_ptr, mpfr_srcptr, double, mpfr_rnd_t)
-                                                                  ;
- int mpfr_d_div (mpfr_ptr, double, mpfr_srcptr, mpfr_rnd_t)
-                                                                       ;
-
- int mpfr_sqr (mpfr_ptr, mpfr_srcptr,mpfr_rnd_t);
-
- int mpfr_const_pi (mpfr_ptr, mpfr_rnd_t);
- int mpfr_const_log2 (mpfr_ptr, mpfr_rnd_t);
- int mpfr_const_euler (mpfr_ptr, mpfr_rnd_t);
- int mpfr_const_catalan (mpfr_ptr, mpfr_rnd_t);
-
- int mpfr_agm (mpfr_ptr, mpfr_srcptr, mpfr_srcptr, mpfr_rnd_t)
-                                                       ;
-
- int mpfr_log (mpfr_ptr, mpfr_srcptr,mpfr_rnd_t);
- int mpfr_log2 (mpfr_ptr,mpfr_srcptr,mpfr_rnd_t);
- int mpfr_log10 (mpfr_ptr, mpfr_srcptr, mpfr_rnd_t)
-                                                         ;
- int mpfr_log1p (mpfr_ptr, mpfr_srcptr, mpfr_rnd_t)
-                                                         ;
-
- int mpfr_exp (mpfr_ptr, mpfr_srcptr,mpfr_rnd_t);
- int mpfr_exp2 (mpfr_ptr,mpfr_srcptr,mpfr_rnd_t);
- int mpfr_exp10 (mpfr_ptr, mpfr_srcptr, mpfr_rnd_t)
-                                                         ;
- int mpfr_expm1 (mpfr_ptr, mpfr_srcptr, mpfr_rnd_t)
-                                                         ;
- int mpfr_eint (mpfr_ptr,mpfr_srcptr,mpfr_rnd_t);
- int mpfr_li2 (mpfr_ptr,mpfr_srcptr,mpfr_rnd_t);
-
- int mpfr_cmp (mpfr_srcptr, mpfr_srcptr);
- int mpfr_cmp3 (mpfr_srcptr, mpfr_srcptr, int);
- int mpfr_cmp_d (mpfr_srcptr, double);
- int mpfr_cmp_ld (mpfr_srcptr, long double);
- int mpfr_cmpabs (mpfr_srcptr, mpfr_srcptr);
- int mpfr_cmp_ui (mpfr_srcptr, unsigned long);
- int mpfr_cmp_si (mpfr_srcptr, long);
- int mpfr_cmp_ui_2exp (mpfr_srcptr, unsigned long, mpfr_exp_t)
-                                                               ;
- int mpfr_cmp_si_2exp (mpfr_srcptr, long, mpfr_exp_t)
-                                                               ;
- void mpfr_reldiff (mpfr_ptr, mpfr_srcptr, mpfr_srcptr, mpfr_rnd_t)
-                                                                         ;
- int mpfr_eq (mpfr_srcptr, mpfr_srcptr, unsigned long)
-                                                        ;
- int mpfr_sgn (mpfr_srcptr);
-
- int mpfr_mul_2exp (mpfr_ptr, mpfr_srcptr, unsigned long, mpfr_rnd_t)
-                                                                           ;
- int mpfr_div_2exp (mpfr_ptr, mpfr_srcptr, unsigned long, mpfr_rnd_t)
-                                                                           ;
- int mpfr_mul_2ui (mpfr_ptr, mpfr_srcptr, unsigned long, mpfr_rnd_t)
-                                                                          ;
- int mpfr_div_2ui (mpfr_ptr, mpfr_srcptr, unsigned long, mpfr_rnd_t)
-                                                                          ;
- int mpfr_mul_2si (mpfr_ptr, mpfr_srcptr, long, mpfr_rnd_t)
-                                                                 ;
- int mpfr_div_2si (mpfr_ptr, mpfr_srcptr, long, mpfr_rnd_t)
-                                                                 ;
-
- int mpfr_rint (mpfr_ptr,mpfr_srcptr, mpfr_rnd_t);
- int mpfr_round (mpfr_ptr, mpfr_srcptr);
- int mpfr_trunc (mpfr_ptr, mpfr_srcptr);
- int mpfr_ceil (mpfr_ptr, mpfr_srcptr);
- int mpfr_floor (mpfr_ptr, mpfr_srcptr);
- int mpfr_rint_round (mpfr_ptr, mpfr_srcptr, mpfr_rnd_t)
-                                                              ;
- int mpfr_rint_trunc (mpfr_ptr, mpfr_srcptr, mpfr_rnd_t)
-                                                              ;
- int mpfr_rint_ceil (mpfr_ptr, mpfr_srcptr, mpfr_rnd_t)
-                                                             ;
- int mpfr_rint_floor (mpfr_ptr, mpfr_srcptr, mpfr_rnd_t)
-                                                              ;
- int mpfr_frac (mpfr_ptr,mpfr_srcptr,mpfr_rnd_t);
- int mpfr_modf (mpfr_ptr, mpfr_ptr, mpfr_srcptr, mpfr_rnd_t)
-                                                              ;
- int mpfr_remquo (mpfr_ptr, long*, mpfr_srcptr, mpfr_srcptr, mpfr_rnd_t)
-                                                                       ;
- int mpfr_remainder (mpfr_ptr, mpfr_srcptr, mpfr_srcptr, mpfr_rnd_t)
-                                                                          ;
- int mpfr_fmod (mpfr_ptr, mpfr_srcptr, mpfr_srcptr, mpfr_rnd_t)
-                                                                          ;
-
- int mpfr_fits_ulong_p (mpfr_srcptr, mpfr_rnd_t);
- int mpfr_fits_slong_p (mpfr_srcptr, mpfr_rnd_t);
- int mpfr_fits_uint_p (mpfr_srcptr, mpfr_rnd_t);
- int mpfr_fits_sint_p (mpfr_srcptr, mpfr_rnd_t);
- int mpfr_fits_ushort_p (mpfr_srcptr, mpfr_rnd_t);
- int mpfr_fits_sshort_p (mpfr_srcptr, mpfr_rnd_t);
- int mpfr_fits_uintmax_p (mpfr_srcptr,mpfr_rnd_t);
- int mpfr_fits_intmax_p (mpfr_srcptr, mpfr_rnd_t);
-
- void mpfr_extract (mpz_ptr, mpfr_srcptr, unsigned int)
-                                                              ;
- void mpfr_swap (mpfr_ptr, mpfr_ptr);
- void mpfr_dump (mpfr_srcptr);
-
- int mpfr_nan_p (mpfr_srcptr);
- int mpfr_inf_p (mpfr_srcptr);
- int mpfr_number_p (mpfr_srcptr);
- int mpfr_integer_p (mpfr_srcptr);
- int mpfr_zero_p (mpfr_srcptr);
- int mpfr_regular_p (mpfr_srcptr);
-
- int mpfr_greater_p (mpfr_srcptr, mpfr_srcptr);
- int mpfr_greaterequal_p (mpfr_srcptr, mpfr_srcptr)
-                                                                   ;
- int mpfr_less_p (mpfr_srcptr, mpfr_srcptr);
- int mpfr_lessequal_p (mpfr_srcptr, mpfr_srcptr);
- int mpfr_lessgreater_p (mpfr_srcptr,mpfr_srcptr);
- int mpfr_equal_p (mpfr_srcptr, mpfr_srcptr);
- int mpfr_unordered_p (mpfr_srcptr, mpfr_srcptr);
-
- int mpfr_atanh (mpfr_ptr,mpfr_srcptr,mpfr_rnd_t);
- int mpfr_acosh (mpfr_ptr,mpfr_srcptr,mpfr_rnd_t);
- int mpfr_asinh (mpfr_ptr,mpfr_srcptr,mpfr_rnd_t);
- int mpfr_cosh (mpfr_ptr,mpfr_srcptr, mpfr_rnd_t);
- int mpfr_sinh (mpfr_ptr,mpfr_srcptr, mpfr_rnd_t);
- int mpfr_tanh (mpfr_ptr,mpfr_srcptr, mpfr_rnd_t);
- int mpfr_sinh_cosh (mpfr_ptr, mpfr_ptr, mpfr_srcptr, mpfr_rnd_t)
-                                                                        ;
-
- int mpfr_sech (mpfr_ptr, mpfr_srcptr,mpfr_rnd_t);
- int mpfr_csch (mpfr_ptr, mpfr_srcptr,mpfr_rnd_t);
- int mpfr_coth (mpfr_ptr, mpfr_srcptr,mpfr_rnd_t);
-
- int mpfr_acos (mpfr_ptr,mpfr_srcptr,mpfr_rnd_t);
- int mpfr_asin (mpfr_ptr,mpfr_srcptr,mpfr_rnd_t);
- int mpfr_atan (mpfr_ptr,mpfr_srcptr,mpfr_rnd_t);
- int mpfr_sin (mpfr_ptr, mpfr_srcptr,mpfr_rnd_t);
- int mpfr_sin_cos (mpfr_ptr, mpfr_ptr, mpfr_srcptr, mpfr_rnd_t)
-                                                                        ;
- int mpfr_cos (mpfr_ptr, mpfr_srcptr,mpfr_rnd_t);
- int mpfr_tan (mpfr_ptr, mpfr_srcptr,mpfr_rnd_t);
- int mpfr_atan2 (mpfr_ptr,mpfr_srcptr,mpfr_srcptr, mpfr_rnd_t)
-                                                         ;
- int mpfr_sec (mpfr_ptr, mpfr_srcptr,mpfr_rnd_t);
- int mpfr_csc (mpfr_ptr, mpfr_srcptr,mpfr_rnd_t);
- int mpfr_cot (mpfr_ptr, mpfr_srcptr,mpfr_rnd_t);
-
- int mpfr_hypot (mpfr_ptr, mpfr_srcptr, mpfr_srcptr, mpfr_rnd_t)
-                                                                      ;
- int mpfr_erf (mpfr_ptr, mpfr_srcptr,mpfr_rnd_t);
- int mpfr_erfc (mpfr_ptr, mpfr_srcptr,mpfr_rnd_t);
- int mpfr_cbrt (mpfr_ptr,mpfr_srcptr,mpfr_rnd_t);
- int mpfr_root (mpfr_ptr,mpfr_srcptr,unsigned long,mpfr_rnd_t);
- int mpfr_gamma (mpfr_ptr,mpfr_srcptr,mpfr_rnd_t);
- int mpfr_lngamma (mpfr_ptr,mpfr_srcptr,mpfr_rnd_t);
- int mpfr_lgamma (mpfr_ptr,int*,mpfr_srcptr,mpfr_rnd_t);
- int mpfr_digamma (mpfr_ptr,mpfr_srcptr,mpfr_rnd_t);
- int mpfr_zeta (mpfr_ptr,mpfr_srcptr,mpfr_rnd_t);
- int mpfr_zeta_ui (mpfr_ptr,unsigned long,mpfr_rnd_t);
- int mpfr_fac_ui (mpfr_ptr, unsigned long int, mpfr_rnd_t)
-                                                          ;
- int mpfr_j0 (mpfr_ptr, mpfr_srcptr, mpfr_rnd_t);
- int mpfr_j1 (mpfr_ptr, mpfr_srcptr, mpfr_rnd_t);
- int mpfr_jn (mpfr_ptr, long, mpfr_srcptr, mpfr_rnd_t)
-                                                      ;
- int mpfr_y0 (mpfr_ptr, mpfr_srcptr, mpfr_rnd_t);
- int mpfr_y1 (mpfr_ptr, mpfr_srcptr, mpfr_rnd_t);
- int mpfr_yn (mpfr_ptr, long, mpfr_srcptr, mpfr_rnd_t)
-                                                      ;
-
- int mpfr_ai (mpfr_ptr, mpfr_srcptr, mpfr_rnd_t);
-
- int mpfr_min (mpfr_ptr, mpfr_srcptr, mpfr_srcptr, mpfr_rnd_t)
-                                                       ;
- int mpfr_max (mpfr_ptr, mpfr_srcptr, mpfr_srcptr, mpfr_rnd_t)
-                                                       ;
- int mpfr_dim (mpfr_ptr, mpfr_srcptr, mpfr_srcptr, mpfr_rnd_t)
-                                                       ;
-
- int mpfr_mul_z (mpfr_ptr, mpfr_srcptr, mpz_srcptr, mpfr_rnd_t)
-                                                                     ;
- int mpfr_div_z (mpfr_ptr, mpfr_srcptr, mpz_srcptr, mpfr_rnd_t)
-                                                                     ;
- int mpfr_add_z (mpfr_ptr, mpfr_srcptr, mpz_srcptr, mpfr_rnd_t)
-                                                                     ;
- int mpfr_sub_z (mpfr_ptr, mpfr_srcptr, mpz_srcptr, mpfr_rnd_t)
-                                                                     ;
- int mpfr_cmp_z (mpfr_srcptr, mpz_srcptr);
-
- int mpfr_mul_q (mpfr_ptr, mpfr_srcptr, mpq_srcptr, mpfr_rnd_t)
-                                                                     ;
- int mpfr_div_q (mpfr_ptr, mpfr_srcptr, mpq_srcptr, mpfr_rnd_t)
-                                                                     ;
- int mpfr_add_q (mpfr_ptr, mpfr_srcptr, mpq_srcptr, mpfr_rnd_t)
-                                                                     ;
- int mpfr_sub_q (mpfr_ptr, mpfr_srcptr, mpq_srcptr, mpfr_rnd_t)
-                                                                     ;
- int mpfr_cmp_q (mpfr_srcptr, mpq_srcptr);
-
- int mpfr_cmp_f (mpfr_srcptr, mpf_srcptr);
-
- int mpfr_fma (mpfr_ptr, mpfr_srcptr, mpfr_srcptr, mpfr_srcptr, mpfr_rnd_t)
-                                                                    ;
- int mpfr_fms (mpfr_ptr, mpfr_srcptr, mpfr_srcptr, mpfr_srcptr, mpfr_rnd_t)
-                                                                    ;
- int mpfr_sum (mpfr_ptr, mpfr_ptr *__gmp_const, unsigned long, mpfr_rnd_t)
-                                                                      ;
-
- void mpfr_free_cache (void);
-
- int mpfr_subnormalize (mpfr_ptr, int, mpfr_rnd_t)
-                                                                 ;
-
- int mpfr_strtofr (mpfr_ptr, __gmp_const char *, char **, int, mpfr_rnd_t)
-                                                                          ;
-
- size_t mpfr_custom_get_size (mpfr_prec_t);
- void mpfr_custom_init (void *, mpfr_prec_t);
- void * mpfr_custom_get_significand (mpfr_srcptr);
- mpfr_exp_t mpfr_custom_get_exp (mpfr_srcptr);
- void mpfr_custom_move (mpfr_ptr, void *);
- void mpfr_custom_init_set (mpfr_ptr, int, mpfr_exp_t, mpfr_prec_t, void *)
-                                                                              ;
- int mpfr_custom_get_kind (mpfr_srcptr);
-
-
-}
-# 150 "/tools/Xilinx/Vitis_HLS/2022.1/include/floating_point_v7_0_bitacc_cmodel.h" 2
-
-
-
+# 153 "/tools/Xilinx/Vitis_HLS/2022.1/include/floating_point_v7_0_bitacc_cmodel.h"
 typedef long xip_fpo_prec_t;
 
 
@@ -61362,7 +61349,7 @@ inline bool operator!=(
 }
 # 412 "/tools/Xilinx/Vitis_HLS/2022.1/include/ap_fixed.h" 2
 # 407 "/tools/Xilinx/Vitis_HLS/2022.1/include/ap_int.h" 2
-# 2 "/home/ubuntu/fsic_fpga/vivado/vitis_prj/hls_userdma/userdma.h" 2
+# 10 "/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma/userdma.h" 2
 # 1 "/tools/Xilinx/Vitis_HLS/2022.1/include/ap_axi_sdata.h" 1
 # 87 "/tools/Xilinx/Vitis_HLS/2022.1/include/ap_axi_sdata.h"
 # 1 "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/climits" 1 3
@@ -61525,7 +61512,7 @@ template <std::size_t WData> struct qdma_axis<WData, 0, 0, 0> {
     return *this;
   }
 };
-# 3 "/home/ubuntu/fsic_fpga/vivado/vitis_prj/hls_userdma/userdma.h" 2
+# 11 "/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma/userdma.h" 2
 # 1 "/tools/Xilinx/Vitis_HLS/2022.1/include/hls_stream.h" 1
 # 61 "/tools/Xilinx/Vitis_HLS/2022.1/include/hls_stream.h"
 # 1 "/tools/Xilinx/Vitis_HLS/2022.1/include/hls_stream_thread_unsafe.h" 1
@@ -74966,31 +74953,34 @@ public:
 
 }
 # 62 "/tools/Xilinx/Vitis_HLS/2022.1/include/hls_stream.h" 2
-# 4 "/home/ubuntu/fsic_fpga/vivado/vitis_prj/hls_userdma/userdma.h" 2
+# 12 "/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma/userdma.h" 2
 
 
 
 
-typedef ap_axiu<32, 7, 0, 0> trans_pkt;
 
-void userdma(hls::stream<trans_pkt >& inStreamTop,
-    bool *s2m_buf_sts,
-    bool s2m_sts_clear,
-    ap_uint<32> s2m_len,
-    ap_uint<1> s2m_enb_clrsts,
-    ap_uint<32> s2mbuf[360*160],
-    ap_uint<2> *s2m_err,
-    ap_uint<32> Img_width,
-    ap_uint<32> m2sbuf[360*160],
-    bool *m2s_buf_sts,
-    bool m2s_sts_clear,
-    int m2s_len,
-    ap_uint<1> m2s_enb_clrsts,
-    hls::stream<trans_pkt >& outStreamTop);
+typedef ap_axiu<32, 2, 0, 0> trans_pkt;
 
+typedef union {
+  double fpr;
+  struct {
+   unsigned int lower;
+   unsigned int upper;
+   } uin;
+  } memcell;
+
+void userdma(
+  hls::stream<trans_pkt> &inStreamTop,
+  hls::stream<trans_pkt> &outStreamTop,
+  ap_uint<2> kernel_mode,
+  bool *s2m_buf_sts,
+  bool *m2s_buf_sts,
+  memcell s2mbuf[1024],
+  memcell m2sbuf[1024],
+  ap_uint<2> *s2m_err);
 
 static constexpr int MAX_BURST_LENGTH = 16;
-static constexpr int BUFFER_FACTOR = 64;
+static constexpr int BUFFER_FACTOR = 2;
 
 
 static constexpr int DATA_DEPTH = MAX_BURST_LENGTH * BUFFER_FACTOR;
@@ -75003,151 +74993,268 @@ struct data {
 
 struct out_data {
  ap_int<32> data_filed;
- ap_int<7> upsb;
+ ap_int<2> upsb;
  ap_int<1> last;
 };
-# 2 "/home/ubuntu/fsic_fpga/vivado/vitis_prj/hls_userdma/userdma_test.cpp" 2
+# 2 "/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma/userdma_test.cpp" 2
+# 1 "/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma/test_data.h" 1
+
+static const uint16_t NTT_in[] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 196, 197, 198, 199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255, 256, 257, 258, 259, 260, 261, 262, 263, 264, 265, 266, 267, 268, 269, 270, 271, 272, 273, 274, 275, 276, 277, 278, 279, 280, 281, 282, 283, 284, 285, 286, 287, 288, 289, 290, 291, 292, 293, 294, 295, 296, 297, 298, 299, 300, 301, 302, 303, 304, 305, 306, 307, 308, 309, 310, 311, 312, 313, 314, 315, 316, 317, 318, 319, 320, 321, 322, 323, 324, 325, 326, 327, 328, 329, 330, 331, 332, 333, 334, 335, 336, 337, 338, 339, 340, 341, 342, 343, 344, 345, 346, 347, 348, 349, 350, 351, 352, 353, 354, 355, 356, 357, 358, 359, 360, 361, 362, 363, 364, 365, 366, 367, 368, 369, 370, 371, 372, 373, 374, 375, 376, 377, 378, 379, 380, 381, 382, 383, 384, 385, 386, 387, 388, 389, 390, 391, 392, 393, 394, 395, 396, 397, 398, 399, 400, 401, 402, 403, 404, 405, 406, 407, 408, 409, 410, 411, 412, 413, 414, 415, 416, 417, 418, 419, 420, 421, 422, 423, 424, 425, 426, 427, 428, 429, 430, 431, 432, 433, 434, 435, 436, 437, 438, 439, 440, 441, 442, 443, 444, 445, 446, 447, 448, 449, 450, 451, 452, 453, 454, 455, 456, 457, 458, 459, 460, 461, 462, 463, 464, 465, 466, 467, 468, 469, 470, 471, 472, 473, 474, 475, 476, 477, 478, 479, 480, 481, 482, 483, 484, 485, 486, 487, 488, 489, 490, 491, 492, 493, 494, 495, 496, 497, 498, 499, 500, 501, 502, 503, 504, 505, 506, 507, 508, 509, 510, 511, 512, 513, 514, 515, 516, 517, 518, 519, 520, 521, 522, 523, 524, 525, 526, 527, 528, 529, 530, 531, 532, 533, 534, 535, 536, 537, 538, 539, 540, 541, 542, 543, 544, 545, 546, 547, 548, 549, 550, 551, 552, 553, 554, 555, 556, 557, 558, 559, 560, 561, 562, 563, 564, 565, 566, 567, 568, 569, 570, 571, 572, 573, 574, 575, 576, 577, 578, 579, 580, 581, 582, 583, 584, 585, 586, 587, 588, 589, 590, 591, 592, 593, 594, 595, 596, 597, 598, 599, 600, 601, 602, 603, 604, 605, 606, 607, 608, 609, 610, 611, 612, 613, 614, 615, 616, 617, 618, 619, 620, 621, 622, 623, 624, 625, 626, 627, 628, 629, 630, 631, 632, 633, 634, 635, 636, 637, 638, 639, 640, 641, 642, 643, 644, 645, 646, 647, 648, 649, 650, 651, 652, 653, 654, 655, 656, 657, 658, 659, 660, 661, 662, 663, 664, 665, 666, 667, 668, 669, 670, 671, 672, 673, 674, 675, 676, 677, 678, 679, 680, 681, 682, 683, 684, 685, 686, 687, 688, 689, 690, 691, 692, 693, 694, 695, 696, 697, 698, 699, 700, 701, 702, 703, 704, 705, 706, 707, 708, 709, 710, 711, 712, 713, 714, 715, 716, 717, 718, 719, 720, 721, 722, 723, 724, 725, 726, 727, 728, 729, 730, 731, 732, 733, 734, 735, 736, 737, 738, 739, 740, 741, 742, 743, 744, 745, 746, 747, 748, 749, 750, 751, 752, 753, 754, 755, 756, 757, 758, 759, 760, 761, 762, 763, 764, 765, 766, 767, 768, 769, 770, 771, 772, 773, 774, 775, 776, 777, 778, 779, 780, 781, 782, 783, 784, 785, 786, 787, 788, 789, 790, 791, 792, 793, 794, 795, 796, 797, 798, 799, 800, 801, 802, 803, 804, 805, 806, 807, 808, 809, 810, 811, 812, 813, 814, 815, 816, 817, 818, 819, 820, 821, 822, 823, 824, 825, 826, 827, 828, 829, 830, 831, 832, 833, 834, 835, 836, 837, 838, 839, 840, 841, 842, 843, 844, 845, 846, 847, 848, 849, 850, 851, 852, 853, 854, 855, 856, 857, 858, 859, 860, 861, 862, 863, 864, 865, 866, 867, 868, 869, 870, 871, 872, 873, 874, 875, 876, 877, 878, 879, 880, 881, 882, 883, 884, 885, 886, 887, 888, 889, 890, 891, 892, 893, 894, 895, 896, 897, 898, 899, 900, 901, 902, 903, 904, 905, 906, 907, 908, 909, 910, 911, 912, 913, 914, 915, 916, 917, 918, 919, 920, 921, 922, 923, 924, 925, 926, 927, 928, 929, 930, 931, 932, 933, 934, 935, 936, 937, 938, 939, 940, 941, 942, 943, 944, 945, 946, 947, 948, 949, 950, 951, 952, 953, 954, 955, 956, 957, 958, 959, 960, 961, 962, 963, 964, 965, 966, 967, 968, 969, 970, 971, 972, 973, 974, 975, 976, 977, 978, 979, 980, 981, 982, 983, 984, 985, 986, 987, 988, 989, 990, 991, 992, 993, 994, 995, 996, 997, 998, 999, 1000, 1001, 1002, 1003, 1004, 1005, 1006, 1007, 1008, 1009, 1010, 1011, 1012, 1013, 1014, 1015, 1016, 1017, 1018, 1019, 1020, 1021, 1022, 1023};
+static const uint16_t NTT_out[] = {11436, 2816, 10436, 2523, 6525, 9420, 6666, 11263, 3079, 6734, 4705, 9067, 1032, 10817, 4531, 10967, 3186, 11171, 7805, 10868, 10392, 8004, 4575, 6794, 338, 8738, 5120, 3541, 10471, 6944, 7558, 9251, 8276, 4997, 10111, 7051, 4738, 8769, 9227, 4258, 10308, 9229, 9706, 10006, 4004, 7149, 7972, 9341, 11639, 10833, 10122, 4401, 11328, 5299, 4239, 3367, 7123, 1935, 9219, 6199, 6036, 7904, 11446, 4186, 1714, 6060, 3320, 482, 4365, 6781, 2712, 1839, 686, 5415, 5631, 12222, 10984, 281, 896, 2078, 7509, 11293, 11264, 10054, 4737, 9939, 7009, 1240, 9316, 9117, 6024, 7582, 4797, 5281, 3194, 11199, 4524, 11711, 10413, 5764, 10657, 10179, 8710, 4178, 5544, 2027, 4186, 8600, 4522, 1540, 9629, 12161, 1015, 2570, 1, 5580, 4601, 9937, 5844, 4731, 11628, 4431, 2722, 8190, 8686, 7360, 3590, 10524, 1639, 7113, 9039, 11697, 9300, 4641, 9365, 9580, 9658, 9214, 1597, 8864, 12185, 4643, 9117, 10773, 9898, 2566, 7447, 6744, 7312, 5970, 12042, 1282, 10400, 11928, 2802, 9578, 7631, 4659, 8113, 7257, 11691, 8312, 5221, 10396, 4111, 4834, 8025, 6750, 4631, 2724, 328, 11970, 8872, 8578, 12141, 794, 434, 345, 3412, 2525, 3766, 925, 3950, 424, 6624, 10784, 7627, 5942, 3294, 8632, 7525, 6693, 8260, 4987, 2301, 6723, 11987, 10063, 105, 394, 5764, 5522, 4916, 11575, 10409, 2674, 1255, 1006, 8382, 6599, 2068, 2637, 175, 8298, 1588, 3366, 5207, 3193, 8498, 8472, 6104, 9835, 11033, 2628, 9317, 9069, 3566, 10461, 9947, 1367, 9696, 7549, 4567, 814, 2477, 766, 9526, 2757, 3674, 11708, 5281, 8429, 10823, 2272, 3267, 8644, 9183, 3410, 11584, 3147, 11002, 7720, 7707, 4621, 7522, 8121, 67, 9044, 10422, 9081, 3861, 2949, 922, 4923, 9769, 9360, 1498, 11514, 4072, 3908, 1942, 10538, 10889, 851, 1990, 8255, 10700, 616, 9012, 3377, 2939, 2808, 4240, 4981, 5685, 2878, 926, 3730, 401, 11420, 7940, 10111, 8231, 7809, 3840, 1679, 6194, 7822, 9841, 7070, 4573, 3106, 2567, 1410, 3646, 3211, 9551, 8911, 8430, 8141, 278, 12129, 6786, 1838, 11403, 6257, 6435, 700, 1022, 4954, 8263, 1778, 5703, 9010, 9212, 1539, 5000, 12071, 4702, 6569, 8639, 6817, 10012, 2885, 4846, 11118, 3189, 847, 3693, 1308, 9170, 1878, 3404, 2826, 11604, 11875, 5060, 11608, 10588, 10, 4260, 289, 7324, 6545, 6198, 7691, 10955, 310, 6480, 6843, 3514, 263, 9966, 10781, 6576, 6772, 4871, 11072, 9949, 8867, 3843, 61, 10778, 6031, 8620, 8560, 12160, 5379, 11773, 348, 2055, 10529, 6197, 5408, 12210, 8819, 11079, 10470, 7183, 10234, 3179, 11187, 4601, 5030, 6122, 1302, 10355, 10456, 10709, 5858, 3110, 102, 7027, 11304, 2536, 106, 1634, 3503, 445, 2798, 4960, 9397, 1034, 12088, 1974, 3104, 10735, 7047, 9850, 2456, 10154, 11712, 1533, 7371, 4398, 1944, 48, 8859, 9298, 222, 5753, 8478, 4234, 2259, 8801, 420, 6249, 6683, 6023, 1237, 559, 5824, 3706, 10463, 599, 8224, 6296, 6389, 9705, 4873, 9349, 1533, 7237, 9928, 1785, 5717, 6648, 9532, 9374, 5192, 1521, 12117, 11644, 2362, 11664, 736, 2216, 6070, 9346, 9373, 4406, 93, 3490, 10173, 10662, 6821, 7077, 9104, 3008, 5513, 11117, 3595, 340, 4424, 8943, 9814, 11273, 4309, 6443, 7945, 1961, 6813, 10296, 5008, 7047, 11828, 3389, 6110, 9556, 9280, 4, 623, 4800, 4150, 7296, 6388, 4998, 5237, 7549, 10705, 1285, 9604, 1100, 11127, 7501, 3601, 4543, 12270, 6041, 9551, 3249, 10715, 5805, 3977, 9079, 2933, 10368, 7924, 634, 7118, 12037, 1742, 4232, 7654, 5679, 4939, 5379, 3019, 10811, 1724, 7859, 5890, 6276, 8327, 8052, 1998, 9972, 4604, 3890, 3491, 10646, 10981, 810, 1635, 6982, 4071, 571, 861, 7221, 9781, 1923, 11075, 4443, 8155, 1515, 7127, 5035, 8877, 2506, 11853, 1308, 10343, 8264, 1687, 7437, 5091, 1386, 11790, 5036, 12004, 10764, 1433, 11439, 9568, 8120, 9057, 10952, 792, 4011, 7796, 471, 5572, 11402, 1001, 8258, 4749, 1303, 3741, 8602, 12064, 5106, 11102, 9115, 8695, 8585, 870, 10987, 9242, 8513, 11367, 10551, 8739, 10770, 9286, 7314, 5989, 7251, 1940, 10748, 10771, 10555, 8285, 4382, 7191, 10772, 6666, 4209, 5700, 11997, 4354, 12096, 6259, 1521, 3724, 7185, 4977, 10798, 4085, 4104, 5430, 2573, 7470, 3665, 3134, 1082, 6672, 10460, 8291, 5635, 1157, 4361, 10989, 7844, 6403, 2386, 9791, 3119, 1213, 10403, 7210, 498, 9288, 3248, 2799, 6678, 7126, 1952, 532, 5471, 3755, 9607, 9930, 9745, 4662, 541, 12123, 10805, 3846, 1633, 8166, 2229, 6979, 9074, 3564, 8988, 2191, 10290, 5230, 5448, 11627, 5269, 2864, 2090, 6093, 1701, 9485, 8865, 9587, 10115, 6583, 6209, 2705, 9830, 10768, 10483, 9491, 9100, 8924, 1940, 1342, 11390, 11939, 342, 3346, 473, 1934, 7882, 3528, 1576, 6868, 6003, 208, 8818, 3896, 9284, 9260, 7671, 2261, 7617, 3404, 1553, 5109, 1075, 9135, 10842, 9260, 6747, 11363, 9083, 2806, 3033, 7613, 6633, 8646, 4205, 6657, 5937, 2592, 5029, 2983, 2474, 3827, 1948, 7963, 2641, 5902, 9068, 9128, 4241, 8263, 4124, 271, 11677, 5682, 3938, 12285, 5605, 1388, 1250, 6713, 11605, 6731, 11008, 10095, 4463, 8907, 10737, 4806, 4720, 10754, 3841, 3095, 8306, 3450, 7381, 7013, 67, 7921, 5339, 4144, 10053, 7785, 3219, 10345, 6470, 3778, 3699, 1848, 3549, 6598, 6044, 7282, 1956, 7919, 8486, 2640, 11517, 9573, 5065, 1424, 1882, 8715, 8790, 1817, 11546, 7727, 1752, 8558, 10560, 10623, 8488, 11101, 12161, 106, 1386, 8694, 6865, 8608, 9421, 3300, 2055, 7500, 10958, 1550, 329, 7750, 11006, 2437, 2592, 6496, 9093, 10735, 302, 8040, 10847, 12153, 10256, 4365, 10429, 2124, 61, 5058, 7256, 1628, 9643, 5612, 1030, 6862, 604, 8494, 5462, 595, 6090, 6142, 9525, 9594, 3593, 9783, 7997, 2473, 6259, 11145, 11267, 8856, 4374, 6501, 11684, 10734, 3991, 12281, 8966, 4021, 5625, 11676, 2747, 10010, 7541, 9090, 531, 6715, 4000, 3178, 10859, 778, 6706, 9540, 6092, 1357, 7883, 10080, 7232, 11120, 11520, 6662, 9810, 7478, 7061, 6954, 8710, 3422, 10868, 4592, 10522, 1034, 191, 2524, 8222, 7589, 12240, 5915, 9713, 3562, 7005, 5394, 3144, 2433, 8840, 10635, 65, 10124, 11123, 2915, 2216, 9131, 5935, 7040, 2149, 1457, 950, 1018, 5868, 12270, 563, 4461, 5716, 637, 6440, 5328, 4935, 4568, 5397, 10704, 8520, 2227, 5474, 18, 4299, 3115, 10454, 4755, 4794, 2822, 3214, 661, 8841, 1355, 5965, 2431, 9181, 8317, 12184, 3575, 6661, 11978, 11065, 5141, 3679, 3867, 6668, 3127, 5412, 9237, 9218, 7709, 9930, 4576, 10688, 8576, 7721, 10869, 12155, 2575, 9245, 745, 3880, 9840, 2330, 5756, 5663, 2231, 11518, 9698, 227, 7051, 10888, 8620, 8278, 4391, 8755, 8457, 12162, 4242, 432, 6048, 345, 11205, 3073, 6634, 622, 5280, 4155, 1922, 3584, 8705};
+static const double f_adj[]={2.0000000000000004, -0.9999999999999978, 1.000000000000002, -1.9999999999999964, 0.9999999999999964, -1.999999999999995, -1.999999999999998, -3.552713678800501e-15, 5.000000000000004, -2.1094237467877974e-15, -1.0000000000000029, -1.0000000000000002, 3.0, 2.0000000000000036, 1.1102230246251565e-15, 1.5543122344752192e-15, 5.999999999999999, -1.9999999999999962, 2.000000000000003, -4.9999999999999964, 0.9999999999999976, -1.0000000000000036, -5.000000000000005, 2.000000000000003, -3.9999999999999982, 1.0000000000000018, 2.000000000000001, 3.9999999999999964, -5.999999999999999, -1.9999999999999962, -1.9999999999999973, 4.9999999999999885, 5.999999999999999, -1.0000000000000018, 2.000000000000002, 2.0000000000000018, 1.9999999999999987, 3.0000000000000018, 4.000000000000001, 5.000000000000011, -4.999999999999998, -2.9999999999999964, 1.9999999999999973, -3.999999999999993, 6.661338147750939e-16, 2.9999999999999982, 0.9999999999999973, -3.9999999999999982, 4.000000000000003, 5.10702591327572e-15, 0.9999999999999969, -6.999999999999995, -4.9999999999999964, -2.0000000000000013, 3.0000000000000013, 4.440892098500626e-16, -2.0000000000000027, -5.0, 1.0000000000000022, -0.999999999999994, -0.9999999999999964, -5.000000000000002, 5.999999999999996, 2.0000000000000036, -1.999999999999996, -3.9999999999999987, 2.9999999999999947, 0.9999999999999992, -5.10702591327572e-15, -2.4424906541753444e-15, -3.0000000000000018, -3.0000000000000018, -1.9999999999999982, -1.0000000000000033, -1.0000000000000062, -1.9999999999999951, -1.000000000000001, 3.0, -0.9999999999999976, -4.9999999999999964, 2.000000000000001, 0.9999999999999982, -0.9999999999999967, 1.0000000000000044, 0.9999999999999972, -1.9999999999999958, -3.0, 3.000000000000001, 3.000000000000001, 3.999999999999999, -1.9999999999999982, -1.0000000000000053, 1.9999999999999987, -3.0000000000000018, 0.9999999999999982, -4.000000000000002, -1.0000000000000036, 1.0000000000000053, -2.0000000000000018, -3.000000000000008, -4.440892098500626e-16, 2.0000000000000018, -6.661338147750939e-15, -2.9999999999999996, -4.999999999999999, -1.0000000000000007, -4.00000000000001, 5.000000000000004, 4.999999999999995, -1.999999999999996, -1.9999999999999933, 4.000000000000002, 1.0000000000000029, -0.9999999999999973, -0.9999999999999956, 1.9999999999999956, 1.0000000000000044, -7.999999999999996, 1.9999999999999993, -6.999999999999995, 0.9999999999999953, 1.9999999999999971, 0.0, -0.9999999999999964, -2.9999999999999964, -3.9999999999999964, 0.9999999999999951, 1.0, 5.000000000000002, -1.7763568394002505e-15, -2.000000000000006, 3.9999999999999973, -5.999999999999999, 0.9999999999999967, -1.9984014443252818e-15, -2.000000000000001, -6.000000000000001, -4.000000000000001, -4.0, 0.9999999999999997, -4.000000000000002, -1.0000000000000004, 4.000000000000003, -10.0, 4.999999999999998, 3.000000000000005, -0.999999999999997, 1.4432899320127035e-15, -4.000000000000002, 2.0000000000000067, 6.000000000000002, -2.0, 6.000000000000005, 0.9999999999999973, 1.5543122344752192e-15, -1.9999999999999996, -2.0000000000000027, 2.9999999999999964, -4.000000000000005, 1.0000000000000016, -1.9999999999999991, -3.1086244689504383e-15, -8.881784197001252e-16, 3.999999999999998, 0.9999999999999998, 1.0000000000000024, 3.3306690738754696e-15, -2.000000000000001, 1.4432899320127035e-15, 1.0000000000000009, 0.9999999999999993, 2.999999999999994, 3.0000000000000027, 5.0, 7.0, 2.0000000000000018, -5.000000000000001, -4.0, -2.000000000000002, 2.9999999999999987, -4.999999999999998, 2.000000000000001, 2.0000000000000036, 0.9999999999999978, -6.2727600891321345e-15, -1.9999999999999978, -4.218847493575595e-15, 1.9999999999999998, 5.999999999999998, -2.0000000000000027, 1.000000000000007, 4.218847493575595e-15, 1.9999999999999982, -0.999999999999998, 1.0000000000000009, -2.000000000000003, 0.0, -4.9999999999999964, -3.0531133177191805e-15, 8.659739592076221e-15, -1.3322676295501878e-15, -1.9999999999999991, 4.000000000000003, -0.9999999999999949, -0.9999999999999925, -5.000000000000001, -4.000000000000004, -1.0000000000000036, -4.052314039881821e-15, 2.000000000000003, 1.999999999999997, 0.999999999999996, 2.0000000000000036, 3.999999999999998, 5.9999999999999964, -6.661338147750939e-15, 4.0000000000000036, 2.0000000000000027, 4.000000000000002, 3.0000000000000036, -4.000000000000007, -0.999999999999998, -0.9999999999999982, 4.000000000000003, 2.0000000000000027, 0.9999999999999981, -3.999999999999999, -2.999999999999996, -1.9999999999999984, 4.0, -4.000000000000001, -3.999999999999998, -2.999999999999995, -9.992007221626409e-16, -3.999999999999994, -0.999999999999999, -1.3322676295501878e-15, 3.552713678800501e-15, -0.9999999999999971, -1.0000000000000009, -2.9999999999999987, 1.0000000000000036, 1.9999999999999996, -0.9999999999999933, 0.9999999999999978, 0.9999999999999991, 1.1102230246251565e-15, -4.000000000000001, -6.000000000000002, -1.000000000000003, -1.0000000000000053, 5.999999999999998, -1.9999999999999976, 1.0000000000000013, 2.000000000000007, 2.0000000000000018, -2.4424906541753444e-15, 3.9999999999999956, 4.000000000000002, -4.6629367034256575e-15, 2.0000000000000004, -2.0000000000000027, 2.0000000000000018, 3.999999999999999, 1.0000000000000013, 1.4432899320127035e-15, 4.000000000000002, -2.6645352591003757e-15, 0.9999999999999998, -2.6645352591003757e-15, -3.0000000000000018, -0.9999999999999958, 1.9999999999999951, 0.9999999999999951, 3.1086244689504383e-15, 2.886579864025407e-15, 2.000000000000001, 4.000000000000003, 1.999999999999996, -0.9999999999999998, 3.0000000000000004, -3.9999999999999942, 1.9999999999999958, 3.9999999999999964, -2.9999999999999964, -1.9999999999999993, -1.9999999999999982, 2.999999999999996, 2.0000000000000013, -2.0000000000000036, 6.000000000000003, 1.999999999999995, 3.000000000000001, 2.0000000000000053, 0.9999999999999991, -4.999999999999997, -3.000000000000002, -2.9999999999999973, 2.999999999999997, -3.0, 0.9999999999999989, 3.1086244689504383e-15, -2.000000000000004, 1.0000000000000062, 5.551115123125783e-15, 1.0000000000000007, -7.105427357601002e-15, 2.000000000000005, -3.0000000000000004, 4.999999999999993, -2.0000000000000004, -4.000000000000002, -2.000000000000001, -4.999999999999996, -5.999999999999998, -3.9999999999999973, 4.000000000000001, -1.0000000000000027, 1.0000000000000004, 5.000000000000005, -2.999999999999999, -0.9999999999999969, 5.999999999999994, -1.9999999999999971, -2.000000000000003, 3.9999999999999956, -1.7208456881689926e-15, 1.9999999999999958, -2.9999999999999964, 1.9999999999999947, 9.992007221626409e-16, 3.999999999999997, 3.0, -3.9999999999999982, -4.999999999999992, 3.0531133177191805e-15, -1.9999999999999982, -8.0, -4.440892098500626e-16, -4.000000000000001, 3.9999999999999973, 6.5503158452884236e-15, -2.000000000000004, -1.0, 5.773159728050814e-15, 1.9999999999999998, -3.0, -1.999999999999996, 1.0000000000000007, 1.9999999999999967, 7.9999999999999964, -1.9999999999999984, 4.999999999999999, 4.000000000000002, -1.0000000000000002, -6.000000000000002, 4.0000000000000036, 2.9999999999999982, 1.0000000000000064, 5.0, -2.9999999999999964, -3.9999999999999947, 4.440892098500626e-16, 1.9999999999999947, 4.000000000000002, -2.220446049250313e-15, 2.9999999999999996, 1.9999999999999978, 2.0000000000000036, -1.0000000000000022, -9.000000000000005, 1.0000000000000064, -4.999999999999997, -2.999999999999994, -4.999999999999996, -6.0, 5.9999999999999964, -0.9999999999999952, -1.9999999999999987, 4.0, -2.9999999999999956, 5.995204332975845e-15, 0.9999999999999971, 2.0000000000000053, -2.0, -4.000000000000005, 1.0000000000000009, 3.000000000000001, -1.3322676295501878e-15, 1.999999999999996, -2.000000000000002, -1.999999999999998, 2.9999999999999987, -4.0, 1.9999999999999984, 4.274358644806853e-15, 3.9999999999999982, 4.000000000000002, 3.000000000000003, 0.9999999999999972, -1.0000000000000027, -1.0, 4.000000000000005, -0.9999999999999963, -6.000000000000003, 1.9999999999999991, 2.0000000000000036, 2.0000000000000027, 2.4424906541753444e-15, -3.0, 2.0000000000000093, -2.0000000000000004, 0.9999999999999949, -5.10702591327572e-15, -1.0000000000000036, -1.9999999999999991, -1.0000000000000004, 4.000000000000006, -6.0000000000000036, 0.9999999999999968, -1.0000000000000029, -0.9999999999999953, 3.0, 2.0000000000000004, 7.065416064076995e-16, -1.0000000000000016, -2.0000000000000018, 1.7763568394002505e-15, 1.0000000000000013, -2.220446049250313e-15, -0.9999999999999949, 7.85046229341882e-16, -2.000000000000002, -2.000000000000002, 3.000000000000001, -2.9999999999999996, 5.999999999999998, 3.9999999999999996, -1.0000000000000013, 2.999999999999993, -0.9999999999999942, -2.9999999999999942, -3.0531133177191805e-15, 1.9999999999999971, 1.0000000000000049, -1.7763568394002505e-15, 0.9999999999999941, 2.000000000000004, 3.0000000000000018, 2.0000000000000013, -3.000000000000001, 3.000000000000005, -2.9999999999999982, -5.0000000000000036, -1.9999999999999991, 1.0000000000000042, -2.999999999999997, 3.0000000000000036, 1.000000000000004, -8.881784197001252e-16, -6.999999999999999, -4.000000000000001, 4.999999999999997, -6.437379080603474e-15, 0.9999999999999979, -3.0, -3.999999999999998, -2.220446049250313e-15, -3.0000000000000013, -4.000000000000003, -3.9999999999999956, 3.999999999999999, -2.0000000000000004, -1.000000000000003, 2.0000000000000036, -3.999999999999999, -1.256073966947021e-15, -3.885780586188048e-16, -4.6629367034256575e-15, -4.440892098500626e-15, 1.0000000000000024, -0.9999999999999964, -5.000000000000005, 1.9999999999999996, 1.0000000000000044, 1.0000000000000036, -0.9999999999999938, -4.999999999999998, 0.9999999999999968, 0.9999999999999994, -4.999999999999989, 1.000000000000011, 2.9999999999999964, 9.992007221626409e-16, 1.0000000000000042, 3.0000000000000018, -4.000000000000002, -1.0000000000000033, -2.9999999999999982, 1.0000000000000056, -2.1094237467877974e-15, 2.000000000000004, 0.9999999999999987, 1.9999999999999936, 0.999999999999998, -1.0000000000000016, 0.9999999999999967, -2.000000000000006, -1.0000000000000002, -3.0000000000000053, -2.9999999999999947, -4.000000000000002, 1.9999999999999998, -2.0000000000000018, -4.000000000000002, 0.9999999999999953, 1.9999999999999953, 2.0, 8.881784197001252e-16, 7.327471962526033e-15, -5.999999999999998, 2.9999999999999973, 0.9999999999999991, 1.0000000000000009, 1.000000000000001, -2.000000000000001, 1.9999999999999938, -2.4424906541753444e-15, -3.9999999999999987, -4.000000000000001, -4.440892098500626e-16, 1.0000000000000009, 3.1086244689504383e-15, 0.9999999999999947, 0.9999999999999933, -2.999999999999999, -4.000000000000003, 2.220446049250313e-15, -1.9999999999999991, -0.999999999999998, -3.0000000000000027, 3.885780586188048e-16, 3.0000000000000036, 5.999999999999999, 3.000000000000004, -1.7763568394002505e-15, -3.9999999999999964, 1.9999999999999962, -0.9999999999999988, -1.9999999999999971, 2.4424906541753444e-15, -3.9999999999999996, -4.107825191113079e-15, 0.9999999999999936, 2.999999999999993, -1.0000000000000029, 1.0000000000000044, -0.9999999999999991, 0.9999999999999973, -4.0000000000000036, -1.999999999999997, -1.9999999999999953, 3.9999999999999942, -2.0, -3.0000000000000027, -4.000000000000001, 5.000000000000005, -3.000000000000001, 7.000000000000007, 1.0000000000000013, 2.220446049250313e-15, -2.999999999999996, -4.000000000000003, -1.0, -0.999999999999999, -1.0000000000000004, -2.0000000000000018, 2.000000000000001, 5.000000000000002, 1.9999999999999938, 1.9999999999999993, 3.9999999999999964, 0.9999999999999983, -4.000000000000004, 2.6645352591003757e-15, -9.992007221626409e-16, 0.9999999999999956, -3.9999999999999982, 1.0000000000000027, -0.9999999999999958, -5.000000000000002, -5.000000000000002, -0.9999999999999964, -1.0000000000000022, 5.000000000000001, -2.999999999999997, 1.0, -3.9999999999999947, 1.9999999999999976, -3.9999999999999964, -1.9999999999999987, 4.999999999999998, -1.0000000000000018, 3.774758283725532e-15, 1.9999999999999996, 2.9999999999999996, -2.000000000000001, -4.000000000000002, 2.4424906541753444e-15, -1.0000000000000018, 3.000000000000002, 4.999999999999998, 1.9999999999999991, -2.000000000000003, 3.999999999999999, 2.0000000000000018, -1.0000000000000049, 3.0, 3.999999999999998, -3.1086244689504383e-15, 1.9999999999999982, 2.999999999999998, -6.0, -4.0000000000000036, -3.9999999999999956, -1.9999999999999996, 1.0, 2.0000000000000018, -2.9999999999999982, -1.0000000000000013, 1.0000000000000044, 5.9999999999999964, 1.000000000000001, -0.9999999999999981, 6.000000000000003, 3.774758283725532e-15, -4.0, 1.9984014443252818e-15, 5.0, -8.999999999999995, 2.0000000000000027, -1.0000000000000009, 3.9999999999999973, -1.9999999999999938, -1.0000000000000018, -0.9999999999999997, 2.9999999999999996, -5.0000000000000036, 2.0000000000000004, -2.000000000000002, 5.999999999999998, -2.0000000000000044, -4.000000000000005, 1.000000000000001, 3.9968028886505635e-15, -1.0000000000000064, 3.0000000000000053, 1.0000000000000009, 1.9999999999999958, 3.000000000000001, -7.105427357601002e-15, 1.0000000000000004, 2.0000000000000004, 1.0000000000000053, -1.9999999999999987, -2.0, -1.999999999999999, -1.9999999999999951, 3.0000000000000027, -2.0000000000000013, 4.999999999999998, -0.999999999999998, -1.0000000000000013, -3.999999999999995, 3.999999999999999, -3.0000000000000013, -2.999999999999999, -0.9999999999999952, 2.000000000000003, 2.000000000000001, 3.0000000000000018, 1.9999999999999991, -4.000000000000002, -1.9999999999999956, 1.000000000000003, -1.0, -1.9999999999999991, -3.999999999999987, 3.9999999999999964, 2.999999999999995, -2.000000000000007, 2.3314683517128287e-15, -8.881784197001252e-16, -5.000000000000005, -3.0000000000000058, 2.9999999999999987, 1.0000000000000009, -2.000000000000004, 1.9999999999999951, 5.9999999999999964, 1.0000000000000013, 3.999999999999998, -2.0, -2.0000000000000093, -0.9999999999999962, -1.000000000000003, 5.999999999999998, -4.000000000000003, 1.6653345369377348e-15, 1.0000000000000009, -5.995204332975845e-15, -1.9999999999999971, 4.999999999999998, -4.999999999999998, -1.999999999999996, -0.9999999999999968, -1.000000000000003, 2.220446049250313e-15, -3.9999999999999964, -2.0000000000000004, 4.0, 1.3322676295501878e-15, -2.9999999999999956, -6.000000000000001, -2.9999999999999982, 4.999999999999998, 3.0000000000000044, 1.9999999999999942, -4.999999999999995, -1.9999999999999996, -3.0000000000000018, -7.549516567451064e-15, -3.0000000000000053, 1.000000000000006, -1.0000000000000009, 2.0000000000000018, 1.1102230246251565e-15, -2.000000000000005, 0.9999999999999913, -2.0000000000000004, 0.9999999999999958, 1.0547118733938987e-15, -1.9999999999999978, -4.440892098500626e-16, -2.0000000000000013, -0.9999999999999987, -5.999999999999998, 1.0000000000000078, -0.9999999999999973, -8.881784197001252e-16, -1.9999999999999958, -1.9999999999999982, -5.000000000000003, -3.0000000000000004, 2.0000000000000036, -1.0000000000000002, -1.1102230246251565e-16, 2.4424906541753444e-15, -2.000000000000003, 3.9999999999999947, 0.9999999999999964, -1.7763568394002505e-15, 1.9999999999999998, -1.0000000000000027, -0.9999999999999993, 1.5543122344752192e-15, -8.881784197001252e-16, -6.9999999999999964, 1.9999999999999993, 1.0000000000000002, 3.000000000000005, 2.9999999999999964, 0.9999999999999994, 4.0, -2.9999999999999964, -0.9999999999999942, 2.942091015256665e-15, -1.0000000000000013, 4.000000000000005, 2.9999999999999956, -2.1094237467877974e-15, 1.999999999999997, -1.000000000000003, -0.9999999999999974, 3.000000000000003, 5.0000000000000036, 4.999999999999995, -0.9999999999999984, 1.2212453270876722e-15, 1.0000000000000022, 5.000000000000001, 0.9999999999999993, 2.0000000000000058, 0.0, 3.0000000000000053, -1.5543122344752192e-15, 1.999999999999997, 1.9999999999999951, -2.000000000000004, -0.999999999999996, 5.440092820663267e-15, 4.999999999999994, -6.000000000000001, 1.9999999999999996, -1.9999999999999978, 0.9999999999999984, 4.000000000000003, -1.0658141036401503e-14, 1.999999999999997, 1.9999999999999991, 3.9999999999999982, 2.9999999999999982, -0.9999999999999974, -3.9999999999999956, 7.999999999999998, 2.999999999999999, -3.0000000000000018, 0.9999999999999956, 5.000000000000002, -0.9999999999999937, -2.220446049250313e-15, 0.9999999999999993, -6.999999999999995, 2.0000000000000027, -2.0000000000000058, -4.999999999999997, -2.999999999999999, 0.9999999999999993, -3.9999999999999964, 2.1094237467877974e-15, 2.0000000000000018, -1.9999999999999971, 1.9999999999999956, -2.0, 3.000000000000003, -1.0000000000000013, 1.000000000000003, -2.220446049250313e-15, -1.0000000000000004, 1.0000000000000009, -2.999999999999998, -8.881784197001252e-16, 2.0000000000000004, 5.000000000000002, -2.000000000000001, -0.9999999999999978, -7.000000000000005, 0.9999999999999936, -1.0000000000000002, -2.220446049250313e-15, -1.0000000000000007, 3.9999999999999956, 6.000000000000005, -0.9999999999999962, -3.0000000000000013, -4.000000000000002, -5.9999999999999964, 3.000000000000002, 0.9999999999999964, -2.9999999999999964, -0.9999999999999984, 1.999999999999996, 3.0000000000000067, -1.999999999999988, -0.9999999999999964, -9.000000000000004, 1.0000000000000007, 1.3322676295501878e-15, -0.9999999999999982, -0.9999999999999986, -1.9999999999999996, -3.0000000000000004, -2.0000000000000036, 0.9999999999999944, -5.0000000000000036, 2.9999999999999973, 2.000000000000001, 4.9999999999999964, -0.999999999999999, 0.9999999999999981, 2.000000000000005, -5.551115123125783e-16, 2.999999999999993, -4.000000000000002, 1.9999999999999931, 1.999999999999992, -1.9999999999999964, -3.1086244689504383e-15, -0.9999999999999982, 1.9999999999999947, 3.0000000000000018, -7.000000000000005, -2.0000000000000018, -3.0000000000000027, -1.0000000000000007, -4.440892098500626e-16, -2.0000000000000036, 0.9999999999999991, 1.000000000000003, -4.999999999999998, -1.0000000000000038, -2.999999999999992, -5.999999999999999, 1.0000000000000004, -2.9999999999999982, -5.0000000000000036, -3.4416913763379853e-15, -0.9999999999999969, 3.0000000000000013, -4.9999999999999964, 1.0000000000000009, 2.9999999999999947, -2.220446049250313e-16, 4.0000000000000036, 2.9999999999999973, -2.0000000000000036, -0.9999999999999996, 6.0, -1.9999999999999991, 1.000000000000003, 3.0000000000000018, 1.9999999999999984, -1.0000000000000044, -1.9999999999999998, 3.0000000000000018, 3.9999999999999973, -0.9999999999999987, 5.000000000000001, -1.8318679906315083e-15, -0.9999999999999942, -2.000000000000002, -1.0000000000000036, 1.000000000000001, -7.771561172376096e-16, -0.9999999999999994, -5.0, -1.0205600981444534e-15, 1.000000000000002, 0.9999999999999982, -5.999999999999991, 2.000000000000002, -1.9999999999999991, -1.3322676295501878e-15, 8.635508522760763e-15, 4.999999999999998, -7.327471962526033e-15, 1.0000000000000024, 1.0000000000000004, 2.000000000000002, -3.000000000000002, 5.000000000000002, 5.999999999999997, -2.000000000000001, -2.220446049250313e-16, 1.0000000000000009, 2.0000000000000027, 6.661338147750939e-16, 1.9999999999999958, -2.0000000000000013, -1.1102230246251565e-15, -3.999999999999995, 2.000000000000002, -2.220446049250313e-16, 1.9999999999999984, 4.999999999999997, -3.1086244689504383e-15, -1.0000000000000033, -0.999999999999997, -7.0000000000000036, -4.000000000000004, -2.9999999999999982, 4.000000000000006, 2.9999999999999925, 5.000000000000001, -1.9999999999999958, -5.652332851261594e-15, 1.0000000000000004, 1.000000000000005, 2.0000000000000018, 4.0, 2.9999999999999956, -0.9999999999999967, -0.9999999999999947, 3.000000000000003, -3.9999999999999964, 4.999999999999995, 6.328271240363392e-15, 6.9999999999999964, 1.2560739669470191e-15, -0.9999999999999991, 2.999999999999998, 4.999999999999998, -3.0000000000000027, 2.831068712794149e-15, 3.999999999999993, 3.9999999999999947, -3.0000000000000013, -0.9999999999999978, -5.999999999999998, -3.0000000000000027, 1.0000000000000038, -0.9999999999999978, -1.000000000000002, -3.0000000000000004, -2.9999999999999964, 1.9999999999999987, -1.999999999999993, 1.0000000000000029, -1.000000000000002, -1.9999999999999982, -2.9999999999999973, -3.9999999999999947, -1.9999999999999982, 2.0000000000000044, -3.000000000000006, -1.9999999999999998, -1.7763568394002505e-15, -1.999999999999997, -2.9999999999999982, -2.9999999999999996, 1.1657341758564144e-15, -1.7763568394002505e-15, -0.9999999999999972, -3.000000000000001};
+static const double f_mul[]={-55.999999999999915, 103.00000000000014, 205.00000000000048, 79.00000000000024, -12.000000000000028, 346.0, -175.00000000000026, -115.00000000000028, -328.0, -170.00000000000006, 12.000000000000668, -207.00000000000102, -23.99999999999943, 142.00000000000048, 128.0000000000004, 144.0, -561.9999999999998, 273.99999999999983, 428.9999999999999, 416.00000000000057, -27.999999999999957, 278.00000000000045, -227.00000000000077, 246.00000000000017, 96.99999999999966, 40.00000000000041, 125.99999999999896, -263.9999999999999, 304.99999999999943, -159.99999999999972, 46.00000000000051, 33.000000000000256, -135.00000000000006, 111.99999999999983, -304.0, -261.0, -584.9999999999997, -70.99999999999986, 358.00000000000034, 600.0000000000003, -61.999999999999886, 260.00000000000057, -327.99999999999955, 121.00000000000091, -55.00000000000023, -146.99999999999997, -245.99999999999937, -176.0000000000007, 329.9999999999997, -4.000000000000853, -403.0, -85.00000000000051, -297.0000000000001, -615.0000000000006, -129.0, 51.99999999999976, -277.9999999999997, 98.9999999999994, 354.00000000000034, 103.00000000000036, -274.0, 186.00000000000054, 70.99999999999997, 34.00000000000006, 331.999999999999, -332.9999999999989, 14.999999999999929, -4.999999999999922, 302.9999999999997, 24.99999999999993, 375.99999999999966, 168.00000000000063, -190.99999999999977, -40.00000000000091, 200.99999999999926, -172.00000000000023, 61.99999999999994, -43.00000000000006, -16.99999999999966, 29.99999999999963, -120.99999999999918, 157.0, 22.000000000000284, 31.000000000000433, 152.99999999999997, 489.99999999999983, -303.0000000000002, 155.00000000000054, 159.00000000000023, -70.00000000000006, 304.9999999999996, 509.9999999999987, -109.00000000000018, 79.00000000000017, 15.999999999999702, 33.999999999999815, -194.00000000000014, 270.99999999999966, -60.00000000000088, 246.00000000000045, -482.99999999999955, -510.0000000000001, -340.9999999999999, -260.0, 91.99999999999955, 161.99999999999937, -11.000000000000284, 500.99999999999994, 210.99999999999937, -59.9999999999998, -123.0, -264.9999999999997, -293.99999999999915, -230.0000000000001, 171.9999999999999, -44.999999999999886, -344.9999999999993, -416.9999999999999, -274.0, -238.9999999999998, 128.00000000000006, -46.99999999999957, 88.00000000000058, 207.99999999999983, 135.99999999999955, 204.99999999999994, -96.00000000000016, 16.999999999999673, -29.000000000000078, -18.0, 7.000000000001023, -43.00000000000007, 104.00000000000018, 294.0000000000002, 451.99999999999955, 508.0000000000009, -295.9999999999998, 98.00000000000003, 36.99999999999942, -147.0000000000004, 1.0000000000004334, -221.00000000000006, -150.00000000000057, 69.00000000000057, -12.000000000000256, 150.0000000000001, 53.999999999999616, -167.00000000000082, -195.0000000000005, 540.9999999999998, 208.00000000000054, -59.99999999999983, -120.99999999999949, 24.999999999999133, 165.0000000000006, -246.99999999999972, -582.9999999999992, 35.00000000000068, -279.0, -84.9999999999999, -35.999999999999154, 301.00000000000057, -636.9999999999998, -143.0, -43.000000000000085, -39.99999999999966, -87.0, -146.00000000000034, 274.00000000000017, -61.000000000000426, 271.0, 251.00000000000017, -92.0000000000001, 34.99999999999994, 702.0000000000002, 84.99999999999923, 329.99999999999994, 70.99999999999994, 144.99999999999991, 305.0000000000001, 124.00000000000038, -100.99999999999983, 85.0000000000001, -221.00000000000023, 411.0000000000003, 23.999999999999858, 245.99999999999994, 341.9999999999994, -136.00000000000026, 317.99999999999966, -92.00000000000063, 49.000000000000114, 169.00000000000006, 337.9999999999996, 230.9999999999999, 347.0000000000001, -74.99999999999983, 79.00000000000033, -233.99999999999966, -241.99999999999994, 57.00000000000003, -25.999999999999517, -57.99999999999971, 286.9999999999994, 182.9999999999999, 607.0000000000005, 207.99999999999997, -182.99999999999966, -45.00000000000017, -62.0, -95.99999999999956, -389.9999999999995, -64.00000000000048, 171.99999999999957, -53.00000000000006, 70.00000000000051, -88.00000000000028, -213.99999999999972, -87.00000000000034, 182.00000000000028, 574.0, 248.0, -13.000000000000092, -207.00000000000014, 76.00000000000071, -158.99999999999977, 470.0000000000005, 54.999999999999844, -5.684341886080802e-14, 305.9999999999992, -169.0, -168.0000000000006, -46.00000000000008, 239.00000000000034, -31.999999999999105, 157.0000000000005, -848.0000000000001, -240.99999999999966, -310.9999999999993, 97.00000000000063, 2.999999999999204, -14.999999999999915, 257.9999999999999, 151.00000000000003, 94.99999999999964, 120.99999999999952, -515.0000000000002, -75.99999999999999, -127.99999999999986, -83.00000000000074, -103.00000000000009, -304.99999999999983, 347.0000000000001, -69.00000000000028, 165.00000000000028, 609.0000000000003, -209.99999999999994, -183.9999999999994, -262.9999999999998, 267.9999999999991, -140.00000000000063, 379.99999999999994, 229.99999999999983, 101.00000000000006, 274.00000000000017, -317.99999999999983, -311.00000000000017, 123.00000000000037, 245.00000000000009, 328.99999999999994, -91.99999999999973, -15.000000000000142, -40.00000000000003, -1.0000000000009024, -477.00000000000006, 82.99999999999939, 377.00000000000034, 219.00000000000034, -190.99999999999977, 503.9999999999998, -7.999999999999804, 237.00000000000017, 31.99999999999947, -6.000000000000824, -11.999999999999744, 419.9999999999999, 11.999999999999533, -171.99999999999986, -197.99999999999994, -329.99999999999994, 192.99999999999937, -418.9999999999998, 61.99999999999986, -134.99999999999977, -782.9999999999995, -420.0, -27.000000000000426, -210.00000000000045, -227.99999999999926, -16.00000000000054, 323.99999999999994, -81.00000000000044, -236.0000000000001, 91.00000000000013, 65.0000000000006, 365.0, -105.99999999999994, 492.99999999999955, 56.000000000000085, 562.0000000000007, 154.00000000000023, -53.99999999999985, -97.00000000000009, 166.00000000000045, -62.999999999999744, 252.00000000000102, -431.0000000000003, 41.000000000000036, -144.99999999999966, -142.99999999999974, 187.99999999999974, 144.99999999999963, 516.9999999999994, -138.99999999999977, -90.99999999999994, -127.99999999999972, -44.0000000000002, -78.00000000000007, -71.99999999999977, 155.99999999999977, -183.9999999999997, 75.99999999999973, 209.00000000000006, 288.0000000000009, -692.9999999999998, -162.00000000000023, -93.00000000000017, 101.99999999999979, -351.0000000000002, -84.00000000000017, -801.9999999999997, 42.99999999999943, 103.99999999999977, 513.9999999999994, -210.99999999999966, -486.0, 115.0000000000006, -31.9999999999998, 206.00000000000045, -128.00000000000006, 108.00000000000017, 26.000000000000476, 295.99999999999983, 308.0000000000003, 47.00000000000065, -179.0000000000007, -372.9999999999996, 717.0, 51.99999999999963, -103.00000000000045, 76.9999999999998, 419.99999999999955, 242.99999999999977, -85.00000000000063, 318.9999999999998, 44.99999999999943, 480.9999999999998, 254.99999999999952, 174.0000000000001, 273.9999999999997, 590.9999999999993, 226.00000000000006, 152.99999999999957, 303.00000000000006, -277.9999999999997, -14.99999999999995, -218.00000000000026, -26.99999999999934, -325.0000000000001, -79.00000000000011, 47.99999999999987, -71.0000000000004, -115.99999999999959, -99.99999999999996, -212.99999999999935, -111.00000000000031, -357.0000000000001, -46.00000000000062, 144.99999999999986, 107.00000000000034, -117.9999999999998, -157.00000000000009, -619.0000000000002, -539.0000000000001, -315.9999999999999, -49.99999999999983, 277.0, -168.00000000000009, 818.0000000000001, 541.0000000000003, -449.00000000000034, -128.00000000000043, 217.99999999999943, -319.9999999999997, -584.0000000000007, 85.99999999999994, 108.99999999999993, 563.0000000000002, 92.00000000000026, 66.99999999999983, -346.9999999999997, 46.99999999999967, 214.00000000000014, 44.999999999999716, -428.9999999999996, -84.99999999999986, 267.99999999999966, 303.00000000000074, 205.0000000000001, -5.999999999999801, -245.99999999999991, -371.00000000000034, 103.99999999999983, 226.99999999999977, -725.9999999999995, 47.00000000000023, 2.0000000000004974, -225.00000000000023, -228.00000000000003, -16.000000000000192, -477.00000000000057, -258.0, 53.00000000000025, 518.0000000000002, -88.99999999999964, 115.00000000000134, 292.9999999999999, 51.999999999999986, -84.0000000000001, -133.00000000000048, 20.00000000000007, 527.0000000000001, 123.0, -69.00000000000048, -294.00000000000034, -532.9999999999999, 153.00000000000045, -3.999999999999602, 150.99999999999994, -63.00000000000002, -106.9999999999998, -224.0, -73.99999999999984, -142.99999999999994, 168.99999999999974, 332.9999999999993, 8.999999999999458, 390.9999999999991, 45.99999999999973, 296.9999999999998, 99.00000000000072, -260.0, -358.0000000000006, 237.00000000000043, -122.99999999999943, -247.00000000000003, -55.00000000000039, -484.00000000000045, 102.99999999999939, -54.00000000000013, 286.00000000000045, -690.9999999999997, -410.99999999999966, -251.99999999999957, -100.99999999999994, -284.9999999999997, 155.99999999999903, -127.0000000000001, 38.99999999999927, 342.99999999999943, -86.00000000000027, 188.99999999999994, -300.0000000000001, 654.9999999999999, 530.0000000000001, 622.9999999999995, 204.0000000000001, 169.99999999999997, -152.00000000000028, -63.99999999999926, -32.00000000000056, -279.0000000000001, 124.99999999999984, -110.0000000000002, 92.00000000000006, -78.9999999999999, 319.9999999999998, 186.99999999999986, 182.00000000000023, -63.99999999999939, 155.0, 181.00000000000028, -260.99999999999994, 47.999999999999886, 549.0000000000002, 201.99999999999946, -444.99999999999966, -211.9999999999999, -118.99999999999957, 309.0, -330.00000000000017, 375.0000000000001, 213.99999999999966, -269.00000000000006, 20.999999999999517, -178.00000000000023, 124.99999999999969, 140.00000000000017, -231.00000000000009, 324.9999999999998, 114.99999999999986, 272.99999999999966, 80.00000000000068, 7.999999999999886, 298.0000000000001, 37.00000000000003, 168.00000000000009, -158.99999999999966, -196.9999999999995, 80.00000000000064, -118.9999999999995, -143.0, -155.99999999999963, -288.0000000000003, -329.9999999999996, -28.00000000000091, -10.000000000000021, 353.9999999999997, 198.9999999999993, 426.99999999999955, -521.9999999999998, -199.00000000000017, 312.9999999999999, -172.0000000000007, 292.0, -21.00000000000017, 238.9999999999996, 16.000000000000256, 305.00000000000034, 263.0, 298.9999999999998, -121.99999999999986, 233.99999999999935, 481.9999999999998, 91.00000000000018, 536.0, -217.0000000000004, -198.00000000000003, -66.99999999999989, 20.999999999999304, -223.00000000000028, -233.00000000000003, 101.00000000000094, -148.00000000000045, 2.0000000000004547, -132.99999999999977, -107.00000000000045, -261.99999999999955, -4.999999999999218, -453.0, 252.00000000000028, -153.99999999999955, 11.00000000000054, 58.00000000000075, 204.99999999999994, 453.0000000000001, -45.99999999999986, -356.9999999999992, -239.9999999999997, 390.99999999999983, -299.0000000000002, 265.99999999999955, 108.99999999999994, -559.9999999999995, 532.9999999999995, -139.0, -84.00000000000027, -102.99999999999976, 137.99999999999977, 492.99999999999983, 590.9999999999995, 74.00000000000021, 10.999999999999943, 61.99999999999954, 404.9999999999999, 245.9999999999997, 196.00000000000028, 97.99999999999983, 133.99999999999972, 158.99999999999986, -379.0, -89.99999999999949, 29.000000000000497, 170.00000000000028, -483.0, 44.999999999999126, -102.99999999999939, -609.0000000000003, -334.99999999999994, -340.00000000000045, -133.9999999999996, 266.9999999999997, 254.0000000000003, 407.9999999999998, 233.00000000000054, 47.00000000000044, 115.00000000000048, 83.99999999999955, 156.99999999999966, 296.99999999999966, -280.9999999999995, -54.0000000000006, -15.000000000000114, 44.00000000000027, -96.00000000000071, -250.00000000000023, 154.9999999999999, -6.99999999999973, -66.99999999999964, 29.000000000000227, -304.9999999999993, 105.00000000000027, -417.0000000000004, -142.0000000000005, 198.00000000000006, 57.999999999999304, 352.0000000000002, 356.9999999999996, -250.99999999999963, 414.0, -34.000000000000455, 168.00000000000028, 437.9999999999998, 168.0000000000001, -3.999999999999879, -114.00000000000023, -496.0000000000009, 453.9999999999999, -202.00000000000006, -297.00000000000085, -304.0000000000001, 2.9999999999997797, 192.00000000000057, -69.00000000000003, -38.000000000000085, 379.99999999999886, 278.0, 103.0000000000002, -847.0000000000002, -327.9999999999994, 5.115907697472721e-13, -128.00000000000068, 16.00000000000003, 118.00000000000023, 85.99999999999996, -203.0, 192.0000000000002, -444.9999999999999, -28.000000000000583, 24.999999999999662, -427.0, -144.99999999999991, 35.999999999999886, -143.00000000000045, -325.9999999999999, 82.99999999999925, 293.00000000000057, -142.0000000000001, 93.00000000000021, -111.00000000000021, 101.00000000000057, -207.9999999999995, 85.99999999999994, -202.9999999999999, -155.0000000000001, 23.00000000000029, 326.99999999999966, -154.99999999999972, -367.0, -151.00000000000028, 0.9999999999999645, 31.000000000000046, 437.0000000000002, 177.99999999999926, -167.00000000000023, 42.00000000000053, 128.99999999999972, 4.9999999999998295, -50.99999999999999, -574.0000000000002, -6.999999999999517, -79.00000000000028, -104.00000000000063, 231.99999999999977, 107.99999999999996, -87.00000000000034, -88.99999999999957, 306.9999999999996, 228.99999999999963, 30.00000000000027, -74.99999999999947, 360.99999999999983, -423.00000000000034, 122.99999999999983, -104.0000000000002, -267.0000000000007, -209.0000000000001, 518.0000000000001, -98.00000000000053, 270.0000000000001, -188.9999999999995, 424.0000000000001, -54.00000000000014, -200.99999999999932, -293.9999999999998, -305.99999999999966, 246.99999999999963, -103.99999999999966, -355.99999999999983, -152.99999999999932, 92.00000000000043, 293.99999999999943, 63.000000000000114, 137.99999999999983, 22.000000000000448, -320.9999999999999, 145.0000000000001, 359.9999999999999, 434.99999999999966, -320.0000000000002, 259.0000000000002, -169.9999999999995, -370.9999999999999, -115.00000000000023, 113.00000000000051, 520.9999999999994, 643.0000000000007, 81.00000000000006, 4.000000000000611, -83.9999999999996, 111.0000000000001, 76.99999999999989, -316.0000000000001, 10.999999999999488, -184.00000000000023, 17.999999999999858, -222.99999999999966, -103.99999999999962, -2.999999999998778, 113.00000000000014, 82.00000000000044, 247.9999999999999, -248.99999999999986, -657.9999999999999, -114.00000000000024, -308.9999999999991, 279.0000000000001, 98.99999999999955, 303.9999999999996, 204.00000000000023, 106.9999999999999, 391.00000000000017, 218.99999999999943, 273.99999999999955, 303.9999999999998, 228.00000000000043, 171.9999999999995, -290.00000000000074, -33.99999999999952, -414.99999999999966, 422.99999999999955, 166.99999999999983, -175.00000000000034, -304.99999999999983, -7.999999999999883, 90.99999999999984, 44.0, 42.999999999999986, 52.99999999999994, -203.99999999999983, -44.99999999999943, 254.99999999999957, 22.000000000000206, 392.00000000000017, 76.00000000000013, 283.9999999999998, -67.00000000000004, 57.000000000000256, 29.999999999999787, -110.0, -258.00000000000017, 259.99999999999983, 25.000000000000156, 67.99999999999986, 85.00000000000014, -765.0000000000003, -86.00000000000006, 90.99999999999997, 96.00000000000021, 49.99999999999997, -65.00000000000041, 296.0, -291.00000000000045, 104.9999999999995, 1.0000000000002416, -285.0, -418.99999999999955, -54.00000000000031, -67.00000000000024, -79.0, -298.00000000000017, -694.0000000000002, -84.00000000000004, -175.00000000000045, -182.99999999999994, -285.9999999999999, -245.0000000000005, 428.9999999999997, 44.999999999999716, -139.00000000000017, -51.00000000000038, 537.0000000000005, -244.99999999999943, 220.99999999999955, 303.0000000000001, -321.9999999999998, -344.9999999999992, -189.9999999999995, -133.0000000000001, 125.00000000000055, 189.99999999999912, -241.99999999999955, -214.99999999999994, -160.9999999999999, 54.00000000000041, -529.9999999999991, 148.9999999999992, -195.00000000000023, 94.99999999999962, -308.0000000000001, 72.9999999999994, 47.9999999999999, -142.9999999999999, 213.99999999999994, -5.999999999999929, 253.00000000000003, 44.999999999999574, 385.9999999999999, -468.9999999999991, -287.00000000000006, 232.00000000000048, 291.99999999999903, 58.000000000000355, 115.00000000000027, 254.00000000000003, 106.00000000000033, -150.99999999999946, 132.00000000000017, -244.9999999999995, 199.00000000000006, -356.0000000000005, -267.00000000000034, -446.99999999999983, 347.99999999999994, -221.99999999999991, 445.0, 11.000000000000142, -320.00000000000017, 281.9999999999999, -67.99999999999915, 412.99999999999943, 0.9999999999997158, 28.999999999999943, -595.0000000000005, 231.99999999999977, 225.99999999999977, -285.99999999999955, -55.000000000000284, 671.0, 126.99999999999929, 45.999999999999346, 349.0, -208.00000000000006, 197.00000000000017, -318.9999999999999, 12.000000000000014, -280.0000000000001, 303.00000000000017, 613.9999999999999, -97.0000000000002, -11.000000000000071, 292.0, 344.0000000000004, 220.9999999999998, 33.00000000000051, 67.9999999999998, -386.99999999999966, 203.99999999999926, 276.0000000000004, -125.00000000000009, -477.0000000000001, -332.0000000000001, 194.00000000000014, 4.99999999999978, -73.99999999999919, -126.99999999999957, 93.9999999999996, -102.99999999999974, 237.99999999999926, 175.00000000000023, 4.999999999999936, 28.000000000000785, 189.9999999999997, 81.99999999999974, 167.00000000000034, 75.00000000000034, 173.00000000000074, 173.99999999999997, 157.99999999999983, -393.0, 128.99999999999974, 423.00000000000034, -152.00000000000034, 440.0000000000006, -102.99999999999955, -594.9999999999999, -145.99999999999994, -394.0000000000002, -106.99999999999959, -189.99999999999977, -94.0, 50.000000000000824, -78.00000000000017, 231.00000000000023, -55.99999999999951, 260.0000000000004, 145.00000000000063, -16.999999999999922, -134.0000000000001, -13.000000000000188, 66.0000000000002, -14.999999999999957, -197.0000000000001, 274.0, 13.999999999999943, 385.0000000000004, 65.00000000000021, -237.0000000000001, -210.99999999999994, 307.99999999999983, -67.0000000000004, -66.99999999999997, -19.999999999999638, -192.99999999999994, 178.9999999999999, 242.99999999999977, 222.99999999999994, -8.000000000000057, 15.999999999999734, 792.9999999999995, 281.00000000000006, 167.0000000000004, -73.9999999999992, 10.99999999999929, 362.9999999999999, -362.0000000000003, -362.9999999999999, -425.00000000000034, 86.99999999999956, -222.00000000000009, -357.00000000000034, -42.000000000000135, -156.99999999999935, 313.9999999999997, 83.00000000000014, 263.9999999999999, 554.9999999999999, 234.99999999999957, 320.0, -283.9999999999997, -77.00000000000037, -386.9999999999996, -181.9999999999999, -94.99999999999946, -373.99999999999983, 371.00000000000017, 89.99999999999986, 92.99999999999977, -7.000000000000796, -56.00000000000035, -72.0000000000002, -328.0000000000002, 19.0000000000005, 182.99999999999937, -135.0000000000005, 557.9999999999999, 325.00000000000017, 92.0, -150.99999999999972, 515.0, 290.99999999999983, 286.00000000000057, 493.0, 276.00000000000006, -224.00000000000057, -274.9999999999994, -193.9999999999999, -119.99999999999952, -419.00000000000006, -376.99999999999994, 198.00000000000037, -357.9999999999996, 59.00000000000014, 219.99999999999991};
+static const uint16_t py_h[] = {7634, 7418, 2493, 7208, 7985, 2109, 10735, 2250, 859, 972, 5779, 10865, 421, 8050, 4601, 1621, 6473, 9608, 5611, 7662, 10263, 2416, 3684, 7819, 5582, 8525, 3076, 1118, 10616, 396, 1101, 7002, 10115, 9774, 5432, 11623, 3506, 4871, 8906, 304, 9059, 3833, 5176, 8294, 3497, 6046, 5720, 11450, 11185, 376, 3176, 6154, 5096, 8594, 9723, 6980, 8083, 357, 4499, 3390, 9705, 8068, 1871, 4479, 9688, 8287, 7774, 8685, 5660, 6396, 678, 1068, 9752, 92, 2997, 4205, 10220, 11147, 623, 7695, 1150, 9566, 11848, 4570, 4873, 8124, 4746, 2045, 197, 7045, 6094, 8796, 3108, 4517, 11528, 10592, 8436, 5374, 9419, 627, 6100, 5785, 5326, 3910, 10881, 10069, 3416, 12245, 10596, 5961, 8007, 1145, 4968, 11229, 2564, 1857, 8585, 5914, 3142, 4615, 11630, 10730, 10893, 8229, 10531, 8329, 11315, 5740, 464, 756, 11079, 9547, 5637, 8075, 9265, 8159, 846, 65, 4240, 3511, 10918, 4717, 5390, 12276, 10146, 8945, 3611, 8151, 9736, 4217, 6254, 9337, 8209, 2053, 2403, 7756, 4129, 2072, 8081, 8223, 1595, 9743, 3669, 2565, 4866, 11029, 2397, 3316, 12198, 10931, 1295, 6069, 11750, 7925, 6072, 5141, 3049, 2413, 134, 5864, 7063, 443, 2965, 11563, 9322, 5245, 1185, 6647, 766, 9128, 2024, 1170, 11328, 2866, 2192, 9049, 2960, 521, 9792, 3163, 3526, 2665, 2827, 4410, 8649, 5382, 9028, 11848, 4451, 1767, 2182, 5165, 8894, 2896, 4156, 12220, 6281, 10020, 1465, 337, 3956, 11256, 6044, 9320, 1189, 12120, 4683, 952, 968, 936, 1454, 9979, 7276, 5351, 5739, 12238, 5719, 5918, 1996, 8345, 11799, 9475, 11220, 3025, 4428, 2249, 3392, 439, 17, 6397, 4122, 9779, 3525, 11363, 1770, 8115, 10084, 8125, 5575, 2712, 11170, 4856, 1888, 7116, 8692, 11542, 9980, 4227, 1522, 1676, 8192, 2699, 6313, 4029, 4311, 2732, 4647, 9986, 7234, 12136, 10614, 10220, 1069, 294, 10274, 4201, 1881, 11360, 2325, 319, 9023, 11422, 349, 7428, 2744, 3551, 1420, 3708, 4321, 4902, 6354, 6510, 5471, 11075, 3264, 11631, 9214, 11539, 9082, 4416, 7260, 9705, 8108, 7028, 1552, 3533, 906, 10440, 3195, 6132, 7174, 4162, 9038, 8487, 2671, 958, 10258, 2490, 2915, 5448, 631, 1526, 10535, 11861, 1510, 5753, 9960, 12164, 3079, 10489, 2179, 6810, 6168, 6643, 2899, 9015, 3055, 10756, 7135, 3420, 11658, 8361, 8444, 2386, 8209, 6500, 8558, 1223, 10566, 1452, 4225, 4198, 10682, 11922, 8181, 8613, 1320, 7555, 10123, 249, 10857, 6980, 8916, 2849, 6280, 891, 9845, 2490, 3200, 2666, 7317, 9209, 3530, 10808, 9509, 8361, 2909, 2956, 4562, 2056, 3613, 9588, 1004, 6046, 3382, 2824, 4689, 511, 1035, 215, 8112, 7390, 7211, 8557, 11543, 346, 7395, 9299, 8467, 8291, 4964, 2955, 11975, 9205, 5946, 2214, 6667, 3538, 4681, 2460, 8919, 5173, 5326, 12195, 7485, 2708, 1509, 5659, 5311, 10690, 3125, 9496, 3749, 10058, 4194, 7711, 3379, 5559, 11918, 10549, 11585, 7256, 580, 8898, 5296, 10312, 7309, 3123, 7835, 11859, 11732, 11334, 1528, 1871, 928, 2080, 8235, 11875, 9291, 1685, 3297, 3739, 3305, 8458, 377, 5554, 2567, 2600, 5191, 10690, 1932, 11831, 5018, 1077, 6478, 8138, 3793, 9294, 12023, 9103, 2582, 5988, 8076, 12170, 12077, 9539, 5202, 371, 2073, 6880, 9539, 7654, 2266, 2304, 7943, 2153, 2557, 11665, 8712, 4872, 4414, 10037, 2078, 1656, 11425, 9733, 836, 27, 6015, 11287, 11067, 11067, 10208, 10092, 8845, 10135, 4248, 11103, 1789, 9391, 80, 3941, 6744, 6411, 7489, 1929, 885, 487, 9102, 4017, 5600, 6764, 7694, 10786, 4122, 3651, 2873, 7435, 8715, 374, 2805, 10120, 10526, 5042, 371, 10368, 7129, 941, 769, 5739, 6687, 3202, 4016, 7660, 10413, 11021, 12023, 10812, 5471, 7334, 6302, 9292, 7678, 5887, 12254, 2755, 3733, 2408, 135, 8035, 2527, 6470, 5040, 10759, 1304, 3831, 2536, 5269, 57, 7667, 11701, 5197, 6994, 410, 6142, 8497, 4125, 4155, 6622, 614, 3269, 10304, 6539, 2203, 11742, 1188, 4125, 2989, 9423, 9869, 2793, 8665, 2932, 1890, 112, 11588, 1005, 4697, 4462, 6493, 10448, 2222, 354, 49, 4108, 7704, 4557, 8619, 7213, 2020, 1361, 10740, 11684, 1779, 10579, 6231, 5590, 2230, 12127, 11316, 3390, 3971, 7877, 6023, 11218, 8736, 11455, 1319, 2449, 1353, 5048, 6331, 1971, 2584, 5197, 8672, 4602, 6054, 11867, 5457, 2135, 12068, 961, 6715, 7206, 5105, 7873, 10733, 812, 8234, 9779, 5591, 1077, 513, 7098, 6118, 4837, 2512, 9957, 6058, 4823, 7839, 4863, 3891, 1855, 2615, 6296, 9483, 1158, 8655, 2789, 11396, 2881, 10445, 11265, 2752, 6552, 6350, 6444, 11310, 10783, 6798, 5848, 537, 11001, 7607, 1445, 11944, 4896, 11761, 5749, 9710, 6661, 10942, 8814, 1877, 11525, 1565, 8078, 6293, 10769, 634, 8908, 5134, 521, 2743, 4206, 7135, 1761, 464, 5869, 1548, 12271, 12115, 8400, 3844, 4716, 1109, 8508, 11574, 3554, 7135, 7752, 3786, 1913, 6086, 2144, 5081, 10957, 1109, 1471, 5297, 3086, 6615, 9402, 11046, 11566, 11730, 4756, 8035, 10276, 11236, 7532, 8653, 492, 126, 741, 6875, 2259, 5976, 9016, 10459, 5541, 2878, 10722, 8849, 2059, 5538, 4340, 9338, 10357, 6218, 8355, 3230, 6759, 7480, 6209, 10183, 8172, 255, 11770, 4796, 5540, 9387, 10155, 7678, 7638, 5879, 10655, 9226, 3132, 2443, 11354, 9893, 9854, 4958, 3915, 4991, 7810, 9017, 640, 6543, 8217, 2967, 10328, 9962, 3449, 5219, 10201, 3819, 3021, 7246, 11993, 8492, 1844, 1084, 927, 3708, 6732, 2813, 4952, 8845, 3427, 2182, 3232, 7213, 1994, 7625, 2290, 11700, 4954, 8946, 11917, 7298, 4557, 8808, 2001, 6607, 8017, 469, 330, 104, 868, 6430, 2051, 11729, 5840, 4011, 424, 7970, 8350, 6595, 231, 7345, 8387, 9681, 8505, 10253, 6123, 2731, 5222, 11003, 2212, 588, 5765, 4832, 6100, 10455, 3546, 2641, 10389, 8069, 3712, 1818, 5647, 11283, 7079, 6952, 8899, 7749, 10015, 4681, 4322, 4250, 1985, 11896, 9205, 11267, 12103, 10242, 10413, 11042, 3974, 2659, 5129, 6855, 4265, 4180, 8137, 11336, 697, 6131, 3976, 6365, 3828, 6904, 9845, 7779, 1650, 11605, 3307, 3396, 3444, 6968, 6645, 3495, 8336, 692, 678, 9634, 3763, 5315, 11868, 5459, 3609, 836, 7623, 2313, 4227, 11351, 8727, 1747, 6836, 6312, 6304, 7681, 8265, 11282, 2254, 5437, 6850, 8243, 7428, 5641, 9779, 1964, 11034, 1279, 7317, 8659, 704, 999, 2658, 4183, 2353, 2310, 11745, 8113, 11068, 7336, 9784, 9241, 4599, 7724, 2837, 6732, 565, 9968, 1811, 1265, 7353, 10339, 11162, 8656, 10648, 4561, 11998, 11439, 4696, 9524, 1207, 9780, 10194, 7604, 6657, 2361, 4012, 2478, 11897, 7886, 4069, 10445, 11857, 11406, 6256, 6225, 5674, 5977, 6805, 5605, 11174, 8571, 6116, 246, 3968, 8556, 1680, 11875, 7600, 283, 4364, 4991, 7495, 9404, 11335, 12244, 525, 6592, 3705, 9117, 1996, 2100, 3971, 7141};
+static const int8_t py_g[] = {5, 4, 2, -4, 3, 4, 0, 2, -1, 1, 1, -2, -6, 2, -6, 3, 4, 2, 1, -3, 1, 1, 1, -2, -3, -4, 3, 0, -1, -4, -5, 3, 0, 3, -2, 3, 2, 2, -3, 0, -1, 1, 0, -2, 1, -4, 0, -2, 2, -1, 1, 1, 1, 1, -1, 2, 5, 2, 2, 3, 2, 3, -4, 2, 9, 0, -3, -1, 3, 1, 3, 2, -3, -5, 1, 0, 1, -1, -2, -1, 3, -4, 1, -1, 6, 3, 3, -1, 4, 2, -4, 2, -2, 1, -2, 0, -1, 2, -2, 1, -2, 1, 2, -2, 0, 2, 0, 1, -1, -1, -1, 2, 0, -4, -2, 2, -9, 6, -4, -1, 1, 1, 5, -1, 2, 2, 4, -2, 2, -2, 0, -1, -3, -6, -4, -1, -4, 4, -3, 4, 2, -2, -5, -4, -3, -2, 4, 3, -3, -1, 0, -2, 1, 5, -1, 1, -2, 2, -2, -1, -7, -2, 2, 0, -3, 2, 3, -1, 0, -2, 5, -6, -2, 0, -1, -3, 2, 3, 4, 0, -1, -4, 3, -3, 3, -1, -3, 3, 4, 2, -2, 1, 0, -2, 4, -2, 0, 1, -1, -2, -1, -2, 3, 4, 0, 0, -4, 1, -1, 2, 1, 4, 2, 4, -1, 1, -2, -2, -1, 2, 0, 4, -1, -1, 3, -5, -2, -1, -3, 4, 2, 1, 0, -1, 1, 2, 1, 5, -1, 0, -5, 0, 6, 4, -1, -2, 0, 0, 4, 0, -2, 0, -3, 1, 0, 2, -2, 2, 1, -1, -3, -6, -2, -4, 1, 1, -6, 3, -3, -3, 3, -5, 3, -5, -3, 6, 1, 1, -2, -3, 2, 2, 1, 2, 0, 0, -1, 3, -6, 5, -5, -5, 4, 1, -1, 1, 5, 3, -5, 1, 1, 1, 0, -2, 0, 4, 0, 0, -1, -1, 1, -3, -4, 2, -1, 3, 2, 4, 3, -3, 0, 4, -2, 0, 1, -8, -2, -1, -3, -6, -1, -3, -2, -2, 4, 3, 1, -2, -4, -2, -3, 4, 1, -2, 1, 0, 0, 1, 5, -1, 0, 4, -1, 1, -1, 1, 0, -2, 1, 2, 0, 2, 5, 0, 0, 0, -1, 1, 0, -4, 7, 1, -4, 0, 0, 0, -2, 2, -3, -1, -2, -2, 0, -1, -1, -1, 1, 1, -5, 5, -2, 2, 0, 0, -1, 1, 2, 3, 3, -1, 1, -3, 2, 0, -3, -1, 2, 0, -3, -4, -3, -5, -1, -3, 7, 4, 2, 0, -3, -1, 2, -2, -1, 3, -4, 2, 2, 3, 0, 5, -2, 1, 0, -1, -3, 1, 0, 3, 2, -3, 1, 3, 2, 7, 5, -4, -1, -4, -1, 1, -1, -1, -4, 0, 3, 1, 2, 2, 1, 0, 4, 5, 1, -1, 4, 1, -3, 2, -2, 1, 1, 6, -2, 5, 1, -2, 3, 2, 4, 0, 2, 1, -4, 3, 1, 1, 1, -3, 1, 1, 0, 3, -6, 4, -2, 4, 7, 1, -2, 0, 0, -2, 0, 2, -5, -4, -1, -5, -3, -2, 3, -1, 3, -1, 5, -4, 3, 2, 0, 1, -3, 1, 3, 1, 3, 0, 1, 3, 0, 2, 0, -2, 4, 3, -3, 1, 3, -2, 1, -2, -1, -2, 0, 1, -1, 0, 1, -1, -4, -1, -2, 0, -2, -2, 6, -1, -1, -2, 2, 0, -1, 3, 1, -6, 0, -2, -4, 3, -1, -2, 5, 6, -2, 3, 1, -2, 0, 0, 4, -4, 4, 5, 2, 4, 1, 4, 4, 5, -2, 0, -5, -1, -2, -1, -3, -2, -4, 2, -4, -2, -3, 0, 0, -2, -1, -2, -1, 5, 0, 0, -2, 7, 3, -1, -2, 1, -3, -4, -1, -5, 2, 2, 0, -2, -2, 5, -1, 1, 4, 2, 1, 3, 2, -3, -4, 0, 0, -1, 1, 0, 1, -2, 1, -3, -2, -3, -6, -2, 1, 2, 0, 4, -2, 0, -5, 0, -1, -2, -3, -1, 1, -2, -1, -1, -2, 3, -3, -2, -2, -1, -5, 6, 1, 3, -2, 4, 6, 1, 0, 0, -8, -2, 1, 1, -1, -4, 5, -6, 0, 5, -7, 1, 0, 0, -7, 1, -1, -5, 3, 0, -1, 5, 2, 2, -1, 1, 0, -1, -4, 2, 2, 2, 4, -4, 0, -4, 2, 2, -1, 4, 1, 0, -4, 4, 1, 0, 3, -1, 1, 0, -1, -1, 2, -7, 0, -7, -2, 0, 4, 3, 1, -2, -3, -3, 0, 2, -5, 1, 7, 0, -2, -7, 3, -1, -1, 1, -2, 0, 0, -1, -2, -2, 2, 2, -3, 1, 0, 2, 1, 1, -2, 3, 0, 0, 1, 5, 3, -2, -1, -2, 1, -2, -2, 1, 1, 2, 1, 3, 1, -3, -3, -1, -3, 1, 4, 1, -4, -1, -2, 6, 1, 1, -3, 1, 2, 4, -2, 3, 3, 2, -1, -3, -3, 5, 0, -4, -4, -1, -1, -2, -6, 0, -3, -3, 1, -3, 0, -2, -3, -2, 4, 0, -3, 2, 1, 5, -4, 1, -1, -2, -1, -2, 5, -2, -1, -1, 3, 2, -3, 2, -1, -7, 2, 1, 2, 1, 0, -2, 0, 2, 2, 1, 1, -2, 3, 0, -1, -4, -5, 3, -2, 0, -2, -2, -5, 0, 2, 2, 2, -1, 6, -2, 0, -3, 0, 2, -1, 1, 1, -5, 2, 1, -2, -3, 1, 0, -2, 0, 1, 3, 4, 1, -3, 1, -4, 2, -1, -3, -2, -1, 1, 1, -2, 2, -2, 1, -7, 0, 0, 7, -1, 2, 1, -1, -2, -1, -2, -1, -2, 2, 0, 1, 2, 3, 3, 2, -3, -6, 4, 0, -2, 0, 0, 0, -4, -2, 3, 4, 1, -3, -2, 2, -2, 2, -4, 5, -1, -3, 2, 0, 1, -2, 1, -1, 4, -3, 0, 1, 5, 3, -3, -3, -2, -1, -1, 2, 4, -1, 1, -2, -2, 3, -1, 1, 3, 7, -3, 1, -2, -1, -4, 2, 1, -7, -3, 2, 2, 1, -1, 0, 2, 2, 2, -1, -1, -6, -3, -2, -6, 3, 2, 6, -1, 4, -5, -2, -4, 0, 2, 1, -2, -2, -7, -4};
+static const int8_t py_f[] = {2, 3, 1, 0, 0, 3, 3, 2, 0, 2, 3, -2, 2, 4, 3, 2, 1, -1, 2, -2, 3, 3, 1, 1, -1, 3, 6, 1, 3, -4, -4, 0, 3, -5, -3, 1, 0, -7, 0, -5, 4, -3, 1, 1, -3, -4, -2, -1, -1, 0, 2, -5, -3, -4, 3, 4, 7, 1, 1, 0, -5, -2, 0, -2, 4, 0, 2, -2, 0, -2, -1, 0, 2, -6, -5, 3, -2, -1, -1, 0, -5, 0, 0, 2, -2, 6, -1, -1, 0, 5, 1, 0, -1, 1, 2, 1, 0, -5, 1, -4, -3, 2, 1, -2, -3, -1, 2, -6, 1, 2, -3, -4, 0, -3, -1, 5, -3, 1, 0, 5, 3, -1, 6, 3, 1, 5, -1, -1, 2, 0, 1, 3, 2, 7, -3, -2, 1, 0, 2, -2, -2, 4, -3, 0, -2, -1, 1, -5, -2, -3, 5, -1, 2, 3, 2, 1, 1, 0, -1, 9, 1, 2, -3, -2, 1, 3, -1, -3, 6, 4, 3, 1, -6, -4, 1, 0, 1, -1, 7, 1, 2, -5, -2, 0, 3, -1, 1, 0, -1, 1, -3, 2, -2, 2, -2, 0, 4, -1, 3, 5, 2, -2, 7, -1, 0, 1, -5, -1, 3, -3, -8, 4, 1, -3, -4, -2, -2, 0, -4, -1, 2, -2, 6, -5, 0, 1, 2, -2, -2, 0, -3, 0, -2, -1, -5, -1, 0, 1, -5, -5, -3, 1, 1, -2, 0, -3, -4, 1, 0, 1, 3, -4, -1, -3, -3, -1, -2, 7, 0, 0, 1, 1, -2, 0, -1, -4, 2, 0, 0, 1, -2, 3, 5, 2, 2, 0, 1, -1, 6, 1, 2, 0, 2, 0, -1, 2, -1, 2, 0, -2, 1, -1, 3, 0, 3, 2, 5, -2, -3, -5, 3, 6, 3, 0, -4, 2, 4, 0, 1, 1, 2, 5, -5, 2, 0, -1, 0, 4, -6, 1, 1, 2, 2, -4, -1, -6, -2, 2, -1, -3, 3, 5, 0, 0, 2, -3, -4, 4, 2, 1, -1, 2, 4, -2, -3, -2, -2, 1, 3, 3, -4, 4, 1, 1, -5, 2, -3, 2, 2, 2, 2, -1, -2, -1, 0, -3, -2, -1, -3, 1, 0, -1, 4, 2, -6, 2, -2, 5, -3, 1, 1, 2, -4, 1, -2, 9, -5, 0, 4, 0, -6, 1, -1, -6, -1, 1, 3, -2, -1, 2, 4, 4, 6, -3, -2, 0, -4, -3, 1, -2, -4, 2, -2, -5, -3, 1, 0, 4, 2, -3, -2, 0, 1, -5, 2, 4, -2, 4, -1, 3, -5, 1, 1, 5, 5, 1, -1, 4, -1, 0, 0, 4, -1, -4, -2, -2, -5, -2, 2, 1, 1, 1, 4, 3, 0, -1, -7, 3, -5, 4, 3, 2, -4, 2, 2, 4, -1, 1, -1, 1, -3, -1, 0, 4, 0, 2, 1, -2, 4, 0, -3, -6, -3, 0, 3, 1, 2, 0, 4, 3, -1, -1, 0, -1, 0, 4, 4, 0, -2, 2, -1, -1, -1, -3, 6, 0, 0, -2, -2, -1, 4, 2, -2, 4, 3, 3, 1, 2, -1, 1, -1, -2, -1, -2, 0, -1, 3, 1, 4, -3, -1, 0, -3, -1, 5, -1, -1, 5, 1, -1, -1, -2, 5, 1, -1, 0, 0, 0, 0, 4, -2, 1, 2, -4, 4, 4, 3, 0, 4, 3, -1, 0, -5, 4, 7, 0, -1, -3, 3, -1, 2, 5, 3, -3, 3, -2, -3, -2, -1, 0, -1, -2, 0, 3, 1, -3, 1, -4, -6, 3, -3, 2, 2, 0, 1, 0, -1, 0, 2, 1, 0, -2, -3, 1, 1, -1, 6, -4, 1, 2, 1, 0, -1, 2, -2, 3, 0, -2, -2, -2, 6, 1, -4, 1, 1, -1, -3, -4, -4, 0, -2, 4, -3, 2, 2, -2, 0, -3, -1, 4, 2, -2, -1, 0, 3, -4, 2, 1, -6, 6, 5, 3, 5, -1, 9, 1, -2, -2, -3, 0, -4, -2, 0, 4, 3, -5, -1, -3, -4, 6, 1, -4, -5, 2, -8, -2, -1, 2, 3, -2, 0, 1, 2, 0, -4, 4, 0, 8, 2, 0, 5, 4, -3, -4, 0, -2, 3, -2, 0, -4, 2, 2, -6, 1, 3, -5, -1, 1, -4, 4, 6, 5, 2, 4, 2, -5, 3, -2, 0, -1, 0, -1, 2, 0, -1, 3, -3, 3, 3, 5, -1, -2, -3, -2, -6, 2, -2, -3, 2, 2, 3, -4, -2, 4, -3, 1, -2, -4, -2, 0, 0, -1, -2, 1, 3, 0, -1, 0, -4, 0, -1, -4, -2, 2, -2, 0, -4, -4, 0, -2, -2, -1, 2, -6, 1, 1, 6, 4, 0, -1, -1, 1, -2, -1, 3, 1, 1, 0, 0, 1, 4, 0, 3, 4, 4, -4, 2, 3, 4, -1, -2, -4, 1, 1, 4, -3, -4, -2, -4, 0, -6, -4, -2, -1, -2, -2, 0, 1, 4, 5, 1, 1, -4, 2, 0, 0, 0, 5, 0, 2, -1, 1, -2, 0, -1, 2, -6, -2, 0, 2, 0, -1, -2, -2, 5, -3, 2, 4, 5, -2, -7, -5, -3, -3, -1, -1, 0, 2, 0, -1, -1, -4, 0, 0, 2, -1, 4, -3, 2, 2, 0, -1, -6, 2, -6, -2, 4, 0, 1, -3, -5, 10, -4, 1, 4, -1, 4, 4, 6, 2, 0, -1, 6, -4, 2, 0, -5, -1, -1, 4, 3, 1, 0, -2, -1, 7, -2, 8, -1, -2, 1, 1, -1, -4, 2, 2, -5, -5, 4, 1, 5, 3, 0, -2, 0, 3, 2, -1, 1, 4, -1, 3, -2, 1, 2, -4, -3, -3, 3, 2, -1, -1, 1, -1, -2, 5, 1, -3, 1, 2, 1, 1, 2, 3, 3, 0, 0, -1, -3, 4, 2, -2, -6, 5, 1, 1, -1, 5, 2, 0, -3, 2, 5, 7, -1, 0, -4, 4, -1, -3, 0, 4, -2, 3, 5, -5, -4, -3, -2, -2, -2, 1, -6, -5, 2, 2, 6, -4, -2, -1, 4, -2, 5, 1, -1, 5, -2, 2, -6, 0, 0, -2, -3, 1, 1, 0, -5, 0, 2, 2, -1, 2, -1, 1};
+
+
+
+static double FFT_in[] = {5856.000000,
+9672.000000, 354.000000, 9719.000000, 7445.000000, 6283.000000, 10462.000000, 8588.000000, 85.000000, 3840.000000, 154.000000, 4853.000000, 9810.000000, 2498.000000, 6289.000000, 11201.000000, 10788.000000, 1348.000000, 4887.000000, 9929.000000, 6350.000000, 11349.000000, 9022.000000, 8339.000000, 1628.000000, 6696.000000, 7021.000000, 7449.000000, 11889.000000, 6671.000000, 6476.000000,
+8912.000000, 5472.000000, 9103.000000, 11621.000000, 4985.000000, 11799.000000, 7779.000000, 6236.000000, 4880.000000, 3469.000000, 2493.000000, 455.000000, 8968.000000, 7869.000000, 9871.000000, 3795.000000, 10502.000000, 24.000000, 9231.000000, 1668.000000, 10999.000000, 5937.000000, 10579.000000, 6780.000000, 1407.000000, 149.000000, 922.000000, 884.000000, 5092.000000, 7485.000000,
+10910.000000, 3231.000000, 9806.000000, 9181.000000, 4821.000000, 7829.000000, 10197.000000, 9857.000000, 1682.000000, 5559.000000, 9831.000000, 10176.000000, 3765.000000, 10055.000000, 12080.000000, 5137.000000, 11767.000000, 7822.000000, 2386.000000, 7572.000000, 7172.000000, 2543.000000, 3735.000000, 5842.000000, 9635.000000, 6402.000000, 11416.000000, 8387.000000, 9006.000000, 9905.000000,
+6464.000000, 7783.000000, 8087.000000, 469.000000, 5723.000000, 8863.000000, 1320.000000, 4171.000000, 4942.000000, 8036.000000, 7169.000000, 1063.000000, 1414.000000, 4290.000000, 4015.000000, 2886.000000, 5520.000000, 7406.000000, 6283.000000, 1727.000000, 757.000000, 2589.000000, 5012.000000, 10398.000000, 347.000000, 2945.000000, 4993.000000, 3535.000000, 12102.000000, 4117.000000,
+10037.000000, 9469.000000, 3593.000000, 607.000000, 6667.000000, 11300.000000, 2911.000000, 5494.000000, 10477.000000, 4953.000000, 5479.000000, 8012.000000, 6745.000000, 4327.000000, 7739.000000, 4946.000000, 1830.000000, 8740.000000, 11249.000000, 10418.000000, 1337.000000, 2159.000000, 6103.000000, 10419.000000, 6852.000000, 10918.000000, 634.000000, 2147.000000, 11027.000000, 115.000000,
+11934.000000, 2008.000000, 5283.000000, 9696.000000, 5339.000000, 8111.000000, 10592.000000, 4456.000000, 3920.000000, 11139.000000, 7080.000000, 6830.000000, 275.000000, 11516.000000, 7928.000000, 8530.000000, 7695.000000, 1683.000000, 11501.000000, 5871.000000, 11165.000000, 7100.000000, 810.000000, 7857.000000, 5717.000000, 10166.000000, 9130.000000, 11194.000000, 10671.000000, 536.000000,
+737.000000, 12248.000000, 6353.000000, 8544.000000, 3937.000000, 5034.000000, 3917.000000, 8711.000000, 8462.000000, 10378.000000, 3165.000000, 4493.000000, 9024.000000, 2140.000000, 9035.000000, 7460.000000, 4719.000000, 3552.000000, 7015.000000, 4469.000000, 9174.000000, 5994.000000, 9150.000000, 6422.000000, 11130.000000, 3000.000000, 1976.000000, 8802.000000, 2033.000000, 11441.000000,
+1864.000000, 8543.000000, 611.000000, 2935.000000, 11438.000000, 2307.000000, 5860.000000, 5554.000000, 741.000000, 6519.000000, 8885.000000, 2954.000000, 5716.000000, 6994.000000, 3536.000000, 7164.000000, 5280.000000, 3461.000000, 6095.000000, 5498.000000, 11397.000000, 11592.000000, 9323.000000, 12119.000000, 5137.000000, 2923.000000, 5547.000000, 9278.000000, 6730.000000, 2513.000000,
+8428.000000, 10364.000000, 2322.000000, 12010.000000, 11719.000000, 4476.000000, 8565.000000, 1958.000000, 2343.000000, 2126.000000, 6759.000000, 6207.000000, 8633.000000, 9496.000000, 5827.000000, 5339.000000, 2665.000000, 4457.000000, 12239.000000, 6369.000000, 1174.000000, 6305.000000, 10726.000000, 6062.000000, 1470.000000, 40.000000, 3572.000000, 5825.000000, 9256.000000, 3030.000000,
+8189.000000, 4495.000000, 10957.000000, 7556.000000, 10444.000000, 3929.000000, 3336.000000, 7719.000000, 7701.000000, 3920.000000, 3240.000000, 5384.000000, 6158.000000, 10377.000000, 9603.000000, 11575.000000, 11387.000000, 6515.000000, 383.000000, 10946.000000, 10338.000000, 10925.000000, 9516.000000, 2561.000000, 9248.000000, 11489.000000, 5989.000000, 5931.000000, 10860.000000, 5884.000000,
+9448.000000, 12029.000000, 4249.000000, 4721.000000, 11411.000000, 6516.000000, 919.000000, 9414.000000, 4021.000000, 2813.000000, 6433.000000, 4060.000000, 6229.000000, 9324.000000, 8396.000000, 3655.000000, 4038.000000, 11401.000000, 11391.000000, 6624.000000, 6965.000000, 1187.000000, 7778.000000, 9525.000000, 5290.000000, 4589.000000, 1770.000000, 9836.000000, 1847.000000, 5239.000000,
+11924.000000, 4889.000000, 8212.000000, 1707.000000, 5735.000000, 4974.000000, 2531.000000, 449.000000, 2768.000000, 12064.000000, 9859.000000, 10323.000000, 3459.000000, 4735.000000, 9661.000000, 384.000000, 1189.000000, 7548.000000, 5661.000000, 11844.000000, 9595.000000, 6749.000000, 1936.000000, 6998.000000, 11774.000000, 2877.000000, 3385.000000, 2207.000000, 9872.000000, 4350.000000,
+11077.000000, 9953.000000, 455.000000, 2552.000000, 8605.000000, 9946.000000, 6442.000000, 7246.000000, 3157.000000, 10849.000000, 4656.000000, 1667.000000, 9455.000000, 1555.000000, 8596.000000, 5495.000000, 888.000000, 8049.000000, 11028.000000, 3015.000000, 10324.000000, 2961.000000, 2816.000000, 9379.000000, 8914.000000, 5548.000000, 6966.000000, 8344.000000, 8972.000000, 8966.000000,
+224.000000, 6524.000000, 7962.000000, 7014.000000, 4269.000000, 11969.000000, 9655.000000, 6309.000000, 11034.000000, 2971.000000, 417.000000, 2194.000000, 9184.000000, 8810.000000, 2677.000000, 763.000000, 7385.000000, 8099.000000, 1985.000000, 11618.000000, 4343.000000, 4646.000000, 4330.000000, 2255.000000, 3333.000000, 4466.000000, 6455.000000, 7587.000000, 7483.000000, 6205.000000,
+4553.000000, 5597.000000, 3179.000000, 6977.000000, 6462.000000, 6934.000000, 7464.000000, 11732.000000, 9158.000000, 7192.000000, 4401.000000, 6097.000000, 11916.000000, 640.000000, 9047.000000, 1129.000000, 6235.000000, 7792.000000, 10154.000000, 7615.000000, 11712.000000, 4726.000000, 6950.000000, 4287.000000, 5438.000000, 3839.000000, 3522.000000, 8654.000000, 287.000000, 11696.000000,
+6806.000000, 2209.000000, 8790.000000, 8208.000000, 9387.000000, 7654.000000, 10043.000000, 11137.000000, 3879.000000, 11513.000000, 11394.000000, 335.000000, 3681.000000, 5862.000000, 5871.000000, 3232.000000, 91.000000, 6080.000000, 3237.000000, 4310.000000, 6144.000000, 12168.000000, 10215.000000, 8661.000000, 10679.000000, 10909.000000, 2373.000000, 7161.000000, 7496.000000, 11050.000000,
+6570.000000, 555.000000, 11779.000000, 1676.000000, 3613.000000, 8205.000000, 7877.000000, 2609.000000, 3911.000000, 11342.000000, 570.000000, 8790.000000, 11693.000000, 6020.000000, 2933.000000, 5761.000000, 7284.000000, 1002.000000, 8389.000000, 8784.000000, 2452.000000, 5762.000000, 3906.000000, 7918.000000, 4778.000000, 461.000000, 7072.000000, 5622.000000, 7193.000000, 11329.000000,
+3073.000000, 6858.000000, 3900.000000, 6287.000000, 11292.000000, 11080.000000, 6353.000000, 3629.000000, 8090.000000, 11688.000000, 9714.000000, 7511.000000, 2563.000000, 10715.000000, 2508.000000, 7801.000000, 2557.000000, 916.000000, 1295.000000, 6651.000000, 6418.000000, 10108.000000, 11217.000000, 9338.000000, 6737.000000, 10409.000000, 2959.000000, 1293.000000, 9572.000000, 12032.000000,
+10789.000000, 11653.000000, 10462.000000, 7187.000000, 8367.000000, 2531.000000, 12179.000000, 3863.000000, 4057.000000, 9816.000000, 734.000000, 3389.000000, 12096.000000, 7233.000000, 4960.000000, 4570.000000, 2658.000000, 820.000000, 6382.000000, 632.000000, 11023.000000, 7280.000000, 3435.000000, 2482.000000, 1913.000000, 7023.000000, 9533.000000, 10280.000000, 6081.000000, 3646.000000,
+12266.000000, 424.000000, 8733.000000, 4725.000000, 1539.000000, 6704.000000, 9764.000000, 6520.000000, 7244.000000, 3443.000000, 10494.000000, 11916.000000, 11944.000000, 3767.000000, 2789.000000, 5669.000000, 9859.000000, 641.000000, 443.000000, 11076.000000, 2536.000000, 3534.000000, 8390.000000, 11788.000000, 7339.000000, 5206.000000, 760.000000, 9294.000000, 9545.000000, 8756.000000,
+6034.000000, 9787.000000, 4303.000000, 1043.000000, 5575.000000, 860.000000, 2621.000000, 11280.000000, 12077.000000, 8035.000000, 5223.000000, 4583.000000, 7951.000000, 11222.000000, 10971.000000, 3537.000000, 7731.000000, 8094.000000, 5838.000000, 223.000000, 4275.000000, 9957.000000, 2084.000000, 5955.000000, 4011.000000, 7657.000000, 9173.000000, 3597.000000, 2712.000000, 10725.000000,
+10346.000000, 3651.000000, 350.000000, 3169.000000, 11400.000000, 1825.000000, 5049.000000, 7806.000000, 1173.000000, 11542.000000, 8543.000000, 7648.000000, 8199.000000, 4681.000000, 7054.000000, 1808.000000, 2798.000000, 2394.000000, 3944.000000, 5883.000000, 11843.000000, 1753.000000, 10760.000000, 8979.000000, 11827.000000, 6778.000000, 8584.000000, 6868.000000, 4747.000000, 6676.000000,
+5529.000000, 4707.000000, 9596.000000, 5927.000000, 11200.000000, 12274.000000, 6497.000000, 7278.000000, 9540.000000, 7538.000000, 2256.000000, 11887.000000, 5972.000000, 11673.000000, 10582.000000, 7963.000000, 9216.000000, 7581.000000, 10778.000000, 10853.000000, 3564.000000, 9854.000000, 10547.000000, 5543.000000, 11609.000000, 3186.000000, 2957.000000, 936.000000, 8315.000000, 4490.000000,
+7193.000000, 10426.000000, 6110.000000, 11637.000000, 7138.000000, 8593.000000, 7410.000000, 5410.000000, 3688.000000, 10817.000000, 7093.000000, 1293.000000, 6357.000000, 10232.000000, 10823.000000, 4042.000000, 5633.000000, 1375.000000, 3747.000000, 7271.000000, 4427.000000, 1849.000000, 3352.000000, 318.000000, 3508.000000, 2272.000000, 10129.000000, 10829.000000, 5116.000000, 2567.000000,
+1578.000000, 6237.000000, 989.000000, 8531.000000, 469.000000, 6691.000000, 1502.000000, 10305.000000, 7559.000000, 10900.000000, 11630.000000, 4216.000000, 10706.000000, 8369.000000, 3183.000000, 9266.000000, 11177.000000, 2421.000000, 3305.000000, 2495.000000, 10760.000000, 1992.000000, 4494.000000, 3514.000000, 2709.000000, 8561.000000, 1209.000000, 10993.000000, 9179.000000, 10532.000000,
+1263.000000, 5516.000000, 11765.000000, 8445.000000, 2693.000000, 1111.000000, 9296.000000, 3460.000000, 7372.000000, 7959.000000, 6955.000000, 12257.000000, 7242.000000, 9983.000000, 2468.000000, 6534.000000, 2259.000000, 9198.000000, 5764.000000, 7337.000000, 5300.000000, 3162.000000, 8472.000000, 4976.000000, 525.000000, 2903.000000, 5240.000000, 3828.000000, 7315.000000, 8395.000000,
+22.000000, 6187.000000, 5909.000000, 2705.000000, 2746.000000, 8692.000000, 6759.000000, 911.000000, 9111.000000, 8413.000000, 933.000000, 7938.000000, 8098.000000, 457.000000, 2745.000000, 2143.000000, 3913.000000, 648.000000, 6736.000000, 8181.000000, 5411.000000, 10779.000000, 10705.000000, 6067.000000, 9205.000000, 10743.000000, 10356.000000, 5927.000000, 11019.000000, 9355.000000,
+3733.000000, 11668.000000, 4808.000000, 3396.000000, 581.000000, 5516.000000, 3786.000000, 8937.000000, 9592.000000, 10958.000000, 684.000000, 9.000000, 11507.000000, 7949.000000, 825.000000, 992.000000, 2153.000000, 4397.000000, 7207.000000, 2613.000000, 2593.000000, 4230.000000, 3948.000000, 6263.000000, 3018.000000, 5583.000000, 6313.000000, 5092.000000, 5134.000000, 6779.000000,
+8149.000000, 9724.000000, 8852.000000, 5238.000000, 4434.000000, 6350.000000, 5796.000000, 1987.000000, 5284.000000, 2095.000000, 11782.000000, 3117.000000, 7591.000000, 11691.000000, 3998.000000, 4838.000000, 298.000000, 4268.000000, 9993.000000, 11225.000000, 11223.000000, 4244.000000, 9010.000000, 1279.000000, 9420.000000, 7818.000000, 7942.000000, 6627.000000, 2509.000000, 2456.000000,
+11550.000000, 3197.000000, 4337.000000, 12160.000000, 8541.000000, 8316.000000, 5590.000000, 11202.000000, 9465.000000, 3978.000000, 3672.000000, 2339.000000, 7691.000000, 5771.000000, 8381.000000, 8459.000000, 6209.000000, 1021.000000, 665.000000, 9588.000000, 5900.000000, 5966.000000, 7372.000000, 818.000000, 2956.000000, 6368.000000, 9836.000000, 3991.000000, 8691.000000, 7400.000000,
+2830.000000, 5539.000000, 7047.000000, 11858.000000, 10381.000000, 3689.000000, 7071.000000, 3433.000000, 4787.000000, 7316.000000, 11891.000000, 954.000000, 6932.000000, 432.000000, 6332.000000, 5622.000000, 5057.000000, 10670.000000, 690.000000, 4770.000000, 9917.000000, 5953.000000, 8858.000000, 8407.000000, 755.000000, 6660.000000, 753.000000, 6664.000000, 5068.000000, 3375.000000,
+1622.000000, 7096.000000, 3763.000000, 5873.000000, 1412.000000, 6214.000000, 10790.000000, 1338.000000, 11117.000000, 9322.000000, 8155.000000, 9179.000000, 8043.000000, 10635.000000, 9787.000000, 12253.000000, 2304.000000, 6153.000000, 384.000000, 7988.000000, 11871.000000, 4125.000000, 6461.000000, 1502.000000, 131.000000, 3969.000000, 10969.000000, 11105.000000, 11258.000000, 6726.000000,
+10100.000000, 5872.000000, 8513.000000, 5710.000000, 9680.000000, 1049.000000, 7926.000000, 582.000000, 6033.000000, 886.000000, 5772.000000, 4919.000000, 2867.000000, 6311.000000, 9953.000000, 9354.000000, 6924.000000, 193.000000, 5844.000000, 7729.000000, 5066.000000, 9664.000000, 11580.000000, 5521.000000, 455.000000, 11189.000000, 10801.000000, 1559.000000, 5754.000000, 4.000000,
+5265.000000, 915.000000, 5725.000000, 5430.000000, 10918.000000, 5851.000000, 6012.000000, 10330.000000, 2482.000000, 4025.000000, 6231.000000, 7545.000000, 11241.000000, 9675.000000, 1985.000000, 8639.000000, 5134.000000, 4303.000000, 12177.000000, 11175.000000, 7180.000000, 744.000000, 3070.000000, 5719.000000, 6604.000000, 11393.000000, 6518.000000, 2323.000000, 2386.000000, 5602.000000,
+3505.000000, 11607.000000, 9690.000000};
+
+static const double FFT_out[] = {73835.09279755657189526,
+-16960.29853546927552088, 94553.17015919127152301, 82071.94236073162755929, -88004.66863913185079582, 8300.72078039113694103, -38341.27796110068447888, -38980.27545331198780332, 66294.86149470956297591, 107313.99380018431111239, -51097.25611872477747966, 107002.23844505583110731, -101176.55528033839073032, 151764.44191773579223081, 55989.31636525973590324, 122.30705398861755384, 2878.27077702543465421, 101592.30195218489097897, 97880.81648943608161062, -69110.75254422018770128, 7917.38452911922104249, 12119.48393724660309090, -106107.52924904532846995, 59739.30242627070401795, -72456.89826969381829258, -42974.09814608171291184, -30346.60099528233331512, -36006.54505514366610441, -79691.02256740226584952, -14016.81104602639970835, 16806.67684532898420002,
+95742.02690367960894946, 72880.97136974820750766, -49397.86675869173632236, -53326.96602262630040059, -123966.47144981200108305, -5132.72459340597197297, 19686.32353365158996894, 48665.53564532098243944, -10101.52167415057192557, -24702.64340617377820308, -40094.29445880955609027, -13870.63260611699661240, 140267.12083295581396669, -106820.57353050280653406, 133726.94934111856855452, -46704.18045086555503076, 14469.92318501486442983, -99394.44130656791094225, -148414.40390281780855730, -36810.29185404482996091, 12146.24844073335043504, 97082.95701726766128559, 38225.85534318019927014, -29840.97954574082541512, 15863.05982589049381204, -55305.37772377265355317, 155865.89289725926937535, -54426.44240910955704749, -113175.45412842551013455, 18712.31028454464103561,
+39832.50241447247390170, 19530.03917202287993859, -12476.62717389168392401, -130030.85746542178094387, -6342.24001512018730864, 50434.48595395436859690, -124369.72824291297001764, 108232.33327744550479110, -43772.89149556042684708, 4369.60266546234925045, 43112.42376901262468891, -9054.54637809899577405, 215095.44625012401957065, 41817.19947380627854727, 23961.02533376042265445, 9187.64305042823252734, 136032.02894146944163367, -46792.21560759702697396, -2624.91564967082740623, 46431.55307781905867159, -226379.03969093161867931, -132083.43530860391911119, 17910.43127065656881314, -33721.59635467609041370, 122394.51448104315204546, 148593.67029705992899835, -8548.84181103062292095, -28146.70273992858710699, -95741.78486191574484110, -95338.88591683097183704,
+169616.75557698425836861, 613.72889464726176811, 73014.65897031367057934, -109099.86831017764052376, -15072.91308845349703915, -809.49148658505509957, -9817.19782486524127307, -50480.91575022137112683, -78572.14851577032823116, -96682.72582668950781226, 183494.12919567595236003, -137754.93423101585358381, -43061.88118573155952618, -9863.62918517781508854, 102536.70991776380105875, 42996.22781645908253267, 34171.60067747153516393, 22568.03046041366178542, -108987.33193072187714279, 58321.17460519946325803, 41460.92060022791702067, 18223.49520853795911535, 49813.47552600501512643, 15257.99694273668137612, -133508.78616409914684482, 75090.89451215666485950, -45903.96914593269320903, 6822.80085378332296386, 43681.60798432478622999, -44928.93990436308376957,
+-107797.49088813974231016, -10023.51920262122439453, -22405.58741627566632815, 7132.28643703430134337, 118755.03199104634404648, -47939.60567796038230881, 55850.85211841105774511, 102934.07082613158854656, -25763.06708647995401407, 39387.69664979260414839, 89053.54641849399195053, 83627.21123034021002240, 20261.71260962740780087, -105504.82031717838253826, -145072.76390111015643924, 65737.06294060424261261, -30832.14207652145705651, 156470.62648803018964827, -46790.62381029383686837, 31018.97348446337855421, 94683.27456592582166195, -30673.45119045439787442, -14144.97662499570287764, 44850.68561019006301649, 109350.85091907685273327, 115843.60063254478154704, -174470.26264240295859054, 62628.67709203549020458, -94774.68844170674856286, -14977.83518277321127243,
+-33605.49682981131627457, -37224.95882627287937794, 107754.73882116073218640, -10664.88282554637044086, 34271.43473518337123096, 150583.37920489002135582, -96449.87077499763108790, 62515.12384612378809834, -151281.30369704481563531, -19550.80314236521371640, -110320.80949123989557847, 31133.23072440285613993, 39481.26851507886749459, -107468.84175944325397722, -93794.81810440041590482, 46622.68596205220092088, -9749.23743035804363899, 93325.07672514501609839, -61916.68874402510118671, 84911.20614856964675710, -9219.92310374969383702, 11022.83745615159932640, 22819.68409509929551859, -42123.15600147088116501, 76852.94033134808705654, -113766.65044313488760963, 52607.34037697048188420, 104542.27925170346861705, -22752.25473262035666266, -11151.51090204596403055,
+153587.43716112521360628, 9658.29683320798358181, 53259.66911990347580286, 84512.52232920342066791, 16486.61556412617210299, 43179.33579363180615474, -46251.00963365152711049, 33430.80473309130320558, -10497.05822997417453735, -40227.78993163572158664, -19487.76639099368185271, -33182.27547435550513910, -30931.56739071499760030, 62543.03051025887543801, 79657.94309409781999420, -24600.85813323397451313, 135813.98040910420240834, -73856.60228499044023920, 30636.34414052162901498, -86929.26543795579345897, 2579.45496228192496346, 108372.16284284109133296, 135967.25680637589539401, 68655.05175947266980074, 11001.34624536956107477, -120785.04678029504430015, 19551.89095083034771960, 41676.61968440002237912, -27962.17103962045803200, -80172.18545972497668117,
+-61978.45736859520548023, 113937.59019166551297531, 61726.47480209726927569, 69699.14463567100756336, -63777.67928598007711116, -97570.74355754611315206, -24156.10929336055414751, 165819.78439234168035910, -527.67938328675518278, 10509.08561308640855714, 18919.83029651205652044, -23011.51614317747589666, -134213.49098333908477798, -13333.46881153393405839, 5297.80982979673353839, 180169.41056093579391018, 42541.21806720242602751, 6940.76534444785283995, 65386.93479145098535810, 30760.57308152700716164, -122165.18184792714600917, 188496.07971446134615690, -24245.23693058959906921, -132595.81067858336609788, -124331.08111071158782579, -27431.12535750104507315, -33844.76694124010100495, 26706.99814172750848229, 73775.05815240288211498, 31333.23712167965641129,
+38437.94665786061523249, 58746.15406237724528182, 17789.38911320881743450, -59938.98594512401905376, -103187.43487484026991297, -134799.16135362049681135, 80040.88352933828718960, -96071.42000866158923600, -24864.85276812039955985, -31562.06308066943165613, -30551.88233516976470128, -45755.34896845353068784, -18752.19153569113768754, -108945.41812379073235206, 44243.90235510610364145, -66490.29050157070741989, 2683.22778952424414456, 165281.76557797289569862, 89040.11173359263921157, -157258.62045169324846938, 67123.62072522898961324, -55955.82426913324161433, -105734.19001086452044547, -18960.62924338199445629, -68090.51840253159753047, 62855.37160220608348027, 77447.74241159326629713, -47944.74994735483778641, 18625.41007765922768158, -94836.78074027533875778,
+-32554.08787376293548732, -30756.67745180796555360, -2418.41312216889127740, -102810.80110690134461038, -9558.61723594398790738, 110569.11922447600227315, 6043.53384987596655264, 100876.94626676691405009, 63129.05870708233851474, 41481.50897635405999608, -60761.97223047623992898, -115428.53275883957394399, 56386.53132348766666837, -54972.53955874302482698, 8681.63520220780992531, 98259.45907960948534310, 32740.50752975763680297, -133142.93560949852690101, 2947.66111754335724982, -4999.92929720813663153, 12853.70040648009126016, 26176.44143369385710685, 55574.23473794143501436, -30300.08164247553213499, -39575.10860255554143805, -24212.92667249353326042, -43518.30614722728205379, 162074.42494489287491888, -5231.69593706757586915, 94365.48187024361686781,
+53758.73993797116418136, 6618.16107015567104099, 113890.63614275582949631, -218739.74443532846635208, 75773.65053569484734908, -125195.76976532670960296, 92161.76842949791171122, 87491.36115080388844945, 131327.51048436327255331, 10418.81717048957943916, -129883.48602996615227312, 36964.45643423785804771, -86467.46461062834714539, 166069.79386569757480174, 14301.04484070620674174, 22687.21178089987370186, 51819.17287435050820932, 69082.06450487300753593, 150653.83161329981521703, 58610.64656947672483511, -24125.52699412605215912, 21281.35409242108653416, -35183.50923538530332735, -27007.16390842256078031, 57044.54443680004624184, -5954.96082438544908655, 15403.00008421459642705, -134666.34952985442942008, -57305.01226824028708506, 78991.34061864443356171,
+-19132.62800374527432723, 84814.33117796857550275, 111953.52831897708529141, -17392.76595870834717061, 98245.11799050950503442, -22323.27059813657615450, -74417.10751127342518885, -62388.52982336072454927, 59826.21142567364586284, -131.00509085586963920, -15336.27721837712306296, -47364.46202197374077514, -38763.98013021519000176, -145827.04854828168754466, -5439.76803198925335892, 62680.70395742959954077, 85259.15578005425049923, -13366.81498591403942555, 86140.70543154240294825, -50129.48728464746818645, 118117.75136855099117383, 82305.39292455483519007, -54290.65741309981967788, 8354.11311117891818867, 984.43732187831938063, -24655.29231983365025371, 106068.50475491286488250, -154942.05644349328940734, -93361.20249783876352012, 8423.83331725847710914,
+24213.15082597311265999, 31225.58370586369710509, 42744.59054091598954983, 124425.17082926961302292, -5862.79755264295090456, -114689.32074049169023056, -45403.39124120086489711, 185855.10875915730139241, 41656.55525453590962570, -76213.92514118319377303, -19841.18026730565907201, 161048.91383132853661664, 39625.65193666925188154, 23287.30147315526119201, -70217.23368185394792818, 63450.88279381894244580, -8254.24284251522476552, -74056.79579272709088400, 7384.02627014963945840, -57553.95530618097109254, 29068.37113757776023704, 31530.71739235273344093, -40990.61315631628531264, 36000.88545522540516686, 55967.72072297507838812, 82735.92585656623123214, -54357.78199571737786755, 148647.87869990777107887, -16801.71010240723262541, -17211.13127981293655466,
+31306.46552912690094672, -4304.02442280161631061, 130099.41844773179036565, 54522.86907896002230700, 66265.41252604810870253, 169209.71566082254867069, -41833.64621176022774307, 192568.56939909176435322, 111758.77775283080700319, -54461.85221546588581987, 56492.60148342707543634, 6496.43394423459631071, 13633.40855887632642407, 18455.37103733031108277, -18759.53154859301139368, 1225.76904435209871735, -121176.75453775271307677, 9351.60294255946064368, 12957.01226322546426672, -52400.33480782002880005, 42453.25527154331939528, -104602.23945197960711084, -76886.71044773663743399, -14072.00699324622109998, 56868.44777996603806969, -21867.54431591417232994, -3782.27713485204549215, -98270.70986586608341895, -5835.37027774083981058, -41200.87157499594468391,
+-28471.90292641291307518, 41709.31669429354951717, 36542.95837027375819162, 74246.24869145033881068, -68188.19504273289931007, 53833.20242238621722208, -124762.57654405868379399, -40035.30130797793390229, -25208.36803193720697891, -127426.85596762385102920, 33546.25106286352820462, 62072.20892944117804291, -13666.37567574569402495, -124094.93032327624678146, 24724.28468704591796268, 68540.68627564192865975, 67900.88167511302162893, 85100.74374841456301510, -62018.58060966039920459, -6944.86986780750885373, 60880.44788719595089788, -65560.25892016052966937, -61633.00502050072827842, -11820.31602497443236643, 28724.60519844196096528, -37580.65348146592441481, -18188.24557883287343429, -161382.58444556099129841, -87043.35364656655292492, -15763.06395731618249556,
+17778.50198088463366730, -26825.18535495649848599, 15454.39836536018265178, 85753.25545853181392886, 22040.78999061306967633, 43960.97756810795544880, -86016.75955019306275062, 96367.60176836108439602, 46488.21784524089889601, 52714.92516637131484458, 47398.69449004169291584, 1898.37342676103799022, -36652.73769070001435466, -77790.74642163235694170, -20552.40326528557488928, 32363.05610498414534959, -5862.44142713282417390, -58187.04828144613566110, -87482.04685431791585870, 104917.36976186938409228, 43140.72242415409709793, -34083.21293710619647754, -110374.41729888925328851, -1005.84946928808130906, -50288.90893966470321175, -41363.75295597922377056, 20129.80310023119818652, 123874.65927605643810239, 9648.16549453449260909, 120674.43665591833996587,
+-14095.21811648383300053, 239738.85320697299903259, 84537.65065687248716131, 100655.02607776666991413, 60512.59303697356517660, -14411.27933401550399140, 29844.25643820875848178, -37787.99793847754335729, 37353.02743673649820266, -70444.47982443854562007, 131358.91091943354695104, 16443.46837744362710509, -46716.81328724975173827, 25494.31026662555814255, 52718.97872957821527962, -24602.30200670846534194, 54816.66114192449458642, 62405.38615680122893536, 44793.12829482398956316, 151307.75125410442706198, 2151.73896227397199254, 18419.49051000307008508, 11231.34225008018620429, -23079.07062412844970822, 150506.34621674579102546, -18064.27622472119765007, -22052.40842476774196257, -37732.37806054520478938, -23257.54800934647937538, 1439.05693701654672623,
+12994.14473309354070807, 4139671.18598237587139010, -30291.58503893576562405, -30213.41574885959562380, -36723.36478686022746842, -67198.03868428536225110, 179832.75637561973417178, -58987.38030096594593488, 3007.66790512755687814, -20789.94467939359310549, 46720.40869352516892832, 110840.88930435091606341, -64537.74522375394008122, -79878.51741117512574419, 41989.17510206277074758, 5209.30878972505524871, -66225.52102788299089298, 153555.78062640744610690, 50878.28310391810373403, 45515.27880535185977351, 199912.59272625943413004, -44213.88919925210939255, 107078.82657969956926536, 208888.05374131721328013, 112965.26164689808501862, 42816.47122502001002431, 35429.65273166721453890, 139954.36805757568799891, 21338.30869752177386545, 6561.53927416632359382,
+28799.12246182933449745, -78396.34854178900422994, 32436.94126438992680050, 111760.72895480410079472, 24843.20917293565435102, 74230.51086085636052303, 48753.52703534449392464, 47935.80376272388093639, -82880.35440043803828303, 131472.14542009937576950, -99933.69691788493946660, 50379.77175526329665445, 18571.96088706225054921, 127639.12487851551850326, -85313.33135020159534179, 73650.73367829325434286, -83852.18636709016573150, 105273.61171112341980916, -36453.96603048111137468, 47046.47456623087782646, 41399.82637942050496349, -140688.25022990081924945, 45798.93363599309668643, -22136.03991634430713020, -87025.17423258055350743, -90108.36923967969778460, 30204.06716238575972966, 2390.52212884406617377, -11893.38855411637632642, 143544.02918288379441947,
+-16072.29920879221754149, -101044.38305827944714110, 13401.80275828416051809, -111052.28463291346270125, -311691.33463843428762630, 283477.20194290520157665, -21396.18511924777703825, -46683.21525334374746308, -91525.75654238750576042, -184624.79853972472483292, 81301.26756754874077160, -77511.63221219101978932, -69431.65849157627962995, 207624.02253542380640283, -34626.43445201111899223, 55607.04859036779089365, 24133.87257471825796529, 101752.13225122709991410, -131020.06251024594530463, -18557.69606983169796877, 93306.20874595516943373, -19399.23780420349430642, -27450.51116255001761601, -61711.69219669288577279, -27297.56041479306441033, -14888.58673487594569451, -43941.03981814481085166, 18311.75684604047273751, -73845.51389163300336804, -63293.05729831161443144,
+-95980.40065126650733873, 90407.91053469982580282, -74100.11015518833301030, 113111.29993227872182615, 8980.58304395541199483, 45258.86367521285865223, 12610.88485844693241233, 33936.66943966539838584, 56707.39942053468985250, 121037.63934728484309744, -14843.42160350755148102, -62954.69339418577146716, 17482.55730812011825037, 40541.24646242008020636, 39746.95510169029876124, 58098.61855626261967700, 29252.99884492655110080, 64069.32600003555126023, 52008.90541759361803997, 67869.29746725178847555, -60862.49659827169671189, -26155.34361124220959027, -64029.49508805527875666, 97989.74105045637406874, 114543.33548604311363306, -35261.90913124951475766, -113768.07409560943779070, -45218.87441783890244551, 45721.33132989300065674, 72719.04107827195548452,
+-129550.20355651772115380, 12735.02371273598691914, 67765.59241136863420252, 12935.41371349686232861, 25305.73073584079975262, 20169.94055957303498872, 60442.49271592759760097, 84002.44314617814961821, -346481.95007623871788383, 484762.64456099702510983, -15898.43329846311826259, 97276.94888384801743086, 92365.84473044452897739, -98408.55421709784423001, -59326.37543578923941823, -18644.20248280748637626, -31298.08298995194490999, 33921.35594795018550940, -35895.03065875802712981, -54830.23880340081814211, -72567.47938630032876972, -11289.36467559594893828, -72649.92667701165191829, -82081.64258795115165412, 116447.04510496385046281, 131118.45906320493668318, -54702.74739606383081991, 47607.38468196941539645, -76962.69439553262782283, 206079.71377991582266986,
+32348.71484526243875735, 115065.04617123900970910, -45013.61390955954266246, 29442.05332175507646753, 25986.49578636702062795, -39061.33803612114570569, -172157.98731459735427052, -55742.76093315808975603, 4900.92857223630198860, 60019.85659001064777840, -5607.66239068504728493, 22391.53058710704135592, -26917.91999467393543455, 100730.89896537967433687, -102108.45532266252848785, 105509.24665826863201801, -113073.41788067463494372, -123388.98731563420733437, 113271.97339085146086290, 120765.33288251727935858, 82539.43300241499673575, -10908.88374322297750041, -126371.46234013783396222, -104855.94105613612919115, 158481.48098869904060848, 63313.51597225567820715, -16876.80753158104926115, 160194.41909592371666804, -16079.35334321339905728, -94771.01051192061277106,
+4866.34510727220185800, 33182.10415147137973690, 91336.95995353252510540, -15237.38576885836664587, -118243.82274257118115202, -77980.04383089409384411, -77120.20924752169230487, 35213.01803496939828619, 53023.62112934765173122, -43578.01366429699555738, 71198.13619493052829057, 11925.58775010148383444, -124514.74757504585431889, 169426.38868267898214981, 71147.63143993401899934, -37044.07784675798029639, 20334.69473416190885473, -6202.37715065776865231, -14164.84351951290591387, 18055.39609642670257017, -61870.20099157573713455, -59203.43643543432699516, 13807.04795236542122439, 142758.12647851099609397, 4045.31949043422355317, -116617.73403935375972651, -159343.86876672468497418, 5299.56880111239297548, -108558.19506326669943519, -33430.13997886832657969,
+128939.37145219682133757, 13398.68326825588155771, -83807.19231393848895095, 50587.28096219808503520, -88456.06160356897453312, 32149.01516067911870778, -135309.53838362853275612, 5449.74602701629009971, -5261.17942242291428556, -50221.10484644706593826, -93598.75277908152202144, 27788.39122251459048130, 28793.29572838070453145, 92020.27955433180613909, -180411.34166816959623247, 130893.12058853832422756, -93836.00469108470133506, -8802.38574923046689946, 999.76310896846553078, 145532.26540409802692011, 4471.10315675807942171, 35979.80944458792509977, 120410.32596192367782351, -111526.15056666903547011, 66720.63919661258114502, -42343.50952331954613328, -175668.86247594869928434, 20543.89989302691537887, -45890.58787690405733883, -71086.62677564342448022,
+-89581.43426310525683220, 61180.42009663122007623, 83264.56282152340281755, 28503.67672021219186718, -64391.91576111662288895, -125695.92482898684102111, -33216.25485929578280775, -51989.61832427966874093, -226730.22805856051854789, -79489.30318570496456232, -119645.03357261938799638, 53662.23527205130085349, 90295.77541419089538977, -120592.16986660043767188, 160374.72839989676140249, 119964.06719449814409018, -625456.97490668715909123, 799749.64797105221077800, -63273.70330362673848867, 76192.90154132421594113, 11941.04409387248597341, -10045.78871614774107002, -20248.92998066281143110, -107644.95645461758249439, -3408.09674351780267898, -94459.60074517266184557, -99894.08515792728576344, -87849.73906258490751497, 119185.23886783732450567, -28106.39497606373333838,
+179818.44198644015705213, 80736.33311420737300068, -46080.77317424263310386, 86540.53624247742118314, 85931.65829286543885246, -62671.03472409825189970, 11083.93275281735986937, 38393.00984582245291676, -24055.92388515977654606, -88823.77595766021113377, -54137.75619859616563190, 118150.17338091961573809, 46689.09903568896697834, 68732.67810136199113913, -243104.80107560372562148, 11327.19173235203925287, 31975.57673530211468460, -92832.37522863138292450, -111311.60417696357762907, 199601.67861636108136736, 46079.75794500342453830, -30317.91463463395484723, -99197.61795696939225309, 102970.87097588325559627, 26603.77253185411973391, 46464.42354194031941006, 18747.15472582758229692, -48694.12234261607954977, 115050.03309268891462125, -87981.39707562493276782,
+-127139.57517729492974468, -89611.68348202219931409, 22726.97276586428779410, -113246.34920967300422490, -105149.43424397532362491, 100290.72403402777854353, 35674.66341541310976027, 119748.61750009088427760, -147342.26313585360185243, -142079.34283848694758490, -24206.83951414829061832, 133363.36045648192521185, 14370.97844295404502191, 105318.66556047875201330, 133483.04670800594612956, -99327.10797801656008232, -24671.54857496824115515, 20968.80984865266509587, -56078.89613437599473400, -67976.16460708373051602, -93500.20685371522267815, 73074.16267154112574644, 88272.21852164019946940, -27575.79815184417748242, 80060.93296901250141673, 14425.41729100797965657, -17303.90393722632143181, -89984.14640481500828173, -76699.80304680739936884, -38896.12877150185522623,
+-86609.50226486078463495, 30855.34683653258616687, -46633.25271390819398221, 30709.75506461165423389, -48760.58998570838593878, -3406.58201595777063631, -132283.92213673461810686, 23190.73531247848586645, -133471.55109822360100225, 5809.07133345949841896, -30081.81680011779099004, 122395.64992114534834400, 50575.55029359636682784, -75832.70127233550010715, -87031.92263244024070445, 164529.07459796735201962, -16361.81062460920657031, 19937.16287498436577152, 114213.19530521980777849, -4735.21537949405683321, -66191.61660388061136473, -4272.80563307424745290, -78108.41511708119651303, 94680.99579739979526494, -62406.77595237535570050, 192450.87546348958858289, -128327.95310642212280072, 43750.08432913210708648, -205208.78905813477467746, 22773.70871744811302051,
+33793.43641663082235027, 49650.14820175067870878, 13896.41685522756597493, 58746.46857680859829998, -69472.77121708287450019, 34048.49928684414771851, -52602.14305767594487406, 70207.24504445660568308, 94716.10779109022405464, -7721.67839287290007633, -36342.58062397962930845, -82102.28071359366003890, 18076.84953687510642339, -14309.91246644698185264, 30436.73830205023477902, -39179.28048746217973530, -42728.68511576455784962, -57273.35221517524769297, -111286.75321169546805322, 71433.88496501433837693, -16820.85279585122407298, 160431.69263361010234803, -35244.86715995501435827, 70385.94227926593157463, -325637.25861247652210295, 390348.26145176414866000, -26469.32624730619136244, 82386.81356869440060109, 50967.16966913404758088, -69489.17387837673595641,
+-80846.80448182280815672, 55938.56852167841861956, -129819.06620454424410127, 109630.64525300325476564, -21720.08587684341910062, 33573.98141970732103800, -54966.21527412656723754, -49110.10333561396691948, 98819.61249272088753060, 19660.53638263523316709, -6926.90249555724221864, 70965.82541558802768122, -60632.31379797311092261, 46290.09612847553216852, 5466.73572786980003002, -202250.02429172288975678, -58951.27593820364563726, 9736.35327720309942379, 35307.86174952262081206, 188566.00366045386181213, -62435.23915174676221795, -47571.60614412836730480, -338.77091496047432884, -33522.52602071795263328, -102909.35980781496618874, 13364.39138476990774507, -77605.96494271440315060, -53931.11619772499398096, -46747.10131835898937425, -8824.48416222086234484,
+186072.41759538522455841, 35072.99794353003380820, -18997.13611087694880553, 34011.67995725775836036, -85658.40423899790039286, 91787.56038819173409138, -84543.00335119561350439, -76520.02474457380594686, 34565.84258235157903982, 86594.40683460448053665, -129046.01076656099758111, -41711.20016182413382921, 22943.31688183261212544, 9774.04109123999660369, -48782.38944070847355761, 91786.02074257793719880, -55596.11883458348893328, -156440.80758014798630029, -32098.99516101706831250, 46535.71013379150826950, 117213.49001080462767277, -14835.05509203542897012, 63487.10664375136548188, 6337.90606418216157181, -11745.10747059751338384, 88620.92736732176854275, 45236.70487289907759987, 116787.14707773749250919, -238413.04890219372464344, 260649.44827970070764422,
+40249.83325725326722022, -152772.61740609339904040, -11824.30840828655345831, 53380.70299306318338495, -55239.21057711525645573, 136209.26267687301151454, 16699.49464690499007702, -615.99749569231062196, 156625.17901803308632225, -110887.47986122652946506, -6999.42825140859349631, 44343.37432739372889046, -53151.79241774101683404, 147193.86561689950758591, -23557.41556610124825966, -57910.56164762447588146, -64429.56823372033250052, 38604.90540974594478030, 18387.55841342618805356, 64033.11983632399642374, 13951.36913923149040784, 13286.76814559462945908, -139312.67984463399625383, -59885.60780949714535382, 3156.54550404672045261, 5071.83098305878957035, -119879.62364139466080815, 37422.07020193035714328, 120471.04978111226228066, -42712.92922067200561287,
+-159075.57312105878372677, 37450.04635567845980404, -10996.41597235561494017, -51495.77378958264307585, -111817.35438732158218045, 113162.19309883122332394, -28282.36336538873729296, 80116.96271347980655264, -104308.65674434894754086, 51551.62964549169555539, 138542.81342443163157441, 2362.40293180459411815, 39636.66202647220052313, 128529.58266507538792212, -150213.09417594602564350, 1285.02632865518535255, 93464.39379180650576018, 33524.87206935969152255, -57032.54839151562919142, 48181.64639431597606745, -147292.47025012399535626, 97034.14600735486601479, -4232.45857888670434477, -65829.64146201827679761, -158601.82587503976537846, 107207.26035297117778100, 76046.68013454481842928, 72220.48534353350987658, 10611.60348397046618629, 65780.66692627179145347,
+-72158.97469416672538500, 38303.67460635968018323, -1298519.35143863083794713,};
+# 3 "/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma/userdma_test.cpp" 2
+
+void test_NTT (memcell s2m_buf[1024], memcell m2s_buf[1024], memcell result[1024]) {
+ int err = 0;
+ hls::stream<trans_pkt> inStream_t, outStream_t;
+ trans_pkt dataStream_t;
+
+ bool s2m_buf_sts = 0;
+ bool m2s_buf_sts = 0;
+ ap_uint<2> s2m_err;
+
+ int j;
+
+
+ for (j = 0; j < 1024; j++){
+  s2m_buf[j].uin.lower = 0;
+  s2m_buf[j].uin.upper = 0;
+ }
+
+
+
+ for(int i = 0; i < 1024; i++){
+  m2s_buf[i].uin.lower = NTT_in[i];
+ }
+
+ for (int x = 0; x < 1024; x++) {
+  dataStream_t.data = NTT_out[x];
+  dataStream_t.keep = -1;
+  dataStream_t.user = (x == 0);
+  dataStream_t.last = (x == 1023);
+  inStream_t.write(dataStream_t);
+ }
+
+
+ printf("\n");
+
+
+
+
+ printf("\n");
+ printf("Calling S2MM/MM2S design...\n");
+
+ userdma(inStream_t, outStream_t, 2, &s2m_buf_sts, &m2s_buf_sts, s2m_buf, m2s_buf, &s2m_err);
+
+ printf("\n");
+
+
+
+
+ printf("\n");
+
+ if(s2m_buf_sts == 1){
+  printf("s2m_err: %x", s2m_err);
+  printf("\nS2M data\n");
+  printf("s2m_buf, address: %x", s2m_buf);
+  for (j = 0; j < 1024; j++){
+   if((j % 32) == 0) printf("\n");
+   printf("%5d ", s2m_buf[j].uin.lower);
+  }
+  printf("\n");
+ }
+
+ if(m2s_buf_sts == 1){
+  printf("\nM2S data\n");
+  dataStream_t = outStream_t.read();
+  printf("\nFirst Programmed Data for fiFFNTT mode: %5d \n\n", dataStream_t.data);
+  for (j = 0; j < 1024; j++){
+   if((j % 32) == 0) printf("\n");
+   dataStream_t = outStream_t.read();
+   printf("%5d ", dataStream_t.data);
+  }
+  printf("\n");
+ }
+ printf("\n");
+ printf("s2m_err: %x", s2m_err);
+ printf("\n");
+ printf("\n");
+}
+
+void test_FFT (memcell s2m_buf[1024], memcell m2s_buf[1024], memcell result[1024]) {
+ int err = 0;
+ hls::stream<trans_pkt> inStream_t, outStream_t;
+ trans_pkt dataStream_t;
+
+ bool s2m_buf_sts = 0;
+ bool m2s_buf_sts = 0;
+ ap_uint<2> s2m_err;
+
+ int j;
+
+
+ for (j = 0; j < 1024; j++){
+  s2m_buf[j].fpr = 0;
+ }
+
+
+
+ for(int i = 0; i < 1024; i++){
+  m2s_buf[i].fpr = FFT_in[i];
+ }
+
+ memcell fft_out;
+ for (int x = 0; x < 2048; x++) {
+  if (x < 1024) {
+   fft_out.fpr = FFT_out[x];
+   dataStream_t.data = fft_out.uin.lower;
+  } else {
+   fft_out.fpr = FFT_out[x - 1024];
+   dataStream_t.data = fft_out.uin.upper;
+  }
+  dataStream_t.keep = -1;
+  dataStream_t.user = (x == 0);
+  dataStream_t.last = (x == 2047);
+  inStream_t.write(dataStream_t);
+ }
+
+ printf("\n");
+
+
+
+
+ printf("\n");
+ printf("Calling S2MM/MM2S design...\n");
+
+ userdma(inStream_t, outStream_t, 0, &s2m_buf_sts, &m2s_buf_sts, s2m_buf, m2s_buf, &s2m_err);
+
+ printf("\n");
+
+
+
+
+ printf("\n");
+
+ if(s2m_buf_sts == 1){
+  printf("s2m_err: %x", s2m_err);
+  printf("\nS2M data\n");
+  printf("s2m_buf, address: %x", s2m_buf);
+  for (j = 0; j < 1024; j++){
+   if((j % 8) == 0) printf("\n");
+   printf("%15f ", s2m_buf[j].fpr);
+  }
+  printf("\n");
+ }
+
+ memcell m2s_data[1024];
+
+ if(m2s_buf_sts == 1){
+  printf("\nM2S data\n");
+  dataStream_t = outStream_t.read();
+  printf("\nFirst Programmed Data for fiFFNTT mode: %5d \n\n", dataStream_t.data);
+  for (j = 0; j < 2048; j++){
+   dataStream_t = outStream_t.read();
+   if (j < 1024) {
+    m2s_data[j].uin.lower = dataStream_t.data;
+   } else {
+    if((j % 16) == 0) printf("\n");
+    m2s_data[j - 1024].uin.upper = dataStream_t.data;
+    printf("%15f ", m2s_data[j - 1024].fpr);
+   }
+  }
+  printf("\n");
+ }
+ printf("\n");
+ printf("s2m_err: %x", s2m_err);
+ printf("\n");
+ printf("\n");
+}
 
 int main() {
-  int err = 0;
-  ap_uint<32> out_b[360*160], in_b[360*160], result[360*160];
-  hls::stream<trans_pkt > inStream_t, outStream_t;
-  trans_pkt dataStream_t;
+ memcell s2m_buf[1024], m2s_buf[1024], result[1024];
 
-  ap_uint<1> s2m_en_clrsts, m2s_en_clrsts;
-  ap_uint<32> S2M_LEN;
-  ap_uint<32> Real_S2M_LEN;
-  ap_uint<5> S2M_upsb;
-  ap_uint<5> M2S_upsb;
-
-  ap_uint<32> imgwidth = 160;
-  ap_uint<32> imgheight = 360;
-
-  int M2S_LEN;
-  int temp=1000;
-
-  bool s2m_buf_sts;
-  bool s2m_sts_clear;
-  bool m2s_buf_sts;
-  bool m2s_sts_clear;
-  ap_uint<2> s2m_err;
-  bool m2s_sof_err=0;
-  bool m2s_eol_err=0;
-
-  int j;
-
-  for (j=0; j<360*160; j++){
-   out_b[j]=0;
-  }
-
-  s2m_en_clrsts = 0;
-  m2s_en_clrsts = 0;
-  s2m_sts_clear = 0;
-  m2s_sts_clear = 0;
-
-  S2M_LEN = 360*160;
-  Real_S2M_LEN = imgwidth * imgheight;
-  M2S_LEN = 360*160;
-
-  for (j=0; j<360*160; j++){
-   out_b[j]=0;
-  }
-  for(int i=0;i<360*160;i++){
-   in_b[i] = i;
-  }
-
-  printf("before-phase s2m_buf_sts is %d\n", s2m_buf_sts);
-  printf("Prepare data stream\n");
-
-  for(unsigned int y = 0; y < imgheight; y++){
-     for (unsigned int x = 0; x < imgwidth; x++) {
-      dataStream_t.data = temp;
-      dataStream_t.keep = -1;
-      dataStream_t.user(2,2) = (x==0 && y==0);
-      dataStream_t.user(3,3) = (x==imgwidth-1);
-      dataStream_t.last = ((y==imgheight-1)&&(x==imgwidth-1));
-      inStream_t.write(dataStream_t);
-      temp++;
-     }
-  }
-
-  printf("before-phase m2s_buf_sts is %d\n", m2s_buf_sts);
-
-  printf("Call S2MM/MM2S design\n");
-  userdma(inStream_t, &s2m_buf_sts, s2m_sts_clear, S2M_LEN, s2m_en_clrsts, out_b, &s2m_err, imgwidth, in_b, &m2s_buf_sts, m2s_sts_clear, M2S_LEN, m2s_en_clrsts, outStream_t);
-
-  printf("\n");
-  printf("after-phase s2m_buf_sts is %d\n", s2m_buf_sts);
-  printf("after-phase m2s_buf_sts is %d\n", m2s_buf_sts);
-  printf("\n");
-
-  if(s2m_buf_sts == 1){
-   printf("s2m_err: %x", s2m_err);
-   printf("\nS2M data\n");
-   printf("out_b, address: %x", out_b);
-   for (j=0; j<360*160; j++){
-    if((j%32)==0){printf("\n");}
-    printf("%x ", out_b[j]);
-   }
-   printf("\n");
-  }
-
-  if(m2s_buf_sts == 1){
-   printf("\nM2S data\n");
-   for (j=0; j<360*160; j++){
-    if((j%32)==0){printf("\n");}
-    dataStream_t = outStream_t.read();
-
-    if(j==0){
-     if(dataStream_t.user(2,2)!=1)
-      m2s_sof_err=1;
-    }
-    if((j%imgwidth)==(imgwidth-1)){
-     if(dataStream_t.user(3,3)!=1)
-      m2s_eol_err=1;
-    }
-
-    printf("%04d ", dataStream_t.data);
-   }
-   printf("\n");
-  }
-  printf("\n");
-  printf("m2s_sof_err-->%X \n", m2s_sof_err);
-  printf("m2s_sof_err-->%X \n", m2s_eol_err);
-
-  if((s2m_buf_sts == 1)&&(m2s_buf_sts == 1)){
-   s2m_sts_clear = 1;
-   s2m_en_clrsts = 1;
-   m2s_sts_clear = 1;
-   m2s_en_clrsts = 1;
-   userdma(inStream_t, &s2m_buf_sts, s2m_sts_clear, S2M_LEN, s2m_en_clrsts, out_b, &s2m_err, imgwidth, in_b, &m2s_buf_sts, m2s_sts_clear, M2S_LEN, m2s_en_clrsts, outStream_t);
-   printf("clear s2m_buf_sts -> %d\n", s2m_buf_sts);
-   printf("clear m2s_buf_sts -> %d\n", m2s_buf_sts);
-   s2m_en_clrsts = 0;
-   m2s_en_clrsts = 0;
-  } else if((s2m_buf_sts == 1)&&(m2s_buf_sts == 0)){
-   s2m_sts_clear = 1;
-   s2m_en_clrsts = 1;
-   m2s_en_clrsts = 0;
-   userdma(inStream_t, &s2m_buf_sts, s2m_sts_clear, S2M_LEN, s2m_en_clrsts, out_b, &s2m_err, imgwidth, in_b, &m2s_buf_sts, m2s_sts_clear, M2S_LEN, m2s_en_clrsts, outStream_t);
-   printf("clear s2m_buf_sts -> %d\n", s2m_buf_sts);
-   s2m_en_clrsts = 0;
-  } else if((s2m_buf_sts == 0)&&(m2s_buf_sts == 1)){
-   s2m_en_clrsts = 0;
-   m2s_sts_clear = 1;
-   m2s_en_clrsts = 1;
-   userdma(inStream_t, &s2m_buf_sts, s2m_sts_clear, S2M_LEN, s2m_en_clrsts, out_b, &s2m_err, imgwidth, in_b, &m2s_buf_sts, m2s_sts_clear, M2S_LEN, m2s_en_clrsts, outStream_t);
-   printf("clear m2s_buf_sts -> %d\n", m2s_buf_sts);
-   m2s_en_clrsts = 0;
-  }
-
-  printf("s2m_err: %x", s2m_err);
-
-  printf("\n");
-  printf("\n");
-
-  s2m_sts_clear = 0;
-  m2s_sts_clear = 0;
-
-  return err;
+ test_FFT(s2m_buf, m2s_buf, result);
+ test_NTT(s2m_buf, m2s_buf, result);
+# 188 "/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma/userdma_test.cpp"
+ return 0;
 }

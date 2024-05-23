@@ -6,16 +6,10 @@
 
 extern "C" void AESL_WRAP_userdma (
 hls::stream<struct ap_axis<32, 0, 0, 0 > > (&inStreamTop),
+hls::stream<struct ap_axis<32, 0, 0, 0 > > (&outStreamTop),
+char kernel_mode,
 volatile void* s2m_buf_sts,
-char s2m_sts_clear,
-int s2m_len,
-char s2m_enb_clrsts,
-volatile void* s2mbuf,
-volatile void* s2m_err,
-int Img_width,
-volatile void* m2sbuf,
 volatile void* m2s_buf_sts,
-char m2s_sts_clear,
-int m2s_len,
-char m2s_enb_clrsts,
-hls::stream<struct ap_axis<32, 0, 0, 0 > > (&outStreamTop));
+volatile void* s2mbuf,
+volatile void* m2sbuf,
+volatile void* s2m_err);

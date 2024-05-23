@@ -100,10 +100,10 @@ entry:7 %tmp = bitselect i1 @_ssdm_op_BitSelect.i1.i2.i32, i2 %kernel_mode_read,
 
 <Node id="19" bw="12" op_0_bw="1" op_1_bw="12" op_2_bw="12">
 <![CDATA[
-entry:8 %select_ln62 = select i1 %tmp, i12 1024, i12 2048
+entry:8 %select_ln80 = select i1 %tmp, i12 1024, i12 2048
 
 ]]></Node>
-<StgValue><ssdm name="select_ln62"/></StgValue>
+<StgValue><ssdm name="select_ln80"/></StgValue>
 </operation>
 
 <operation id="10" st_id="2" stage="1" lat="1">
@@ -130,10 +130,10 @@ entry:9 %empty = wait i32 @_ssdm_op_Wait
 
 <Node id="21" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="4" op_3_bw="4" op_4_bw="2" op_5_bw="1" op_6_bw="33" op_7_bw="12" op_8_bw="32" op_9_bw="1" op_10_bw="0">
 <![CDATA[
-entry:10 %call_ln62 = call void @getinstream_Pipeline_VITIS_LOOP_62_1, i32 %inStreamTop_V_data_V, i4 %inStreamTop_V_keep_V, i4 %inStreamTop_V_strb_V, i2 %inStreamTop_V_user_V, i1 %inStreamTop_V_last_V, i33 %inbuf, i12 %select_ln62, i32 %incount25, i1 %tmp_last_V_loc
+entry:10 %call_ln80 = call void @getinstream_Pipeline_VITIS_LOOP_80_1, i32 %inStreamTop_V_data_V, i4 %inStreamTop_V_keep_V, i4 %inStreamTop_V_strb_V, i2 %inStreamTop_V_user_V, i1 %inStreamTop_V_last_V, i33 %inbuf, i12 %select_ln80, i32 %incount25, i1 %tmp_last_V_loc
 
 ]]></Node>
-<StgValue><ssdm name="call_ln62"/></StgValue>
+<StgValue><ssdm name="call_ln80"/></StgValue>
 </operation>
 </state>
 
@@ -148,10 +148,10 @@ entry:10 %call_ln62 = call void @getinstream_Pipeline_VITIS_LOOP_62_1, i32 %inSt
 
 <Node id="21" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="4" op_3_bw="4" op_4_bw="2" op_5_bw="1" op_6_bw="33" op_7_bw="12" op_8_bw="32" op_9_bw="1" op_10_bw="0">
 <![CDATA[
-entry:10 %call_ln62 = call void @getinstream_Pipeline_VITIS_LOOP_62_1, i32 %inStreamTop_V_data_V, i4 %inStreamTop_V_keep_V, i4 %inStreamTop_V_strb_V, i2 %inStreamTop_V_user_V, i1 %inStreamTop_V_last_V, i33 %inbuf, i12 %select_ln62, i32 %incount25, i1 %tmp_last_V_loc
+entry:10 %call_ln80 = call void @getinstream_Pipeline_VITIS_LOOP_80_1, i32 %inStreamTop_V_data_V, i4 %inStreamTop_V_keep_V, i4 %inStreamTop_V_strb_V, i2 %inStreamTop_V_user_V, i1 %inStreamTop_V_last_V, i33 %inbuf, i12 %select_ln80, i32 %incount25, i1 %tmp_last_V_loc
 
 ]]></Node>
-<StgValue><ssdm name="call_ln62"/></StgValue>
+<StgValue><ssdm name="call_ln80"/></StgValue>
 </operation>
 </state>
 
@@ -181,7 +181,7 @@ entry:2 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i2 %ker
 
 <Node id="15" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32">
 <![CDATA[
-entry:4 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %incount25, void @empty_5, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0
+entry:4 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %incount25, void @empty_16, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3, i32 4294967295, i32 0
 
 ]]></Node>
 <StgValue><ssdm name="specinterface_ln0"/></StgValue>
@@ -196,7 +196,7 @@ entry:4 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %in
 
 <Node id="16" bw="0" op_0_bw="0" op_1_bw="33" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32">
 <![CDATA[
-entry:5 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i33 %inbuf, void @empty_5, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0
+entry:5 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i33 %inbuf, void @empty_16, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3, i32 4294967295, i32 0
 
 ]]></Node>
 <StgValue><ssdm name="specinterface_ln0"/></StgValue>
@@ -211,7 +211,7 @@ entry:5 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i33 %in
 
 <Node id="17" bw="0" op_0_bw="0" op_1_bw="1" op_2_bw="2" op_3_bw="4" op_4_bw="4" op_5_bw="32" op_6_bw="0" op_7_bw="32" op_8_bw="32" op_9_bw="0" op_10_bw="32" op_11_bw="32" op_12_bw="0" op_13_bw="0" op_14_bw="0" op_15_bw="32" op_16_bw="32" op_17_bw="32" op_18_bw="32" op_19_bw="0" op_20_bw="0" op_21_bw="32" op_22_bw="32">
 <![CDATA[
-entry:6 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %inStreamTop_V_last_V, i2 %inStreamTop_V_user_V, i4 %inStreamTop_V_strb_V, i4 %inStreamTop_V_keep_V, i32 %inStreamTop_V_data_V, void @empty_13, i32 1, i32 1, void @empty_22, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0
+entry:6 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %inStreamTop_V_last_V, i2 %inStreamTop_V_user_V, i4 %inStreamTop_V_strb_V, i4 %inStreamTop_V_keep_V, i32 %inStreamTop_V_data_V, void @empty_19, i32 1, i32 1, void @empty_20, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3, i32 4294967295, i32 0
 
 ]]></Node>
 <StgValue><ssdm name="specinterface_ln0"/></StgValue>
@@ -241,10 +241,10 @@ entry:11 %tmp_last_V_loc_load = load i1 %tmp_last_V_loc
 
 <Node id="23" bw="2" op_0_bw="1" op_1_bw="2" op_2_bw="2">
 <![CDATA[
-entry:12 %select_ln73 = select i1 %tmp_last_V_loc_load, i2 0, i2 2
+entry:12 %select_ln91 = select i1 %tmp_last_V_loc_load, i2 0, i2 2
 
 ]]></Node>
-<StgValue><ssdm name="select_ln73"/></StgValue>
+<StgValue><ssdm name="select_ln91"/></StgValue>
 </operation>
 
 <operation id="19" st_id="4" stage="1" lat="1">
@@ -256,10 +256,10 @@ entry:12 %select_ln73 = select i1 %tmp_last_V_loc_load, i2 0, i2 2
 
 <Node id="24" bw="0" op_0_bw="0" op_1_bw="2" op_2_bw="2" op_3_bw="0">
 <![CDATA[
-entry:13 %write_ln68 = write void @_ssdm_op_Write.ap_auto.i2P0A, i2 %s2m_err, i2 %select_ln73
+entry:13 %write_ln86 = write void @_ssdm_op_Write.ap_auto.i2P0A, i2 %s2m_err, i2 %select_ln91
 
 ]]></Node>
-<StgValue><ssdm name="write_ln68"/></StgValue>
+<StgValue><ssdm name="write_ln86"/></StgValue>
 </operation>
 
 <operation id="20" st_id="4" stage="1" lat="1">
@@ -271,10 +271,10 @@ entry:13 %write_ln68 = write void @_ssdm_op_Write.ap_auto.i2P0A, i2 %s2m_err, i2
 
 <Node id="25" bw="0">
 <![CDATA[
-entry:14 %ret_ln85 = ret
+entry:14 %ret_ln103 = ret
 
 ]]></Node>
-<StgValue><ssdm name="ret_ln85"/></StgValue>
+<StgValue><ssdm name="ret_ln103"/></StgValue>
 </operation>
 </state>
 </state_list>

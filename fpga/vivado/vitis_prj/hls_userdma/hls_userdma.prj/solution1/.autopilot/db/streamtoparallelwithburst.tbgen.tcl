@@ -201,7 +201,7 @@ set RtlHierarchyInfo {[
 		"Port" : [
 			{"Name" : "inbuf", "Type" : "Fifo", "Direction" : "I", "DependentProc" : ["0"], "DependentChan" : "0", "DependentChanDepth" : "32", "DependentChanType" : "0",
 				"SubConnect" : [
-					{"ID" : "1", "SubInstance" : "grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_20_2_fu_111", "Port" : "inbuf", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+					{"ID" : "1", "SubInstance" : "grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_27_2_fu_115", "Port" : "inbuf", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
 			{"Name" : "incount25", "Type" : "Fifo", "Direction" : "I", "DependentProc" : ["0"], "DependentChan" : "0", "DependentChanDepth" : "2", "DependentChanType" : "0",
 				"BlockSignal" : [
 					{"Name" : "incount25_blk_n", "Type" : "RtlSignal"}]},
@@ -211,19 +211,15 @@ set RtlHierarchyInfo {[
 					{"Name" : "kernel_mode_blk_n", "Type" : "RtlSignal"}]},
 			{"Name" : "gmem0", "Type" : "MAXI", "Direction" : "O",
 				"SubConnect" : [
-					{"ID" : "1", "SubInstance" : "grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_20_2_fu_111", "Port" : "gmem0", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+					{"ID" : "1", "SubInstance" : "grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_27_2_fu_115", "Port" : "gmem0", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
 			{"Name" : "out_memory", "Type" : "Fifo", "Direction" : "I", "DependentProc" : ["0"], "DependentChan" : "0", "DependentChanDepth" : "3", "DependentChanType" : "2",
 				"BlockSignal" : [
-					{"Name" : "out_memory_blk_n", "Type" : "RtlSignal"}]},
-			{"Name" : "final_s2m_len", "Type" : "OVld", "Direction" : "IO",
-				"SubConnect" : [
-					{"ID" : "1", "SubInstance" : "grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_20_2_fu_111", "Port" : "final_s2m_len", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "out_sts", "Type" : "OVld", "Direction" : "IO"}],
+					{"Name" : "out_memory_blk_n", "Type" : "RtlSignal"}]}],
 		"Loop" : [
-			{"Name" : "VITIS_LOOP_17_1", "PipelineType" : "no",
-				"LoopDec" : {"FSMBitwidth" : "5", "FirstState" : "ap_ST_fsm_state2", "LastState" : ["ap_ST_fsm_state5"], "QuitState" : ["ap_ST_fsm_state2"], "PreState" : ["ap_ST_fsm_state1"], "PostState" : ["ap_ST_fsm_state1"], "OneDepthLoop" : "0", "OneStateBlock": ""}}]},
-	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_20_2_fu_111", "Parent" : "0", "Child" : ["2"],
-		"CDFG" : "streamtoparallelwithburst_Pipeline_VITIS_LOOP_20_2",
+			{"Name" : "VITIS_LOOP_24_1", "PipelineType" : "no",
+				"LoopDec" : {"FSMBitwidth" : "4", "FirstState" : "ap_ST_fsm_state2", "LastState" : ["ap_ST_fsm_state4"], "QuitState" : ["ap_ST_fsm_state2"], "PreState" : ["ap_ST_fsm_state1"], "PostState" : ["ap_ST_fsm_state1"], "OneDepthLoop" : "0", "OneStateBlock": ""}}]},
+	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_27_2_fu_115", "Parent" : "0", "Child" : ["2"],
+		"CDFG" : "streamtoparallelwithburst_Pipeline_VITIS_LOOP_27_2",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
@@ -238,44 +234,40 @@ set RtlHierarchyInfo {[
 		"IsBlackBox" : "0",
 		"Port" : [
 			{"Name" : "tmp", "Type" : "None", "Direction" : "I"},
-			{"Name" : "zext_ln20", "Type" : "None", "Direction" : "I"},
+			{"Name" : "zext_ln27", "Type" : "None", "Direction" : "I"},
 			{"Name" : "gmem0", "Type" : "MAXI", "Direction" : "O",
 				"BlockSignal" : [
 					{"Name" : "gmem0_blk_n_AW", "Type" : "RtlSignal"},
 					{"Name" : "gmem0_blk_n_W", "Type" : "RtlSignal"},
 					{"Name" : "gmem0_blk_n_B", "Type" : "RtlSignal"}]},
-			{"Name" : "shl_ln25", "Type" : "None", "Direction" : "I"},
+			{"Name" : "shl_ln32", "Type" : "None", "Direction" : "I"},
 			{"Name" : "inbuf", "Type" : "Fifo", "Direction" : "I",
 				"BlockSignal" : [
 					{"Name" : "inbuf_blk_n", "Type" : "RtlSignal"}]},
-			{"Name" : "icmp_ln14", "Type" : "None", "Direction" : "I"},
 			{"Name" : "out_memory_assign", "Type" : "None", "Direction" : "I"},
-			{"Name" : "final_s2m_len", "Type" : "None", "Direction" : "I"}],
+			{"Name" : "brmerge", "Type" : "None", "Direction" : "I"}],
 		"Loop" : [
-			{"Name" : "VITIS_LOOP_20_2", "PipelineType" : "UPC",
+			{"Name" : "VITIS_LOOP_27_2", "PipelineType" : "UPC",
 				"LoopDec" : {"FSMBitwidth" : "1", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter17", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter17", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
-	{"ID" : "2", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_20_2_fu_111.flow_control_loop_pipe_sequential_init_U", "Parent" : "1"}]}
+	{"ID" : "2", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_27_2_fu_115.flow_control_loop_pipe_sequential_init_U", "Parent" : "1"}]}
 
 
 set ArgLastReadFirstWriteLatency {
 	streamtoparallelwithburst {
 		inbuf {Type I LastRead 1 FirstWrite -1}
 		incount25 {Type I LastRead 1 FirstWrite -1}
-		s2m_buf_sts {Type O LastRead -1 FirstWrite 4}
+		s2m_buf_sts {Type O LastRead -1 FirstWrite 3}
 		kernel_mode {Type I LastRead 0 FirstWrite -1}
 		gmem0 {Type O LastRead 5 FirstWrite 3}
-		out_memory {Type I LastRead 0 FirstWrite -1}
-		final_s2m_len {Type IO LastRead -1 FirstWrite -1}
-		out_sts {Type IO LastRead -1 FirstWrite -1}}
-	streamtoparallelwithburst_Pipeline_VITIS_LOOP_20_2 {
+		out_memory {Type I LastRead 0 FirstWrite -1}}
+	streamtoparallelwithburst_Pipeline_VITIS_LOOP_27_2 {
 		tmp {Type I LastRead 0 FirstWrite -1}
-		zext_ln20 {Type I LastRead 0 FirstWrite -1}
+		zext_ln27 {Type I LastRead 0 FirstWrite -1}
 		gmem0 {Type O LastRead 5 FirstWrite 3}
-		shl_ln25 {Type I LastRead 0 FirstWrite -1}
+		shl_ln32 {Type I LastRead 0 FirstWrite -1}
 		inbuf {Type I LastRead 1 FirstWrite -1}
-		icmp_ln14 {Type I LastRead 0 FirstWrite -1}
 		out_memory_assign {Type I LastRead 0 FirstWrite -1}
-		final_s2m_len {Type I LastRead 0 FirstWrite -1}}}
+		brmerge {Type I LastRead 0 FirstWrite -1}}}
 
 set hasDtUnsupportedChannel 0
 

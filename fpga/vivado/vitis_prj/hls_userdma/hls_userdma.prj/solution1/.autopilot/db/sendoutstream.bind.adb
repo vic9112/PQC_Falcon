@@ -34,7 +34,7 @@
 						<coreName>FIFO</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>369936144</coreId>
+						<coreId>1701470831</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>35</bitwidth>
@@ -70,7 +70,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>370065168</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -106,7 +106,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>369398272</coreId>
+						<coreId>119226736</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -142,7 +142,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>369943504</coreId>
+						<coreId>119354400</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>4</bitwidth>
@@ -178,7 +178,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1330007625</coreId>
+						<coreId>119243488</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>4</bitwidth>
@@ -214,7 +214,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>369819320</coreId>
+						<coreId>118922448</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>2</bitwidth>
@@ -250,7 +250,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>64</coreId>
+						<coreId>118922448</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -272,10 +272,10 @@
 					<Obj>
 						<type>0</type>
 						<id>10</id>
-						<name>br_ln152</name>
+						<name>br_ln171</name>
 						<fileName>userdma.cpp</fileName>
 						<fileDirectory>/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma</fileDirectory>
-						<lineNumber>152</lineNumber>
+						<lineNumber>171</lineNumber>
 						<contextFuncName>sendoutstream</contextFuncName>
 						<contextNormFuncName>sendoutstream</contextNormFuncName>
 						<inlineStackInfo>
@@ -291,7 +291,7 @@
 											<first>userdma.cpp</first>
 											<second>sendoutstream</second>
 										</first>
-										<second>152</second>
+										<second>171</second>
 									</item>
 								</second>
 							</item>
@@ -304,7 +304,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>369819824</coreId>
+						<coreId>119112392</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -417,7 +417,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>369955728</coreId>
+						<coreId>119166224</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -473,7 +473,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>807418469</coreId>
+						<coreId>608</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>2</bitwidth>
@@ -532,7 +532,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>369957664</coreId>
+						<coreId>119228592</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -624,10 +624,10 @@
 					<Obj>
 						<type>0</type>
 						<id>19</id>
-						<name>br_ln159</name>
+						<name>br_ln178</name>
 						<fileName>userdma.cpp</fileName>
 						<fileDirectory>/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma</fileDirectory>
-						<lineNumber>159</lineNumber>
+						<lineNumber>178</lineNumber>
 						<contextFuncName>sendoutstream</contextFuncName>
 						<contextNormFuncName>sendoutstream</contextNormFuncName>
 						<inlineStackInfo>
@@ -643,7 +643,7 @@
 											<first>userdma.cpp</first>
 											<second>sendoutstream</second>
 										</first>
-										<second>159</second>
+										<second>178</second>
 									</item>
 								</second>
 							</item>
@@ -656,7 +656,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>369869968</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -682,10 +682,10 @@
 					<Obj>
 						<type>0</type>
 						<id>21</id>
-						<name>m2s_buf_sts_write_ln161</name>
+						<name>m2s_buf_sts_write_ln180</name>
 						<fileName>userdma.cpp</fileName>
 						<fileDirectory>/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma</fileDirectory>
-						<lineNumber>161</lineNumber>
+						<lineNumber>180</lineNumber>
 						<contextFuncName>sendoutstream</contextFuncName>
 						<contextNormFuncName>sendoutstream</contextNormFuncName>
 						<inlineStackInfo>
@@ -701,7 +701,7 @@
 											<first>userdma.cpp</first>
 											<second>sendoutstream</second>
 										</first>
-										<second>161</second>
+										<second>180</second>
 									</item>
 								</second>
 							</item>
@@ -714,7 +714,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>119166832</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -740,10 +740,10 @@
 					<Obj>
 						<type>0</type>
 						<id>22</id>
-						<name>_ln163</name>
+						<name>_ln182</name>
 						<fileName>userdma.cpp</fileName>
 						<fileDirectory>/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma</fileDirectory>
-						<lineNumber>163</lineNumber>
+						<lineNumber>182</lineNumber>
 						<contextFuncName>sendoutstream</contextFuncName>
 						<contextNormFuncName>sendoutstream</contextNormFuncName>
 						<inlineStackInfo>
@@ -759,7 +759,7 @@
 											<first>userdma.cpp</first>
 											<second>sendoutstream</second>
 										</first>
-										<second>163</second>
+										<second>182</second>
 									</item>
 								</second>
 							</item>
@@ -772,7 +772,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>119166832</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -817,7 +817,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>119288752</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -848,7 +848,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>370018240</coreId>
+						<coreId>745300333</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -879,7 +879,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1330007625</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -910,7 +910,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>369972576</coreId>
+						<coreId>117212304</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>4</bitwidth>
@@ -941,7 +941,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>369973160</coreId>
+						<coreId>539112704</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -975,7 +975,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>1747935597</coreId>
+					<coreId>22</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -1042,7 +1042,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>369935608</coreId>
+					<coreId>119167552</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -1293,8 +1293,8 @@
 		</item>
 		<item class_id_reference="22" object_id="_53">
 			<mId>3</mId>
-			<mTag>VITIS_LOOP_152_1</mTag>
-			<mNormTag>VITIS_LOOP_152_1</mNormTag>
+			<mTag>VITIS_LOOP_171_1</mTag>
+			<mNormTag>VITIS_LOOP_171_1</mNormTag>
 			<mType>1</mType>
 			<sub_regions>
 				<count>0</count>
@@ -1544,7 +1544,7 @@
 		<count>1</count>
 		<item_version>0</item_version>
 		<item class_id="42" tracking_level="1" version="0" object_id="_73">
-			<region_name>VITIS_LOOP_152_1</region_name>
+			<region_name>VITIS_LOOP_171_1</region_name>
 			<basic_blocks>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -1670,7 +1670,7 @@
 			</second>
 		</item>
 		<item>
-			<first>write_ln161_write_fu_83</first>
+			<first>write_ln180_write_fu_83</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
