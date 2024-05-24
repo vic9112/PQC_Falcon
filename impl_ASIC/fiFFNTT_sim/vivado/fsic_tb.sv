@@ -126,13 +126,13 @@ module fsic_tb();
         //SocLa2DmaPath();
         //SocUp2DmaPath();
         //load_dma_x();
-        load_dma_NTT();
-        //load_dma_iNTT();
+        //load_dma_NTT();
+        load_dma_iNTT();
         //load_dma_FFT();
         //load_dma_iFFT();
         //setting_dma();
-        setting_dma_NTT();
-        //setting_dma_iNTT();
+        //setting_dma_NTT();
+        setting_dma_iNTT();
         //setting_dma_FFT();
         //setting_dma_iFFT();
          //test_FIR();
@@ -168,8 +168,8 @@ module fsic_tb();
             axil_cycles_gen(WriteCyc, PL_UPDMA, offset, data, 1);
 
             fork
-                CheckuserDMADone_NTT();
-                //CheckuserDMADone_iNTT();
+                //CheckuserDMADone_NTT();
+                CheckuserDMADone_iNTT();
                 //CheckuserDMADone_FFT();
                 //CheckuserDMADone_iFFT();
             join_none
@@ -268,7 +268,7 @@ module fsic_tb();
     	    $display($time, "=> load dma iNTT ...");
             $display($time, "=> =======================================================================");
 
-            $readmemh("../../../../../NTT_out.hex", updma_NTT_x);
+            $readmemh("../../../../../NTT_out.hex", updma_iNTT_x);
 
             fd = $fopen ("../../../../../updma_iNTT_input.log", "w");
             for (index = 0; index < 1024; index +=1) begin
