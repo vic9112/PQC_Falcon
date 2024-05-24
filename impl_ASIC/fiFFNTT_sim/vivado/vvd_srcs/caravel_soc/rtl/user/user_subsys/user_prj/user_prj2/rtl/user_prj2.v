@@ -126,9 +126,10 @@ localparam	PE10_START = 6'd30;
 localparam	PE10_DONE  = 6'd31;
 localparam	OUT_COPY  = 6'd32;
 localparam	RESET  = 6'd33;
-localparam	F_OUT1     = 4'd1;
-localparam	F_OUT2     = 4'd2;
-localparam	U_OUT      = 4'd3;
+localparam	F_WAIT1     = 4'd1;
+localparam	F_OUT1     = 4'd2;
+localparam	F_OUT2     = 4'd3;
+localparam	U_OUT      = 4'd4;
 reg [5:0] state,next_state;
 wire [63:0] In_data;
 wire In_vld;
@@ -140,6 +141,7 @@ reg reg_rst_incpopy;
 reg reg_rst_out_stage;
 reg [3:0] Out_state,next_Out_state;
 reg [31:0]regx_data;
+reg [31:0]regy_data;
 /*always @(posedge axi_clk or negedge axi_reset_n)  begin
   if ( !axi_reset_n ) begin 
     in_state <= 2'b0;
@@ -250,6 +252,7 @@ wire [9:0] line1_ramu_adr;
 wire [15:0] line1_ramu_d;
 wire line1_ramu_we;
 wire [15:0] line1_ramu_q;
+wire [63:0] line1_ramf_q;
 wire line1_ramu_en;
 
 always @(posedge axi_clk or negedge axi_reset_n)  begin
@@ -267,12 +270,13 @@ always@(*)begin
   case(state)
     Command: 	if(ss_tvalid && ss_tdata[3:2]==2'b01) next_state = IN_COPY;
              	else      next_state = Command;
-    IN_COPY: 	if(In_copy_done) next_state = PE1_RST;//PE1_RST;
+    IN_COPY: 	if(In_copy_done&&(reg_mode1_in==16'd2||reg_mode1_in==16'd3)) next_state = PE1_RST;
+    		else if (In_copy_done&&(reg_mode1_in==16'd0||reg_mode1_in==16'd1)) next_state = PE1_DONE;//next_state = PE2_RST;
                 else      next_state = IN_COPY;// should change
     PE1_RST:    next_state = PE1_START;
     PE1_START:  if(ap_done_vld) next_state=PE1_DONE;
                 else next_state = PE1_START;
-    PE1_DONE:   next_state = PE2_RST;
+    PE1_DONE:   next_state = OUT_COPY;//PE2_RST;
     //////////////////  2rd
     PE2_RST:    next_state = PE2_START;//next_state = OUT_COPY;
     PE2_START:  if(ap_done_vld) next_state=PE2_DONE;
@@ -506,12 +510,14 @@ end
 
 always@(*)begin
   case(Out_state)
-    Command: if(ss_tvalid && ss_tdata[3:2]==2'b01 && (ss_tdata[1:0]==2'd0 || ss_tdata[1:0]== 2'd1))  next_Out_state = F_OUT1;
+    Command: if(ss_tvalid && ss_tdata[3:2]==2'b01 && (ss_tdata[1:0]==2'd0 || ss_tdata[1:0]== 2'd1))  next_Out_state = F_WAIT1;
              else if(ss_tvalid && ss_tdata[3:2]==2'b01 && (ss_tdata[1:0]==2'd2 || ss_tdata[1:0]==2'd3))  next_Out_state = U_OUT;
              else next_Out_state=Command;
-    F_OUT1:   if(sm_tready &&Out_vld)next_Out_state = F_OUT2;
-    		else next_Out_state = F_OUT1;
-    F_OUT2:   if(sm_tready&&Out_vld)next_Out_state = F_OUT1;
+    F_WAIT1:   if(Out_vld)next_Out_state = F_OUT1;
+    		else next_Out_state = F_WAIT1;
+    F_OUT1: if(sm_tready) next_Out_state = F_OUT2;
+        	else next_Out_state = F_OUT1;
+    F_OUT2: if(sm_tready) next_Out_state = F_WAIT1;
     		else next_Out_state = F_OUT2;
     U_OUT:    if(Out_copy_done)next_Out_state = Command;
     	     else next_Out_state = U_OUT;
@@ -520,21 +526,23 @@ always@(*)begin
 end 
 wire [79:0]Out_data;
 always @(posedge axi_clk or negedge axi_reset_n)  begin
-  if ( !axi_reset_n ) 
+  if ( !axi_reset_n ) begin
     	   regx_data <= 32'b0;
+    	   regy_data<=32'b0;
+  end
   else begin
-  	if(state==F_OUT1)
+  	if(Out_state==F_WAIT1&&Out_vld)begin
  	   regx_data<= Out_data[31:0];
- 	else if(state==F_OUT2)
- 	   regx_data<= Out_data[63:32];
+ 	   regy_data<= Out_data[63:32];
+ 	end
  	else begin
  	end
   end
 end
 
 
-assign sm_tvalid=Out_vld;
-assign sm_tdata=(Out_state==U_OUT)?{16'b0,Out_data[79:64]}:regx_data;
+assign sm_tvalid=(Out_state==U_OUT)?Out_vld:(Out_state==F_OUT1||Out_state==F_OUT2);
+assign sm_tdata=(Out_state==U_OUT)?{16'b0,Out_data[79:64]}:((Out_state==F_OUT1)?regx_data:regy_data);
 assign Out_rdy=(Out_state==U_OUT||Out_state==F_OUT2)?sm_tready:0;
 
 
@@ -622,6 +630,7 @@ assign ramout_adr=(!choose_ram)?ram0_adr:ram1_adr;
 assign ramout_d=(!choose_ram)?ram0_d:ram1_d;
 assign ram0_q=(choose_ram)?ramin_q:ramout_q;
 assign ram1_q=(!choose_ram)?ramin_q:ramout_q;
+
 //SRAM
 SPRAM #(.data_width(64),.addr_width(10),.depth(1024)) U_SPRAM_0(
 .adr (ramin_adr ), 
