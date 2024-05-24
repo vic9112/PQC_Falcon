@@ -37,8 +37,8 @@ cd vivado
 
 | Mode | Tasks |
 | ---- | ----- |
-| FFT  | Data Length to Kernel: 2049 <br>  - First Data: {27'b0, 01, 00} <br> Data Length back to DMA: 2048 <br> Both send 1024 lower bits [31:0] first then send 1024 upper bits [63:32] |
-| iFFT | Data Length to Kernel: 2049 <br>  - First Data: {27'b0, 01, 01} <br> Data Length back to DMA: 2048 <br> Both send 1024 lower bits [31:0] first then send 1024 upper bits [63:32] |
+| FFT  | Data Length to Kernel: 2049 <br>  - First Data: {27'b0, 01, 00} <br> Data Length back to DMA: 2048 <br> Both send lower bits [31:0] first then send upper bits [63:32], for 1024 times |
+| iFFT | Data Length to Kernel: 2049 <br>  - First Data: {27'b0, 01, 01} <br> Data Length back to DMA: 2048 <br> Both send lower bits [31:0] first then send upper bits [63:32], for 1024 times |
 | NTT  | Data Length to Kernel: 1025 <br>  - First Data: {27'b0, 01, 10}  <br> Data Length back to DMA: 1024 |
 | iNTT | Data Length to Kernel: 1025 <br>  - First Data: {27'b0, 01, 11}  <br> Data Length back to DMA: 1024 |
 
