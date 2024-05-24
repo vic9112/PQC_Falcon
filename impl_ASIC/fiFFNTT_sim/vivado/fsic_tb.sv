@@ -59,11 +59,11 @@ module fsic_tb();
         .sys_clock(sys_clock),
         .sys_reset(sys_reset)
     );
-    /*
+    
     initial begin
         $dumpfile("/home/ubuntu/tgit/lab05/vivado/test.vcd");
         $dumpvars(0,fsic_tb);
-    end*/
+    end
     //always #4ns sys_clock = ~sys_clock;     //Period 8ns, 125MHz
     always #2ns sys_clock = ~sys_clock;     //Period 4ns, 250Mhz                 
         
@@ -126,9 +126,11 @@ module fsic_tb();
         //SocLa2DmaPath();
         //SocUp2DmaPath();
         //load_dma_x();
-        load_dma_NTT();
+        //load_dma_NTT();
+        load_dma_FFT();
         //setting_dma();
-        setting_dma_NTT();
+        //setting_dma_NTT();
+        setting_dma_FFT();
          //test_FIR();
          ap_start_get_result();
 
@@ -162,7 +164,8 @@ module fsic_tb();
             axil_cycles_gen(WriteCyc, PL_UPDMA, offset, data, 1);
 
             fork
-                CheckuserDMADone_NTT();
+                //CheckuserDMADone_NTT();
+                CheckuserDMADone_FFT();
             join_none
 
             @(userdma_done);
@@ -191,7 +194,7 @@ module fsic_tb();
             
     	end
     endtask
-    reg [31:0] updma_FFT_x [0:1024];
+    reg [31:0] updma_FFT_x [0:2047];
     reg [31:0] updma_FFT_x_data;
     task load_dma_FFT;
     	begin
@@ -201,7 +204,7 @@ module fsic_tb();
             $readmemh("../../../../../FFT_in.hex", updma_FFT_x);
 
             fd = $fopen ("../../../../../updma_FFT_input.log", "w");
-            for (index = 0; index < 1025; index +=1) begin
+            for (index = 0; index < 2048; index +=1) begin
                 updma_FFT_x_data |= updma_FFT_x[index];
                 slave_agent3.mem_model.backdoor_memory_write_4byte(addri+4*index,updma_FFT_x_data,4'b1111);
                 updma_FFT_x_data = 0;
@@ -230,6 +233,90 @@ module fsic_tb();
             $fclose(fd);
     	end
     endtask
+    
+    task setting_dma_FFT;
+    	begin
+
+            $display($time, "=> -----------------------------------------------------------------------");
+            $display($time, "=> FpgaLocal_Write: PL_UPDMA, s2m set buffer low...");
+            offset = 32'h0000_0038;
+            data = 32'h4508_0000;
+            axil_cycles_gen(WriteCyc, PL_UPDMA, offset, data, 1);
+            //#20us
+            axil_cycles_gen(ReadCyc, PL_UPDMA, offset, data, 1);
+            //#20us
+            if(data == 32'h4508_0000) begin
+                $display($time, "=> Fpga2Soc_Write PL_UPDMA offset %h = %h, PASS", offset, data);
+            end else begin
+                $display($time, "=> Fpga2Soc_Write PL_UPDMA offset %h = %h, FAIL", offset, data);
+                ->> error_event;
+            end
+
+            $display($time, "=> -----------------------------------------------------------------------");
+            $display($time, "=> FpgaLocal_Write: PL_UPDMA, s2m set buffer high...");
+            offset = 32'h0000_003c;
+            data = 32'h0000_0000;
+            axil_cycles_gen(WriteCyc, PL_UPDMA, offset, data, 1);
+            //#20us
+            axil_cycles_gen(ReadCyc, PL_UPDMA, offset, data, 1);
+            //#20us
+            if(data == 32'h0000_0000) begin
+                $display($time, "=> Fpga2Soc_Write PL_UPDMA offset %h = %h, PASS", offset, data);
+            end else begin
+                $display($time, "=> Fpga2Soc_Write PL_UPDMA offset %h = %h, FAIL", offset, data);
+                ->> error_event;
+            end
+
+            $display($time, "=> -----------------------------------------------------------------------");
+            $display($time, "=> FpgaLocal_Write: PL_UPDMA, m2s set buffer low...");
+            offset = 32'h0000_0044;
+            data = 32'h4500_0000;
+            axil_cycles_gen(WriteCyc, PL_UPDMA, offset, data, 1);
+            //#20us
+            axil_cycles_gen(ReadCyc, PL_UPDMA, offset, data, 1);
+            //#20us
+            if(data == 32'h4500_0000) begin
+                $display($time, "=> Fpga2Soc_Write PL_UPDMA offset %h = %h, PASS", offset, data);
+            end else begin
+                $display($time, "=> Fpga2Soc_Write PL_UPDMA offset %h = %h, FAIL", offset, data);
+                ->> error_event;
+            end
+
+            $display($time, "=> -----------------------------------------------------------------------");
+            $display($time, "=> FpgaLocal_Write: PL_UPDMA, m2s set buffer high...");
+            offset = 32'h0000_0048;
+            data = 32'h0000_0000;
+            axil_cycles_gen(WriteCyc, PL_UPDMA, offset, data, 1);
+            //#20us
+            axil_cycles_gen(ReadCyc, PL_UPDMA, offset, data, 1);
+            //#20us
+            if(data == 32'h0000_0000) begin
+                $display($time, "=> Fpga2Soc_Write PL_UPDMA offset %h = %h, PASS", offset, data);
+            end else begin
+                $display($time, "=> Fpga2Soc_Write PL_UPDMA offset %h = %h, FAIL", offset, data);
+                ->> error_event;
+            end
+
+            $display($time, "=> -----------------------------------------------------------------------");
+            $display($time, "=> FpgaLocal_Write: PL_UPDMA, set buffer mode...");
+            offset = 32'h0000_0010;
+            data = 32'd0;
+            axil_cycles_gen(WriteCyc, PL_UPDMA, offset, data, 1);
+            //#20us
+            axil_cycles_gen(ReadCyc, PL_UPDMA, offset, data, 1);
+            //#20us
+            if(data == 32'd2) begin
+                $display($time, "=> Fpga2Soc_Write PL_UPDMA offset %h = %h, PASS", offset, data);
+            end else begin
+                $display($time, "=> Fpga2Soc_Write PL_UPDMA offset %h = %h, FAIL", offset, data);
+                ->> error_event;
+            end
+            $display($time, "=> -----------------------------------------------------------------------");
+    	end
+    endtask
+    
+    
+    
     
         task setting_dma_NTT;
     	begin
@@ -1630,7 +1717,40 @@ module fsic_tb();
 
         end
     endtask
-    
+        task CheckuserDMADone_FFT;
+        begin
+            $display($time, "=> Starting CheckuserDMADone()...");
+            $display($time, "=> =======================================================================");
+            $display($time, "=> FpgaLocal_Read: PL_UPDMA");
+
+            keepChk = 1;
+            offset = 32'h0000_0018;
+            $display($time, "=> Wating buffer transfer done...");
+            while (keepChk) begin
+                $display($time, "=> Wating buffer transfer done...");
+                #10us
+                axil_cycles_gen(ReadCyc, PL_UPDMA, offset, data, 0);
+                if(data == 32'h0000_0001) begin
+                    $display($time, "=> Buffer transfer done. offset %h = %h, PASS", offset, data);
+                    keepChk = 0;
+
+                    fd = $fopen ("../../../../../updma_output_FFT.log", "w");
+                    for (index = 0; index < 2048; index +=1) begin
+                        reg signed [31:0]anser;
+                        anser=slave_agent2.mem_model.backdoor_memory_read_4byte(addro+4*index);
+                        $fdisplay(fd, "%08d",anser);
+                    end
+
+                    $fclose(fd);
+               end
+            end
+
+            ->> userdma_done;
+            $display($time, "=> End CheckuserDMADone()...");
+            $display($time, "=> =======================================================================");
+
+        end
+    endtask
     
     task CheckuserDMADone_fir;
         begin
