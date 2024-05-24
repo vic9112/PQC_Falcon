@@ -4,7 +4,8 @@ if you want to run simulation
 cd vivado
 ./run_vivado_fsic_sim
 ```
-會產生updma_output_NTT.log which is the output data after NTT 
+## 可以更改testbench來做FFT/IFFT/NTT/INTT
+
 
 # FSM design:
 本次設計放在uspj2
