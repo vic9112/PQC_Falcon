@@ -608,7 +608,7 @@ proc cr_bd_design_1 { parentCell } {
   set blk_mem_gen_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:blk_mem_gen:8.4 blk_mem_gen_0 ]
   set_property -dict [ list \
    CONFIG.Byte_Size {8} \
-CONFIG.Coe_File {/home/ubuntu/ttttttttt/lab05/vivado/fsic.coe} \
+CONFIG.Coe_File {/home/ubuntu/tgit/lab05/vivado/fsic.coe} \
    CONFIG.EN_SAFETY_CKT {true} \
    CONFIG.Enable_32bit_Address {true} \
    CONFIG.Enable_A {Use_ENA_Pin} \

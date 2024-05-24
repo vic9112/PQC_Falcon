@@ -271,12 +271,12 @@ always@(*)begin
     Command: 	if(ss_tvalid && ss_tdata[3:2]==2'b01) next_state = IN_COPY;
              	else      next_state = Command;
     IN_COPY: 	if(In_copy_done&&(reg_mode1_in==16'd2||reg_mode1_in==16'd3)) next_state = PE1_RST;
-    		else if (In_copy_done&&(reg_mode1_in==16'd0||reg_mode1_in==16'd1)) next_state = PE1_DONE;//next_state = PE2_RST;
+    		else if (In_copy_done&&(reg_mode1_in==16'd0||reg_mode1_in==16'd1)) next_state = PE2_RST;
                 else      next_state = IN_COPY;// should change
     PE1_RST:    next_state = PE1_START;
     PE1_START:  if(ap_done_vld) next_state=PE1_DONE;
                 else next_state = PE1_START;
-    PE1_DONE:   next_state = OUT_COPY;//PE2_RST;
+    PE1_DONE:   next_state = PE2_RST;
     //////////////////  2rd
     PE2_RST:    next_state = PE2_START;//next_state = OUT_COPY;
     PE2_START:  if(ap_done_vld) next_state=PE2_DONE;
