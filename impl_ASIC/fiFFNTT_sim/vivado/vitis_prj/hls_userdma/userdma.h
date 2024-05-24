@@ -34,7 +34,7 @@ void userdma(
 		memcell     m2sbuf[BUF_LEN],
 		ap_uint<2>  *s2m_err);
 
-static constexpr int MAX_BURST_LENGTH = 16;
+static constexpr int MAX_BURST_LENGTH = 32;
 static constexpr int BUFFER_FACTOR = 2;
 
 // Buffer sizes

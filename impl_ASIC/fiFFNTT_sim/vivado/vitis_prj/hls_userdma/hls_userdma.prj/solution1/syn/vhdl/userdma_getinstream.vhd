@@ -29,8 +29,8 @@ port (
     s2m_err : OUT STD_LOGIC_VECTOR (1 downto 0);
     s2m_err_ap_vld : OUT STD_LOGIC;
     inbuf_din : OUT STD_LOGIC_VECTOR (32 downto 0);
-    inbuf_num_data_valid : IN STD_LOGIC_VECTOR (5 downto 0);
-    inbuf_fifo_cap : IN STD_LOGIC_VECTOR (5 downto 0);
+    inbuf_num_data_valid : IN STD_LOGIC_VECTOR (6 downto 0);
+    inbuf_fifo_cap : IN STD_LOGIC_VECTOR (6 downto 0);
     inbuf_full_n : IN STD_LOGIC;
     inbuf_write : OUT STD_LOGIC;
     incount25_din : OUT STD_LOGIC_VECTOR (31 downto 0);
@@ -62,7 +62,7 @@ architecture behav of userdma_getinstream is
     constant ap_const_lv12_400 : STD_LOGIC_VECTOR (11 downto 0) := "010000000000";
     constant ap_const_lv12_800 : STD_LOGIC_VECTOR (11 downto 0) := "100000000000";
     constant ap_const_lv2_2 : STD_LOGIC_VECTOR (1 downto 0) := "10";
-    constant ap_const_lv6_0 : STD_LOGIC_VECTOR (5 downto 0) := "000000";
+    constant ap_const_lv7_0 : STD_LOGIC_VECTOR (6 downto 0) := "0000000";
 
 attribute shreg_extract : string;
     signal ap_done_reg : STD_LOGIC := '0';
@@ -134,8 +134,8 @@ attribute shreg_extract : string;
         ap_ready : OUT STD_LOGIC;
         inStreamTop_TVALID : IN STD_LOGIC;
         inbuf_din : OUT STD_LOGIC_VECTOR (32 downto 0);
-        inbuf_num_data_valid : IN STD_LOGIC_VECTOR (5 downto 0);
-        inbuf_fifo_cap : IN STD_LOGIC_VECTOR (5 downto 0);
+        inbuf_num_data_valid : IN STD_LOGIC_VECTOR (6 downto 0);
+        inbuf_fifo_cap : IN STD_LOGIC_VECTOR (6 downto 0);
         inbuf_full_n : IN STD_LOGIC;
         inbuf_write : OUT STD_LOGIC;
         incount25_din : OUT STD_LOGIC_VECTOR (31 downto 0);
@@ -183,8 +183,8 @@ begin
         ap_ready => grp_getinstream_Pipeline_VITIS_LOOP_80_1_fu_93_ap_ready,
         inStreamTop_TVALID => inStreamTop_TVALID_int_regslice,
         inbuf_din => grp_getinstream_Pipeline_VITIS_LOOP_80_1_fu_93_inbuf_din,
-        inbuf_num_data_valid => ap_const_lv6_0,
-        inbuf_fifo_cap => ap_const_lv6_0,
+        inbuf_num_data_valid => ap_const_lv7_0,
+        inbuf_fifo_cap => ap_const_lv7_0,
         inbuf_full_n => inbuf_full_n,
         inbuf_write => grp_getinstream_Pipeline_VITIS_LOOP_80_1_fu_93_inbuf_write,
         incount25_din => grp_getinstream_Pipeline_VITIS_LOOP_80_1_fu_93_incount25_din,

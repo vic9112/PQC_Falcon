@@ -2,8 +2,8 @@
 # xsim v2022.1 (64-bit)
 # SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
 # IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
-# Start of session at: Thu May 23 13:06:04 2024
-# Process ID: 10992
+# Start of session at: Fri May 24 01:08:27 2024
+# Process ID: 17895
 # Current directory: /home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma/hls_userdma.prj/solution1/sim/verilog
 # Command line: xsim -mode tcl -source {xsim.dir/userdma/xsim_script.tcl}
 # Log file: /home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma/hls_userdma.prj/solution1/sim/verilog/xsim.log
@@ -17,10 +17,10 @@ INFO: [Wavedata 42-564]   Found protocol instance at /apatb_userdma_top/AESL_ins
 INFO: [Wavedata 42-564]   Found protocol instance at /apatb_userdma_top/AESL_inst_userdma/entry_proc_U0/entry_proc_U0_activity
 INFO: [Wavedata 42-564]   Found protocol instance at /apatb_userdma_top/AESL_inst_userdma/getinstream_U0/getinstream_U0_activity
 INFO: [Wavedata 42-564]   Found protocol instance at /apatb_userdma_top/AESL_inst_userdma/getinstream_U0/grp_getinstream_Pipeline_VITIS_LOOP_80_1_fu_93/grp_getinstream_Pipeline_VITIS_LOOP_80_1_fu_93_activity
-INFO: [Wavedata 42-564]   Found protocol instance at /apatb_userdma_top/AESL_inst_userdma/paralleltostreamwithburst_U0/grp_paralleltostreamwithburst_Pipeline_VITIS_LOOP_131_2_fu_115/grp_paralleltostreamwithburst_Pipeline_VITIS_LOOP_131_2_fu_115_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_userdma_top/AESL_inst_userdma/paralleltostreamwithburst_U0/grp_paralleltostreamwithburst_Pipeline_VITIS_LOOP_131_2_fu_117/grp_paralleltostreamwithburst_Pipeline_VITIS_LOOP_131_2_fu_117_activity
 INFO: [Wavedata 42-564]   Found protocol instance at /apatb_userdma_top/AESL_inst_userdma/paralleltostreamwithburst_U0/paralleltostreamwithburst_U0_activity
 INFO: [Wavedata 42-564]   Found protocol instance at /apatb_userdma_top/AESL_inst_userdma/sendoutstream_U0/sendoutstream_U0_activity
-INFO: [Wavedata 42-564]   Found protocol instance at /apatb_userdma_top/AESL_inst_userdma/streamtoparallelwithburst_U0/grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_27_2_fu_115/grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_27_2_fu_115_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_userdma_top/AESL_inst_userdma/streamtoparallelwithburst_U0/grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_27_2_fu_117/grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_27_2_fu_117_activity
 INFO: [Wavedata 42-564]   Found protocol instance at /apatb_userdma_top/AESL_inst_userdma/streamtoparallelwithburst_U0/streamtoparallelwithburst_U0_activity
 Time resolution is 1 ps
 open_wave_config userdma_dataflow_ana.wcfg
@@ -343,10 +343,10 @@ WARNING: [Simtcl 6-197] One or more HDL objects could not be logged because of o
 // RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
 ////////////////////////////////////////////////////////////////////////////////////
 // RTL Simulation : 0 / 2 [n/a] @ "125000"
-// RTL Simulation : 1 / 2 [n/a] @ "106045000"
-// RTL Simulation : 2 / 2 [n/a] @ "159355000"
+// RTL Simulation : 1 / 2 [n/a] @ "55165000"
+// RTL Simulation : 2 / 2 [n/a] @ "83155000"
 ////////////////////////////////////////////////////////////////////////////////////
-$finish called at time : 159415 ns : File "/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma/hls_userdma.prj/solution1/sim/verilog/userdma.autotb.v" Line 749
-run: Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2995.383 ; gain = 0.000 ; free physical = 1735 ; free virtual = 16876
+$finish called at time : 83215 ns : File "/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma/hls_userdma.prj/solution1/sim/verilog/userdma.autotb.v" Line 749
+run: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2995.383 ; gain = 0.000 ; free physical = 1251 ; free virtual = 15837
 ## quit
-INFO: [Common 17-206] Exiting xsim at Thu May 23 13:06:17 2024...
+INFO: [Common 17-206] Exiting xsim at Fri May 24 01:08:39 2024...

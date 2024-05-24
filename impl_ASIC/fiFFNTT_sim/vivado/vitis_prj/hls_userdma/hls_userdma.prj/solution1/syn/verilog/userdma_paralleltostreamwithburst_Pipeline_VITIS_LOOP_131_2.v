@@ -120,7 +120,7 @@ output   m_axi_gmem1_RREADY;
 input  [63:0] m_axi_gmem1_RDATA;
 input   m_axi_gmem1_RLAST;
 input  [0:0] m_axi_gmem1_RID;
-input  [6:0] m_axi_gmem1_RFIFONUM;
+input  [9:0] m_axi_gmem1_RFIFONUM;
 input  [0:0] m_axi_gmem1_RUSER;
 input  [1:0] m_axi_gmem1_RRESP;
 input   m_axi_gmem1_BVALID;
@@ -129,8 +129,8 @@ input  [1:0] m_axi_gmem1_BRESP;
 input  [0:0] m_axi_gmem1_BID;
 input  [0:0] m_axi_gmem1_BUSER;
 output  [34:0] outbuf_din;
-input  [5:0] outbuf_num_data_valid;
-input  [5:0] outbuf_fifo_cap;
+input  [6:0] outbuf_num_data_valid;
+input  [6:0] outbuf_fifo_cap;
 input   outbuf_full_n;
 output   outbuf_write;
 input  [31:0] final_m2s_len_4;
@@ -319,13 +319,13 @@ wire  signed [63:0] sext_ln135_fu_328_p1;
 reg   [31:0] final_m2s_len_fu_90;
 wire   [31:0] final_m2s_len_1_fu_302_p2;
 wire    ap_loop_init;
-reg   [4:0] i_fu_94;
-wire   [4:0] add_ln131_fu_210_p2;
+reg   [5:0] i_fu_94;
+wire   [5:0] add_ln131_fu_210_p2;
 reg    ap_block_pp0_stage0_01001;
 wire   [31:0] zext_ln131_1_fu_201_p1;
 wire   [0:0] icmp_ln134_fu_219_p2;
-wire   [3:0] trunc_ln135_fu_230_p1;
-wire   [6:0] shl_ln135_1_fu_234_p3;
+wire   [4:0] trunc_ln135_fu_230_p1;
+wire   [7:0] shl_ln135_1_fu_234_p3;
 wire   [63:0] zext_ln135_fu_242_p1;
 wire   [63:0] add_ln135_fu_246_p2;
 wire   [63:0] add_ln135_1_fu_261_p2;
@@ -648,7 +648,7 @@ end
 always @ (posedge ap_clk) begin
     if (((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         if ((ap_loop_init == 1'b1)) begin
-            i_fu_94 <= 5'd0;
+            i_fu_94 <= 6'd0;
         end else if (((ap_enable_reg_pp0_iter1 == 1'b1) & (icmp_ln131_fu_205_p2 == 1'd1))) begin
             i_fu_94 <= add_ln131_fu_210_p2;
         end
@@ -1015,7 +1015,7 @@ always @ (*) begin
     endcase
 end
 
-assign add_ln131_fu_210_p2 = (i_fu_94 + 5'd1);
+assign add_ln131_fu_210_p2 = (i_fu_94 + 6'd1);
 
 assign add_ln135_1_fu_261_p2 = (add_ln135_fu_246_p2 + 64'd4);
 
@@ -1121,7 +1121,7 @@ assign icmp_ln134_fu_219_p2 = (($signed(final_m2s_len_fu_90) < $signed(32'd1025)
 
 assign icmp_ln140_1_fu_286_p2 = ((zext_ln131_1_fu_201_p1 == sub) ? 1'b1 : 1'b0);
 
-assign icmp_ln140_fu_280_p2 = (($signed(final_m2s_len_fu_90) < $signed(32'd17)) ? 1'b1 : 1'b0);
+assign icmp_ln140_fu_280_p2 = (($signed(final_m2s_len_fu_90) < $signed(32'd33)) ? 1'b1 : 1'b0);
 
 assign icmp_ln145_fu_297_p2 = ((final_m2s_len_fu_90 == select_ln111_cast_cast_reg_397) ? 1'b1 : 1'b0);
 
@@ -1199,7 +1199,7 @@ assign sext_ln137_fu_318_p1 = $signed(trunc_ln4_reg_410);
 
 assign shl_ln135_1_fu_234_p3 = {{trunc_ln135_fu_230_p1}, {3'd0}};
 
-assign trunc_ln135_fu_230_p1 = i_fu_94[3:0];
+assign trunc_ln135_fu_230_p1 = i_fu_94[4:0];
 
 assign zext_ln131_1_fu_201_p1 = i_fu_94;
 

@@ -6,12 +6,12 @@
 
 `timescale 1ns/1ps
 
-module userdma_fifo_w35_d32_A_ram
+module userdma_fifo_w35_d64_A_ram
 #(parameter
     MEM_STYLE   = "auto",
     DATA_WIDTH  = 35,
-    ADDR_WIDTH  = 5,
-    DEPTH       = 31
+    ADDR_WIDTH  = 6,
+    DEPTH       = 63
 )
 (
     input  wire                  clk,
@@ -49,12 +49,12 @@ end
 
 endmodule
 
-module userdma_fifo_w35_d32_A
+module userdma_fifo_w35_d64_A
 #(parameter
     MEM_STYLE   = "auto",
     DATA_WIDTH  = 35,
-    ADDR_WIDTH  = 5,
-    DEPTH       = 31
+    ADDR_WIDTH  = 6,
+    DEPTH       = 63
 )
 (
     // system signal
@@ -91,13 +91,13 @@ reg                   dout_vld = 1'b0;
 
 
 //------------------------Instantiation------------------
-userdma_fifo_w35_d32_A_ram
+userdma_fifo_w35_d64_A_ram
 #(
  .MEM_STYLE(MEM_STYLE),
  .DATA_WIDTH(DATA_WIDTH),
  .ADDR_WIDTH(ADDR_WIDTH),
  .DEPTH(DEPTH))
-U_userdma_fifo_w35_d32_A_ram(
+U_userdma_fifo_w35_d64_A_ram(
  .clk(clk),
  .reset(reset),
  .we(push),

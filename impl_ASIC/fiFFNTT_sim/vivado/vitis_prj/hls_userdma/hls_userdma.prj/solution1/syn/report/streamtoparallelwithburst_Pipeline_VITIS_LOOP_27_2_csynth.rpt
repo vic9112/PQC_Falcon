@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'streamtoparallelwithburst_Pipeline_VITIS_LOOP_27_2'
 ================================================================
-* Date:           Thu May 23 13:05:12 2024
+* Date:           Fri May 24 01:07:42 2024
 
 * Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
 * Project:        hls_userdma.prj
@@ -85,16 +85,16 @@
     +------------------------------------+----------+----+---+-----+------------+------------+
     |            Variable Name           | Operation| DSP| FF| LUT | Bitwidth P0| Bitwidth P1|
     +------------------------------------+----------+----+---+-----+------------+------------+
-    |add_ln27_fu_165_p2                  |         +|   0|  0|   39|          32|           1|
-    |add_ln32_fu_196_p2                  |         +|   0|  0|   71|          64|           3|
-    |add_ln34_fu_191_p2                  |         +|   0|  0|   71|          64|          64|
-    |icmp_ln27_fu_159_p2                 |      icmp|   0|  0|   18|          32|          32|
+    |add_ln27_fu_167_p2                  |         +|   0|  0|   39|          32|           1|
+    |add_ln32_fu_198_p2                  |         +|   0|  0|   71|          64|           3|
+    |add_ln34_fu_193_p2                  |         +|   0|  0|   71|          64|          64|
+    |icmp_ln27_fu_161_p2                 |      icmp|   0|  0|   18|          32|          32|
     |ap_block_pp0_stage0_01001           |        or|   0|  0|    2|           1|           1|
     |ap_block_pp0_stage0_11001           |        or|   0|  0|    2|           1|           1|
     |ap_block_state18_pp0_stage0_iter17  |        or|   0|  0|    2|           1|           1|
     |ap_block_state3_io                  |        or|   0|  0|    2|           1|           1|
     |ap_block_state4_io                  |        or|   0|  0|    2|           1|           1|
-    |shl_ln32_1_fu_225_p2                |       shl|   0|  0|  182|          64|          64|
+    |shl_ln32_1_fu_227_p2                |       shl|   0|  0|  182|          64|          64|
     |ap_enable_pp0                       |       xor|   0|  0|    2|           1|           2|
     +------------------------------------+----------+----+---+-----+------------+------------+
     |Total                               |          |   0|  0|  393|         262|         171|
@@ -110,7 +110,7 @@
     |gmem0_blk_n_AW           |   9|          2|    1|          2|
     |gmem0_blk_n_B            |   9|          2|    1|          2|
     |gmem0_blk_n_W            |   9|          2|    1|          2|
-    |i_fu_76                  |   9|          2|   32|         64|
+    |i_fu_78                  |   9|          2|   32|         64|
     |inbuf_blk_n              |   9|          2|    1|          2|
     |m_axi_gmem0_AWADDR       |  14|          3|   64|        192|
     |m_axi_gmem0_WDATA        |  14|          3|   64|        192|
@@ -158,14 +158,14 @@
     |ap_loop_exit_ready_pp0_iter7_reg   |   1|   0|    1|          0|
     |ap_loop_exit_ready_pp0_iter8_reg   |   1|   0|    1|          0|
     |ap_loop_exit_ready_pp0_iter9_reg   |   1|   0|    1|          0|
-    |i_1_reg_276                        |  32|   0|   32|          0|
-    |i_fu_76                            |  32|   0|   32|          0|
-    |in_val_data_filed_V_reg_285        |  32|   0|   32|          0|
-    |shl_ln32_1_reg_305                 |  64|   0|   64|          0|
-    |trunc_ln1_reg_295                  |  61|   0|   61|          0|
-    |trunc_ln2_reg_290                  |  61|   0|   61|          0|
-    |zext_ln27_cast_reg_271             |   6|   0|   64|         58|
-    |zext_ln32_reg_300                  |  32|   0|   64|         32|
+    |i_1_reg_278                        |  32|   0|   32|          0|
+    |i_fu_78                            |  32|   0|   32|          0|
+    |in_val_data_filed_V_reg_287        |  32|   0|   32|          0|
+    |shl_ln32_1_reg_307                 |  64|   0|   64|          0|
+    |trunc_ln1_reg_297                  |  61|   0|   61|          0|
+    |trunc_ln2_reg_292                  |  61|   0|   61|          0|
+    |zext_ln27_cast_reg_273             |   6|   0|   64|         58|
+    |zext_ln32_reg_302                  |  32|   0|   64|         32|
     +-----------------------------------+----+----+-----+-----------+
     |Total                              | 355|   0|  445|         90|
     +-----------------------------------+----+----+-----+-----------+
@@ -186,8 +186,8 @@
 |ap_idle               |  out|    1|  ap_ctrl_hs|  streamtoparallelwithburst_Pipeline_VITIS_LOOP_27_2|  return value|
 |ap_ready              |  out|    1|  ap_ctrl_hs|  streamtoparallelwithburst_Pipeline_VITIS_LOOP_27_2|  return value|
 |inbuf_dout            |   in|   33|     ap_fifo|                                               inbuf|       pointer|
-|inbuf_num_data_valid  |   in|    6|     ap_fifo|                                               inbuf|       pointer|
-|inbuf_fifo_cap        |   in|    6|     ap_fifo|                                               inbuf|       pointer|
+|inbuf_num_data_valid  |   in|    7|     ap_fifo|                                               inbuf|       pointer|
+|inbuf_fifo_cap        |   in|    7|     ap_fifo|                                               inbuf|       pointer|
 |inbuf_empty_n         |   in|    1|     ap_fifo|                                               inbuf|       pointer|
 |inbuf_read            |  out|    1|     ap_fifo|                                               inbuf|       pointer|
 |m_axi_gmem0_AWVALID   |  out|    1|       m_axi|                                               gmem0|       pointer|

@@ -74979,7 +74979,7 @@ void userdma(
   memcell m2sbuf[1024],
   ap_uint<2> *s2m_err);
 
-static constexpr int MAX_BURST_LENGTH = 16;
+static constexpr int MAX_BURST_LENGTH = 32;
 static constexpr int BUFFER_FACTOR = 2;
 
 
@@ -75179,8 +75179,8 @@ void userdma(
 #pragma HLS INTERFACE s_axilite port = m2s_buf_sts bundle = control
 #pragma HLS INTERFACE s_axilite port = s2mbuf bundle = control
 #pragma HLS INTERFACE s_axilite port = m2sbuf bundle = control
-#pragma HLS INTERFACE m_axi max_write_burst_length=16 latency=10 depth=1024 bundle=gmem0 port=s2mbuf offset = slave
-#pragma HLS INTERFACE m_axi max_read_burst_length=16 num_read_outstanding=4 latency=10 depth=1024 bundle=gmem1 port=m2sbuf offset = slave
+#pragma HLS INTERFACE m_axi max_write_burst_length=32 latency=10 depth=1024 bundle=gmem0 port=s2mbuf offset = slave
+#pragma HLS INTERFACE m_axi max_read_burst_length=32 latency=10 depth=1024 bundle=gmem1 port=m2sbuf offset = slave
 #pragma HLS INTERFACE s_axilite port = s2m_err bundle = control
 #pragma HLS INTERFACE s_axilite port = return bundle = control
 

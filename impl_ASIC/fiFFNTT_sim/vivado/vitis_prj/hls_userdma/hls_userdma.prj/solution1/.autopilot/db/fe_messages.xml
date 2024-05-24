@@ -171,10 +171,10 @@
         <args ARG_PragmaFunction="userdma" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port = m2sbuf bundle = control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="userdma.cpp:200:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="userdma" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi max_write_burst_length=16 latency=10 depth=1024 bundle=gmem0 port=s2mbuf offset = slave" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+        <args ARG_PragmaFunction="userdma" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi max_write_burst_length=32 latency=10 depth=1024 bundle=gmem0 port=s2mbuf offset = slave" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="userdma.cpp:201:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="userdma" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi max_read_burst_length=16 num_read_outstanding=4 latency=10 depth=1024 bundle=gmem1 port=m2sbuf offset = slave" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+        <args ARG_PragmaFunction="userdma" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi max_read_burst_length=32 latency=10 depth=1024 bundle=gmem1 port=m2sbuf offset = slave" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="userdma.cpp:202:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="userdma" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port = s2m_err bundle = control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>

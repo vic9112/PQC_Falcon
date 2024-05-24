@@ -257,7 +257,7 @@
 <IOProtocol>ap_fifo</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>6</Bits>
+<Bits>7</Bits>
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -268,7 +268,7 @@
 <IOProtocol>ap_fifo</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>6</Bits>
+<Bits>7</Bits>
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>

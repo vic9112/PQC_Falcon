@@ -40,8 +40,8 @@ set portList {
 	{ ap_idle sc_out sc_logic 1 done -1 } 
 	{ ap_ready sc_out sc_logic 1 ready -1 } 
 	{ outbuf_dout sc_in sc_lv 35 signal 0 } 
-	{ outbuf_num_data_valid sc_in sc_lv 6 signal 0 } 
-	{ outbuf_fifo_cap sc_in sc_lv 6 signal 0 } 
+	{ outbuf_num_data_valid sc_in sc_lv 7 signal 0 } 
+	{ outbuf_fifo_cap sc_in sc_lv 7 signal 0 } 
 	{ outbuf_empty_n sc_in sc_logic 1 signal 0 } 
 	{ outbuf_read sc_out sc_logic 1 signal 0 } 
 	{ outStreamTop_TREADY sc_in sc_logic 1 outacc 6 } 
@@ -63,8 +63,8 @@ set NewPortList {[
  	{ "name": "ap_idle", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "done", "bundle":{"name": "ap_idle", "role": "default" }} , 
  	{ "name": "ap_ready", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "ready", "bundle":{"name": "ap_ready", "role": "default" }} , 
  	{ "name": "outbuf_dout", "direction": "in", "datatype": "sc_lv", "bitwidth":35, "type": "signal", "bundle":{"name": "outbuf", "role": "dout" }} , 
- 	{ "name": "outbuf_num_data_valid", "direction": "in", "datatype": "sc_lv", "bitwidth":6, "type": "signal", "bundle":{"name": "outbuf", "role": "num_data_valid" }} , 
- 	{ "name": "outbuf_fifo_cap", "direction": "in", "datatype": "sc_lv", "bitwidth":6, "type": "signal", "bundle":{"name": "outbuf", "role": "fifo_cap" }} , 
+ 	{ "name": "outbuf_num_data_valid", "direction": "in", "datatype": "sc_lv", "bitwidth":7, "type": "signal", "bundle":{"name": "outbuf", "role": "num_data_valid" }} , 
+ 	{ "name": "outbuf_fifo_cap", "direction": "in", "datatype": "sc_lv", "bitwidth":7, "type": "signal", "bundle":{"name": "outbuf", "role": "fifo_cap" }} , 
  	{ "name": "outbuf_empty_n", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "outbuf", "role": "empty_n" }} , 
  	{ "name": "outbuf_read", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "outbuf", "role": "read" }} , 
  	{ "name": "outStreamTop_TREADY", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "outacc", "bundle":{"name": "outStreamTop_V_last_V", "role": "default" }} , 
@@ -93,7 +93,7 @@ set RtlHierarchyInfo {[
 		"HasNonBlockingOperation" : "0",
 		"IsBlackBox" : "0",
 		"Port" : [
-			{"Name" : "outbuf", "Type" : "Fifo", "Direction" : "I", "DependentProc" : ["0"], "DependentChan" : "0", "DependentChanDepth" : "32", "DependentChanType" : "0",
+			{"Name" : "outbuf", "Type" : "Fifo", "Direction" : "I", "DependentProc" : ["0"], "DependentChan" : "0", "DependentChanDepth" : "64", "DependentChanType" : "0",
 				"BlockSignal" : [
 					{"Name" : "outbuf_blk_n", "Type" : "RtlSignal"}]},
 			{"Name" : "m2s_buf_sts", "Type" : "Vld", "Direction" : "O"},
@@ -137,7 +137,7 @@ set PipelineEnableSignalInfo {[
 ]}
 
 set Spec2ImplPortList { 
-	outbuf { ap_fifo {  { outbuf_dout fifo_port_we 0 35 }  { outbuf_num_data_valid fifo_status_num_data_valid 0 6 }  { outbuf_fifo_cap fifo_update 0 6 }  { outbuf_empty_n fifo_status 0 1 }  { outbuf_read fifo_data 1 1 } } }
+	outbuf { ap_fifo {  { outbuf_dout fifo_port_we 0 35 }  { outbuf_num_data_valid fifo_status_num_data_valid 0 7 }  { outbuf_fifo_cap fifo_update 0 7 }  { outbuf_empty_n fifo_status 0 1 }  { outbuf_read fifo_data 1 1 } } }
 	m2s_buf_sts { ap_vld {  { m2s_buf_sts out_data 1 1 }  { m2s_buf_sts_ap_vld out_vld 1 1 } } }
 	outStreamTop_V_data_V { axis {  { outStreamTop_TREADY out_acc 0 1 }  { outStreamTop_TDATA out_data 1 32 } } }
 	outStreamTop_V_keep_V { axis {  { outStreamTop_TKEEP out_data 1 4 } } }

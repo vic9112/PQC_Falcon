@@ -1,57 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1716483913366">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1716527263385">
   <ports id="1" name="gmem0" type="PortType" coreId="4228300630" bitwidth="64" direction="DirOut" iftype="IfTypeFifo">
     <dataInputObjs>call</dataInputObjs>
   </ports>
-  <ports id="2" name="gmem1" type="PortType" coreId="4294967295" bitwidth="64" iftype="IfTypeFifo">
+  <ports id="2" name="gmem1" type="PortType" coreId="108" bitwidth="64" iftype="IfTypeFifo">
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
-  <ports id="3" name="inStreamTop_V_data_V" type="PortType" originalName="inStreamTop" coreId="2831309744" bitwidth="32">
+  <ports id="3" name="inStreamTop_V_data_V" type="PortType" originalName="inStreamTop" coreId="4294967295" bitwidth="32">
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
-  <ports id="4" name="inStreamTop_V_keep_V" type="PortType" originalName="inStreamTop" coreId="54" bitwidth="4">
+  <ports id="4" name="inStreamTop_V_keep_V" type="PortType" originalName="inStreamTop" coreId="1958911872" bitwidth="4">
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
-  <ports id="5" name="inStreamTop_V_strb_V" type="PortType" originalName="inStreamTop" coreId="0" bitwidth="4">
+  <ports id="5" name="inStreamTop_V_strb_V" type="PortType" originalName="inStreamTop" coreId="54" bitwidth="4">
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
   <ports id="6" name="inStreamTop_V_user_V" type="PortType" originalName="inStreamTop" coreId="0" bitwidth="2">
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
-  <ports id="7" name="inStreamTop_V_last_V" type="PortType" originalName="inStreamTop" coreId="1007225406" bitwidth="1">
+  <ports id="7" name="inStreamTop_V_last_V" type="PortType" originalName="inStreamTop" coreId="0" bitwidth="1">
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
-  <ports id="8" name="outStreamTop_V_data_V" type="PortType" originalName="outStreamTop" coreId="119873392" bitwidth="32" direction="DirOut">
+  <ports id="8" name="outStreamTop_V_data_V" type="PortType" originalName="outStreamTop" coreId="0" bitwidth="32" direction="DirOut">
     <dataInputObjs>call</dataInputObjs>
   </ports>
-  <ports id="9" name="outStreamTop_V_keep_V" type="PortType" originalName="outStreamTop" coreId="1330007625" bitwidth="4" direction="DirOut">
+  <ports id="9" name="outStreamTop_V_keep_V" type="PortType" originalName="outStreamTop" coreId="3542072400" bitwidth="4" direction="DirOut">
     <dataInputObjs>call</dataInputObjs>
   </ports>
-  <ports id="10" name="outStreamTop_V_strb_V" type="PortType" originalName="outStreamTop" coreId="119889936" bitwidth="4" direction="DirOut">
+  <ports id="10" name="outStreamTop_V_strb_V" type="PortType" originalName="outStreamTop" coreId="3542437664" bitwidth="4" direction="DirOut">
     <dataInputObjs>call</dataInputObjs>
   </ports>
-  <ports id="11" name="outStreamTop_V_user_V" type="PortType" originalName="outStreamTop" coreId="0" bitwidth="2" direction="DirOut">
+  <ports id="11" name="outStreamTop_V_user_V" type="PortType" originalName="outStreamTop" coreId="1330007625" bitwidth="2" direction="DirOut">
     <dataInputObjs>call</dataInputObjs>
   </ports>
-  <ports id="12" name="outStreamTop_V_last_V" type="PortType" originalName="outStreamTop" coreId="119537984" bitwidth="1" direction="DirOut">
+  <ports id="12" name="outStreamTop_V_last_V" type="PortType" originalName="outStreamTop" coreId="3542451712" bitwidth="1" direction="DirOut">
     <dataInputObjs>call</dataInputObjs>
   </ports>
-  <ports id="13" name="kernel_mode" type="PortType" originalName="kernel_mode" coreId="775106614" bitwidth="2">
+  <ports id="13" name="kernel_mode" type="PortType" originalName="kernel_mode" coreId="0" bitwidth="2">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="14" name="s2m_buf_sts" type="PortType" originalName="s2m_buf_sts" coreId="8" bitwidth="1" direction="DirOut">
+  <ports id="14" name="s2m_buf_sts" type="PortType" originalName="s2m_buf_sts" coreId="3542087200" bitwidth="1" direction="DirOut">
     <dataInputObjs>call</dataInputObjs>
   </ports>
-  <ports id="15" name="m2s_buf_sts" type="PortType" originalName="m2s_buf_sts" coreId="119539472" bitwidth="1" direction="DirOut">
+  <ports id="15" name="m2s_buf_sts" type="PortType" originalName="m2s_buf_sts" coreId="1936028192" bitwidth="1" direction="DirOut">
     <dataInputObjs>call</dataInputObjs>
   </ports>
-  <ports id="16" name="s2mbuf" type="PortType" originalName="s2mbuf" coreId="118686592" bitwidth="64">
+  <ports id="16" name="s2mbuf" type="PortType" originalName="s2mbuf" coreId="8" bitwidth="64">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="17" name="m2sbuf" type="PortType" originalName="m2sbuf" coreId="119209040" bitwidth="64">
+  <ports id="17" name="m2sbuf" type="PortType" originalName="m2sbuf" coreId="3542088688" bitwidth="64">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="18" name="s2m_err" type="PortType" originalName="s2m_err" coreId="1314013527" bitwidth="2" direction="DirOut">
+  <ports id="18" name="s2m_err" type="PortType" originalName="s2m_err" coreId="3541156224" bitwidth="2" direction="DirOut">
     <dataInputObjs>call</dataInputObjs>
   </ports>
   <edges id="81" source_obj="//@ports.16" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
@@ -136,13 +136,13 @@
         <dataOutputObjs>call</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="72" name="_ln205" lineNumber="205" fileName="userdma.cpp" fileDirectory=".." rtlName="entry_proc_U0" coreId="0" contextFuncName="userdma" opcode="call" nodeLabel="1.0" m_display="0" m_delay="3.63" m_topoIndex="9" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="72" name="_ln205" lineNumber="205" fileName="userdma.cpp" fileDirectory=".." rtlName="entry_proc_U0" coreId="30" contextFuncName="userdma" opcode="call" nodeLabel="1.0" m_display="0" m_delay="3.63" m_topoIndex="9" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="userdma.cpp" linenumber="205" fileDirectory="/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma" functionName="userdma"/>
         <dataInputObjs>read</dataInputObjs>
         <dataInputObjs>alloca</dataInputObjs>
         <constName>entry_proc</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="73" name="_ln211" lineNumber="211" fileName="userdma.cpp" fileDirectory=".." rtlName="getinstream_U0" coreId="119940512" contextFuncName="userdma" opcode="call" nodeLabel="1.0" nodeLatency="1" m_display="0" m_delay="3.63" m_topoIndex="10" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="73" name="_ln211" lineNumber="211" fileName="userdma.cpp" fileDirectory=".." rtlName="getinstream_U0" coreId="3539734032" contextFuncName="userdma" opcode="call" nodeLabel="1.0" nodeLatency="1" m_display="0" m_delay="3.63" m_topoIndex="10" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="userdma.cpp" linenumber="211" fileDirectory="/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma" functionName="userdma"/>
         <dataInputObjs>inStreamTop_V_data_V</dataInputObjs>
         <dataInputObjs>inStreamTop_V_keep_V</dataInputObjs>
@@ -156,7 +156,7 @@
         <dataOutputObjs>s2m_err</dataOutputObjs>
         <constName>getinstream</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="74" name="_ln212" lineNumber="212" fileName="userdma.cpp" fileDirectory=".." rtlName="streamtoparallelwithburst_U0" coreId="118910176" contextFuncName="userdma" opcode="call" nodeLabel="3.0" nodeLatency="1" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="74" name="_ln212" lineNumber="212" fileName="userdma.cpp" fileDirectory=".." rtlName="streamtoparallelwithburst_U0" coreId="3542508368" contextFuncName="userdma" opcode="call" nodeLabel="3.0" nodeLatency="1" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="userdma.cpp" linenumber="212" fileDirectory="/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma" functionName="userdma"/>
         <dataInputObjs>alloca</dataInputObjs>
         <dataInputObjs>alloca</dataInputObjs>
@@ -166,7 +166,7 @@
         <dataOutputObjs>gmem0</dataOutputObjs>
         <constName>streamtoparallelwithburst</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="75" name="_ln213" lineNumber="213" fileName="userdma.cpp" fileDirectory=".." rtlName="paralleltostreamwithburst_U0" coreId="119534896" contextFuncName="userdma" opcode="call" nodeLabel="1.0" nodeLatency="1" m_display="0" m_delay="5.43" m_topoIndex="11" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="75" name="_ln213" lineNumber="213" fileName="userdma.cpp" fileDirectory=".." rtlName="paralleltostreamwithburst_U0" coreId="0" contextFuncName="userdma" opcode="call" nodeLabel="1.0" nodeLatency="1" m_display="0" m_delay="5.38" m_topoIndex="11" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="userdma.cpp" linenumber="213" fileDirectory="/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma" functionName="userdma"/>
         <dataInputObjs>gmem1</dataInputObjs>
         <dataInputObjs>read</dataInputObjs>
@@ -174,7 +174,7 @@
         <dataInputObjs>alloca</dataInputObjs>
         <constName>paralleltostreamwithburst</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="76" name="_ln214" lineNumber="214" fileName="userdma.cpp" fileDirectory=".." rtlName="sendoutstream_U0" coreId="119097648" contextFuncName="userdma" opcode="call" nodeLabel="3.0" nodeLatency="1" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="76" name="_ln214" lineNumber="214" fileName="userdma.cpp" fileDirectory=".." rtlName="sendoutstream_U0" coreId="0" contextFuncName="userdma" opcode="call" nodeLabel="3.0" nodeLatency="1" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="userdma.cpp" linenumber="214" fileDirectory="/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma" functionName="userdma"/>
         <dataInputObjs>alloca</dataInputObjs>
         <dataOutputObjs>m2s_buf_sts</dataOutputObjs>
@@ -185,7 +185,7 @@
         <dataOutputObjs>outStreamTop_V_last_V</dataOutputObjs>
         <constName>sendoutstream</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="77" name="_ln216" lineNumber="216" fileName="userdma.cpp" fileDirectory=".." coreId="0" contextFuncName="userdma" opcode="ret" nodeLabel="5.0" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="77" name="_ln216" lineNumber="216" fileName="userdma.cpp" fileDirectory=".." coreId="1819113532" contextFuncName="userdma" opcode="ret" nodeLabel="5.0" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="userdma.cpp" linenumber="216" fileDirectory="/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma" functionName="userdma"/>
       </node_objs>
       <fileValidLineNumbers fileName="userdma.cpp">
@@ -547,7 +547,7 @@
             <inst name="streamtoparallelwithburst_U0" ssdmobj_id="74" object_id="_129"/>
           </sink>
         </channel_list>
-        <channel_list depth="32" bitwidth="33" suggested_type="0" suggested_depth="32" name="inbuf" ssdmobj_id="63">
+        <channel_list depth="64" bitwidth="33" suggested_type="0" suggested_depth="64" name="inbuf" ssdmobj_id="63">
           <source>
             <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
             <inst name="getinstream_U0" ssdmobj_id="73" object_id="_113"/>
@@ -577,7 +577,7 @@
             <inst name="streamtoparallelwithburst_U0" ssdmobj_id="74" object_id="_129"/>
           </sink>
         </channel_list>
-        <channel_list depth="32" bitwidth="35" suggested_type="0" suggested_depth="32" name="outbuf" ssdmobj_id="69">
+        <channel_list depth="64" bitwidth="35" suggested_type="0" suggested_depth="64" name="outbuf" ssdmobj_id="69">
           <source>
             <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
             <inst name="paralleltostreamwithburst_U0" ssdmobj_id="75" object_id="_135"/>

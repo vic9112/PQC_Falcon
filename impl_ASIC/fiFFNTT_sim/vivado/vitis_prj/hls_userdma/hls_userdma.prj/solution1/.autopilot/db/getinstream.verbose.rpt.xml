@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'getinstream'" level="0">
-<item name = "Date">Thu May 23 13:05:12 2024
+<item name = "Date">Fri May 24 01:07:42 2024
 </item>
 <item name = "Version">2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)</item>
 <item name = "Project">hls_userdma.prj</item>
@@ -130,8 +130,8 @@
 <column name="s2m_err">out, 2, ap_vld, s2m_err, pointer</column>
 <column name="s2m_err_ap_vld">out, 1, ap_vld, s2m_err, pointer</column>
 <column name="inbuf_din">out, 33, ap_fifo, inbuf, pointer</column>
-<column name="inbuf_num_data_valid">in, 6, ap_fifo, inbuf, pointer</column>
-<column name="inbuf_fifo_cap">in, 6, ap_fifo, inbuf, pointer</column>
+<column name="inbuf_num_data_valid">in, 7, ap_fifo, inbuf, pointer</column>
+<column name="inbuf_fifo_cap">in, 7, ap_fifo, inbuf, pointer</column>
 <column name="inbuf_full_n">in, 1, ap_fifo, inbuf, pointer</column>
 <column name="inbuf_write">out, 1, ap_fifo, inbuf, pointer</column>
 <column name="incount25_din">out, 32, ap_fifo, incount25, pointer</column>

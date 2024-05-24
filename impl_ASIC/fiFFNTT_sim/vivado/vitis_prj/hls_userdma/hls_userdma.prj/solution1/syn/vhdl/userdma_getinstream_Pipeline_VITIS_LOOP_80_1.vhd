@@ -19,8 +19,8 @@ port (
     ap_ready : OUT STD_LOGIC;
     inStreamTop_TVALID : IN STD_LOGIC;
     inbuf_din : OUT STD_LOGIC_VECTOR (32 downto 0);
-    inbuf_num_data_valid : IN STD_LOGIC_VECTOR (5 downto 0);
-    inbuf_fifo_cap : IN STD_LOGIC_VECTOR (5 downto 0);
+    inbuf_num_data_valid : IN STD_LOGIC_VECTOR (6 downto 0);
+    inbuf_fifo_cap : IN STD_LOGIC_VECTOR (6 downto 0);
     inbuf_full_n : IN STD_LOGIC;
     inbuf_write : OUT STD_LOGIC;
     incount25_din : OUT STD_LOGIC_VECTOR (31 downto 0);
@@ -50,7 +50,7 @@ architecture behav of userdma_getinstream_Pipeline_VITIS_LOOP_80_1 is
     constant ap_const_boolean_0 : BOOLEAN := false;
     constant ap_const_lv1_0 : STD_LOGIC_VECTOR (0 downto 0) := "0";
     constant ap_const_lv32_1 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000001";
-    constant ap_const_lv32_10 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000010000";
+    constant ap_const_lv32_20 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000100000";
 
 attribute shreg_extract : string;
     signal ap_CS_fsm : STD_LOGIC_VECTOR (0 downto 0) := "1";
@@ -363,7 +363,7 @@ begin
 
     count_5_fu_140_p2 <= std_logic_vector(unsigned(ap_sig_allocacmp_count_4) + unsigned(ap_const_lv32_1));
     icmp_ln1073_fu_164_p2 <= "1" when (unsigned(in_len_V_3_fu_146_p2) < unsigned(select_ln80_cast_reg_198)) else "0";
-    icmp_ln97_fu_152_p2 <= "1" when (count_5_fu_140_p2 = ap_const_lv32_10) else "0";
+    icmp_ln97_fu_152_p2 <= "1" when (count_5_fu_140_p2 = ap_const_lv32_20) else "0";
 
     inStreamTop_TDATA_blk_n_assign_proc : process(ap_CS_fsm_pp0_stage0, ap_enable_reg_pp0_iter1, inStreamTop_TVALID, ap_block_pp0_stage0)
     begin

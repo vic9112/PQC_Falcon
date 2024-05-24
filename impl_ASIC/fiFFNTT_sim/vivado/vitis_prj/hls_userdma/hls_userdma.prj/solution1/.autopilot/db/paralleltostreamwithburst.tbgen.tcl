@@ -74,7 +74,7 @@ set portList {
 	{ m_axi_gmem1_RDATA sc_in sc_lv 64 signal 0 } 
 	{ m_axi_gmem1_RLAST sc_in sc_logic 1 signal 0 } 
 	{ m_axi_gmem1_RID sc_in sc_lv 1 signal 0 } 
-	{ m_axi_gmem1_RFIFONUM sc_in sc_lv 7 signal 0 } 
+	{ m_axi_gmem1_RFIFONUM sc_in sc_lv 10 signal 0 } 
 	{ m_axi_gmem1_RUSER sc_in sc_lv 1 signal 0 } 
 	{ m_axi_gmem1_RRESP sc_in sc_lv 2 signal 0 } 
 	{ m_axi_gmem1_BVALID sc_in sc_logic 1 signal 0 } 
@@ -85,8 +85,8 @@ set portList {
 	{ in_memory sc_in sc_lv 64 signal 1 } 
 	{ kernel_mode sc_in sc_lv 2 signal 2 } 
 	{ outbuf_din sc_out sc_lv 35 signal 3 } 
-	{ outbuf_num_data_valid sc_in sc_lv 6 signal 3 } 
-	{ outbuf_fifo_cap sc_in sc_lv 6 signal 3 } 
+	{ outbuf_num_data_valid sc_in sc_lv 7 signal 3 } 
+	{ outbuf_fifo_cap sc_in sc_lv 7 signal 3 } 
 	{ outbuf_full_n sc_in sc_logic 1 signal 3 } 
 	{ outbuf_write sc_out sc_logic 1 signal 3 } 
 }
@@ -139,7 +139,7 @@ set NewPortList {[
  	{ "name": "m_axi_gmem1_RDATA", "direction": "in", "datatype": "sc_lv", "bitwidth":64, "type": "signal", "bundle":{"name": "gmem1", "role": "RDATA" }} , 
  	{ "name": "m_axi_gmem1_RLAST", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "gmem1", "role": "RLAST" }} , 
  	{ "name": "m_axi_gmem1_RID", "direction": "in", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "gmem1", "role": "RID" }} , 
- 	{ "name": "m_axi_gmem1_RFIFONUM", "direction": "in", "datatype": "sc_lv", "bitwidth":7, "type": "signal", "bundle":{"name": "gmem1", "role": "RFIFONUM" }} , 
+ 	{ "name": "m_axi_gmem1_RFIFONUM", "direction": "in", "datatype": "sc_lv", "bitwidth":10, "type": "signal", "bundle":{"name": "gmem1", "role": "RFIFONUM" }} , 
  	{ "name": "m_axi_gmem1_RUSER", "direction": "in", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "gmem1", "role": "RUSER" }} , 
  	{ "name": "m_axi_gmem1_RRESP", "direction": "in", "datatype": "sc_lv", "bitwidth":2, "type": "signal", "bundle":{"name": "gmem1", "role": "RRESP" }} , 
  	{ "name": "m_axi_gmem1_BVALID", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "gmem1", "role": "BVALID" }} , 
@@ -150,8 +150,8 @@ set NewPortList {[
  	{ "name": "in_memory", "direction": "in", "datatype": "sc_lv", "bitwidth":64, "type": "signal", "bundle":{"name": "in_memory", "role": "default" }} , 
  	{ "name": "kernel_mode", "direction": "in", "datatype": "sc_lv", "bitwidth":2, "type": "signal", "bundle":{"name": "kernel_mode", "role": "default" }} , 
  	{ "name": "outbuf_din", "direction": "out", "datatype": "sc_lv", "bitwidth":35, "type": "signal", "bundle":{"name": "outbuf", "role": "din" }} , 
- 	{ "name": "outbuf_num_data_valid", "direction": "in", "datatype": "sc_lv", "bitwidth":6, "type": "signal", "bundle":{"name": "outbuf", "role": "num_data_valid" }} , 
- 	{ "name": "outbuf_fifo_cap", "direction": "in", "datatype": "sc_lv", "bitwidth":6, "type": "signal", "bundle":{"name": "outbuf", "role": "fifo_cap" }} , 
+ 	{ "name": "outbuf_num_data_valid", "direction": "in", "datatype": "sc_lv", "bitwidth":7, "type": "signal", "bundle":{"name": "outbuf", "role": "num_data_valid" }} , 
+ 	{ "name": "outbuf_fifo_cap", "direction": "in", "datatype": "sc_lv", "bitwidth":7, "type": "signal", "bundle":{"name": "outbuf", "role": "fifo_cap" }} , 
  	{ "name": "outbuf_full_n", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "outbuf", "role": "full_n" }} , 
  	{ "name": "outbuf_write", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "outbuf", "role": "write" }}  ]}
 
@@ -173,18 +173,18 @@ set RtlHierarchyInfo {[
 		"Port" : [
 			{"Name" : "gmem1", "Type" : "MAXI", "Direction" : "I",
 				"SubConnect" : [
-					{"ID" : "1", "SubInstance" : "grp_paralleltostreamwithburst_Pipeline_VITIS_LOOP_131_2_fu_115", "Port" : "gmem1", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+					{"ID" : "1", "SubInstance" : "grp_paralleltostreamwithburst_Pipeline_VITIS_LOOP_131_2_fu_117", "Port" : "gmem1", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
 			{"Name" : "in_memory", "Type" : "None", "Direction" : "I"},
 			{"Name" : "kernel_mode", "Type" : "None", "Direction" : "I"},
-			{"Name" : "outbuf", "Type" : "Fifo", "Direction" : "O", "DependentProc" : ["0"], "DependentChan" : "0", "DependentChanDepth" : "32", "DependentChanType" : "0",
+			{"Name" : "outbuf", "Type" : "Fifo", "Direction" : "O", "DependentProc" : ["0"], "DependentChan" : "0", "DependentChanDepth" : "64", "DependentChanType" : "0",
 				"BlockSignal" : [
 					{"Name" : "outbuf_blk_n", "Type" : "RtlSignal"}],
 				"SubConnect" : [
-					{"ID" : "1", "SubInstance" : "grp_paralleltostreamwithburst_Pipeline_VITIS_LOOP_131_2_fu_115", "Port" : "outbuf", "Inst_start_state" : "3", "Inst_end_state" : "4"}]}],
+					{"ID" : "1", "SubInstance" : "grp_paralleltostreamwithburst_Pipeline_VITIS_LOOP_131_2_fu_117", "Port" : "outbuf", "Inst_start_state" : "3", "Inst_end_state" : "4"}]}],
 		"Loop" : [
 			{"Name" : "VITIS_LOOP_124_1", "PipelineType" : "no",
 				"LoopDec" : {"FSMBitwidth" : "4", "FirstState" : "ap_ST_fsm_state2", "LastState" : ["ap_ST_fsm_state4"], "QuitState" : ["ap_ST_fsm_state2"], "PreState" : ["ap_ST_fsm_state1"], "PostState" : ["ap_ST_fsm_state1"], "OneDepthLoop" : "0", "OneStateBlock": ""}}]},
-	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_paralleltostreamwithburst_Pipeline_VITIS_LOOP_131_2_fu_115", "Parent" : "0", "Child" : ["2"],
+	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_paralleltostreamwithburst_Pipeline_VITIS_LOOP_131_2_fu_117", "Parent" : "0", "Child" : ["2"],
 		"CDFG" : "paralleltostreamwithburst_Pipeline_VITIS_LOOP_131_2",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
@@ -216,7 +216,7 @@ set RtlHierarchyInfo {[
 		"Loop" : [
 			{"Name" : "VITIS_LOOP_131_2", "PipelineType" : "UPC",
 				"LoopDec" : {"FSMBitwidth" : "1", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter1", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter20", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter20", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
-	{"ID" : "2", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_paralleltostreamwithburst_Pipeline_VITIS_LOOP_131_2_fu_115.flow_control_loop_pipe_sequential_init_U", "Parent" : "1"},
+	{"ID" : "2", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_paralleltostreamwithburst_Pipeline_VITIS_LOOP_131_2_fu_117.flow_control_loop_pipe_sequential_init_U", "Parent" : "1"},
 	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mux_42_32_1_1_U49", "Parent" : "0"}]}
 
 
@@ -248,8 +248,8 @@ set PipelineEnableSignalInfo {[
 ]}
 
 set Spec2ImplPortList { 
-	 { m_axi {  { m_axi_gmem1_AWVALID VALID 1 1 }  { m_axi_gmem1_AWREADY READY 0 1 }  { m_axi_gmem1_AWADDR ADDR 1 64 }  { m_axi_gmem1_AWID ID 1 1 }  { m_axi_gmem1_AWLEN SIZE 1 32 }  { m_axi_gmem1_AWSIZE BURST 1 3 }  { m_axi_gmem1_AWBURST LOCK 1 2 }  { m_axi_gmem1_AWLOCK CACHE 1 2 }  { m_axi_gmem1_AWCACHE PROT 1 4 }  { m_axi_gmem1_AWPROT QOS 1 3 }  { m_axi_gmem1_AWQOS REGION 1 4 }  { m_axi_gmem1_AWREGION USER 1 4 }  { m_axi_gmem1_AWUSER DATA 1 1 }  { m_axi_gmem1_WVALID VALID 1 1 }  { m_axi_gmem1_WREADY READY 0 1 }  { m_axi_gmem1_WDATA FIFONUM 1 64 }  { m_axi_gmem1_WSTRB STRB 1 8 }  { m_axi_gmem1_WLAST LAST 1 1 }  { m_axi_gmem1_WID ID 1 1 }  { m_axi_gmem1_WUSER DATA 1 1 }  { m_axi_gmem1_ARVALID VALID 1 1 }  { m_axi_gmem1_ARREADY READY 0 1 }  { m_axi_gmem1_ARADDR ADDR 1 64 }  { m_axi_gmem1_ARID ID 1 1 }  { m_axi_gmem1_ARLEN SIZE 1 32 }  { m_axi_gmem1_ARSIZE BURST 1 3 }  { m_axi_gmem1_ARBURST LOCK 1 2 }  { m_axi_gmem1_ARLOCK CACHE 1 2 }  { m_axi_gmem1_ARCACHE PROT 1 4 }  { m_axi_gmem1_ARPROT QOS 1 3 }  { m_axi_gmem1_ARQOS REGION 1 4 }  { m_axi_gmem1_ARREGION USER 1 4 }  { m_axi_gmem1_ARUSER DATA 1 1 }  { m_axi_gmem1_RVALID VALID 0 1 }  { m_axi_gmem1_RREADY READY 1 1 }  { m_axi_gmem1_RDATA FIFONUM 0 64 }  { m_axi_gmem1_RLAST LAST 0 1 }  { m_axi_gmem1_RID ID 0 1 }  { m_axi_gmem1_RFIFONUM LEN 0 7 }  { m_axi_gmem1_RUSER DATA 0 1 }  { m_axi_gmem1_RRESP RESP 0 2 }  { m_axi_gmem1_BVALID VALID 0 1 }  { m_axi_gmem1_BREADY READY 1 1 }  { m_axi_gmem1_BRESP RESP 0 2 }  { m_axi_gmem1_BID ID 0 1 }  { m_axi_gmem1_BUSER DATA 0 1 } } }
+	 { m_axi {  { m_axi_gmem1_AWVALID VALID 1 1 }  { m_axi_gmem1_AWREADY READY 0 1 }  { m_axi_gmem1_AWADDR ADDR 1 64 }  { m_axi_gmem1_AWID ID 1 1 }  { m_axi_gmem1_AWLEN SIZE 1 32 }  { m_axi_gmem1_AWSIZE BURST 1 3 }  { m_axi_gmem1_AWBURST LOCK 1 2 }  { m_axi_gmem1_AWLOCK CACHE 1 2 }  { m_axi_gmem1_AWCACHE PROT 1 4 }  { m_axi_gmem1_AWPROT QOS 1 3 }  { m_axi_gmem1_AWQOS REGION 1 4 }  { m_axi_gmem1_AWREGION USER 1 4 }  { m_axi_gmem1_AWUSER DATA 1 1 }  { m_axi_gmem1_WVALID VALID 1 1 }  { m_axi_gmem1_WREADY READY 0 1 }  { m_axi_gmem1_WDATA FIFONUM 1 64 }  { m_axi_gmem1_WSTRB STRB 1 8 }  { m_axi_gmem1_WLAST LAST 1 1 }  { m_axi_gmem1_WID ID 1 1 }  { m_axi_gmem1_WUSER DATA 1 1 }  { m_axi_gmem1_ARVALID VALID 1 1 }  { m_axi_gmem1_ARREADY READY 0 1 }  { m_axi_gmem1_ARADDR ADDR 1 64 }  { m_axi_gmem1_ARID ID 1 1 }  { m_axi_gmem1_ARLEN SIZE 1 32 }  { m_axi_gmem1_ARSIZE BURST 1 3 }  { m_axi_gmem1_ARBURST LOCK 1 2 }  { m_axi_gmem1_ARLOCK CACHE 1 2 }  { m_axi_gmem1_ARCACHE PROT 1 4 }  { m_axi_gmem1_ARPROT QOS 1 3 }  { m_axi_gmem1_ARQOS REGION 1 4 }  { m_axi_gmem1_ARREGION USER 1 4 }  { m_axi_gmem1_ARUSER DATA 1 1 }  { m_axi_gmem1_RVALID VALID 0 1 }  { m_axi_gmem1_RREADY READY 1 1 }  { m_axi_gmem1_RDATA FIFONUM 0 64 }  { m_axi_gmem1_RLAST LAST 0 1 }  { m_axi_gmem1_RID ID 0 1 }  { m_axi_gmem1_RFIFONUM LEN 0 10 }  { m_axi_gmem1_RUSER DATA 0 1 }  { m_axi_gmem1_RRESP RESP 0 2 }  { m_axi_gmem1_BVALID VALID 0 1 }  { m_axi_gmem1_BREADY READY 1 1 }  { m_axi_gmem1_BRESP RESP 0 2 }  { m_axi_gmem1_BID ID 0 1 }  { m_axi_gmem1_BUSER DATA 0 1 } } }
 	in_memory { ap_none {  { in_memory in_data 0 64 } } }
 	kernel_mode { ap_none {  { kernel_mode in_data 0 2 } } }
-	outbuf { ap_fifo {  { outbuf_din fifo_port_we 1 35 }  { outbuf_num_data_valid fifo_status_num_data_valid 0 6 }  { outbuf_fifo_cap fifo_update 0 6 }  { outbuf_full_n fifo_status 0 1 }  { outbuf_write fifo_data 1 1 } } }
+	outbuf { ap_fifo {  { outbuf_din fifo_port_we 1 35 }  { outbuf_num_data_valid fifo_status_num_data_valid 0 7 }  { outbuf_fifo_cap fifo_update 0 7 }  { outbuf_full_n fifo_status 0 1 }  { outbuf_write fifo_data 1 1 } } }
 }

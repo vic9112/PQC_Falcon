@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'sendoutstream'
 ================================================================
-* Date:           Thu May 23 13:05:11 2024
+* Date:           Fri May 24 01:07:41 2024
 
 * Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
 * Project:        hls_userdma.prj
@@ -20,7 +20,7 @@
     +--------+----------+----------+------------+
     |  Clock |  Target  | Estimated| Uncertainty|
     +--------+----------+----------+------------+
-    |ap_clk  |  10.00 ns|  3.607 ns|     2.70 ns|
+    |ap_clk  |  10.00 ns|  3.561 ns|     2.70 ns|
     +--------+----------+----------+------------+
 
 + Latency: 
@@ -84,11 +84,11 @@ IsGatedGlobalClock: 0
 
 * FSM state operations: 
 
-State 1 <SV = 0> <Delay = 3.60>
+State 1 <SV = 0> <Delay = 3.56>
 ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i35 %outbuf, void @empty_16, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3, i32 4294967295, i32 0"   --->   Operation 5 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %outStreamTop_V_last_V, i2 %outStreamTop_V_user_V, i4 %outStreamTop_V_strb_V, i4 %outStreamTop_V_keep_V, i32 %outStreamTop_V_data_V, void @empty_19, i32 1, i32 1, void @empty_20, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3, i32 4294967295, i32 0"   --->   Operation 6 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%br_ln171 = br void %do.cond" [userdma.cpp:171]   --->   Operation 7 'br' 'br_ln171' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 8 [1/1] (3.60ns)   --->   "%outbuf_read = read i35 @_ssdm_op_Read.ap_fifo.volatile.i35P0A, i35 %outbuf" [/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 8 'read' 'outbuf_read' <Predicate = true> <Delay = 3.60> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 3.60> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 35> <Depth = 32> <FIFO>
+ST_1 : Operation 8 [1/1] (3.56ns)   --->   "%outbuf_read = read i35 @_ssdm_op_Read.ap_fifo.volatile.i35P0A, i35 %outbuf" [/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 8 'read' 'outbuf_read' <Predicate = true> <Delay = 3.56> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 3.56> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 35> <Depth = 64> <FIFO>
 ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%tmp_data_filed_V = trunc i35 %outbuf_read" [/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 9 'trunc' 'tmp_data_filed_V' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%tmp_upsb_V = partselect i2 @_ssdm_op_PartSelect.i2.i35.i32.i32, i35 %outbuf_read, i32 32, i32 33" [/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 10 'partselect' 'tmp_upsb_V' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%tmp_last_V = bitselect i1 @_ssdm_op_BitSelect.i1.i35.i32, i35 %outbuf_read, i32 34" [/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 11 'bitselect' 'tmp_last_V' <Predicate = true> <Delay = 0.00>
@@ -108,9 +108,9 @@ ST_2 : Operation 18 [1/1] (0.00ns)   --->   "%ret_ln182 = ret" [userdma.cpp:182]
 ============================================================
 Target clock period: 10ns, clock uncertainty: 2.7ns.
 
- <State 1>: 3.61ns
+ <State 1>: 3.56ns
 The critical path consists of the following:
-	fifo read operation ('outbuf_read', /tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145) on port 'outbuf' (/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145) [14]  (3.61 ns)
+	fifo read operation ('outbuf_read', /tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145) on port 'outbuf' (/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145) [14]  (3.56 ns)
 
  <State 2>: 0ns
 The critical path consists of the following:

@@ -113,7 +113,7 @@ eval "cg_default_interface_gen_dc { \
     sync_rst true \
     corename dc_outbuf \
     op interface \
-    ports { outbuf_dout { I 35 vector } outbuf_num_data_valid { I 6 vector } outbuf_fifo_cap { I 6 vector } outbuf_empty_n { I 1 bit } outbuf_read { O 1 bit } } \
+    ports { outbuf_dout { I 35 vector } outbuf_num_data_valid { I 7 vector } outbuf_fifo_cap { I 7 vector } outbuf_empty_n { I 1 bit } outbuf_read { O 1 bit } } \
 } "
 }
 

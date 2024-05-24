@@ -373,7 +373,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                 2 : begin
                     case(index2)
                     1: begin
-                        if (~AESL_inst_userdma.streamtoparallelwithburst_U0.grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_27_2_fu_115.inbuf_blk_n) begin
+                        if (~AESL_inst_userdma.streamtoparallelwithburst_U0.grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_27_2_fu_117.inbuf_blk_n) begin
                             if (~AESL_inst_userdma.inbuf_U.if_empty_n) begin
                                 $display("//      Blocked by empty input FIFO 'userdma.inbuf_U' written by process 'userdma.getinstream_U0'");
                                 $fdisplay(fp, "Dependence_Channel_path userdma.inbuf_U");

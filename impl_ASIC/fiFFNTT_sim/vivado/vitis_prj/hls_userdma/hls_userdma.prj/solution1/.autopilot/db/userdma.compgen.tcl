@@ -76,14 +76,14 @@ puts "@W \[IMPL-107\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_FIFO, check your pl
 
 # FIFO definition: 
 set ID 68
-set FifoName userdma_fifo_w33_d32_A
+set FifoName userdma_fifo_w33_d64_A
 set InstName inbuf_U
 set CoreName ap_simcore_fifo
 set NumOfStage 2
 set DualClock 0
-set Depth 32
+set Depth 64
 set DataWd 33
-set AddrWd 5
+set AddrWd 6
 set FullThresh 0
 set FanoutToFrp 0
 set FanoutToFrpRdOutII 1
@@ -298,14 +298,14 @@ puts "@W \[IMPL-107\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_FIFO, check your pl
 
 # FIFO definition: 
 set ID 71
-set FifoName userdma_fifo_w35_d32_A
+set FifoName userdma_fifo_w35_d64_A
 set InstName outbuf_U
 set CoreName ap_simcore_fifo
 set NumOfStage 2
 set DualClock 0
-set Depth 32
+set Depth 64
 set DataWd 35
-set AddrWd 5
+set AddrWd 6
 set FullThresh 0
 set FanoutToFrp 0
 set FanoutToFrpRdOutII 1

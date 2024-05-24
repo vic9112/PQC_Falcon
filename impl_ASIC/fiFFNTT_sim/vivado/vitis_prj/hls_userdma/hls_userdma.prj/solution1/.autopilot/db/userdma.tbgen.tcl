@@ -431,7 +431,7 @@ set RtlHierarchyInfo {[
 					{"ID" : "6", "SubInstance" : "grp_getinstream_Pipeline_VITIS_LOOP_80_1_fu_93", "Port" : "inStreamTop_V_last_V", "Inst_start_state" : "2", "Inst_end_state" : "3"}]},
 			{"Name" : "kernel_mode", "Type" : "None", "Direction" : "I"},
 			{"Name" : "s2m_err", "Type" : "Vld", "Direction" : "O"},
-			{"Name" : "inbuf", "Type" : "Fifo", "Direction" : "O", "DependentProc" : ["13"], "DependentChan" : "28", "DependentChanDepth" : "32", "DependentChanType" : "0",
+			{"Name" : "inbuf", "Type" : "Fifo", "Direction" : "O", "DependentProc" : ["13"], "DependentChan" : "28", "DependentChanDepth" : "64", "DependentChanType" : "0",
 				"SubConnect" : [
 					{"ID" : "6", "SubInstance" : "grp_getinstream_Pipeline_VITIS_LOOP_80_1_fu_93", "Port" : "inbuf", "Inst_start_state" : "2", "Inst_end_state" : "3"}]},
 			{"Name" : "incount25", "Type" : "Fifo", "Direction" : "O", "DependentProc" : ["13"], "DependentChan" : "29", "DependentChanDepth" : "2", "DependentChanType" : "0",
@@ -496,9 +496,9 @@ set RtlHierarchyInfo {[
 		"StartSource" : "4",
 		"StartFifo" : "start_for_streamtoparallelwithburst_U0_U",
 		"Port" : [
-			{"Name" : "inbuf", "Type" : "Fifo", "Direction" : "I", "DependentProc" : ["5"], "DependentChan" : "28", "DependentChanDepth" : "32", "DependentChanType" : "0",
+			{"Name" : "inbuf", "Type" : "Fifo", "Direction" : "I", "DependentProc" : ["5"], "DependentChan" : "28", "DependentChanDepth" : "64", "DependentChanType" : "0",
 				"SubConnect" : [
-					{"ID" : "14", "SubInstance" : "grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_27_2_fu_115", "Port" : "inbuf", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+					{"ID" : "14", "SubInstance" : "grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_27_2_fu_117", "Port" : "inbuf", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
 			{"Name" : "incount25", "Type" : "Fifo", "Direction" : "I", "DependentProc" : ["5"], "DependentChan" : "29", "DependentChanDepth" : "2", "DependentChanType" : "0",
 				"BlockSignal" : [
 					{"Name" : "incount25_blk_n", "Type" : "RtlSignal"}]},
@@ -508,14 +508,14 @@ set RtlHierarchyInfo {[
 					{"Name" : "kernel_mode_blk_n", "Type" : "RtlSignal"}]},
 			{"Name" : "gmem0", "Type" : "MAXI", "Direction" : "O",
 				"SubConnect" : [
-					{"ID" : "14", "SubInstance" : "grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_27_2_fu_115", "Port" : "gmem0", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+					{"ID" : "14", "SubInstance" : "grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_27_2_fu_117", "Port" : "gmem0", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
 			{"Name" : "out_memory", "Type" : "Fifo", "Direction" : "I", "DependentProc" : ["4"], "DependentChan" : "27", "DependentChanDepth" : "3", "DependentChanType" : "2",
 				"BlockSignal" : [
 					{"Name" : "out_memory_blk_n", "Type" : "RtlSignal"}]}],
 		"Loop" : [
 			{"Name" : "VITIS_LOOP_24_1", "PipelineType" : "no",
 				"LoopDec" : {"FSMBitwidth" : "4", "FirstState" : "ap_ST_fsm_state2", "LastState" : ["ap_ST_fsm_state4"], "QuitState" : ["ap_ST_fsm_state2"], "PreState" : ["ap_ST_fsm_state1"], "PostState" : ["ap_ST_fsm_state1"], "OneDepthLoop" : "0", "OneStateBlock": ""}}]},
-	{"ID" : "14", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.streamtoparallelwithburst_U0.grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_27_2_fu_115", "Parent" : "13", "Child" : ["15"],
+	{"ID" : "14", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.streamtoparallelwithburst_U0.grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_27_2_fu_117", "Parent" : "13", "Child" : ["15"],
 		"CDFG" : "streamtoparallelwithburst_Pipeline_VITIS_LOOP_27_2",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
@@ -546,7 +546,7 @@ set RtlHierarchyInfo {[
 		"Loop" : [
 			{"Name" : "VITIS_LOOP_27_2", "PipelineType" : "UPC",
 				"LoopDec" : {"FSMBitwidth" : "1", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter17", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter17", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
-	{"ID" : "15", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.streamtoparallelwithburst_U0.grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_27_2_fu_115.flow_control_loop_pipe_sequential_init_U", "Parent" : "14"},
+	{"ID" : "15", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.streamtoparallelwithburst_U0.grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_27_2_fu_117.flow_control_loop_pipe_sequential_init_U", "Parent" : "14"},
 	{"ID" : "16", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.paralleltostreamwithburst_U0", "Parent" : "0", "Child" : ["17", "19"],
 		"CDFG" : "paralleltostreamwithburst",
 		"Protocol" : "ap_ctrl_hs",
@@ -564,18 +564,18 @@ set RtlHierarchyInfo {[
 		"Port" : [
 			{"Name" : "gmem1", "Type" : "MAXI", "Direction" : "I",
 				"SubConnect" : [
-					{"ID" : "17", "SubInstance" : "grp_paralleltostreamwithburst_Pipeline_VITIS_LOOP_131_2_fu_115", "Port" : "gmem1", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+					{"ID" : "17", "SubInstance" : "grp_paralleltostreamwithburst_Pipeline_VITIS_LOOP_131_2_fu_117", "Port" : "gmem1", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
 			{"Name" : "in_memory", "Type" : "None", "Direction" : "I"},
 			{"Name" : "kernel_mode", "Type" : "None", "Direction" : "I"},
-			{"Name" : "outbuf", "Type" : "Fifo", "Direction" : "O", "DependentProc" : ["20"], "DependentChan" : "31", "DependentChanDepth" : "32", "DependentChanType" : "0",
+			{"Name" : "outbuf", "Type" : "Fifo", "Direction" : "O", "DependentProc" : ["20"], "DependentChan" : "31", "DependentChanDepth" : "64", "DependentChanType" : "0",
 				"BlockSignal" : [
 					{"Name" : "outbuf_blk_n", "Type" : "RtlSignal"}],
 				"SubConnect" : [
-					{"ID" : "17", "SubInstance" : "grp_paralleltostreamwithburst_Pipeline_VITIS_LOOP_131_2_fu_115", "Port" : "outbuf", "Inst_start_state" : "3", "Inst_end_state" : "4"}]}],
+					{"ID" : "17", "SubInstance" : "grp_paralleltostreamwithburst_Pipeline_VITIS_LOOP_131_2_fu_117", "Port" : "outbuf", "Inst_start_state" : "3", "Inst_end_state" : "4"}]}],
 		"Loop" : [
 			{"Name" : "VITIS_LOOP_124_1", "PipelineType" : "no",
 				"LoopDec" : {"FSMBitwidth" : "4", "FirstState" : "ap_ST_fsm_state2", "LastState" : ["ap_ST_fsm_state4"], "QuitState" : ["ap_ST_fsm_state2"], "PreState" : ["ap_ST_fsm_state1"], "PostState" : ["ap_ST_fsm_state1"], "OneDepthLoop" : "0", "OneStateBlock": ""}}]},
-	{"ID" : "17", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.paralleltostreamwithburst_U0.grp_paralleltostreamwithburst_Pipeline_VITIS_LOOP_131_2_fu_115", "Parent" : "16", "Child" : ["18"],
+	{"ID" : "17", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.paralleltostreamwithburst_U0.grp_paralleltostreamwithburst_Pipeline_VITIS_LOOP_131_2_fu_117", "Parent" : "16", "Child" : ["18"],
 		"CDFG" : "paralleltostreamwithburst_Pipeline_VITIS_LOOP_131_2",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
@@ -607,7 +607,7 @@ set RtlHierarchyInfo {[
 		"Loop" : [
 			{"Name" : "VITIS_LOOP_131_2", "PipelineType" : "UPC",
 				"LoopDec" : {"FSMBitwidth" : "1", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter1", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter20", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter20", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
-	{"ID" : "18", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.paralleltostreamwithburst_U0.grp_paralleltostreamwithburst_Pipeline_VITIS_LOOP_131_2_fu_115.flow_control_loop_pipe_sequential_init_U", "Parent" : "17"},
+	{"ID" : "18", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.paralleltostreamwithburst_U0.grp_paralleltostreamwithburst_Pipeline_VITIS_LOOP_131_2_fu_117.flow_control_loop_pipe_sequential_init_U", "Parent" : "17"},
 	{"ID" : "19", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.paralleltostreamwithburst_U0.mux_42_32_1_1_U49", "Parent" : "16"},
 	{"ID" : "20", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.sendoutstream_U0", "Parent" : "0", "Child" : ["21", "22", "23", "24", "25", "26"],
 		"CDFG" : "sendoutstream",
@@ -626,7 +626,7 @@ set RtlHierarchyInfo {[
 		"StartSource" : "16",
 		"StartFifo" : "start_for_sendoutstream_U0_U",
 		"Port" : [
-			{"Name" : "outbuf", "Type" : "Fifo", "Direction" : "I", "DependentProc" : ["16"], "DependentChan" : "31", "DependentChanDepth" : "32", "DependentChanType" : "0",
+			{"Name" : "outbuf", "Type" : "Fifo", "Direction" : "I", "DependentProc" : ["16"], "DependentChan" : "31", "DependentChanDepth" : "64", "DependentChanType" : "0",
 				"BlockSignal" : [
 					{"Name" : "outbuf_blk_n", "Type" : "RtlSignal"}]},
 			{"Name" : "m2s_buf_sts", "Type" : "Vld", "Direction" : "O"},
@@ -764,8 +764,8 @@ set Spec2ImplPortList {
 }
 
 set maxi_interface_dict [dict create]
-dict set maxi_interface_dict gmem0 {NUM_READ_OUTSTANDING 16 NUM_WRITE_OUTSTANDING 16 MAX_READ_BURST_LENGTH 16 MAX_WRITE_BURST_LENGTH 16 READ_WRITE_MODE WRITE_ONLY}
-dict set maxi_interface_dict gmem1 {NUM_READ_OUTSTANDING 4 NUM_WRITE_OUTSTANDING 16 MAX_READ_BURST_LENGTH 16 MAX_WRITE_BURST_LENGTH 16 READ_WRITE_MODE READ_ONLY}
+dict set maxi_interface_dict gmem0 {NUM_READ_OUTSTANDING 16 NUM_WRITE_OUTSTANDING 16 MAX_READ_BURST_LENGTH 16 MAX_WRITE_BURST_LENGTH 32 READ_WRITE_MODE WRITE_ONLY}
+dict set maxi_interface_dict gmem1 {NUM_READ_OUTSTANDING 16 NUM_WRITE_OUTSTANDING 16 MAX_READ_BURST_LENGTH 32 MAX_WRITE_BURST_LENGTH 16 READ_WRITE_MODE READ_ONLY}
 
 # RTL port scheduling information:
 set fifoSchedulingInfoList { 

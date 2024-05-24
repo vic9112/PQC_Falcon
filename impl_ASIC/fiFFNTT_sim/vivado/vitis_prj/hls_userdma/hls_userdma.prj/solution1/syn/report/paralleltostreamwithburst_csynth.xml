@@ -45,8 +45,8 @@
 
 <AreaEstimates>
 <Resources>
-<FF>2164</FF>
-<LUT>1267</LUT>
+<FF>2166</FF>
+<LUT>1269</LUT>
 <BRAM_18K>0</BRAM_18K>
 <DSP>0</DSP>
 <URAM>0</URAM>
@@ -597,7 +597,7 @@
 <IOProtocol>m_axi</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>7</Bits>
+<Bits>10</Bits>
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -718,7 +718,7 @@
 <IOProtocol>ap_fifo</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>6</Bits>
+<Bits>7</Bits>
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -729,7 +729,7 @@
 <IOProtocol>ap_fifo</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>6</Bits>
+<Bits>7</Bits>
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>

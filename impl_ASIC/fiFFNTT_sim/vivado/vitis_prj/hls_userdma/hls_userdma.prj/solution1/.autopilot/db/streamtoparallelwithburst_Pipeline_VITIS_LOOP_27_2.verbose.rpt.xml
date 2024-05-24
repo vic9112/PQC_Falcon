@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'streamtoparallelwithburst_Pipeline_VITIS_LOOP_27_2'" level="0">
-<item name = "Date">Thu May 23 13:05:12 2024
+<item name = "Date">Fri May 24 01:07:42 2024
 </item>
 <item name = "Version">2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)</item>
 <item name = "Project">hls_userdma.prj</item>
@@ -78,16 +78,16 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="add_ln27_fu_165_p2">+, 0, 0, 39, 32, 1</column>
-<column name="add_ln32_fu_196_p2">+, 0, 0, 71, 64, 3</column>
-<column name="add_ln34_fu_191_p2">+, 0, 0, 71, 64, 64</column>
-<column name="icmp_ln27_fu_159_p2">icmp, 0, 0, 18, 32, 32</column>
+<column name="add_ln27_fu_167_p2">+, 0, 0, 39, 32, 1</column>
+<column name="add_ln32_fu_198_p2">+, 0, 0, 71, 64, 3</column>
+<column name="add_ln34_fu_193_p2">+, 0, 0, 71, 64, 64</column>
+<column name="icmp_ln27_fu_161_p2">icmp, 0, 0, 18, 32, 32</column>
 <column name="ap_block_pp0_stage0_01001">or, 0, 0, 2, 1, 1</column>
 <column name="ap_block_pp0_stage0_11001">or, 0, 0, 2, 1, 1</column>
 <column name="ap_block_state18_pp0_stage0_iter17">or, 0, 0, 2, 1, 1</column>
 <column name="ap_block_state3_io">or, 0, 0, 2, 1, 1</column>
 <column name="ap_block_state4_io">or, 0, 0, 2, 1, 1</column>
-<column name="shl_ln32_1_fu_225_p2">shl, 0, 0, 182, 64, 64</column>
+<column name="shl_ln32_1_fu_227_p2">shl, 0, 0, 182, 64, 64</column>
 <column name="ap_enable_pp0">xor, 0, 0, 2, 1, 2</column>
 </table>
 </item>
@@ -99,7 +99,7 @@
 <column name="gmem0_blk_n_AW">9, 2, 1, 2</column>
 <column name="gmem0_blk_n_B">9, 2, 1, 2</column>
 <column name="gmem0_blk_n_W">9, 2, 1, 2</column>
-<column name="i_fu_76">9, 2, 32, 64</column>
+<column name="i_fu_78">9, 2, 32, 64</column>
 <column name="inbuf_blk_n">9, 2, 1, 2</column>
 <column name="m_axi_gmem0_AWADDR">14, 3, 64, 192</column>
 <column name="m_axi_gmem0_WDATA">14, 3, 64, 192</column>
@@ -143,14 +143,14 @@
 <column name="ap_loop_exit_ready_pp0_iter7_reg">1, 0, 1, 0</column>
 <column name="ap_loop_exit_ready_pp0_iter8_reg">1, 0, 1, 0</column>
 <column name="ap_loop_exit_ready_pp0_iter9_reg">1, 0, 1, 0</column>
-<column name="i_1_reg_276">32, 0, 32, 0</column>
-<column name="i_fu_76">32, 0, 32, 0</column>
-<column name="in_val_data_filed_V_reg_285">32, 0, 32, 0</column>
-<column name="shl_ln32_1_reg_305">64, 0, 64, 0</column>
-<column name="trunc_ln1_reg_295">61, 0, 61, 0</column>
-<column name="trunc_ln2_reg_290">61, 0, 61, 0</column>
-<column name="zext_ln27_cast_reg_271">6, 0, 64, 58</column>
-<column name="zext_ln32_reg_300">32, 0, 64, 32</column>
+<column name="i_1_reg_278">32, 0, 32, 0</column>
+<column name="i_fu_78">32, 0, 32, 0</column>
+<column name="in_val_data_filed_V_reg_287">32, 0, 32, 0</column>
+<column name="shl_ln32_1_reg_307">64, 0, 64, 0</column>
+<column name="trunc_ln1_reg_297">61, 0, 61, 0</column>
+<column name="trunc_ln2_reg_292">61, 0, 61, 0</column>
+<column name="zext_ln27_cast_reg_273">6, 0, 64, 58</column>
+<column name="zext_ln32_reg_302">32, 0, 64, 32</column>
 </table>
 </item>
 </section>
@@ -167,8 +167,8 @@
 <column name="ap_idle">out, 1, ap_ctrl_hs, streamtoparallelwithburst_Pipeline_VITIS_LOOP_27_2, return value</column>
 <column name="ap_ready">out, 1, ap_ctrl_hs, streamtoparallelwithburst_Pipeline_VITIS_LOOP_27_2, return value</column>
 <column name="inbuf_dout">in, 33, ap_fifo, inbuf, pointer</column>
-<column name="inbuf_num_data_valid">in, 6, ap_fifo, inbuf, pointer</column>
-<column name="inbuf_fifo_cap">in, 6, ap_fifo, inbuf, pointer</column>
+<column name="inbuf_num_data_valid">in, 7, ap_fifo, inbuf, pointer</column>
+<column name="inbuf_fifo_cap">in, 7, ap_fifo, inbuf, pointer</column>
 <column name="inbuf_empty_n">in, 1, ap_fifo, inbuf, pointer</column>
 <column name="inbuf_read">out, 1, ap_fifo, inbuf, pointer</column>
 <column name="m_axi_gmem0_AWVALID">out, 1, m_axi, gmem0, pointer</column>

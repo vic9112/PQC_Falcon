@@ -8,12 +8,12 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.std_logic_unsigned.all;
 
-entity userdma_fifo_w35_d32_A_ram is
+entity userdma_fifo_w35_d64_A_ram is
     generic (
         MEM_STYLE   : string  := "auto";
         DATA_WIDTH  : natural := 35;
-        ADDR_WIDTH  : natural := 5;
-        DEPTH       : natural := 31
+        ADDR_WIDTH  : natural := 6;
+        DEPTH       : natural := 63
     );
     port (
         clk         : in std_logic;
@@ -27,7 +27,7 @@ entity userdma_fifo_w35_d32_A_ram is
     );
 end entity;
 
-architecture arch of userdma_fifo_w35_d32_A_ram is
+architecture arch of userdma_fifo_w35_d64_A_ram is
     type memtype is array (0 to DEPTH - 1) of std_logic_vector(DATA_WIDTH - 1 downto 0);
     signal mem        : memtype;
     attribute ram_style: string;
@@ -70,12 +70,12 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
-entity userdma_fifo_w35_d32_A is
+entity userdma_fifo_w35_d64_A is
     generic (
         MEM_STYLE   : string  := "auto";
         DATA_WIDTH  : natural := 35;
-        ADDR_WIDTH  : natural := 5;
-        DEPTH       : natural := 31
+        ADDR_WIDTH  : natural := 6;
+        DEPTH       : natural := 63
     );
     port (
         clk         : in  std_logic;
@@ -93,15 +93,15 @@ entity userdma_fifo_w35_d32_A is
     );
 end entity;
 
-architecture arch of userdma_fifo_w35_d32_A is
+architecture arch of userdma_fifo_w35_d64_A is
 
     -- component
-    component userdma_fifo_w35_d32_A_ram is
+    component userdma_fifo_w35_d64_A_ram is
     generic (
         MEM_STYLE   : string  := "auto";
         DATA_WIDTH  : natural := 35;
-        ADDR_WIDTH  : natural := 5;
-        DEPTH       : natural := 31
+        ADDR_WIDTH  : natural := 6;
+        DEPTH       : natural := 63
         );
     port (
         clk         : in std_logic;
@@ -127,7 +127,7 @@ architecture arch of userdma_fifo_w35_d32_A is
     signal dout_vld   : std_logic := '0';
 begin
     ----------------------- Instantiation -----------------------
-    U_userdma_fifo_w35_d32_A_ram : userdma_fifo_w35_d32_A_ram
+    U_userdma_fifo_w35_d64_A_ram : userdma_fifo_w35_d64_A_ram
     generic map (
         MEM_STYLE => MEM_STYLE,
         DATA_WIDTH => DATA_WIDTH,

@@ -623,7 +623,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>MAX_WRITE_BURST_LENGTH</spirit:name>
-          <spirit:value spirit:id="BUSIFPARAM_VALUE.M_AXI_GMEM0.MAX_WRITE_BURST_LENGTH">16</spirit:value>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.M_AXI_GMEM0.MAX_WRITE_BURST_LENGTH">32</spirit:value>
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>MAX_BURST_LENGTH</spirit:name>
@@ -1019,7 +1019,7 @@
       <spirit:parameters>
         <spirit:parameter>
           <spirit:name>NUM_READ_OUTSTANDING</spirit:name>
-          <spirit:value spirit:id="BUSIFPARAM_VALUE.M_AXI_GMEM1.NUM_READ_OUTSTANDING">4</spirit:value>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.M_AXI_GMEM1.NUM_READ_OUTSTANDING">16</spirit:value>
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>NUM_WRITE_OUTSTANDING</spirit:name>
@@ -1027,7 +1027,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>MAX_READ_BURST_LENGTH</spirit:name>
-          <spirit:value spirit:id="BUSIFPARAM_VALUE.M_AXI_GMEM1.MAX_READ_BURST_LENGTH">16</spirit:value>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.M_AXI_GMEM1.MAX_READ_BURST_LENGTH">32</spirit:value>
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>MAX_WRITE_BURST_LENGTH</spirit:name>
@@ -1896,7 +1896,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>6008a0a8</spirit:value>
+            <spirit:value>49a4f41e</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1912,7 +1912,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>b960d3bf</spirit:value>
+            <spirit:value>852b8966</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1928,7 +1928,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>c2ec5e79</spirit:value>
+            <spirit:value>8c25c02a</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1944,7 +1944,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>5166a15b</spirit:value>
+            <spirit:value>6460a52a</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -4356,11 +4356,11 @@
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/userdma_fifo_w33_d32_A.v</spirit:name>
+        <spirit:name>hdl/verilog/userdma_fifo_w33_d64_A.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/userdma_fifo_w35_d32_A.v</spirit:name>
+        <spirit:name>hdl/verilog/userdma_fifo_w35_d64_A.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -4475,12 +4475,12 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/userdma_fifo_w33_d32_A.v</spirit:name>
+        <spirit:name>hdl/verilog/userdma_fifo_w33_d64_A.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/userdma_fifo_w35_d32_A.v</spirit:name>
+        <spirit:name>hdl/verilog/userdma_fifo_w35_d64_A.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -4619,11 +4619,11 @@
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/userdma_fifo_w33_d32_A.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/userdma_fifo_w33_d64_A.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/userdma_fifo_w35_d32_A.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/userdma_fifo_w35_d64_A.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -4693,7 +4693,7 @@
       <spirit:file>
         <spirit:name>hdl/vhdl/userdma.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_9f28a02c</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_a6dc315a</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -4719,12 +4719,12 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/userdma_fifo_w33_d32_A.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/userdma_fifo_w33_d64_A.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/userdma_fifo_w35_d32_A.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/userdma_fifo_w35_d64_A.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -5136,8 +5136,8 @@
       </xilinx:taxonomies>
       <xilinx:displayName>Userdma</xilinx:displayName>
       <xilinx:definitionSource>HLS</xilinx:definitionSource>
-      <xilinx:coreRevision>2113570217</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2024-05-23T17:17:42Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>2113570930</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2024-05-24T05:10:54Z</xilinx:coreCreationDateTime>
       <xilinx:sdxKernelAttributes>
         <xilinx:sdx_kernel>true</xilinx:sdx_kernel>
         <xilinx:sdx_kernel_type>hls</xilinx:sdx_kernel_type>
@@ -5145,10 +5145,10 @@
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2022.1</xilinx:xilinxVersion>
-      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="77fd465c"/>
+      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="0732fd2a"/>
       <xilinx:checksum xilinx:scope="addressSpaces" xilinx:value="9a83c657"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="a6933153"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="732a5eb1"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="1a5884c4"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="b230e62d"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="a745d826"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="9e704f4b"/>

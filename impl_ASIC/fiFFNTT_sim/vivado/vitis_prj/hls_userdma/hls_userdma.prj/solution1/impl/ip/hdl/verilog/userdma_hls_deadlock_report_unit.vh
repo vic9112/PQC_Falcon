@@ -359,7 +359,7 @@
                 2 : begin
                     case(index2)
                     1: begin
-                        if (~streamtoparallelwithburst_U0.grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_27_2_fu_115.inbuf_blk_n) begin
+                        if (~streamtoparallelwithburst_U0.grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_27_2_fu_117.inbuf_blk_n) begin
                             if (~inbuf_U.if_empty_n) begin
                                 $display("//      Blocked by empty input FIFO 'userdma_userdma.inbuf_U' written by process 'userdma_userdma.getinstream_U0'");
                                 $fdisplay(fp, "Dependence_Channel_path userdma_userdma.inbuf_U");

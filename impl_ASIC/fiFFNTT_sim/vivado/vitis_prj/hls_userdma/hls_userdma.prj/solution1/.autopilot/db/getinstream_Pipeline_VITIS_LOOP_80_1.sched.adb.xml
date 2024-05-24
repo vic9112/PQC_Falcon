@@ -349,7 +349,7 @@ do.body:10 %in_len_V_3 = add i32 %in_len_V_2, i32 1
 
 <Node id="32" bw="1" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-do.body:11 %icmp_ln97 = icmp_eq  i32 %count_5, i32 16
+do.body:11 %icmp_ln97 = icmp_eq  i32 %count_5, i32 32
 
 ]]></Node>
 <StgValue><ssdm name="icmp_ln97"/></StgValue>

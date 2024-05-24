@@ -26,10 +26,10 @@ set SynModuleInfo {
   {SRCNAME userdma MODELNAME userdma RTLNAME userdma IS_TOP 1
     SUBMODULES {
       {MODELNAME userdma_fifo_w64_d3_S RTLNAME userdma_fifo_w64_d3_S BINDTYPE storage TYPE fifo IMPL srl ALLOW_PRAGMA 1 INSTNAME {$InstName}}
-      {MODELNAME userdma_fifo_w33_d32_A RTLNAME userdma_fifo_w33_d32_A BINDTYPE storage TYPE fifo IMPL memory ALLOW_PRAGMA 1 INSTNAME {$InstName}}
+      {MODELNAME userdma_fifo_w33_d64_A RTLNAME userdma_fifo_w33_d64_A BINDTYPE storage TYPE fifo IMPL memory ALLOW_PRAGMA 1 INSTNAME {$InstName}}
       {MODELNAME userdma_fifo_w32_d2_S RTLNAME userdma_fifo_w32_d2_S BINDTYPE storage TYPE fifo IMPL srl ALLOW_PRAGMA 1 INSTNAME {$InstName}}
       {MODELNAME userdma_fifo_w2_d2_S RTLNAME userdma_fifo_w2_d2_S BINDTYPE storage TYPE fifo IMPL srl ALLOW_PRAGMA 1 INSTNAME {$InstName}}
-      {MODELNAME userdma_fifo_w35_d32_A RTLNAME userdma_fifo_w35_d32_A BINDTYPE storage TYPE fifo IMPL memory ALLOW_PRAGMA 1 INSTNAME {$InstName}}
+      {MODELNAME userdma_fifo_w35_d64_A RTLNAME userdma_fifo_w35_d64_A BINDTYPE storage TYPE fifo IMPL memory ALLOW_PRAGMA 1 INSTNAME {$InstName}}
       {MODELNAME userdma_start_for_streamtoparallelwithburst_U0 RTLNAME userdma_start_for_streamtoparallelwithburst_U0 BINDTYPE storage TYPE fifo IMPL srl ALLOW_PRAGMA 1 INSTNAME {$InstName}}
       {MODELNAME userdma_start_for_sendoutstream_U0 RTLNAME userdma_start_for_sendoutstream_U0 BINDTYPE storage TYPE fifo IMPL srl ALLOW_PRAGMA 1 INSTNAME {$InstName}}
       {MODELNAME userdma_gmem0_m_axi RTLNAME userdma_gmem0_m_axi BINDTYPE interface TYPE adapter IMPL m_axi}

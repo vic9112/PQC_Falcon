@@ -409,7 +409,7 @@ entry:10 %spectopmodule_ln184 = spectopmodule void @_ssdm_op_SpecTopModule, void
 
 <Node id="30" bw="0" op_0_bw="0" op_1_bw="64" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32">
 <![CDATA[
-entry:11 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %gmem0, void @empty_4, i32 0, i32 0, void @empty_3, i32 10, i32 1024, void @empty_2, void @empty_1, void @empty_3, i32 16, i32 16, i32 16, i32 16, void @empty_3, void @empty_3, i32 4294967295, i32 0
+entry:11 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %gmem0, void @empty_4, i32 0, i32 0, void @empty_3, i32 10, i32 1024, void @empty_2, void @empty_1, void @empty_3, i32 16, i32 16, i32 16, i32 32, void @empty_3, void @empty_3, i32 4294967295, i32 0
 
 ]]></Node>
 <StgValue><ssdm name="specinterface_ln0"/></StgValue>
@@ -439,7 +439,7 @@ entry:12 %specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i64 %gmem0
 
 <Node id="32" bw="0" op_0_bw="0" op_1_bw="64" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32">
 <![CDATA[
-entry:13 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %gmem1, void @empty_4, i32 0, i32 0, void @empty_3, i32 10, i32 1024, void @empty_0, void @empty_1, void @empty_3, i32 4, i32 16, i32 16, i32 16, void @empty_3, void @empty_3, i32 4294967295, i32 0
+entry:13 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %gmem1, void @empty_4, i32 0, i32 0, void @empty_3, i32 10, i32 1024, void @empty_0, void @empty_1, void @empty_3, i32 16, i32 16, i32 32, i32 16, void @empty_3, void @empty_3, i32 4294967295, i32 0
 
 ]]></Node>
 <StgValue><ssdm name="specinterface_ln0"/></StgValue>
@@ -904,7 +904,7 @@ entry:43 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 0,
 
 <Node id="64" bw="32" op_0_bw="32" op_1_bw="0" op_2_bw="32" op_3_bw="0" op_4_bw="0" op_5_bw="32" op_6_bw="32" op_7_bw="33" op_8_bw="33">
 <![CDATA[
-entry:45 %empty_39 = specchannel i32 @_ssdm_op_SpecChannel, void @inbuf_str, i32 1, void @p_str, void @p_str, i32 32, i32 32, i33 %inbuf, i33 %inbuf
+entry:45 %empty_39 = specchannel i32 @_ssdm_op_SpecChannel, void @inbuf_str, i32 1, void @p_str, void @p_str, i32 64, i32 64, i33 %inbuf, i33 %inbuf
 
 ]]></Node>
 <StgValue><ssdm name="empty_39"/></StgValue>
@@ -964,7 +964,7 @@ entry:49 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %i
 
 <Node id="70" bw="32" op_0_bw="32" op_1_bw="0" op_2_bw="32" op_3_bw="0" op_4_bw="0" op_5_bw="32" op_6_bw="32" op_7_bw="35" op_8_bw="35">
 <![CDATA[
-entry:51 %empty_41 = specchannel i32 @_ssdm_op_SpecChannel, void @outbuf_str, i32 1, void @p_str, void @p_str, i32 32, i32 32, i35 %outbuf, i35 %outbuf
+entry:51 %empty_41 = specchannel i32 @_ssdm_op_SpecChannel, void @outbuf_str, i32 1, void @p_str, void @p_str, i32 64, i32 64, i35 %outbuf, i35 %outbuf
 
 ]]></Node>
 <StgValue><ssdm name="empty_41"/></StgValue>

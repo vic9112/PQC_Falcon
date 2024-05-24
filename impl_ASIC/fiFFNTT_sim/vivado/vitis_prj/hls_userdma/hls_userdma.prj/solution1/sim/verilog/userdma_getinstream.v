@@ -65,8 +65,8 @@ input  [1:0] kernel_mode;
 output  [1:0] s2m_err;
 output   s2m_err_ap_vld;
 output  [32:0] inbuf_din;
-input  [5:0] inbuf_num_data_valid;
-input  [5:0] inbuf_fifo_cap;
+input  [6:0] inbuf_num_data_valid;
+input  [6:0] inbuf_fifo_cap;
 input   inbuf_full_n;
 output   inbuf_write;
 output  [31:0] incount25_din;
@@ -159,8 +159,8 @@ userdma_getinstream_Pipeline_VITIS_LOOP_80_1 grp_getinstream_Pipeline_VITIS_LOOP
     .ap_ready(grp_getinstream_Pipeline_VITIS_LOOP_80_1_fu_93_ap_ready),
     .inStreamTop_TVALID(inStreamTop_TVALID_int_regslice),
     .inbuf_din(grp_getinstream_Pipeline_VITIS_LOOP_80_1_fu_93_inbuf_din),
-    .inbuf_num_data_valid(6'd0),
-    .inbuf_fifo_cap(6'd0),
+    .inbuf_num_data_valid(7'd0),
+    .inbuf_fifo_cap(7'd0),
     .inbuf_full_n(inbuf_full_n),
     .inbuf_write(grp_getinstream_Pipeline_VITIS_LOOP_80_1_fu_93_inbuf_write),
     .incount25_din(grp_getinstream_Pipeline_VITIS_LOOP_80_1_fu_93_incount25_din),

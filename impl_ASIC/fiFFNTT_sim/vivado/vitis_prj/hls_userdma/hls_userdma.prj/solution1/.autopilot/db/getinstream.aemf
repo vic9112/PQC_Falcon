@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1716483912158">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1716527262141">
   <ports id="1" name="inStreamTop_V_data_V" type="PortType" coreId="0" bitwidth="32">
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
-  <ports id="2" name="inStreamTop_V_keep_V" type="PortType" coreId="116005472" bitwidth="4">
+  <ports id="2" name="inStreamTop_V_keep_V" type="PortType" coreId="542329928" bitwidth="4">
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
-  <ports id="3" name="inStreamTop_V_strb_V" type="PortType" coreId="115979872" bitwidth="4">
+  <ports id="3" name="inStreamTop_V_strb_V" type="PortType" coreId="3538670736" bitwidth="4">
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
-  <ports id="4" name="inStreamTop_V_user_V" type="PortType" coreId="116442176" bitwidth="2">
+  <ports id="4" name="inStreamTop_V_user_V" type="PortType" coreId="3634119296" bitwidth="2">
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
-  <ports id="5" name="inStreamTop_V_last_V" type="PortType" coreId="116206496" bitwidth="1">
+  <ports id="5" name="inStreamTop_V_last_V" type="PortType" coreId="3538490208" bitwidth="1">
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
-  <ports id="6" name="kernel_mode" type="PortType" coreId="116368720" bitwidth="2">
+  <ports id="6" name="kernel_mode" type="PortType" coreId="3538882064" bitwidth="2">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="7" name="s2m_err" type="PortType" coreId="116216448" bitwidth="2" direction="DirOut">
+  <ports id="7" name="s2m_err" type="PortType" coreId="3538424144" bitwidth="2" direction="DirOut">
     <dataInputObjs>write</dataInputObjs>
   </ports>
-  <ports id="8" name="inbuf" type="PortType" coreId="116445512" bitwidth="33" direction="DirOut" iftype="IfTypeRom">
+  <ports id="8" name="inbuf" type="PortType" coreId="3538488208" bitwidth="33" direction="DirOut" iftype="IfTypeRom">
     <dataInputObjs>call</dataInputObjs>
   </ports>
-  <ports id="9" name="incount25" type="PortType" coreId="115972048" bitwidth="32" direction="DirOut" iftype="IfTypeRom">
+  <ports id="9" name="incount25" type="PortType" coreId="3538421840" bitwidth="32" direction="DirOut" iftype="IfTypeRom">
     <dataInputObjs>call</dataInputObjs>
   </ports>
-  <ports id="10" name="kernel_mode_c" type="PortType" coreName="FIFO_SRL" coreId="116336400" bitwidth="2" direction="DirOut" iftype="IfTypeRom">
+  <ports id="10" name="kernel_mode_c" type="PortType" coreName="FIFO_SRL" coreId="3538667536" bitwidth="2" direction="DirOut" iftype="IfTypeRom">
     <dataInputObjs>write</dataInputObjs>
   </ports>
   <edges id="29" source_obj="//@ports.5" sink_obj="//@blocks.0/@node_objs.0"/>
@@ -54,12 +54,12 @@
   <edges id="164" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.5" sink_obj="//@blocks.0/@node_objs.9"/>
   <edges id="165" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.6" sink_obj="//@blocks.0/@node_objs.7"/>
   <blocks id="26" name="getinstream" type="BlockType">
-    <node_objs xsi:type="cdfg:CdfgNode" id="11" name="kernel_mode_read" coreId="116427520" bitwidth="2" opcode="read" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="11" name="kernel_mode_read" coreId="3538976752" bitwidth="2" opcode="read" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
       <dataInputObjs>kernel_mode</dataInputObjs>
       <dataOutputObjs>write</dataOutputObjs>
       <dataOutputObjs>bitselect</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="12" name="tmp_last_V_loc" coreId="116425696" bitwidth="1" opcode="alloca" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="12" name="tmp_last_V_loc" coreId="3538963088" bitwidth="1" opcode="alloca" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
       <dataOutputObjs>call</dataOutputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <constName>empty</constName>
@@ -68,7 +68,7 @@
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>kernel_mode_c</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="18" name="tmp" lineNumber="77" fileName="userdma.cpp" fileDirectory=".." rtlName="tmp_reg_147" coreId="115972048" contextFuncName="getinstream" bitwidth="1" opcode="bitselect" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="18" name="tmp" lineNumber="77" fileName="userdma.cpp" fileDirectory=".." rtlName="tmp_reg_147" coreId="3539069456" contextFuncName="getinstream" bitwidth="1" opcode="bitselect" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="userdma.cpp" linenumber="77" fileDirectory="/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma" functionName="getinstream"/>
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>select</dataOutputObjs>
@@ -80,8 +80,8 @@
       <dataOutputObjs>call</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="20" name="empty" coreId="116307104" bitwidth="32" opcode="wait" nodeLabel="1.0" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1"/>
-    <node_objs xsi:type="cdfg:CdfgNode" id="21" name="_ln80" lineNumber="80" fileName="userdma.cpp" fileDirectory=".." rtlName="grp_getinstream_Pipeline_VITIS_LOOP_80_1_fu_93" coreId="2847887632" contextFuncName="getinstream" opcode="call" nodeLabel="1.0" nodeLatency="1" m_display="0" m_delay="3.6" m_topoIndex="7" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="20" name="empty" coreId="3538668144" bitwidth="32" opcode="wait" nodeLabel="1.0" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="21" name="_ln80" lineNumber="80" fileName="userdma.cpp" fileDirectory=".." rtlName="grp_getinstream_Pipeline_VITIS_LOOP_80_1_fu_93" coreId="3538662240" contextFuncName="getinstream" opcode="call" nodeLabel="1.0" nodeLatency="1" m_display="0" m_delay="3.56" m_topoIndex="7" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="userdma.cpp" linenumber="80" fileDirectory="/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma" functionName="getinstream"/>
       <dataInputObjs>inStreamTop_V_data_V</dataInputObjs>
       <dataInputObjs>inStreamTop_V_keep_V</dataInputObjs>
@@ -94,7 +94,7 @@
       <dataOutputObjs>incount25</dataOutputObjs>
       <constName>getinstream_Pipeline_VITIS_LOOP_80_1</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="22" name="tmp_last_V_loc_load" coreId="116368720" bitwidth="1" opcode="load" nodeLabel="3.0" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="22" name="tmp_last_V_loc_load" coreId="3538810832" bitwidth="1" opcode="load" nodeLabel="3.0" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>select</dataOutputObjs>
     </node_objs>
@@ -104,12 +104,12 @@
       <dataOutputObjs>write</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="24" name="s2m_err_write_ln86" lineNumber="86" fileName="userdma.cpp" fileDirectory=".." coreId="115985888" contextFuncName="getinstream" opcode="write" nodeLabel="3.0" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="24" name="s2m_err_write_ln86" lineNumber="86" fileName="userdma.cpp" fileDirectory=".." coreId="3538522048" contextFuncName="getinstream" opcode="write" nodeLabel="3.0" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="userdma.cpp" linenumber="86" fileDirectory="/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma" functionName="getinstream"/>
       <dataInputObjs>select</dataInputObjs>
       <dataOutputObjs>s2m_err</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="25" name="_ln103" lineNumber="103" fileName="userdma.cpp" fileDirectory=".." coreId="115968752" contextFuncName="getinstream" opcode="ret" nodeLabel="3.0" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="25" name="_ln103" lineNumber="103" fileName="userdma.cpp" fileDirectory=".." coreId="3538879664" contextFuncName="getinstream" opcode="ret" nodeLabel="3.0" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="userdma.cpp" linenumber="103" fileDirectory="/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma" functionName="getinstream"/>
     </node_objs>
     <fileValidLineNumbers fileName="userdma.cpp">

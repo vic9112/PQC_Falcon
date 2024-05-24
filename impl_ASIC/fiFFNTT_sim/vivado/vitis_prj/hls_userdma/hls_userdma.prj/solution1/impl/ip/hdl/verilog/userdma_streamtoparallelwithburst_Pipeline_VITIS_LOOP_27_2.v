@@ -81,8 +81,8 @@ output   ap_done;
 output   ap_idle;
 output   ap_ready;
 input  [32:0] inbuf_dout;
-input  [5:0] inbuf_num_data_valid;
-input  [5:0] inbuf_fifo_cap;
+input  [6:0] inbuf_num_data_valid;
+input  [6:0] inbuf_fifo_cap;
 input   inbuf_empty_n;
 output   inbuf_read;
 output   m_axi_gmem0_AWVALID;
@@ -188,7 +188,7 @@ wire    ap_block_state16_pp0_stage0_iter15;
 wire    ap_block_state17_pp0_stage0_iter16;
 reg    ap_block_state18_pp0_stage0_iter17;
 reg    ap_block_pp0_stage0_subdone;
-wire   [0:0] icmp_ln27_fu_159_p2;
+wire   [0:0] icmp_ln27_fu_161_p2;
 reg    ap_condition_exit_pp0_iter0_stage0;
 wire    ap_loop_exit_ready;
 reg    ap_ready_int;
@@ -198,28 +198,28 @@ reg    gmem0_blk_n_W;
 reg    gmem0_blk_n_B;
 reg    inbuf_blk_n;
 reg    ap_block_pp0_stage0_11001;
-wire   [63:0] zext_ln27_cast_fu_147_p1;
-reg   [63:0] zext_ln27_cast_reg_271;
-reg   [31:0] i_1_reg_276;
-wire   [31:0] in_val_data_filed_V_fu_176_p1;
-reg   [31:0] in_val_data_filed_V_reg_285;
-reg   [60:0] trunc_ln2_reg_290;
-reg   [60:0] trunc_ln1_reg_295;
-wire   [63:0] zext_ln32_fu_222_p1;
-reg   [63:0] zext_ln32_reg_300;
-wire   [63:0] shl_ln32_1_fu_225_p2;
-reg   [63:0] shl_ln32_1_reg_305;
-wire  signed [63:0] sext_ln32_fu_230_p1;
-wire  signed [63:0] sext_ln34_fu_240_p1;
+wire   [63:0] zext_ln27_cast_fu_149_p1;
+reg   [63:0] zext_ln27_cast_reg_273;
+reg   [31:0] i_1_reg_278;
+wire   [31:0] in_val_data_filed_V_fu_178_p1;
+reg   [31:0] in_val_data_filed_V_reg_287;
+reg   [60:0] trunc_ln2_reg_292;
+reg   [60:0] trunc_ln1_reg_297;
+wire   [63:0] zext_ln32_fu_224_p1;
+reg   [63:0] zext_ln32_reg_302;
+wire   [63:0] shl_ln32_1_fu_227_p2;
+reg   [63:0] shl_ln32_1_reg_307;
+wire  signed [63:0] sext_ln32_fu_232_p1;
+wire  signed [63:0] sext_ln34_fu_242_p1;
 reg    ap_block_pp0_stage0_01001;
-reg   [31:0] i_fu_76;
-wire   [31:0] add_ln27_fu_165_p2;
+reg   [31:0] i_fu_78;
+wire   [31:0] add_ln27_fu_167_p2;
 wire    ap_loop_init;
 reg   [31:0] ap_sig_allocacmp_i_1;
-wire   [34:0] shl_ln1_fu_180_p3;
-wire   [63:0] zext_ln34_fu_187_p1;
-wire   [63:0] add_ln34_fu_191_p2;
-wire   [63:0] add_ln32_fu_196_p2;
+wire   [34:0] shl_ln1_fu_182_p3;
+wire   [63:0] zext_ln34_fu_189_p1;
+wire   [63:0] add_ln34_fu_193_p2;
+wire   [63:0] add_ln32_fu_198_p2;
 reg    ap_done_reg;
 wire    ap_continue_int;
 reg    ap_done_int;
@@ -476,10 +476,10 @@ end
 
 always @ (posedge ap_clk) begin
     if (((1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0_11001))) begin
-        if (((ap_enable_reg_pp0_iter0 == 1'b1) & (icmp_ln27_fu_159_p2 == 1'd0))) begin
-            i_fu_76 <= add_ln27_fu_165_p2;
+        if (((ap_enable_reg_pp0_iter0 == 1'b1) & (icmp_ln27_fu_161_p2 == 1'd0))) begin
+            i_fu_78 <= add_ln27_fu_167_p2;
         end else if ((ap_loop_init == 1'b1)) begin
-            i_fu_76 <= 32'd0;
+            i_fu_78 <= 32'd0;
         end
     end
 end
@@ -500,7 +500,7 @@ always @ (posedge ap_clk) begin
         ap_loop_exit_ready_pp0_iter7_reg <= ap_loop_exit_ready_pp0_iter6_reg;
         ap_loop_exit_ready_pp0_iter8_reg <= ap_loop_exit_ready_pp0_iter7_reg;
         ap_loop_exit_ready_pp0_iter9_reg <= ap_loop_exit_ready_pp0_iter8_reg;
-        zext_ln32_reg_300[31 : 0] <= zext_ln32_fu_222_p1[31 : 0];
+        zext_ln32_reg_302[31 : 0] <= zext_ln32_fu_224_p1[31 : 0];
     end
 end
 
@@ -508,32 +508,32 @@ always @ (posedge ap_clk) begin
     if (((1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0_11001))) begin
         ap_loop_exit_ready_pp0_iter1_reg <= ap_loop_exit_ready;
         ap_loop_exit_ready_pp0_iter2_reg <= ap_loop_exit_ready_pp0_iter1_reg;
-        i_1_reg_276 <= ap_sig_allocacmp_i_1;
-        in_val_data_filed_V_reg_285 <= in_val_data_filed_V_fu_176_p1;
-        zext_ln27_cast_reg_271[5 : 0] <= zext_ln27_cast_fu_147_p1[5 : 0];
+        i_1_reg_278 <= ap_sig_allocacmp_i_1;
+        in_val_data_filed_V_reg_287 <= in_val_data_filed_V_fu_178_p1;
+        zext_ln27_cast_reg_273[5 : 0] <= zext_ln27_cast_fu_149_p1[5 : 0];
     end
 end
 
 always @ (posedge ap_clk) begin
     if (((1'b0 == ap_block_pp0_stage0_11001) & (brmerge == 1'd0))) begin
-        shl_ln32_1_reg_305 <= shl_ln32_1_fu_225_p2;
+        shl_ln32_1_reg_307 <= shl_ln32_1_fu_227_p2;
     end
 end
 
 always @ (posedge ap_clk) begin
     if (((1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0_11001) & (brmerge == 1'd1))) begin
-        trunc_ln1_reg_295 <= {{add_ln34_fu_191_p2[63:3]}};
+        trunc_ln1_reg_297 <= {{add_ln34_fu_193_p2[63:3]}};
     end
 end
 
 always @ (posedge ap_clk) begin
     if (((1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0_11001) & (brmerge == 1'd0))) begin
-        trunc_ln2_reg_290 <= {{add_ln32_fu_196_p2[63:3]}};
+        trunc_ln2_reg_292 <= {{add_ln32_fu_198_p2[63:3]}};
     end
 end
 
 always @ (*) begin
-    if (((ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (icmp_ln27_fu_159_p2 == 1'd1) & (1'b0 == ap_block_pp0_stage0_subdone))) begin
+    if (((ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (icmp_ln27_fu_161_p2 == 1'd1) & (1'b0 == ap_block_pp0_stage0_subdone))) begin
         ap_condition_exit_pp0_iter0_stage0 = 1'b1;
     end else begin
         ap_condition_exit_pp0_iter0_stage0 = 1'b0;
@@ -576,7 +576,7 @@ always @ (*) begin
     if (((ap_loop_init == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0))) begin
         ap_sig_allocacmp_i_1 = 32'd0;
     end else begin
-        ap_sig_allocacmp_i_1 = i_fu_76;
+        ap_sig_allocacmp_i_1 = i_fu_78;
     end
 end
 
@@ -623,9 +623,9 @@ end
 always @ (*) begin
     if (((ap_enable_reg_pp0_iter2 == 1'b1) & (1'b0 == ap_block_pp0_stage0_11001))) begin
         if ((brmerge == 1'd1)) begin
-            m_axi_gmem0_AWADDR = sext_ln34_fu_240_p1;
+            m_axi_gmem0_AWADDR = sext_ln34_fu_242_p1;
         end else if ((brmerge == 1'd0)) begin
-            m_axi_gmem0_AWADDR = sext_ln32_fu_230_p1;
+            m_axi_gmem0_AWADDR = sext_ln32_fu_232_p1;
         end else begin
             m_axi_gmem0_AWADDR = 'bx;
         end
@@ -653,9 +653,9 @@ end
 always @ (*) begin
     if (((ap_enable_reg_pp0_iter3 == 1'b1) & (1'b0 == ap_block_pp0_stage0_01001))) begin
         if ((brmerge == 1'd1)) begin
-            m_axi_gmem0_WDATA = zext_ln32_reg_300;
+            m_axi_gmem0_WDATA = zext_ln32_reg_302;
         end else if ((brmerge == 1'd0)) begin
-            m_axi_gmem0_WDATA = shl_ln32_1_reg_305;
+            m_axi_gmem0_WDATA = shl_ln32_1_reg_307;
         end else begin
             m_axi_gmem0_WDATA = 'bx;
         end
@@ -697,11 +697,11 @@ always @ (*) begin
     endcase
 end
 
-assign add_ln27_fu_165_p2 = (ap_sig_allocacmp_i_1 + 32'd1);
+assign add_ln27_fu_167_p2 = (ap_sig_allocacmp_i_1 + 32'd1);
 
-assign add_ln32_fu_196_p2 = (add_ln34_fu_191_p2 + 64'd4);
+assign add_ln32_fu_198_p2 = (add_ln34_fu_193_p2 + 64'd4);
 
-assign add_ln34_fu_191_p2 = (out_memory_assign + zext_ln34_fu_187_p1);
+assign add_ln34_fu_193_p2 = (out_memory_assign + zext_ln34_fu_189_p1);
 
 assign ap_CS_fsm_pp0_stage0 = ap_CS_fsm[32'd0];
 
@@ -773,9 +773,9 @@ assign ap_enable_reg_pp0_iter0 = ap_start_int;
 
 assign ap_loop_exit_ready = ap_condition_exit_pp0_iter0_stage0;
 
-assign icmp_ln27_fu_159_p2 = ((ap_sig_allocacmp_i_1 == tmp) ? 1'b1 : 1'b0);
+assign icmp_ln27_fu_161_p2 = ((ap_sig_allocacmp_i_1 == tmp) ? 1'b1 : 1'b0);
 
-assign in_val_data_filed_V_fu_176_p1 = inbuf_dout[31:0];
+assign in_val_data_filed_V_fu_178_p1 = inbuf_dout[31:0];
 
 assign m_axi_gmem0_ARADDR = 64'd0;
 
@@ -829,23 +829,23 @@ assign m_axi_gmem0_WLAST = 1'b0;
 
 assign m_axi_gmem0_WUSER = 1'd0;
 
-assign sext_ln32_fu_230_p1 = $signed(trunc_ln2_reg_290);
+assign sext_ln32_fu_232_p1 = $signed(trunc_ln2_reg_292);
 
-assign sext_ln34_fu_240_p1 = $signed(trunc_ln1_reg_295);
+assign sext_ln34_fu_242_p1 = $signed(trunc_ln1_reg_297);
 
-assign shl_ln1_fu_180_p3 = {{i_1_reg_276}, {3'd0}};
+assign shl_ln1_fu_182_p3 = {{i_1_reg_278}, {3'd0}};
 
-assign shl_ln32_1_fu_225_p2 = zext_ln32_fu_222_p1 << zext_ln27_cast_reg_271;
+assign shl_ln32_1_fu_227_p2 = zext_ln32_fu_224_p1 << zext_ln27_cast_reg_273;
 
-assign zext_ln27_cast_fu_147_p1 = zext_ln27;
+assign zext_ln27_cast_fu_149_p1 = zext_ln27;
 
-assign zext_ln32_fu_222_p1 = in_val_data_filed_V_reg_285;
+assign zext_ln32_fu_224_p1 = in_val_data_filed_V_reg_287;
 
-assign zext_ln34_fu_187_p1 = shl_ln1_fu_180_p3;
+assign zext_ln34_fu_189_p1 = shl_ln1_fu_182_p3;
 
 always @ (posedge ap_clk) begin
-    zext_ln27_cast_reg_271[63:6] <= 58'b0000000000000000000000000000000000000000000000000000000000;
-    zext_ln32_reg_300[63:32] <= 32'b00000000000000000000000000000000;
+    zext_ln27_cast_reg_273[63:6] <= 58'b0000000000000000000000000000000000000000000000000000000000;
+    zext_ln32_reg_302[63:32] <= 32'b00000000000000000000000000000000;
 end
 
 endmodule //userdma_streamtoparallelwithburst_Pipeline_VITIS_LOOP_27_2

@@ -19,8 +19,8 @@ port (
     ap_idle : OUT STD_LOGIC;
     ap_ready : OUT STD_LOGIC;
     outbuf_dout : IN STD_LOGIC_VECTOR (34 downto 0);
-    outbuf_num_data_valid : IN STD_LOGIC_VECTOR (5 downto 0);
-    outbuf_fifo_cap : IN STD_LOGIC_VECTOR (5 downto 0);
+    outbuf_num_data_valid : IN STD_LOGIC_VECTOR (6 downto 0);
+    outbuf_fifo_cap : IN STD_LOGIC_VECTOR (6 downto 0);
     outbuf_empty_n : IN STD_LOGIC;
     outbuf_read : OUT STD_LOGIC;
     outStreamTop_TREADY : IN STD_LOGIC;

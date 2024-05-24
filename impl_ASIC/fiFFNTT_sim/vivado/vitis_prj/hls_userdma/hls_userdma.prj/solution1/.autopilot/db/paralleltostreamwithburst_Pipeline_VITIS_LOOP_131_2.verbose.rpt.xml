@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'paralleltostreamwithburst_Pipeline_VITIS_LOOP_131_2'" level="0">
-<item name = "Date">Thu May 23 13:05:12 2024
+<item name = "Date">Fri May 24 01:07:42 2024
 </item>
 <item name = "Version">2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)</item>
 <item name = "Project">hls_userdma.prj</item>
@@ -48,12 +48,12 @@
 <item name = "Summary"><table name="" hasTotal="1">
 <keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
 <column name="DSP">-, -, -, -, -</column>
-<column name="Expression">-, -, 0, 488, -</column>
+<column name="Expression">-, -, 0, 489, -</column>
 <column name="FIFO">-, -, -, -, -</column>
 <column name="Instance">-, -, -, -, -</column>
 <column name="Memory">-, -, -, -, -</column>
 <column name="Multiplexer">-, -, -, 100, -</column>
-<column name="Register">-, -, 1885, 128, -</column>
+<column name="Register">-, -, 1886, 128, -</column>
 <specialColumn name="Available">280, 220, 106400, 53200, 0</specialColumn>
 <specialColumn name="Utilization (%)">0, 0, 1, 1, 0</specialColumn>
 </table>
@@ -78,7 +78,7 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="add_ln131_fu_210_p2">+, 0, 0, 13, 5, 1</column>
+<column name="add_ln131_fu_210_p2">+, 0, 0, 14, 6, 1</column>
 <column name="add_ln135_1_fu_261_p2">+, 0, 0, 71, 64, 3</column>
 <column name="add_ln135_fu_246_p2">+, 0, 0, 71, 64, 64</column>
 <column name="final_m2s_len_1_fu_302_p2">+, 0, 0, 39, 32, 2</column>
@@ -91,7 +91,7 @@
 <column name="icmp_ln131_fu_205_p2">icmp, 0, 0, 18, 32, 32</column>
 <column name="icmp_ln134_fu_219_p2">icmp, 0, 0, 18, 32, 11</column>
 <column name="icmp_ln140_1_fu_286_p2">icmp, 0, 0, 18, 32, 32</column>
-<column name="icmp_ln140_fu_280_p2">icmp, 0, 0, 18, 32, 5</column>
+<column name="icmp_ln140_fu_280_p2">icmp, 0, 0, 18, 32, 6</column>
 <column name="icmp_ln145_fu_297_p2">icmp, 0, 0, 18, 32, 32</column>
 <column name="lshr_ln135_fu_338_p2">lshr, 0, 0, 182, 64, 64</column>
 <column name="ap_block_pp0_stage0_01001">or, 0, 0, 2, 1, 1</column>
@@ -110,7 +110,7 @@
 <column name="final_m2s_len_fu_90">9, 2, 32, 64</column>
 <column name="gmem1_blk_n_AR">9, 2, 1, 2</column>
 <column name="gmem1_blk_n_R">9, 2, 1, 2</column>
-<column name="i_fu_94">9, 2, 5, 10</column>
+<column name="i_fu_94">9, 2, 6, 12</column>
 <column name="m_axi_gmem1_ARADDR">14, 3, 64, 192</column>
 <column name="outbuf_blk_n">9, 2, 1, 2</column>
 </table>
@@ -181,7 +181,7 @@
 <column name="final_m2s_len_fu_90">32, 0, 32, 0</column>
 <column name="gmem1_addr_1_read_reg_442">64, 0, 64, 0</column>
 <column name="gmem1_addr_read_reg_447">64, 0, 64, 0</column>
-<column name="i_fu_94">5, 0, 5, 0</column>
+<column name="i_fu_94">6, 0, 6, 0</column>
 <column name="icmp_ln131_reg_402">1, 0, 1, 0</column>
 <column name="icmp_ln145_reg_425">1, 0, 1, 0</column>
 <column name="out_val_last_V_reg_420">1, 0, 1, 0</column>
@@ -246,7 +246,7 @@
 <column name="m_axi_gmem1_RDATA">in, 64, m_axi, gmem1, pointer</column>
 <column name="m_axi_gmem1_RLAST">in, 1, m_axi, gmem1, pointer</column>
 <column name="m_axi_gmem1_RID">in, 1, m_axi, gmem1, pointer</column>
-<column name="m_axi_gmem1_RFIFONUM">in, 7, m_axi, gmem1, pointer</column>
+<column name="m_axi_gmem1_RFIFONUM">in, 10, m_axi, gmem1, pointer</column>
 <column name="m_axi_gmem1_RUSER">in, 1, m_axi, gmem1, pointer</column>
 <column name="m_axi_gmem1_RRESP">in, 2, m_axi, gmem1, pointer</column>
 <column name="m_axi_gmem1_BVALID">in, 1, m_axi, gmem1, pointer</column>
@@ -255,8 +255,8 @@
 <column name="m_axi_gmem1_BID">in, 1, m_axi, gmem1, pointer</column>
 <column name="m_axi_gmem1_BUSER">in, 1, m_axi, gmem1, pointer</column>
 <column name="outbuf_din">out, 35, ap_fifo, outbuf, pointer</column>
-<column name="outbuf_num_data_valid">in, 6, ap_fifo, outbuf, pointer</column>
-<column name="outbuf_fifo_cap">in, 6, ap_fifo, outbuf, pointer</column>
+<column name="outbuf_num_data_valid">in, 7, ap_fifo, outbuf, pointer</column>
+<column name="outbuf_fifo_cap">in, 7, ap_fifo, outbuf, pointer</column>
 <column name="outbuf_full_n">in, 1, ap_fifo, outbuf, pointer</column>
 <column name="outbuf_write">out, 1, ap_fifo, outbuf, pointer</column>
 <column name="final_m2s_len_4">in, 32, ap_none, final_m2s_len_4, scalar</column>

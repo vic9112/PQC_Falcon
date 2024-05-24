@@ -46,8 +46,8 @@ output   ap_idle;
 output   ap_ready;
 input   inStreamTop_TVALID;
 output  [32:0] inbuf_din;
-input  [5:0] inbuf_num_data_valid;
-input  [5:0] inbuf_fifo_cap;
+input  [6:0] inbuf_num_data_valid;
+input  [6:0] inbuf_fifo_cap;
 input   inbuf_full_n;
 output   inbuf_write;
 output  [31:0] incount25_din;
@@ -377,7 +377,7 @@ assign count_5_fu_140_p2 = (ap_sig_allocacmp_count_4 + 32'd1);
 
 assign icmp_ln1073_fu_164_p2 = ((in_len_V_3_fu_146_p2 < select_ln80_cast_reg_198) ? 1'b1 : 1'b0);
 
-assign icmp_ln97_fu_152_p2 = ((count_5_fu_140_p2 == 32'd16) ? 1'b1 : 1'b0);
+assign icmp_ln97_fu_152_p2 = ((count_5_fu_140_p2 == 32'd32) ? 1'b1 : 1'b0);
 
 assign in_len_V_3_fu_146_p2 = (in_len_V_fu_58 + 32'd1);
 

@@ -56,8 +56,8 @@ set portList {
 	{ s2m_err sc_out sc_lv 2 signal 6 } 
 	{ s2m_err_ap_vld sc_out sc_logic 1 outvld 6 } 
 	{ inbuf_din sc_out sc_lv 33 signal 7 } 
-	{ inbuf_num_data_valid sc_in sc_lv 6 signal 7 } 
-	{ inbuf_fifo_cap sc_in sc_lv 6 signal 7 } 
+	{ inbuf_num_data_valid sc_in sc_lv 7 signal 7 } 
+	{ inbuf_fifo_cap sc_in sc_lv 7 signal 7 } 
 	{ inbuf_full_n sc_in sc_logic 1 signal 7 } 
 	{ inbuf_write sc_out sc_logic 1 signal 7 } 
 	{ incount25_din sc_out sc_lv 32 signal 8 } 
@@ -90,8 +90,8 @@ set NewPortList {[
  	{ "name": "s2m_err", "direction": "out", "datatype": "sc_lv", "bitwidth":2, "type": "signal", "bundle":{"name": "s2m_err", "role": "default" }} , 
  	{ "name": "s2m_err_ap_vld", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "s2m_err", "role": "ap_vld" }} , 
  	{ "name": "inbuf_din", "direction": "out", "datatype": "sc_lv", "bitwidth":33, "type": "signal", "bundle":{"name": "inbuf", "role": "din" }} , 
- 	{ "name": "inbuf_num_data_valid", "direction": "in", "datatype": "sc_lv", "bitwidth":6, "type": "signal", "bundle":{"name": "inbuf", "role": "num_data_valid" }} , 
- 	{ "name": "inbuf_fifo_cap", "direction": "in", "datatype": "sc_lv", "bitwidth":6, "type": "signal", "bundle":{"name": "inbuf", "role": "fifo_cap" }} , 
+ 	{ "name": "inbuf_num_data_valid", "direction": "in", "datatype": "sc_lv", "bitwidth":7, "type": "signal", "bundle":{"name": "inbuf", "role": "num_data_valid" }} , 
+ 	{ "name": "inbuf_fifo_cap", "direction": "in", "datatype": "sc_lv", "bitwidth":7, "type": "signal", "bundle":{"name": "inbuf", "role": "fifo_cap" }} , 
  	{ "name": "inbuf_full_n", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "inbuf", "role": "full_n" }} , 
  	{ "name": "inbuf_write", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "inbuf", "role": "write" }} , 
  	{ "name": "incount25_din", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "incount25", "role": "din" }} , 
@@ -138,7 +138,7 @@ set RtlHierarchyInfo {[
 					{"ID" : "1", "SubInstance" : "grp_getinstream_Pipeline_VITIS_LOOP_80_1_fu_93", "Port" : "inStreamTop_V_last_V", "Inst_start_state" : "2", "Inst_end_state" : "3"}]},
 			{"Name" : "kernel_mode", "Type" : "None", "Direction" : "I"},
 			{"Name" : "s2m_err", "Type" : "Vld", "Direction" : "O"},
-			{"Name" : "inbuf", "Type" : "Fifo", "Direction" : "O", "DependentProc" : ["0"], "DependentChan" : "0", "DependentChanDepth" : "32", "DependentChanType" : "0",
+			{"Name" : "inbuf", "Type" : "Fifo", "Direction" : "O", "DependentProc" : ["0"], "DependentChan" : "0", "DependentChanDepth" : "64", "DependentChanType" : "0",
 				"SubConnect" : [
 					{"ID" : "1", "SubInstance" : "grp_getinstream_Pipeline_VITIS_LOOP_80_1_fu_93", "Port" : "inbuf", "Inst_start_state" : "2", "Inst_end_state" : "3"}]},
 			{"Name" : "incount25", "Type" : "Fifo", "Direction" : "O", "DependentProc" : ["0"], "DependentChan" : "0", "DependentChanDepth" : "2", "DependentChanType" : "0",
@@ -229,7 +229,7 @@ set Spec2ImplPortList {
 	inStreamTop_V_last_V { axis {  { inStreamTop_TVALID in_vld 0 1 }  { inStreamTop_TREADY in_acc 1 1 }  { inStreamTop_TLAST in_data 0 1 } } }
 	kernel_mode { ap_none {  { kernel_mode in_data 0 2 } } }
 	s2m_err { ap_vld {  { s2m_err out_data 1 2 }  { s2m_err_ap_vld out_vld 1 1 } } }
-	inbuf { ap_fifo {  { inbuf_din fifo_port_we 1 33 }  { inbuf_num_data_valid fifo_status_num_data_valid 0 6 }  { inbuf_fifo_cap fifo_update 0 6 }  { inbuf_full_n fifo_status 0 1 }  { inbuf_write fifo_data 1 1 } } }
+	inbuf { ap_fifo {  { inbuf_din fifo_port_we 1 33 }  { inbuf_num_data_valid fifo_status_num_data_valid 0 7 }  { inbuf_fifo_cap fifo_update 0 7 }  { inbuf_full_n fifo_status 0 1 }  { inbuf_write fifo_data 1 1 } } }
 	incount25 { ap_fifo {  { incount25_din fifo_port_we 1 32 }  { incount25_num_data_valid fifo_status_num_data_valid 0 2 }  { incount25_fifo_cap fifo_update 0 2 }  { incount25_full_n fifo_status 0 1 }  { incount25_write fifo_data 1 1 } } }
 	kernel_mode_c { ap_fifo {  { kernel_mode_c_din fifo_port_we 1 2 }  { kernel_mode_c_num_data_valid fifo_status_num_data_valid 0 2 }  { kernel_mode_c_fifo_cap fifo_update 0 2 }  { kernel_mode_c_full_n fifo_status 0 1 }  { kernel_mode_c_write fifo_data 1 1 } } }
 }

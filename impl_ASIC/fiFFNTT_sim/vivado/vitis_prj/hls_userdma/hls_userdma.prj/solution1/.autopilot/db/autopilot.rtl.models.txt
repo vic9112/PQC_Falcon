@@ -14,10 +14,10 @@ userdma_regslice_both
 userdma_regslice_both
 userdma_flow_control_loop_pipe
 userdma_fifo_w64_d3_S
-userdma_fifo_w33_d32_A
+userdma_fifo_w33_d64_A
 userdma_fifo_w32_d2_S
 userdma_fifo_w2_d2_S
-userdma_fifo_w35_d32_A
+userdma_fifo_w35_d64_A
 userdma_start_for_streamtoparallelwithburst_U0
 userdma_start_for_sendoutstream_U0
 userdma_gmem0_m_axi

@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'userdma'
 ================================================================
-* Date:           Thu May 23 13:05:11 2024
+* Date:           Fri May 24 01:07:41 2024
 
 * Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
 * Project:        hls_userdma.prj
@@ -92,17 +92,17 @@ IsGatedGlobalClock: 0
 State 1 <SV = 0> <Delay = 0.00>
 ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%s2mbuf_c = alloca i64 1" [userdma.cpp:205]   --->   Operation 7 'alloca' 's2mbuf_c' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 3> <FIFO>
 ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%kernel_mode_c = alloca i64 1" [userdma.cpp:205]   --->   Operation 8 'alloca' 'kernel_mode_c' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 2> <Depth = 2> <FIFO>
-ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%inbuf = alloca i64 1"   --->   Operation 9 'alloca' 'inbuf' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 3.60> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 33> <Depth = 32> <FIFO>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%inbuf = alloca i64 1"   --->   Operation 9 'alloca' 'inbuf' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 3.56> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 33> <Depth = 64> <FIFO>
 ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%incount = alloca i64 1" [userdma.cpp:208]   --->   Operation 10 'alloca' 'incount' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
-ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%outbuf = alloca i64 1"   --->   Operation 11 'alloca' 'outbuf' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 3.60> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 35> <Depth = 32> <FIFO>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%outbuf = alloca i64 1"   --->   Operation 11 'alloca' 'outbuf' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 3.56> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 35> <Depth = 64> <FIFO>
 
-State 2 <SV = 1> <Delay = 6.43>
+State 2 <SV = 1> <Delay = 6.38>
 ST_2 : Operation 12 [1/1] (1.00ns)   --->   "%m2sbuf_read = read i64 @_ssdm_op_Read.s_axilite.i64, i64 %m2sbuf" [userdma.cpp:205]   --->   Operation 12 'read' 'm2sbuf_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 114 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
 ST_2 : Operation 13 [1/1] (1.00ns)   --->   "%s2mbuf_read = read i64 @_ssdm_op_Read.s_axilite.i64, i64 %s2mbuf" [userdma.cpp:205]   --->   Operation 13 'read' 's2mbuf_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 114 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
 ST_2 : Operation 14 [1/1] (1.00ns)   --->   "%kernel_mode_read = read i2 @_ssdm_op_Read.s_axilite.i2, i2 %kernel_mode" [userdma.cpp:205]   --->   Operation 14 'read' 'kernel_mode_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 114 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
 ST_2 : Operation 15 [1/1] (3.63ns)   --->   "%call_ln205 = call void @entry_proc, i64 %s2mbuf_read, i64 %s2mbuf_c" [userdma.cpp:205]   --->   Operation 15 'call' 'call_ln205' <Predicate = true> <Delay = 3.63> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 ST_2 : Operation 16 [2/2] (3.63ns)   --->   "%call_ln211 = call void @getinstream, i32 %inStreamTop_V_data_V, i4 %inStreamTop_V_keep_V, i4 %inStreamTop_V_strb_V, i2 %inStreamTop_V_user_V, i1 %inStreamTop_V_last_V, i2 %kernel_mode_read, i2 %s2m_err, i33 %inbuf, i32 %incount, i2 %kernel_mode_c" [userdma.cpp:211]   --->   Operation 16 'call' 'call_ln211' <Predicate = true> <Delay = 3.63> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
-ST_2 : Operation 17 [2/2] (5.43ns)   --->   "%call_ln213 = call void @paralleltostreamwithburst, i64 %gmem1, i64 %m2sbuf_read, i2 %kernel_mode_read, i35 %outbuf" [userdma.cpp:213]   --->   Operation 17 'call' 'call_ln213' <Predicate = true> <Delay = 5.43> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 17 [2/2] (5.38ns)   --->   "%call_ln213 = call void @paralleltostreamwithburst, i64 %gmem1, i64 %m2sbuf_read, i2 %kernel_mode_read, i35 %outbuf" [userdma.cpp:213]   --->   Operation 17 'call' 'call_ln213' <Predicate = true> <Delay = 5.38> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 3 <SV = 2> <Delay = 0.99>
 ST_3 : Operation 18 [1/2] (0.99ns)   --->   "%call_ln211 = call void @getinstream, i32 %inStreamTop_V_data_V, i4 %inStreamTop_V_keep_V, i4 %inStreamTop_V_strb_V, i2 %inStreamTop_V_user_V, i1 %inStreamTop_V_last_V, i2 %kernel_mode_read, i2 %s2m_err, i33 %inbuf, i32 %incount, i2 %kernel_mode_c" [userdma.cpp:211]   --->   Operation 18 'call' 'call_ln211' <Predicate = true> <Delay = 0.99> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
@@ -123,9 +123,9 @@ ST_6 : Operation 26 [1/1] (0.00ns)   --->   "%empty_38 = specchannel i32 @_ssdm_
 ST_6 : Operation 27 [1/1] (0.00ns)   --->   "%specinterface_ln205 = specinterface void @_ssdm_op_SpecInterface, i2 %kernel_mode_c, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str, i32 4294967295, i32 0" [userdma.cpp:205]   --->   Operation 27 'specinterface' 'specinterface_ln205' <Predicate = true> <Delay = 0.00>
 ST_6 : Operation 28 [1/1] (0.00ns)   --->   "%specdataflowpipeline_ln205 = specdataflowpipeline void @_ssdm_op_SpecDataflowPipeline, i32 4294967295, i32 0, void @empty_3" [userdma.cpp:205]   --->   Operation 28 'specdataflowpipeline' 'specdataflowpipeline_ln205' <Predicate = true> <Delay = 0.00>
 ST_6 : Operation 29 [1/1] (0.00ns)   --->   "%spectopmodule_ln184 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty" [userdma.cpp:184]   --->   Operation 29 'spectopmodule' 'spectopmodule_ln184' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 30 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %gmem0, void @empty_4, i32 0, i32 0, void @empty_3, i32 10, i32 1024, void @empty_2, void @empty_1, void @empty_3, i32 16, i32 16, i32 16, i32 16, void @empty_3, void @empty_3, i32 4294967295, i32 0"   --->   Operation 30 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 30 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %gmem0, void @empty_4, i32 0, i32 0, void @empty_3, i32 10, i32 1024, void @empty_2, void @empty_1, void @empty_3, i32 16, i32 16, i32 16, i32 32, void @empty_3, void @empty_3, i32 4294967295, i32 0"   --->   Operation 30 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
 ST_6 : Operation 31 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i64 %gmem0"   --->   Operation 31 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 32 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %gmem1, void @empty_4, i32 0, i32 0, void @empty_3, i32 10, i32 1024, void @empty_0, void @empty_1, void @empty_3, i32 4, i32 16, i32 16, i32 16, void @empty_3, void @empty_3, i32 4294967295, i32 0"   --->   Operation 32 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 32 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %gmem1, void @empty_4, i32 0, i32 0, void @empty_3, i32 10, i32 1024, void @empty_0, void @empty_1, void @empty_3, i32 16, i32 16, i32 32, i32 16, void @empty_3, void @empty_3, i32 4294967295, i32 0"   --->   Operation 32 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
 ST_6 : Operation 33 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i64 %gmem1"   --->   Operation 33 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
 ST_6 : Operation 34 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %inStreamTop_V_data_V, i4 %inStreamTop_V_keep_V, i4 %inStreamTop_V_strb_V, i2 %inStreamTop_V_user_V, i1 %inStreamTop_V_last_V, void @empty_19, i32 1, i32 1, void @empty_20, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3, i32 4294967295, i32 0"   --->   Operation 34 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
 ST_6 : Operation 35 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %inStreamTop_V_data_V"   --->   Operation 35 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
@@ -156,11 +156,11 @@ ST_6 : Operation 59 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void
 ST_6 : Operation 60 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i2 %s2m_err, void @empty_6, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_21, void @empty_8, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3, i32 4294967295, i32 0"   --->   Operation 60 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
 ST_6 : Operation 61 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i2 %s2m_err, void @empty_23, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3, i32 4294967295, i32 0"   --->   Operation 61 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
 ST_6 : Operation 62 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 0, void @empty_6, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_21, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3, i32 4294967295, i32 0"   --->   Operation 62 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 63 [1/1] (0.00ns)   --->   "%empty_39 = specchannel i32 @_ssdm_op_SpecChannel, void @inbuf_str, i32 1, void @p_str, void @p_str, i32 32, i32 32, i33 %inbuf, i33 %inbuf"   --->   Operation 63 'specchannel' 'empty_39' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 63 [1/1] (0.00ns)   --->   "%empty_39 = specchannel i32 @_ssdm_op_SpecChannel, void @inbuf_str, i32 1, void @p_str, void @p_str, i32 64, i32 64, i33 %inbuf, i33 %inbuf"   --->   Operation 63 'specchannel' 'empty_39' <Predicate = true> <Delay = 0.00>
 ST_6 : Operation 64 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i33 %inbuf, void @empty_16, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3, i32 4294967295, i32 0"   --->   Operation 64 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
 ST_6 : Operation 65 [1/1] (0.00ns)   --->   "%empty_40 = specchannel i32 @_ssdm_op_SpecChannel, void @incount_str, i32 1, void @p_str, void @p_str, i32 2, i32 2, i32 %incount, i32 %incount"   --->   Operation 65 'specchannel' 'empty_40' <Predicate = true> <Delay = 0.00>
 ST_6 : Operation 66 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %incount, void @empty_16, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3, i32 4294967295, i32 0"   --->   Operation 66 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 67 [1/1] (0.00ns)   --->   "%empty_41 = specchannel i32 @_ssdm_op_SpecChannel, void @outbuf_str, i32 1, void @p_str, void @p_str, i32 32, i32 32, i35 %outbuf, i35 %outbuf"   --->   Operation 67 'specchannel' 'empty_41' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 67 [1/1] (0.00ns)   --->   "%empty_41 = specchannel i32 @_ssdm_op_SpecChannel, void @outbuf_str, i32 1, void @p_str, void @p_str, i32 64, i32 64, i35 %outbuf, i35 %outbuf"   --->   Operation 67 'specchannel' 'empty_41' <Predicate = true> <Delay = 0.00>
 ST_6 : Operation 68 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i35 %outbuf, void @empty_16, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3, i32 4294967295, i32 0"   --->   Operation 68 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
 ST_6 : Operation 69 [1/1] (0.00ns)   --->   "%ret_ln216 = ret" [userdma.cpp:216]   --->   Operation 69 'ret' 'ret_ln216' <Predicate = true> <Delay = 0.00>
 
@@ -692,7 +692,7 @@ ret_ln216                  (ret                 ) [ 0000000]
 <pin id="95" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="_ssdm_op_SpecBitsMap"/></StgValue>
+<StgValue><ssdm name=""/></StgValue>
 </bind>
 </comp>
 
@@ -701,7 +701,7 @@ ret_ln216                  (ret                 ) [ 0000000]
 <pin id="97" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_0"/></StgValue>
+<StgValue><ssdm name="_ssdm_op_SpecBitsMap"/></StgValue>
 </bind>
 </comp>
 
@@ -710,7 +710,7 @@ ret_ln216                  (ret                 ) [ 0000000]
 <pin id="99" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name=""/></StgValue>
+<StgValue><ssdm name="empty_0"/></StgValue>
 </bind>
 </comp>
 
@@ -1270,7 +1270,7 @@ ret_ln216                  (ret                 ) [ 0000000]
 |----------|--------------------------------------|---------|---------|---------|
 |          |     call_ln205_entry_proc_fu_172     |    0    |    0    |    0    |
 |          |        grp_getinstream_fu_179        |  1.588  |   145   |   139   |
-|   call   | grp_paralleltostreamwithburst_fu_200 |   7.94  |   1063  |   951   |
+|   call   | grp_paralleltostreamwithburst_fu_200 |   7.94  |   1065  |   953   |
 |          | grp_streamtoparallelwithburst_fu_211 |   7.94  |   887   |   611   |
 |          |       grp_sendoutstream_fu_223       |  4.764  |    35   |    27   |
 |----------|--------------------------------------|---------|---------|---------|
@@ -1278,7 +1278,7 @@ ret_ln216                  (ret                 ) [ 0000000]
 |   read   |        s2mbuf_read_read_fu_160       |    0    |    0    |    0    |
 |          |     kernel_mode_read_read_fu_166     |    0    |    0    |    0    |
 |----------|--------------------------------------|---------|---------|---------|
-|   Total  |                                      |  22.232 |   2130  |   1728  |
+|   Total  |                                      |  22.232 |   2132  |   1730  |
 |----------|--------------------------------------|---------|---------|---------|
 
 Memories:
@@ -1316,10 +1316,10 @@ N/A
 +-----------+--------+--------+--------+
 |           |  Delay |   FF   |   LUT  |
 +-----------+--------+--------+--------+
-|  Function |   22   |  2130  |  1728  |
+|  Function |   22   |  2132  |  1730  |
 |   Memory  |    -   |    -   |    -   |
 |Multiplexer|    4   |    -   |   27   |
 |  Register |    -   |   232  |    -   |
 +-----------+--------+--------+--------+
-|   Total   |   26   |  2362  |  1755  |
+|   Total   |   26   |  2364  |  1757  |
 +-----------+--------+--------+--------+

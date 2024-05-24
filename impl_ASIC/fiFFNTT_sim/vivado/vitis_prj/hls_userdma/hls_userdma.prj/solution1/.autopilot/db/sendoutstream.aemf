@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1716483912886">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1716527262841">
   <ports id="1" name="outbuf" type="PortType" coreName="FIFO" coreId="1701470831" bitwidth="35" iftype="IfTypeRom">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="2" name="m2s_buf_sts" type="PortType" coreId="0" bitwidth="1" direction="DirOut">
+  <ports id="2" name="m2s_buf_sts" type="PortType" coreId="3541928720" bitwidth="1" direction="DirOut">
     <dataInputObjs>write</dataInputObjs>
   </ports>
-  <ports id="3" name="outStreamTop_V_data_V" type="PortType" coreId="119226736" bitwidth="32" direction="DirOut">
+  <ports id="3" name="outStreamTop_V_data_V" type="PortType" coreId="3541728336" bitwidth="32" direction="DirOut">
     <dataInputObjs>write</dataInputObjs>
   </ports>
-  <ports id="4" name="outStreamTop_V_keep_V" type="PortType" coreId="119354400" bitwidth="4" direction="DirOut">
+  <ports id="4" name="outStreamTop_V_keep_V" type="PortType" coreId="544437615" bitwidth="4" direction="DirOut">
     <dataInputObjs>write</dataInputObjs>
   </ports>
-  <ports id="5" name="outStreamTop_V_strb_V" type="PortType" coreId="119243488" bitwidth="4" direction="DirOut">
+  <ports id="5" name="outStreamTop_V_strb_V" type="PortType" coreId="3541791376" bitwidth="4" direction="DirOut">
     <dataInputObjs>write</dataInputObjs>
   </ports>
-  <ports id="6" name="outStreamTop_V_user_V" type="PortType" coreId="118922448" bitwidth="2" direction="DirOut">
+  <ports id="6" name="outStreamTop_V_user_V" type="PortType" coreId="3541654376" bitwidth="2" direction="DirOut">
     <dataInputObjs>write</dataInputObjs>
   </ports>
-  <ports id="7" name="outStreamTop_V_last_V" type="PortType" coreId="118922448" bitwidth="1" direction="DirOut">
+  <ports id="7" name="outStreamTop_V_last_V" type="PortType" coreId="3541812400" bitwidth="1" direction="DirOut">
     <dataInputObjs>write</dataInputObjs>
   </ports>
   <edges id="24" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.0/@node_objs.0"/>
@@ -43,7 +43,7 @@
   <edges id="125" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.0" is_back_edge="1"/>
   <blocks id="11" name="entry" type="BlockType">
     <controlOutputObjs>do.cond</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="10" name="br_ln171" lineNumber="171" fileName="userdma.cpp" fileDirectory=".." coreId="119112392" contextFuncName="sendoutstream" opcode="br" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="10" name="br_ln171" lineNumber="171" fileName="userdma.cpp" fileDirectory=".." coreId="3541820368" contextFuncName="sendoutstream" opcode="br" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="userdma.cpp" linenumber="171" fileDirectory="/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma" functionName="sendoutstream"/>
       <controlInputObjs>do.cond</controlInputObjs>
     </node_objs>
@@ -54,12 +54,12 @@
   <blocks id="23" name="do.end" type="BlockType">
     <controlInputObjs>do.cond</controlInputObjs>
     <controlOutputObjs>br</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="21" name="m2s_buf_sts_write_ln180" lineNumber="180" fileName="userdma.cpp" fileDirectory=".." coreId="119166832" contextFuncName="sendoutstream" opcode="write" nodeLabel="1.0" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="21" name="m2s_buf_sts_write_ln180" lineNumber="180" fileName="userdma.cpp" fileDirectory=".." coreId="3541813376" contextFuncName="sendoutstream" opcode="write" nodeLabel="1.0" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="userdma.cpp" linenumber="180" fileDirectory="/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma" functionName="sendoutstream"/>
       <dataOutputObjs>m2s_buf_sts</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="22" name="_ln182" lineNumber="182" fileName="userdma.cpp" fileDirectory=".." coreId="119166832" contextFuncName="sendoutstream" opcode="ret" nodeLabel="1.0" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="22" name="_ln182" lineNumber="182" fileName="userdma.cpp" fileDirectory=".." coreId="3541791376" contextFuncName="sendoutstream" opcode="ret" nodeLabel="1.0" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="userdma.cpp" linenumber="182" fileDirectory="/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma" functionName="sendoutstream"/>
     </node_objs>
     <fileValidLineNumbers fileName="userdma.cpp">
@@ -75,25 +75,25 @@
       <controlOutputObjs>br</controlOutputObjs>
       <controlOutputObjs>do.end</controlOutputObjs>
       <controlOutputObjs>do.cond</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="14" name="outbuf_read" lineNumber="145" fileName="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." coreName="FIFO" implIndex="memory" control="no" opType="fifo" coreId="78" contextFuncName="read" bitwidth="35" opcode="read" m_display="0" m_delay="3.6" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="14" name="outbuf_read" lineNumber="145" fileName="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." coreName="FIFO" implIndex="memory" control="no" opType="fifo" coreId="78" contextFuncName="read" bitwidth="35" opcode="read" m_display="0" m_delay="3.56" m_topoIndex="2" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h" linenumber="145" fileDirectory="/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma" functionName="read"/>
         <dataInputObjs>outbuf</dataInputObjs>
         <dataOutputObjs>trunc</dataOutputObjs>
         <dataOutputObjs>partselect</dataOutputObjs>
         <dataOutputObjs>bitselect</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="15" name="tmp_data_filed_V" lineNumber="145" originalName="tmp.data_filed.V" fileName="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." rtlName="outStreamTop_TDATA_int_regslice" coreId="119166224" contextFuncName="read" bitwidth="32" opcode="trunc" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="15" name="tmp_data_filed_V" lineNumber="145" originalName="tmp.data_filed.V" fileName="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." rtlName="outStreamTop_TDATA_int_regslice" coreId="0" contextFuncName="read" bitwidth="32" opcode="trunc" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h" linenumber="145" fileDirectory="/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma" functionName="read"/>
         <dataInputObjs>read</dataInputObjs>
         <dataOutputObjs>write</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="16" name="tmp_upsb_V" lineNumber="145" originalName="tmp.upsb.V" fileName="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." rtlName="outStreamTop_TUSER_int_regslice" coreId="608" contextFuncName="read" bitwidth="2" opcode="partselect" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="16" name="tmp_upsb_V" lineNumber="145" originalName="tmp.upsb.V" fileName="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." rtlName="outStreamTop_TUSER_int_regslice" coreId="0" contextFuncName="read" bitwidth="2" opcode="partselect" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h" linenumber="145" fileDirectory="/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma" functionName="read"/>
         <dataInputObjs>read</dataInputObjs>
         <dataOutputObjs>write</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="17" name="tmp_last_V" lineNumber="145" originalName="tmp.last.V" fileName="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." rtlName="tmp_last_V_reg_126" coreId="119228592" contextFuncName="read" bitwidth="1" opcode="bitselect" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="17" name="tmp_last_V" lineNumber="145" originalName="tmp.last.V" fileName="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." rtlName="tmp_last_V_reg_126" coreId="3539716896" contextFuncName="read" bitwidth="1" opcode="bitselect" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h" linenumber="145" fileDirectory="/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma" functionName="read"/>
         <dataInputObjs>read</dataInputObjs>
         <dataOutputObjs>write</dataOutputObjs>
@@ -112,7 +112,7 @@
         <dataOutputObjs>outStreamTop_V_last_V</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="19" name="br_ln178" lineNumber="178" fileName="userdma.cpp" fileDirectory=".." coreId="0" contextFuncName="sendoutstream" opcode="br" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="19" name="br_ln178" lineNumber="178" fileName="userdma.cpp" fileDirectory=".." coreId="3541945152" contextFuncName="sendoutstream" opcode="br" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="userdma.cpp" linenumber="178" fileDirectory="/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma" functionName="sendoutstream"/>
         <dataInputObjs>bitselect</dataInputObjs>
         <controlInputObjs>do.cond</controlInputObjs>
