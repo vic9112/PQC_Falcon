@@ -9,6 +9,7 @@
 
 ## Folder Explanations
 
+### Inside `impl_FPGA` (Implement on FPGA)
 - `~/init_impl` is the initial implementation
 - `~/optimized` is the optimized implementation
 - `~/meeting` records the history of some meeting contents
