@@ -172,10 +172,10 @@ entry:2 %kernel_mode_read = read i2 @_ssdm_op_Read.s_axilite.i2, i2 %kernel_mode
 
 <Node id="72" bw="0" op_0_bw="0" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-entry:53 %call_ln205 = call void @entry_proc, i64 %s2mbuf_read, i64 %s2mbuf_c
+entry:53 %call_ln210 = call void @entry_proc, i64 %s2mbuf_read, i64 %s2mbuf_c
 
 ]]></Node>
-<StgValue><ssdm name="call_ln205"/></StgValue>
+<StgValue><ssdm name="call_ln210"/></StgValue>
 </operation>
 
 <operation id="16" st_id="2" stage="2" lat="2">
@@ -187,10 +187,10 @@ entry:53 %call_ln205 = call void @entry_proc, i64 %s2mbuf_read, i64 %s2mbuf_c
 
 <Node id="73" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="4" op_3_bw="4" op_4_bw="2" op_5_bw="1" op_6_bw="2" op_7_bw="2" op_8_bw="33" op_9_bw="32" op_10_bw="2">
 <![CDATA[
-entry:54 %call_ln211 = call void @getinstream, i32 %inStreamTop_V_data_V, i4 %inStreamTop_V_keep_V, i4 %inStreamTop_V_strb_V, i2 %inStreamTop_V_user_V, i1 %inStreamTop_V_last_V, i2 %kernel_mode_read, i2 %s2m_err, i33 %inbuf, i32 %incount, i2 %kernel_mode_c
+entry:54 %call_ln216 = call void @getinstream, i32 %inStreamTop_V_data_V, i4 %inStreamTop_V_keep_V, i4 %inStreamTop_V_strb_V, i2 %inStreamTop_V_user_V, i1 %inStreamTop_V_last_V, i2 %kernel_mode_read, i2 %s2m_err, i33 %inbuf, i32 %incount, i2 %kernel_mode_c
 
 ]]></Node>
-<StgValue><ssdm name="call_ln211"/></StgValue>
+<StgValue><ssdm name="call_ln216"/></StgValue>
 </operation>
 
 <operation id="17" st_id="2" stage="2" lat="2">
@@ -202,10 +202,10 @@ entry:54 %call_ln211 = call void @getinstream, i32 %inStreamTop_V_data_V, i4 %in
 
 <Node id="75" bw="0" op_0_bw="0" op_1_bw="64" op_2_bw="64" op_3_bw="2" op_4_bw="35">
 <![CDATA[
-entry:56 %call_ln213 = call void @paralleltostreamwithburst, i64 %gmem1, i64 %m2sbuf_read, i2 %kernel_mode_read, i35 %outbuf
+entry:56 %call_ln218 = call void @paralleltostreamwithburst, i64 %gmem1, i64 %m2sbuf_read, i2 %kernel_mode_read, i35 %outbuf
 
 ]]></Node>
-<StgValue><ssdm name="call_ln213"/></StgValue>
+<StgValue><ssdm name="call_ln218"/></StgValue>
 </operation>
 </state>
 
@@ -220,10 +220,10 @@ entry:56 %call_ln213 = call void @paralleltostreamwithburst, i64 %gmem1, i64 %m2
 
 <Node id="73" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="4" op_3_bw="4" op_4_bw="2" op_5_bw="1" op_6_bw="2" op_7_bw="2" op_8_bw="33" op_9_bw="32" op_10_bw="2">
 <![CDATA[
-entry:54 %call_ln211 = call void @getinstream, i32 %inStreamTop_V_data_V, i4 %inStreamTop_V_keep_V, i4 %inStreamTop_V_strb_V, i2 %inStreamTop_V_user_V, i1 %inStreamTop_V_last_V, i2 %kernel_mode_read, i2 %s2m_err, i33 %inbuf, i32 %incount, i2 %kernel_mode_c
+entry:54 %call_ln216 = call void @getinstream, i32 %inStreamTop_V_data_V, i4 %inStreamTop_V_keep_V, i4 %inStreamTop_V_strb_V, i2 %inStreamTop_V_user_V, i1 %inStreamTop_V_last_V, i2 %kernel_mode_read, i2 %s2m_err, i33 %inbuf, i32 %incount, i2 %kernel_mode_c
 
 ]]></Node>
-<StgValue><ssdm name="call_ln211"/></StgValue>
+<StgValue><ssdm name="call_ln216"/></StgValue>
 </operation>
 
 <operation id="19" st_id="3" stage="1" lat="2">
@@ -235,10 +235,10 @@ entry:54 %call_ln211 = call void @getinstream, i32 %inStreamTop_V_data_V, i4 %in
 
 <Node id="75" bw="0" op_0_bw="0" op_1_bw="64" op_2_bw="64" op_3_bw="2" op_4_bw="35">
 <![CDATA[
-entry:56 %call_ln213 = call void @paralleltostreamwithburst, i64 %gmem1, i64 %m2sbuf_read, i2 %kernel_mode_read, i35 %outbuf
+entry:56 %call_ln218 = call void @paralleltostreamwithburst, i64 %gmem1, i64 %m2sbuf_read, i2 %kernel_mode_read, i35 %outbuf
 
 ]]></Node>
-<StgValue><ssdm name="call_ln213"/></StgValue>
+<StgValue><ssdm name="call_ln218"/></StgValue>
 </operation>
 </state>
 
@@ -253,10 +253,10 @@ entry:56 %call_ln213 = call void @paralleltostreamwithburst, i64 %gmem1, i64 %m2
 
 <Node id="74" bw="0" op_0_bw="0" op_1_bw="33" op_2_bw="32" op_3_bw="1" op_4_bw="2" op_5_bw="64" op_6_bw="64" op_7_bw="0" op_8_bw="0" op_9_bw="0">
 <![CDATA[
-entry:55 %call_ln212 = call void @streamtoparallelwithburst, i33 %inbuf, i32 %incount, i1 %s2m_buf_sts, i2 %kernel_mode_c, i64 %gmem0, i64 %s2mbuf_c
+entry:55 %call_ln217 = call void @streamtoparallelwithburst, i33 %inbuf, i32 %incount, i1 %s2m_buf_sts, i2 %kernel_mode_c, i64 %gmem0, i64 %s2mbuf_c
 
 ]]></Node>
-<StgValue><ssdm name="call_ln212"/></StgValue>
+<StgValue><ssdm name="call_ln217"/></StgValue>
 </operation>
 
 <operation id="21" st_id="4" stage="2" lat="2">
@@ -268,10 +268,10 @@ entry:55 %call_ln212 = call void @streamtoparallelwithburst, i33 %inbuf, i32 %in
 
 <Node id="76" bw="0" op_0_bw="0" op_1_bw="35" op_2_bw="1" op_3_bw="32" op_4_bw="4" op_5_bw="4" op_6_bw="2" op_7_bw="1" op_8_bw="0">
 <![CDATA[
-entry:57 %call_ln214 = call void @sendoutstream, i35 %outbuf, i1 %m2s_buf_sts, i32 %outStreamTop_V_data_V, i4 %outStreamTop_V_keep_V, i4 %outStreamTop_V_strb_V, i2 %outStreamTop_V_user_V, i1 %outStreamTop_V_last_V
+entry:57 %call_ln219 = call void @sendoutstream, i35 %outbuf, i1 %m2s_buf_sts, i32 %outStreamTop_V_data_V, i4 %outStreamTop_V_keep_V, i4 %outStreamTop_V_strb_V, i2 %outStreamTop_V_user_V, i1 %outStreamTop_V_last_V
 
 ]]></Node>
-<StgValue><ssdm name="call_ln214"/></StgValue>
+<StgValue><ssdm name="call_ln219"/></StgValue>
 </operation>
 </state>
 
@@ -286,10 +286,10 @@ entry:57 %call_ln214 = call void @sendoutstream, i35 %outbuf, i1 %m2s_buf_sts, i
 
 <Node id="74" bw="0" op_0_bw="0" op_1_bw="33" op_2_bw="32" op_3_bw="1" op_4_bw="2" op_5_bw="64" op_6_bw="64" op_7_bw="0" op_8_bw="0" op_9_bw="0">
 <![CDATA[
-entry:55 %call_ln212 = call void @streamtoparallelwithburst, i33 %inbuf, i32 %incount, i1 %s2m_buf_sts, i2 %kernel_mode_c, i64 %gmem0, i64 %s2mbuf_c
+entry:55 %call_ln217 = call void @streamtoparallelwithburst, i33 %inbuf, i32 %incount, i1 %s2m_buf_sts, i2 %kernel_mode_c, i64 %gmem0, i64 %s2mbuf_c
 
 ]]></Node>
-<StgValue><ssdm name="call_ln212"/></StgValue>
+<StgValue><ssdm name="call_ln217"/></StgValue>
 </operation>
 
 <operation id="23" st_id="5" stage="1" lat="2">
@@ -301,10 +301,10 @@ entry:55 %call_ln212 = call void @streamtoparallelwithburst, i33 %inbuf, i32 %in
 
 <Node id="76" bw="0" op_0_bw="0" op_1_bw="35" op_2_bw="1" op_3_bw="32" op_4_bw="4" op_5_bw="4" op_6_bw="2" op_7_bw="1" op_8_bw="0">
 <![CDATA[
-entry:57 %call_ln214 = call void @sendoutstream, i35 %outbuf, i1 %m2s_buf_sts, i32 %outStreamTop_V_data_V, i4 %outStreamTop_V_keep_V, i4 %outStreamTop_V_strb_V, i2 %outStreamTop_V_user_V, i1 %outStreamTop_V_last_V
+entry:57 %call_ln219 = call void @sendoutstream, i35 %outbuf, i1 %m2s_buf_sts, i32 %outStreamTop_V_data_V, i4 %outStreamTop_V_keep_V, i4 %outStreamTop_V_strb_V, i2 %outStreamTop_V_user_V, i1 %outStreamTop_V_last_V
 
 ]]></Node>
-<StgValue><ssdm name="call_ln214"/></StgValue>
+<StgValue><ssdm name="call_ln219"/></StgValue>
 </operation>
 </state>
 
@@ -334,10 +334,10 @@ entry:4 %empty = specchannel i32 @_ssdm_op_SpecChannel, void @s2mbuf_c_str, i32 
 
 <Node id="24" bw="0" op_0_bw="0" op_1_bw="64" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32">
 <![CDATA[
-entry:5 %specinterface_ln205 = specinterface void @_ssdm_op_SpecInterface, i64 %s2mbuf_c, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str, i32 4294967295, i32 0
+entry:5 %specinterface_ln210 = specinterface void @_ssdm_op_SpecInterface, i64 %s2mbuf_c, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str, i32 4294967295, i32 0
 
 ]]></Node>
-<StgValue><ssdm name="specinterface_ln205"/></StgValue>
+<StgValue><ssdm name="specinterface_ln210"/></StgValue>
 </operation>
 
 <operation id="26" st_id="6" stage="1" lat="1">
@@ -364,10 +364,10 @@ entry:7 %empty_38 = specchannel i32 @_ssdm_op_SpecChannel, void @kernel_mode_c_s
 
 <Node id="27" bw="0" op_0_bw="0" op_1_bw="2" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32">
 <![CDATA[
-entry:8 %specinterface_ln205 = specinterface void @_ssdm_op_SpecInterface, i2 %kernel_mode_c, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str, i32 4294967295, i32 0
+entry:8 %specinterface_ln210 = specinterface void @_ssdm_op_SpecInterface, i2 %kernel_mode_c, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str, i32 4294967295, i32 0
 
 ]]></Node>
-<StgValue><ssdm name="specinterface_ln205"/></StgValue>
+<StgValue><ssdm name="specinterface_ln210"/></StgValue>
 </operation>
 
 <operation id="28" st_id="6" stage="1" lat="1">
@@ -379,10 +379,10 @@ entry:8 %specinterface_ln205 = specinterface void @_ssdm_op_SpecInterface, i2 %k
 
 <Node id="28" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="0">
 <![CDATA[
-entry:9 %specdataflowpipeline_ln205 = specdataflowpipeline void @_ssdm_op_SpecDataflowPipeline, i32 4294967295, i32 0, void @empty_3
+entry:9 %specdataflowpipeline_ln210 = specdataflowpipeline void @_ssdm_op_SpecDataflowPipeline, i32 4294967295, i32 0, void @empty_3
 
 ]]></Node>
-<StgValue><ssdm name="specdataflowpipeline_ln205"/></StgValue>
+<StgValue><ssdm name="specdataflowpipeline_ln210"/></StgValue>
 </operation>
 
 <operation id="29" st_id="6" stage="1" lat="1">
@@ -394,10 +394,10 @@ entry:9 %specdataflowpipeline_ln205 = specdataflowpipeline void @_ssdm_op_SpecDa
 
 <Node id="29" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-entry:10 %spectopmodule_ln184 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty
+entry:10 %spectopmodule_ln189 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty
 
 ]]></Node>
-<StgValue><ssdm name="spectopmodule_ln184"/></StgValue>
+<StgValue><ssdm name="spectopmodule_ln189"/></StgValue>
 </operation>
 
 <operation id="30" st_id="6" stage="1" lat="1">
@@ -994,10 +994,10 @@ entry:52 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i35 %o
 
 <Node id="77" bw="0">
 <![CDATA[
-entry:58 %ret_ln216 = ret
+entry:58 %ret_ln221 = ret
 
 ]]></Node>
-<StgValue><ssdm name="ret_ln216"/></StgValue>
+<StgValue><ssdm name="ret_ln221"/></StgValue>
 </operation>
 </state>
 </state_list>

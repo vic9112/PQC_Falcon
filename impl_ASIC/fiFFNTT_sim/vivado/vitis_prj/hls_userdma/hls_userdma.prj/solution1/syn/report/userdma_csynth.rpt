@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'userdma'
 ================================================================
-* Date:           Fri May 24 01:07:42 2024
+* Date:           Fri May 24 13:42:56 2024
 
 * Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
 * Project:        hls_userdma.prj
@@ -60,16 +60,16 @@
 |DSP              |        -|    -|       -|      -|    -|
 |Expression       |        -|    -|       0|     18|    -|
 |FIFO             |        4|    -|     607|    346|    -|
-|Instance         |        0|    -|    4671|   6399|    -|
+|Instance         |        0|    -|    4969|   7208|    -|
 |Memory           |        -|    -|       -|      -|    -|
 |Multiplexer      |        -|    -|       -|     27|    -|
 |Register         |        -|    -|       3|      -|    -|
 +-----------------+---------+-----+--------+-------+-----+
-|Total            |        4|    0|    5281|   6790|    0|
+|Total            |        4|    0|    5579|   7599|    0|
 +-----------------+---------+-----+--------+-------+-----+
 |Available        |      280|  220|  106400|  53200|    0|
 +-----------------+---------+-----+--------+-------+-----+
-|Utilization (%)  |        1|    0|       4|     12|    0|
+|Utilization (%)  |        1|    0|       5|     14|    0|
 +-----------------+---------+-----+--------+-------+-----+
 
 + Detail: 
@@ -79,14 +79,14 @@
     +------------------------------+---------------------------+---------+----+------+------+-----+
     |control_s_axi_U               |control_s_axi              |        0|   0|   206|   308|    0|
     |entry_proc_U0                 |entry_proc                 |        0|   0|     3|    29|    0|
-    |getinstream_U0                |getinstream                |        0|   0|   126|   307|    0|
+    |getinstream_U0                |getinstream                |        0|   0|   125|   325|    0|
     |gmem0_m_axi_U                 |gmem0_m_axi                |        0|   0|   780|  1754|    0|
     |gmem1_m_axi_U                 |gmem1_m_axi                |        0|   0|   780|  1754|    0|
-    |paralleltostreamwithburst_U0  |paralleltostreamwithburst  |        0|   0|  2166|  1269|    0|
+    |paralleltostreamwithburst_U0  |paralleltostreamwithburst  |        0|   0|  2348|  1651|    0|
     |sendoutstream_U0              |sendoutstream              |        0|   0|     6|    53|    0|
-    |streamtoparallelwithburst_U0  |streamtoparallelwithburst  |        0|   0|   604|   925|    0|
+    |streamtoparallelwithburst_U0  |streamtoparallelwithburst  |        0|   0|   721|  1334|    0|
     +------------------------------+---------------------------+---------+----+------+------+-----+
-    |Total                         |                           |        0|   0|  4671|  6399|    0|
+    |Total                         |                           |        0|   0|  4969|  7208|    0|
     +------------------------------+---------------------------+---------+----+------+------+-----+
 
     * DSP: 

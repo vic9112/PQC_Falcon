@@ -9,23 +9,23 @@ wire [8:0] inst_idle_sigs;
 wire [4:0] inst_block_sigs;
 wire kernel_block;
 
-assign axis_block_sigs[0] = ~AESL_inst_userdma.getinstream_U0.grp_getinstream_Pipeline_VITIS_LOOP_80_1_fu_93.inStreamTop_TDATA_blk_n;
+assign axis_block_sigs[0] = ~AESL_inst_userdma.getinstream_U0.grp_getinstream_Pipeline_VITIS_LOOP_84_1_fu_93.inStreamTop_TDATA_blk_n;
 assign axis_block_sigs[1] = ~AESL_inst_userdma.sendoutstream_U0.outStreamTop_TDATA_blk_n;
 
 assign inst_idle_sigs[0] = AESL_inst_userdma.entry_proc_U0.ap_idle;
 assign inst_block_sigs[0] = (AESL_inst_userdma.entry_proc_U0.ap_done & ~AESL_inst_userdma.entry_proc_U0.ap_continue) | ~AESL_inst_userdma.entry_proc_U0.s2mbuf_c_blk_n;
 assign inst_idle_sigs[1] = AESL_inst_userdma.getinstream_U0.ap_idle;
-assign inst_block_sigs[1] = (AESL_inst_userdma.getinstream_U0.ap_done & ~AESL_inst_userdma.getinstream_U0.ap_continue) | ~AESL_inst_userdma.getinstream_U0.grp_getinstream_Pipeline_VITIS_LOOP_80_1_fu_93.inbuf_blk_n | ~AESL_inst_userdma.getinstream_U0.grp_getinstream_Pipeline_VITIS_LOOP_80_1_fu_93.incount25_blk_n | ~AESL_inst_userdma.getinstream_U0.kernel_mode_c_blk_n;
+assign inst_block_sigs[1] = (AESL_inst_userdma.getinstream_U0.ap_done & ~AESL_inst_userdma.getinstream_U0.ap_continue) | ~AESL_inst_userdma.getinstream_U0.grp_getinstream_Pipeline_VITIS_LOOP_84_1_fu_93.inbuf_blk_n | ~AESL_inst_userdma.getinstream_U0.grp_getinstream_Pipeline_VITIS_LOOP_84_1_fu_93.incount25_blk_n | ~AESL_inst_userdma.getinstream_U0.kernel_mode_c_blk_n;
 assign inst_idle_sigs[2] = AESL_inst_userdma.streamtoparallelwithburst_U0.ap_idle;
-assign inst_block_sigs[2] = (AESL_inst_userdma.streamtoparallelwithburst_U0.ap_done & ~AESL_inst_userdma.streamtoparallelwithburst_U0.ap_continue) | ~AESL_inst_userdma.streamtoparallelwithburst_U0.grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_27_2_fu_117.inbuf_blk_n | ~AESL_inst_userdma.streamtoparallelwithburst_U0.incount25_blk_n | ~AESL_inst_userdma.streamtoparallelwithburst_U0.kernel_mode_blk_n | ~AESL_inst_userdma.streamtoparallelwithburst_U0.out_memory_blk_n;
+assign inst_block_sigs[2] = (AESL_inst_userdma.streamtoparallelwithburst_U0.ap_done & ~AESL_inst_userdma.streamtoparallelwithburst_U0.ap_continue) | ~AESL_inst_userdma.streamtoparallelwithburst_U0.grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123.inbuf_blk_n | ~AESL_inst_userdma.streamtoparallelwithburst_U0.incount25_blk_n | ~AESL_inst_userdma.streamtoparallelwithburst_U0.kernel_mode_blk_n | ~AESL_inst_userdma.streamtoparallelwithburst_U0.out_memory_blk_n;
 assign inst_idle_sigs[3] = AESL_inst_userdma.paralleltostreamwithburst_U0.ap_idle;
-assign inst_block_sigs[3] = (AESL_inst_userdma.paralleltostreamwithburst_U0.ap_done & ~AESL_inst_userdma.paralleltostreamwithburst_U0.ap_continue) | ~AESL_inst_userdma.paralleltostreamwithburst_U0.outbuf_blk_n | ~AESL_inst_userdma.paralleltostreamwithburst_U0.grp_paralleltostreamwithburst_Pipeline_VITIS_LOOP_131_2_fu_117.outbuf_blk_n;
+assign inst_block_sigs[3] = (AESL_inst_userdma.paralleltostreamwithburst_U0.ap_done & ~AESL_inst_userdma.paralleltostreamwithburst_U0.ap_continue) | ~AESL_inst_userdma.paralleltostreamwithburst_U0.outbuf_blk_n | ~AESL_inst_userdma.paralleltostreamwithburst_U0.grp_paralleltostreamwithburst_Pipeline_VITIS_LOOP_138_2_fu_121.outbuf_blk_n;
 assign inst_idle_sigs[4] = AESL_inst_userdma.sendoutstream_U0.ap_idle;
 assign inst_block_sigs[4] = (AESL_inst_userdma.sendoutstream_U0.ap_done & ~AESL_inst_userdma.sendoutstream_U0.ap_continue) | ~AESL_inst_userdma.sendoutstream_U0.outbuf_blk_n;
 
 assign inst_idle_sigs[5] = 1'b0;
 assign inst_idle_sigs[6] = AESL_inst_userdma.getinstream_U0.ap_idle;
-assign inst_idle_sigs[7] = AESL_inst_userdma.getinstream_U0.grp_getinstream_Pipeline_VITIS_LOOP_80_1_fu_93.ap_idle;
+assign inst_idle_sigs[7] = AESL_inst_userdma.getinstream_U0.grp_getinstream_Pipeline_VITIS_LOOP_84_1_fu_93.ap_idle;
 assign inst_idle_sigs[8] = AESL_inst_userdma.sendoutstream_U0.ap_idle;
 
 AESL_deadlock_idx0_monitor AESL_deadlock_idx0_monitor_U (

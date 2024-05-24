@@ -313,7 +313,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                 1 : begin
                     case(index2)
                     2: begin
-                        if (~AESL_inst_userdma.getinstream_U0.grp_getinstream_Pipeline_VITIS_LOOP_80_1_fu_93.inbuf_blk_n) begin
+                        if (~AESL_inst_userdma.getinstream_U0.grp_getinstream_Pipeline_VITIS_LOOP_84_1_fu_93.inbuf_blk_n) begin
                             if (~AESL_inst_userdma.inbuf_U.if_empty_n) begin
                                 $display("//      Blocked by empty input FIFO 'userdma.inbuf_U' written by process 'userdma.streamtoparallelwithburst_U0'");
                                 $fdisplay(fp, "Dependence_Channel_path userdma.inbuf_U");
@@ -325,7 +325,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                                 $fdisplay(fp, "Dependence_Channel_status FULL");
                             end
                         end
-                        if (~AESL_inst_userdma.getinstream_U0.grp_getinstream_Pipeline_VITIS_LOOP_80_1_fu_93.incount25_blk_n) begin
+                        if (~AESL_inst_userdma.getinstream_U0.grp_getinstream_Pipeline_VITIS_LOOP_84_1_fu_93.incount25_blk_n) begin
                             if (~AESL_inst_userdma.incount_U.if_empty_n) begin
                                 $display("//      Blocked by empty input FIFO 'userdma.incount_U' written by process 'userdma.streamtoparallelwithburst_U0'");
                                 $fdisplay(fp, "Dependence_Channel_path userdma.incount_U");
@@ -373,7 +373,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                 2 : begin
                     case(index2)
                     1: begin
-                        if (~AESL_inst_userdma.streamtoparallelwithburst_U0.grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_27_2_fu_117.inbuf_blk_n) begin
+                        if (~AESL_inst_userdma.streamtoparallelwithburst_U0.grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123.inbuf_blk_n) begin
                             if (~AESL_inst_userdma.inbuf_U.if_empty_n) begin
                                 $display("//      Blocked by empty input FIFO 'userdma.inbuf_U' written by process 'userdma.getinstream_U0'");
                                 $fdisplay(fp, "Dependence_Channel_path userdma.inbuf_U");

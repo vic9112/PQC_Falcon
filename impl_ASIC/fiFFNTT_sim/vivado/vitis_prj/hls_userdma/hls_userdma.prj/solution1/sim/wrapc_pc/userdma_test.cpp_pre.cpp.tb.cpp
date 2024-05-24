@@ -75212,19 +75212,19 @@ void test_FFT (memcell s2m_buf[1024], memcell m2s_buf[1024], memcell result[1024
  for(int i = 0; i < 1024; i++){
   m2s_buf[i].fpr = FFT_in[i];
  }
-
+ bool high = 0;
  memcell fft_out;
- for (int x = 0; x < 2048; x++) {
-  if (x < 1024) {
-   fft_out.fpr = FFT_out[x];
-   dataStream_t.data = fft_out.uin.lower;
-  } else {
-   fft_out.fpr = FFT_out[x - 1024];
-   dataStream_t.data = fft_out.uin.upper;
-  }
+ for (int x = 0; x < 1024; x++) {
+  fft_out.fpr = FFT_out[x];
+  dataStream_t.data = fft_out.uin.lower;
   dataStream_t.keep = -1;
   dataStream_t.user = (x == 0);
-  dataStream_t.last = (x == 2047);
+  dataStream_t.last = 0;
+  inStream_t.write(dataStream_t);
+  dataStream_t.data = fft_out.uin.upper;
+  dataStream_t.keep = -1;
+  dataStream_t.user = (x == 0);
+  dataStream_t.last = (x == 1023);
   inStream_t.write(dataStream_t);
  }
 
@@ -75270,15 +75270,13 @@ userdma(inStream_t, outStream_t, 0, &s2m_buf_sts, &m2s_buf_sts, s2m_buf, m2s_buf
   printf("\nM2S data\n");
   dataStream_t = outStream_t.read();
   printf("\nFirst Programmed Data for fiFFNTT mode: %5d \n\n", dataStream_t.data);
-  for (j = 0; j < 2048; j++){
+  for (j = 0; j < 1024; j++){
    dataStream_t = outStream_t.read();
-   if (j < 1024) {
-    m2s_data[j].uin.lower = dataStream_t.data;
-   } else {
-    if((j % 16) == 0) printf("\n");
-    m2s_data[j - 1024].uin.upper = dataStream_t.data;
-    printf("%15f ", m2s_data[j - 1024].fpr);
-   }
+   m2s_data[j].uin.lower = dataStream_t.data;
+   dataStream_t = outStream_t.read();
+   m2s_data[j].uin.upper = dataStream_t.data;
+   if((j % 16) == 0) printf("\n");
+   printf("%15f ", m2s_data[j].fpr);
   }
   printf("\n");
  }
@@ -75288,7 +75286,7 @@ userdma(inStream_t, outStream_t, 0, &s2m_buf_sts, &m2s_buf_sts, s2m_buf, m2s_buf
  printf("\n");
 }
 #endif
-# 168 "/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma/userdma_test.cpp"
+# 166 "/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma/userdma_test.cpp"
 
 
 int main() {
@@ -75296,6 +75294,6 @@ int main() {
 
  test_FFT(s2m_buf, m2s_buf, result);
  test_NTT(s2m_buf, m2s_buf, result);
-# 188 "/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma/userdma_test.cpp"
+# 186 "/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma/userdma_test.cpp"
  return 0;
 }

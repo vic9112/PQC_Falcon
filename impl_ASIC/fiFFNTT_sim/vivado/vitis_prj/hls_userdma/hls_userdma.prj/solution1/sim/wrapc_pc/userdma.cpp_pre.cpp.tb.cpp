@@ -75013,32 +75013,33 @@ void streamtoparallelwithburst(hls::stream<data> &in_stream, hls::stream<int> &i
  ap_uint<32> final_s2m_len = 0;
  ap_uint<32> s2m_len;
  buf_sts = 0;
- s2m_len = ((kernel_mode == 0) || (kernel_mode == 1))? 2048 :
-     ((kernel_mode == 2) || (kernel_mode == 3))? 1024 : 0;
-# 24 "/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma/userdma.cpp"
+ s2m_len = 1024;
+ bool even = ((kernel_mode == 0) || (kernel_mode == 1))? 1 : 0;
+ bool high = 0;
+# 25 "/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma/userdma.cpp"
  do {
   count = in_counts.read();
-
+  high = 0;
+  int a = 0;
   for (int i = 0; i < count; ++i) {
 #pragma HLS PIPELINE
    in_val = in_stream.read();
 
-   if (s2m_len == 2048 && final_s2m_len >= 1024)
-    out_memory[i].uin.upper = in_val.data_filed;
+   if (high)
+    out_memory[a-1].uin.upper = in_val.data_filed;
    else
-    out_memory[i].uin.lower = in_val.data_filed;
+    out_memory[a].uin.lower = in_val.data_filed;
+   high = (even)? (!high) : high;
 
+   a = (even)? (high)? a + 1 : a : a + 1;
   }
 
-  out_memory += count;
-  final_s2m_len += count;
-
-
-
-
-
-  if ((final_s2m_len == 1024)) {
-   out_memory -= 1024;
+  if (even) {
+   out_memory += count / 2;
+   final_s2m_len += count / 2;
+  } else {
+   out_memory += count;
+   final_s2m_len += count;
   }
 
   if (final_s2m_len == s2m_len)
@@ -75046,10 +75047,13 @@ void streamtoparallelwithburst(hls::stream<data> &in_stream, hls::stream<int> &i
   else
    out_sts = 0;
 
+  if (final_s2m_len == 1024)
+   out_memory -= 1024;
+
   buf_sts = out_sts;
 
  } while(final_s2m_len < s2m_len);
-# 66 "/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma/userdma.cpp"
+# 70 "/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma/userdma.cpp"
 }
 
 void getinstream(hls::stream<trans_pkt> &in_stream, ap_uint<2> kernel_mode, ap_uint<2> &s2m_err,
@@ -75061,8 +75065,8 @@ void getinstream(hls::stream<trans_pkt> &in_stream, ap_uint<2> kernel_mode, ap_u
     trans_pkt in_val;
     s2m_err = 0;
     in_len = 0;
- s2m_len = ((kernel_mode == 0) || (kernel_mode == 1))? 2048 :
-     ((kernel_mode == 2) || (kernel_mode == 3))? 1024 : 0;
+ s2m_len = ((kernel_mode == 0) || (kernel_mode == 1))? 2048 : 1024;
+ bool even = ((kernel_mode == 0) || (kernel_mode == 1))? 1 : 0;
 
     do {
 #pragma HLS PIPELINE
@@ -75074,17 +75078,17 @@ void getinstream(hls::stream<trans_pkt> &in_stream, ap_uint<2> kernel_mode, ap_u
 
   if ((in_len < s2m_len - 1) && (in_val.last == 1))
    s2m_err = 1;
-
   if ((in_len == s2m_len - 1) && (in_val.last != 1))
    s2m_err = 2;
-
   count += 1;
+
   in_len += 1;
 
   if ((count == MAX_BURST_LENGTH) || (in_val.last == 1)) {
    out_counts.write(count);
    count = 0;
   }
+
     } while(in_len < s2m_len);
 
 }
@@ -75097,9 +75101,10 @@ void paralleltostreamwithburst(memcell *in_memory, ap_uint<2> kernel_mode, hls::
  bool out_sts = 0;
  int m2s_len = 0;
  int final_m2s_len = 0;
- m2s_len = ((kernel_mode == 0) || (kernel_mode == 1))? 2048 :
-     ((kernel_mode == 2) || (kernel_mode == 3))? 1024 : 0;
+ m2s_len = ((kernel_mode == 0) || (kernel_mode == 1))? 2048 : 1024;
  final_m2s_len = m2s_len;
+ bool even = ((kernel_mode == 0) || (kernel_mode == 1))? 1 : 0;
+ bool high = 0;
 
 
  out_val.data_filed = (kernel_mode == 0)? 4 : (kernel_mode == 1)? 5 :
@@ -75114,14 +75119,19 @@ void paralleltostreamwithburst(memcell *in_memory, ap_uint<2> kernel_mode, hls::
   }else{
    count = final_m2s_len;
   }
+  high = 0;
+  int a = 0;
 
   for (int i = 0; i < count; ++i) {
 #pragma HLS PIPELINE
 
-   if ((m2s_len == 2048) && (final_m2s_len <= 1024))
-    out_val.data_filed = in_memory[i].uin.upper;
+   if (high)
+    out_val.data_filed = in_memory[a-1].uin.upper;
    else
-    out_val.data_filed = in_memory[i].uin.lower;
+    out_val.data_filed = in_memory[a].uin.lower;
+   high = (even)? (!high) : high;
+
+   a = (even)? (high)? a + 1 : a : a + 1;
 
    out_val.upsb = 0;
    if((final_m2s_len <= MAX_BURST_LENGTH) && (i == (count - 1)))
@@ -75135,15 +75145,10 @@ void paralleltostreamwithburst(memcell *in_memory, ap_uint<2> kernel_mode, hls::
    out_stream.write(out_val);
    final_m2s_len--;
   }
-  in_memory += count;
-
-
-
-
-
-  if ((m2s_len == 2048) && (final_m2s_len == 1024)) {
-   in_memory -= 1024;
-  }
+  if (even)
+   in_memory += count / 2;
+  else
+   in_memory += count;
 
  } while(final_m2s_len != 0);
 }
@@ -75222,5 +75227,5 @@ apatb_userdma_ir(inStreamTop, outStreamTop, ((struct __cosim_s1__*)&kernel_mode)
 return ;
 }
 #endif
-# 216 "/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma/userdma.cpp"
+# 221 "/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma/userdma.cpp"
 

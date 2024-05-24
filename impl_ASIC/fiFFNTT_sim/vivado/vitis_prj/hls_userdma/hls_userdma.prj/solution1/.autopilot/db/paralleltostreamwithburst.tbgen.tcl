@@ -156,7 +156,7 @@ set NewPortList {[
  	{ "name": "outbuf_write", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "outbuf", "role": "write" }}  ]}
 
 set RtlHierarchyInfo {[
-	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "3"],
+	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1"],
 		"CDFG" : "paralleltostreamwithburst",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "1", "ap_idle" : "1", "real_start" : "1",
@@ -173,19 +173,19 @@ set RtlHierarchyInfo {[
 		"Port" : [
 			{"Name" : "gmem1", "Type" : "MAXI", "Direction" : "I",
 				"SubConnect" : [
-					{"ID" : "1", "SubInstance" : "grp_paralleltostreamwithburst_Pipeline_VITIS_LOOP_131_2_fu_117", "Port" : "gmem1", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+					{"ID" : "1", "SubInstance" : "grp_paralleltostreamwithburst_Pipeline_VITIS_LOOP_138_2_fu_121", "Port" : "gmem1", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
 			{"Name" : "in_memory", "Type" : "None", "Direction" : "I"},
 			{"Name" : "kernel_mode", "Type" : "None", "Direction" : "I"},
 			{"Name" : "outbuf", "Type" : "Fifo", "Direction" : "O", "DependentProc" : ["0"], "DependentChan" : "0", "DependentChanDepth" : "64", "DependentChanType" : "0",
 				"BlockSignal" : [
 					{"Name" : "outbuf_blk_n", "Type" : "RtlSignal"}],
 				"SubConnect" : [
-					{"ID" : "1", "SubInstance" : "grp_paralleltostreamwithburst_Pipeline_VITIS_LOOP_131_2_fu_117", "Port" : "outbuf", "Inst_start_state" : "3", "Inst_end_state" : "4"}]}],
+					{"ID" : "1", "SubInstance" : "grp_paralleltostreamwithburst_Pipeline_VITIS_LOOP_138_2_fu_121", "Port" : "outbuf", "Inst_start_state" : "3", "Inst_end_state" : "4"}]}],
 		"Loop" : [
-			{"Name" : "VITIS_LOOP_124_1", "PipelineType" : "no",
+			{"Name" : "VITIS_LOOP_129_1", "PipelineType" : "no",
 				"LoopDec" : {"FSMBitwidth" : "4", "FirstState" : "ap_ST_fsm_state2", "LastState" : ["ap_ST_fsm_state4"], "QuitState" : ["ap_ST_fsm_state2"], "PreState" : ["ap_ST_fsm_state1"], "PostState" : ["ap_ST_fsm_state1"], "OneDepthLoop" : "0", "OneStateBlock": ""}}]},
-	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_paralleltostreamwithburst_Pipeline_VITIS_LOOP_131_2_fu_117", "Parent" : "0", "Child" : ["2"],
-		"CDFG" : "paralleltostreamwithburst_Pipeline_VITIS_LOOP_131_2",
+	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_paralleltostreamwithburst_Pipeline_VITIS_LOOP_138_2_fu_121", "Parent" : "0", "Child" : ["2"],
+		"CDFG" : "paralleltostreamwithburst_Pipeline_VITIS_LOOP_138_2",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
@@ -201,41 +201,42 @@ set RtlHierarchyInfo {[
 		"Port" : [
 			{"Name" : "final_m2s_len_4", "Type" : "None", "Direction" : "I"},
 			{"Name" : "count_1", "Type" : "None", "Direction" : "I"},
-			{"Name" : "sub", "Type" : "None", "Direction" : "I"},
-			{"Name" : "select_ln111_cast", "Type" : "None", "Direction" : "I"},
+			{"Name" : "even", "Type" : "None", "Direction" : "I"},
+			{"Name" : "sub50", "Type" : "None", "Direction" : "I"},
+			{"Name" : "select_ln119", "Type" : "None", "Direction" : "I"},
 			{"Name" : "outbuf", "Type" : "Fifo", "Direction" : "O",
 				"BlockSignal" : [
 					{"Name" : "outbuf_blk_n", "Type" : "RtlSignal"}]},
+			{"Name" : "in_memory_addr_0_idx", "Type" : "None", "Direction" : "I"},
+			{"Name" : "in_memory", "Type" : "None", "Direction" : "I"},
 			{"Name" : "gmem1", "Type" : "MAXI", "Direction" : "I",
 				"BlockSignal" : [
 					{"Name" : "gmem1_blk_n_AR", "Type" : "RtlSignal"},
 					{"Name" : "gmem1_blk_n_R", "Type" : "RtlSignal"}]},
-			{"Name" : "zext_ln131", "Type" : "None", "Direction" : "I"},
-			{"Name" : "icmp_ln113", "Type" : "None", "Direction" : "I"},
-			{"Name" : "in_memory_assign", "Type" : "None", "Direction" : "I"}],
+			{"Name" : "zext_ln142", "Type" : "None", "Direction" : "I"}],
 		"Loop" : [
-			{"Name" : "VITIS_LOOP_131_2", "PipelineType" : "UPC",
-				"LoopDec" : {"FSMBitwidth" : "1", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter1", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter20", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter20", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
-	{"ID" : "2", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_paralleltostreamwithburst_Pipeline_VITIS_LOOP_131_2_fu_117.flow_control_loop_pipe_sequential_init_U", "Parent" : "1"},
-	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mux_42_32_1_1_U49", "Parent" : "0"}]}
+			{"Name" : "VITIS_LOOP_138_2", "PipelineType" : "UPC",
+				"LoopDec" : {"FSMBitwidth" : "1", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter1", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter21", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter21", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
+	{"ID" : "2", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_paralleltostreamwithburst_Pipeline_VITIS_LOOP_138_2_fu_121.flow_control_loop_pipe_sequential_init_U", "Parent" : "1"}]}
 
 
 set ArgLastReadFirstWriteLatency {
 	paralleltostreamwithburst {
-		gmem1 {Type I LastRead 18 FirstWrite -1}
+		gmem1 {Type I LastRead 19 FirstWrite -1}
 		in_memory {Type I LastRead 0 FirstWrite -1}
 		kernel_mode {Type I LastRead 0 FirstWrite -1}
 		outbuf {Type O LastRead -1 FirstWrite 0}}
-	paralleltostreamwithburst_Pipeline_VITIS_LOOP_131_2 {
+	paralleltostreamwithburst_Pipeline_VITIS_LOOP_138_2 {
 		final_m2s_len_4 {Type I LastRead 0 FirstWrite -1}
 		count_1 {Type I LastRead 0 FirstWrite -1}
-		sub {Type I LastRead 0 FirstWrite -1}
-		select_ln111_cast {Type I LastRead 0 FirstWrite -1}
-		outbuf {Type O LastRead -1 FirstWrite 20}
-		gmem1 {Type I LastRead 18 FirstWrite -1}
-		zext_ln131 {Type I LastRead 0 FirstWrite -1}
-		icmp_ln113 {Type I LastRead 0 FirstWrite -1}
-		in_memory_assign {Type I LastRead 0 FirstWrite -1}}}
+		even {Type I LastRead 0 FirstWrite -1}
+		sub50 {Type I LastRead 0 FirstWrite -1}
+		select_ln119 {Type I LastRead 0 FirstWrite -1}
+		outbuf {Type O LastRead -1 FirstWrite 21}
+		in_memory_addr_0_idx {Type I LastRead 0 FirstWrite -1}
+		in_memory {Type I LastRead 0 FirstWrite -1}
+		gmem1 {Type I LastRead 19 FirstWrite -1}
+		zext_ln142 {Type I LastRead 0 FirstWrite -1}}}
 
 set hasDtUnsupportedChannel 0
 

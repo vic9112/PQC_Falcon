@@ -59,8 +59,9 @@ architecture behav of userdma_getinstream is
     constant ap_const_lv32_2 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000010";
     constant ap_const_lv32_3 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000011";
     constant ap_const_lv2_0 : STD_LOGIC_VECTOR (1 downto 0) := "00";
-    constant ap_const_lv12_400 : STD_LOGIC_VECTOR (11 downto 0) := "010000000000";
+    constant ap_const_lv2_1 : STD_LOGIC_VECTOR (1 downto 0) := "01";
     constant ap_const_lv12_800 : STD_LOGIC_VECTOR (11 downto 0) := "100000000000";
+    constant ap_const_lv12_400 : STD_LOGIC_VECTOR (11 downto 0) := "010000000000";
     constant ap_const_lv2_2 : STD_LOGIC_VECTOR (1 downto 0) := "10";
     constant ap_const_lv7_0 : STD_LOGIC_VECTOR (6 downto 0) := "0000000";
 
@@ -72,30 +73,32 @@ attribute shreg_extract : string;
     signal ap_CS_fsm_state1 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state1 : signal is "none";
     signal kernel_mode_c_blk_n : STD_LOGIC;
-    signal tmp_reg_147 : STD_LOGIC_VECTOR (0 downto 0);
-    signal select_ln80_fu_121_p3 : STD_LOGIC_VECTOR (11 downto 0);
-    signal select_ln80_reg_152 : STD_LOGIC_VECTOR (11 downto 0);
+    signal select_ln84_fu_129_p3 : STD_LOGIC_VECTOR (11 downto 0);
+    signal select_ln84_reg_162 : STD_LOGIC_VECTOR (11 downto 0);
     signal ap_CS_fsm_state2 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state2 : signal is "none";
-    signal grp_getinstream_Pipeline_VITIS_LOOP_80_1_fu_93_ap_start : STD_LOGIC;
-    signal grp_getinstream_Pipeline_VITIS_LOOP_80_1_fu_93_ap_done : STD_LOGIC;
-    signal grp_getinstream_Pipeline_VITIS_LOOP_80_1_fu_93_ap_idle : STD_LOGIC;
-    signal grp_getinstream_Pipeline_VITIS_LOOP_80_1_fu_93_ap_ready : STD_LOGIC;
-    signal grp_getinstream_Pipeline_VITIS_LOOP_80_1_fu_93_inbuf_din : STD_LOGIC_VECTOR (32 downto 0);
-    signal grp_getinstream_Pipeline_VITIS_LOOP_80_1_fu_93_inbuf_write : STD_LOGIC;
-    signal grp_getinstream_Pipeline_VITIS_LOOP_80_1_fu_93_incount25_din : STD_LOGIC_VECTOR (31 downto 0);
-    signal grp_getinstream_Pipeline_VITIS_LOOP_80_1_fu_93_incount25_write : STD_LOGIC;
-    signal grp_getinstream_Pipeline_VITIS_LOOP_80_1_fu_93_inStreamTop_TREADY : STD_LOGIC;
-    signal grp_getinstream_Pipeline_VITIS_LOOP_80_1_fu_93_tmp_last_V_out : STD_LOGIC_VECTOR (0 downto 0);
-    signal grp_getinstream_Pipeline_VITIS_LOOP_80_1_fu_93_tmp_last_V_out_ap_vld : STD_LOGIC;
-    signal grp_getinstream_Pipeline_VITIS_LOOP_80_1_fu_93_ap_start_reg : STD_LOGIC := '0';
+    signal grp_getinstream_Pipeline_VITIS_LOOP_84_1_fu_93_ap_start : STD_LOGIC;
+    signal grp_getinstream_Pipeline_VITIS_LOOP_84_1_fu_93_ap_done : STD_LOGIC;
+    signal grp_getinstream_Pipeline_VITIS_LOOP_84_1_fu_93_ap_idle : STD_LOGIC;
+    signal grp_getinstream_Pipeline_VITIS_LOOP_84_1_fu_93_ap_ready : STD_LOGIC;
+    signal grp_getinstream_Pipeline_VITIS_LOOP_84_1_fu_93_inbuf_din : STD_LOGIC_VECTOR (32 downto 0);
+    signal grp_getinstream_Pipeline_VITIS_LOOP_84_1_fu_93_inbuf_write : STD_LOGIC;
+    signal grp_getinstream_Pipeline_VITIS_LOOP_84_1_fu_93_incount25_din : STD_LOGIC_VECTOR (31 downto 0);
+    signal grp_getinstream_Pipeline_VITIS_LOOP_84_1_fu_93_incount25_write : STD_LOGIC;
+    signal grp_getinstream_Pipeline_VITIS_LOOP_84_1_fu_93_inStreamTop_TREADY : STD_LOGIC;
+    signal grp_getinstream_Pipeline_VITIS_LOOP_84_1_fu_93_tmp_last_V_out : STD_LOGIC_VECTOR (0 downto 0);
+    signal grp_getinstream_Pipeline_VITIS_LOOP_84_1_fu_93_tmp_last_V_out_ap_vld : STD_LOGIC;
+    signal grp_getinstream_Pipeline_VITIS_LOOP_84_1_fu_93_ap_start_reg : STD_LOGIC := '0';
     signal ap_CS_fsm_state3 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state3 : signal is "none";
     signal ap_CS_fsm_state4 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state4 : signal is "none";
     signal ap_block_state1 : BOOLEAN;
-    signal select_ln91_fu_132_p3 : STD_LOGIC_VECTOR (1 downto 0);
+    signal select_ln94_fu_141_p3 : STD_LOGIC_VECTOR (1 downto 0);
     signal s2m_err_preg : STD_LOGIC_VECTOR (1 downto 0) := "00";
+    signal icmp_ln1065_fu_113_p2 : STD_LOGIC_VECTOR (0 downto 0);
+    signal icmp_ln1065_4_fu_118_p2 : STD_LOGIC_VECTOR (0 downto 0);
+    signal or_ln81_fu_123_p2 : STD_LOGIC_VECTOR (0 downto 0);
     signal ap_NS_fsm : STD_LOGIC_VECTOR (3 downto 0);
     signal ap_ST_fsm_state1_blk : STD_LOGIC;
     signal ap_ST_fsm_state2_blk : STD_LOGIC;
@@ -124,7 +127,7 @@ attribute shreg_extract : string;
     signal regslice_both_inStreamTop_V_last_V_U_ack_in : STD_LOGIC;
     signal ap_ce_reg : STD_LOGIC;
 
-    component userdma_getinstream_Pipeline_VITIS_LOOP_80_1 IS
+    component userdma_getinstream_Pipeline_VITIS_LOOP_84_1 IS
     port (
         ap_clk : IN STD_LOGIC;
         ap_rst : IN STD_LOGIC;
@@ -149,7 +152,7 @@ attribute shreg_extract : string;
         inStreamTop_TSTRB : IN STD_LOGIC_VECTOR (3 downto 0);
         inStreamTop_TUSER : IN STD_LOGIC_VECTOR (1 downto 0);
         inStreamTop_TLAST : IN STD_LOGIC_VECTOR (0 downto 0);
-        select_ln80 : IN STD_LOGIC_VECTOR (11 downto 0);
+        select_ln84 : IN STD_LOGIC_VECTOR (11 downto 0);
         tmp_last_V_out : OUT STD_LOGIC_VECTOR (0 downto 0);
         tmp_last_V_out_ap_vld : OUT STD_LOGIC );
     end component;
@@ -173,34 +176,34 @@ attribute shreg_extract : string;
 
 
 begin
-    grp_getinstream_Pipeline_VITIS_LOOP_80_1_fu_93 : component userdma_getinstream_Pipeline_VITIS_LOOP_80_1
+    grp_getinstream_Pipeline_VITIS_LOOP_84_1_fu_93 : component userdma_getinstream_Pipeline_VITIS_LOOP_84_1
     port map (
         ap_clk => ap_clk,
         ap_rst => ap_rst,
-        ap_start => grp_getinstream_Pipeline_VITIS_LOOP_80_1_fu_93_ap_start,
-        ap_done => grp_getinstream_Pipeline_VITIS_LOOP_80_1_fu_93_ap_done,
-        ap_idle => grp_getinstream_Pipeline_VITIS_LOOP_80_1_fu_93_ap_idle,
-        ap_ready => grp_getinstream_Pipeline_VITIS_LOOP_80_1_fu_93_ap_ready,
+        ap_start => grp_getinstream_Pipeline_VITIS_LOOP_84_1_fu_93_ap_start,
+        ap_done => grp_getinstream_Pipeline_VITIS_LOOP_84_1_fu_93_ap_done,
+        ap_idle => grp_getinstream_Pipeline_VITIS_LOOP_84_1_fu_93_ap_idle,
+        ap_ready => grp_getinstream_Pipeline_VITIS_LOOP_84_1_fu_93_ap_ready,
         inStreamTop_TVALID => inStreamTop_TVALID_int_regslice,
-        inbuf_din => grp_getinstream_Pipeline_VITIS_LOOP_80_1_fu_93_inbuf_din,
+        inbuf_din => grp_getinstream_Pipeline_VITIS_LOOP_84_1_fu_93_inbuf_din,
         inbuf_num_data_valid => ap_const_lv7_0,
         inbuf_fifo_cap => ap_const_lv7_0,
         inbuf_full_n => inbuf_full_n,
-        inbuf_write => grp_getinstream_Pipeline_VITIS_LOOP_80_1_fu_93_inbuf_write,
-        incount25_din => grp_getinstream_Pipeline_VITIS_LOOP_80_1_fu_93_incount25_din,
+        inbuf_write => grp_getinstream_Pipeline_VITIS_LOOP_84_1_fu_93_inbuf_write,
+        incount25_din => grp_getinstream_Pipeline_VITIS_LOOP_84_1_fu_93_incount25_din,
         incount25_num_data_valid => ap_const_lv2_0,
         incount25_fifo_cap => ap_const_lv2_0,
         incount25_full_n => incount25_full_n,
-        incount25_write => grp_getinstream_Pipeline_VITIS_LOOP_80_1_fu_93_incount25_write,
+        incount25_write => grp_getinstream_Pipeline_VITIS_LOOP_84_1_fu_93_incount25_write,
         inStreamTop_TDATA => inStreamTop_TDATA_int_regslice,
-        inStreamTop_TREADY => grp_getinstream_Pipeline_VITIS_LOOP_80_1_fu_93_inStreamTop_TREADY,
+        inStreamTop_TREADY => grp_getinstream_Pipeline_VITIS_LOOP_84_1_fu_93_inStreamTop_TREADY,
         inStreamTop_TKEEP => inStreamTop_TKEEP_int_regslice,
         inStreamTop_TSTRB => inStreamTop_TSTRB_int_regslice,
         inStreamTop_TUSER => inStreamTop_TUSER_int_regslice,
         inStreamTop_TLAST => inStreamTop_TLAST_int_regslice,
-        select_ln80 => select_ln80_reg_152,
-        tmp_last_V_out => grp_getinstream_Pipeline_VITIS_LOOP_80_1_fu_93_tmp_last_V_out,
-        tmp_last_V_out_ap_vld => grp_getinstream_Pipeline_VITIS_LOOP_80_1_fu_93_tmp_last_V_out_ap_vld);
+        select_ln84 => select_ln84_reg_162,
+        tmp_last_V_out => grp_getinstream_Pipeline_VITIS_LOOP_84_1_fu_93_tmp_last_V_out,
+        tmp_last_V_out_ap_vld => grp_getinstream_Pipeline_VITIS_LOOP_84_1_fu_93_tmp_last_V_out_ap_vld);
 
     regslice_both_inStreamTop_V_data_V_U : component userdma_regslice_both
     generic map (
@@ -304,16 +307,16 @@ begin
     end process;
 
 
-    grp_getinstream_Pipeline_VITIS_LOOP_80_1_fu_93_ap_start_reg_assign_proc : process(ap_clk)
+    grp_getinstream_Pipeline_VITIS_LOOP_84_1_fu_93_ap_start_reg_assign_proc : process(ap_clk)
     begin
         if (ap_clk'event and ap_clk =  '1') then
             if (ap_rst = '1') then
-                grp_getinstream_Pipeline_VITIS_LOOP_80_1_fu_93_ap_start_reg <= ap_const_logic_0;
+                grp_getinstream_Pipeline_VITIS_LOOP_84_1_fu_93_ap_start_reg <= ap_const_logic_0;
             else
                 if ((ap_const_logic_1 = ap_CS_fsm_state2)) then 
-                    grp_getinstream_Pipeline_VITIS_LOOP_80_1_fu_93_ap_start_reg <= ap_const_logic_1;
-                elsif ((grp_getinstream_Pipeline_VITIS_LOOP_80_1_fu_93_ap_ready = ap_const_logic_1)) then 
-                    grp_getinstream_Pipeline_VITIS_LOOP_80_1_fu_93_ap_start_reg <= ap_const_logic_0;
+                    grp_getinstream_Pipeline_VITIS_LOOP_84_1_fu_93_ap_start_reg <= ap_const_logic_1;
+                elsif ((grp_getinstream_Pipeline_VITIS_LOOP_84_1_fu_93_ap_ready = ap_const_logic_1)) then 
+                    grp_getinstream_Pipeline_VITIS_LOOP_84_1_fu_93_ap_start_reg <= ap_const_logic_0;
                 end if; 
             end if;
         end if;
@@ -327,7 +330,7 @@ begin
                 s2m_err_preg(1) <= '0';
             else
                 if ((ap_const_logic_1 = ap_CS_fsm_state4)) then 
-                                        s2m_err_preg(1) <= select_ln91_fu_132_p3(1);
+                                        s2m_err_preg(1) <= select_ln94_fu_141_p3(1);
                 end if; 
             end if;
         end if;
@@ -337,22 +340,14 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if ((ap_const_logic_1 = ap_CS_fsm_state2)) then
-                    select_ln80_reg_152(11 downto 10) <= select_ln80_fu_121_p3(11 downto 10);
+                    select_ln84_reg_162(11 downto 10) <= select_ln84_fu_129_p3(11 downto 10);
             end if;
         end if;
     end process;
-    process (ap_clk)
-    begin
-        if (ap_clk'event and ap_clk = '1') then
-            if ((ap_const_logic_1 = ap_CS_fsm_state1)) then
-                tmp_reg_147 <= kernel_mode(1 downto 1);
-            end if;
-        end if;
-    end process;
-    select_ln80_reg_152(9 downto 0) <= "0000000000";
+    select_ln84_reg_162(9 downto 0) <= "0000000000";
     s2m_err_preg(0) <= '0';
 
-    ap_NS_fsm_assign_proc : process (ap_start, ap_done_reg, ap_CS_fsm, ap_CS_fsm_state1, kernel_mode_c_full_n, grp_getinstream_Pipeline_VITIS_LOOP_80_1_fu_93_ap_done, ap_CS_fsm_state3)
+    ap_NS_fsm_assign_proc : process (ap_start, ap_done_reg, ap_CS_fsm, ap_CS_fsm_state1, kernel_mode_c_full_n, grp_getinstream_Pipeline_VITIS_LOOP_84_1_fu_93_ap_done, ap_CS_fsm_state3)
     begin
         case ap_CS_fsm is
             when ap_ST_fsm_state1 => 
@@ -364,7 +359,7 @@ begin
             when ap_ST_fsm_state2 => 
                 ap_NS_fsm <= ap_ST_fsm_state3;
             when ap_ST_fsm_state3 => 
-                if (((grp_getinstream_Pipeline_VITIS_LOOP_80_1_fu_93_ap_done = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state3))) then
+                if (((grp_getinstream_Pipeline_VITIS_LOOP_84_1_fu_93_ap_done = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state3))) then
                     ap_NS_fsm <= ap_ST_fsm_state4;
                 else
                     ap_NS_fsm <= ap_ST_fsm_state3;
@@ -391,9 +386,9 @@ begin
 
     ap_ST_fsm_state2_blk <= ap_const_logic_0;
 
-    ap_ST_fsm_state3_blk_assign_proc : process(grp_getinstream_Pipeline_VITIS_LOOP_80_1_fu_93_ap_done)
+    ap_ST_fsm_state3_blk_assign_proc : process(grp_getinstream_Pipeline_VITIS_LOOP_84_1_fu_93_ap_done)
     begin
-        if ((grp_getinstream_Pipeline_VITIS_LOOP_80_1_fu_93_ap_done = ap_const_logic_0)) then 
+        if ((grp_getinstream_Pipeline_VITIS_LOOP_84_1_fu_93_ap_done = ap_const_logic_0)) then 
             ap_ST_fsm_state3_blk <= ap_const_logic_1;
         else 
             ap_ST_fsm_state3_blk <= ap_const_logic_0;
@@ -437,35 +432,37 @@ begin
         end if; 
     end process;
 
-    grp_getinstream_Pipeline_VITIS_LOOP_80_1_fu_93_ap_start <= grp_getinstream_Pipeline_VITIS_LOOP_80_1_fu_93_ap_start_reg;
+    grp_getinstream_Pipeline_VITIS_LOOP_84_1_fu_93_ap_start <= grp_getinstream_Pipeline_VITIS_LOOP_84_1_fu_93_ap_start_reg;
+    icmp_ln1065_4_fu_118_p2 <= "1" when (kernel_mode = ap_const_lv2_1) else "0";
+    icmp_ln1065_fu_113_p2 <= "1" when (kernel_mode = ap_const_lv2_0) else "0";
     inStreamTop_TREADY <= regslice_both_inStreamTop_V_data_V_U_ack_in;
 
-    inStreamTop_TREADY_int_regslice_assign_proc : process(grp_getinstream_Pipeline_VITIS_LOOP_80_1_fu_93_inStreamTop_TREADY, ap_CS_fsm_state3)
+    inStreamTop_TREADY_int_regslice_assign_proc : process(grp_getinstream_Pipeline_VITIS_LOOP_84_1_fu_93_inStreamTop_TREADY, ap_CS_fsm_state3)
     begin
         if ((ap_const_logic_1 = ap_CS_fsm_state3)) then 
-            inStreamTop_TREADY_int_regslice <= grp_getinstream_Pipeline_VITIS_LOOP_80_1_fu_93_inStreamTop_TREADY;
+            inStreamTop_TREADY_int_regslice <= grp_getinstream_Pipeline_VITIS_LOOP_84_1_fu_93_inStreamTop_TREADY;
         else 
             inStreamTop_TREADY_int_regslice <= ap_const_logic_0;
         end if; 
     end process;
 
-    inbuf_din <= grp_getinstream_Pipeline_VITIS_LOOP_80_1_fu_93_inbuf_din;
+    inbuf_din <= grp_getinstream_Pipeline_VITIS_LOOP_84_1_fu_93_inbuf_din;
 
-    inbuf_write_assign_proc : process(grp_getinstream_Pipeline_VITIS_LOOP_80_1_fu_93_inbuf_write, ap_CS_fsm_state3)
+    inbuf_write_assign_proc : process(grp_getinstream_Pipeline_VITIS_LOOP_84_1_fu_93_inbuf_write, ap_CS_fsm_state3)
     begin
         if ((ap_const_logic_1 = ap_CS_fsm_state3)) then 
-            inbuf_write <= grp_getinstream_Pipeline_VITIS_LOOP_80_1_fu_93_inbuf_write;
+            inbuf_write <= grp_getinstream_Pipeline_VITIS_LOOP_84_1_fu_93_inbuf_write;
         else 
             inbuf_write <= ap_const_logic_0;
         end if; 
     end process;
 
-    incount25_din <= grp_getinstream_Pipeline_VITIS_LOOP_80_1_fu_93_incount25_din;
+    incount25_din <= grp_getinstream_Pipeline_VITIS_LOOP_84_1_fu_93_incount25_din;
 
-    incount25_write_assign_proc : process(grp_getinstream_Pipeline_VITIS_LOOP_80_1_fu_93_incount25_write, ap_CS_fsm_state3)
+    incount25_write_assign_proc : process(grp_getinstream_Pipeline_VITIS_LOOP_84_1_fu_93_incount25_write, ap_CS_fsm_state3)
     begin
         if ((ap_const_logic_1 = ap_CS_fsm_state3)) then 
-            incount25_write <= grp_getinstream_Pipeline_VITIS_LOOP_80_1_fu_93_incount25_write;
+            incount25_write <= grp_getinstream_Pipeline_VITIS_LOOP_84_1_fu_93_incount25_write;
         else 
             incount25_write <= ap_const_logic_0;
         end if; 
@@ -492,11 +489,12 @@ begin
         end if; 
     end process;
 
+    or_ln81_fu_123_p2 <= (icmp_ln1065_fu_113_p2 or icmp_ln1065_4_fu_118_p2);
 
-    s2m_err_assign_proc : process(ap_CS_fsm_state4, select_ln91_fu_132_p3, s2m_err_preg)
+    s2m_err_assign_proc : process(ap_CS_fsm_state4, select_ln94_fu_141_p3, s2m_err_preg)
     begin
         if ((ap_const_logic_1 = ap_CS_fsm_state4)) then 
-            s2m_err <= select_ln91_fu_132_p3;
+            s2m_err <= select_ln94_fu_141_p3;
         else 
             s2m_err <= s2m_err_preg;
         end if; 
@@ -512,10 +510,10 @@ begin
         end if; 
     end process;
 
-    select_ln80_fu_121_p3 <= 
-        ap_const_lv12_400 when (tmp_reg_147(0) = '1') else 
-        ap_const_lv12_800;
-    select_ln91_fu_132_p3 <= 
-        ap_const_lv2_0 when (grp_getinstream_Pipeline_VITIS_LOOP_80_1_fu_93_tmp_last_V_out(0) = '1') else 
+    select_ln84_fu_129_p3 <= 
+        ap_const_lv12_800 when (or_ln81_fu_123_p2(0) = '1') else 
+        ap_const_lv12_400;
+    select_ln94_fu_141_p3 <= 
+        ap_const_lv2_0 when (grp_getinstream_Pipeline_VITIS_LOOP_84_1_fu_93_tmp_last_V_out(0) = '1') else 
         ap_const_lv2_2;
 end behav;
