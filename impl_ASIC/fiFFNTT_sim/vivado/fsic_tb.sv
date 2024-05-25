@@ -61,7 +61,7 @@ module fsic_tb();
     );
     
     initial begin
-        $dumpfile("/home/ubuntu/tgit/lab05/vivado/test.vcd");
+        $dumpfile("/home/ubuntu/fsic_pqc/test.vcd");
         $dumpvars(0,fsic_tb);
     end
     //always #4ns sys_clock = ~sys_clock;     //Period 8ns, 125MHz
