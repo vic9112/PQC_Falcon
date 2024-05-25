@@ -190,7 +190,7 @@ set proj_dir [get_property directory [current_project]]
 
 # Set project properties
 set obj [current_project]
-#set_property -name "board_part" -value "tul.com.tw:pynq-z2:part0:1.0" -objects $obj
+set_property -name "board_part" -value "tul.com.tw:pynq-z2:part0:1.0" -objects $obj
 set_property -name "default_lib" -value "xil_defaultlib" -objects $obj
 set_property -name "enable_resource_estimation" -value "0" -objects $obj
 set_property -name "enable_vhdl_2008" -value "1" -objects $obj
@@ -220,7 +220,7 @@ if {[string equal [get_filesets -quiet sources_1] ""]} {
 # Set IP repository paths
 set obj [get_filesets sources_1]
 if { $obj != {} } {
-   set_property "ip_repo_paths" "[file normalize "$origin_dir/vitis_prj/hls_caravel_ps"] [file normalize "$origin_dir/vitis_prj/hls_output_pin"] [file normalize "$origin_dir/vitis_prj/hls_userdma"]" $obj
+   set_property "ip_repo_paths" "[file normalize "$origin_dir/vitis_prj/hls_caravel_ps"] [file normalize "$origin_dir/vitis_prj/hls_output_pin"]" $obj
 
    # Rebuild user ip_repo's index before adding any source files
    update_ip_catalog -rebuild
@@ -1430,18 +1430,6 @@ gpio[0]#qspi0_ss_b#qspi0_io[0]#qspi0_io[1]#qspi0_io[2]#qspi0_io[3]/HOLD_B#qspi0_
   assign_bd_address -offset 0x60008000 -range 0x00001000 -target_address_space [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs ps_axil_0/ladma_s/reg0] -force
   assign_bd_address -offset 0x00000000 -range 0x20000000 -target_address_space [get_bd_addr_spaces ps_axil_0/ladma_mm] [get_bd_addr_segs processing_system7_0/S_AXI_HP0/HP0_DDR_LOWOCM] -force
 
-#####################################################################################################
-#####################################################################################################
-  startgroup
-  create_bd_cell -type ip -vlnv xilinx.com:hls:userdma:1.0 userdma_0
-  apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {/clk_wiz_0/clk_out1 (5 MHz)} Clk_xbar {/clk_wiz_0/clk_out1 (5 MHz)} Master {/userdma_0/m_axi_gmem0} Slave {/processing_system7_0/S_AXI_HP0} ddr_seg {Auto} intc_ip {/axi_mem_intercon} master_apm {0}}  [get_bd_intf_pins userdma_0/m_axi_gmem0]
-  apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {/clk_wiz_0/clk_out1 (5 MHz)} Clk_xbar {/clk_wiz_0/clk_out1 (5 MHz)} Master {/userdma_0/m_axi_gmem1} Slave {/processing_system7_0/S_AXI_HP0} ddr_seg {Auto} intc_ip {/axi_mem_intercon} master_apm {0}}  [get_bd_intf_pins userdma_0/m_axi_gmem1]
-  apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/clk_wiz_0/clk_out1 (5 MHz)} Clk_slave {Auto} Clk_xbar {/clk_wiz_0/clk_out1 (5 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/userdma_0/s_axi_control} ddr_seg {Auto} intc_ip {/ps7_0_axi_periph} master_apm {0}}  [get_bd_intf_pins userdma_0/s_axi_control]
-  endgroup
-  connect_bd_intf_net [get_bd_intf_pins ps_axil_0/updma_so] [get_bd_intf_pins userdma_0/inStreamTop]
-  connect_bd_intf_net [get_bd_intf_pins userdma_0/outStreamTop] [get_bd_intf_pins ps_axil_0/updma_si]
-#####################################################################################################
-#####################################################################################################
 
   # Restore current instance
   current_bd_instance $oldCurInst

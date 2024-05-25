@@ -4,24 +4,34 @@ if you want to run simulation
 cd vivado
 ./run_vivado_fsic_sim
 ```
-會產生updma_output_NTT.log which is the output data after NTT 
+## 可以更改testbench來做FFT/IFFT/NTT/INTT
+結果會產生log file
+注意FFT iFFT可以經由 https://jupyter.org/try-jupyter/lab/ 來寫python code 轉換:
+
+``` python
+import struct
+hex_value_to_double = "your test hex"
+int_value_to_double = int(hex_value_to_double, 16)
+double_value_converted = struct.unpack('>d', int_value_to_double.to_bytes(8, byteorder='big'))[0]
+print(double_value_converted)
+
+```
 
 # FSM design:
 本次設計放在uspj2
 
-全部跑完NTT大約需要10分鐘，為了方面你們加快dma simulation，可以把下面改成住註解那行，會跳過2-10 PE:
-
-![image](https://github.com/vic9112/PQC_Falcon/assets/145022311/d742cf66-1200-43df-b750-94fd71e51678)
+跑完一種大約需要10分鐘，為了方面你們加快dma simulation，可以自行更改FSM來減少時間。
 
 
 # testbench design:
 ## 想要看wv，可以把tb中註解拿掉:
 
 ![image](https://github.com/vic9112/PQC_Falcon/assets/145022311/c41d1dcb-02f8-487c-91e8-7ec1e2b0bb73)
+
 注意要設成正確的路徑
 
 ## tb dma setting:
-對應下面的spec 並且模擬NTT跟INTT
+對應下面的spec 
 
 ![image](https://github.com/vic9112/PQC_Falcon/assets/145022311/417f8539-130c-41ca-8477-48ea35de2cdc)
 
