@@ -1,0 +1,6 @@
+rm -rf ./vvd_caravel_fpga_sim/
+rm -rf ./NA
+rm -rf ./.Xil
+rm -f timing_report.log
+rm -f vivado*.jou
+rm -f vivado*.log

@@ -1,0 +1,30 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Sun May 26 15:47:39 2024
+# Process ID: 5831
+# Current directory: /home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.runs/design_1_spiflash_0_0_synth_1
+# Command line: vivado -log design_1_spiflash_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_spiflash_0_0.tcl
+# Log file: /home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.runs/design_1_spiflash_0_0_synth_1/design_1_spiflash_0_0.vds
+# Journal file: /home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.runs/design_1_spiflash_0_0_synth_1/vivado.jou
+# Running On: ubuntu2004, OS: Linux, CPU Frequency: 1996.807 MHz, CPU Physical cores: 8, Host memory: 8322 MB
+#-----------------------------------------------------------
+source design_1_spiflash_0_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 2874.332 ; gain = 0.023 ; free physical = 3441 ; free virtual = 4112
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vitis_prj/hls_caravel_ps'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vitis_prj/hls_output_pin'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2022.1/data/ip'.
+Command: synth_design -top design_1_spiflash_0_0 -part xc7z020clg400-1 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 5858
+WARNING: [Synth 8-9501] generate block is allowed only inside loop and conditional generate in SystemVerilog mode [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:4023]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:25 . Memory (MB): peak = 2874.332 ; gain = 0.000 ; free physical = 115 ; free virtual = 401
+---------------------------------------------------------------------------------

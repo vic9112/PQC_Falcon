@@ -1,0 +1,1056 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Sun May 26 15:56:33 2024
+# Process ID: 6874
+# Current directory: /home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.runs/design_1_axi_quad_spi_0_0_synth_1
+# Command line: vivado -log design_1_axi_quad_spi_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_axi_quad_spi_0_0.tcl
+# Log file: /home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.runs/design_1_axi_quad_spi_0_0_synth_1/design_1_axi_quad_spi_0_0.vds
+# Journal file: /home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.runs/design_1_axi_quad_spi_0_0_synth_1/vivado.jou
+# Running On: ubuntu2004, OS: Linux, CPU Frequency: 1996.807 MHz, CPU Physical cores: 8, Host memory: 8322 MB
+#-----------------------------------------------------------
+source design_1_axi_quad_spi_0_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:22 . Memory (MB): peak = 2876.328 ; gain = 0.023 ; free physical = 1470 ; free virtual = 2059
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vitis_prj/hls_caravel_ps'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vitis_prj/hls_output_pin'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2022.1/data/ip'.
+Command: synth_design -top design_1_axi_quad_spi_0_0 -part xc7z020clg400-1 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 6996
+WARNING: [Synth 8-9501] generate block is allowed only inside loop and conditional generate in SystemVerilog mode [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:4023]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:26 ; elapsed = 00:01:04 . Memory (MB): peak = 2876.328 ; gain = 0.000 ; free physical = 125 ; free virtual = 230
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'design_1_axi_quad_spi_0_0' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ip/design_1_axi_quad_spi_0_0/synth/design_1_axi_quad_spi_0_0.vhd:97]
+	Parameter Async_Clk bound to: 0 - type: integer 
+	Parameter C_FAMILY bound to: zynq - type: string 
+	Parameter C_SELECT_XPM bound to: 0 - type: integer 
+	Parameter C_SUB_FAMILY bound to: zynq - type: string 
+	Parameter C_INSTANCE bound to: axi_quad_spi_inst - type: string 
+	Parameter C_SPI_MEM_ADDR_BITS bound to: 24 - type: integer 
+	Parameter C_TYPE_OF_AXI4_INTERFACE bound to: 0 - type: integer 
+	Parameter C_XIP_MODE bound to: 0 - type: integer 
+	Parameter C_XIP_PERF_MODE bound to: 1 - type: integer 
+	Parameter C_BYTE_LEVEL_INTERRUPT_EN bound to: 0 - type: integer 
+	Parameter C_UC_FAMILY bound to: 0 - type: integer 
+	Parameter C_FIFO_DEPTH bound to: 16 - type: integer 
+	Parameter C_SCK_RATIO bound to: 8 - type: integer 
+	Parameter C_DUAL_QUAD_MODE bound to: 0 - type: integer 
+	Parameter C_NUM_SS_BITS bound to: 1 - type: integer 
+	Parameter C_NUM_TRANSFER_BITS bound to: 8 - type: integer 
+	Parameter C_NEW_SEQ_EN bound to: 1 - type: integer 
+	Parameter C_SPI_MODE bound to: 0 - type: integer 
+	Parameter C_USE_STARTUP bound to: 0 - type: integer 
+	Parameter C_USE_STARTUP_EXT bound to: 0 - type: integer 
+	Parameter C_SPI_MEMORY bound to: 1 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 7 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI4_ADDR_WIDTH bound to: 24 - type: integer 
+	Parameter C_S_AXI4_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI4_ID_WIDTH bound to: 1 - type: integer 
+	Parameter C_SHARED_STARTUP bound to: 0 - type: integer 
+	Parameter C_S_AXI4_BASEADDR bound to: 32'b11111111111111111111111111111111 
+	Parameter C_S_AXI4_HIGHADDR bound to: 32'b00000000000000000000000000000000 
+	Parameter C_LSB_STUP bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'axi_quad_spi' declared at '/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:36498' bound to instance 'U0' of component 'axi_quad_spi' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ip/design_1_axi_quad_spi_0_0/synth/design_1_axi_quad_spi_0_0.vhd:290]
+INFO: [Synth 8-638] synthesizing module 'axi_quad_spi' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:36738]
+INFO: [Synth 8-638] synthesizing module 'axi_quad_spi_top' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:34994]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'IO0_I_REG' to cell 'FD' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:35463]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'IO1_I_REG' to cell 'FD' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:35474]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'IO2_I_REG' to cell 'FD' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:35485]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'IO3_I_REG' to cell 'FD' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:35497]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2948]
+INFO: [Synth 8-638] synthesizing module 'slave_attachment' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2341]
+INFO: [Synth 8-638] synthesizing module 'address_decoder' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1775]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized0' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized0' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized1' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized1' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized2' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized2' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized3' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized3' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized4' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized4' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized5' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized5' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized6' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized6' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized7' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized7' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized8' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized8' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized9' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized9' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized10' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized10' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized11' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized11' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized12' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized12' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized13' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized13' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized14' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized14' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized15' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized15' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized16' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized16' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized17' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized17' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized18' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized18' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized19' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized19' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized20' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized20' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized21' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized21' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized22' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized22' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized23' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized23' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized24' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized24' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized25' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized25' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'address_decoder' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1775]
+INFO: [Synth 8-226] default block is never used [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2550]
+INFO: [Synth 8-256] done synthesizing module 'slave_attachment' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2341]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2948]
+INFO: [Synth 8-638] synthesizing module 'qspi_core_interface' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:19206]
+INFO: [Synth 8-638] synthesizing module 'reset_sync_module' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:2426]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'RESET_SYNC_AX2S_1' to cell 'FDR' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:2455]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'RESET_SYNC_AX2S_2' to cell 'FDR' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:2463]
+INFO: [Synth 8-256] done synthesizing module 'reset_sync_module' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:2426]
+INFO: [Synth 8-638] synthesizing module 'cross_clk_sync_fifo_1' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:14941]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CMD_ERR_S2AX_1_CDC' to cell 'FDR' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15224]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CMD_ERR_S2AX_2' to cell 'FDR' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15232]
+	Parameter INIT bound to: 1'b1 
+INFO: [Synth 8-113] binding component instance 'SPISEL_D1_REG_S2AX_1_CDC' to cell 'FDR' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15243]
+	Parameter INIT bound to: 1'b1 
+INFO: [Synth 8-113] binding component instance 'SPISEL_D1_REG_S2AX_2' to cell 'FDR' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15251]
+	Parameter INIT bound to: 1'b1 
+INFO: [Synth 8-113] binding component instance 'SPISEL_PULSE_S2AX_1_CDC' to cell 'FDR' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15277]
+	Parameter INIT bound to: 1'b1 
+INFO: [Synth 8-113] binding component instance 'SPISEL_PULSE_S2AX_2' to cell 'FDR' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15285]
+	Parameter INIT bound to: 1'b1 
+INFO: [Synth 8-113] binding component instance 'SPISEL_PULSE_S2AX_3' to cell 'FDR' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15293]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'MST_N_SLV_MODE_S2AX_1_CDC' to cell 'FDR' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15306]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'MST_N_SLV_MODE_S2AX_2' to cell 'FDR' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15314]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'SLV_MODF_STRB_S2AX_1_CDC' to cell 'FDR' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15339]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'SLV_MODF_STRB_S2AX_2' to cell 'FDR' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15347]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'SLV_MODF_STRB_S2AX_3' to cell 'FDR' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15355]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'MODF_STROBE_S2AX_1_CDC' to cell 'FDR' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15380]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'MODF_STROBE_S2AX_2' to cell 'FDR' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15388]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'MODF_STROBE_S2AX_3' to cell 'FDR' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15396]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'RX_FIFO_EMPTY_AX2S_1_CDC' to cell 'FDR' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15409]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'RX_FIFO_EMPTY_AX2S_2' to cell 'FDR' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15417]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'TX_FIFO_EMPTY_S2AX_1_CDC' to cell 'FDR' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15429]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'TX_FIFO_EMPTY_S2AX_2' to cell 'FDR' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15437]
+	Parameter INIT bound to: 1'b1 
+INFO: [Synth 8-113] binding component instance 'TX_EMPT_4_SPISR_S2AX_1_CDC' to cell 'FDR' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15449]
+	Parameter INIT bound to: 1'b1 
+INFO: [Synth 8-113] binding component instance 'TX_EMPT_4_SPISR_S2AX_2' to cell 'FDR' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15457]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'TX_FIFO_FULL_AX2S_1_CDC' to cell 'FDR' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15468]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'TX_FIFO_FULL_AX2S_2' to cell 'FDR' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15476]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'SPIXFER_DONE_S2AX_1_CDC' to cell 'FDR' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15487]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'SPIXFER_DONE_S2AX_2' to cell 'FDR' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15495]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'RX_FIFO_RST_AX2S_1_CDC' to cell 'FDR' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15520]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'RX_FIFO_RST_AX2S_2' to cell 'FDR' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15528]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'RX_FIFO_FULL_S2AX_1_CDC' to cell 'FDR' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15542]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'RX_FIFO_FULL_S2AX_2' to cell 'FDR' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15550]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'SYNC_SPIXFER_DONE_S2AX_1_CDC' to cell 'FDR' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15573]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'SYNC_SPIXFER_DONE_S2AX_2' to cell 'FDR' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15581]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'SYNC_SPIXFER_DONE_S2AX_3' to cell 'FDR' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15589]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'DTR_UNDERRUN_S2AX_1_CDC' to cell 'FDR' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15599]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'DTR_UNDERRUN_S2AX_2' to cell 'FDR' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15607]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'SPICR_0_LOOP_AX2S_1_CDC' to cell 'FDR' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15617]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'SPICR_0_LOOP_AX2S_2' to cell 'FDR' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15625]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'SPICR_1_SPE_AX2S_1_CDC' to cell 'FDR' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15636]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'SPICR_1_SPE_AX2S_2' to cell 'FDR' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15644]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'SPICR_2_MST_N_SLV_AX2S_1_CDC' to cell 'FDR' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15655]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'SPICR_2_MST_N_SLV_AX2S_2' to cell 'FDR' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15663]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'SPICR_3_CPOL_AX2S_1_CDC' to cell 'FDR' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15674]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'SPICR_3_CPOL_AX2S_2' to cell 'FDR' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15682]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'SPICR_4_CPHA_AX2S_1_CDC' to cell 'FDR' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15693]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'SPICR_4_CPHA_AX2S_2' to cell 'FDR' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15701]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'SPICR_5_TXFIFO_AX2S_1_CDC' to cell 'FDR' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15712]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'SPICR_5_TXFIFO_AX2S_2' to cell 'FDR' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15720]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'SPICR_6_RXFIFO_RST_AX2S_1_CDC' to cell 'FDR' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15731]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'SPICR_6_RXFIFO_RST_AX2S_2' to cell 'FDR' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15739]
+	Parameter INIT bound to: 1'b1 
+INFO: [Synth 8-113] binding component instance 'SPICR_7_SS_AX2S_1_CDC' to cell 'FDR' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15750]
+	Parameter INIT bound to: 1'b1 
+INFO: [Synth 8-113] binding component instance 'SPICR_7_SS_AX2S_2' to cell 'FDR' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15758]
+	Parameter INIT bound to: 1'b1 
+INFO: [Synth 8-113] binding component instance 'SPICR_8_TR_INHIBIT_AX2S_1_CDC' to cell 'FDR' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15769]
+	Parameter INIT bound to: 1'b1 
+INFO: [Synth 8-113] binding component instance 'SPICR_8_TR_INHIBIT_AX2S_2' to cell 'FDR' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15777]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'SPICR_9_LSB_AX2S_1_CDC' to cell 'FDR' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15788]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'SPICR_9_LSB_AX2S_2' to cell 'FDR' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15796]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'SPICR_BITS_7_8_AX2S_1_CDC' to cell 'FDR' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15812]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'SPICR_BITS_7_8_AX2S_2' to cell 'FDR' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15820]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'SPICR_BITS_7_8_AX2S_1_CDC' to cell 'FDR' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15812]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'SPICR_BITS_7_8_AX2S_2' to cell 'FDR' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15820]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'SR_3_MODF_AX2S_1_CDC' to cell 'FDR' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15833]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'SR_3_MODF_AX2S_2' to cell 'FDR' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15841]
+	Parameter INIT bound to: 1'b1 
+INFO: [Synth 8-113] binding component instance 'SPISSR_AX2S_1_CDC' to cell 'FDR' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15858]
+	Parameter INIT bound to: 1'b1 
+INFO: [Synth 8-113] binding component instance 'SPISSR_SYNC_AXI_2_SPI_2' to cell 'FDR' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15866]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'DRR_OVERRUN_S2AX_1_CDC' to cell 'FDR' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15891]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'DRR_OVERRUN_S2AX_2' to cell 'FDR' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15899]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'DRR_OVERRUN_S2AX_3' to cell 'FDR' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15907]
+INFO: [Synth 8-256] done synthesizing module 'cross_clk_sync_fifo_1' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:14941]
+	Parameter CDC_SYNC_STAGES bound to: 2 - type: integer 
+	Parameter DOUT_RESET_VALUE bound to: 0 - type: string 
+	Parameter ECC_MODE bound to: no_ecc - type: string 
+	Parameter FIFO_MEMORY_TYPE bound to: auto - type: string 
+	Parameter FIFO_READ_LATENCY bound to: 0 - type: integer 
+	Parameter FIFO_WRITE_DEPTH bound to: 16 - type: integer 
+	Parameter FULL_RESET_VALUE bound to: 0 - type: integer 
+	Parameter PROG_EMPTY_THRESH bound to: 10 - type: integer 
+	Parameter PROG_FULL_THRESH bound to: 10 - type: integer 
+	Parameter RD_DATA_COUNT_WIDTH bound to: 5 - type: integer 
+	Parameter READ_DATA_WIDTH bound to: 8 - type: integer 
+	Parameter READ_MODE bound to: fwft - type: string 
+	Parameter RELATED_CLOCKS bound to: 0 - type: integer 
+	Parameter USE_ADV_FEATURES bound to: 1f1f - type: string 
+	Parameter WAKEUP_TIME bound to: 0 - type: integer 
+	Parameter WRITE_DATA_WIDTH bound to: 8 - type: integer 
+	Parameter WR_DATA_COUNT_WIDTH bound to: 5 - type: integer 
+INFO: [Synth 8-3491] module 'xpm_fifo_async' declared at '/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:2145' bound to instance 'RX_FIFO_II' of component 'xpm_fifo_async' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:21050]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_async' [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:2145]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_base' [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:55]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn' [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1858]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn' (0#1) [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1858]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized0' [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1858]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized0' (0#1) [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1858]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base' [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:56]
+INFO: [Synth 8-6059] Synth Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value.   [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:493]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base' (0#1) [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:56]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_gray' [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:283]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_gray' (0#1) [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:283]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_reg_vec' [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1884]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_reg_vec' (0#1) [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1884]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_gray__parameterized0' [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:283]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_gray__parameterized0' (0#1) [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:283]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_reg_vec__parameterized0' [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1884]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_reg_vec__parameterized0' (0#1) [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1884]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_gray__parameterized1' [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:283]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_gray__parameterized1' (0#1) [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:283]
+INFO: [Synth 8-226] default block is never used [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1206]
+INFO: [Synth 8-226] default block is never used [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1273]
+INFO: [Synth 8-226] default block is never used [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1295]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_reg_bit' [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1906]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_reg_bit' (0#1) [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1906]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized1' [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1858]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized1' (0#1) [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1858]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_rst' [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1618]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_sync_rst' [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1058]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_sync_rst' (0#1) [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1058]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_rst' (0#1) [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1618]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized2' [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1858]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized2' (0#1) [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1858]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized3' [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1858]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized3' (0#1) [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1858]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_base' (0#1) [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:55]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_async' (0#1) [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:2145]
+INFO: [Synth 8-638] synthesizing module 'cdc_sync' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:514]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2' to cell 'FDR' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:545]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3' to cell 'FDR' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:554]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4' to cell 'FDR' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:564]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5' to cell 'FDR' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:574]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6' to cell 'FDR' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:584]
+INFO: [Synth 8-256] done synthesizing module 'cdc_sync' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
+INFO: [Synth 8-638] synthesizing module 'counter_f' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:669]
+INFO: [Synth 8-256] done synthesizing module 'counter_f' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:669]
+INFO: [Synth 8-638] synthesizing module 'async_fifo_fg' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/6c82/hdl/lib_fifo_v1_0_rfs.vhd:255]
+	Parameter FIFO_MEMORY_TYPE bound to: auto - type: string 
+	Parameter FIFO_WRITE_DEPTH bound to: 16 - type: integer 
+	Parameter RELATED_CLOCKS bound to: 0 - type: integer 
+	Parameter WRITE_DATA_WIDTH bound to: 8 - type: integer 
+	Parameter READ_MODE bound to: fwft - type: string 
+	Parameter FIFO_READ_LATENCY bound to: 0 - type: integer 
+	Parameter FULL_RESET_VALUE bound to: 1 - type: integer 
+	Parameter USE_ADV_FEATURES bound to: 1F1F - type: string 
+	Parameter READ_DATA_WIDTH bound to: 8 - type: integer 
+	Parameter CDC_SYNC_STAGES bound to: 2 - type: integer 
+	Parameter WR_DATA_COUNT_WIDTH bound to: 5 - type: integer 
+	Parameter PROG_FULL_THRESH bound to: 10 - type: integer 
+	Parameter RD_DATA_COUNT_WIDTH bound to: 5 - type: integer 
+	Parameter PROG_EMPTY_THRESH bound to: 10 - type: integer 
+	Parameter DOUT_RESET_VALUE bound to: 0 - type: string 
+	Parameter ECC_MODE bound to: no_ecc - type: string 
+	Parameter WAKEUP_TIME bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'xpm_fifo_async' declared at '/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:2145' bound to instance 'xpm_fifo_async_inst' of component 'xpm_fifo_async' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/6c82/hdl/lib_fifo_v1_0_rfs.vhd:1932]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_async__parameterized1' [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:2145]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_base__parameterized0' [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:55]
+INFO: [Synth 8-226] default block is never used [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1206]
+INFO: [Synth 8-226] default block is never used [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1273]
+INFO: [Synth 8-226] default block is never used [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1295]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_base__parameterized0' (0#1) [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:55]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_async__parameterized1' (0#1) [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:2145]
+INFO: [Synth 8-256] done synthesizing module 'async_fifo_fg' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/6c82/hdl/lib_fifo_v1_0_rfs.vhd:255]
+INFO: [Synth 8-638] synthesizing module 'qspi_fifo_ifmodule' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:13465]
+INFO: [Synth 8-256] done synthesizing module 'qspi_fifo_ifmodule' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:13465]
+INFO: [Synth 8-638] synthesizing module 'qspi_occupancy_reg' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:3647]
+INFO: [Synth 8-256] done synthesizing module 'qspi_occupancy_reg' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:3647]
+INFO: [Synth 8-638] synthesizing module 'qspi_mode_0_module' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:8775]
+	Parameter INIT bound to: 1'b1 
+INFO: [Synth 8-113] binding component instance 'MST_TRANS_INHIBIT_D1_I' to cell 'FD' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:9350]
+	Parameter INIT bound to: 1'b1 
+INFO: [Synth 8-113] binding component instance 'SPI_TRISTATE_CONTROL_II' to cell 'FD' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:9378]
+	Parameter INIT bound to: 1'b1 
+INFO: [Synth 8-113] binding component instance 'SPI_TRISTATE_CONTROL_III' to cell 'FD' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:9390]
+	Parameter INIT bound to: 1'b1 
+INFO: [Synth 8-113] binding component instance 'SPI_TRISTATE_CONTROL_IV' to cell 'FD' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:9402]
+	Parameter INIT bound to: 1'b1 
+INFO: [Synth 8-113] binding component instance 'SPI_TRISTATE_CONTROL_V' to cell 'FD' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:9426]
+	Parameter INIT bound to: 1'b1 
+INFO: [Synth 8-113] binding component instance 'SPISEL_REG' to cell 'FD' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:9505]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'SCK_I_REG' to cell 'FD' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:9588]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'SCK_O_NE_4_FDRE_INST' to cell 'FDRE' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:10685]
+INFO: [Synth 8-256] done synthesizing module 'qspi_mode_0_module' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:8775]
+INFO: [Synth 8-638] synthesizing module 'qspi_cntrl_reg' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:13820]
+INFO: [Synth 8-113] binding component instance 'SPI_TRISTATE_CONTROL_I' to cell 'FDRE' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:14027]
+INFO: [Synth 8-113] binding component instance 'SPI_TRISTATE_CONTROL_I' to cell 'FDRE' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:14027]
+INFO: [Synth 8-256] done synthesizing module 'qspi_cntrl_reg' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:13820]
+INFO: [Synth 8-638] synthesizing module 'qspi_status_slave_sel_reg' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:2658]
+INFO: [Synth 8-256] done synthesizing module 'qspi_status_slave_sel_reg' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:2658]
+INFO: [Synth 8-638] synthesizing module 'soft_reset' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:874]
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:1005]
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:1005]
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:1005]
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:1005]
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:1005]
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:1005]
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:1005]
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:1005]
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:1005]
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:1005]
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:1005]
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:1005]
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:1005]
+INFO: [Common 17-14] Message 'Synth 8-113' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-256] done synthesizing module 'soft_reset' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:874]
+INFO: [Synth 8-638] synthesizing module 'interrupt_control' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/a040/hdl/interrupt_control_v3_1_vh_rfs.vhd:259]
+INFO: [Synth 8-256] done synthesizing module 'interrupt_control' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/a040/hdl/interrupt_control_v3_1_vh_rfs.vhd:259]
+INFO: [Synth 8-256] done synthesizing module 'qspi_core_interface' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:19206]
+INFO: [Synth 8-256] done synthesizing module 'axi_quad_spi_top' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:34994]
+INFO: [Synth 8-256] done synthesizing module 'axi_quad_spi' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:36738]
+INFO: [Synth 8-256] done synthesizing module 'design_1_axi_quad_spi_0_0' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ip/design_1_axi_quad_spi_0_0/synth/design_1_axi_quad_spi_0_0.vhd:97]
+WARNING: [Synth 8-6014] Unused sequential element gen_rd_b.gen_doutb_pipe.enb_pipe_reg[0] was removed.  [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:3017]
+WARNING: [Synth 8-6014] Unused sequential element dest_out_bin_ff_reg was removed.  [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:417]
+WARNING: [Synth 8-6014] Unused sequential element dest_out_bin_ff_reg was removed.  [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:417]
+WARNING: [Synth 8-6014] Unused sequential element dest_out_bin_ff_reg was removed.  [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:417]
+WARNING: [Synth 8-6014] Unused sequential element gdvld.data_valid_std_reg was removed.  [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:537]
+WARNING: [Synth 8-6014] Unused sequential element gen_pf_ic_rc.gae_ic_std.ram_aempty_i_reg was removed.  [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:757]
+WARNING: [Synth 8-6014] Unused sequential element gen_fwft.empty_fwft_fb_reg was removed.  [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1390]
+WARNING: [Synth 8-6014] Unused sequential element gdvld.data_valid_std_reg was removed.  [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:537]
+WARNING: [Synth 8-6014] Unused sequential element gen_pf_ic_rc.gae_ic_std.ram_aempty_i_reg was removed.  [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:757]
+WARNING: [Synth 8-6014] Unused sequential element gen_fwft.empty_fwft_fb_reg was removed.  [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1390]
+WARNING: [Synth 8-6014] Unused sequential element transfer_start_d2_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:9713]
+WARNING: [Synth 8-6014] Unused sequential element transfer_start_d3_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:9714]
+WARNING: [Synth 8-6014] Unused sequential element SPIXfer_done_int_pulse_d3_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:9771]
+WARNING: [Synth 8-6014] Unused sequential element SS_Asserted_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:10949]
+WARNING: [Synth 8-6014] Unused sequential element SS_Asserted_1dly_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:10950]
+WARNING: [Synth 8-6014] Unused sequential element MODF_strobe_int_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:10979]
+WARNING: [Synth 8-6014] Unused sequential element LEGACY_MD_WR_RD_ACK_GEN.Bus2IP_WrCE_d1_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:19837]
+WARNING: [Synth 8-6014] Unused sequential element LEGACY_MD_WR_RD_ACK_GEN.Bus2IP_WrCE_d2_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:19838]
+WARNING: [Synth 8-6014] Unused sequential element LEGACY_MD_WR_RD_ACK_GEN.Bus2IP_WrCE_d3_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:19839]
+WARNING: [Synth 8-6014] Unused sequential element LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_RdAck_core_reg_d1_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:19938]
+WARNING: [Synth 8-6014] Unused sequential element LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_RdAck_core_reg_1_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:19940]
+WARNING: [Synth 8-3848] Net cfgclk in module/entity qspi_core_interface does not have driver. [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:19183]
+WARNING: [Synth 8-3848] Net cfgmclk in module/entity qspi_core_interface does not have driver. [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:19184]
+WARNING: [Synth 8-3848] Net eos in module/entity qspi_core_interface does not have driver. [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:19185]
+WARNING: [Synth 8-3848] Net preq in module/entity qspi_core_interface does not have driver. [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:19186]
+WARNING: [Synth 8-3848] Net di in module/entity qspi_core_interface does not have driver. [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:19187]
+WARNING: [Synth 8-3848] Net s_axi4_awready in module/entity axi_quad_spi_top does not have driver. [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:34885]
+WARNING: [Synth 8-3848] Net s_axi4_wready in module/entity axi_quad_spi_top does not have driver. [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:34893]
+WARNING: [Synth 8-3848] Net s_axi4_bid in module/entity axi_quad_spi_top does not have driver. [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:34897]
+WARNING: [Synth 8-3848] Net s_axi4_bresp in module/entity axi_quad_spi_top does not have driver. [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:34898]
+WARNING: [Synth 8-3848] Net s_axi4_bvalid in module/entity axi_quad_spi_top does not have driver. [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:34899]
+WARNING: [Synth 8-3848] Net s_axi4_arready in module/entity axi_quad_spi_top does not have driver. [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:34913]
+WARNING: [Synth 8-3848] Net s_axi4_rid in module/entity axi_quad_spi_top does not have driver. [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:34917]
+WARNING: [Synth 8-3848] Net s_axi4_rdata in module/entity axi_quad_spi_top does not have driver. [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:34918]
+WARNING: [Synth 8-3848] Net s_axi4_rresp in module/entity axi_quad_spi_top does not have driver. [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:34919]
+WARNING: [Synth 8-3848] Net s_axi4_rlast in module/entity axi_quad_spi_top does not have driver. [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:34920]
+WARNING: [Synth 8-3848] Net s_axi4_rvalid in module/entity axi_quad_spi_top does not have driver. [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:34921]
+WARNING: [Synth 8-3848] Net io0_1_o in module/entity axi_quad_spi does not have driver. [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:36681]
+WARNING: [Synth 8-3848] Net io0_1_t in module/entity axi_quad_spi does not have driver. [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:36682]
+WARNING: [Synth 8-3848] Net io1_1_o in module/entity axi_quad_spi does not have driver. [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:36685]
+WARNING: [Synth 8-3848] Net io1_1_t in module/entity axi_quad_spi does not have driver. [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:36686]
+WARNING: [Synth 8-3848] Net io2_1_o in module/entity axi_quad_spi does not have driver. [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:36691]
+WARNING: [Synth 8-3848] Net io2_1_t in module/entity axi_quad_spi does not have driver. [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:36692]
+WARNING: [Synth 8-3848] Net io3_1_o in module/entity axi_quad_spi does not have driver. [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:36695]
+WARNING: [Synth 8-3848] Net io3_1_t in module/entity axi_quad_spi does not have driver. [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:36696]
+WARNING: [Synth 8-3848] Net ss_1_o in module/entity axi_quad_spi does not have driver. [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:36711]
+WARNING: [Synth 8-3848] Net ss_1_t in module/entity axi_quad_spi does not have driver. [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:36712]
+WARNING: [Synth 8-7129] Port bus2ip_data[1] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port bus2ip_data[2] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port bus2ip_data[3] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port bus2ip_data[4] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port bus2ip_data[5] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port bus2ip_data[6] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port bus2ip_data[7] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port bus2ip_data[8] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port bus2ip_data[9] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port bus2ip_data[10] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port bus2ip_data[11] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port bus2ip_data[12] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port bus2ip_data[13] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port bus2ip_data[14] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port bus2ip_data[15] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port bus2ip_data[16] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port bus2ip_data[17] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port bus2ip_be[1] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port bus2ip_be[2] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port bus2ip_be[3] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port interrupt_rdce[0] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port interrupt_rdce[1] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port interrupt_rdce[2] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port interrupt_rdce[3] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port interrupt_rdce[4] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port interrupt_rdce[5] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port interrupt_rdce[6] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port interrupt_rdce[9] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port interrupt_rdce[11] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port interrupt_rdce[12] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port interrupt_rdce[13] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port interrupt_rdce[14] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port interrupt_rdce[15] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port interrupt_wrce[0] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port interrupt_wrce[1] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port interrupt_wrce[2] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port interrupt_wrce[3] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port interrupt_wrce[4] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port interrupt_wrce[5] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port interrupt_wrce[6] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port interrupt_wrce[9] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port interrupt_wrce[11] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port interrupt_wrce[12] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port interrupt_wrce[13] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port interrupt_wrce[14] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port interrupt_wrce[15] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ipif_reg_interrupts[0] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ipif_reg_interrupts[1] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ipif_lvl_interrupts[0] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2IP_Data[0] in module soft_reset is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2IP_Data[1] in module soft_reset is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2IP_Data[2] in module soft_reset is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2IP_Data[3] in module soft_reset is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2IP_Data[4] in module soft_reset is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2IP_Data[5] in module soft_reset is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2IP_Data[6] in module soft_reset is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2IP_Data[7] in module soft_reset is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2IP_Data[8] in module soft_reset is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2IP_Data[9] in module soft_reset is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2IP_Data[10] in module soft_reset is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2IP_Data[11] in module soft_reset is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2IP_Data[12] in module soft_reset is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2IP_Data[13] in module soft_reset is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2IP_Data[14] in module soft_reset is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2IP_Data[15] in module soft_reset is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2IP_Data[16] in module soft_reset is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2IP_Data[17] in module soft_reset is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2IP_Data[18] in module soft_reset is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2IP_Data[19] in module soft_reset is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2IP_Data[20] in module soft_reset is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2IP_Data[21] in module soft_reset is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2IP_Data[22] in module soft_reset is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2IP_Data[23] in module soft_reset is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2IP_Data[24] in module soft_reset is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2IP_Data[25] in module soft_reset is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2IP_Data[26] in module soft_reset is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2IP_Data[27] in module soft_reset is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2IP_BE[0] in module soft_reset is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2IP_BE[1] in module soft_reset is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2IP_BE[2] in module soft_reset is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2IP_SPISSR_Data[0] in module qspi_status_slave_sel_reg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2IP_SPISSR_Data[1] in module qspi_status_slave_sel_reg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2IP_SPISSR_Data[2] in module qspi_status_slave_sel_reg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2IP_SPISSR_Data[3] in module qspi_status_slave_sel_reg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2IP_SPISSR_Data[4] in module qspi_status_slave_sel_reg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2IP_SPISSR_Data[5] in module qspi_status_slave_sel_reg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2IP_SPISSR_Data[6] in module qspi_status_slave_sel_reg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2IP_SPISSR_Data[7] in module qspi_status_slave_sel_reg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2IP_SPISSR_Data[8] in module qspi_status_slave_sel_reg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2IP_SPISSR_Data[9] in module qspi_status_slave_sel_reg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2IP_SPISSR_Data[10] in module qspi_status_slave_sel_reg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2IP_SPISSR_Data[11] in module qspi_status_slave_sel_reg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2IP_SPISSR_Data[12] in module qspi_status_slave_sel_reg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2IP_SPISSR_Data[13] in module qspi_status_slave_sel_reg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2IP_SPISSR_Data[14] in module qspi_status_slave_sel_reg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2IP_SPISSR_Data[15] in module qspi_status_slave_sel_reg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2IP_SPISSR_Data[16] in module qspi_status_slave_sel_reg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2IP_SPISSR_Data[17] in module qspi_status_slave_sel_reg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2IP_SPISSR_Data[18] in module qspi_status_slave_sel_reg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2IP_SPISSR_Data[19] in module qspi_status_slave_sel_reg is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:35 ; elapsed = 00:01:18 . Memory (MB): peak = 2876.328 ; gain = 0.000 ; free physical = 791 ; free virtual = 1309
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:35 ; elapsed = 00:01:18 . Memory (MB): peak = 2876.328 ; gain = 0.000 ; free physical = 768 ; free virtual = 1289
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:35 ; elapsed = 00:01:18 . Memory (MB): peak = 2876.328 ; gain = 0.000 ; free physical = 768 ; free virtual = 1289
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2876.328 ; gain = 0.000 ; free physical = 698 ; free virtual = 1220
+INFO: [Netlist 29-17] Analyzing 107 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ip/design_1_axi_quad_spi_0_0/design_1_axi_quad_spi_0_0_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ip/design_1_axi_quad_spi_0_0/design_1_axi_quad_spi_0_0_ooc.xdc] for cell 'U0'
+Parsing XDC File [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ip/design_1_axi_quad_spi_0_0/design_1_axi_quad_spi_0_0_board.xdc] for cell 'U0'
+Finished Parsing XDC File [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ip/design_1_axi_quad_spi_0_0/design_1_axi_quad_spi_0_0_board.xdc] for cell 'U0'
+Parsing XDC File [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ip/design_1_axi_quad_spi_0_0/design_1_axi_quad_spi_0_0.xdc] for cell 'U0'
+Finished Parsing XDC File [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ip/design_1_axi_quad_spi_0_0/design_1_axi_quad_spi_0_0.xdc] for cell 'U0'
+Parsing XDC File [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.runs/design_1_axi_quad_spi_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.runs/design_1_axi_quad_spi_0_0_synth_1/dont_touch.xdc]
+Parsing XDC File [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ip/design_1_axi_quad_spi_0_0/design_1_axi_quad_spi_0_0_clocks.xdc] for cell 'U0'
+Finished Parsing XDC File [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ip/design_1_axi_quad_spi_0_0/design_1_axi_quad_spi_0_0_clocks.xdc] for cell 'U0'
+INFO: [Vivado 12-3272] Current instance is the top level cell 'U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.RX_FIFO_II/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst' of design 'preSynthElab_1' [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+WARNING: [XPM_CDC_GRAY: TCL-1000] The source and destination clocks are the same. 
+     Instance: U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.RX_FIFO_II/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+INFO: [Vivado 12-3272] Current instance is the top level cell 'U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.RX_FIFO_II/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst' of design 'preSynthElab_1' [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+WARNING: [XPM_CDC_GRAY: TCL-1000] The source and destination clocks are the same. 
+     Instance: U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.RX_FIFO_II/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+INFO: [Vivado 12-3272] Current instance is the top level cell 'U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.TX_FIFO_II/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst' of design 'preSynthElab_1' [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+WARNING: [XPM_CDC_GRAY: TCL-1000] The source and destination clocks are the same. 
+     Instance: U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.TX_FIFO_II/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+INFO: [Vivado 12-3272] Current instance is the top level cell 'U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.TX_FIFO_II/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst' of design 'preSynthElab_1' [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+WARNING: [XPM_CDC_GRAY: TCL-1000] The source and destination clocks are the same. 
+     Instance: U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.TX_FIFO_II/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+INFO: [Vivado 12-3272] Current instance is the top level cell 'U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.RX_FIFO_II/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst' of design 'preSynthElab_1' [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+WARNING: [XPM_CDC_GRAY: TCL-1000] The source and destination clocks are the same. 
+     Instance: U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.RX_FIFO_II/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+INFO: [Vivado 12-3272] Current instance is the top level cell 'U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.TX_FIFO_II/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst' of design 'preSynthElab_1' [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+WARNING: [XPM_CDC_GRAY: TCL-1000] The source and destination clocks are the same. 
+     Instance: U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.TX_FIFO_II/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+INFO: [Vivado 12-3272] Current instance is the top level cell 'U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.RX_FIFO_II/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst' of design 'preSynthElab_1' [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+WARNING: [XPM_CDC_GRAY: TCL-1000] The source and destination clocks are the same. 
+     Instance: U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.RX_FIFO_II/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+INFO: [Vivado 12-3272] Current instance is the top level cell 'U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.TX_FIFO_II/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst' of design 'preSynthElab_1' [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+WARNING: [XPM_CDC_GRAY: TCL-1000] The source and destination clocks are the same. 
+     Instance: U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.TX_FIFO_II/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_axi_quad_spi_0_0_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_axi_quad_spi_0_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_axi_quad_spi_0_0_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_axi_quad_spi_0_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Project 1-1714] 14 XPM XDC files have been applied to the design.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2970.172 ; gain = 0.000 ; free physical = 1731 ; free virtual = 2145
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 107 instances were transformed.
+  FD => FDRE: 11 instances
+  FDR => FDRE: 79 instances
+  FDRSE => FDRSE (FDRE, LUT4, VCC): 17 instances
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.13 ; elapsed = 00:00:00.5 . Memory (MB): peak = 2970.172 ; gain = 0.000 ; free physical = 1705 ; free virtual = 2127
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:59 ; elapsed = 00:02:23 . Memory (MB): peak = 2970.172 ; gain = 93.844 ; free physical = 623 ; free virtual = 1706
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:00 ; elapsed = 00:02:23 . Memory (MB): peak = 2970.172 ; gain = 93.844 ; free physical = 610 ; free virtual = 1698
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for U0. (constraint file  /home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.runs/design_1_axi_quad_spi_0_0_synth_1/dont_touch.xdc, line 9).
+Applied set_property KEEP_HIERARCHY = SOFT for U0/\NO_DUAL_QUAD_MODE.QSPI_NORMAL /\QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I /\FIFO_EXISTS.RX_FIFO_II /\gnuram_async_fifo.xpm_fifo_base_inst /\gen_cdc_pntr.rd_pntr_cdc_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for U0/\NO_DUAL_QUAD_MODE.QSPI_NORMAL /\QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I /\FIFO_EXISTS.TX_FIFO_II /\xpm_fifo_instance.xpm_fifo_async_inst /\gnuram_async_fifo.xpm_fifo_base_inst /\gen_cdc_pntr.rd_pntr_cdc_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for U0/\NO_DUAL_QUAD_MODE.QSPI_NORMAL /\QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I /\FIFO_EXISTS.RX_FIFO_II /\gnuram_async_fifo.xpm_fifo_base_inst /\gen_cdc_pntr.wr_pntr_cdc_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for U0/\NO_DUAL_QUAD_MODE.QSPI_NORMAL /\QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I /\FIFO_EXISTS.TX_FIFO_II /\xpm_fifo_instance.xpm_fifo_async_inst /\gnuram_async_fifo.xpm_fifo_base_inst /\gen_cdc_pntr.wr_pntr_cdc_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for U0/\NO_DUAL_QUAD_MODE.QSPI_NORMAL /\QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I /\FIFO_EXISTS.RX_FIFO_II /\gnuram_async_fifo.xpm_fifo_base_inst /\gen_cdc_pntr.rd_pntr_cdc_dc_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for U0/\NO_DUAL_QUAD_MODE.QSPI_NORMAL /\QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I /\FIFO_EXISTS.TX_FIFO_II /\xpm_fifo_instance.xpm_fifo_async_inst /\gnuram_async_fifo.xpm_fifo_base_inst /\gen_cdc_pntr.rd_pntr_cdc_dc_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for U0/\NO_DUAL_QUAD_MODE.QSPI_NORMAL /\QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I /\FIFO_EXISTS.RX_FIFO_II /\gnuram_async_fifo.xpm_fifo_base_inst /\gen_cdc_pntr.wr_pntr_cdc_dc_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for U0/\NO_DUAL_QUAD_MODE.QSPI_NORMAL /\QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I /\FIFO_EXISTS.TX_FIFO_II /\xpm_fifo_instance.xpm_fifo_async_inst /\gnuram_async_fifo.xpm_fifo_base_inst /\gen_cdc_pntr.wr_pntr_cdc_dc_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for U0/\NO_DUAL_QUAD_MODE.QSPI_NORMAL /\QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I /\FIFO_EXISTS.RX_FIFO_II /\gnuram_async_fifo.xpm_fifo_base_inst /xpm_fifo_rst_inst/\gen_rst_ic.rrst_wr_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for U0/\NO_DUAL_QUAD_MODE.QSPI_NORMAL /\QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I /\FIFO_EXISTS.TX_FIFO_II /\xpm_fifo_instance.xpm_fifo_async_inst /\gnuram_async_fifo.xpm_fifo_base_inst /xpm_fifo_rst_inst/\gen_rst_ic.rrst_wr_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for U0/\NO_DUAL_QUAD_MODE.QSPI_NORMAL /\QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I /\FIFO_EXISTS.RX_FIFO_II /\gnuram_async_fifo.xpm_fifo_base_inst /xpm_fifo_rst_inst/\gen_rst_ic.wrst_rd_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for U0/\NO_DUAL_QUAD_MODE.QSPI_NORMAL /\QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I /\FIFO_EXISTS.TX_FIFO_II /\xpm_fifo_instance.xpm_fifo_async_inst /\gnuram_async_fifo.xpm_fifo_base_inst /xpm_fifo_rst_inst/\gen_rst_ic.wrst_rd_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for U0/\NO_DUAL_QUAD_MODE.QSPI_NORMAL /\QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I /\FIFO_EXISTS.RX_FIFO_II . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for U0/\NO_DUAL_QUAD_MODE.QSPI_NORMAL /\QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I /\FIFO_EXISTS.TX_FIFO_II /\xpm_fifo_instance.xpm_fifo_async_inst . (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:00 ; elapsed = 00:02:23 . Memory (MB): peak = 2970.172 ; gain = 93.844 ; free physical = 526 ; free virtual = 1657
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'slave_attachment'
+INFO: [Synth 8-802] inferred FSM for state register 'gen_rst_ic.curr_wrst_state_reg' in module 'xpm_fifo_rst__xdcDup__1'
+INFO: [Synth 8-802] inferred FSM for state register 'gen_rst_ic.curr_rrst_state_reg' in module 'xpm_fifo_rst__xdcDup__1'
+INFO: [Synth 8-802] inferred FSM for state register 'gen_fwft.curr_fwft_state_reg' in module 'xpm_fifo_base'
+INFO: [Synth 8-802] inferred FSM for state register 'gen_rst_ic.curr_wrst_state_reg' in module 'xpm_fifo_rst'
+INFO: [Synth 8-802] inferred FSM for state register 'gen_rst_ic.curr_rrst_state_reg' in module 'xpm_fifo_rst'
+INFO: [Synth 8-802] inferred FSM for state register 'gen_fwft.curr_fwft_state_reg' in module 'xpm_fifo_base__parameterized0'
+INFO: [Synth 8-802] inferred FSM for state register 'LOCAL_TX_EMPTY_FIFO_12_GEN.spi_cntrl_ps_reg' in module 'qspi_mode_0_module'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE2 |                             0001 |                               00
+                  iSTATE |                             0010 |                               01
+                 iSTATE0 |                             0100 |                               10
+                 iSTATE1 |                             1000 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'slave_attachment'
+INFO: [Synth 8-5552] Implemented safe state 'default_state' for state register 'gen_rst_ic.curr_wrst_state_reg' in module 'xpm_fifo_rst__xdcDup__1'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+               WRST_IDLE |                            00001 |                              000
+                 WRST_IN |                            00010 |                              010
+                WRST_OUT |                            00100 |                              111
+               WRST_EXIT |                            01000 |                              110
+            WRST_GO2IDLE |                            10000 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'gen_rst_ic.curr_wrst_state_reg' using encoding 'one-hot' in module 'xpm_fifo_rst__xdcDup__1'
+INFO: [Synth 8-5552] Implemented safe state 'default_state' for state register 'gen_rst_ic.curr_rrst_state_reg' in module 'xpm_fifo_rst__xdcDup__1'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+               RRST_IDLE |                               00 |                               00
+                 RRST_IN |                               01 |                               10
+                RRST_OUT |                               10 |                               11
+               RRST_EXIT |                               11 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'gen_rst_ic.curr_rrst_state_reg' using encoding 'sequential' in module 'xpm_fifo_rst__xdcDup__1'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 invalid |                               00 |                               00
+            stage1_valid |                               01 |                               10
+       both_stages_valid |                               10 |                               11
+            stage2_valid |                               11 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'gen_fwft.curr_fwft_state_reg' using encoding 'sequential' in module 'xpm_fifo_base'
+INFO: [Synth 8-5552] Implemented safe state 'default_state' for state register 'gen_rst_ic.curr_wrst_state_reg' in module 'xpm_fifo_rst'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+               WRST_IDLE |                            00001 |                              000
+                 WRST_IN |                            00010 |                              010
+                WRST_OUT |                            00100 |                              111
+               WRST_EXIT |                            01000 |                              110
+            WRST_GO2IDLE |                            10000 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'gen_rst_ic.curr_wrst_state_reg' using encoding 'one-hot' in module 'xpm_fifo_rst'
+INFO: [Synth 8-5552] Implemented safe state 'default_state' for state register 'gen_rst_ic.curr_rrst_state_reg' in module 'xpm_fifo_rst'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+               RRST_IDLE |                               00 |                               00
+                 RRST_IN |                               01 |                               10
+                RRST_OUT |                               10 |                               11
+               RRST_EXIT |                               11 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'gen_rst_ic.curr_rrst_state_reg' using encoding 'sequential' in module 'xpm_fifo_rst'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 invalid |                               00 |                               00
+            stage1_valid |                               01 |                               10
+       both_stages_valid |                               10 |                               11
+            stage2_valid |                               11 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'gen_fwft.curr_fwft_state_reg' using encoding 'sequential' in module 'xpm_fifo_base__parameterized0'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                               00 |                               00
+           transfer_okay |                               01 |                               01
+      temp_transfer_okay |                               10 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'LOCAL_TX_EMPTY_FIFO_12_GEN.spi_cntrl_ps_reg' using encoding 'sequential' in module 'qspi_mode_0_module'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:02 ; elapsed = 00:02:25 . Memory (MB): peak = 2970.172 ; gain = 93.844 ; free physical = 156 ; free virtual = 979
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    6 Bit       Adders := 1     
+	   4 Input    5 Bit       Adders := 6     
+	   2 Input    5 Bit       Adders := 5     
+	   3 Input    5 Bit       Adders := 4     
+	   4 Input    4 Bit       Adders := 10    
+	   3 Input    4 Bit       Adders := 2     
+	   2 Input    4 Bit       Adders := 2     
+	   4 Input    2 Bit       Adders := 2     
+	   2 Input    2 Bit       Adders := 1     
++---XORs : 
+	   2 Input      5 Bit         XORs := 4     
+	   2 Input      4 Bit         XORs := 4     
+	   2 Input      1 Bit         XORs := 58    
++---Registers : 
+	               32 Bit    Registers := 2     
+	               14 Bit    Registers := 1     
+	                8 Bit    Registers := 9     
+	                7 Bit    Registers := 1     
+	                6 Bit    Registers := 1     
+	                5 Bit    Registers := 33    
+	                4 Bit    Registers := 30    
+	                2 Bit    Registers := 12    
+	                1 Bit    Registers := 189   
++---RAMs : 
+	              128 Bit	(16 X 8 bit)          RAMs := 2     
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 3     
+	   2 Input    8 Bit        Muxes := 9     
+	   2 Input    7 Bit        Muxes := 1     
+	   6 Input    5 Bit        Muxes := 2     
+	   2 Input    5 Bit        Muxes := 19    
+	   3 Input    5 Bit        Muxes := 2     
+	   4 Input    4 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 8     
+	   2 Input    2 Bit        Muxes := 69    
+	   3 Input    2 Bit        Muxes := 1     
+	   4 Input    2 Bit        Muxes := 15    
+	   5 Input    2 Bit        Muxes := 2     
+	  11 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 107   
+	   4 Input    1 Bit        Muxes := 8     
+	   6 Input    1 Bit        Muxes := 4     
+	   5 Input    1 Bit        Muxes := 6     
+	   3 Input    1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_FDR.CMD_ERR_S2AX_1_CDC) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_FDR.CMD_ERR_S2AX_2) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_FDR.MST_N_SLV_MODE_S2AX_1_CDC) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_FDR.MST_N_SLV_MODE_S2AX_2) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_FDR.SLV_MODF_STRB_S2AX_1_CDC) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_FDR.SLV_MODF_STRB_S2AX_2) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_FDR.SLV_MODF_STRB_S2AX_3) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_FDR.MODF_STROBE_S2AX_1_CDC) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_FDR.MODF_STROBE_S2AX_2) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_FDR.MODF_STROBE_S2AX_3) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_FDR.RX_FIFO_EMPTY_AX2S_1_CDC) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_FDR.RX_FIFO_EMPTY_AX2S_2) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_FDR.TX_FIFO_EMPTY_S2AX_1_CDC) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_FDR.TX_FIFO_EMPTY_S2AX_2) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_FDR.TX_FIFO_FULL_AX2S_1_CDC) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_FDR.TX_FIFO_FULL_AX2S_2) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_FDR.SPIXFER_DONE_S2AX_1_CDC) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_FDR.SPIXFER_DONE_S2AX_2) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_FDR.RX_FIFO_FULL_S2AX_1_CDC) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_FDR.RX_FIFO_FULL_S2AX_2) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_FDR.DTR_UNDERRUN_S2AX_1_CDC) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_FDR.DTR_UNDERRUN_S2AX_2) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_FDR.SPICR_5_TXFIFO_AX2S_1_CDC) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_FDR.SPICR_5_TXFIFO_AX2S_2) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_FDR.SPICR_6_RXFIFO_RST_AX2S_1_CDC) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_FDR.SPICR_6_RXFIFO_RST_AX2S_2) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_FDR.SR_3_MODF_AX2S_1_CDC) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_FDR.SR_3_MODF_AX2S_2) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.RX_FIFO_EMPTY_SYNC_AXI_2_SPI_CDC/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.RX_FIFO_EMPTY_SYNC_AXI_2_SPI_CDC/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.RX_FIFO_EMPTY_SYNC_AXI_2_SPI_CDC/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.RX_FIFO_EMPTY_SYNC_AXI_2_SPI_CDC/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.RX_FIFO_FULL_SYNCED_SPI_2_AXI_CDC/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.RX_FIFO_FULL_SYNCED_SPI_2_AXI_CDC/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.RX_FIFO_FULL_SYNCED_SPI_2_AXI_CDC/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.RX_FIFO_FULL_SYNCED_SPI_2_AXI_CDC/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/LOGIC_FOR_MD_0_GEN.SPI_MODULE_I/MST_TRANS_INHIBIT_D1_I) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/LOGIC_FOR_MD_0_GEN.SPI_MODULE_I/SPISEL_REG) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/LOGIC_FOR_MD_0_GEN.SPI_MODULE_I/SCK_I_REG) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/IO2_I_REG) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/IO3_I_REG) is unused and will be removed from module axi_quad_spi.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:10 ; elapsed = 00:02:34 . Memory (MB): peak = 2970.172 ; gain = 93.844 ; free physical = 1296 ; free virtual = 2134
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Preliminary Mapping Report (see note below)
++-----------------+----------------------------------+-----------+----------------------+-------------+
+|Module Name      | RTL Object                       | Inference | Size (Depth x Width) | Primitives  | 
++-----------------+----------------------------------+-----------+----------------------+-------------+
+|xpm_memory_base: | gen_wr_a.gen_word_narrow.mem_reg | Implied   | 16 x 8               | RAM32M x 2  | 
+|xpm_memory_base: | gen_wr_a.gen_word_narrow.mem_reg | Implied   | 16 x 8               | RAM32M x 2  | 
++-----------------+----------------------------------+-----------+----------------------+-------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:22 ; elapsed = 00:02:46 . Memory (MB): peak = 2970.172 ; gain = 93.844 ; free physical = 1089 ; free virtual = 2047
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:23 ; elapsed = 00:02:47 . Memory (MB): peak = 2970.172 ; gain = 93.844 ; free physical = 1012 ; free virtual = 1983
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Final Mapping Report
++-----------------+----------------------------------+-----------+----------------------+-------------+
+|Module Name      | RTL Object                       | Inference | Size (Depth x Width) | Primitives  | 
++-----------------+----------------------------------+-----------+----------------------+-------------+
+|xpm_memory_base: | gen_wr_a.gen_word_narrow.mem_reg | Implied   | 16 x 8               | RAM32M x 2  | 
+|xpm_memory_base: | gen_wr_a.gen_word_narrow.mem_reg | Implied   | 16 x 8               | RAM32M x 2  | 
++-----------------+----------------------------------+-----------+----------------------+-------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:24 ; elapsed = 00:02:49 . Memory (MB): peak = 2970.172 ; gain = 93.844 ; free physical = 986 ; free virtual = 1971
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:29 ; elapsed = 00:02:54 . Memory (MB): peak = 2970.172 ; gain = 93.844 ; free physical = 1998 ; free virtual = 3012
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:29 ; elapsed = 00:02:54 . Memory (MB): peak = 2970.172 ; gain = 93.844 ; free physical = 2004 ; free virtual = 3018
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:29 ; elapsed = 00:02:54 . Memory (MB): peak = 2970.172 ; gain = 93.844 ; free physical = 2130 ; free virtual = 3145
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:29 ; elapsed = 00:02:54 . Memory (MB): peak = 2970.172 ; gain = 93.844 ; free physical = 2136 ; free virtual = 3150
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:30 ; elapsed = 00:02:54 . Memory (MB): peak = 2970.172 ; gain = 93.844 ; free physical = 2157 ; free virtual = 3172
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:30 ; elapsed = 00:02:54 . Memory (MB): peak = 2970.172 ; gain = 93.844 ; free physical = 2156 ; free virtual = 3172
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |LUT1     |    16|
+|2     |LUT2     |   100|
+|3     |LUT3     |    79|
+|4     |LUT4     |    75|
+|5     |LUT5     |   122|
+|6     |LUT6     |   126|
+|7     |RAM32M   |     2|
+|8     |RAM32X1D |     4|
+|9     |FD       |     6|
+|10    |FDR      |    43|
+|11    |FDRE     |   556|
+|12    |FDSE     |    28|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:30 ; elapsed = 00:02:54 . Memory (MB): peak = 2970.172 ; gain = 93.844 ; free physical = 2154 ; free virtual = 3170
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 223 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:19 ; elapsed = 00:02:04 . Memory (MB): peak = 2970.172 ; gain = 0.000 ; free physical = 2194 ; free virtual = 3211
+Synthesis Optimization Complete : Time (s): cpu = 00:01:30 ; elapsed = 00:02:54 . Memory (MB): peak = 2970.172 ; gain = 93.844 ; free physical = 2194 ; free virtual = 3211
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2970.172 ; gain = 0.000 ; free physical = 2243 ; free virtual = 3267
+INFO: [Netlist 29-17] Analyzing 55 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+WARNING: [Constraints 18-5572] Instance U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/LOGIC_FOR_MD_0_GEN.SPI_MODULE_I/RATIO_NOT_EQUAL_4_GENERATE.SCK_O_NQ_4_NO_STARTUP_USED.SCK_O_NE_4_FDRE_INST has IOB constraint set, However, the instance does not seem to have valid I/O connection to be placed into I/O. The constraint on the instance will be ignored.
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2970.172 ; gain = 0.000 ; free physical = 2191 ; free virtual = 3236
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 55 instances were transformed.
+  FD => FDRE: 6 instances
+  FDR => FDRE: 43 instances
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 2 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 4 instances
+
+Synth Design complete, checksum: 97de5d96
+INFO: [Common 17-83] Releasing license: Synthesis
+334 Infos, 158 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:02:02 ; elapsed = 00:06:34 . Memory (MB): peak = 2970.172 ; gain = 93.844 ; free physical = 2383 ; free virtual = 3438
+INFO: [Common 17-1381] The checkpoint '/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.runs/design_1_axi_quad_spi_0_0_synth_1/design_1_axi_quad_spi_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_axi_quad_spi_0_0, cache-ID = c7312fc36401edf8
+INFO: [Coretcl 2-1174] Renamed 81 cell refs.
+INFO: [Common 17-1381] The checkpoint '/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.runs/design_1_axi_quad_spi_0_0_synth_1/design_1_axi_quad_spi_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_1_axi_quad_spi_0_0_utilization_synth.rpt -pb design_1_axi_quad_spi_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun May 26 16:05:13 2024...

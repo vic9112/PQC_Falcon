@@ -1,0 +1,609 @@
+
+*** Running vivado
+    with args -log design_1_caravel_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_caravel_0_0.tcl
+
+
+****** Vivado v2022.1 (64-bit)
+  **** SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
+  **** IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source design_1_caravel_0_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2723.984 ; gain = 0.023 ; free physical = 2300 ; free virtual = 3498
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vitis_prj/hls_caravel_ps'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vitis_prj/hls_output_pin'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2022.1/data/ip'.
+Command: synth_design -top design_1_caravel_0_0 -part xc7z020clg400-1 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 6218
+WARNING: [Synth 8-9501] generate block is allowed only inside loop and conditional generate in SystemVerilog mode [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:4023]
+CRITICAL WARNING: [Synth 8-9873] overwriting previous definition of module 'ccs_in_wait_v1' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj2/rtl/Out_copy.v:45]
+INFO: [Synth 8-9937] previous definition of design element 'ccs_in_wait_v1' is here [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj2/rtl/In_copy1.v:45]
+CRITICAL WARNING: [Synth 8-9873] overwriting previous definition of module 'ccs_out_wait_v1' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj2/rtl/Out_copy.v:91]
+INFO: [Synth 8-9937] previous definition of design element 'ccs_out_wait_v1' is here [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj2/rtl/In_copy1.v:91]
+CRITICAL WARNING: [Synth 8-9873] overwriting previous definition of module 'mgc_io_sync_v2' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj2/rtl/Out_copy.v:124]
+INFO: [Synth 8-9937] previous definition of design element 'mgc_io_sync_v2' is here [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj2/rtl/In_copy1.v:124]
+CRITICAL WARNING: [Synth 8-9873] overwriting previous definition of module 'ccs_in_v1' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj2/rtl/Out_copy.v:158]
+INFO: [Synth 8-9937] previous definition of design element 'ccs_in_v1' is here [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj2/rtl/In_copy1.v:158]
+CRITICAL WARNING: [Synth 8-9873] overwriting previous definition of module 'ccs_in_wait_v1' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:87]
+INFO: [Synth 8-9937] previous definition of design element 'ccs_in_wait_v1' is here [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj2/rtl/Out_copy.v:45]
+CRITICAL WARNING: [Synth 8-9873] overwriting previous definition of module 'ccs_out_wait_v1' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:133]
+INFO: [Synth 8-9937] previous definition of design element 'ccs_out_wait_v1' is here [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj2/rtl/Out_copy.v:91]
+CRITICAL WARNING: [Synth 8-9873] overwriting previous definition of module 'mgc_io_sync_v2' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:166]
+INFO: [Synth 8-9937] previous definition of design element 'mgc_io_sync_v2' is here [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj2/rtl/Out_copy.v:124]
+CRITICAL WARNING: [Synth 8-9873] overwriting previous definition of module 'ccs_in_wait_v1' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj2/rtl/concat_rtl.v:45]
+INFO: [Synth 8-9937] previous definition of design element 'ccs_in_wait_v1' is here [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:87]
+CRITICAL WARNING: [Synth 8-9873] overwriting previous definition of module 'ccs_out_wait_v1' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj2/rtl/concat_rtl.v:91]
+INFO: [Synth 8-9937] previous definition of design element 'ccs_out_wait_v1' is here [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:133]
+CRITICAL WARNING: [Synth 8-9873] overwriting previous definition of module 'mgc_io_sync_v2' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj2/rtl/concat_rtl.v:124]
+INFO: [Synth 8-9937] previous definition of design element 'mgc_io_sync_v2' is here [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:166]
+CRITICAL WARNING: [Synth 8-9873] overwriting previous definition of module 'ccs_in_v1' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj2/rtl/concat_rtl.v:158]
+INFO: [Synth 8-9937] previous definition of design element 'ccs_in_v1' is here [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj2/rtl/Out_copy.v:158]
+CRITICAL WARNING: [Synth 8-9873] overwriting previous definition of module 'mgc_shift_l_v5' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj2/rtl/concat_rtl.v:8997]
+INFO: [Synth 8-9937] previous definition of design element 'mgc_shift_l_v5' is here [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj2/rtl/Out_copy.v:209]
+CRITICAL WARNING: [Synth 8-9873] overwriting previous definition of module 'mgc_shift_r_v5' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj2/rtl/concat_rtl.v:9039]
+INFO: [Synth 8-9937] previous definition of design element 'mgc_shift_r_v5' is here [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj2/rtl/Out_copy.v:251]
+CRITICAL WARNING: [Synth 8-9873] overwriting previous definition of module 'leading_sign_53_0' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj2/rtl/concat_rtl.v:9238]
+INFO: [Synth 8-9937] previous definition of design element 'leading_sign_53_0' is here [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj2/rtl/Out_copy.v:450]
+CRITICAL WARNING: [Synth 8-9339] data object 'line1_ramf_we' is already declared [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj2/rtl/user_prj2.v:304]
+INFO: [Synth 8-6826] previous declaration of 'line1_ramf_we' is from here [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj2/rtl/user_prj2.v:303]
+CRITICAL WARNING: [Synth 8-10006] second declaration of 'line1_ramf_we' ignored [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj2/rtl/user_prj2.v:304]
+WARNING: [Synth 8-8984] 'line1_ramf_we' was previously declared without a range [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj2/rtl/user_prj2.v:304]
+WARNING: [Synth 8-6901] identifier 'RD_IDLE' is used before its declaration [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj2/rtl/user_prj2.v:115]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:12 . Memory (MB): peak = 2723.984 ; gain = 0.000 ; free physical = 119 ; free virtual = 1164
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_1_caravel_0_0' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ip/design_1_caravel_0_0/synth/design_1_caravel_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'caravel' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/caravel.v:77]
+INFO: [Synth 8-6157] synthesizing module 'chip_io' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/chip_io.v:59]
+INFO: [Synth 8-6157] synthesizing module 'mprj_io' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/mprj_io.v:68]
+INFO: [Synth 8-6157] synthesizing module 'boledu_io' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/mprj_io.v:124]
+INFO: [Synth 8-6155] done synthesizing module 'boledu_io' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/mprj_io.v:124]
+INFO: [Synth 8-6155] done synthesizing module 'mprj_io' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/mprj_io.v:68]
+WARNING: [Synth 8-7071] port 'vdda' of module 'mprj_io' is unconnected for instance 'mprj_pads' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/chip_io.v:155]
+WARNING: [Synth 8-7071] port 'vssa' of module 'mprj_io' is unconnected for instance 'mprj_pads' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/chip_io.v:155]
+WARNING: [Synth 8-7071] port 'io_in_3v3' of module 'mprj_io' is unconnected for instance 'mprj_pads' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/chip_io.v:155]
+WARNING: [Synth 8-7071] port 'analog_noesd_io' of module 'mprj_io' is unconnected for instance 'mprj_pads' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/chip_io.v:155]
+WARNING: [Synth 8-7023] instance 'mprj_pads' of module 'mprj_io' has 33 connections declared, but only 29 given [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/chip_io.v:155]
+INFO: [Synth 8-6155] done synthesizing module 'chip_io' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/chip_io.v:59]
+WARNING: [Synth 8-6104] Input port 'flash_io1' has an internal driver [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/caravel.v:371]
+WARNING: [Synth 8-7071] port 'mprj_io_in' of module 'chip_io' is unconnected for instance 'padframe' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/caravel.v:360]
+WARNING: [Synth 8-7023] instance 'padframe' of module 'chip_io' has 44 connections declared, but only 43 given [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/caravel.v:360]
+INFO: [Synth 8-6157] synthesizing module 'mgmt_core_wrapper' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core_wrapper.v:38]
+INFO: [Synth 8-6157] synthesizing module 'mgmt_core' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:4]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:1888]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:6809]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:6825]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7136]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7181]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7204]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7216]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7228]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7261]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7273]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7317]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7410]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7422]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7434]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7482]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7537]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7579]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7591]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7632]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7673]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7714]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7755]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7796]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7837]
+INFO: [Synth 8-6157] synthesizing module 'RAM256' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/vip/RAM256.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'RAM256' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/vip/RAM256.v:1]
+INFO: [Synth 8-6157] synthesizing module 'RAM128' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/vip/RAM128.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'RAM128' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/vip/RAM128.v:1]
+INFO: [Synth 8-6157] synthesizing module 'VexRiscv' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/VexRiscv_MinDebugCache.v:46]
+INFO: [Synth 8-6157] synthesizing module 'InstructionCache' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/VexRiscv_MinDebugCache.v:4305]
+INFO: [Synth 8-6155] done synthesizing module 'InstructionCache' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/VexRiscv_MinDebugCache.v:4305]
+INFO: [Synth 8-6155] done synthesizing module 'VexRiscv' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/VexRiscv_MinDebugCache.v:46]
+INFO: [Synth 8-6155] done synthesizing module 'mgmt_core' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'mgmt_core_wrapper' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core_wrapper.v:38]
+INFO: [Synth 8-6157] synthesizing module 'user_project_wrapper' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/rtl/user_project_wrapper.v:32]
+INFO: [Synth 8-6157] synthesizing module 'FSIC' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/rtl/fsic.v:21]
+INFO: [Synth 8-6157] synthesizing module 'CFG_CTRL' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/config_ctrl/rtl/config_ctrl.v:3]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/config_ctrl/rtl/config_ctrl.v:352]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/config_ctrl/rtl/config_ctrl.v:461]
+INFO: [Synth 8-6155] done synthesizing module 'CFG_CTRL' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/config_ctrl/rtl/config_ctrl.v:3]
+INFO: [Synth 8-6157] synthesizing module 'AXIL_AXIS' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axil_axis.sv:7]
+INFO: [Synth 8-6157] synthesizing module 'axilite_master' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axilite_master.sv:9]
+INFO: [Synth 8-6155] done synthesizing module 'axilite_master' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axilite_master.sv:9]
+INFO: [Synth 8-6157] synthesizing module 'axilite_slave' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axilite_slave.sv:9]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axilite_slave.sv:104]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axilite_slave.sv:167]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axilite_slave.sv:185]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axilite_slave.sv:237]
+INFO: [Synth 8-6155] done synthesizing module 'axilite_slave' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axilite_slave.sv:9]
+INFO: [Synth 8-6157] synthesizing module 'axis_master' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axis_master.sv:9]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axis_master.sv:78]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axis_master.sv:97]
+INFO: [Synth 8-6155] done synthesizing module 'axis_master' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axis_master.sv:9]
+INFO: [Synth 8-6157] synthesizing module 'axis_slave' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axis_slave.sv:9]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axis_slave.sv:78]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axis_slave.sv:94]
+INFO: [Synth 8-6155] done synthesizing module 'axis_slave' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axis_slave.sv:9]
+INFO: [Synth 8-6157] synthesizing module 'axi_ctrl_logic' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axi_ctrl_logic.sv:11]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axi_ctrl_logic.sv:216]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axi_ctrl_logic.sv:276]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axi_ctrl_logic.sv:412]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axi_ctrl_logic.sv:708]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axi_ctrl_logic.sv:718]
+INFO: [Synth 8-6155] done synthesizing module 'axi_ctrl_logic' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axi_ctrl_logic.sv:11]
+INFO: [Synth 8-6155] done synthesizing module 'AXIL_AXIS' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axil_axis.sv:7]
+INFO: [Synth 8-6157] synthesizing module 'AXIS_SW' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/axis_switch/rtl/sw_caravel.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'AXIS_SW' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/axis_switch/rtl/sw_caravel.v:23]
+INFO: [Synth 8-6157] synthesizing module 'IO_SERDES' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/io_serdes/rtl/io_serdes.v:34]
+INFO: [Synth 8-6157] synthesizing module 'fsic_io_serdes_rx' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/io_serdes/rtl/fsic_io_serdes_rx.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'fsic_io_serdes_rx' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/io_serdes/rtl/fsic_io_serdes_rx.v:24]
+INFO: [Synth 8-6157] synthesizing module 'fsic_coreclk_phase_cnt' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/io_serdes/rtl/fsic_coreclk_phase_cnt.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'fsic_coreclk_phase_cnt' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/io_serdes/rtl/fsic_coreclk_phase_cnt.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'IO_SERDES' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/io_serdes/rtl/io_serdes.v:34]
+WARNING: [Synth 8-7071] port 'rxen_out' of module 'IO_SERDES' is unconnected for instance 'U_IO_SERDES0' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/rtl/fsic.v:437]
+WARNING: [Synth 8-7023] instance 'U_IO_SERDES0' of module 'IO_SERDES' has 42 connections declared, but only 41 given [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/rtl/fsic.v:437]
+INFO: [Synth 8-6157] synthesizing module 'LOGIC_ANLZ' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/logic_analyzer/rtl/LogicAnalyzer.v:23]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/logic_analyzer/rtl/LogicAnalyzer.v:113]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/logic_analyzer/rtl/LogicAnalyzer.v:395]
+INFO: [Synth 8-6157] synthesizing module 'sram' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/logic_analyzer/rtl/Sram.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'sram' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/logic_analyzer/rtl/Sram.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'LOGIC_ANLZ' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/logic_analyzer/rtl/LogicAnalyzer.v:23]
+INFO: [Synth 8-6157] synthesizing module 'USER_SUBSYS' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/rtl/user_subsys.v:19]
+INFO: [Synth 8-6157] synthesizing module 'AXIL_SLAV' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/axil_slav/rtl/axil_slav.v:19]
+INFO: [Synth 8-6155] done synthesizing module 'AXIL_SLAV' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/axil_slav/rtl/axil_slav.v:19]
+INFO: [Synth 8-6157] synthesizing module 'USER_PRJ0' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/user_prj0.v:9]
+INFO: [Synth 8-226] default block is never used [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/user_prj0.v:177]
+INFO: [Synth 8-6157] synthesizing module 'EdgeDetect_Top' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:5855]
+INFO: [Synth 8-6157] synthesizing module 'EdgeDetect_Top_struct' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:5663]
+INFO: [Synth 8-6157] synthesizing module 'ccs_pipe_v6' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:701]
+INFO: [Synth 8-6157] synthesizing module 'ccs_fifo_wait_core_v5' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:388]
+INFO: [Synth 8-6157] synthesizing module 'ccs_genreg_v1' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:222]
+INFO: [Synth 8-6155] done synthesizing module 'ccs_genreg_v1' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:222]
+INFO: [Synth 8-6157] synthesizing module 'ccs_genreg_v1__parameterized0' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:222]
+INFO: [Synth 8-6155] done synthesizing module 'ccs_genreg_v1__parameterized0' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:222]
+INFO: [Synth 8-6157] synthesizing module 'ccs_genreg_v1__parameterized1' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:222]
+INFO: [Synth 8-6155] done synthesizing module 'ccs_genreg_v1__parameterized1' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:222]
+INFO: [Synth 8-6155] done synthesizing module 'ccs_fifo_wait_core_v5' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:388]
+INFO: [Synth 8-6155] done synthesizing module 'ccs_pipe_v6' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:701]
+INFO: [Synth 8-6157] synthesizing module 'EdgeDetect_VerDer' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:5434]
+INFO: [Synth 8-6157] synthesizing module 'EdgeDetect_VerDer_ccs_sample_mem_ccs_ram_sync_singleport_rwport_en_6_64_7_80_80_64_5_gen' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:831]
+INFO: [Synth 8-6155] done synthesizing module 'EdgeDetect_VerDer_ccs_sample_mem_ccs_ram_sync_singleport_rwport_en_6_64_7_80_80_64_5_gen' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:831]
+INFO: [Synth 8-6157] synthesizing module 'EdgeDetect_VerDer_ccs_sample_mem_ccs_ram_sync_singleport_rwport_en_7_64_7_80_80_64_5_gen' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:798]
+INFO: [Synth 8-6155] done synthesizing module 'EdgeDetect_VerDer_ccs_sample_mem_ccs_ram_sync_singleport_rwport_en_7_64_7_80_80_64_5_gen' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:798]
+INFO: [Synth 8-6157] synthesizing module 'EdgeDetect_VerDer_run' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:2413]
+INFO: [Synth 8-6157] synthesizing module 'EdgeDetect_VerDer_run_dat_in_rsci' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:1903]
+INFO: [Synth 8-6157] synthesizing module 'ccs_in_wait_v1' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj2/rtl/concat_rtl.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'ccs_in_wait_v1' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj2/rtl/concat_rtl.v:21]
+INFO: [Synth 8-6157] synthesizing module 'EdgeDetect_VerDer_run_dat_in_rsci_dat_in_wait_ctrl' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:1171]
+INFO: [Synth 8-6155] done synthesizing module 'EdgeDetect_VerDer_run_dat_in_rsci_dat_in_wait_ctrl' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:1171]
+INFO: [Synth 8-6157] synthesizing module 'EdgeDetect_VerDer_run_dat_in_rsci_dat_in_wait_dp' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:1098]
+INFO: [Synth 8-6155] done synthesizing module 'EdgeDetect_VerDer_run_dat_in_rsci_dat_in_wait_dp' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:1098]
+INFO: [Synth 8-6155] done synthesizing module 'EdgeDetect_VerDer_run_dat_in_rsci' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:1903]
+INFO: [Synth 8-6157] synthesizing module 'EdgeDetect_VerDer_run_pix_out_rsci' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:1841]
+INFO: [Synth 8-6157] synthesizing module 'ccs_out_wait_v1' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj2/rtl/concat_rtl.v:67]
+INFO: [Synth 8-6155] done synthesizing module 'ccs_out_wait_v1' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj2/rtl/concat_rtl.v:67]
+INFO: [Synth 8-6157] synthesizing module 'EdgeDetect_VerDer_run_pix_out_rsci_pix_out_wait_ctrl' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:1069]
+INFO: [Synth 8-6155] done synthesizing module 'EdgeDetect_VerDer_run_pix_out_rsci_pix_out_wait_ctrl' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:1069]
+INFO: [Synth 8-6157] synthesizing module 'EdgeDetect_VerDer_run_pix_out_rsci_pix_out_wait_dp' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:1033]
+INFO: [Synth 8-6155] done synthesizing module 'EdgeDetect_VerDer_run_pix_out_rsci_pix_out_wait_dp' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:1033]
+INFO: [Synth 8-6155] done synthesizing module 'EdgeDetect_VerDer_run_pix_out_rsci' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:1841]
+INFO: [Synth 8-6157] synthesizing module 'EdgeDetect_VerDer_run_dy_rsci' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:1779]
+INFO: [Synth 8-6157] synthesizing module 'ccs_out_wait_v1__parameterized0' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj2/rtl/concat_rtl.v:67]
+INFO: [Synth 8-6155] done synthesizing module 'ccs_out_wait_v1__parameterized0' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj2/rtl/concat_rtl.v:67]
+INFO: [Synth 8-6157] synthesizing module 'EdgeDetect_VerDer_run_dy_rsci_dy_wait_ctrl' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:1004]
+INFO: [Synth 8-6155] done synthesizing module 'EdgeDetect_VerDer_run_dy_rsci_dy_wait_ctrl' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:1004]
+INFO: [Synth 8-6157] synthesizing module 'EdgeDetect_VerDer_run_dy_rsci_dy_wait_dp' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:969]
+INFO: [Synth 8-6155] done synthesizing module 'EdgeDetect_VerDer_run_dy_rsci_dy_wait_dp' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:969]
+INFO: [Synth 8-6155] done synthesizing module 'EdgeDetect_VerDer_run_dy_rsci' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:1779]
+INFO: [Synth 8-6157] synthesizing module 'EdgeDetect_VerDer_run_wait_dp' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:950]
+INFO: [Synth 8-6155] done synthesizing module 'EdgeDetect_VerDer_run_wait_dp' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:950]
+INFO: [Synth 8-6157] synthesizing module 'EdgeDetect_VerDer_run_staller' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:931]
+INFO: [Synth 8-6155] done synthesizing module 'EdgeDetect_VerDer_run_staller' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:931]
+INFO: [Synth 8-6157] synthesizing module 'EdgeDetect_VerDer_run_run_fsm' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:865]
+INFO: [Synth 8-6155] done synthesizing module 'EdgeDetect_VerDer_run_run_fsm' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:865]
+INFO: [Synth 8-6155] done synthesizing module 'EdgeDetect_VerDer_run' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:2413]
+INFO: [Synth 8-6155] done synthesizing module 'EdgeDetect_VerDer' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:5434]
+INFO: [Synth 8-6157] synthesizing module 'EdgeDetect_HorDer' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:5540]
+INFO: [Synth 8-6157] synthesizing module 'EdgeDetect_HorDer_run' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:3031]
+INFO: [Synth 8-6157] synthesizing module 'EdgeDetect_HorDer_run_pix_in_rsci' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:2094]
+INFO: [Synth 8-6157] synthesizing module 'ccs_in_wait_coupled_v1' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'ccs_in_wait_coupled_v1' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:21]
+INFO: [Synth 8-6157] synthesizing module 'EdgeDetect_HorDer_run_pix_in_rsci_pix_in_wait_ctrl' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:1415]
+INFO: [Synth 8-6155] done synthesizing module 'EdgeDetect_HorDer_run_pix_in_rsci_pix_in_wait_ctrl' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:1415]
+INFO: [Synth 8-6155] done synthesizing module 'EdgeDetect_HorDer_run_pix_in_rsci' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:2094]
+INFO: [Synth 8-6157] synthesizing module 'EdgeDetect_HorDer_run_pix_out_rsci' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:2032]
+INFO: [Synth 8-6157] synthesizing module 'ccs_out_wait_v1__parameterized1' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj2/rtl/concat_rtl.v:67]
+INFO: [Synth 8-6155] done synthesizing module 'ccs_out_wait_v1__parameterized1' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj2/rtl/concat_rtl.v:67]
+INFO: [Synth 8-6157] synthesizing module 'EdgeDetect_HorDer_run_pix_out_rsci_pix_out_wait_ctrl' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:1386]
+INFO: [Synth 8-6155] done synthesizing module 'EdgeDetect_HorDer_run_pix_out_rsci_pix_out_wait_ctrl' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:1386]
+INFO: [Synth 8-6157] synthesizing module 'EdgeDetect_HorDer_run_pix_out_rsci_pix_out_wait_dp' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:1350]
+INFO: [Synth 8-6155] done synthesizing module 'EdgeDetect_HorDer_run_pix_out_rsci_pix_out_wait_dp' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:1350]
+INFO: [Synth 8-6155] done synthesizing module 'EdgeDetect_HorDer_run_pix_out_rsci' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:2032]
+INFO: [Synth 8-6157] synthesizing module 'EdgeDetect_HorDer_run_dx_rsci' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:1970]
+INFO: [Synth 8-6157] synthesizing module 'ccs_out_wait_v1__parameterized2' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj2/rtl/concat_rtl.v:67]
+INFO: [Synth 8-6155] done synthesizing module 'ccs_out_wait_v1__parameterized2' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj2/rtl/concat_rtl.v:67]
+INFO: [Synth 8-6157] synthesizing module 'EdgeDetect_HorDer_run_dx_rsci_dx_wait_ctrl' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:1321]
+INFO: [Synth 8-6155] done synthesizing module 'EdgeDetect_HorDer_run_dx_rsci_dx_wait_ctrl' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:1321]
+INFO: [Synth 8-6157] synthesizing module 'EdgeDetect_HorDer_run_dx_rsci_dx_wait_dp' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:1286]
+INFO: [Synth 8-6155] done synthesizing module 'EdgeDetect_HorDer_run_dx_rsci_dx_wait_dp' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:1286]
+INFO: [Synth 8-6155] done synthesizing module 'EdgeDetect_HorDer_run_dx_rsci' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:1970]
+INFO: [Synth 8-6157] synthesizing module 'EdgeDetect_HorDer_run_staller' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:1267]
+INFO: [Synth 8-6155] done synthesizing module 'EdgeDetect_HorDer_run_staller' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:1267]
+INFO: [Synth 8-6157] synthesizing module 'EdgeDetect_HorDer_run_run_fsm' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:1201]
+INFO: [Synth 8-6155] done synthesizing module 'EdgeDetect_HorDer_run_run_fsm' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:1201]
+INFO: [Synth 8-6155] done synthesizing module 'EdgeDetect_HorDer_run' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:3031]
+INFO: [Synth 8-6155] done synthesizing module 'EdgeDetect_HorDer' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:5540]
+INFO: [Synth 8-6157] synthesizing module 'EdgeDetect_MagAng' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:5586]
+INFO: [Synth 8-6157] synthesizing module 'ccs_out_v1' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:187]
+INFO: [Synth 8-6155] done synthesizing module 'ccs_out_v1' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:187]
+INFO: [Synth 8-6157] synthesizing module 'ccs_out_v1__parameterized0' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:187]
+INFO: [Synth 8-6155] done synthesizing module 'ccs_out_v1__parameterized0' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:187]
+INFO: [Synth 8-6157] synthesizing module 'EdgeDetect_MagAng_run' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:3525]
+INFO: [Synth 8-6157] synthesizing module 'EdgeDetect_MagAng_run_dx_in_rsci' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:2369]
+INFO: [Synth 8-6157] synthesizing module 'ccs_in_wait_coupled_v1__parameterized0' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'ccs_in_wait_coupled_v1__parameterized0' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:21]
+INFO: [Synth 8-6157] synthesizing module 'EdgeDetect_MagAng_run_dx_in_rsci_dx_in_wait_ctrl' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:1761]
+INFO: [Synth 8-6155] done synthesizing module 'EdgeDetect_MagAng_run_dx_in_rsci_dx_in_wait_ctrl' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:1761]
+INFO: [Synth 8-6155] done synthesizing module 'EdgeDetect_MagAng_run_dx_in_rsci' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:2369]
+INFO: [Synth 8-6157] synthesizing module 'EdgeDetect_MagAng_run_dy_in_rsci' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:2325]
+INFO: [Synth 8-6157] synthesizing module 'ccs_in_wait_coupled_v1__parameterized1' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'ccs_in_wait_coupled_v1__parameterized1' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:21]
+INFO: [Synth 8-6157] synthesizing module 'EdgeDetect_MagAng_run_dy_in_rsci_dy_in_wait_ctrl' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:1743]
+INFO: [Synth 8-6155] done synthesizing module 'EdgeDetect_MagAng_run_dy_in_rsci_dy_in_wait_ctrl' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:1743]
+INFO: [Synth 8-6155] done synthesizing module 'EdgeDetect_MagAng_run_dy_in_rsci' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:2325]
+INFO: [Synth 8-6157] synthesizing module 'EdgeDetect_MagAng_run_pix_in_rsci' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:2260]
+INFO: [Synth 8-6157] synthesizing module 'ccs_in_wait_v1__parameterized0' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj2/rtl/concat_rtl.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'ccs_in_wait_v1__parameterized0' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj2/rtl/concat_rtl.v:21]
+INFO: [Synth 8-6157] synthesizing module 'EdgeDetect_MagAng_run_pix_in_rsci_pix_in_wait_ctrl' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:1714]
+INFO: [Synth 8-6155] done synthesizing module 'EdgeDetect_MagAng_run_pix_in_rsci_pix_in_wait_ctrl' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:1714]
+INFO: [Synth 8-6157] synthesizing module 'EdgeDetect_MagAng_run_pix_in_rsci_pix_in_wait_dp' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:1641]
+INFO: [Synth 8-6155] done synthesizing module 'EdgeDetect_MagAng_run_pix_in_rsci_pix_in_wait_dp' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:1641]
+INFO: [Synth 8-6155] done synthesizing module 'EdgeDetect_MagAng_run_pix_in_rsci' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:2260]
+INFO: [Synth 8-6157] synthesizing module 'EdgeDetect_MagAng_run_dat_out_rsci' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:2198]
+INFO: [Synth 8-6157] synthesizing module 'ccs_out_wait_v1__parameterized3' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj2/rtl/concat_rtl.v:67]
+INFO: [Synth 8-6155] done synthesizing module 'ccs_out_wait_v1__parameterized3' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj2/rtl/concat_rtl.v:67]
+INFO: [Synth 8-6157] synthesizing module 'EdgeDetect_MagAng_run_dat_out_rsci_dat_out_wait_ctrl' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:1612]
+INFO: [Synth 8-6155] done synthesizing module 'EdgeDetect_MagAng_run_dat_out_rsci_dat_out_wait_ctrl' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:1612]
+INFO: [Synth 8-6157] synthesizing module 'EdgeDetect_MagAng_run_dat_out_rsci_dat_out_wait_dp' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:1576]
+INFO: [Synth 8-6155] done synthesizing module 'EdgeDetect_MagAng_run_dat_out_rsci_dat_out_wait_dp' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:1576]
+INFO: [Synth 8-6155] done synthesizing module 'EdgeDetect_MagAng_run_dat_out_rsci' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:2198]
+INFO: [Synth 8-6157] synthesizing module 'EdgeDetect_MagAng_run_crc32_pix_in_triosy_obj' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:2168]
+INFO: [Synth 8-6157] synthesizing module 'mgc_io_sync_v2' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj2/rtl/concat_rtl.v:114]
+INFO: [Synth 8-6155] done synthesizing module 'mgc_io_sync_v2' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj2/rtl/concat_rtl.v:114]
+INFO: [Synth 8-6157] synthesizing module 'EdgeDetect_MagAng_run_crc32_pix_in_triosy_obj_crc32_pix_in_triosy_wait_ctrl' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:1557]
+INFO: [Synth 8-6155] done synthesizing module 'EdgeDetect_MagAng_run_crc32_pix_in_triosy_obj_crc32_pix_in_triosy_wait_ctrl' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:1557]
+INFO: [Synth 8-6155] done synthesizing module 'EdgeDetect_MagAng_run_crc32_pix_in_triosy_obj' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:2168]
+INFO: [Synth 8-6157] synthesizing module 'EdgeDetect_MagAng_run_crc32_dat_out_triosy_obj' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:2138]
+INFO: [Synth 8-6157] synthesizing module 'EdgeDetect_MagAng_run_crc32_dat_out_triosy_obj_crc32_dat_out_triosy_wait_ctrl' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:1538]
+INFO: [Synth 8-6155] done synthesizing module 'EdgeDetect_MagAng_run_crc32_dat_out_triosy_obj_crc32_dat_out_triosy_wait_ctrl' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:1538]
+INFO: [Synth 8-6155] done synthesizing module 'EdgeDetect_MagAng_run_crc32_dat_out_triosy_obj' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:2138]
+INFO: [Synth 8-6157] synthesizing module 'EdgeDetect_MagAng_run_staller' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:1500]
+INFO: [Synth 8-6155] done synthesizing module 'EdgeDetect_MagAng_run_staller' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:1500]
+INFO: [Synth 8-6157] synthesizing module 'EdgeDetect_MagAng_run_run_fsm' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:1434]
+INFO: [Synth 8-6155] done synthesizing module 'EdgeDetect_MagAng_run_run_fsm' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:1434]
+INFO: [Synth 8-6155] done synthesizing module 'EdgeDetect_MagAng_run' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:3525]
+INFO: [Synth 8-6155] done synthesizing module 'EdgeDetect_MagAng' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:5586]
+INFO: [Synth 8-6155] done synthesizing module 'EdgeDetect_Top_struct' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:5663]
+INFO: [Synth 8-6155] done synthesizing module 'EdgeDetect_Top' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v:5855]
+INFO: [Synth 8-6157] synthesizing module 'SPRAM' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/spram.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'SPRAM' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/spram.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'USER_PRJ0' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/user_prj0.v:9]
+INFO: [Synth 8-6157] synthesizing module 'USER_PRJ1' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj1/rtl/user_prj1.v:7]
+INFO: [Synth 8-6157] synthesizing module 'fir' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj1/rtl/user_prj1.v:200]
+INFO: [Synth 8-6157] synthesizing module 'multiplier_adder' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj1/rtl/user_prj1.v:158]
+INFO: [Synth 8-6155] done synthesizing module 'multiplier_adder' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj1/rtl/user_prj1.v:158]
+INFO: [Synth 8-226] default block is never used [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj1/rtl/user_prj1.v:437]
+INFO: [Synth 8-6155] done synthesizing module 'fir' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj1/rtl/user_prj1.v:200]
+INFO: [Synth 8-6157] synthesizing module 'bram11' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj1/rtl/user_prj1.v:176]
+INFO: [Common 17-14] Message 'Synth 8-6157' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-6155] done synthesizing module 'bram11' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj1/rtl/user_prj1.v:176]
+INFO: [Synth 8-6155] done synthesizing module 'USER_PRJ1' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj1/rtl/user_prj1.v:7]
+INFO: [Synth 8-226] default block is never used [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj2/rtl/user_prj2.v:124]
+INFO: [Synth 8-6155] done synthesizing module 'In_copy_ccs_sample_mem_ccs_ram_sync_singleport_rwport_en_2_64_10_1024_1024_64_5_gen' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj2/rtl/In_copy1.v:177]
+INFO: [Synth 8-6155] done synthesizing module 'ccs_in_v1' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj2/rtl/concat_rtl.v:146]
+INFO: [Synth 8-6155] done synthesizing module 'ccs_in_wait_v1__parameterized1' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj2/rtl/concat_rtl.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'In_copy_run_in_data_rsci_in_data_wait_ctrl' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj2/rtl/In_copy1.v:424]
+INFO: [Synth 8-6155] done synthesizing module 'In_copy_run_in_data_rsci' (0#1) [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj2/rtl/In_copy1.v:581]
+INFO: [Common 17-14] Message 'Synth 8-6155' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-7071] port 'mode_triosy_lz' of module 'In_copy' is unconnected for instance 'In_copy' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj2/rtl/user_prj2.v:247]
+WARNING: [Synth 8-7023] instance 'In_copy' of module 'In_copy' has 20 connections declared, but only 19 given [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj2/rtl/user_prj2.v:247]
+WARNING: [Synth 8-7071] port 'vccd1' of module 'FSIC' is unconnected for instance 'u_fsic' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/rtl/user_project_wrapper.v:129]
+WARNING: [Synth 8-7071] port 'vccd2' of module 'FSIC' is unconnected for instance 'u_fsic' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/rtl/user_project_wrapper.v:129]
+WARNING: [Synth 8-7071] port 'vssd1' of module 'FSIC' is unconnected for instance 'u_fsic' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/rtl/user_project_wrapper.v:129]
+WARNING: [Synth 8-7071] port 'vssd2' of module 'FSIC' is unconnected for instance 'u_fsic' [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/rtl/user_project_wrapper.v:129]
+WARNING: [Synth 8-7023] instance 'u_fsic' of module 'FSIC' has 19 connections declared, but only 15 given [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/rtl/user_project_wrapper.v:129]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/housekeeping.v:714]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/housekeeping.v:1152]
+WARNING: [Synth 8-3848] Net io_in_3v3 in module/entity mprj_io does not have driver. [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/mprj_io.v:104]
+WARNING: [Synth 8-3848] Net vddio_q in module/entity chip_io does not have driver. [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/chip_io.v:122]
+WARNING: [Synth 8-3848] Net vssio_q in module/entity chip_io does not have driver. [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/chip_io.v:122]
+WARNING: [Synth 8-3848] Net analog_a in module/entity chip_io does not have driver. [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/chip_io.v:121]
+WARNING: [Synth 8-3848] Net analog_b in module/entity chip_io does not have driver. [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/chip_io.v:121]
+WARNING: [Synth 8-6014] Unused sequential element decodeStage_mmuRsp_isIoAccess_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/VexRiscv_MinDebugCache.v:4586]
+WARNING: [Synth 8-6014] Unused sequential element decodeStage_mmuRsp_allowRead_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/VexRiscv_MinDebugCache.v:4588]
+WARNING: [Synth 8-6014] Unused sequential element decodeStage_mmuRsp_allowWrite_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/VexRiscv_MinDebugCache.v:4589]
+WARNING: [Synth 8-6014] Unused sequential element decodeStage_mmuRsp_bypassTranslation_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/VexRiscv_MinDebugCache.v:4593]
+WARNING: [Synth 8-6014] Unused sequential element IBusCachedPlugin_fetchPc_correctionReg_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/VexRiscv_MinDebugCache.v:2357]
+WARNING: [Synth 8-6014] Unused sequential element IBusCachedPlugin_injector_nextPcCalc_valids_2_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/VexRiscv_MinDebugCache.v:2465]
+WARNING: [Synth 8-6014] Unused sequential element IBusCachedPlugin_injector_nextPcCalc_valids_3_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/VexRiscv_MinDebugCache.v:2466]
+WARNING: [Synth 8-6014] Unused sequential element IBusCachedPlugin_injector_nextPcCalc_valids_4_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/VexRiscv_MinDebugCache.v:2467]
+WARNING: [Synth 8-6014] Unused sequential element IBusCachedPlugin_rspCounter_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/VexRiscv_MinDebugCache.v:3673]
+WARNING: [Synth 8-6014] Unused sequential element execute_CsrPlugin_wfiWake_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/VexRiscv_MinDebugCache.v:3693]
+WARNING: [Synth 8-6014] Unused sequential element HazardSimplePlugin_writeBackBuffer_payload_data_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/VexRiscv_MinDebugCache.v:3978]
+WARNING: [Synth 8-6014] Unused sequential element CsrPlugin_mcycle_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/VexRiscv_MinDebugCache.v:3982]
+WARNING: [Synth 8-6014] Unused sequential element CsrPlugin_minstret_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/VexRiscv_MinDebugCache.v:3984]
+WARNING: [Synth 8-6014] Unused sequential element decode_to_execute_FORMAL_PC_NEXT_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/VexRiscv_MinDebugCache.v:1969]
+WARNING: [Synth 8-6014] Unused sequential element execute_to_memory_FORMAL_PC_NEXT_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/VexRiscv_MinDebugCache.v:1968]
+WARNING: [Synth 8-6014] Unused sequential element memory_to_writeBack_FORMAL_PC_NEXT_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/VexRiscv_MinDebugCache.v:1967]
+WARNING: [Synth 8-6014] Unused sequential element decode_to_execute_BYPASSABLE_EXECUTE_STAGE_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/VexRiscv_MinDebugCache.v:1988]
+WARNING: [Synth 8-6014] Unused sequential element decode_to_execute_BYPASSABLE_MEMORY_STAGE_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/VexRiscv_MinDebugCache.v:1957]
+WARNING: [Synth 8-6014] Unused sequential element execute_to_memory_BYPASSABLE_MEMORY_STAGE_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/VexRiscv_MinDebugCache.v:1991]
+WARNING: [Synth 8-6014] Unused sequential element memory_to_writeBack_MEMORY_STORE_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/VexRiscv_MinDebugCache.v:2036]
+WARNING: [Synth 8-6014] Unused sequential element decode_to_execute_CSR_READ_OPCODE_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/VexRiscv_MinDebugCache.v:1974]
+WARNING: [Synth 8-6014] Unused sequential element CsrPlugin_mtvec_mode_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/VexRiscv_MinDebugCache.v:4203]
+WARNING: [Synth 8-6014] Unused sequential element DebugPlugin_firstCycle_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/VexRiscv_MinDebugCache.v:4221]
+WARNING: [Synth 8-6014] Unused sequential element DebugPlugin_secondCycle_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/VexRiscv_MinDebugCache.v:4225]
+WARNING: [Synth 8-3936] Found unconnected internal register 'memory_to_writeBack_INSTRUCTION_reg' and it is trimmed from '32' to '30' bits. [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/VexRiscv_MinDebugCache.v:2096]
+WARNING: [Synth 8-3848] Net IBusCachedPlugin_cache_io_cpu_fetch_isRemoved in module/entity VexRiscv does not have driver. [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/VexRiscv_MinDebugCache.v:92]
+WARNING: [Synth 8-3848] Net IBusCachedPlugin_mmuBus_rsp_bypassTranslation in module/entity VexRiscv does not have driver. [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/VexRiscv_MinDebugCache.v:490]
+WARNING: [Synth 8-6014] Unused sequential element mgmtsoc_master_tx_fifo_source_first_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:2869]
+WARNING: [Synth 8-6014] Unused sequential element mgmtsoc_master_tx_fifo_source_last_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:2870]
+WARNING: [Synth 8-6014] Unused sequential element mgmtsoc_master_rx_fifo_source_first_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:6905]
+WARNING: [Synth 8-6014] Unused sequential element mgmtsoc_master_rx_fifo_source_last_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:6906]
+WARNING: [Synth 8-6014] Unused sequential element mgmtsoc_scratch_re_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7200]
+WARNING: [Synth 8-6014] Unused sequential element mgmtsoc_bus_errors_re_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7201]
+WARNING: [Synth 8-6014] Unused sequential element debug_mode_re_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7213]
+WARNING: [Synth 8-6014] Unused sequential element debug_oeb_re_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7225]
+WARNING: [Synth 8-6014] Unused sequential element mgmtsoc_litespimmap_re_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7249]
+WARNING: [Synth 8-6014] Unused sequential element mgmtsoc_master_cs_re_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7253]
+WARNING: [Synth 8-6014] Unused sequential element mgmtsoc_master_phyconfig_re_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7257]
+WARNING: [Synth 8-6014] Unused sequential element mgmtsoc_master_status_re_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7258]
+WARNING: [Synth 8-6014] Unused sequential element mgmtsoc_litespisdrphycore_re_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7270]
+WARNING: [Synth 8-6014] Unused sequential element gpio_mode1_re_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7297]
+WARNING: [Synth 8-6014] Unused sequential element gpio_mode0_re_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7301]
+WARNING: [Synth 8-6014] Unused sequential element gpio_ien_re_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7305]
+WARNING: [Synth 8-6014] Unused sequential element gpio_oe_re_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7309]
+WARNING: [Synth 8-6014] Unused sequential element gpio_in_re_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7310]
+WARNING: [Synth 8-6014] Unused sequential element gpio_out_re_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7314]
+WARNING: [Synth 8-6014] Unused sequential element la_ien_re_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7380]
+WARNING: [Synth 8-6014] Unused sequential element la_oe_re_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7393]
+WARNING: [Synth 8-6014] Unused sequential element la_in_re_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7394]
+WARNING: [Synth 8-6014] Unused sequential element la_out_re_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7407]
+WARNING: [Synth 8-6014] Unused sequential element mprj_wb_iena_re_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7419]
+WARNING: [Synth 8-6014] Unused sequential element spi_enabled_re_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7431]
+WARNING: [Synth 8-6014] Unused sequential element spi_master_status_re_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7462]
+WARNING: [Synth 8-6014] Unused sequential element spi_master_mosi_re_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7466]
+WARNING: [Synth 8-6014] Unused sequential element spi_master_miso_re_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7467]
+WARNING: [Synth 8-6014] Unused sequential element spi_master_cs_re_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7471]
+WARNING: [Synth 8-6014] Unused sequential element spi_master_loopback_re_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7475]
+WARNING: [Synth 8-6014] Unused sequential element spimaster_re_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7479]
+WARNING: [Synth 8-6014] Unused sequential element mgmtsoc_load_re_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7512]
+WARNING: [Synth 8-6014] Unused sequential element mgmtsoc_reload_re_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7516]
+WARNING: [Synth 8-6014] Unused sequential element mgmtsoc_en_re_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7520]
+WARNING: [Synth 8-6014] Unused sequential element mgmtsoc_value_re_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7525]
+WARNING: [Synth 8-6014] Unused sequential element mgmtsoc_status_re_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7526]
+WARNING: [Synth 8-6014] Unused sequential element mgmtsoc_enable_re_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7534]
+WARNING: [Synth 8-6014] Unused sequential element uart_txfull_re_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7564]
+WARNING: [Synth 8-6014] Unused sequential element uart_rxempty_re_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7565]
+WARNING: [Synth 8-6014] Unused sequential element uart_status_re_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7566]
+WARNING: [Synth 8-6014] Unused sequential element uart_enable_re_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7574]
+WARNING: [Synth 8-6014] Unused sequential element uart_txempty_re_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7575]
+WARNING: [Synth 8-6014] Unused sequential element uart_rxfull_re_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7576]
+WARNING: [Synth 8-6014] Unused sequential element uart_enabled_re_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7588]
+WARNING: [Synth 8-6014] Unused sequential element gpioin0_in_re_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7612]
+WARNING: [Synth 8-6014] Unused sequential element gpioin0_gpioin0_mode_re_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7616]
+WARNING: [Synth 8-6014] Unused sequential element gpioin0_gpioin0_edge_re_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7620]
+WARNING: [Synth 8-6014] Unused sequential element gpioin0_status_re_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7621]
+WARNING: [Synth 8-6014] Unused sequential element gpioin0_enable_re_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7629]
+WARNING: [Synth 8-6014] Unused sequential element gpioin1_in_re_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7653]
+WARNING: [Synth 8-6014] Unused sequential element gpioin1_gpioin1_mode_re_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7657]
+WARNING: [Synth 8-6014] Unused sequential element gpioin1_gpioin1_edge_re_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7661]
+WARNING: [Synth 8-6014] Unused sequential element gpioin1_status_re_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7662]
+WARNING: [Synth 8-6014] Unused sequential element gpioin1_enable_re_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7670]
+WARNING: [Synth 8-6014] Unused sequential element gpioin2_in_re_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7694]
+WARNING: [Synth 8-6014] Unused sequential element gpioin2_gpioin2_mode_re_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7698]
+WARNING: [Synth 8-6014] Unused sequential element gpioin2_gpioin2_edge_re_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7702]
+WARNING: [Synth 8-6014] Unused sequential element gpioin2_status_re_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7703]
+WARNING: [Synth 8-6014] Unused sequential element gpioin2_enable_re_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7711]
+WARNING: [Synth 8-6014] Unused sequential element gpioin3_in_re_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7735]
+WARNING: [Synth 8-6014] Unused sequential element gpioin3_gpioin3_mode_re_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7739]
+WARNING: [Synth 8-6014] Unused sequential element gpioin3_gpioin3_edge_re_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7743]
+WARNING: [Synth 8-6014] Unused sequential element gpioin3_status_re_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7744]
+WARNING: [Synth 8-6014] Unused sequential element gpioin3_enable_re_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7752]
+WARNING: [Synth 8-6014] Unused sequential element gpioin4_in_re_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7776]
+WARNING: [Synth 8-6014] Unused sequential element gpioin4_gpioin4_mode_re_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7780]
+WARNING: [Synth 8-6014] Unused sequential element gpioin4_gpioin4_edge_re_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7784]
+WARNING: [Synth 8-6014] Unused sequential element gpioin4_status_re_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7785]
+WARNING: [Synth 8-6014] Unused sequential element gpioin4_enable_re_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7793]
+WARNING: [Synth 8-6014] Unused sequential element gpioin5_in_re_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7817]
+WARNING: [Synth 8-6014] Unused sequential element gpioin5_gpioin5_mode_re_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7821]
+WARNING: [Synth 8-6014] Unused sequential element gpioin5_gpioin5_edge_re_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7825]
+WARNING: [Synth 8-6014] Unused sequential element gpioin5_status_re_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7826]
+WARNING: [Synth 8-6014] Unused sequential element gpioin5_enable_re_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7834]
+WARNING: [Synth 8-6014] Unused sequential element user_irq_ena_re_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7846]
+WARNING: [Synth 8-6014] Unused sequential element memdat_reg was removed.  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:8398]
+INFO: [Common 17-14] Message 'Synth 8-6014' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-3936] Found unconnected internal register 'litespi_tx_mux_source_payload_mask_reg' and it is trimmed from '8' to '1' bits. [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:2187]
+WARNING: [Synth 8-87] always_comb on 'wait_rd_data_back_reg' did not result in combinational logic [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axi_ctrl_logic.sv:133]
+WARNING: [Synth 8-7137] Register mem_reg in module AXIS_SW has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code 
+WARNING: [Synth 8-4767] Trying to implement RAM 'mem_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
+Reason is one or more of the following :
+	1: RAM is sensitive to asynchronous reset signal. this RTL style is not supported. 
+RAM "mem_reg" dissolved into registers
+WARNING: [Synth 8-3848] Net sm_tid in module/entity USER_PRJ0 does not have driver. [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/user_prj0.v:40]
+WARNING: [Synth 8-3848] Net low__pri_irq in module/entity USER_PRJ0 does not have driver. [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/user_prj0.v:47]
+WARNING: [Synth 8-3848] Net High_pri_req in module/entity USER_PRJ0 does not have driver. [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/user_prj0.v:48]
+WARNING: [Synth 8-3848] Net la_data_o in module/entity USER_PRJ0 does not have driver. [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/user_prj0.v:49]
+WARNING: [Synth 8-3848] Net la_data_out in module/entity user_project_wrapper does not have driver. [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/user/rtl/user_project_wrapper.v:59]
+WARNING: [Synth 8-7137] Register wb_dat_o_reg in module housekeeping has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/housekeeping.v:741]
+WARNING: [Synth 8-7137] Register mgmt_ena_reg in module gpio_control_block has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/gpio_control_block.v:232]
+WARNING: [Synth 8-7137] Register gpio_holdover_reg in module gpio_control_block has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/gpio_control_block.v:233]
+WARNING: [Synth 8-7137] Register gpio_slow_sel_reg in module gpio_control_block has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/gpio_control_block.v:234]
+WARNING: [Synth 8-7137] Register gpio_vtrip_sel_reg in module gpio_control_block has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/gpio_control_block.v:235]
+WARNING: [Synth 8-7137] Register gpio_ib_mode_sel_reg in module gpio_control_block has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/gpio_control_block.v:236]
+WARNING: [Synth 8-7137] Register gpio_inenb_reg in module gpio_control_block has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/gpio_control_block.v:237]
+WARNING: [Synth 8-7137] Register gpio_outenb_reg in module gpio_control_block has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/gpio_control_block.v:238]
+WARNING: [Synth 8-7137] Register gpio_dm_reg in module gpio_control_block has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/gpio_control_block.v:239]
+WARNING: [Synth 8-7137] Register gpio_ana_en_reg in module gpio_control_block has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/gpio_control_block.v:240]
+WARNING: [Synth 8-7137] Register gpio_ana_sel_reg in module gpio_control_block has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/gpio_control_block.v:241]
+WARNING: [Synth 8-7137] Register gpio_ana_pol_reg in module gpio_control_block has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/gpio_control_block.v:242]
+WARNING: [Synth 8-3848] Net mprj_vcc_pwrgood in module/entity caravel does not have driver. [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/caravel.v:460]
+WARNING: [Synth 8-3848] Net mprj2_vcc_pwrgood in module/entity caravel does not have driver. [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/caravel.v:461]
+WARNING: [Synth 8-3848] Net mprj_vdd_pwrgood in module/entity caravel does not have driver. [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/caravel.v:462]
+WARNING: [Synth 8-3848] Net mprj2_vdd_pwrgood in module/entity caravel does not have driver. [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/caravel.v:463]
+WARNING: [Synth 8-3848] Net porb_h_in_nc in module/entity caravel does not have driver. [/home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_srcs/caravel_soc/rtl/soc/caravel.v:481]
+WARNING: [Synth 8-7129] Port io_out[37] in module MPRJ_IOz is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_out[36] in module MPRJ_IOz is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_out[21] in module MPRJ_IOz is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_out[20] in module MPRJ_IOz is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_out[19] in module MPRJ_IOz is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_out[18] in module MPRJ_IOz is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_out[17] in module MPRJ_IOz is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_out[16] in module MPRJ_IOz is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_out[15] in module MPRJ_IOz is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_out[14] in module MPRJ_IOz is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_out[13] in module MPRJ_IOz is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_out[12] in module MPRJ_IOz is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_out[11] in module MPRJ_IOz is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_out[10] in module MPRJ_IOz is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_out[9] in module MPRJ_IOz is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_out[8] in module MPRJ_IOz is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_out[7] in module MPRJ_IOz is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_out[6] in module MPRJ_IOz is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_out[5] in module MPRJ_IOz is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_out[4] in module MPRJ_IOz is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_out[3] in module MPRJ_IOz is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_out[2] in module MPRJ_IOz is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_out[1] in module MPRJ_IOz is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_out[0] in module MPRJ_IOz is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_oeb[37] in module MPRJ_IOz is either unconnected or has no load
+WARNING: [Synth 8-7129] Port user_prj_sel[4] in module MPRJ_IOz is either unconnected or has no load
+WARNING: [Synth 8-7129] Port user_prj_sel[3] in module MPRJ_IOz is either unconnected or has no load
+WARNING: [Synth 8-7129] Port user_prj_sel[2] in module MPRJ_IOz is either unconnected or has no load
+WARNING: [Synth 8-7129] Port user_prj_sel[1] in module MPRJ_IOz is either unconnected or has no load
+WARNING: [Synth 8-7129] Port user_prj_sel[0] in module MPRJ_IOz is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_in[37] in module MPRJ_IOz is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_in[35] in module MPRJ_IOz is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_in[34] in module MPRJ_IOz is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_in[33] in module MPRJ_IOz is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_in[32] in module MPRJ_IOz is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_in[31] in module MPRJ_IOz is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_in[30] in module MPRJ_IOz is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_in[29] in module MPRJ_IOz is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_in[28] in module MPRJ_IOz is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_in[27] in module MPRJ_IOz is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_in[26] in module MPRJ_IOz is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_in[25] in module MPRJ_IOz is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_in[24] in module MPRJ_IOz is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_in[23] in module MPRJ_IOz is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_in[22] in module MPRJ_IOz is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_in[7] in module MPRJ_IOz is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_in[6] in module MPRJ_IOz is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_in[5] in module MPRJ_IOz is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_in[4] in module MPRJ_IOz is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_in[3] in module MPRJ_IOz is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_in[2] in module MPRJ_IOz is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_in[1] in module MPRJ_IOz is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_in[0] in module MPRJ_IOz is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vccd1 in module MPRJ_IOz is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vccd2 in module MPRJ_IOz is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vssd1 in module MPRJ_IOz is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vssd2 in module MPRJ_IOz is either unconnected or has no load
+WARNING: [Synth 8-7129] Port user_clock2 in module MPRJ_IOz is either unconnected or has no load
+WARNING: [Synth 8-7129] Port axi_clk in module MPRJ_IOz is either unconnected or has no load
+WARNING: [Synth 8-7129] Port axi_reset_n in module MPRJ_IOz is either unconnected or has no load
+WARNING: [Synth 8-7129] Port axis_clk in module MPRJ_IOz is either unconnected or has no load
+WARNING: [Synth 8-7129] Port uck2_rst_n in module MPRJ_IOz is either unconnected or has no load
+WARNING: [Synth 8-7129] Port axis_rst_n in module MPRJ_IOz is either unconnected or has no load
+WARNING: [Synth 8-7129] Port user_prj_sel[4] in module FSIC_CLKRST is either unconnected or has no load
+WARNING: [Synth 8-7129] Port user_prj_sel[3] in module FSIC_CLKRST is either unconnected or has no load
+WARNING: [Synth 8-7129] Port user_prj_sel[2] in module FSIC_CLKRST is either unconnected or has no load
+WARNING: [Synth 8-7129] Port user_prj_sel[1] in module FSIC_CLKRST is either unconnected or has no load
+WARNING: [Synth 8-7129] Port user_prj_sel[0] in module FSIC_CLKRST is either unconnected or has no load
+WARNING: [Synth 8-7129] Port axi_clk in module LA_MUX is either unconnected or has no load
+WARNING: [Synth 8-7129] Port axis_clk in module LA_MUX is either unconnected or has no load
+WARNING: [Synth 8-7129] Port axi_reset_n in module LA_MUX is either unconnected or has no load
+WARNING: [Synth 8-7129] Port axis_rst_n in module LA_MUX is either unconnected or has no load
+WARNING: [Synth 8-7129] Port axi_clk in module IRQ_MUX is either unconnected or has no load
+WARNING: [Synth 8-7129] Port axi_reset_n in module IRQ_MUX is either unconnected or has no load
+WARNING: [Synth 8-7129] Port axis_rst_n in module IRQ_MUX is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sm_tid_0[2] in module AXIS_MSTR is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sm_tid_0[1] in module AXIS_MSTR is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sm_tid_0[0] in module AXIS_MSTR is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sm_tid_1[2] in module AXIS_MSTR is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sm_tid_1[1] in module AXIS_MSTR is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sm_tid_1[0] in module AXIS_MSTR is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sm_tid_2[2] in module AXIS_MSTR is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sm_tid_2[1] in module AXIS_MSTR is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sm_tid_2[0] in module AXIS_MSTR is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sm_tid_3[2] in module AXIS_MSTR is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sm_tid_3[1] in module AXIS_MSTR is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sm_tid_3[0] in module AXIS_MSTR is either unconnected or has no load
+WARNING: [Synth 8-7129] Port axis_clk in module AXIS_MSTR is either unconnected or has no load
+WARNING: [Synth 8-7129] Port axi_reset_n in module AXIS_MSTR is either unconnected or has no load
+WARNING: [Synth 8-7129] Port axis_rst_n in module AXIS_MSTR is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_tuser[1] in module AXIS_SLAV is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_tuser[0] in module AXIS_SLAV is either unconnected or has no load
+WARNING: [Synth 8-7129] Port axis_clk in module AXIS_SLAV is either unconnected or has no load
+WARNING: [Synth 8-7129] Port axi_reset_n in module AXIS_SLAV is either unconnected or has no load
+WARNING: [Synth 8-7129] Port axis_rst_n in module AXIS_SLAV is either unconnected or has no load
+WARNING: [Synth 8-7129] Port awvalid in module USER_PRJ3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port awaddr[11] in module USER_PRJ3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port awaddr[10] in module USER_PRJ3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port awaddr[9] in module USER_PRJ3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port awaddr[8] in module USER_PRJ3 is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:44 ; elapsed = 00:01:31 . Memory (MB): peak = 2964.555 ; gain = 240.570 ; free physical = 2139 ; free virtual = 3167
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:46 ; elapsed = 00:01:34 . Memory (MB): peak = 2979.398 ; gain = 255.414 ; free physical = 1731 ; free virtual = 2779
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:46 ; elapsed = 00:01:34 . Memory (MB): peak = 2979.398 ; gain = 255.414 ; free physical = 1731 ; free virtual = 2779
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.38 ; elapsed = 00:00:00.39 . Memory (MB): peak = 2979.398 ; gain = 0.000 ; free physical = 1513 ; free virtual = 2598
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3128.148 ; gain = 0.000 ; free physical = 1234 ; free virtual = 2388
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.71 . Memory (MB): peak = 3128.148 ; gain = 0.000 ; free physical = 1205 ; free virtual = 2360
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:01:07 ; elapsed = 00:01:52 . Memory (MB): peak = 3128.148 ; gain = 404.164 ; free physical = 1125 ; free virtual = 2356
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+INFO: [Synth 8-802] inferred FSM for state register 'state_var_reg' in module 'Out_state_run_run_fsm'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'USER_PRJ2'
+INFO: [Synth 8-802] inferred FSM for state register 'Out_state_reg' in module 'USER_PRJ2'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'housekeeping_spi'
+INFO: [Synth 8-802] inferred FSM for state register 'wbbd_state_reg' in module 'housekeeping'
+INFO: [Synth 8-802] inferred FSM for state register 'xfer_state_reg' in module 'housekeeping'
+/tools/Xilinx/Vivado/2022.1/bin/rdiArgs.sh: line 312:  6104 Killed                  "$RDI_PROG" "$@"
+Parent process (pid 6104) has died. This helper process will now exit
+/tools/Xilinx/Vivado/2022.1/bin/rdiArgs.sh: line 312:  6565 Killed                  "$RDI_PROG" "$@"
+/tools/Xilinx/Vivado/2022.1/bin/rdiArgs.sh: line 312:  6323 Segmentation fault      (core dumped) "$RDI_PROG" "$@"
+segfault in /tools/Xilinx/Vivado/2022.1/bin/unwrapped/lnx64.o/parallel_synth_helper -exec vivado -exec parallel_synth_helper --key LaunchHelperProcessKey_6104_1716753170 --partid xc7z020clg400-1 --parent_pid 6104 --parent_exe vivado, exiting...
+/tools/Xilinx/Vivado/2022.1/bin/rdiArgs.sh: line 312:  6526 Killed                  "$RDI_PROG" "$@"

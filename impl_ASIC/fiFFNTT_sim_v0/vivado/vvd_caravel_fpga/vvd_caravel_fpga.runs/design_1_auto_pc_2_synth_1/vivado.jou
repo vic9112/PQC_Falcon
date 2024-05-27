@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Sun May 26 15:54:01 2024
+# Process ID: 6424
+# Current directory: /home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.runs/design_1_auto_pc_2_synth_1
+# Command line: vivado -log design_1_auto_pc_2.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_auto_pc_2.tcl
+# Log file: /home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.runs/design_1_auto_pc_2_synth_1/design_1_auto_pc_2.vds
+# Journal file: /home/ubuntu/testfpga/impl_ASIC/fiFFNTT_sim/vivado/vvd_caravel_fpga/vvd_caravel_fpga.runs/design_1_auto_pc_2_synth_1/vivado.jou
+# Running On: ubuntu2004, OS: Linux, CPU Frequency: 1996.807 MHz, CPU Physical cores: 8, Host memory: 8322 MB
+#-----------------------------------------------------------
+source design_1_auto_pc_2.tcl -notrace
