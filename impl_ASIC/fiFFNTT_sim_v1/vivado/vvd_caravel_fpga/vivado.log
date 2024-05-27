@@ -1,0 +1,78 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Mon May 27 08:51:50 2024
+# Process ID: 2081
+# Current directory: /home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga
+# Command line: vivado
+# Log file: /home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vivado.log
+# Journal file: /home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vivado.jou
+# Running On: ubuntu2004, OS: Linux, CPU Frequency: 3194.000 MHz, CPU Physical cores: 2, Host memory: 8323 MB
+#-----------------------------------------------------------
+start_gui
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es:part0:1.2 available at /tools/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/es/1.2/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es_revb:part0:1.0 available at /tools/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120_revb/es/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at /tools/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at /tools/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at /tools/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/2.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at /tools/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+open_project /home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-3685] Ignored loading user repository '/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vitis_prj/hls_caravel_ps'. The path is contained within another repository.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vitis_prj'.
+WARNING: [IP_Flow 19-3685] Ignored loading user repository '/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vitis_prj/hls_output_pin'. The path is contained within another repository.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2022.1/data/ip'.
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:hls:userdma:1.0'. The one found in IP location '/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vitis_prj/hls_userdma/hls_userdma.prj/solution1/impl/ip' will take precedence over the same IP in location /home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vitis_prj/DMA_version1/hls_userdma/hls_userdma.prj/solution1/impl/ip
+WARNING: [IP_Flow 19-3664] IP 'design_1_xbar_1' generated file not found '/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ip/design_1_xbar_1/design_1_xbar_1.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_xbar_1' generated file not found '/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ip/design_1_xbar_1/design_1_xbar_1_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_xbar_1' generated file not found '/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ip/design_1_xbar_1/design_1_xbar_1_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_xbar_1' generated file not found '/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ip/design_1_xbar_1/design_1_xbar_1_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_xbar_1' generated file not found '/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ip/design_1_xbar_1/design_1_xbar_1_sim_netlist.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_auto_us_0' generated file not found '/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ip/design_1_auto_us_0/design_1_auto_us_0.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_auto_us_0' generated file not found '/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ip/design_1_auto_us_0/design_1_auto_us_0_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_auto_us_0' generated file not found '/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ip/design_1_auto_us_0/design_1_auto_us_0_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_auto_us_0' generated file not found '/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ip/design_1_auto_us_0/design_1_auto_us_0_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_auto_us_0' generated file not found '/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ip/design_1_auto_us_0/design_1_auto_us_0_sim_netlist.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_auto_pc_0' generated file not found '/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_auto_pc_0' generated file not found '/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_auto_pc_0' generated file not found '/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_auto_pc_0' generated file not found '/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_auto_pc_0' generated file not found '/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_sim_netlist.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_caravel_0_0' generated file not found '/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ip/design_1_caravel_0_0/design_1_caravel_0_0.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_caravel_0_0' generated file not found '/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ip/design_1_caravel_0_0/design_1_caravel_0_0_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_caravel_0_0' generated file not found '/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ip/design_1_caravel_0_0/design_1_caravel_0_0_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_caravel_0_0' generated file not found '/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ip/design_1_caravel_0_0/design_1_caravel_0_0_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_caravel_0_0' generated file not found '/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ip/design_1_caravel_0_0/design_1_caravel_0_0_sim_netlist.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_userdma_0_0' generated file not found '/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ip/design_1_userdma_0_0/design_1_userdma_0_0.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_userdma_0_0' generated file not found '/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ip/design_1_userdma_0_0/design_1_userdma_0_0_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_userdma_0_0' generated file not found '/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ip/design_1_userdma_0_0/design_1_userdma_0_0_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_userdma_0_0' generated file not found '/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ip/design_1_userdma_0_0/design_1_userdma_0_0_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_userdma_0_0' generated file not found '/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ip/design_1_userdma_0_0/design_1_userdma_0_0_sim_netlist.vhdl'. Please regenerate to continue.
+open_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:09 . Memory (MB): peak = 7636.191 ; gain = 137.098 ; free physical = 2274 ; free virtual = 5720
+update_compile_order -fileset sources_1
+reset_run synth_1
+reset_run design_1_xbar_1_synth_1
+reset_run design_1_auto_pc_0_synth_1
+reset_run design_1_userdma_0_0_synth_1
+reset_run design_1_caravel_0_0_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Attempt to kill process failed
+
+reset_run design_1_auto_us_0_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Attempt to kill process failed
+
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Mon May 27 09:09:50 2024] Launched design_1_caravel_0_0_synth_1, design_1_auto_us_0_synth_1, design_1_xbar_1_synth_1, design_1_auto_pc_0_synth_1, design_1_userdma_0_0_synth_1, synth_1...
+Run output will be captured here:
+design_1_caravel_0_0_synth_1: /home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.runs/design_1_caravel_0_0_synth_1/runme.log
+design_1_auto_us_0_synth_1: /home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.runs/design_1_auto_us_0_synth_1/runme.log
+design_1_xbar_1_synth_1: /home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.runs/design_1_xbar_1_synth_1/runme.log
+design_1_auto_pc_0_synth_1: /home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.runs/design_1_auto_pc_0_synth_1/runme.log
+design_1_userdma_0_0_synth_1: /home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.runs/design_1_userdma_0_0_synth_1/runme.log
+synth_1: /home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.runs/synth_1/runme.log
+[Mon May 27 09:09:52 2024] Launched impl_1...
+Run output will be captured here: /home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.runs/impl_1/runme.log
