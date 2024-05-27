@@ -127,13 +127,13 @@ module fsic_tb();
         //SocUp2DmaPath();
         //load_dma_x();
         //load_dma_NTT();
-        load_dma_iNTT();
-        //load_dma_FFT();
+        //load_dma_iNTT();
+        load_dma_FFT();
         //load_dma_iFFT();
         //setting_dma();
-        //setting_dma_NTT();
-        setting_dma_iNTT();
-        //setting_dma_FFT();
+        // setting_dma_NTT();
+        //setting_dma_iNTT();
+        setting_dma_FFT();
         //setting_dma_iFFT();
          //test_FIR();
          ap_start_get_result(); // should to change checkdone!
@@ -169,8 +169,8 @@ module fsic_tb();
 
             fork
                 //CheckuserDMADone_NTT();
-                CheckuserDMADone_iNTT();
-                //CheckuserDMADone_FFT();
+                //CheckuserDMADone_iNTT();
+                CheckuserDMADone_FFT();
                 //CheckuserDMADone_iFFT();
             join_none
 
