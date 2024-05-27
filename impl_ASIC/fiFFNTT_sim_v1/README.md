@@ -1,3 +1,5 @@
+# 設計放在uspj2
+
 # Simulation:
 if you want to run simulation
 ```
@@ -16,13 +18,6 @@ double_value_converted = struct.unpack('>d', int_value_to_double.to_bytes(8, byt
 print(double_value_converted)
 
 ```
-
-# FSM design:
-本次設計放在uspj2
-
-跑完一種大約需要10分鐘，為了方面你們加快dma simulation，可以自行更改FSM來減少時間。
-
-
 # testbench design:
 ## 想要看wv，可以把tb中註解拿掉:
 
