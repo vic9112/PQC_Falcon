@@ -1,0 +1,150 @@
+
+
+================================================================
+== Vitis HLS Report for 'getinstream'
+================================================================
+* Date:           Wed May 29 12:58:13 2024
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
+* Project:        hls_userdma.prj
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.613 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 4
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 3.63>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%kernel_mode_read = read i2 @_ssdm_op_Read.ap_auto.i2, i2 %kernel_mode"   --->   Operation 5 'read' 'kernel_mode_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%tmp_last_V_loc = alloca i64 1"   --->   Operation 6 'alloca' 'tmp_last_V_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (3.63ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_fifo.i2P0A, i2 %kernel_mode_c, i2 %kernel_mode_read"   --->   Operation 7 'write' 'write_ln0' <Predicate = true> <Delay = 3.63> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 2> <Depth = 2> <FIFO>
+
+State 2 <SV = 1> <Delay = 5.44>
+ST_2 : Operation 8 [1/1] (0.95ns)   --->   "%icmp_ln1065 = icmp_eq  i2 %kernel_mode_read, i2 0"   --->   Operation 8 'icmp' 'icmp_ln1065' <Predicate = true> <Delay = 0.95> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.95> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 9 [1/1] (0.95ns)   --->   "%icmp_ln1065_4 = icmp_eq  i2 %kernel_mode_read, i2 1"   --->   Operation 9 'icmp' 'icmp_ln1065_4' <Predicate = true> <Delay = 0.95> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.95> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 10 [1/1] (0.00ns) (grouped into LUT with out node select_ln72)   --->   "%or_ln69 = or i1 %icmp_ln1065, i1 %icmp_ln1065_4" [userdma.cpp:69]   --->   Operation 10 'or' 'or_ln69' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 11 [1/1] (0.97ns) (out node of the LUT)   --->   "%select_ln72 = select i1 %or_ln69, i12 2048, i12 1024" [userdma.cpp:72]   --->   Operation 11 'select' 'select_ln72' <Predicate = true> <Delay = 0.97> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 12 [1/1] (0.00ns)   --->   "%empty = wait i32 @_ssdm_op_Wait"   --->   Operation 12 'wait' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 13 [2/2] (3.50ns)   --->   "%call_ln72 = call void @getinstream_Pipeline_VITIS_LOOP_72_1, i32 %inStreamTop_V_data_V, i4 %inStreamTop_V_keep_V, i4 %inStreamTop_V_strb_V, i2 %inStreamTop_V_user_V, i1 %inStreamTop_V_last_V, i33 %inbuf, i12 %select_ln72, i32 %incount25, i1 %tmp_last_V_loc" [userdma.cpp:72]   --->   Operation 13 'call' 'call_ln72' <Predicate = true> <Delay = 3.50> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 3 <SV = 2> <Delay = 0.00>
+ST_3 : Operation 14 [1/2] (0.00ns)   --->   "%call_ln72 = call void @getinstream_Pipeline_VITIS_LOOP_72_1, i32 %inStreamTop_V_data_V, i4 %inStreamTop_V_keep_V, i4 %inStreamTop_V_strb_V, i2 %inStreamTop_V_user_V, i1 %inStreamTop_V_last_V, i33 %inbuf, i12 %select_ln72, i32 %incount25, i1 %tmp_last_V_loc" [userdma.cpp:72]   --->   Operation 14 'call' 'call_ln72' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 0.99>
+ST_4 : Operation 15 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i2 %kernel_mode_c, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str, i32 4294967295, i32 0"   --->   Operation 15 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 16 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %incount25, void @empty_16, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3, i32 4294967295, i32 0"   --->   Operation 16 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 17 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i33 %inbuf, void @empty_16, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3, i32 4294967295, i32 0"   --->   Operation 17 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 18 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %inStreamTop_V_last_V, i2 %inStreamTop_V_user_V, i4 %inStreamTop_V_strb_V, i4 %inStreamTop_V_keep_V, i32 %inStreamTop_V_data_V, void @empty_19, i32 1, i32 1, void @empty_20, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3, i32 4294967295, i32 0"   --->   Operation 18 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 19 [1/1] (0.00ns)   --->   "%tmp_last_V_loc_load = load i1 %tmp_last_V_loc"   --->   Operation 19 'load' 'tmp_last_V_loc_load' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 20 [1/1] (0.99ns)   --->   "%select_ln82 = select i1 %tmp_last_V_loc_load, i2 0, i2 2" [userdma.cpp:82]   --->   Operation 20 'select' 'select_ln82' <Predicate = true> <Delay = 0.99> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 21 [1/1] (0.00ns)   --->   "%write_ln78 = write void @_ssdm_op_Write.ap_auto.i2P0A, i2 %s2m_err, i2 %select_ln82" [userdma.cpp:78]   --->   Operation 21 'write' 'write_ln78' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 22 [1/1] (0.00ns)   --->   "%ret_ln95 = ret" [userdma.cpp:95]   --->   Operation 22 'ret' 'ret_ln95' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 3.63ns
+The critical path consists of the following:
+	wire read operation ('kernel_mode_read') on port 'kernel_mode' [11]  (0 ns)
+	fifo write operation ('write_ln0') on port 'kernel_mode_c' [14]  (3.63 ns)
+
+ <State 2>: 5.44ns
+The critical path consists of the following:
+	'icmp' operation ('icmp_ln1065') [18]  (0.959 ns)
+	'or' operation ('or_ln69', userdma.cpp:69) [20]  (0 ns)
+	'select' operation ('select_ln72', userdma.cpp:72) [21]  (0.978 ns)
+	'call' operation ('call_ln72', userdma.cpp:72) to 'getinstream_Pipeline_VITIS_LOOP_72_1' [23]  (3.51 ns)
+
+ <State 3>: 0ns
+The critical path consists of the following:
+
+ <State 4>: 0.993ns
+The critical path consists of the following:
+	'load' operation ('tmp_last_V_loc_load') on local variable 'tmp_last_V_loc' [24]  (0 ns)
+	'select' operation ('select_ln82', userdma.cpp:82) [25]  (0.993 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

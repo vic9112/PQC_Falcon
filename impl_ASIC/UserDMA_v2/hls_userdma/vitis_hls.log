@@ -1,0 +1,46 @@
+INFO: [HLS 200-10] Running '/tools/Xilinx/Vitis_HLS/2022.1/bin/unwrapped/lnx64.o/vitis_hls'
+INFO: [HLS 200-10] For user 'ubuntu' on host 'ubuntu2004.linuxvmimages.local' (Linux_x86_64 version 5.15.0-107-generic) on Wed May 29 13:09:55 EDT 2024
+INFO: [HLS 200-10] On os Ubuntu 20.04.4 LTS
+INFO: [HLS 200-10] In directory '/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma'
+Sourcing Tcl script '/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma/hls_userdma.prj/solution1/export.tcl'
+INFO: [HLS 200-1510] Running: source /home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma/hls_userdma.prj/solution1/export.tcl
+INFO: [HLS 200-1510] Running: open_project hls_userdma.prj 
+INFO: [HLS 200-10] Opening project '/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma/hls_userdma.prj'.
+INFO: [HLS 200-1510] Running: set_top userdma 
+INFO: [HLS 200-1510] Running: add_files userdma.h 
+INFO: [HLS 200-10] Adding design file 'userdma.h' to the project
+INFO: [HLS 200-1510] Running: add_files userdma.cpp 
+INFO: [HLS 200-10] Adding design file 'userdma.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb test_data.h -cflags -Wno-unknown-pragmas -csimflags -DCSIM_MODE -Wno-unknown-pragmas 
+INFO: [HLS 200-10] Adding test bench file 'test_data.h' to the project
+INFO: [HLS 200-1510] Running: add_files -tb userdma_test.cpp -cflags -Wno-unknown-pragmas -csimflags -DCSIM_MODE -Wno-unknown-pragmas 
+INFO: [HLS 200-10] Adding test bench file 'userdma_test.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vivado 
+INFO: [HLS 200-10] Opening solution '/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma/hls_userdma.prj/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -rtl verilog 
+INFO: [HLS 200-1510] Running: source ./hls_userdma.prj/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name userdma userdma 
+INFO: [HLS 200-1510] Running: export_design -rtl verilog -format ip_catalog 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+
+****** Vivado v2022.1 (64-bit)
+  **** SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
+  **** IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source run_ippack.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2022.1/data/ip'.
+INFO: [Common 17-206] Exiting Vivado at Wed May 29 13:10:08 2024...
+INFO: [HLS 200-802] Generated output file hls_userdma.prj/solution1/impl/export.zip
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 11.78 seconds. CPU system time: 1.31 seconds. Elapsed time: 13.92 seconds; current allocated memory: -1022.508 MB.
+INFO: [HLS 200-112] Total CPU user time: 14.38 seconds. Total CPU system time: 1.98 seconds. Total elapsed time: 16.26 seconds; peak allocated memory: 473.664 MB.

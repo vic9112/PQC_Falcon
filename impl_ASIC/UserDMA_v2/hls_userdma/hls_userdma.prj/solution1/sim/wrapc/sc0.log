@@ -1,0 +1,7 @@
+   Build using "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/bin/g++"
+   Compiling apatb_userdma_util.cpp
+   Compiling userdma.cpp_pre.cpp.tb.cpp
+   Compiling apatb_userdma.cpp
+   Compiling userdma_test.cpp_pre.cpp.tb.cpp
+   Compiling apatb_userdma_ir.ll
+   Generating cosim.tv.exe
