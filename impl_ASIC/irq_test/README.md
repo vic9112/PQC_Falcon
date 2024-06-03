@@ -18,3 +18,8 @@
    - FPGA side needs to release **`aa_mb_irq_en`** located at **`0x3000_2100`** to cancel the interrupt.
    - At line 211, [fsic_tb.sv](https://github.com/vic9112/PQC_Falcon/blob/main/impl_ASIC/irq_test/vivado/fsic_tb.sv)
    - ![release](https://github.com/vic9112/PQC_Falcon/assets/137171415/8e5aead7-a724-41a7-b5dd-25c0bed04ae3)
+
+## Block Design
+
+- Add **AXI Interrupt Controller**, connect **`aa_mb_irq`** to the input of AXI Interrupt Controller, then concatenate to **`IRQ_F2P`**
+![block](https://github.com/vic9112/PQC_Falcon/assets/137171415/d9fa1946-94a5-4f01-ad87-729e874b2dab)
