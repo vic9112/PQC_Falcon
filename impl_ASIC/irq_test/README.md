@@ -21,5 +21,5 @@
 
 ## Block Design
 
-- Add **AXI Interrupt Controller**, connect **`aa_mb_irq`** to the input of AXI Interrupt Controller, then concatenate to **`IRQ_F2P`**
+- Add **AXI Interrupt Controller**, connect pin **`aa_mb_irq`** on **ps_axil** to the input of AXI Interrupt Controller, then concatenate to pin **`IRQ_F2P`** on **ZYNQ(PS)**
 ![block](https://github.com/vic9112/PQC_Falcon/assets/137171415/d9fa1946-94a5-4f01-ad87-729e874b2dab)
