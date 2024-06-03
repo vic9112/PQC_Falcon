@@ -1,0 +1,106 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Mon Jun  3 07:20:14 2024
+# Process ID: 516864
+# Current directory: /home/ubuntu/fsic_fpga/vivado
+# Command line: vivado -source open_wave.tcl
+# Log file: /home/ubuntu/fsic_fpga/vivado/vivado.log
+# Journal file: /home/ubuntu/fsic_fpga/vivado/vivado.jou
+# Running On: ubuntu2004, OS: Linux, CPU Frequency: 2592.000 MHz, CPU Physical cores: 2, Host memory: 10425 MB
+#-----------------------------------------------------------
+start_gui
+source open_wave.tcl
+# open_wave_database {./vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.sim/sim_1/behav/xsim/fsic_tb_behav.wdb} 
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es:part0:1.2 available at /tools/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/es/1.2/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es_revb:part0:1.0 available at /tools/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120_revb/es/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at /tools/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at /tools/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at /tools/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/2.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at /tools/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2022.1/data/ip'.
+current_fileset: Time (s): cpu = 00:00:10 ; elapsed = 00:00:07 . Memory (MB): peak = 7526.551 ; gain = 32.066 ; free physical = 169 ; free virtual = 1369
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/axi_smc/M00_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/axi_smc/S00_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/axi_smc/inst/m00_exit_pipeline/m00_exit/M_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/axi_smc/inst/m00_exit_pipeline/m00_exit/S_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/axi_smc/inst/m00_exit_pipeline/m_axi
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/axi_smc/inst/m00_exit_pipeline/s_axi
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/axi_smc/inst/m00_sc2axi/M_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/axi_smc/inst/s00_axi2sc/S_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/axi_smc/inst/s00_entry_pipeline/m_axi
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/axi_smc/inst/s00_entry_pipeline/s00_mmu/M_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/axi_smc/inst/s00_entry_pipeline/s00_mmu/S_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/axi_smc/inst/s00_entry_pipeline/s00_si_converter/M_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/axi_smc/inst/s00_entry_pipeline/s00_si_converter/S_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/axi_smc/inst/s00_entry_pipeline/s00_transaction_regulator/M_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/axi_smc/inst/s00_entry_pipeline/s00_transaction_regulator/S_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/axi_smc/inst/s00_entry_pipeline/s_axi
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/axi_smc_1/M00_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/axi_smc_1/S00_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/axi_smc_1/inst/m00_exit_pipeline/m00_exit/M_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/axi_smc_1/inst/m00_exit_pipeline/m00_exit/S_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/axi_smc_1/inst/m00_exit_pipeline/m_axi
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/axi_smc_1/inst/m00_exit_pipeline/s_axi
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/axi_smc_1/inst/m00_sc2axi/M_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/axi_smc_1/inst/s00_axi2sc/S_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/axi_smc_1/inst/s00_entry_pipeline/m_axi
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/axi_smc_1/inst/s00_entry_pipeline/s00_mmu/M_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/axi_smc_1/inst/s00_entry_pipeline/s00_mmu/S_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/axi_smc_1/inst/s00_entry_pipeline/s00_si_converter/M_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/axi_smc_1/inst/s00_entry_pipeline/s00_si_converter/S_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/axi_smc_1/inst/s00_entry_pipeline/s00_transaction_regulator/M_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/axi_smc_1/inst/s00_entry_pipeline/s00_transaction_regulator/S_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/axi_smc_1/inst/s00_entry_pipeline/s_axi
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/axi_smc_2/M00_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/axi_smc_2/S00_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/axi_smc_2/inst/m00_exit_pipeline/m00_exit/M_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/axi_smc_2/inst/m00_exit_pipeline/m00_exit/S_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/axi_smc_2/inst/m00_exit_pipeline/m_axi
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/axi_smc_2/inst/m00_exit_pipeline/s_axi
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/axi_smc_2/inst/m00_sc2axi/M_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/axi_smc_2/inst/s00_axi2sc/S_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/axi_smc_2/inst/s00_entry_pipeline/m_axi
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/axi_smc_2/inst/s00_entry_pipeline/s00_mmu/M_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/axi_smc_2/inst/s00_entry_pipeline/s00_mmu/S_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/axi_smc_2/inst/s00_entry_pipeline/s00_si_converter/M_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/axi_smc_2/inst/s00_entry_pipeline/s00_si_converter/S_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/axi_smc_2/inst/s00_entry_pipeline/s00_transaction_regulator/M_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/axi_smc_2/inst/s00_entry_pipeline/s00_transaction_regulator/S_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/axi_smc_2/inst/s00_entry_pipeline/s_axi
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/axi_vip_0/M_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/axi_vip_0_axi_periph/M00_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/axi_vip_0_axi_periph/M01_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/axi_vip_0_axi_periph/M02_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/axi_vip_0_axi_periph/S00_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/axi_vip_0_axi_periph/m00_couplers/M_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/axi_vip_0_axi_periph/m00_couplers/S_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/axi_vip_0_axi_periph/m01_couplers/M_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/axi_vip_0_axi_periph/m01_couplers/S_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/axi_vip_0_axi_periph/m02_couplers/M_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/axi_vip_0_axi_periph/m02_couplers/S_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/axi_vip_0_axi_periph/s00_couplers/M_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/axi_vip_0_axi_periph/s00_couplers/S_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/axi_vip_0_axi_periph/xbar/M00_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/axi_vip_0_axi_periph/xbar/M01_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/axi_vip_0_axi_periph/xbar/M02_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/axi_vip_0_axi_periph/xbar/S00_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/axi_vip_1/S_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/axi_vip_2/S_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/axi_vip_3/S_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/ps_axil_0/ladma_mm
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/ps_axil_0/ladma_s
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/ps_axil_0/s_axi
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/ps_axil_0/updma_si
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/ps_axil_0/updma_so
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/userdma_0/inStreamTop
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/userdma_0/m_axi_gmem0
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/userdma_0/m_axi_gmem1
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/userdma_0/outStreamTop
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/userdma_0/s_axi_control
+open_wave_config /home/ubuntu/fsic_fpga/vivado/fsic_tb_behav.wcfg
+open_wave_database: Time (s): cpu = 00:00:16 ; elapsed = 00:00:11 . Memory (MB): peak = 7574.574 ; gain = 80.090 ; free physical = 122 ; free virtual = 1031
+# current_fileset

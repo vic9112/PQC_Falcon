@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="userdma" xd:componentRef="userdma" xd:initiationInterval="x" xd:clockPeriod="10" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:controlReg xd:name="control" xd:interfaceRef="s_axi_control" xd:busTypeRef="axilite" xd:type="generic_axi_lite" xd:offset="0x0"/>
+  <xd:arg xd:name="inStreamTop" xd:originalName="inStreamTop" xd:direction="in" xd:interfaceRef="inStreamTop" xd:busTypeRef="axis" xd:dataWidth="32"/>
+  <xd:arg xd:name="*(s2m_buf_sts)" xd:originalName="s2m_buf_sts" xd:direction="out" xd:interfaceRef="s_axi_control" xd:busTypeRef="axilite" xd:offset="0x10" xd:statusOffset="0x14" xd:handshakeRef="ap_vld" xd:dataWidth="32"/>
+  <xd:arg xd:name="s2m_len" xd:originalName="s2m_len" xd:direction="in" xd:interfaceRef="s_axi_control" xd:busTypeRef="axilite" xd:offset="0x20" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="s2m_enb_clrsts" xd:originalName="s2m_enb_clrsts" xd:direction="in" xd:interfaceRef="s_axi_control" xd:busTypeRef="axilite" xd:offset="0x28" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="*(s2mbuf)" xd:originalName="s2mbuf" xd:direction="inout" xd:interfaceRef="m_axi_gmem0" xd:busTypeRef="aximm" xd:dataWidth="32" xd:bufferDirection="out"/>
+  <xd:arg xd:name="s2mbuf" xd:originalName="s2mbuf" xd:direction="in" xd:interfaceRef="s_axi_control" xd:busTypeRef="axilite" xd:offset="0x30" xd:dataWidth="32" xd:aximmInterfaceRef="m_axi_gmem0"/>
+  <xd:arg xd:name="*(s2m_err)" xd:originalName="s2m_err" xd:direction="out" xd:interfaceRef="s_axi_control" xd:busTypeRef="axilite" xd:offset="0x3C" xd:statusOffset="0x40" xd:handshakeRef="ap_vld" xd:dataWidth="32"/>
+  <xd:arg xd:name="*(m2sbuf)" xd:originalName="m2sbuf" xd:direction="inout" xd:interfaceRef="m_axi_gmem1" xd:busTypeRef="aximm" xd:dataWidth="32" xd:bufferDirection="in"/>
+  <xd:arg xd:name="m2sbuf" xd:originalName="m2sbuf" xd:direction="in" xd:interfaceRef="s_axi_control" xd:busTypeRef="axilite" xd:offset="0x4C" xd:dataWidth="32" xd:aximmInterfaceRef="m_axi_gmem1"/>
+  <xd:arg xd:name="*(m2s_buf_sts)" xd:originalName="m2s_buf_sts" xd:direction="out" xd:interfaceRef="s_axi_control" xd:busTypeRef="axilite" xd:offset="0x58" xd:statusOffset="0x5C" xd:handshakeRef="ap_vld" xd:dataWidth="32"/>
+  <xd:arg xd:name="m2s_len" xd:originalName="m2s_len" xd:direction="in" xd:interfaceRef="s_axi_control" xd:busTypeRef="axilite" xd:offset="0x68" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="m2s_enb_clrsts" xd:originalName="m2s_enb_clrsts" xd:direction="in" xd:interfaceRef="s_axi_control" xd:busTypeRef="axilite" xd:offset="0x70" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="outStreamTop" xd:originalName="outStreamTop" xd:direction="out" xd:interfaceRef="outStreamTop" xd:busTypeRef="axis" xd:dataWidth="32"/>
+  <xd:latencyEstimates xd:best-case="undef" xd:worst-case="undef" xd:average-case="undef"/>
+  <xd:resourceEstimates xd:LUT="5824" xd:FF="3774" xd:BRAM="0" xd:DSP="0"/>
+</xd:acceleratorMap>

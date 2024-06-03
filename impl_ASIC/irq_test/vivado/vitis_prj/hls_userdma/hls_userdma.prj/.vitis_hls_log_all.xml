@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low." projectName="hls_userdma.prj" solutionName="solution1" date="2024-05-27T13:33:51.070-0400" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'paralleltostreamwithburst_Pipeline_VITIS_LOOP_94_2/m_axi_gmem1_ARUSER' to 0." projectName="hls_userdma.prj" solutionName="solution1" date="2024-05-27T13:33:50.419-0400" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'paralleltostreamwithburst_Pipeline_VITIS_LOOP_94_2/m_axi_gmem1_ARREGION' to 0." projectName="hls_userdma.prj" solutionName="solution1" date="2024-05-27T13:33:50.396-0400" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'paralleltostreamwithburst_Pipeline_VITIS_LOOP_94_2/m_axi_gmem1_ARQOS' to 0." projectName="hls_userdma.prj" solutionName="solution1" date="2024-05-27T13:33:50.374-0400" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'paralleltostreamwithburst_Pipeline_VITIS_LOOP_94_2/m_axi_gmem1_ARPROT' to 0." projectName="hls_userdma.prj" solutionName="solution1" date="2024-05-27T13:33:50.354-0400" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'paralleltostreamwithburst_Pipeline_VITIS_LOOP_94_2/m_axi_gmem1_ARCACHE' to 0." projectName="hls_userdma.prj" solutionName="solution1" date="2024-05-27T13:33:50.344-0400" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'paralleltostreamwithburst_Pipeline_VITIS_LOOP_94_2/m_axi_gmem1_ARLOCK' to 0." projectName="hls_userdma.prj" solutionName="solution1" date="2024-05-27T13:33:50.323-0400" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'paralleltostreamwithburst_Pipeline_VITIS_LOOP_94_2/m_axi_gmem1_ARBURST' to 0." projectName="hls_userdma.prj" solutionName="solution1" date="2024-05-27T13:33:50.306-0400" type="Warning"/>
+      </synLog>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>
