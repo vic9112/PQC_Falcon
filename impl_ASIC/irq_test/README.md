@@ -1,6 +1,7 @@
 # SOC / FPGA MailBox Interrupt
 
 - Here I used FIR to implement
+![waveform](https://github.com/vic9112/PQC_Falcon/assets/137171415/97c19cd8-b564-4601-82e8-b5b142888a18)
 
 ## Simulation Step:
 1. PL_AA enable:
