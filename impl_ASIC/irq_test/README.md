@@ -1,7 +1,7 @@
 # SOC / FPGA MailBox Interrupt
 
-- Here I used FIR to implement
-![waveform](https://github.com/vic9112/PQC_Falcon/assets/137171415/97c19cd8-b564-4601-82e8-b5b142888a18)
+- Here I implement IRQ with FIR
+  ![waveform](https://github.com/vic9112/PQC_Falcon/assets/137171415/c0aa035a-f3db-47fb-a9df-a87798b35ed1)
 
 ## Simulation Step:
 1. PL_AA enable:
