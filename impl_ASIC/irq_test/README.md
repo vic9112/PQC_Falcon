@@ -11,7 +11,9 @@
 
 2. SOC write local MailBox
    - SOC side (firmware) writes specific patterns to the local MailBox, then it will sync to other side (FPGA) and generate interrupt (**`aa_mb_irq`**)
-   - 
+   - At line 223, [fsic.c](https://github.com/vic9112/PQC_Falcon/blob/main/impl_ASIC/irq_test/testbench/fsic/fsic.c)
+   - ![firmware write MB](https://github.com/vic9112/PQC_Falcon/assets/137171415/2887d0f6-202a-45aa-ad73-8ecb9f36b1f5)
+
 3. Release PL_AA enable:
    - FPGA side needs to release **`aa_mb_irq_en`** located at **`0x3000_2100`** to cancel the interrupt.
    - At line 211, [fsic_tb.sv](https://github.com/vic9112/PQC_Falcon/blob/main/impl_ASIC/irq_test/vivado/fsic_tb.sv)
