@@ -126,42 +126,39 @@ module fsic_tb();
         //SocLa2DmaPath();
         //SocUp2DmaPath();
         //load_dma_x();
-        //load_dma_NTT();
+        load_dma_NTT();
         //load_dma_iNTT();
         //load_dma_FFT();
         //load_dma_iFFT();
         //setting_dma();
-       //setting_dma_NTT();
+        setting_dma_NTT();
         //setting_dma_iNTT();
         //setting_dma_FFT();
         //setting_dma_iFFT();
          //test_FIR();
         ap_start_get_result(); // should to change checkdone!
-        
-            $display($time, "=> test sel uspj2");
+        ////// test axi-lite read /////////
+            /*$display($time, "=> test sel uspj2");
             offset = 0;
-            data = 32'h0000_0001;
+            data = 32'h0000_0002;
             axil_cycles_gen(WriteCyc, SOC_CC, offset, data, 1);
-            //#20us
             axil_cycles_gen(ReadCyc, SOC_CC, offset, data, 1);
-            //#20us
             if(data == 32'h0000_0001) begin
                 $display($time, "=> Fpga2Soc_Write SOC_CC offset %h = %h, PASS", offset, data);
             end else begin
                 $display($time, "=> Fpga2Soc_Write SOC_CC offset %h = %h, FAIL", offset, data);
                 ->> error_event;
             end
-    	    //read ap_done sould change to firmware 
             offset = 0;
-            //#20us
             axil_cycles_gen(ReadCyc, SOC_UP, offset, data, 1);
-            //#20us
-            if(data == 32'h0000_0010) begin
+            if(data == 32'h0000_0001) begin
                 $display($time, "=> Fpga2Soc_Write SOC_UP offset %h = %h, PASS", offset, data);
             end else begin
                 $display($time, "=> Fpga2Soc_Write SOC_UP offset %h = %h, FAIL", offset, data);
                 ->> error_event;
-            end
+            end*/
+         /////////////////////// 
+          
         #500us    
         $display($time, "=> End of the test...");                         
         $finish;

@@ -197,7 +197,7 @@ set proj_dir [get_property directory [current_project]]
 
 # Set project properties
 set obj [current_project]
-set_property -name "board_part" -value "tul.com.tw:pynq-z2:part0:1.0" -objects $obj
+#set_property -name "board_part" -value "tul.com.tw:pynq-z2:part0:1.0" -objects $obj
 set_property -name "default_lib" -value "xil_defaultlib" -objects $obj
 set_property -name "enable_resource_estimation" -value "0" -objects $obj
 set_property -name "enable_vhdl_2008" -value "1" -objects $obj
@@ -609,7 +609,7 @@ proc cr_bd_design_1 { parentCell } {
   set blk_mem_gen_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:blk_mem_gen:8.4 blk_mem_gen_0 ]
   set_property -dict [ list \
    CONFIG.Byte_Size {8} \
-CONFIG.Coe_File {/home/ubuntu/new_design/impl_ASIC/fiFFNTT_sim/vivado/fsic.coe} \
+CONFIG.Coe_File {/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/fsic.coe} \
    CONFIG.EN_SAFETY_CKT {true} \
    CONFIG.Enable_32bit_Address {true} \
    CONFIG.Enable_A {Use_ENA_Pin} \

@@ -1,0 +1,186 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Mon May 27 07:35:09 2024
+# Process ID: 10595
+# Current directory: /home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.runs/design_1_auto_pc_6_synth_1
+# Command line: vivado -log design_1_auto_pc_6.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_auto_pc_6.tcl
+# Log file: /home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.runs/design_1_auto_pc_6_synth_1/design_1_auto_pc_6.vds
+# Journal file: /home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.runs/design_1_auto_pc_6_synth_1/vivado.jou
+# Running On: ubuntu2004, OS: Linux, CPU Frequency: 3194.000 MHz, CPU Physical cores: 2, Host memory: 8323 MB
+#-----------------------------------------------------------
+source design_1_auto_pc_6.tcl -notrace
+create_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 2868.395 ; gain = 0.023 ; free physical = 1799 ; free virtual = 3135
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vitis_prj/hls_caravel_ps'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vitis_prj/hls_output_pin'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2022.1/data/ip'.
+Command: synth_design -top design_1_auto_pc_6 -part xc7z020clg400-1 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 10686
+WARNING: [Synth 8-9501] generate block is allowed only inside loop and conditional generate in SystemVerilog mode [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:4023]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:14 . Memory (MB): peak = 2868.395 ; gain = 0.000 ; free physical = 1655 ; free virtual = 3017
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_1_auto_pc_6' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ip/design_1_auto_pc_6/synth/design_1_auto_pc_6.v:53]
+INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_26_axi_protocol_converter' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/90c8/hdl/axi_protocol_converter_v2_1_vl_rfs.v:4807]
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_26_axi_protocol_converter' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/90c8/hdl/axi_protocol_converter_v2_1_vl_rfs.v:4807]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_pc_6' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ip/design_1_auto_pc_6/synth/design_1_auto_pc_6.v:53]
+WARNING: [Synth 8-7129] Port aclk in module axi_protocol_converter_v2_1_26_axi_protocol_converter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aresetn in module axi_protocol_converter_v2_1_26_axi_protocol_converter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awlock[1] in module axi_protocol_converter_v2_1_26_axi_protocol_converter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awregion[3] in module axi_protocol_converter_v2_1_26_axi_protocol_converter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awregion[2] in module axi_protocol_converter_v2_1_26_axi_protocol_converter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awregion[1] in module axi_protocol_converter_v2_1_26_axi_protocol_converter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awregion[0] in module axi_protocol_converter_v2_1_26_axi_protocol_converter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wid[11] in module axi_protocol_converter_v2_1_26_axi_protocol_converter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wid[10] in module axi_protocol_converter_v2_1_26_axi_protocol_converter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wid[9] in module axi_protocol_converter_v2_1_26_axi_protocol_converter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wid[8] in module axi_protocol_converter_v2_1_26_axi_protocol_converter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wid[7] in module axi_protocol_converter_v2_1_26_axi_protocol_converter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wid[6] in module axi_protocol_converter_v2_1_26_axi_protocol_converter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wid[5] in module axi_protocol_converter_v2_1_26_axi_protocol_converter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wid[4] in module axi_protocol_converter_v2_1_26_axi_protocol_converter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wid[3] in module axi_protocol_converter_v2_1_26_axi_protocol_converter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wid[2] in module axi_protocol_converter_v2_1_26_axi_protocol_converter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wid[1] in module axi_protocol_converter_v2_1_26_axi_protocol_converter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wid[0] in module axi_protocol_converter_v2_1_26_axi_protocol_converter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arlock[1] in module axi_protocol_converter_v2_1_26_axi_protocol_converter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arregion[3] in module axi_protocol_converter_v2_1_26_axi_protocol_converter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arregion[2] in module axi_protocol_converter_v2_1_26_axi_protocol_converter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arregion[1] in module axi_protocol_converter_v2_1_26_axi_protocol_converter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arregion[0] in module axi_protocol_converter_v2_1_26_axi_protocol_converter is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:14 ; elapsed = 00:00:32 . Memory (MB): peak = 2868.395 ; gain = 0.000 ; free physical = 120 ; free virtual = 1483
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:00:32 . Memory (MB): peak = 2868.395 ; gain = 0.000 ; free physical = 125 ; free virtual = 1361
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:32 . Memory (MB): peak = 2868.395 ; gain = 0.000 ; free physical = 125 ; free virtual = 1361
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2868.395 ; gain = 0.000 ; free physical = 122 ; free virtual = 1281
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+WARNING: [Designutils 20-1758] instance inst wraps a black box. Constraint reading is skipped for elaborated designs in this case. Skipping constraint file '/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ip/design_1_auto_pc_6/design_1_auto_pc_6_ooc.xdc'.
+Parsing XDC File [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.runs/design_1_auto_pc_6_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.runs/design_1_auto_pc_6_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2884.402 ; gain = 0.000 ; free physical = 120 ; free virtual = 1081
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.08 . Memory (MB): peak = 2884.402 ; gain = 0.000 ; free physical = 125 ; free virtual = 1058
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:24 ; elapsed = 00:01:15 . Memory (MB): peak = 2884.402 ; gain = 16.008 ; free physical = 469 ; free virtual = 803
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:24 ; elapsed = 00:01:15 . Memory (MB): peak = 2884.402 ; gain = 16.008 ; free physical = 467 ; free virtual = 802
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  /home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.runs/design_1_auto_pc_6_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:01:15 . Memory (MB): peak = 2884.402 ; gain = 16.008 ; free physical = 463 ; free virtual = 800
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:24 ; elapsed = 00:01:16 . Memory (MB): peak = 2884.402 ; gain = 16.008 ; free physical = 442 ; free virtual = 783
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7129] Port aclk in module axi_protocol_converter_v2_1_26_axi_protocol_converter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aresetn in module axi_protocol_converter_v2_1_26_axi_protocol_converter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awlock[1] in module axi_protocol_converter_v2_1_26_axi_protocol_converter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awregion[3] in module axi_protocol_converter_v2_1_26_axi_protocol_converter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awregion[2] in module axi_protocol_converter_v2_1_26_axi_protocol_converter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awregion[1] in module axi_protocol_converter_v2_1_26_axi_protocol_converter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awregion[0] in module axi_protocol_converter_v2_1_26_axi_protocol_converter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wid[11] in module axi_protocol_converter_v2_1_26_axi_protocol_converter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wid[10] in module axi_protocol_converter_v2_1_26_axi_protocol_converter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wid[9] in module axi_protocol_converter_v2_1_26_axi_protocol_converter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wid[8] in module axi_protocol_converter_v2_1_26_axi_protocol_converter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wid[7] in module axi_protocol_converter_v2_1_26_axi_protocol_converter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wid[6] in module axi_protocol_converter_v2_1_26_axi_protocol_converter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wid[5] in module axi_protocol_converter_v2_1_26_axi_protocol_converter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wid[4] in module axi_protocol_converter_v2_1_26_axi_protocol_converter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wid[3] in module axi_protocol_converter_v2_1_26_axi_protocol_converter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wid[2] in module axi_protocol_converter_v2_1_26_axi_protocol_converter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wid[1] in module axi_protocol_converter_v2_1_26_axi_protocol_converter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wid[0] in module axi_protocol_converter_v2_1_26_axi_protocol_converter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arlock[1] in module axi_protocol_converter_v2_1_26_axi_protocol_converter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arregion[3] in module axi_protocol_converter_v2_1_26_axi_protocol_converter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arregion[2] in module axi_protocol_converter_v2_1_26_axi_protocol_converter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arregion[1] in module axi_protocol_converter_v2_1_26_axi_protocol_converter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arregion[0] in module axi_protocol_converter_v2_1_26_axi_protocol_converter is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:01:21 . Memory (MB): peak = 2884.402 ; gain = 16.008 ; free physical = 125 ; free virtual = 599
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:32 ; elapsed = 00:01:42 . Memory (MB): peak = 2884.402 ; gain = 16.008 ; free physical = 122 ; free virtual = 259
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:01:42 . Memory (MB): peak = 2884.402 ; gain = 16.008 ; free physical = 119 ; free virtual = 259
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:32 ; elapsed = 00:01:42 . Memory (MB): peak = 2884.402 ; gain = 16.008 ; free physical = 117 ; free virtual = 233
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------

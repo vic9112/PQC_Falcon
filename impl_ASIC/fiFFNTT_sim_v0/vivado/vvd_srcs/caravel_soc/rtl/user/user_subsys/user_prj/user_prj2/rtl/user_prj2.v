@@ -151,7 +151,7 @@ end
 
 ////
 always @* begin
-  if      (rd_addr[11:0] == 12'h000) rdata_tmp = 32'h20; /// (state==RESET);
+  if      (rd_addr[11:0] == 12'h000) rdata_tmp = (state==RESET);
   else                               rdata_tmp = 0;
 end
 

@@ -1,0 +1,737 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1716831231702">
+  <ports id="1" name="gmem0" type="PortType" coreId="3621216858" bitwidth="32" direction="DirOut" iftype="IfTypeFifo">
+    <dataInputObjs>call</dataInputObjs>
+  </ports>
+  <ports id="2" name="gmem1" type="PortType" coreId="2929682880" bitwidth="32" iftype="IfTypeFifo">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="3" name="inStreamTop_V_data_V" type="PortType" originalName="inStreamTop" coreId="57" bitwidth="32">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="4" name="inStreamTop_V_keep_V" type="PortType" originalName="inStreamTop" coreId="1211351264" bitwidth="4">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="5" name="inStreamTop_V_strb_V" type="PortType" originalName="inStreamTop" coreId="54" bitwidth="4">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="6" name="inStreamTop_V_user_V" type="PortType" originalName="inStreamTop" coreId="54" bitwidth="2">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="7" name="inStreamTop_V_last_V" type="PortType" originalName="inStreamTop" coreId="2929807280" bitwidth="1">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="8" name="s2m_buf_sts" type="PortType" originalName="s2m_buf_sts" coreId="2929823936" bitwidth="1" direction="DirOut">
+    <dataInputObjs>call</dataInputObjs>
+  </ports>
+  <ports id="9" name="s2m_len" type="PortType" originalName="s2m_len" coreId="2930574752" bitwidth="32">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="10" name="s2m_enb_clrsts" type="PortType" originalName="s2m_enb_clrsts" coreId="1953394531" bitwidth="1">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="11" name="s2mbuf" type="PortType" coreId="912" bitwidth="64">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="12" name="s2m_err" type="PortType" originalName="s2m_err" coreId="2930577408" bitwidth="2" direction="DirOut">
+    <dataInputObjs>call</dataInputObjs>
+  </ports>
+  <ports id="13" name="m2sbuf" type="PortType" coreId="17" bitwidth="64">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="14" name="m2s_buf_sts" type="PortType" originalName="m2s_buf_sts" coreId="2929551600" bitwidth="1" direction="DirOut">
+    <dataInputObjs>call</dataInputObjs>
+  </ports>
+  <ports id="15" name="m2s_len" type="PortType" originalName="m2s_len" coreId="0" bitwidth="32">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="16" name="m2s_enb_clrsts" type="PortType" originalName="m2s_enb_clrsts" coreId="2929603472" bitwidth="1">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="17" name="outStreamTop_V_data_V" type="PortType" originalName="outStreamTop" coreId="0" bitwidth="32" direction="DirOut">
+    <dataInputObjs>call</dataInputObjs>
+  </ports>
+  <ports id="18" name="outStreamTop_V_keep_V" type="PortType" originalName="outStreamTop" coreId="0" bitwidth="4" direction="DirOut">
+    <dataInputObjs>call</dataInputObjs>
+  </ports>
+  <ports id="19" name="outStreamTop_V_strb_V" type="PortType" originalName="outStreamTop" coreId="0" bitwidth="4" direction="DirOut">
+    <dataInputObjs>call</dataInputObjs>
+  </ports>
+  <ports id="20" name="outStreamTop_V_user_V" type="PortType" originalName="outStreamTop" coreId="0" bitwidth="2" direction="DirOut">
+    <dataInputObjs>call</dataInputObjs>
+  </ports>
+  <ports id="21" name="outStreamTop_V_last_V" type="PortType" originalName="outStreamTop" coreId="0" bitwidth="1" direction="DirOut">
+    <dataInputObjs>call</dataInputObjs>
+  </ports>
+  <edges id="105" source_obj="//@ports.15" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="108" source_obj="//@ports.14" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.1"/>
+  <edges id="111" source_obj="//@ports.12" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.2"/>
+  <edges id="113" source_obj="//@ports.10" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="115" source_obj="//@ports.9" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.4"/>
+  <edges id="117" source_obj="//@ports.8" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.5"/>
+  <edges id="128" source_obj="//@regions.0/@basic_blocks.0/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.13"/>
+  <edges id="129" source_obj="//@regions.0/@basic_blocks.0/@node_objs.7" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.13"/>
+  <edges id="132" source_obj="//@ports.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.14"/>
+  <edges id="133" source_obj="//@ports.3" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.14"/>
+  <edges id="134" source_obj="//@ports.4" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.14"/>
+  <edges id="135" source_obj="//@ports.5" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.14"/>
+  <edges id="136" source_obj="//@ports.6" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.14"/>
+  <edges id="137" source_obj="//@regions.0/@basic_blocks.0/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.14"/>
+  <edges id="138" source_obj="//@regions.0/@basic_blocks.0/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.14"/>
+  <edges id="139" source_obj="//@regions.0/@basic_blocks.0/@node_objs.14" sink_obj="//@ports.11"/>
+  <edges id="140" source_obj="//@regions.0/@basic_blocks.0/@node_objs.10" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.14"/>
+  <edges id="141" source_obj="//@regions.0/@basic_blocks.0/@node_objs.11" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.14"/>
+  <edges id="142" source_obj="//@regions.0/@basic_blocks.0/@node_objs.9" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.14"/>
+  <edges id="143" source_obj="//@regions.0/@basic_blocks.0/@node_objs.8" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.14"/>
+  <edges id="146" source_obj="//@regions.0/@basic_blocks.0/@node_objs.10" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.15"/>
+  <edges id="147" source_obj="//@regions.0/@basic_blocks.0/@node_objs.11" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.15"/>
+  <edges id="148" source_obj="//@regions.0/@basic_blocks.0/@node_objs.8" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.15"/>
+  <edges id="149" source_obj="//@regions.0/@basic_blocks.0/@node_objs.15" sink_obj="//@ports.7"/>
+  <edges id="150" source_obj="//@regions.0/@basic_blocks.0/@node_objs.9" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.15"/>
+  <edges id="151" source_obj="//@regions.0/@basic_blocks.0/@node_objs.15" sink_obj="//@ports.0"/>
+  <edges id="152" source_obj="//@regions.0/@basic_blocks.0/@node_objs.7" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.15"/>
+  <edges id="155" source_obj="//@ports.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.16"/>
+  <edges id="156" source_obj="//@regions.0/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.16"/>
+  <edges id="157" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.16"/>
+  <edges id="158" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.16"/>
+  <edges id="159" source_obj="//@regions.0/@basic_blocks.0/@node_objs.12" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.16"/>
+  <edges id="160" source_obj="//@regions.0/@basic_blocks.0/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.16"/>
+  <edges id="163" source_obj="//@regions.0/@basic_blocks.0/@node_objs.12" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.17"/>
+  <edges id="164" source_obj="//@regions.0/@basic_blocks.0/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.17"/>
+  <edges id="165" source_obj="//@regions.0/@basic_blocks.0/@node_objs.17" sink_obj="//@ports.13"/>
+  <edges id="166" source_obj="//@regions.0/@basic_blocks.0/@node_objs.17" sink_obj="//@ports.16"/>
+  <edges id="167" source_obj="//@regions.0/@basic_blocks.0/@node_objs.17" sink_obj="//@ports.17"/>
+  <edges id="168" source_obj="//@regions.0/@basic_blocks.0/@node_objs.17" sink_obj="//@ports.18"/>
+  <edges id="169" source_obj="//@regions.0/@basic_blocks.0/@node_objs.17" sink_obj="//@ports.19"/>
+  <edges id="170" source_obj="//@regions.0/@basic_blocks.0/@node_objs.17" sink_obj="//@ports.20"/>
+  <edges id="171" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.14"/>
+  <edges id="172" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.15"/>
+  <edges id="173" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.15"/>
+  <edges id="905" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.16" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.17"/>
+  <edges id="906" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.14" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.15"/>
+  <edges id="907" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.13" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.15"/>
+  <edges id="908" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.13" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.15"/>
+  <regions anchor_node="-1" region_type="16" typeName="Dataflow" iiViolation="" id="312" RegionName="userdma">
+    <basic_blocks id="102" name="userdma" type="BlockType">
+      <node_objs xsi:type="cdfg:CdfgNode" id="25" name="m2s_enb_clrsts_read" lineNumber="157" fileName="userdma.cpp" fileDirectory=".." coreName="s_axilite" implIndex="s_axilite" control="no" opType="adapter" coreId="114" contextFuncName="userdma" bitwidth="1" opcode="read" m_display="0" m_delay="1.0" m_topoIndex="1" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="userdma.cpp" linenumber="157" fileDirectory="/home/ubuntu/fsic_fpga/vivado/vitis_prj/hls_userdma" functionName="userdma"/>
+        <dataInputObjs>m2s_enb_clrsts</dataInputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="26" name="m2s_len_read" lineNumber="157" fileName="userdma.cpp" fileDirectory=".." coreName="s_axilite" implIndex="s_axilite" control="no" opType="adapter" coreId="114" contextFuncName="userdma" bitwidth="32" opcode="read" m_display="0" m_delay="1.0" m_topoIndex="2" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="userdma.cpp" linenumber="157" fileDirectory="/home/ubuntu/fsic_fpga/vivado/vitis_prj/hls_userdma" functionName="userdma"/>
+        <dataInputObjs>m2s_len</dataInputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="27" name="m2sbuf_read" lineNumber="157" fileName="userdma.cpp" fileDirectory=".." coreName="s_axilite" implIndex="s_axilite" control="no" opType="adapter" coreId="114" contextFuncName="userdma" bitwidth="64" opcode="read" m_display="0" m_delay="1.0" m_topoIndex="3" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="userdma.cpp" linenumber="157" fileDirectory="/home/ubuntu/fsic_fpga/vivado/vitis_prj/hls_userdma" functionName="userdma"/>
+        <dataInputObjs>m2sbuf</dataInputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="28" name="s2mbuf_read" lineNumber="157" fileName="userdma.cpp" fileDirectory=".." coreName="s_axilite" implIndex="s_axilite" control="no" opType="adapter" coreId="114" contextFuncName="userdma" bitwidth="64" opcode="read" m_display="0" m_delay="1.0" m_topoIndex="4" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="userdma.cpp" linenumber="157" fileDirectory="/home/ubuntu/fsic_fpga/vivado/vitis_prj/hls_userdma" functionName="userdma"/>
+        <dataInputObjs>s2mbuf</dataInputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="29" name="s2m_enb_clrsts_read" lineNumber="157" fileName="userdma.cpp" fileDirectory=".." coreName="s_axilite" implIndex="s_axilite" control="no" opType="adapter" coreId="114" contextFuncName="userdma" bitwidth="1" opcode="read" m_display="0" m_delay="1.0" m_topoIndex="5" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="userdma.cpp" linenumber="157" fileDirectory="/home/ubuntu/fsic_fpga/vivado/vitis_prj/hls_userdma" functionName="userdma"/>
+        <dataInputObjs>s2m_enb_clrsts</dataInputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="30" name="s2m_len_read" lineNumber="157" fileName="userdma.cpp" fileDirectory=".." coreName="s_axilite" implIndex="s_axilite" control="no" opType="adapter" coreId="114" contextFuncName="userdma" bitwidth="32" opcode="read" m_display="0" m_delay="1.0" m_topoIndex="6" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="userdma.cpp" linenumber="157" fileDirectory="/home/ubuntu/fsic_fpga/vivado/vitis_prj/hls_userdma" functionName="userdma"/>
+        <dataInputObjs>s2m_len</dataInputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="31" name="m2s_enb_clrsts_c" lineNumber="157" fileName="userdma.cpp" fileDirectory=".." rtlName="m2s_enb_clrsts_c_U" coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" contextFuncName="userdma" bitwidth="1" opcode="alloca" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="userdma.cpp" linenumber="157" fileDirectory="/home/ubuntu/fsic_fpga/vivado/vitis_prj/hls_userdma" functionName="userdma"/>
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="34" name="s2mbuf_c" lineNumber="157" fileName="userdma.cpp" fileDirectory=".." rtlName="s2mbuf_c_U" coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" contextFuncName="userdma" bitwidth="64" opcode="alloca" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="userdma.cpp" linenumber="157" fileDirectory="/home/ubuntu/fsic_fpga/vivado/vitis_prj/hls_userdma" functionName="userdma"/>
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="37" name="s2m_enb_clrsts_c" lineNumber="157" fileName="userdma.cpp" fileDirectory=".." rtlName="s2m_enb_clrsts_c_U" coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" contextFuncName="userdma" bitwidth="1" opcode="alloca" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="userdma.cpp" linenumber="157" fileDirectory="/home/ubuntu/fsic_fpga/vivado/vitis_prj/hls_userdma" functionName="userdma"/>
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="40" name="s2m_len_c" lineNumber="157" fileName="userdma.cpp" fileDirectory=".." rtlName="s2m_len_c_U" coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" contextFuncName="userdma" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="userdma.cpp" linenumber="157" fileDirectory="/home/ubuntu/fsic_fpga/vivado/vitis_prj/hls_userdma" functionName="userdma"/>
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="87" name="inbuf" rtlName="inbuf_U" coreName="FIFO" implIndex="memory" control="no" opType="fifo" coreId="78" bitwidth="33" opcode="alloca" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="90" name="incount" lineNumber="160" originalName="incount" fileName="userdma.cpp" fileDirectory=".." rtlName="incount_U" coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" contextFuncName="userdma" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="userdma.cpp" linenumber="160" fileDirectory="/home/ubuntu/fsic_fpga/vivado/vitis_prj/hls_userdma" functionName="userdma"/>
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="93" name="outbuf" rtlName="outbuf_U" coreName="FIFO" implIndex="memory" control="no" opType="fifo" coreId="78" bitwidth="33" opcode="alloca" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="96" name="_ln157" lineNumber="157" fileName="userdma.cpp" fileDirectory=".." rtlName="entry_proc_U0" coreId="1852142702" contextFuncName="userdma" opcode="call" m_display="0" m_delay="3.63" m_topoIndex="14" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="userdma.cpp" linenumber="157" fileDirectory="/home/ubuntu/fsic_fpga/vivado/vitis_prj/hls_userdma" functionName="userdma"/>
+        <dataInputObjs>read</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <constName>entry_proc</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="97" name="_ln163" lineNumber="163" fileName="userdma.cpp" fileDirectory=".." rtlName="getinstream_U0" coreId="2930089376" contextFuncName="userdma" opcode="call" nodeLabel="1.0" nodeLatency="1" m_display="0" m_delay="6.61" m_topoIndex="15" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="userdma.cpp" linenumber="163" fileDirectory="/home/ubuntu/fsic_fpga/vivado/vitis_prj/hls_userdma" functionName="userdma"/>
+        <dataInputObjs>inStreamTop_V_data_V</dataInputObjs>
+        <dataInputObjs>inStreamTop_V_keep_V</dataInputObjs>
+        <dataInputObjs>inStreamTop_V_strb_V</dataInputObjs>
+        <dataInputObjs>inStreamTop_V_user_V</dataInputObjs>
+        <dataInputObjs>inStreamTop_V_last_V</dataInputObjs>
+        <dataInputObjs>read</dataInputObjs>
+        <dataInputObjs>read</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataOutputObjs>s2m_err</dataOutputObjs>
+        <constName>getinstream</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="98" name="_ln164" lineNumber="164" fileName="userdma.cpp" fileDirectory=".." rtlName="streamtoparallelwithburst_U0" coreId="2929902096" contextFuncName="userdma" opcode="call" nodeLabel="3.0" nodeLatency="1" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="userdma.cpp" linenumber="164" fileDirectory="/home/ubuntu/fsic_fpga/vivado/vitis_prj/hls_userdma" functionName="userdma"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataOutputObjs>s2m_buf_sts</dataOutputObjs>
+        <dataOutputObjs>gmem0</dataOutputObjs>
+        <constName>streamtoparallelwithburst</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="99" name="_ln165" lineNumber="165" fileName="userdma.cpp" fileDirectory=".." rtlName="paralleltostreamwithburst_U0" coreId="1397508187" contextFuncName="userdma" opcode="call" nodeLabel="1.0" nodeLatency="1" m_display="0" m_delay="3.63" m_topoIndex="16" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="userdma.cpp" linenumber="165" fileDirectory="/home/ubuntu/fsic_fpga/vivado/vitis_prj/hls_userdma" functionName="userdma"/>
+        <dataInputObjs>gmem1</dataInputObjs>
+        <dataInputObjs>read</dataInputObjs>
+        <dataInputObjs>read</dataInputObjs>
+        <dataInputObjs>read</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <constName>paralleltostreamwithburst</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="100" name="_ln166" lineNumber="166" fileName="userdma.cpp" fileDirectory=".." rtlName="sendoutstream_U0" coreId="2930086848" contextFuncName="userdma" opcode="call" nodeLabel="3.0" nodeLatency="1" m_display="0" m_topoIndex="18" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="userdma.cpp" linenumber="166" fileDirectory="/home/ubuntu/fsic_fpga/vivado/vitis_prj/hls_userdma" functionName="userdma"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataOutputObjs>m2s_buf_sts</dataOutputObjs>
+        <dataOutputObjs>outStreamTop_V_data_V</dataOutputObjs>
+        <dataOutputObjs>outStreamTop_V_keep_V</dataOutputObjs>
+        <dataOutputObjs>outStreamTop_V_strb_V</dataOutputObjs>
+        <dataOutputObjs>outStreamTop_V_user_V</dataOutputObjs>
+        <dataOutputObjs>outStreamTop_V_last_V</dataOutputObjs>
+        <constName>sendoutstream</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="101" name="_ln168" lineNumber="168" fileName="userdma.cpp" fileDirectory=".." coreId="2929979632" contextFuncName="userdma" opcode="ret" nodeLabel="5.0" m_display="0" m_topoIndex="19" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="userdma.cpp" linenumber="168" fileDirectory="/home/ubuntu/fsic_fpga/vivado/vitis_prj/hls_userdma" functionName="userdma"/>
+      </node_objs>
+      <fileValidLineNumbers fileName="userdma.cpp">
+        <validLinenumbers>157</validLinenumbers>
+        <validLinenumbers>160</validLinenumbers>
+        <validLinenumbers>163</validLinenumbers>
+        <validLinenumbers>164</validLinenumbers>
+        <validLinenumbers>165</validLinenumbers>
+        <validLinenumbers>166</validLinenumbers>
+        <validLinenumbers>168</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+  </regions>
+  <ScheduleInfo time="0"/>
+  <ScheduleInfo time="1"/>
+  <ScheduleInfo time="2"/>
+  <ScheduleInfo time="3"/>
+  <ScheduleInfo time="4"/>
+  <ScheduleInfo time="5"/>
+  <regnodes realName="inbuf_reg_348">
+    <nodeIds>87</nodeIds>
+  </regnodes>
+  <regnodes realName="s2m_len_read_reg_319">
+    <nodeIds>30</nodeIds>
+  </regnodes>
+  <regnodes realName="m2sbuf_read_reg_309">
+    <nodeIds>27</nodeIds>
+  </regnodes>
+  <regnodes realName="incount_reg_354">
+    <nodeIds>90</nodeIds>
+  </regnodes>
+  <regnodes realName="m2s_enb_clrsts_read_reg_299">
+    <nodeIds>25</nodeIds>
+  </regnodes>
+  <regnodes realName="s2m_enb_clrsts_read_reg_314">
+    <nodeIds>29</nodeIds>
+  </regnodes>
+  <regnodes realName="s2mbuf_c_reg_330">
+    <nodeIds>34</nodeIds>
+  </regnodes>
+  <regnodes realName="s2m_len_c_reg_342">
+    <nodeIds>40</nodeIds>
+  </regnodes>
+  <regnodes realName="m2s_len_read_reg_304">
+    <nodeIds>26</nodeIds>
+  </regnodes>
+  <regnodes realName="m2s_enb_clrsts_c_reg_324">
+    <nodeIds>31</nodeIds>
+  </regnodes>
+  <regnodes realName="outbuf_reg_360">
+    <nodeIds>93</nodeIds>
+  </regnodes>
+  <regnodes realName="s2m_enb_clrsts_c_reg_336">
+    <nodeIds>37</nodeIds>
+  </regnodes>
+  <expressionNodes realName="s2m_enb_clrsts_c_fu_166">
+    <nodeIds>37</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="inbuf_fu_174">
+    <nodeIds>87</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="m2s_enb_clrsts_c_fu_158">
+    <nodeIds>31</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="s2mbuf_c_fu_162">
+    <nodeIds>34</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="incount_fu_178">
+    <nodeIds>90</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="outbuf_fu_182">
+    <nodeIds>93</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="s2m_len_c_fu_170">
+    <nodeIds>40</nodeIds>
+  </expressionNodes>
+  <moduleNodes realName="grp_paralleltostreamwithburst_fu_253">
+    <nodeIds>99</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_sendoutstream_fu_281">
+    <nodeIds>100</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_getinstream_fu_229">
+    <nodeIds>97</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="call_ln157_entry_proc_fu_222">
+    <nodeIds>96</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_streamtoparallelwithburst_fu_264">
+    <nodeIds>98</nodeIds>
+  </moduleNodes>
+  <ioNodes realName="m2sbuf_read_read_fu_198">
+    <nodeIds>27</nodeIds>
+  </ioNodes>
+  <ioNodes realName="m2s_len_read_read_fu_192">
+    <nodeIds>26</nodeIds>
+  </ioNodes>
+  <ioNodes realName="m2s_enb_clrsts_read_read_fu_186">
+    <nodeIds>25</nodeIds>
+  </ioNodes>
+  <ioNodes realName="s2m_enb_clrsts_read_read_fu_210">
+    <nodeIds>29</nodeIds>
+  </ioNodes>
+  <ioNodes realName="s2m_len_read_read_fu_216">
+    <nodeIds>30</nodeIds>
+  </ioNodes>
+  <ioNodes realName="s2mbuf_read_read_fu_204">
+    <nodeIds>28</nodeIds>
+  </ioNodes>
+  <ioPorts name="gmem0">
+    <contents name="call">
+      <nodeIds>98</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="gmem1">
+    <contents name="call">
+      <nodeIds>99</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="inStreamTop_V_data_V">
+    <contents name="call">
+      <nodeIds>97</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="inStreamTop_V_keep_V">
+    <contents name="call">
+      <nodeIds>97</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="inStreamTop_V_last_V">
+    <contents name="call">
+      <nodeIds>97</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="inStreamTop_V_strb_V">
+    <contents name="call">
+      <nodeIds>97</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="inStreamTop_V_user_V">
+    <contents name="call">
+      <nodeIds>97</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="m2s_buf_sts">
+    <contents name="call">
+      <nodeIds>100</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="m2s_enb_clrsts">
+    <contents name="read">
+      <nodeIds>25</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="m2s_len">
+    <contents name="read">
+      <nodeIds>26</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="m2sbuf">
+    <contents name="read">
+      <nodeIds>27</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="outStreamTop_V_data_V">
+    <contents name="call">
+      <nodeIds>100</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="outStreamTop_V_keep_V">
+    <contents name="call">
+      <nodeIds>100</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="outStreamTop_V_last_V">
+    <contents name="call">
+      <nodeIds>100</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="outStreamTop_V_strb_V">
+    <contents name="call">
+      <nodeIds>100</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="outStreamTop_V_user_V">
+    <contents name="call">
+      <nodeIds>100</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="s2m_buf_sts">
+    <contents name="call">
+      <nodeIds>98</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="s2m_enb_clrsts">
+    <contents name="read">
+      <nodeIds>29</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="s2m_err">
+    <contents name="call">
+      <nodeIds>97</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="s2m_len">
+    <contents name="read">
+      <nodeIds>30</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="s2mbuf">
+    <contents name="read">
+      <nodeIds>28</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="25" stage="1" latency="1"/>
+      <operations id="26" stage="1" latency="1"/>
+      <operations id="27" stage="1" latency="1"/>
+      <operations id="28" stage="1" latency="1"/>
+      <operations id="29" stage="1" latency="1"/>
+      <operations id="30" stage="1" latency="1"/>
+      <operations id="31" stage="1" latency="1"/>
+      <operations id="34" stage="1" latency="1"/>
+      <operations id="37" stage="1" latency="1"/>
+      <operations id="40" stage="1" latency="1"/>
+      <operations id="87" stage="1" latency="1"/>
+      <operations id="90" stage="1" latency="1"/>
+      <operations id="93" stage="1" latency="1"/>
+      <operations id="96" stage="1" latency="1"/>
+    </states>
+    <states id="2">
+      <operations id="97" stage="2" latency="2"/>
+      <operations id="99" stage="2" latency="2"/>
+    </states>
+    <states id="3">
+      <operations id="97" stage="1" latency="2"/>
+      <operations id="99" stage="1" latency="2"/>
+    </states>
+    <states id="4">
+      <operations id="98" stage="2" latency="2"/>
+      <operations id="100" stage="2" latency="2"/>
+    </states>
+    <states id="5">
+      <operations id="98" stage="1" latency="2"/>
+      <operations id="100" stage="1" latency="2"/>
+    </states>
+    <states id="6">
+      <operations id="32" stage="1" latency="1"/>
+      <operations id="33" stage="1" latency="1"/>
+      <operations id="35" stage="1" latency="1"/>
+      <operations id="36" stage="1" latency="1"/>
+      <operations id="38" stage="1" latency="1"/>
+      <operations id="39" stage="1" latency="1"/>
+      <operations id="41" stage="1" latency="1"/>
+      <operations id="42" stage="1" latency="1"/>
+      <operations id="43" stage="1" latency="1"/>
+      <operations id="44" stage="1" latency="1"/>
+      <operations id="45" stage="1" latency="1"/>
+      <operations id="46" stage="1" latency="1"/>
+      <operations id="47" stage="1" latency="1"/>
+      <operations id="48" stage="1" latency="1"/>
+      <operations id="49" stage="1" latency="1"/>
+      <operations id="50" stage="1" latency="1"/>
+      <operations id="51" stage="1" latency="1"/>
+      <operations id="52" stage="1" latency="1"/>
+      <operations id="53" stage="1" latency="1"/>
+      <operations id="54" stage="1" latency="1"/>
+      <operations id="55" stage="1" latency="1"/>
+      <operations id="56" stage="1" latency="1"/>
+      <operations id="57" stage="1" latency="1"/>
+      <operations id="58" stage="1" latency="1"/>
+      <operations id="59" stage="1" latency="1"/>
+      <operations id="60" stage="1" latency="1"/>
+      <operations id="61" stage="1" latency="1"/>
+      <operations id="62" stage="1" latency="1"/>
+      <operations id="63" stage="1" latency="1"/>
+      <operations id="64" stage="1" latency="1"/>
+      <operations id="65" stage="1" latency="1"/>
+      <operations id="66" stage="1" latency="1"/>
+      <operations id="67" stage="1" latency="1"/>
+      <operations id="68" stage="1" latency="1"/>
+      <operations id="69" stage="1" latency="1"/>
+      <operations id="70" stage="1" latency="1"/>
+      <operations id="71" stage="1" latency="1"/>
+      <operations id="72" stage="1" latency="1"/>
+      <operations id="73" stage="1" latency="1"/>
+      <operations id="74" stage="1" latency="1"/>
+      <operations id="75" stage="1" latency="1"/>
+      <operations id="76" stage="1" latency="1"/>
+      <operations id="77" stage="1" latency="1"/>
+      <operations id="78" stage="1" latency="1"/>
+      <operations id="79" stage="1" latency="1"/>
+      <operations id="80" stage="1" latency="1"/>
+      <operations id="81" stage="1" latency="1"/>
+      <operations id="82" stage="1" latency="1"/>
+      <operations id="83" stage="1" latency="1"/>
+      <operations id="84" stage="1" latency="1"/>
+      <operations id="85" stage="1" latency="1"/>
+      <operations id="86" stage="1" latency="1"/>
+      <operations id="88" stage="1" latency="1"/>
+      <operations id="89" stage="1" latency="1"/>
+      <operations id="91" stage="1" latency="1"/>
+      <operations id="92" stage="1" latency="1"/>
+      <operations id="94" stage="1" latency="1"/>
+      <operations id="95" stage="1" latency="1"/>
+      <operations id="101" stage="1" latency="1"/>
+    </states>
+    <transitions inState="1" outState="2">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="2" outState="3">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="3" outState="4">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="4" outState="5">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="5" outState="6">
+      <condition id="-1"/>
+    </transitions>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="userdma" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="-1" mMaxLatency="-1" mIsDfPipe="true">
+      <basicBlocks>102</basicBlocks>
+      <mDfPipe allPipePinInst="//@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@processe_list.0/@pins.0/@inst //@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@processe_list.1/@pins.0/@inst //@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@processe_list.2/@pins.0/@inst //@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@processe_list.3/@pins.0/@inst //@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@processe_list.4/@pins.0/@inst">
+        <processe_list name="entry_proc_U0" ssdmobj_id="96">
+          <pins>
+            <port name="s2mbuf" type="SIOType" need_hs="true" top_port_object_id="" top_port_object_id_reference="_120" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="entry_proc_U0" ssdmobj_id="96" object_id="_134"/>
+          </pins>
+        </processe_list>
+        <processe_list name="getinstream_U0" ssdmobj_id="97">
+          <pins>
+            <port name="inStreamTop_V_data_V" type="SIOType" top_port_object_id="" top_port_object_id_reference="_112" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="getinstream_U0" ssdmobj_id="97" object_id="_138"/>
+          </pins>
+          <pins>
+            <port name="inStreamTop_V_keep_V" type="SIOType" top_port_object_id="" top_port_object_id_reference="_113" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="getinstream_U0" ssdmobj_id="97" object_id="_138"/>
+          </pins>
+          <pins>
+            <port name="inStreamTop_V_strb_V" type="SIOType" top_port_object_id="" top_port_object_id_reference="_114" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="getinstream_U0" ssdmobj_id="97" object_id="_138"/>
+          </pins>
+          <pins>
+            <port name="inStreamTop_V_user_V" type="SIOType" top_port_object_id="" top_port_object_id_reference="_115" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="getinstream_U0" ssdmobj_id="97" object_id="_138"/>
+          </pins>
+          <pins>
+            <port name="inStreamTop_V_last_V" type="SIOType" top_port_object_id="" top_port_object_id_reference="_116" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="getinstream_U0" ssdmobj_id="97" object_id="_138"/>
+          </pins>
+          <pins>
+            <port name="in_en_clrsts" type="SIOType" need_hs="true" top_port_object_id="" top_port_object_id_reference="_119" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="getinstream_U0" ssdmobj_id="97" object_id="_138"/>
+          </pins>
+          <pins>
+            <port name="in_s2m_len" type="SIOType" need_hs="true" top_port_object_id="" top_port_object_id_reference="_118" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="getinstream_U0" ssdmobj_id="97" object_id="_138"/>
+          </pins>
+          <pins>
+            <port name="s2m_err" dir="DirOut" type="SIOType" need_hs="true" top_port_object_id="" top_port_object_id_reference="_121" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="getinstream_U0" ssdmobj_id="97" object_id="_138"/>
+          </pins>
+        </processe_list>
+        <processe_list name="streamtoparallelwithburst_U0" ssdmobj_id="98">
+          <pins>
+            <port name="s2m_buf_sts" dir="DirOut" type="SIOType" need_hs="true" top_port_object_id="" top_port_object_id_reference="_117" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="streamtoparallelwithburst_U0" ssdmobj_id="98" object_id="_156"/>
+          </pins>
+          <pins>
+            <port name="gmem0" dir="DirOut" type="BUSType" need_hs="true" top_port_object_id="" top_port_object_id_reference="_110" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="streamtoparallelwithburst_U0" ssdmobj_id="98" object_id="_156"/>
+          </pins>
+        </processe_list>
+        <processe_list name="paralleltostreamwithburst_U0" ssdmobj_id="99">
+          <pins>
+            <port name="gmem1" type="BUSType" need_hs="true" top_port_object_id="" top_port_object_id_reference="_111" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="paralleltostreamwithburst_U0" ssdmobj_id="99" object_id="_162"/>
+          </pins>
+          <pins>
+            <port name="in_memory" type="SIOType" need_hs="true" top_port_object_id="" top_port_object_id_reference="_122" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="paralleltostreamwithburst_U0" ssdmobj_id="99" object_id="_162"/>
+          </pins>
+          <pins>
+            <port name="in_en_clrsts" type="SIOType" need_hs="true" top_port_object_id="" top_port_object_id_reference="_125" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="paralleltostreamwithburst_U0" ssdmobj_id="99" object_id="_162"/>
+          </pins>
+          <pins>
+            <port name="in_m2s_len" type="SIOType" need_hs="true" top_port_object_id="" top_port_object_id_reference="_124" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="paralleltostreamwithburst_U0" ssdmobj_id="99" object_id="_162"/>
+          </pins>
+        </processe_list>
+        <processe_list name="sendoutstream_U0" ssdmobj_id="100">
+          <pins>
+            <port name="m2s_buf_sts" dir="DirOut" type="SIOType" need_hs="true" top_port_object_id="" top_port_object_id_reference="_123" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="sendoutstream_U0" ssdmobj_id="100" object_id="_172"/>
+          </pins>
+          <pins>
+            <port name="outStreamTop_V_data_V" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="_126" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="sendoutstream_U0" ssdmobj_id="100" object_id="_172"/>
+          </pins>
+          <pins>
+            <port name="outStreamTop_V_keep_V" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="_127" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="sendoutstream_U0" ssdmobj_id="100" object_id="_172"/>
+          </pins>
+          <pins>
+            <port name="outStreamTop_V_strb_V" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="_128" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="sendoutstream_U0" ssdmobj_id="100" object_id="_172"/>
+          </pins>
+          <pins>
+            <port name="outStreamTop_V_user_V" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="_129" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="sendoutstream_U0" ssdmobj_id="100" object_id="_172"/>
+          </pins>
+          <pins>
+            <port name="outStreamTop_V_last_V" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="_130" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="sendoutstream_U0" ssdmobj_id="100" object_id="_172"/>
+          </pins>
+        </processe_list>
+        <channel_list depth="3" bitwidth="64" suggested_type="2" suggested_depth="3" name="s2mbuf_c" ssdmobj_id="34">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="entry_proc_U0" ssdmobj_id="96" object_id="_134"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="streamtoparallelwithburst_U0" ssdmobj_id="98" object_id="_156"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="64" bitwidth="33" suggested_type="0" suggested_depth="64" name="inbuf" ssdmobj_id="87">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="getinstream_U0" ssdmobj_id="97" object_id="_138"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="streamtoparallelwithburst_U0" ssdmobj_id="98" object_id="_156"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="4" bitwidth="32" suggested_type="0" suggested_depth="4" name="incount" ssdmobj_id="90">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="getinstream_U0" ssdmobj_id="97" object_id="_138"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="streamtoparallelwithburst_U0" ssdmobj_id="98" object_id="_156"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="2" bitwidth="32" suggested_type="2" suggested_depth="2" name="s2m_len_c" ssdmobj_id="40">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="getinstream_U0" ssdmobj_id="97" object_id="_138"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="streamtoparallelwithburst_U0" ssdmobj_id="98" object_id="_156"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="2" bitwidth="1" suggested_type="2" suggested_depth="2" name="s2m_enb_clrsts_c" ssdmobj_id="37">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="getinstream_U0" ssdmobj_id="97" object_id="_138"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="streamtoparallelwithburst_U0" ssdmobj_id="98" object_id="_156"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="64" bitwidth="33" suggested_type="0" suggested_depth="64" name="outbuf" ssdmobj_id="93">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="paralleltostreamwithburst_U0" ssdmobj_id="99" object_id="_162"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="sendoutstream_U0" ssdmobj_id="100" object_id="_172"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="2" bitwidth="1" suggested_type="2" suggested_depth="2" name="m2s_enb_clrsts_c" ssdmobj_id="31">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="paralleltostreamwithburst_U0" ssdmobj_id="99" object_id="_162"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="sendoutstream_U0" ssdmobj_id="100" object_id="_172"/>
+          </sink>
+        </channel_list>
+      </mDfPipe>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>
