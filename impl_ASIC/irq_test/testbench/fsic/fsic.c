@@ -151,15 +151,15 @@ void main()
         }
     }
     
-    reg_fsic_aa_mb0 = 0x3a3a3a3a;
+    reg_fsic_aa_mb0 = 0x4a4a4a4a;
     //=========== firDMA ============//
     // Check uspj_fir ap_done
-    //while (1) {
-    //    value = reg_fsic_up;
-    //    if (((value >> 1) && 1) == 1) {
-    //        reg_fsic_aa_mb0 = 0x3a3a3a3a;
-    //        break;
-    //    }
-    //}
+    while (1) {
+        value = reg_fsic_up;
+        if (((value >> 1) && 1) == 1) {
+            reg_fsic_aa_mb0 = 0x3a3a3a3a;
+            break;
+        }
+    }
 }
 

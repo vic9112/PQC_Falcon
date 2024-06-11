@@ -130,11 +130,9 @@ module fsic_tb();
         load_firDMA();
         cnfg_firDMA();
         start_fir();
-        UserMB(1'b1, 1'b0, 32'h4a4a4a4a);
-        //TogglePL_AA();
+        WaitIRQ(1'b1, 32'h4a4a4a4a);
         start_firDMA();
-        UserMB(1'b0, 1'b0, 32'h3a3a3a3a);
-        //TogglePL_AA();
+        WaitIRQ(1'b1, 32'h3a3a3a3a);
 //==================================================================================//
 //==================================================================================//
 //==================================================================================//
@@ -184,6 +182,38 @@ module fsic_tb();
                 $display($time, "=> FpgaLocal_Write PL_AA offset %h = %h, FAIL", offset, data);
                 ->> error_event;
             end
+        end
+    endtask
+
+    task WaitIRQ;
+        input [0:0]  plaa_en;
+        input [31:0] pattern;
+        begin
+            if (plaa_en == 1'b1) begin
+                $display($time, "=> Write PL_AA to enable IRQ");
+                offset = 0;
+                data = 32'h0000_0001;
+                axil_cycles_gen(WriteCyc, PL_AA, offset, data, 1);
+                axil_cycles_gen(ReadCyc, PL_AA, offset, data, 1);
+            end
+            
+            // Wait for IRQ
+            keepChk = 1;
+            while (keepChk) begin
+                if (DUT.design_1_i.ps_axil_0.aa_mb_irq == 1'b1) begin
+                    keepChk = 1'b0;
+                    $display($time, "=> ***********************************************************************");
+                    $display($time, "=> Interrupt Asserted!!");
+                    $display($time, "=> ***********************************************************************");
+                end
+            end
+            // Read MailBox
+            axil_cycles_gen(ReadCyc, PL_AA_MB, offset, data, 1);
+            if(data == pattern) begin
+                keepChk = 0;
+                $display($time, "=> FpgaLocal_Read PL_AA_MB = %h, PASS", data);
+            end 
+
         end
     endtask
 
