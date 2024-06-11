@@ -74975,27 +74975,22 @@ public:
 
 
 
+typedef ap_axiu<32, 2, 0, 0> trans_pkt;
 
-typedef ap_axiu<32, 7, 0, 0> trans_pkt;
-
-void userdma(hls::stream<trans_pkt >& inStreamTop,
-    bool *s2m_buf_sts,
-    bool s2m_sts_clear,
+void userdma(hls::stream<trans_pkt> &inStreamTop,
+    bool volatile *s2m_buf_sts,
     ap_uint<32> s2m_len,
     ap_uint<1> s2m_enb_clrsts,
-    ap_uint<32> s2mbuf[360*160],
+    ap_uint<32> s2mbuf[1024],
     ap_uint<2> *s2m_err,
-    ap_uint<32> Img_width,
-    ap_uint<32> m2sbuf[360*160],
-    bool *m2s_buf_sts,
-    bool m2s_sts_clear,
+    ap_uint<32> m2sbuf[1024],
+    bool volatile *m2s_buf_sts,
     int m2s_len,
     ap_uint<1> m2s_enb_clrsts,
-    hls::stream<trans_pkt >& outStreamTop);
-
+    hls::stream<trans_pkt> &outStreamTop);
 
 static constexpr int MAX_BURST_LENGTH = 16;
-static constexpr int BUFFER_FACTOR = 64;
+static constexpr int BUFFER_FACTOR = 4;
 
 
 static constexpr int DATA_DEPTH = MAX_BURST_LENGTH * BUFFER_FACTOR;
@@ -75005,24 +75000,11 @@ struct data {
  ap_int<32> data_filed;
  ap_int<1> last;
 };
-
-struct out_data {
- ap_int<32> data_filed;
- ap_int<7> upsb;
- ap_int<1> last;
-};
 # 2 "/home/ubuntu/fsic_fpga/vivado/vitis_prj/hls_userdma/userdma_test.cpp" 2
 
-
-#ifndef HLS_FASTSIM
-#ifdef __cplusplus
-extern "C"
-#endif
-void apatb_userdma_sw(hls::stream<hls::axis<ap_uint<32>, 7, 0, 0>, 0> &, bool *, bool, ap_uint<32>, ap_uint<1>, ap_uint<32> *, ap_uint<2> *, ap_uint<32>, ap_uint<32> *, bool *, bool, int, ap_uint<1>, hls::stream<hls::axis<ap_uint<32>, 7, 0, 0>, 0> &);
-# 3 "/home/ubuntu/fsic_fpga/vivado/vitis_prj/hls_userdma/userdma_test.cpp"
 int main() {
   int err = 0;
-  ap_uint<32> out_b[360*160], in_b[360*160], result[360*160];
+  ap_uint<32> out_b[1024], in_b[1024], result[1024];
   hls::stream<trans_pkt > inStream_t, outStream_t;
   trans_pkt dataStream_t;
 
@@ -75048,7 +75030,7 @@ int main() {
 
   int j;
 
-  for (j=0; j<360*160; j++){
+  for (j=0; j<1024; j++){
    out_b[j]=0;
   }
 
@@ -75057,14 +75039,14 @@ int main() {
   s2m_sts_clear = 0;
   m2s_sts_clear = 0;
 
-  S2M_LEN = 360*160;
+  S2M_LEN = 1024;
   Real_S2M_LEN = imgwidth * imgheight;
-  M2S_LEN = 360*160;
+  M2S_LEN = 1024;
 
-  for (j=0; j<360*160; j++){
+  for (j=0; j<1024; j++){
    out_b[j]=0;
   }
-  for(int i=0;i<360*160;i++){
+  for(int i=0;i<1024;i++){
    in_b[i] = i;
   }
 
@@ -75086,15 +75068,7 @@ int main() {
   printf("before-phase m2s_buf_sts is %d\n", m2s_buf_sts);
 
   printf("Call S2MM/MM2S design\n");
-  
-#ifndef HLS_FASTSIM
-#define userdma apatb_userdma_sw
-#endif
-# 69 "/home/ubuntu/fsic_fpga/vivado/vitis_prj/hls_userdma/userdma_test.cpp"
-userdma(inStream_t, &s2m_buf_sts, s2m_sts_clear, S2M_LEN, s2m_en_clrsts, out_b, &s2m_err, imgwidth, in_b, &m2s_buf_sts, m2s_sts_clear, M2S_LEN, m2s_en_clrsts, outStream_t);
-#undef userdma
-# 69 "/home/ubuntu/fsic_fpga/vivado/vitis_prj/hls_userdma/userdma_test.cpp"
-
+  userdma(inStream_t, &s2m_buf_sts, s2m_sts_clear, S2M_LEN, s2m_en_clrsts, out_b, &s2m_err, imgwidth, in_b, &m2s_buf_sts, m2s_sts_clear, M2S_LEN, m2s_en_clrsts, outStream_t);
 
   printf("\n");
   printf("after-phase s2m_buf_sts is %d\n", s2m_buf_sts);
@@ -75105,7 +75079,7 @@ userdma(inStream_t, &s2m_buf_sts, s2m_sts_clear, S2M_LEN, s2m_en_clrsts, out_b, 
    printf("s2m_err: %x", s2m_err);
    printf("\nS2M data\n");
    printf("out_b, address: %x", out_b);
-   for (j=0; j<360*160; j++){
+   for (j=0; j<1024; j++){
     if((j%32)==0){printf("\n");}
     printf("%x ", out_b[j]);
    }
@@ -75114,7 +75088,7 @@ userdma(inStream_t, &s2m_buf_sts, s2m_sts_clear, S2M_LEN, s2m_en_clrsts, out_b, 
 
   if(m2s_buf_sts == 1){
    printf("\nM2S data\n");
-   for (j=0; j<360*160; j++){
+   for (j=0; j<1024; j++){
     if((j%32)==0){printf("\n");}
     dataStream_t = outStream_t.read();
 
@@ -75140,15 +75114,7 @@ userdma(inStream_t, &s2m_buf_sts, s2m_sts_clear, S2M_LEN, s2m_en_clrsts, out_b, 
    s2m_en_clrsts = 1;
    m2s_sts_clear = 1;
    m2s_en_clrsts = 1;
-   
-#ifndef HLS_FASTSIM
-#define userdma apatb_userdma_sw
-#endif
-# 115 "/home/ubuntu/fsic_fpga/vivado/vitis_prj/hls_userdma/userdma_test.cpp"
-userdma(inStream_t, &s2m_buf_sts, s2m_sts_clear, S2M_LEN, s2m_en_clrsts, out_b, &s2m_err, imgwidth, in_b, &m2s_buf_sts, m2s_sts_clear, M2S_LEN, m2s_en_clrsts, outStream_t);
-#undef userdma
-# 115 "/home/ubuntu/fsic_fpga/vivado/vitis_prj/hls_userdma/userdma_test.cpp"
-
+   userdma(inStream_t, &s2m_buf_sts, s2m_sts_clear, S2M_LEN, s2m_en_clrsts, out_b, &s2m_err, imgwidth, in_b, &m2s_buf_sts, m2s_sts_clear, M2S_LEN, m2s_en_clrsts, outStream_t);
    printf("clear s2m_buf_sts -> %d\n", s2m_buf_sts);
    printf("clear m2s_buf_sts -> %d\n", m2s_buf_sts);
    s2m_en_clrsts = 0;
@@ -75157,30 +75123,14 @@ userdma(inStream_t, &s2m_buf_sts, s2m_sts_clear, S2M_LEN, s2m_en_clrsts, out_b, 
    s2m_sts_clear = 1;
    s2m_en_clrsts = 1;
    m2s_en_clrsts = 0;
-   
-#ifndef HLS_FASTSIM
-#define userdma apatb_userdma_sw
-#endif
-# 124 "/home/ubuntu/fsic_fpga/vivado/vitis_prj/hls_userdma/userdma_test.cpp"
-userdma(inStream_t, &s2m_buf_sts, s2m_sts_clear, S2M_LEN, s2m_en_clrsts, out_b, &s2m_err, imgwidth, in_b, &m2s_buf_sts, m2s_sts_clear, M2S_LEN, m2s_en_clrsts, outStream_t);
-#undef userdma
-# 124 "/home/ubuntu/fsic_fpga/vivado/vitis_prj/hls_userdma/userdma_test.cpp"
-
+   userdma(inStream_t, &s2m_buf_sts, s2m_sts_clear, S2M_LEN, s2m_en_clrsts, out_b, &s2m_err, imgwidth, in_b, &m2s_buf_sts, m2s_sts_clear, M2S_LEN, m2s_en_clrsts, outStream_t);
    printf("clear s2m_buf_sts -> %d\n", s2m_buf_sts);
    s2m_en_clrsts = 0;
   } else if((s2m_buf_sts == 0)&&(m2s_buf_sts == 1)){
    s2m_en_clrsts = 0;
    m2s_sts_clear = 1;
    m2s_en_clrsts = 1;
-   
-#ifndef HLS_FASTSIM
-#define userdma apatb_userdma_sw
-#endif
-# 131 "/home/ubuntu/fsic_fpga/vivado/vitis_prj/hls_userdma/userdma_test.cpp"
-userdma(inStream_t, &s2m_buf_sts, s2m_sts_clear, S2M_LEN, s2m_en_clrsts, out_b, &s2m_err, imgwidth, in_b, &m2s_buf_sts, m2s_sts_clear, M2S_LEN, m2s_en_clrsts, outStream_t);
-#undef userdma
-# 131 "/home/ubuntu/fsic_fpga/vivado/vitis_prj/hls_userdma/userdma_test.cpp"
-
+   userdma(inStream_t, &s2m_buf_sts, s2m_sts_clear, S2M_LEN, s2m_en_clrsts, out_b, &s2m_err, imgwidth, in_b, &m2s_buf_sts, m2s_sts_clear, M2S_LEN, m2s_en_clrsts, outStream_t);
    printf("clear m2s_buf_sts -> %d\n", m2s_buf_sts);
    m2s_en_clrsts = 0;
   }
@@ -75195,6 +75145,3 @@ userdma(inStream_t, &s2m_buf_sts, s2m_sts_clear, S2M_LEN, s2m_en_clrsts, out_b, 
 
   return err;
 }
-#endif
-# 145 "/home/ubuntu/fsic_fpga/vivado/vitis_prj/hls_userdma/userdma_test.cpp"
-

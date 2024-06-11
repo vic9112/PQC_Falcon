@@ -7,13 +7,13 @@
 typedef ap_axiu<32, 2, 0, 0> trans_pkt;	//tuser is FSIC tuser (2 bits) and user project upsb (5 bits)
 
 void userdma(hls::stream<trans_pkt> &inStreamTop,
-			 bool 		*s2m_buf_sts,
+			 bool volatile *s2m_buf_sts,
 			 ap_uint<32> s2m_len,
 			 ap_uint<1>  s2m_enb_clrsts,
 			 ap_uint<32> s2mbuf[BUF_LEN],
 			 ap_uint<2> *s2m_err,
 			 ap_uint<32> m2sbuf[BUF_LEN],
-			 bool		*m2s_buf_sts,
+			 bool volatile *m2s_buf_sts,
 			 int 		 m2s_len,
 			 ap_uint<1>  m2s_enb_clrsts,
 			 hls::stream<trans_pkt> &outStreamTop);

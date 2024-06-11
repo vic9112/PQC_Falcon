@@ -15,5 +15,5 @@
   <xd:arg xd:name="m2s_enb_clrsts" xd:originalName="m2s_enb_clrsts" xd:direction="in" xd:interfaceRef="s_axi_control" xd:busTypeRef="axilite" xd:offset="0x70" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
   <xd:arg xd:name="outStreamTop" xd:originalName="outStreamTop" xd:direction="out" xd:interfaceRef="outStreamTop" xd:busTypeRef="axis" xd:dataWidth="32"/>
   <xd:latencyEstimates xd:best-case="undef" xd:worst-case="undef" xd:average-case="undef"/>
-  <xd:resourceEstimates xd:LUT="5824" xd:FF="3774" xd:BRAM="0" xd:DSP="0"/>
+  <xd:resourceEstimates xd:LUT="5827" xd:FF="3771" xd:BRAM="0" xd:DSP="0"/>
 </xd:acceleratorMap>

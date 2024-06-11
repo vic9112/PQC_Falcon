@@ -28,7 +28,7 @@
 
 ## On Board Validation
 
-- Include bitstream `fsicIRQ_v1.bit` and metadata file `fsicIRQ_v1.hwh` under `./level_trigger`
+- Include bitstream `fsicIRQ_v1.bit` and metadata file `fsicIRQ_v1.hwh` under `./level_trigger`.
 - Include firmware `fsic.hex` under `./firmware_test`, which only write a value `0x3a3a3a3a` into mailbox
 - Include host code `fsicIRQ_test.ipynb`
 

@@ -74970,27 +74970,22 @@ public:
 
 
 
+typedef ap_axiu<32, 2, 0, 0> trans_pkt;
 
-typedef ap_axiu<32, 7, 0, 0> trans_pkt;
-
-void userdma(hls::stream<trans_pkt >& inStreamTop,
-    bool *s2m_buf_sts,
-    bool s2m_sts_clear,
+void userdma(hls::stream<trans_pkt> &inStreamTop,
+    bool volatile *s2m_buf_sts,
     ap_uint<32> s2m_len,
     ap_uint<1> s2m_enb_clrsts,
-    ap_uint<32> s2mbuf[360*160],
+    ap_uint<32> s2mbuf[1024],
     ap_uint<2> *s2m_err,
-    ap_uint<32> Img_width,
-    ap_uint<32> m2sbuf[360*160],
-    bool *m2s_buf_sts,
-    bool m2s_sts_clear,
+    ap_uint<32> m2sbuf[1024],
+    bool volatile *m2s_buf_sts,
     int m2s_len,
     ap_uint<1> m2s_enb_clrsts,
-    hls::stream<trans_pkt >& outStreamTop);
-
+    hls::stream<trans_pkt> &outStreamTop);
 
 static constexpr int MAX_BURST_LENGTH = 16;
-static constexpr int BUFFER_FACTOR = 64;
+static constexpr int BUFFER_FACTOR = 4;
 
 
 static constexpr int DATA_DEPTH = MAX_BURST_LENGTH * BUFFER_FACTOR;
@@ -75000,17 +74995,11 @@ struct data {
  ap_int<32> data_filed;
  ap_int<1> last;
 };
-
-struct out_data {
- ap_int<32> data_filed;
- ap_int<7> upsb;
- ap_int<1> last;
-};
 # 2 "/home/ubuntu/fsic_fpga/vivado/vitis_prj/hls_userdma/userdma_test.cpp" 2
 
 int main() {
   int err = 0;
-  ap_uint<32> out_b[360*160], in_b[360*160], result[360*160];
+  ap_uint<32> out_b[1024], in_b[1024], result[1024];
   hls::stream<trans_pkt > inStream_t, outStream_t;
   trans_pkt dataStream_t;
 
@@ -75036,7 +75025,7 @@ int main() {
 
   int j;
 
-  for (j=0; j<360*160; j++){
+  for (j=0; j<1024; j++){
    out_b[j]=0;
   }
 
@@ -75045,14 +75034,14 @@ int main() {
   s2m_sts_clear = 0;
   m2s_sts_clear = 0;
 
-  S2M_LEN = 360*160;
+  S2M_LEN = 1024;
   Real_S2M_LEN = imgwidth * imgheight;
-  M2S_LEN = 360*160;
+  M2S_LEN = 1024;
 
-  for (j=0; j<360*160; j++){
+  for (j=0; j<1024; j++){
    out_b[j]=0;
   }
-  for(int i=0;i<360*160;i++){
+  for(int i=0;i<1024;i++){
    in_b[i] = i;
   }
 
@@ -75085,7 +75074,7 @@ int main() {
    printf("s2m_err: %x", s2m_err);
    printf("\nS2M data\n");
    printf("out_b, address: %x", out_b);
-   for (j=0; j<360*160; j++){
+   for (j=0; j<1024; j++){
     if((j%32)==0){printf("\n");}
     printf("%x ", out_b[j]);
    }
@@ -75094,7 +75083,7 @@ int main() {
 
   if(m2s_buf_sts == 1){
    printf("\nM2S data\n");
-   for (j=0; j<360*160; j++){
+   for (j=0; j<1024; j++){
     if((j%32)==0){printf("\n");}
     dataStream_t = outStream_t.read();
 

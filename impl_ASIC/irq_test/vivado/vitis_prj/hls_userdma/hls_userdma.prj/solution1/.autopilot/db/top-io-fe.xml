@@ -6,7 +6,7 @@
           <constraint constraint_type="pragma interface" mode="axis" register_option="1" register_mode="both"/>
         </hw>
       </arg>
-      <arg id="1" access_type="w" src_name="s2m_buf_sts" src_type="bool*" src_isptr="1" src_bitwidth="1" src_size_or_depth="1">
+      <arg id="1" access_type="w" src_name="s2m_buf_sts" src_type="*" src_isptr="1" src_bitwidth="1" src_size_or_depth="1">
         <hw hw_usage="data" hw_interface="S_AXILite" hw_name="control" hw_bitwidth="1" hw_size_or_depth="1" hw_kernel_support="true">
           <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="16"/>
         </hw>
@@ -44,7 +44,7 @@
           <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="76"/>
         </hw>
       </arg>
-      <arg id="7" access_type="w" src_name="m2s_buf_sts" src_type="bool*" src_isptr="1" src_bitwidth="1" src_size_or_depth="1">
+      <arg id="7" access_type="w" src_name="m2s_buf_sts" src_type="*" src_isptr="1" src_bitwidth="1" src_size_or_depth="1">
         <hw hw_usage="data" hw_interface="S_AXILite" hw_name="control" hw_bitwidth="1" hw_size_or_depth="1" hw_kernel_support="true">
           <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="88"/>
         </hw>

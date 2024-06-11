@@ -1,0 +1,11 @@
+INFO: [COSIM-47] Using XSIM for RTL simulation.
+INFO: [COSIM-14] Instrumenting C test bench ...
+   Build using "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/bin/g++"
+   Compiling apatb_userdma_util.cpp
+   Compiling userdma.cpp_pre.cpp.tb.cpp
+ERROR: [COSIM-317] C++ compile error.
+ERROR: [COSIM-321] EXE file generate failed.
+ERROR: [COSIM-321] EXE file generate failed.
+ERROR: [COSIM-331] Aborting co-simulation: C simulation failed, compilation errors.
+ERROR: [COSIM-5] *** C/RTL co-simulation file generation failed. ***
+ERROR: [COSIM-4] *** C/RTL co-simulation finished: FAIL ***

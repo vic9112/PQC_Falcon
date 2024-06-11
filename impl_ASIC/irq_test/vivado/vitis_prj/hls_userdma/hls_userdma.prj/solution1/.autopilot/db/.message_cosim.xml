@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Messages>
+	<Message severity="INFO" prefix="[COSIM 212-47]" key="COSIM_TCL_47_1115" tag="" content="Using XSIM for RTL simulation." resolution=""/>
+	<Message severity="INFO" prefix="[COSIM 212-14]" key="COSIM_TCL_14_1084" tag="" content="Instrumenting C test bench ..." resolution=""/>
+	<Message severity="ERROR" prefix="[COSIM 212-317]" key="COSIM_TCL_317_1189" tag="" content="C++ compile error." resolution=""/>
+	<Message severity="ERROR" prefix="[COSIM 212-321]" key="COSIM_TCL_321_1193" tag="" content="EXE file generate failed." resolution=""/>
+	<Message severity="ERROR" prefix="[COSIM 212-321]" key="COSIM_TCL_321_1193" tag="" content="EXE file generate failed." resolution=""/>
+	<Message severity="ERROR" prefix="[COSIM 212-331]" key="COSIM_TCL_331_1203" tag="" content="Aborting co-simulation: C simulation failed, compilation errors." resolution=""/>
+	<Message severity="ERROR" prefix="[COSIM 212-5]" key="COSIM_TCL_5_1075" tag="" content="*** C/RTL co-simulation file generation failed. ***" resolution=""/>
+	<Message severity="ERROR" prefix="[COSIM 212-4]" key="COSIM_TCL_4_1074" tag="" content="*** C/RTL co-simulation finished: FAIL ***" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Command cosim_design CPU user time: 6.17 seconds. CPU system time: 1.03 seconds. Elapsed time: 7.74 seconds; current allocated memory: -1022.570 MB." resolution=""/>
+</Messages>

@@ -136,7 +136,7 @@ entry:6 %write_ln0 = write void @_ssdm_op_Write.ap_fifo.i32P0A, i32 %s2m_len_c, 
 
 <Node id="21" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32">
 <![CDATA[
-entry:7 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %incount35, void @empty_6, i32 0, i32 0, void @empty_2, i32 0, i32 0, void @empty_2, void @empty_2, void @empty_2, i32 0, i32 0, i32 0, i32 0, void @empty_2, void @empty_2, i32 4294967295, i32 0
+entry:7 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %incount35, void @empty_19, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0
 
 ]]></Node>
 <StgValue><ssdm name="specinterface_ln0"/></StgValue>
@@ -151,7 +151,7 @@ entry:7 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %in
 
 <Node id="22" bw="0" op_0_bw="0" op_1_bw="33" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32">
 <![CDATA[
-entry:8 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i33 %inbuf, void @empty_6, i32 0, i32 0, void @empty_2, i32 0, i32 0, void @empty_2, void @empty_2, void @empty_2, i32 0, i32 0, i32 0, i32 0, void @empty_2, void @empty_2, i32 4294967295, i32 0
+entry:8 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i33 %inbuf, void @empty_19, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0
 
 ]]></Node>
 <StgValue><ssdm name="specinterface_ln0"/></StgValue>
@@ -166,7 +166,7 @@ entry:8 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i33 %in
 
 <Node id="23" bw="0" op_0_bw="0" op_1_bw="1" op_2_bw="2" op_3_bw="4" op_4_bw="4" op_5_bw="32" op_6_bw="0" op_7_bw="32" op_8_bw="32" op_9_bw="0" op_10_bw="32" op_11_bw="32" op_12_bw="0" op_13_bw="0" op_14_bw="0" op_15_bw="32" op_16_bw="32" op_17_bw="32" op_18_bw="32" op_19_bw="0" op_20_bw="0" op_21_bw="32" op_22_bw="32">
 <![CDATA[
-entry:9 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %inStreamTop_V_last_V, i2 %inStreamTop_V_user_V, i4 %inStreamTop_V_strb_V, i4 %inStreamTop_V_keep_V, i32 %inStreamTop_V_data_V, void @empty_25, i32 1, i32 1, void @empty_24, i32 0, i32 0, void @empty_2, void @empty_2, void @empty_2, i32 0, i32 0, i32 0, i32 0, void @empty_2, void @empty_2, i32 4294967295, i32 0
+entry:9 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %inStreamTop_V_last_V, i2 %inStreamTop_V_user_V, i4 %inStreamTop_V_strb_V, i4 %inStreamTop_V_keep_V, i32 %inStreamTop_V_data_V, void @empty_5, i32 1, i32 1, void @empty_15, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0
 
 ]]></Node>
 <StgValue><ssdm name="specinterface_ln0"/></StgValue>
@@ -181,10 +181,10 @@ entry:9 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %inS
 
 <Node id="24" bw="0" op_0_bw="1" op_1_bw="0" op_2_bw="0">
 <![CDATA[
-entry:10 %br_ln44 = br i1 %in_en_clrsts_read, void %VITIS_LOOP_49_1, void %if.then
+entry:10 %br_ln45 = br i1 %in_en_clrsts_read, void %VITIS_LOOP_50_1, void %if.then
 
 ]]></Node>
-<StgValue><ssdm name="br_ln44"/></StgValue>
+<StgValue><ssdm name="br_ln45"/></StgValue>
 </operation>
 
 <operation id="15" st_id="1" stage="1" lat="1">
@@ -197,10 +197,10 @@ entry:10 %br_ln44 = br i1 %in_en_clrsts_read, void %VITIS_LOOP_49_1, void %if.th
 
 <Node id="26" bw="0" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-if.then:0 %store_ln45 = store i32 0, i32 %in_len_V
+if.then:0 %store_ln46 = store i32 0, i32 %in_len_V
 
 ]]></Node>
-<StgValue><ssdm name="store_ln45"/></StgValue>
+<StgValue><ssdm name="store_ln46"/></StgValue>
 </operation>
 
 <operation id="16" st_id="1" stage="1" lat="1">
@@ -213,10 +213,10 @@ if.then:0 %store_ln45 = store i32 0, i32 %in_len_V
 
 <Node id="27" bw="0" op_0_bw="0">
 <![CDATA[
-if.then:1 %br_ln47 = br void %VITIS_LOOP_49_1
+if.then:1 %br_ln48 = br void %VITIS_LOOP_50_1
 
 ]]></Node>
-<StgValue><ssdm name="br_ln47"/></StgValue>
+<StgValue><ssdm name="br_ln48"/></StgValue>
 </operation>
 
 <operation id="17" st_id="1" stage="1" lat="1">
@@ -228,7 +228,7 @@ if.then:1 %br_ln47 = br void %VITIS_LOOP_49_1
 
 <Node id="29" bw="32" op_0_bw="32" op_1_bw="0">
 <![CDATA[
-VITIS_LOOP_49_1:0 %in_len_V_load = load i32 %in_len_V
+VITIS_LOOP_50_1:0 %in_len_V_load = load i32 %in_len_V
 
 ]]></Node>
 <StgValue><ssdm name="in_len_V_load"/></StgValue>
@@ -243,10 +243,10 @@ VITIS_LOOP_49_1:0 %in_len_V_load = load i32 %in_len_V
 
 <Node id="30" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-VITIS_LOOP_49_1:1 %add_ln49 = add i32 %in_len_V_load, i32 1
+VITIS_LOOP_50_1:1 %add_ln50 = add i32 %in_len_V_load, i32 1
 
 ]]></Node>
-<StgValue><ssdm name="add_ln49"/></StgValue>
+<StgValue><ssdm name="add_ln50"/></StgValue>
 </operation>
 
 <operation id="19" st_id="1" stage="1" lat="1">
@@ -258,7 +258,7 @@ VITIS_LOOP_49_1:1 %add_ln49 = add i32 %in_len_V_load, i32 1
 
 <Node id="31" bw="1" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-VITIS_LOOP_49_1:2 %empty = icmp_ult  i32 %add_ln49, i32 %in_s2m_len_read
+VITIS_LOOP_50_1:2 %empty = icmp_ult  i32 %add_ln50, i32 %in_s2m_len_read
 
 ]]></Node>
 <StgValue><ssdm name="empty"/></StgValue>
@@ -273,7 +273,7 @@ VITIS_LOOP_49_1:2 %empty = icmp_ult  i32 %add_ln49, i32 %in_s2m_len_read
 
 <Node id="34" bw="32" op_0_bw="32">
 <![CDATA[
-VITIS_LOOP_49_1:5 %empty_48 = wait i32 @_ssdm_op_Wait
+VITIS_LOOP_50_1:5 %empty_48 = wait i32 @_ssdm_op_Wait
 
 ]]></Node>
 <StgValue><ssdm name="empty_48"/></StgValue>
@@ -288,7 +288,7 @@ VITIS_LOOP_49_1:5 %empty_48 = wait i32 @_ssdm_op_Wait
 
 <Node id="35" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="4" op_4_bw="4" op_5_bw="2" op_6_bw="1" op_7_bw="33" op_8_bw="32" op_9_bw="32" op_10_bw="1" op_11_bw="0">
 <![CDATA[
-VITIS_LOOP_49_1:6 %call_ln886 = call void @getinstream_Pipeline_VITIS_LOOP_49_1, i32 %in_len_V_load, i32 %inStreamTop_V_data_V, i4 %inStreamTop_V_keep_V, i4 %inStreamTop_V_strb_V, i2 %inStreamTop_V_user_V, i1 %inStreamTop_V_last_V, i33 %inbuf, i32 %in_s2m_len_read, i32 %incount35, i1 %tmp_last_V_loc
+VITIS_LOOP_50_1:6 %call_ln886 = call void @getinstream_Pipeline_VITIS_LOOP_50_1, i32 %in_len_V_load, i32 %inStreamTop_V_data_V, i4 %inStreamTop_V_keep_V, i4 %inStreamTop_V_strb_V, i2 %inStreamTop_V_user_V, i1 %inStreamTop_V_last_V, i33 %inbuf, i32 %in_s2m_len_read, i32 %incount35, i1 %tmp_last_V_loc
 
 ]]></Node>
 <StgValue><ssdm name="call_ln886"/></StgValue>
@@ -306,7 +306,7 @@ VITIS_LOOP_49_1:6 %call_ln886 = call void @getinstream_Pipeline_VITIS_LOOP_49_1,
 
 <Node id="32" bw="32" op_0_bw="1" op_1_bw="32" op_2_bw="32">
 <![CDATA[
-VITIS_LOOP_49_1:3 %umax = select i1 %empty, i32 %in_s2m_len_read, i32 %add_ln49
+VITIS_LOOP_50_1:3 %umax = select i1 %empty, i32 %in_s2m_len_read, i32 %add_ln50
 
 ]]></Node>
 <StgValue><ssdm name="umax"/></StgValue>
@@ -321,10 +321,10 @@ VITIS_LOOP_49_1:3 %umax = select i1 %empty, i32 %in_s2m_len_read, i32 %add_ln49
 
 <Node id="33" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-VITIS_LOOP_49_1:4 %add_ln49_1 = add i32 %umax, i32 4294967295
+VITIS_LOOP_50_1:4 %add_ln50_1 = add i32 %umax, i32 4294967295
 
 ]]></Node>
-<StgValue><ssdm name="add_ln49_1"/></StgValue>
+<StgValue><ssdm name="add_ln50_1"/></StgValue>
 </operation>
 
 <operation id="24" st_id="2" stage="1" lat="2">
@@ -336,7 +336,7 @@ VITIS_LOOP_49_1:4 %add_ln49_1 = add i32 %umax, i32 4294967295
 
 <Node id="35" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="4" op_4_bw="4" op_5_bw="2" op_6_bw="1" op_7_bw="33" op_8_bw="32" op_9_bw="32" op_10_bw="1" op_11_bw="0">
 <![CDATA[
-VITIS_LOOP_49_1:6 %call_ln886 = call void @getinstream_Pipeline_VITIS_LOOP_49_1, i32 %in_len_V_load, i32 %inStreamTop_V_data_V, i4 %inStreamTop_V_keep_V, i4 %inStreamTop_V_strb_V, i2 %inStreamTop_V_user_V, i1 %inStreamTop_V_last_V, i33 %inbuf, i32 %in_s2m_len_read, i32 %incount35, i1 %tmp_last_V_loc
+VITIS_LOOP_50_1:6 %call_ln886 = call void @getinstream_Pipeline_VITIS_LOOP_50_1, i32 %in_len_V_load, i32 %inStreamTop_V_data_V, i4 %inStreamTop_V_keep_V, i4 %inStreamTop_V_strb_V, i2 %inStreamTop_V_user_V, i1 %inStreamTop_V_last_V, i33 %inbuf, i32 %in_s2m_len_read, i32 %incount35, i1 %tmp_last_V_loc
 
 ]]></Node>
 <StgValue><ssdm name="call_ln886"/></StgValue>
@@ -351,7 +351,7 @@ VITIS_LOOP_49_1:6 %call_ln886 = call void @getinstream_Pipeline_VITIS_LOOP_49_1,
 
 <Node id="37" bw="33" op_0_bw="32">
 <![CDATA[
-VITIS_LOOP_49_1:8 %in_s2m_len_cast = zext i32 %in_s2m_len_read
+VITIS_LOOP_50_1:8 %in_s2m_len_cast = zext i32 %in_s2m_len_read
 
 ]]></Node>
 <StgValue><ssdm name="in_s2m_len_cast"/></StgValue>
@@ -366,7 +366,7 @@ VITIS_LOOP_49_1:8 %in_s2m_len_cast = zext i32 %in_s2m_len_read
 
 <Node id="38" bw="33" op_0_bw="33" op_1_bw="33">
 <![CDATA[
-VITIS_LOOP_49_1:9 %sub_i_i53 = add i33 %in_s2m_len_cast, i33 8589934591
+VITIS_LOOP_50_1:9 %sub_i_i53 = add i33 %in_s2m_len_cast, i33 8589934591
 
 ]]></Node>
 <StgValue><ssdm name="sub_i_i53"/></StgValue>
@@ -381,7 +381,7 @@ VITIS_LOOP_49_1:9 %sub_i_i53 = add i33 %in_s2m_len_cast, i33 8589934591
 
 <Node id="39" bw="33" op_0_bw="32">
 <![CDATA[
-VITIS_LOOP_49_1:10 %zext_ln1073 = zext i32 %add_ln49_1
+VITIS_LOOP_50_1:10 %zext_ln1073 = zext i32 %add_ln50_1
 
 ]]></Node>
 <StgValue><ssdm name="zext_ln1073"/></StgValue>
@@ -396,7 +396,7 @@ VITIS_LOOP_49_1:10 %zext_ln1073 = zext i32 %add_ln49_1
 
 <Node id="40" bw="1" op_0_bw="33" op_1_bw="33">
 <![CDATA[
-VITIS_LOOP_49_1:11 %icmp_ln1073 = icmp_slt  i33 %zext_ln1073, i33 %sub_i_i53
+VITIS_LOOP_50_1:11 %icmp_ln1073 = icmp_slt  i33 %zext_ln1073, i33 %sub_i_i53
 
 ]]></Node>
 <StgValue><ssdm name="icmp_ln1073"/></StgValue>
@@ -411,7 +411,7 @@ VITIS_LOOP_49_1:11 %icmp_ln1073 = icmp_slt  i33 %zext_ln1073, i33 %sub_i_i53
 
 <Node id="43" bw="1" op_0_bw="33" op_1_bw="33">
 <![CDATA[
-VITIS_LOOP_49_1:14 %icmp_ln1065 = icmp_eq  i33 %zext_ln1073, i33 %sub_i_i53
+VITIS_LOOP_50_1:14 %icmp_ln1065 = icmp_eq  i33 %zext_ln1073, i33 %sub_i_i53
 
 ]]></Node>
 <StgValue><ssdm name="icmp_ln1065"/></StgValue>
@@ -426,7 +426,7 @@ VITIS_LOOP_49_1:14 %icmp_ln1065 = icmp_eq  i33 %zext_ln1073, i33 %sub_i_i53
 
 <Node id="48" bw="0" op_0_bw="32" op_1_bw="32" op_2_bw="0" op_3_bw="0">
 <![CDATA[
-VITIS_LOOP_49_1:19 %store_ln886 = store i32 %umax, i32 %in_len_V
+VITIS_LOOP_50_1:19 %store_ln886 = store i32 %umax, i32 %in_len_V
 
 ]]></Node>
 <StgValue><ssdm name="store_ln886"/></StgValue>
@@ -444,7 +444,7 @@ VITIS_LOOP_49_1:19 %store_ln886 = store i32 %umax, i32 %in_len_V
 
 <Node id="36" bw="1" op_0_bw="1" op_1_bw="0">
 <![CDATA[
-VITIS_LOOP_49_1:7 %tmp_last_V_loc_load = load i1 %tmp_last_V_loc
+VITIS_LOOP_50_1:7 %tmp_last_V_loc_load = load i1 %tmp_last_V_loc
 
 ]]></Node>
 <StgValue><ssdm name="tmp_last_V_loc_load"/></StgValue>
@@ -459,10 +459,10 @@ VITIS_LOOP_49_1:7 %tmp_last_V_loc_load = load i1 %tmp_last_V_loc
 
 <Node id="41" bw="1" op_0_bw="1" op_1_bw="1">
 <![CDATA[
-VITIS_LOOP_49_1:12 %and_ln57 = and i1 %tmp_last_V_loc_load, i1 %icmp_ln1073
+VITIS_LOOP_50_1:12 %and_ln58 = and i1 %tmp_last_V_loc_load, i1 %icmp_ln1073
 
 ]]></Node>
-<StgValue><ssdm name="and_ln57"/></StgValue>
+<StgValue><ssdm name="and_ln58"/></StgValue>
 </operation>
 
 <operation id="33" st_id="3" stage="1" lat="1">
@@ -474,10 +474,10 @@ VITIS_LOOP_49_1:12 %and_ln57 = and i1 %tmp_last_V_loc_load, i1 %icmp_ln1073
 
 <Node id="42" bw="2" op_0_bw="1">
 <![CDATA[
-VITIS_LOOP_49_1:13 %zext_ln57 = zext i1 %and_ln57
+VITIS_LOOP_50_1:13 %zext_ln58 = zext i1 %and_ln58
 
 ]]></Node>
-<StgValue><ssdm name="zext_ln57"/></StgValue>
+<StgValue><ssdm name="zext_ln58"/></StgValue>
 </operation>
 
 <operation id="34" st_id="3" stage="1" lat="1">
@@ -489,7 +489,7 @@ VITIS_LOOP_49_1:13 %zext_ln57 = zext i1 %and_ln57
 
 <Node id="44" bw="1" op_0_bw="1" op_1_bw="1">
 <![CDATA[
-VITIS_LOOP_49_1:15 %xor_ln1069 = xor i1 %tmp_last_V_loc_load, i1 1
+VITIS_LOOP_50_1:15 %xor_ln1069 = xor i1 %tmp_last_V_loc_load, i1 1
 
 ]]></Node>
 <StgValue><ssdm name="xor_ln1069"/></StgValue>
@@ -504,10 +504,10 @@ VITIS_LOOP_49_1:15 %xor_ln1069 = xor i1 %tmp_last_V_loc_load, i1 1
 
 <Node id="45" bw="1" op_0_bw="1" op_1_bw="1">
 <![CDATA[
-VITIS_LOOP_49_1:16 %and_ln60 = and i1 %icmp_ln1065, i1 %xor_ln1069
+VITIS_LOOP_50_1:16 %and_ln61 = and i1 %icmp_ln1065, i1 %xor_ln1069
 
 ]]></Node>
-<StgValue><ssdm name="and_ln60"/></StgValue>
+<StgValue><ssdm name="and_ln61"/></StgValue>
 </operation>
 
 <operation id="36" st_id="3" stage="1" lat="1">
@@ -519,10 +519,10 @@ VITIS_LOOP_49_1:16 %and_ln60 = and i1 %icmp_ln1065, i1 %xor_ln1069
 
 <Node id="46" bw="2" op_0_bw="1" op_1_bw="2" op_2_bw="2">
 <![CDATA[
-VITIS_LOOP_49_1:17 %select_ln60 = select i1 %and_ln60, i2 2, i2 %zext_ln57
+VITIS_LOOP_50_1:17 %select_ln61 = select i1 %and_ln61, i2 2, i2 %zext_ln58
 
 ]]></Node>
-<StgValue><ssdm name="select_ln60"/></StgValue>
+<StgValue><ssdm name="select_ln61"/></StgValue>
 </operation>
 
 <operation id="37" st_id="3" stage="1" lat="1">
@@ -534,10 +534,10 @@ VITIS_LOOP_49_1:17 %select_ln60 = select i1 %and_ln60, i2 2, i2 %zext_ln57
 
 <Node id="47" bw="0" op_0_bw="0" op_1_bw="2" op_2_bw="2" op_3_bw="0">
 <![CDATA[
-VITIS_LOOP_49_1:18 %write_ln55 = write void @_ssdm_op_Write.ap_auto.i2P0A, i2 %s2m_err, i2 %select_ln60
+VITIS_LOOP_50_1:18 %write_ln56 = write void @_ssdm_op_Write.ap_auto.i2P0A, i2 %s2m_err, i2 %select_ln61
 
 ]]></Node>
-<StgValue><ssdm name="write_ln55"/></StgValue>
+<StgValue><ssdm name="write_ln56"/></StgValue>
 </operation>
 
 <operation id="38" st_id="3" stage="1" lat="1">
@@ -549,10 +549,10 @@ VITIS_LOOP_49_1:18 %write_ln55 = write void @_ssdm_op_Write.ap_auto.i2P0A, i2 %s
 
 <Node id="49" bw="0">
 <![CDATA[
-VITIS_LOOP_49_1:20 %ret_ln72 = ret
+VITIS_LOOP_50_1:20 %ret_ln73 = ret
 
 ]]></Node>
-<StgValue><ssdm name="ret_ln72"/></StgValue>
+<StgValue><ssdm name="ret_ln73"/></StgValue>
 </operation>
 </state>
 </state_list>

@@ -1,7 +1,7 @@
 #include "userdma.h"
 
 /// Reads from in_stream and in_counts, Write to out_memory
-void streamtoparallelwithburst(hls::stream<data> &in_stream, hls::stream<int> &in_counts, ap_uint<1> in_en_clrsts, bool &buf_sts,
+void streamtoparallelwithburst(hls::stream<data> &in_stream, hls::stream<int> &in_counts, ap_uint<1> in_en_clrsts, bool volatile *buf_sts,
 	ap_uint<32> in_s2m_len, ap_uint<32> *out_memory) {
 
 	data in_val;
@@ -12,7 +12,7 @@ void streamtoparallelwithburst(hls::stream<data> &in_stream, hls::stream<int> &i
 	if(in_en_clrsts) {
 		out_memory -= final_s2m_len;
 		final_s2m_len = 0;
-		buf_sts = 0;
+		*buf_sts = 0;
 	}
 
 	do {
@@ -26,10 +26,11 @@ void streamtoparallelwithburst(hls::stream<data> &in_stream, hls::stream<int> &i
 		out_memory += count;
 		final_s2m_len += count;
 
-		if(final_s2m_len == in_s2m_len){
+		if(final_s2m_len == in_s2m_len)
 			out_sts = 1;
-		}
-		buf_sts = out_sts;
+		else
+			out_sts = 0;
+		*buf_sts = out_sts;
 
 	} while(final_s2m_len < in_s2m_len);
 
@@ -109,10 +110,12 @@ void paralleltostreamwithburst(ap_uint<32> *in_memory, ap_uint<1> in_en_clrsts, 
 
 //output stream 
 void sendoutstream(hls::stream<data> &in_stream, ap_uint<1> in_en_clrsts,
-	bool &buf_sts, hls::stream<trans_pkt> &out_stream) {
+	bool volatile *buf_sts, hls::stream<trans_pkt> &out_stream) {
 
 	int count = 0;
     trans_pkt out_val;
+
+    if (in_en_clrsts) *buf_sts = 0;
 
     do {
 		#pragma HLS PIPELINE
@@ -124,18 +127,18 @@ void sendoutstream(hls::stream<data> &in_stream, ap_uint<1> in_en_clrsts,
 
     } while(!out_val.last);
 
-    buf_sts = (in_en_clrsts)? 0 : (out_val.last)? 1 : 0;
+    *buf_sts = (out_val.last)? 1 : 0;
 
 }
 
 void userdma(hls::stream<trans_pkt> &inStreamTop,
-		bool 		*s2m_buf_sts,
+		bool volatile *s2m_buf_sts,
 		ap_uint<32> s2m_len,		// 0x28: stream to memory length
 		ap_uint<1> 	s2m_enb_clrsts,
 		ap_uint<32> s2mbuf[BUF_LEN],
 		ap_uint<2>  *s2m_err,
 		ap_uint<32> m2sbuf[BUF_LEN],
-		bool 		*m2s_buf_sts,
+		bool volatile *m2s_buf_sts,
 		int 		m2s_len,		// 0x80: memory to stream length
 		ap_uint<1>  m2s_enb_clrsts,
 		hls::stream<trans_pkt> &outStreamTop) {
@@ -161,8 +164,8 @@ void userdma(hls::stream<trans_pkt> &inStreamTop,
 	hls::stream<data, DATA_DEPTH> outbuf;
   
 	getinstream(inStreamTop, s2m_enb_clrsts, s2m_len, *s2m_err, inbuf, incount);
-	streamtoparallelwithburst(inbuf, incount, s2m_enb_clrsts, *s2m_buf_sts, s2m_len, s2mbuf);
+	streamtoparallelwithburst(inbuf, incount, s2m_enb_clrsts, s2m_buf_sts, s2m_len, s2mbuf);
 	paralleltostreamwithburst(m2sbuf, m2s_enb_clrsts, m2s_len, outbuf);
-	sendoutstream(outbuf, m2s_enb_clrsts, *m2s_buf_sts, outStreamTop);
+	sendoutstream(outbuf, m2s_enb_clrsts, m2s_buf_sts, outStreamTop);
 
 }

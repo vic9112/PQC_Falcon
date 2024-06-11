@@ -1,5 +1,5 @@
 INFO: [HLS 200-10] Running '/tools/Xilinx/Vitis_HLS/2022.1/bin/unwrapped/lnx64.o/vitis_hls'
-INFO: [HLS 200-10] For user 'ubuntu' on host 'ubuntu2004.linuxvmimages.local' (Linux_x86_64 version 5.15.0-107-generic) on Mon May 27 13:36:29 EDT 2024
+INFO: [HLS 200-10] For user 'ubuntu' on host 'ubuntu2004.linuxvmimages.local' (Linux_x86_64 version 5.15.0-107-generic) on Mon Jun 03 08:33:30 EDT 2024
 INFO: [HLS 200-10] On os Ubuntu 20.04.4 LTS
 INFO: [HLS 200-10] In directory '/home/ubuntu/fsic_fpga/vivado/vitis_prj/hls_userdma'
 Sourcing Tcl script '/home/ubuntu/fsic_fpga/vivado/vitis_prj/hls_userdma/hls_userdma.prj/solution1/export.tcl'
@@ -7,10 +7,10 @@ INFO: [HLS 200-1510] Running: source /home/ubuntu/fsic_fpga/vivado/vitis_prj/hls
 INFO: [HLS 200-1510] Running: open_project hls_userdma.prj 
 INFO: [HLS 200-10] Opening project '/home/ubuntu/fsic_fpga/vivado/vitis_prj/hls_userdma/hls_userdma.prj'.
 INFO: [HLS 200-1510] Running: set_top userdma 
-INFO: [HLS 200-1510] Running: add_files userdma.cpp 
-INFO: [HLS 200-10] Adding design file 'userdma.cpp' to the project
 INFO: [HLS 200-1510] Running: add_files userdma.h 
 INFO: [HLS 200-10] Adding design file 'userdma.h' to the project
+INFO: [HLS 200-1510] Running: add_files userdma.cpp 
+INFO: [HLS 200-10] Adding design file 'userdma.cpp' to the project
 INFO: [HLS 200-1510] Running: add_files -tb userdma_test.cpp -cflags -Wno-unknown-pragmas -csimflags -Wno-unknown-pragmas 
 INFO: [HLS 200-10] Adding test bench file 'userdma_test.cpp' to the project
 INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vivado 
@@ -35,10 +35,11 @@ INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 
 source run_ippack.tcl -notrace
+ipx::create_core: Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 2905.426 ; gain = 0.023 ; free physical = 881 ; free virtual = 12090
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2022.1/data/ip'.
-INFO: [Common 17-206] Exiting Vivado at Mon May 27 13:36:43 2024...
+INFO: [Common 17-206] Exiting Vivado at Mon Jun  3 08:33:51 2024...
 INFO: [HLS 200-802] Generated output file hls_userdma.prj/solution1/impl/export.zip
-INFO: [HLS 200-111] Finished Command export_design CPU user time: 11.68 seconds. CPU system time: 1.47 seconds. Elapsed time: 14.72 seconds; current allocated memory: -1022.293 MB.
-INFO: [HLS 200-112] Total CPU user time: 14.31 seconds. Total CPU system time: 2.12 seconds. Total elapsed time: 17.15 seconds; peak allocated memory: 473.797 MB.
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 12.61 seconds. CPU system time: 1.82 seconds. Elapsed time: 21.78 seconds; current allocated memory: -1022.355 MB.
+INFO: [HLS 200-112] Total CPU user time: 14.79 seconds. Total CPU system time: 2.54 seconds. Total elapsed time: 24.34 seconds; peak allocated memory: 473.820 MB.

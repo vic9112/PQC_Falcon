@@ -91,7 +91,7 @@ newFuncRoot:3 %sext_ln21_cast = sext i62 %sext_ln21_read
 
 <Node id="9" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32">
 <![CDATA[
-newFuncRoot:4 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %gmem0, void @empty_1, i32 0, i32 0, void @empty_2, i32 10, i32 1024, void @empty_3, void @empty_4, void @empty_2, i32 16, i32 16, i32 16, i32 16, void @empty_2, void @empty_2, i32 4294967295, i32 0
+newFuncRoot:4 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %gmem0, void @empty_0, i32 0, i32 0, void @empty_1, i32 10, i32 1024, void @empty_2, void @empty_3, void @empty_1, i32 16, i32 16, i32 16, i32 16, void @empty_1, void @empty_1, i32 4294967295, i32 0
 
 ]]></Node>
 <StgValue><ssdm name="specinterface_ln0"/></StgValue>
@@ -106,7 +106,7 @@ newFuncRoot:4 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i
 
 <Node id="10" bw="0" op_0_bw="0" op_1_bw="33" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32">
 <![CDATA[
-newFuncRoot:5 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i33 %inbuf, void @empty_6, i32 0, i32 0, void @empty_2, i32 0, i32 0, void @empty_2, void @empty_2, void @empty_2, i32 0, i32 0, i32 0, i32 0, void @empty_2, void @empty_2, i32 4294967295, i32 0
+newFuncRoot:5 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i33 %inbuf, void @empty_19, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0
 
 ]]></Node>
 <StgValue><ssdm name="specinterface_ln0"/></StgValue>
@@ -311,7 +311,7 @@ for.end.loopexit.exitStub:0 %ret_ln0 = ret
 
 <Node id="21" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="0">
 <![CDATA[
-for.inc.split:0 %specpipeline_ln22 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 0, i32 0, void @empty_2
+for.inc.split:0 %specpipeline_ln22 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 0, i32 0, void @empty_1
 
 ]]></Node>
 <StgValue><ssdm name="specpipeline_ln22"/></StgValue>
@@ -326,7 +326,7 @@ for.inc.split:0 %specpipeline_ln22 = specpipeline void @_ssdm_op_SpecPipeline, i
 
 <Node id="22" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-for.inc.split:1 %specloopname_ln21 = specloopname void @_ssdm_op_SpecLoopName, void @empty_14
+for.inc.split:1 %specloopname_ln21 = specloopname void @_ssdm_op_SpecLoopName, void @empty_26
 
 ]]></Node>
 <StgValue><ssdm name="specloopname_ln21"/></StgValue>
@@ -398,23 +398,23 @@ for.inc.split:6 %br_ln21 = br void %for.inc
 </dataflow>
 <dataflow id="55" from="gmem0" to="specinterface_ln0" fromId="40" toId="10">
 </dataflow>
-<dataflow id="57" from="empty_1" to="specinterface_ln0" fromId="56" toId="10">
+<dataflow id="57" from="empty_0" to="specinterface_ln0" fromId="56" toId="10">
 </dataflow>
 <dataflow id="59" from="StgValue_58" to="specinterface_ln0" fromId="58" toId="10">
 </dataflow>
 <dataflow id="60" from="StgValue_58" to="specinterface_ln0" fromId="58" toId="10">
 </dataflow>
-<dataflow id="62" from="empty_2" to="specinterface_ln0" fromId="61" toId="10">
+<dataflow id="62" from="empty_1" to="specinterface_ln0" fromId="61" toId="10">
 </dataflow>
 <dataflow id="64" from="StgValue_63" to="specinterface_ln0" fromId="63" toId="10">
 </dataflow>
 <dataflow id="66" from="StgValue_65" to="specinterface_ln0" fromId="65" toId="10">
 </dataflow>
-<dataflow id="68" from="empty_3" to="specinterface_ln0" fromId="67" toId="10">
+<dataflow id="68" from="empty_2" to="specinterface_ln0" fromId="67" toId="10">
 </dataflow>
-<dataflow id="70" from="empty_4" to="specinterface_ln0" fromId="69" toId="10">
+<dataflow id="70" from="empty_3" to="specinterface_ln0" fromId="69" toId="10">
 </dataflow>
-<dataflow id="71" from="empty_2" to="specinterface_ln0" fromId="61" toId="10">
+<dataflow id="71" from="empty_1" to="specinterface_ln0" fromId="61" toId="10">
 </dataflow>
 <dataflow id="73" from="StgValue_72" to="specinterface_ln0" fromId="72" toId="10">
 </dataflow>
@@ -424,9 +424,9 @@ for.inc.split:6 %br_ln21 = br void %for.inc
 </dataflow>
 <dataflow id="76" from="StgValue_72" to="specinterface_ln0" fromId="72" toId="10">
 </dataflow>
-<dataflow id="77" from="empty_2" to="specinterface_ln0" fromId="61" toId="10">
+<dataflow id="77" from="empty_1" to="specinterface_ln0" fromId="61" toId="10">
 </dataflow>
-<dataflow id="78" from="empty_2" to="specinterface_ln0" fromId="61" toId="10">
+<dataflow id="78" from="empty_1" to="specinterface_ln0" fromId="61" toId="10">
 </dataflow>
 <dataflow id="80" from="StgValue_79" to="specinterface_ln0" fromId="79" toId="10">
 </dataflow>
@@ -436,23 +436,23 @@ for.inc.split:6 %br_ln21 = br void %for.inc
 </dataflow>
 <dataflow id="83" from="inbuf" to="specinterface_ln0" fromId="43" toId="11">
 </dataflow>
-<dataflow id="85" from="empty_6" to="specinterface_ln0" fromId="84" toId="11">
+<dataflow id="85" from="empty_19" to="specinterface_ln0" fromId="84" toId="11">
 </dataflow>
 <dataflow id="86" from="StgValue_58" to="specinterface_ln0" fromId="58" toId="11">
 </dataflow>
 <dataflow id="87" from="StgValue_58" to="specinterface_ln0" fromId="58" toId="11">
 </dataflow>
-<dataflow id="88" from="empty_2" to="specinterface_ln0" fromId="61" toId="11">
+<dataflow id="88" from="empty_1" to="specinterface_ln0" fromId="61" toId="11">
 </dataflow>
 <dataflow id="89" from="StgValue_58" to="specinterface_ln0" fromId="58" toId="11">
 </dataflow>
 <dataflow id="90" from="StgValue_58" to="specinterface_ln0" fromId="58" toId="11">
 </dataflow>
-<dataflow id="91" from="empty_2" to="specinterface_ln0" fromId="61" toId="11">
+<dataflow id="91" from="empty_1" to="specinterface_ln0" fromId="61" toId="11">
 </dataflow>
-<dataflow id="92" from="empty_2" to="specinterface_ln0" fromId="61" toId="11">
+<dataflow id="92" from="empty_1" to="specinterface_ln0" fromId="61" toId="11">
 </dataflow>
-<dataflow id="93" from="empty_2" to="specinterface_ln0" fromId="61" toId="11">
+<dataflow id="93" from="empty_1" to="specinterface_ln0" fromId="61" toId="11">
 </dataflow>
 <dataflow id="94" from="StgValue_58" to="specinterface_ln0" fromId="58" toId="11">
 </dataflow>
@@ -462,9 +462,9 @@ for.inc.split:6 %br_ln21 = br void %for.inc
 </dataflow>
 <dataflow id="97" from="StgValue_58" to="specinterface_ln0" fromId="58" toId="11">
 </dataflow>
-<dataflow id="98" from="empty_2" to="specinterface_ln0" fromId="61" toId="11">
+<dataflow id="98" from="empty_1" to="specinterface_ln0" fromId="61" toId="11">
 </dataflow>
-<dataflow id="99" from="empty_2" to="specinterface_ln0" fromId="61" toId="11">
+<dataflow id="99" from="empty_1" to="specinterface_ln0" fromId="61" toId="11">
 </dataflow>
 <dataflow id="100" from="StgValue_79" to="specinterface_ln0" fromId="79" toId="11">
 </dataflow>
@@ -518,11 +518,11 @@ for.inc.split:6 %br_ln21 = br void %for.inc
 </dataflow>
 <dataflow id="133" from="StgValue_58" to="specpipeline_ln22" fromId="58" toId="23">
 </dataflow>
-<dataflow id="134" from="empty_2" to="specpipeline_ln22" fromId="61" toId="23">
+<dataflow id="134" from="empty_1" to="specpipeline_ln22" fromId="61" toId="23">
 </dataflow>
 <dataflow id="136" from="_ssdm_op_SpecLoopName" to="specloopname_ln21" fromId="135" toId="24">
 </dataflow>
-<dataflow id="138" from="empty_14" to="specloopname_ln21" fromId="137" toId="24">
+<dataflow id="138" from="empty_26" to="specloopname_ln21" fromId="137" toId="24">
 </dataflow>
 <dataflow id="140" from="_ssdm_op_Write.m_axi.p1i32" to="write_ln24" fromId="139" toId="25">
 </dataflow>

@@ -16,7 +16,7 @@ set C_modelArgList {
 	{ inbuf int 33 regular {fifo 0 volatile }  }
 	{ incount35 int 32 regular {fifo 0 volatile }  }
 	{ in_en_clrsts int 1 regular {fifo 0}  }
-	{ s2m_buf_sts int 1 regular {pointer 1}  }
+	{ s2m_buf_sts int 1 regular {pointer 1 volatile }  }
 	{ in_s2m_len int 32 regular {fifo 0}  }
 	{ gmem0 int 32 regular {axi_master 1}  }
 	{ out_memory int 64 regular {fifo 0}  }
@@ -213,7 +213,7 @@ set RtlHierarchyInfo {[
 		"Port" : [
 			{"Name" : "inbuf", "Type" : "Fifo", "Direction" : "I", "DependentProc" : ["0"], "DependentChan" : "0", "DependentChanDepth" : "64", "DependentChanType" : "0",
 				"SubConnect" : [
-					{"ID" : "1", "SubInstance" : "grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_21_2_fu_138", "Port" : "inbuf", "Inst_start_state" : "4", "Inst_end_state" : "5"}]},
+					{"ID" : "1", "SubInstance" : "grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_21_2_fu_137", "Port" : "inbuf", "Inst_start_state" : "4", "Inst_end_state" : "5"}]},
 			{"Name" : "incount35", "Type" : "Fifo", "Direction" : "I", "DependentProc" : ["0"], "DependentChan" : "0", "DependentChanDepth" : "4", "DependentChanType" : "0",
 				"BlockSignal" : [
 					{"Name" : "incount35_blk_n", "Type" : "RtlSignal"}]},
@@ -229,16 +229,15 @@ set RtlHierarchyInfo {[
 					{"Name" : "gmem0_blk_n_AW", "Type" : "RtlSignal"},
 					{"Name" : "gmem0_blk_n_B", "Type" : "RtlSignal"}],
 				"SubConnect" : [
-					{"ID" : "1", "SubInstance" : "grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_21_2_fu_138", "Port" : "gmem0", "Inst_start_state" : "4", "Inst_end_state" : "5"}]},
+					{"ID" : "1", "SubInstance" : "grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_21_2_fu_137", "Port" : "gmem0", "Inst_start_state" : "4", "Inst_end_state" : "5"}]},
 			{"Name" : "out_memory", "Type" : "Fifo", "Direction" : "I", "DependentProc" : ["0"], "DependentChan" : "0", "DependentChanDepth" : "3", "DependentChanType" : "2",
 				"BlockSignal" : [
 					{"Name" : "out_memory_blk_n", "Type" : "RtlSignal"}]},
-			{"Name" : "final_s2m_len_V", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "out_sts", "Type" : "OVld", "Direction" : "IO"}],
+			{"Name" : "final_s2m_len_V", "Type" : "OVld", "Direction" : "IO"}],
 		"Loop" : [
 			{"Name" : "VITIS_LOOP_18_1", "PipelineType" : "no",
 				"LoopDec" : {"FSMBitwidth" : "19", "FirstState" : "ap_ST_fsm_state2", "LastState" : ["ap_ST_fsm_state19"], "QuitState" : ["ap_ST_fsm_state2"], "PreState" : ["ap_ST_fsm_state1"], "PostState" : ["ap_ST_fsm_state1"], "OneDepthLoop" : "0", "OneStateBlock": ""}}]},
-	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_21_2_fu_138", "Parent" : "0", "Child" : ["2"],
+	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_21_2_fu_137", "Parent" : "0", "Child" : ["2"],
 		"CDFG" : "streamtoparallelwithburst_Pipeline_VITIS_LOOP_21_2",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
@@ -264,7 +263,7 @@ set RtlHierarchyInfo {[
 		"Loop" : [
 			{"Name" : "VITIS_LOOP_21_2", "PipelineType" : "UPC",
 				"LoopDec" : {"FSMBitwidth" : "1", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter2", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter1", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
-	{"ID" : "2", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_21_2_fu_138.flow_control_loop_pipe_sequential_init_U", "Parent" : "1"}]}
+	{"ID" : "2", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_21_2_fu_137.flow_control_loop_pipe_sequential_init_U", "Parent" : "1"}]}
 
 
 set ArgLastReadFirstWriteLatency {
@@ -272,12 +271,11 @@ set ArgLastReadFirstWriteLatency {
 		inbuf {Type I LastRead 1 FirstWrite -1}
 		incount35 {Type I LastRead 1 FirstWrite -1}
 		in_en_clrsts {Type I LastRead 0 FirstWrite -1}
-		s2m_buf_sts {Type O LastRead -1 FirstWrite 18}
+		s2m_buf_sts {Type O LastRead -1 FirstWrite 0}
 		in_s2m_len {Type I LastRead 0 FirstWrite -1}
 		gmem0 {Type O LastRead 5 FirstWrite 2}
 		out_memory {Type I LastRead 0 FirstWrite -1}
-		final_s2m_len_V {Type IO LastRead -1 FirstWrite -1}
-		out_sts {Type IO LastRead -1 FirstWrite -1}}
+		final_s2m_len_V {Type IO LastRead -1 FirstWrite -1}}
 	streamtoparallelwithburst_Pipeline_VITIS_LOOP_21_2 {
 		gmem0 {Type O LastRead -1 FirstWrite 2}
 		sext_ln21 {Type I LastRead 0 FirstWrite -1}

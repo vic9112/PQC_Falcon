@@ -22668,3 +22668,258 @@ Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
 Tool Version Limit: 2022.04
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -rtl verilog 
+INFO: [HLS 200-1510] Running: source ./hls_userdma.prj/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name userdma userdma 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 1.461 GB.
+INFO: [HLS 200-10] Analyzing design file 'userdma.cpp' ... 
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body (userdma.cpp:166:52)
+WARNING: [HLS 200-471] Dataflow form checks found 1 issue(s) in file userdma.cpp
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 3.35 seconds. CPU system time: 0.6 seconds. Elapsed time: 4.55 seconds; current allocated memory: 462.586 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'outbuf' with compact=bit mode in 33-bits (userdma.cpp:164:32)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'inbuf' with compact=bit mode in 33-bits (userdma.cpp:162:32)
+INFO: [HLS 214-241] Aggregating maxi variable 'm2sbuf' with compact=none mode in 32-bits
+INFO: [HLS 214-241] Aggregating maxi variable 's2mbuf' with compact=none mode in 32-bits
+INFO: [HLS 214-115] Multiple burst writes of variable length and bit width 32 in loop 'VITIS_LOOP_21_2'(userdma.cpp:21:20) has been inferred on bundle 'gmem0'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (userdma.cpp:21:20)
+INFO: [HLS 214-115] Multiple burst reads of variable length and bit width 32 in loop 'VITIS_LOOP_95_2'(userdma.cpp:95:20) has been inferred on bundle 'gmem1'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (userdma.cpp:95:20)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.none.s_struct.ap_int<32>s.i32' into 'getinstream(hls::stream<hls::axis<ap_uint<32>, 2ul, 0ul, 0ul>, 0>&, ap_uint<1>, ap_uint<32>, ap_uint<2>&, hls::stream<data, 0>&, hls::stream<int, 0>&) (.1)' (/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:293:5)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.bits.i33.s_struct.datas.1' into 'getinstream(hls::stream<hls::axis<ap_uint<32>, 2ul, 0ul, 0ul>, 0>&, ap_uint<1>, ap_uint<32>, ap_uint<2>&, hls::stream<data, 0>&, hls::stream<int, 0>&) (.1)' (/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174:9)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.none.s_struct.ap_uint<4>s.i4' into 'getinstream(hls::stream<hls::axis<ap_uint<32>, 2ul, 0ul, 0ul>, 0>&, ap_uint<1>, ap_uint<32>, ap_uint<2>&, hls::stream<data, 0>&, hls::stream<int, 0>&) (.1)' (/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:293:5)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i64.s_struct.datas' into 'getinstream(hls::stream<hls::axis<ap_uint<32>, 2ul, 0ul, 0ul>, 0>&, ap_uint<1>, ap_uint<32>, ap_uint<2>&, hls::stream<data, 0>&, hls::stream<int, 0>&) (.1)' (/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174:9)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.none.s_struct.ap_int<1>s.i1' into 'getinstream(hls::stream<hls::axis<ap_uint<32>, 2ul, 0ul, 0ul>, 0>&, ap_uint<1>, ap_uint<32>, ap_uint<2>&, hls::stream<data, 0>&, hls::stream<int, 0>&) (.1)' (/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:293:5)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.none.s_struct.ap_uint<2>s.i2' into 'getinstream(hls::stream<hls::axis<ap_uint<32>, 2ul, 0ul, 0ul>, 0>&, ap_uint<1>, ap_uint<32>, ap_uint<2>&, hls::stream<data, 0>&, hls::stream<int, 0>&) (.1)' (/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:293:5)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i64.sl_s_struct.ap_int<32>ss_struct.ap_int<1>ss' into '_llvm.fpga.unpack.bits.s_struct.datas.i33.1'
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.s_struct.datas.i33.1' into 'streamtoparallelwithburst(hls::stream<data, 0>&, hls::stream<int, 0>&, ap_uint<1>, bool volatile*, ap_uint<32>, ap_uint<32>*) (.1)' (/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145:9)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i64.s_struct.datas' into 'paralleltostreamwithburst(ap_uint<32>*, ap_uint<1>, int, hls::stream<data, 0>&) (.1)' (/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174:9)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.bits.i33.s_struct.datas.1' into 'paralleltostreamwithburst(ap_uint<32>*, ap_uint<1>, int, hls::stream<data, 0>&) (.1)' (/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174:9)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.s_struct.datas.i33.1' into 'sendoutstream(hls::stream<data, 0>&, ap_uint<1>, bool volatile*, hls::stream<hls::axis<ap_uint<32>, 2ul, 0ul, 0ul>, 0>&) (.1)' (/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145:9)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i1.s_struct.ap_int<1>s' into 'sendoutstream(hls::stream<data, 0>&, ap_uint<1>, bool volatile*, hls::stream<hls::axis<ap_uint<32>, 2ul, 0ul, 0ul>, 0>&) (.1)' (/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:304:5)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i2.s_struct.ap_uint<2>s' into 'sendoutstream(hls::stream<data, 0>&, ap_uint<1>, bool volatile*, hls::stream<hls::axis<ap_uint<32>, 2ul, 0ul, 0ul>, 0>&) (.1)' (/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:304:5)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i4.s_struct.ap_uint<4>s' into 'sendoutstream(hls::stream<data, 0>&, ap_uint<1>, bool volatile*, hls::stream<hls::axis<ap_uint<32>, 2ul, 0ul, 0ul>, 0>&) (.1)' (/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:304:5)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i32.s_struct.ap_int<32>s' into 'sendoutstream(hls::stream<data, 0>&, ap_uint<1>, bool volatile*, hls::stream<hls::axis<ap_uint<32>, 2ul, 0ul, 0ul>, 0>&) (.1)' (/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:304:5)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 2.97 seconds. CPU system time: 0.6 seconds. Elapsed time: 3.9 seconds; current allocated memory: 464.406 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 464.406 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.04 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.08 seconds; current allocated memory: 473.422 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.08 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.14 seconds; current allocated memory: 484.879 MB.
+WARNING: [HLS 200-786] Detected dataflow-on-top in function  'userdma' (userdma.cpp:134:1)  with default interface mode 'ap_ctrl_hs'. Overlapped execution of successive kernel calls will not happen unless interface mode 'ap_ctrl_chain' is used (or 'ap_ctrl_none' for a purely data-driven design).
+INFO: [XFORM 203-712] Applying dataflow to function 'userdma' (userdma.cpp:134:1), detected/extracted 5 process function(s): 
+	 'entry_proc'
+	 'getinstream'
+	 'streamtoparallelwithburst'
+	 'paralleltostreamwithburst'
+	 'sendoutstream'.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.17 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.33 seconds; current allocated memory: 518.090 MB.
+WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_18_1' (/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:0) in function 'streamtoparallelwithburst' either the parent loop or sub loop is do-while loop.
+WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_88_1' (userdma.cpp:89:6) in function 'paralleltostreamwithburst' either the parent loop or sub loop is do-while loop.
+WARNING: [HLS 200-1450] Process getinstream has both a successor and writes an output to its caller (see the GUI dataflow viewer). This may lead to lower throughput. Consider copying this output via a successor process.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.12 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.23 seconds; current allocated memory: 598.820 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'userdma' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'entry_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.2 seconds; current allocated memory: 599.027 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 599.086 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'getinstream_Pipeline_VITIS_LOOP_50_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_50_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'VITIS_LOOP_50_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.08 seconds; current allocated memory: 600.328 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 600.328 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'getinstream' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 600.598 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 600.598 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'streamtoparallelwithburst_Pipeline_VITIS_LOOP_21_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_21_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'VITIS_LOOP_21_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.05 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.12 seconds; current allocated memory: 600.941 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.02 seconds; current allocated memory: 600.941 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'streamtoparallelwithburst' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 601.449 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.06 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.08 seconds; current allocated memory: 601.449 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'paralleltostreamwithburst_Pipeline_VITIS_LOOP_95_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_95_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 4, loop 'VITIS_LOOP_95_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 601.910 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.03 seconds; current allocated memory: 601.910 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'paralleltostreamwithburst' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.06 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.08 seconds; current allocated memory: 602.320 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 602.320 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sendoutstream_Pipeline_VITIS_LOOP_120_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_120_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'VITIS_LOOP_120_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 602.719 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.02 seconds; current allocated memory: 602.719 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sendoutstream' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 602.719 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 602.719 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'userdma' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 603.195 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.05 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.08 seconds; current allocated memory: 603.195 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'entry_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'entry_proc'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.09 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.12 seconds; current allocated memory: 603.195 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'getinstream_Pipeline_VITIS_LOOP_50_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'getinstream_Pipeline_VITIS_LOOP_50_1' pipeline 'VITIS_LOOP_50_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'getinstream_Pipeline_VITIS_LOOP_50_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.03 seconds; current allocated memory: 603.875 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'getinstream' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Register 'in_len_V' is power-on initialization.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'getinstream'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 605.160 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'streamtoparallelwithburst_Pipeline_VITIS_LOOP_21_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'streamtoparallelwithburst_Pipeline_VITIS_LOOP_21_2' pipeline 'VITIS_LOOP_21_2' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'streamtoparallelwithburst_Pipeline_VITIS_LOOP_21_2/m_axi_gmem0_AWVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'streamtoparallelwithburst_Pipeline_VITIS_LOOP_21_2/m_axi_gmem0_AWADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'streamtoparallelwithburst_Pipeline_VITIS_LOOP_21_2/m_axi_gmem0_AWID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'streamtoparallelwithburst_Pipeline_VITIS_LOOP_21_2/m_axi_gmem0_AWLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'streamtoparallelwithburst_Pipeline_VITIS_LOOP_21_2/m_axi_gmem0_AWSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'streamtoparallelwithburst_Pipeline_VITIS_LOOP_21_2/m_axi_gmem0_AWBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'streamtoparallelwithburst_Pipeline_VITIS_LOOP_21_2/m_axi_gmem0_AWLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'streamtoparallelwithburst_Pipeline_VITIS_LOOP_21_2/m_axi_gmem0_AWCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'streamtoparallelwithburst_Pipeline_VITIS_LOOP_21_2/m_axi_gmem0_AWPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'streamtoparallelwithburst_Pipeline_VITIS_LOOP_21_2/m_axi_gmem0_AWQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'streamtoparallelwithburst_Pipeline_VITIS_LOOP_21_2/m_axi_gmem0_AWREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'streamtoparallelwithburst_Pipeline_VITIS_LOOP_21_2/m_axi_gmem0_AWUSER' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'streamtoparallelwithburst_Pipeline_VITIS_LOOP_21_2/m_axi_gmem0_BREADY' to 0.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'streamtoparallelwithburst_Pipeline_VITIS_LOOP_21_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.12 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.26 seconds; current allocated memory: 606.473 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'streamtoparallelwithburst' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Register 'final_s2m_len_V' is power-on initialization.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'streamtoparallelwithburst'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.05 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.21 seconds; current allocated memory: 607.887 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'paralleltostreamwithburst_Pipeline_VITIS_LOOP_95_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'paralleltostreamwithburst_Pipeline_VITIS_LOOP_95_2' pipeline 'VITIS_LOOP_95_2' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'paralleltostreamwithburst_Pipeline_VITIS_LOOP_95_2/m_axi_gmem1_ARVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'paralleltostreamwithburst_Pipeline_VITIS_LOOP_95_2/m_axi_gmem1_ARADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'paralleltostreamwithburst_Pipeline_VITIS_LOOP_95_2/m_axi_gmem1_ARID' to 0.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================

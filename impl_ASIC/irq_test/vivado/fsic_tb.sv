@@ -130,9 +130,11 @@ module fsic_tb();
         load_firDMA();
         cnfg_firDMA();
         start_fir();
-        UserMB(1'b1, 1'b1, 32'h4a4a4a4a);
+        UserMB(1'b1, 1'b0, 32'h4a4a4a4a);
+        //TogglePL_AA();
         start_firDMA();
-        UserMB(1'b1, 1'b1, 32'h3a3a3a3a);
+        UserMB(1'b0, 1'b0, 32'h3a3a3a3a);
+        //TogglePL_AA();
 //==================================================================================//
 //==================================================================================//
 //==================================================================================//
@@ -154,6 +156,36 @@ module fsic_tb();
     
     reg [31:0] fir_in [0:63];
     reg [31:0] fir_in_data;
+
+    task TogglePL_AA;
+        begin
+            $display($time, "=> =======================================================================");
+    	    $display($time, "=> Start toggling aa_mb_irq_en");
+            $display($time, "=> =======================================================================");
+            offset = 0;
+            data = 32'h0000_0001;
+            axil_cycles_gen(WriteCyc, PL_AA, offset, data, 1);
+            axil_cycles_gen(ReadCyc, PL_AA, offset, data, 1);
+
+            if(data == 32'h0000_00001) begin
+                $display($time, "=> FpgaLocal_Write PL_AA offset %h = %h, PASS", offset, data);
+            end else begin
+                $display($time, "=> FpgaLocal_Write PL_AA offset %h = %h, FAIL", offset, data);
+                ->> error_event;
+            end
+
+            data = 32'h0000_0000;
+            axil_cycles_gen(WriteCyc, PL_AA, offset, data, 1);
+            axil_cycles_gen(ReadCyc, PL_AA, offset, data, 1);
+
+            if(data == 32'h0000_00000) begin
+                $display($time, "=> FpgaLocal_Write PL_AA offset %h = %h, PASS", offset, data);
+            end else begin
+                $display($time, "=> FpgaLocal_Write PL_AA offset %h = %h, FAIL", offset, data);
+                ->> error_event;
+            end
+        end
+    endtask
 
     task UserMB;
         input [0:0]  plaa_en;   // Enable PL_AA
@@ -588,7 +620,7 @@ module fsic_tb();
         begin
             @(error_event);
             $display($time, "=> Testbench Failed, End of the test.");
-            #100us
+            #800us
             $finish;
         end
     endtask    

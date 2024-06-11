@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'streamtoparallelwithburst_Pipeline_VITIS_LOOP_21_2'
 ================================================================
-* Date:           Mon May 27 13:33:48 2024
+* Date:           Mon Jun  3 08:32:54 2024
 
 * Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
 * Project:        hls_userdma.prj
@@ -90,8 +90,8 @@ ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%i = alloca i32 1"   --->   Operatio
 ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%trunc_ln21_2_read = read i31 @_ssdm_op_Read.ap_auto.i31, i31 %trunc_ln21_2"   --->   Operation 7 'read' 'trunc_ln21_2_read' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%sext_ln21_read = read i62 @_ssdm_op_Read.ap_auto.i62, i62 %sext_ln21"   --->   Operation 8 'read' 'sext_ln21_read' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%sext_ln21_cast = sext i62 %sext_ln21_read"   --->   Operation 9 'sext' 'sext_ln21_cast' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %gmem0, void @empty_1, i32 0, i32 0, void @empty_2, i32 10, i32 1024, void @empty_3, void @empty_4, void @empty_2, i32 16, i32 16, i32 16, i32 16, void @empty_2, void @empty_2, i32 4294967295, i32 0"   --->   Operation 10 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i33 %inbuf, void @empty_6, i32 0, i32 0, void @empty_2, i32 0, i32 0, void @empty_2, void @empty_2, void @empty_2, i32 0, i32 0, i32 0, i32 0, void @empty_2, void @empty_2, i32 4294967295, i32 0"   --->   Operation 11 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %gmem0, void @empty_0, i32 0, i32 0, void @empty_1, i32 10, i32 1024, void @empty_2, void @empty_3, void @empty_1, i32 16, i32 16, i32 16, i32 16, void @empty_1, void @empty_1, i32 4294967295, i32 0"   --->   Operation 10 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i33 %inbuf, void @empty_19, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0"   --->   Operation 11 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 12 [1/1] (1.58ns)   --->   "%store_ln0 = store i31 0, i31 %i"   --->   Operation 12 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
 ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.inc"   --->   Operation 13 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%i_1 = load i31 %i" [userdma.cpp:21]   --->   Operation 14 'load' 'i_1' <Predicate = true> <Delay = 0.00>
@@ -108,8 +108,8 @@ ST_2 : Operation 22 [1/1] (0.00ns)   --->   "%in_val_data_filed_V = trunc i33 %i
 ST_2 : Operation 27 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 27 'ret' 'ret_ln0' <Predicate = (icmp_ln21)> <Delay = 0.00>
 
 State 3 <SV = 2> <Delay = 7.30>
-ST_3 : Operation 23 [1/1] (0.00ns)   --->   "%specpipeline_ln22 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 0, i32 0, void @empty_2" [userdma.cpp:22]   --->   Operation 23 'specpipeline' 'specpipeline_ln22' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 24 [1/1] (0.00ns)   --->   "%specloopname_ln21 = specloopname void @_ssdm_op_SpecLoopName, void @empty_14" [userdma.cpp:21]   --->   Operation 24 'specloopname' 'specloopname_ln21' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 23 [1/1] (0.00ns)   --->   "%specpipeline_ln22 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 0, i32 0, void @empty_1" [userdma.cpp:22]   --->   Operation 23 'specpipeline' 'specpipeline_ln22' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 24 [1/1] (0.00ns)   --->   "%specloopname_ln21 = specloopname void @_ssdm_op_SpecLoopName, void @empty_26" [userdma.cpp:21]   --->   Operation 24 'specloopname' 'specloopname_ln21' <Predicate = true> <Delay = 0.00>
 ST_3 : Operation 25 [1/1] (7.30ns)   --->   "%write_ln24 = write void @_ssdm_op_Write.m_axi.p1i32, i32 %gmem0_addr, i32 %in_val_data_filed_V, i4 15" [userdma.cpp:24]   --->   Operation 25 'write' 'write_ln24' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 ST_3 : Operation 26 [1/1] (0.00ns)   --->   "%br_ln21 = br void %for.inc" [userdma.cpp:21]   --->   Operation 26 'br' 'br_ln21' <Predicate = true> <Delay = 0.00>
 

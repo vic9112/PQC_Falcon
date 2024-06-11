@@ -19,7 +19,7 @@ target triple = "fpga64-xilinx-none"
 %"struct.ssdm_int<4, false>" = type { i4 }
 
 ; Function Attrs: noinline
-define void @apatb_userdma_ir(%"class.hls::stream<hls::axis<ap_uint<32>, 2, 0, 0>, 0>"* noalias nonnull dereferenceable(12) %inStreamTop, i1* noalias nocapture nonnull %s2m_buf_sts, %"struct.ap_int<32>"* nocapture readonly %s2m_len, %"struct.ap_int<1>"* nocapture readonly %s2m_enb_clrsts, %"struct.ap_int<32>"* noalias nocapture nonnull "fpga.decayed.dim.hint"="1024" %s2mbuf, %"struct.ap_uint<2>"* noalias nocapture nonnull %s2m_err, %"struct.ap_int<32>"* noalias nocapture nonnull readonly "fpga.decayed.dim.hint"="1024" %m2sbuf, i1* noalias nocapture nonnull %m2s_buf_sts, i32 %m2s_len, %"struct.ap_int<1>"* nocapture readonly %m2s_enb_clrsts, %"class.hls::stream<hls::axis<ap_uint<32>, 2, 0, 0>, 0>"* noalias nonnull dereferenceable(12) %outStreamTop) local_unnamed_addr #0 {
+define void @apatb_userdma_ir(%"class.hls::stream<hls::axis<ap_uint<32>, 2, 0, 0>, 0>"* noalias nonnull dereferenceable(12) %inStreamTop, i1* noalias nonnull %s2m_buf_sts, %"struct.ap_int<32>"* nocapture readonly %s2m_len, %"struct.ap_int<1>"* nocapture readonly %s2m_enb_clrsts, %"struct.ap_int<32>"* noalias nocapture nonnull "fpga.decayed.dim.hint"="1024" %s2mbuf, %"struct.ap_uint<2>"* noalias nocapture nonnull %s2m_err, %"struct.ap_int<32>"* noalias nocapture nonnull readonly "fpga.decayed.dim.hint"="1024" %m2sbuf, i1* noalias nonnull %m2s_buf_sts, i32 %m2s_len, %"struct.ap_int<1>"* nocapture readonly %m2s_enb_clrsts, %"class.hls::stream<hls::axis<ap_uint<32>, 2, 0, 0>, 0>"* noalias nonnull dereferenceable(12) %outStreamTop) local_unnamed_addr #0 {
 entry:
   %inStreamTop_copy.data = alloca i32
   %inStreamTop_copy.keep = alloca i4
