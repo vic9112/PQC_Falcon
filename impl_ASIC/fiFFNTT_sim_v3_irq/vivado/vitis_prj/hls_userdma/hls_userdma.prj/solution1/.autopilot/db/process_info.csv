@@ -1,0 +1,9 @@
+,entry_proc_U0,,status1.csv
+,getinstream_U0,,status2.csv
+,streamtoparallelwithburst_U0,,status3.csv
+,paralleltostreamwithburst_U0,,status4.csv
+,sendoutstream_U0,,status5.csv
+,AESL_inst_userdma,,module_status1.csv
+getinstream_U0,grp_getinstream_Pipeline_VITIS_LOOP_72_1_fu_93,,module_status2.csv
+streamtoparallelwithburst_U0,grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129,,module_status3.csv
+paralleltostreamwithburst_U0,grp_paralleltostreamwithburst_Pipeline_VITIS_LOOP_128_2_fu_117,,module_status4.csv

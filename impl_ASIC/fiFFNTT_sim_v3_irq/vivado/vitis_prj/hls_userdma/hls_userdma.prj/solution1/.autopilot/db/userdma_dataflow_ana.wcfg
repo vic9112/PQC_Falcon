@@ -1,0 +1,632 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="userdma.wdb" id="1">
+         <top_modules>
+            <top_module name="apa_userdma_top" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0ns"></ZoomStartTime>
+      <ZoomEndTime time="2000ns"></ZoomEndTime>
+      <Cursor1Time time="0ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="257"></NameColumnWidth>
+      <ValueColumnWidth column_width="84"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="2" />
+   <wvobject type="group" fp_name="HLS Process Summary Group">
+      <obj_property name="label">HLS Process Summary</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="group" fp_name="/apatb_userdma_top/AESL_inst_userdma//AESL_inst_userdma_activity">
+         <obj_property name="label">AESL_inst_userdma_activity</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="UseFullPath">true</obj_property>
+         <obj_property name="ElementShortName">AESL_inst_userdma_activity</obj_property>
+         <obj_property name="ObjectShortName">AESL_inst_userdma_activity</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+         <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="CustomSignalColor">turquoise</obj_property>
+         <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+         <obj_property name="Render_Data">/apatb_userdma_top/AESL_inst_userdma//AESL_inst_userdma_activity.dataflowTxWaveData.Cycles</obj_property>
+         <obj_property name="Value_Data">/apatb_userdma_top/AESL_inst_userdma//AESL_inst_userdma_activity.dataflowTxWaveData.OutStanding</obj_property>
+         <obj_property name="Detail_Data">/apatb_userdma_top/AESL_inst_userdma//AESL_inst_userdma_activity.dataflowTxTooltipData</obj_property>
+         <wvobject type="group" fp_name="/apatb_userdma_top/AESL_inst_userdma/entry_proc_U0/entry_proc_U0_activity">
+            <obj_property name="label">entry_proc_U0_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">entry_proc_U0_activity</obj_property>
+            <obj_property name="ObjectShortName">entry_proc_U0_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_userdma_top/AESL_inst_userdma/entry_proc_U0/entry_proc_U0_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_userdma_top/AESL_inst_userdma/entry_proc_U0/entry_proc_U0_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_userdma_top/AESL_inst_userdma/entry_proc_U0/entry_proc_U0_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_userdma_top/AESL_inst_userdma/getinstream_U0/getinstream_U0_activity">
+            <obj_property name="label">getinstream_U0_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">getinstream_U0_activity</obj_property>
+            <obj_property name="ObjectShortName">getinstream_U0_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_userdma_top/AESL_inst_userdma/getinstream_U0/getinstream_U0_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_userdma_top/AESL_inst_userdma/getinstream_U0/getinstream_U0_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_userdma_top/AESL_inst_userdma/getinstream_U0/getinstream_U0_activity.dataflowTxTooltipData</obj_property>
+            <wvobject type="group" fp_name="/apatb_userdma_top/AESL_inst_userdma/getinstream_U0/grp_getinstream_Pipeline_VITIS_LOOP_72_1_fu_93/grp_getinstream_Pipeline_VITIS_LOOP_72_1_fu_93_activity">
+               <obj_property name="label">grp_getinstream_Pipeline_VITIS_LOOP_72_1_fu_93_activity</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="UseFullPath">true</obj_property>
+               <obj_property name="ElementShortName">grp_getinstream_Pipeline_VITIS_LOOP_72_1_fu_93_activity</obj_property>
+               <obj_property name="ObjectShortName">grp_getinstream_Pipeline_VITIS_LOOP_72_1_fu_93_activity</obj_property>
+               <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+               <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+               <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="CustomSignalColor">turquoise</obj_property>
+               <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+               <obj_property name="Render_Data">/apatb_userdma_top/AESL_inst_userdma/getinstream_U0/grp_getinstream_Pipeline_VITIS_LOOP_72_1_fu_93/grp_getinstream_Pipeline_VITIS_LOOP_72_1_fu_93_activity.dataflowTxWaveData.Cycles</obj_property>
+               <obj_property name="Value_Data">/apatb_userdma_top/AESL_inst_userdma/getinstream_U0/grp_getinstream_Pipeline_VITIS_LOOP_72_1_fu_93/grp_getinstream_Pipeline_VITIS_LOOP_72_1_fu_93_activity.dataflowTxWaveData.OutStanding</obj_property>
+               <obj_property name="Detail_Data">/apatb_userdma_top/AESL_inst_userdma/getinstream_U0/grp_getinstream_Pipeline_VITIS_LOOP_72_1_fu_93/grp_getinstream_Pipeline_VITIS_LOOP_72_1_fu_93_activity.dataflowTxTooltipData</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_userdma_top/AESL_inst_userdma/streamtoparallelwithburst_U0/streamtoparallelwithburst_U0_activity">
+            <obj_property name="label">streamtoparallelwithburst_U0_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">streamtoparallelwithburst_U0_activity</obj_property>
+            <obj_property name="ObjectShortName">streamtoparallelwithburst_U0_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_userdma_top/AESL_inst_userdma/streamtoparallelwithburst_U0/streamtoparallelwithburst_U0_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_userdma_top/AESL_inst_userdma/streamtoparallelwithburst_U0/streamtoparallelwithburst_U0_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_userdma_top/AESL_inst_userdma/streamtoparallelwithburst_U0/streamtoparallelwithburst_U0_activity.dataflowTxTooltipData</obj_property>
+            <wvobject type="group" fp_name="/apatb_userdma_top/AESL_inst_userdma/streamtoparallelwithburst_U0/grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129/grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_activity">
+               <obj_property name="label">grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_activity</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="UseFullPath">true</obj_property>
+               <obj_property name="ElementShortName">grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_activity</obj_property>
+               <obj_property name="ObjectShortName">grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_activity</obj_property>
+               <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+               <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+               <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="CustomSignalColor">turquoise</obj_property>
+               <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+               <obj_property name="Render_Data">/apatb_userdma_top/AESL_inst_userdma/streamtoparallelwithburst_U0/grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129/grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_activity.dataflowTxWaveData.Cycles</obj_property>
+               <obj_property name="Value_Data">/apatb_userdma_top/AESL_inst_userdma/streamtoparallelwithburst_U0/grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129/grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_activity.dataflowTxWaveData.OutStanding</obj_property>
+               <obj_property name="Detail_Data">/apatb_userdma_top/AESL_inst_userdma/streamtoparallelwithburst_U0/grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129/grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_activity.dataflowTxTooltipData</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_userdma_top/AESL_inst_userdma/paralleltostreamwithburst_U0/paralleltostreamwithburst_U0_activity">
+            <obj_property name="label">paralleltostreamwithburst_U0_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">paralleltostreamwithburst_U0_activity</obj_property>
+            <obj_property name="ObjectShortName">paralleltostreamwithburst_U0_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_userdma_top/AESL_inst_userdma/paralleltostreamwithburst_U0/paralleltostreamwithburst_U0_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_userdma_top/AESL_inst_userdma/paralleltostreamwithburst_U0/paralleltostreamwithburst_U0_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_userdma_top/AESL_inst_userdma/paralleltostreamwithburst_U0/paralleltostreamwithburst_U0_activity.dataflowTxTooltipData</obj_property>
+            <wvobject type="group" fp_name="/apatb_userdma_top/AESL_inst_userdma/paralleltostreamwithburst_U0/grp_paralleltostreamwithburst_Pipeline_VITIS_LOOP_128_2_fu_117/grp_paralleltostreamwithburst_Pipeline_VITIS_LOOP_128_2_fu_117_activity">
+               <obj_property name="label">grp_paralleltostreamwithburst_Pipeline_VITIS_LOOP_128_2_fu_117_activity</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="UseFullPath">true</obj_property>
+               <obj_property name="ElementShortName">grp_paralleltostreamwithburst_Pipeline_VITIS_LOOP_128_2_fu_117_activity</obj_property>
+               <obj_property name="ObjectShortName">grp_paralleltostreamwithburst_Pipeline_VITIS_LOOP_128_2_fu_117_activity</obj_property>
+               <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+               <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+               <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="CustomSignalColor">turquoise</obj_property>
+               <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+               <obj_property name="Render_Data">/apatb_userdma_top/AESL_inst_userdma/paralleltostreamwithburst_U0/grp_paralleltostreamwithburst_Pipeline_VITIS_LOOP_128_2_fu_117/grp_paralleltostreamwithburst_Pipeline_VITIS_LOOP_128_2_fu_117_activity.dataflowTxWaveData.Cycles</obj_property>
+               <obj_property name="Value_Data">/apatb_userdma_top/AESL_inst_userdma/paralleltostreamwithburst_U0/grp_paralleltostreamwithburst_Pipeline_VITIS_LOOP_128_2_fu_117/grp_paralleltostreamwithburst_Pipeline_VITIS_LOOP_128_2_fu_117_activity.dataflowTxWaveData.OutStanding</obj_property>
+               <obj_property name="Detail_Data">/apatb_userdma_top/AESL_inst_userdma/paralleltostreamwithburst_U0/grp_paralleltostreamwithburst_Pipeline_VITIS_LOOP_128_2_fu_117/grp_paralleltostreamwithburst_Pipeline_VITIS_LOOP_128_2_fu_117_activity.dataflowTxTooltipData</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_userdma_top/AESL_inst_userdma/sendoutstream_U0/sendoutstream_U0_activity">
+            <obj_property name="label">sendoutstream_U0_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">sendoutstream_U0_activity</obj_property>
+            <obj_property name="ObjectShortName">sendoutstream_U0_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_userdma_top/AESL_inst_userdma/sendoutstream_U0/sendoutstream_U0_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_userdma_top/AESL_inst_userdma/sendoutstream_U0/sendoutstream_U0_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_userdma_top/AESL_inst_userdma/sendoutstream_U0/sendoutstream_U0_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+   <wvobject type="protoinst" fp_name="/apatb_userdma_top/AESL_inst_userdma//AESL_inst_userdma_activity">
+      <obj_property name="ElementShortName">AESL_inst_userdma_activity</obj_property>
+      <obj_property name="ObjectShortName">AESL_inst_userdma_activity</obj_property>
+   </wvobject>
+   <wvobject type="group" fp_name="AESL_inst_userdma_group">
+      <obj_property name="label">AESL_inst_userdma</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="protoinst" fp_name="/apatb_userdma_top/AESL_inst_userdma/entry_proc_U0/entry_proc_U0_activity">
+         <obj_property name="ElementShortName">entry_proc_U0_activity</obj_property>
+         <obj_property name="ObjectShortName">entry_proc_U0_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_userdma_top/AESL_inst_userdma/getinstream_U0/getinstream_U0_activity">
+         <obj_property name="ElementShortName">getinstream_U0_activity</obj_property>
+         <obj_property name="ObjectShortName">getinstream_U0_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_userdma_top/AESL_inst_userdma/streamtoparallelwithburst_U0/streamtoparallelwithburst_U0_activity">
+         <obj_property name="ElementShortName">streamtoparallelwithburst_U0_activity</obj_property>
+         <obj_property name="ObjectShortName">streamtoparallelwithburst_U0_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_userdma_top/AESL_inst_userdma/paralleltostreamwithburst_U0/paralleltostreamwithburst_U0_activity">
+         <obj_property name="ElementShortName">paralleltostreamwithburst_U0_activity</obj_property>
+         <obj_property name="ObjectShortName">paralleltostreamwithburst_U0_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_userdma_top/AESL_inst_userdma/sendoutstream_U0/sendoutstream_U0_activity">
+         <obj_property name="ElementShortName">sendoutstream_U0_activity</obj_property>
+         <obj_property name="ObjectShortName">sendoutstream_U0_activity</obj_property>
+      </wvobject>
+      <wvobject type="group" fp_name="AESL_inst_userdma_Handshake_group">
+         <obj_property name="label">Block-level handshake</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="logic" fp_name="/apatb_userdma_top/AESL_inst_userdma/ap_start">
+            <obj_property name="ElementShortName">ap_start</obj_property>
+            <obj_property name="ObjectShortName">ap_start</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/apatb_userdma_top/AESL_inst_userdma/ap_ready">
+            <obj_property name="ElementShortName">ap_ready</obj_property>
+            <obj_property name="ObjectShortName">ap_ready</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/apatb_userdma_top/AESL_inst_userdma/ap_done">
+            <obj_property name="ElementShortName">ap_done</obj_property>
+            <obj_property name="ObjectShortName">ap_done</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="entry_proc_U0_group">
+         <obj_property name="label">entry_proc_U0</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="entry_proc_U0_Input_group">
+            <obj_property name="label">Input Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="entry_proc_U0_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_userdma_top/AESL_inst_userdma/entry_proc_U0/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_userdma_top/AESL_inst_userdma/entry_proc_U0/real_start">
+               <obj_property name="ElementShortName">real_start</obj_property>
+               <obj_property name="ObjectShortName">real_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_userdma_top/AESL_inst_userdma/entry_proc_U0/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_userdma_top/AESL_inst_userdma/entry_proc_U0/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_userdma_top/AESL_inst_userdma/entry_proc_U0/ap_continue">
+               <obj_property name="ElementShortName">ap_continue</obj_property>
+               <obj_property name="ObjectShortName">ap_continue</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="entry_proc_U0_Output_group">
+            <obj_property name="label">Output Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="s2mbuf_c_group">
+               <obj_property name="label">s2mbuf_c(s2mbuf_c_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_userdma_top/AESL_inst_userdma/entry_proc_U0/s2mbuf_c_blk_n">
+                  <obj_property name="ElementShortName">s2mbuf_c_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">s2mbuf_c_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_userdma_top/AESL_inst_userdma/entry_proc_U0/s2mbuf_c_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_userdma_top/AESL_inst_userdma/entry_proc_U0/s2mbuf_c_full_n">
+                  <obj_property name="ElementShortName">s2mbuf_c_full_n</obj_property>
+                  <obj_property name="ObjectShortName">s2mbuf_c_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_userdma_top/AESL_inst_userdma/entry_proc_U0/s2mbuf_c_write">
+                  <obj_property name="ElementShortName">s2mbuf_c_write</obj_property>
+                  <obj_property name="ObjectShortName">s2mbuf_c_write</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="getinstream_U0_group">
+         <obj_property name="label">getinstream_U0</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="protoinst" fp_name="/apatb_userdma_top/AESL_inst_userdma/getinstream_U0/grp_getinstream_Pipeline_VITIS_LOOP_72_1_fu_93/grp_getinstream_Pipeline_VITIS_LOOP_72_1_fu_93_activity">
+            <obj_property name="ElementShortName">grp_getinstream_Pipeline_VITIS_LOOP_72_1_fu_93_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_getinstream_Pipeline_VITIS_LOOP_72_1_fu_93_activity</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="getinstream_U0_Input_group">
+            <obj_property name="label">Input Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="getinstream_U0_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_userdma_top/AESL_inst_userdma/getinstream_U0/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_userdma_top/AESL_inst_userdma/getinstream_U0/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_userdma_top/AESL_inst_userdma/getinstream_U0/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_userdma_top/AESL_inst_userdma/getinstream_U0/ap_continue">
+               <obj_property name="ElementShortName">ap_continue</obj_property>
+               <obj_property name="ObjectShortName">ap_continue</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="getinstream_U0_Output_group">
+            <obj_property name="label">Output Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="inbuf_group">
+               <obj_property name="label">inbuf(inbuf_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_userdma_top/AESL_inst_userdma/getinstream_U0/inbuf_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_userdma_top/AESL_inst_userdma/getinstream_U0/inbuf_full_n">
+                  <obj_property name="ElementShortName">inbuf_full_n</obj_property>
+                  <obj_property name="ObjectShortName">inbuf_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_userdma_top/AESL_inst_userdma/getinstream_U0/inbuf_write">
+                  <obj_property name="ElementShortName">inbuf_write</obj_property>
+                  <obj_property name="ObjectShortName">inbuf_write</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="incount25_group">
+               <obj_property name="label">incount25(incount_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_userdma_top/AESL_inst_userdma/getinstream_U0/incount25_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_userdma_top/AESL_inst_userdma/getinstream_U0/incount25_full_n">
+                  <obj_property name="ElementShortName">incount25_full_n</obj_property>
+                  <obj_property name="ObjectShortName">incount25_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_userdma_top/AESL_inst_userdma/getinstream_U0/incount25_write">
+                  <obj_property name="ElementShortName">incount25_write</obj_property>
+                  <obj_property name="ObjectShortName">incount25_write</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="kernel_mode_c_group">
+               <obj_property name="label">kernel_mode_c(kernel_mode_c_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_userdma_top/AESL_inst_userdma/getinstream_U0/kernel_mode_c_blk_n">
+                  <obj_property name="ElementShortName">kernel_mode_c_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">kernel_mode_c_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_userdma_top/AESL_inst_userdma/getinstream_U0/kernel_mode_c_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_userdma_top/AESL_inst_userdma/getinstream_U0/kernel_mode_c_full_n">
+                  <obj_property name="ElementShortName">kernel_mode_c_full_n</obj_property>
+                  <obj_property name="ObjectShortName">kernel_mode_c_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_userdma_top/AESL_inst_userdma/getinstream_U0/kernel_mode_c_write">
+                  <obj_property name="ElementShortName">kernel_mode_c_write</obj_property>
+                  <obj_property name="ObjectShortName">kernel_mode_c_write</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="grp_getinstream_Pipeline_VITIS_LOOP_72_1_fu_93_group">
+            <obj_property name="label">grp_getinstream_Pipeline_VITIS_LOOP_72_1_fu_93</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="grp_getinstream_Pipeline_VITIS_LOOP_72_1_fu_93_Handshake_group">
+               <obj_property name="label">Block-level handshake</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_userdma_top/AESL_inst_userdma/getinstream_U0/grp_getinstream_Pipeline_VITIS_LOOP_72_1_fu_93/ap_start">
+                  <obj_property name="ElementShortName">ap_start</obj_property>
+                  <obj_property name="ObjectShortName">ap_start</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_userdma_top/AESL_inst_userdma/getinstream_U0/grp_getinstream_Pipeline_VITIS_LOOP_72_1_fu_93/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_userdma_top/AESL_inst_userdma/getinstream_U0/grp_getinstream_Pipeline_VITIS_LOOP_72_1_fu_93/ap_done">
+                  <obj_property name="ElementShortName">ap_done</obj_property>
+                  <obj_property name="ObjectShortName">ap_done</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="streamtoparallelwithburst_U0_group">
+         <obj_property name="label">streamtoparallelwithburst_U0</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="protoinst" fp_name="/apatb_userdma_top/AESL_inst_userdma/streamtoparallelwithburst_U0/grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129/grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_activity">
+            <obj_property name="ElementShortName">grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_activity</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="streamtoparallelwithburst_U0_Input_group">
+            <obj_property name="label">Input Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="inbuf_group">
+               <obj_property name="label">inbuf(inbuf_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_userdma_top/AESL_inst_userdma/streamtoparallelwithburst_U0/inbuf_dout">
+                  <obj_property name="ElementShortName">inbuf_dout[32:0]</obj_property>
+                  <obj_property name="ObjectShortName">inbuf_dout[32:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_userdma_top/AESL_inst_userdma/streamtoparallelwithburst_U0/inbuf_empty_n">
+                  <obj_property name="ElementShortName">inbuf_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">inbuf_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_userdma_top/AESL_inst_userdma/streamtoparallelwithburst_U0/inbuf_read">
+                  <obj_property name="ElementShortName">inbuf_read</obj_property>
+                  <obj_property name="ObjectShortName">inbuf_read</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="incount25_group">
+               <obj_property name="label">incount25(incount_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_userdma_top/AESL_inst_userdma/streamtoparallelwithburst_U0/incount25_blk_n">
+                  <obj_property name="ElementShortName">incount25_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">incount25_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_userdma_top/AESL_inst_userdma/streamtoparallelwithburst_U0/incount25_dout">
+                  <obj_property name="ElementShortName">incount25_dout[31:0]</obj_property>
+                  <obj_property name="ObjectShortName">incount25_dout[31:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_userdma_top/AESL_inst_userdma/streamtoparallelwithburst_U0/incount25_empty_n">
+                  <obj_property name="ElementShortName">incount25_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">incount25_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_userdma_top/AESL_inst_userdma/streamtoparallelwithburst_U0/incount25_read">
+                  <obj_property name="ElementShortName">incount25_read</obj_property>
+                  <obj_property name="ObjectShortName">incount25_read</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="kernel_mode_group">
+               <obj_property name="label">kernel_mode(kernel_mode_c_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_userdma_top/AESL_inst_userdma/streamtoparallelwithburst_U0/kernel_mode_blk_n">
+                  <obj_property name="ElementShortName">kernel_mode_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">kernel_mode_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_userdma_top/AESL_inst_userdma/streamtoparallelwithburst_U0/kernel_mode_dout">
+                  <obj_property name="ElementShortName">kernel_mode_dout[1:0]</obj_property>
+                  <obj_property name="ObjectShortName">kernel_mode_dout[1:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_userdma_top/AESL_inst_userdma/streamtoparallelwithburst_U0/kernel_mode_empty_n">
+                  <obj_property name="ElementShortName">kernel_mode_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">kernel_mode_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_userdma_top/AESL_inst_userdma/streamtoparallelwithburst_U0/kernel_mode_read">
+                  <obj_property name="ElementShortName">kernel_mode_read</obj_property>
+                  <obj_property name="ObjectShortName">kernel_mode_read</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="out_memory_group">
+               <obj_property name="label">out_memory(s2mbuf_c_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_userdma_top/AESL_inst_userdma/streamtoparallelwithburst_U0/out_memory_blk_n">
+                  <obj_property name="ElementShortName">out_memory_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">out_memory_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_userdma_top/AESL_inst_userdma/streamtoparallelwithburst_U0/out_memory_dout">
+                  <obj_property name="ElementShortName">out_memory_dout[63:0]</obj_property>
+                  <obj_property name="ObjectShortName">out_memory_dout[63:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_userdma_top/AESL_inst_userdma/streamtoparallelwithburst_U0/out_memory_empty_n">
+                  <obj_property name="ElementShortName">out_memory_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">out_memory_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_userdma_top/AESL_inst_userdma/streamtoparallelwithburst_U0/out_memory_read">
+                  <obj_property name="ElementShortName">out_memory_read</obj_property>
+                  <obj_property name="ObjectShortName">out_memory_read</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="streamtoparallelwithburst_U0_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_userdma_top/AESL_inst_userdma/streamtoparallelwithburst_U0/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_userdma_top/AESL_inst_userdma/streamtoparallelwithburst_U0/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_userdma_top/AESL_inst_userdma/streamtoparallelwithburst_U0/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_userdma_top/AESL_inst_userdma/streamtoparallelwithburst_U0/ap_continue">
+               <obj_property name="ElementShortName">ap_continue</obj_property>
+               <obj_property name="ObjectShortName">ap_continue</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="streamtoparallelwithburst_U0_Output_group">
+            <obj_property name="label">Output Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_group">
+            <obj_property name="label">grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_Handshake_group">
+               <obj_property name="label">Block-level handshake</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_userdma_top/AESL_inst_userdma/streamtoparallelwithburst_U0/grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129/ap_start">
+                  <obj_property name="ElementShortName">ap_start</obj_property>
+                  <obj_property name="ObjectShortName">ap_start</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_userdma_top/AESL_inst_userdma/streamtoparallelwithburst_U0/grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_userdma_top/AESL_inst_userdma/streamtoparallelwithburst_U0/grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129/ap_done">
+                  <obj_property name="ElementShortName">ap_done</obj_property>
+                  <obj_property name="ObjectShortName">ap_done</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="paralleltostreamwithburst_U0_group">
+         <obj_property name="label">paralleltostreamwithburst_U0</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="protoinst" fp_name="/apatb_userdma_top/AESL_inst_userdma/paralleltostreamwithburst_U0/grp_paralleltostreamwithburst_Pipeline_VITIS_LOOP_128_2_fu_117/grp_paralleltostreamwithburst_Pipeline_VITIS_LOOP_128_2_fu_117_activity">
+            <obj_property name="ElementShortName">grp_paralleltostreamwithburst_Pipeline_VITIS_LOOP_128_2_fu_117_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_paralleltostreamwithburst_Pipeline_VITIS_LOOP_128_2_fu_117_activity</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="paralleltostreamwithburst_U0_Input_group">
+            <obj_property name="label">Input Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="paralleltostreamwithburst_U0_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_userdma_top/AESL_inst_userdma/paralleltostreamwithburst_U0/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_userdma_top/AESL_inst_userdma/paralleltostreamwithburst_U0/real_start">
+               <obj_property name="ElementShortName">real_start</obj_property>
+               <obj_property name="ObjectShortName">real_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_userdma_top/AESL_inst_userdma/paralleltostreamwithburst_U0/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_userdma_top/AESL_inst_userdma/paralleltostreamwithburst_U0/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_userdma_top/AESL_inst_userdma/paralleltostreamwithburst_U0/ap_continue">
+               <obj_property name="ElementShortName">ap_continue</obj_property>
+               <obj_property name="ObjectShortName">ap_continue</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="paralleltostreamwithburst_U0_Output_group">
+            <obj_property name="label">Output Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="outbuf_group">
+               <obj_property name="label">outbuf(outbuf_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_userdma_top/AESL_inst_userdma/paralleltostreamwithburst_U0/outbuf_blk_n">
+                  <obj_property name="ElementShortName">outbuf_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">outbuf_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_userdma_top/AESL_inst_userdma/paralleltostreamwithburst_U0/outbuf_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_userdma_top/AESL_inst_userdma/paralleltostreamwithburst_U0/outbuf_full_n">
+                  <obj_property name="ElementShortName">outbuf_full_n</obj_property>
+                  <obj_property name="ObjectShortName">outbuf_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_userdma_top/AESL_inst_userdma/paralleltostreamwithburst_U0/outbuf_write">
+                  <obj_property name="ElementShortName">outbuf_write</obj_property>
+                  <obj_property name="ObjectShortName">outbuf_write</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="grp_paralleltostreamwithburst_Pipeline_VITIS_LOOP_128_2_fu_117_group">
+            <obj_property name="label">grp_paralleltostreamwithburst_Pipeline_VITIS_LOOP_128_2_fu_117</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="grp_paralleltostreamwithburst_Pipeline_VITIS_LOOP_128_2_fu_117_Handshake_group">
+               <obj_property name="label">Block-level handshake</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_userdma_top/AESL_inst_userdma/paralleltostreamwithburst_U0/grp_paralleltostreamwithburst_Pipeline_VITIS_LOOP_128_2_fu_117/ap_start">
+                  <obj_property name="ElementShortName">ap_start</obj_property>
+                  <obj_property name="ObjectShortName">ap_start</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_userdma_top/AESL_inst_userdma/paralleltostreamwithburst_U0/grp_paralleltostreamwithburst_Pipeline_VITIS_LOOP_128_2_fu_117/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_userdma_top/AESL_inst_userdma/paralleltostreamwithburst_U0/grp_paralleltostreamwithburst_Pipeline_VITIS_LOOP_128_2_fu_117/ap_done">
+                  <obj_property name="ElementShortName">ap_done</obj_property>
+                  <obj_property name="ObjectShortName">ap_done</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="sendoutstream_U0_group">
+         <obj_property name="label">sendoutstream_U0</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="sendoutstream_U0_Input_group">
+            <obj_property name="label">Input Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="outbuf_group">
+               <obj_property name="label">outbuf(outbuf_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_userdma_top/AESL_inst_userdma/sendoutstream_U0/outbuf_blk_n">
+                  <obj_property name="ElementShortName">outbuf_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">outbuf_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_userdma_top/AESL_inst_userdma/sendoutstream_U0/outbuf_dout">
+                  <obj_property name="ElementShortName">outbuf_dout[32:0]</obj_property>
+                  <obj_property name="ObjectShortName">outbuf_dout[32:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_userdma_top/AESL_inst_userdma/sendoutstream_U0/outbuf_empty_n">
+                  <obj_property name="ElementShortName">outbuf_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">outbuf_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_userdma_top/AESL_inst_userdma/sendoutstream_U0/outbuf_read">
+                  <obj_property name="ElementShortName">outbuf_read</obj_property>
+                  <obj_property name="ObjectShortName">outbuf_read</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="sendoutstream_U0_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_userdma_top/AESL_inst_userdma/sendoutstream_U0/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_userdma_top/AESL_inst_userdma/sendoutstream_U0/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_userdma_top/AESL_inst_userdma/sendoutstream_U0/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_userdma_top/AESL_inst_userdma/sendoutstream_U0/ap_continue">
+               <obj_property name="ElementShortName">ap_continue</obj_property>
+               <obj_property name="ObjectShortName">ap_continue</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="sendoutstream_U0_Output_group">
+            <obj_property name="label">Output Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+</wave_config>

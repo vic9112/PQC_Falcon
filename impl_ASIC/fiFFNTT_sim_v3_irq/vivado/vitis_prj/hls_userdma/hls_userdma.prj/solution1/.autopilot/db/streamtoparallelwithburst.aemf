@@ -1,0 +1,755 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1717001895044">
+  <ports id="1" name="inbuf" type="PortType" coreId="18" bitwidth="33" iftype="IfTypeRom">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="2" name="incount25" type="PortType" coreName="FIFO_SRL" coreId="251" bitwidth="32" iftype="IfTypeRom">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="3" name="s2m_buf_sts" type="PortType" coreId="2" bitwidth="1" direction="DirOut">
+    <dataInputObjs>write</dataInputObjs>
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <ports id="4" name="kernel_mode" type="PortType" coreName="FIFO_SRL" coreId="54" bitwidth="2" iftype="IfTypeRom">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="5" name="gmem0" type="PortType" coreId="3740072656" bitwidth="64" direction="DirOut" iftype="IfTypeFifo">
+    <dataInputObjs>call</dataInputObjs>
+  </ports>
+  <ports id="6" name="out_memory" type="PortType" coreName="FIFO_SRL" coreId="0" bitwidth="64" iftype="IfTypeRom">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <edges id="71" source_obj="//@ports.5" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="74" source_obj="//@ports.3" sink_obj="//@blocks.0/@node_objs.3"/>
+  <edges id="75" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@blocks.0/@node_objs.4"/>
+  <edges id="78" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@blocks.0/@node_objs.5"/>
+  <edges id="81" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.0/@node_objs.6"/>
+  <edges id="82" source_obj="//@blocks.0/@node_objs.5" sink_obj="//@blocks.0/@node_objs.6"/>
+  <edges id="85" source_obj="//@blocks.0/@node_objs.7" sink_obj="//@ports.2"/>
+  <edges id="90" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@blocks.0/@node_objs.8"/>
+  <edges id="94" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.0/@node_objs.9"/>
+  <edges id="95" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.0/@node_objs.10"/>
+  <edges id="96" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.10"/>
+  <edges id="97" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.0/@node_objs.11"/>
+  <edges id="98" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="99" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="102" source_obj="//@ports.1" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="103" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.1/@node_objs.3"/>
+  <edges id="104" source_obj="//@blocks.1/@node_objs.3" sink_obj="//@blocks.1/@node_objs.4"/>
+  <edges id="107" source_obj="//@blocks.1/@node_objs.4" sink_obj="//@blocks.1/@node_objs.5"/>
+  <edges id="110" source_obj="//@blocks.1/@node_objs.5" sink_obj="//@blocks.1/@node_objs.6"/>
+  <edges id="113" source_obj="//@blocks.1/@node_objs.4" sink_obj="//@blocks.1/@node_objs.7"/>
+  <edges id="116" source_obj="//@blocks.1/@node_objs.3" sink_obj="//@blocks.1/@node_objs.8"/>
+  <edges id="118" source_obj="//@blocks.1/@node_objs.8" sink_obj="//@blocks.1/@node_objs.9"/>
+  <edges id="120" source_obj="//@blocks.1/@node_objs.3" sink_obj="//@blocks.1/@node_objs.10"/>
+  <edges id="126" source_obj="//@blocks.1/@node_objs.2" sink_obj="//@blocks.1/@node_objs.12"/>
+  <edges id="127" source_obj="//@blocks.0/@node_objs.6" sink_obj="//@blocks.1/@node_objs.12"/>
+  <edges id="128" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.1/@node_objs.12"/>
+  <edges id="129" source_obj="//@blocks.1/@node_objs.7" sink_obj="//@blocks.1/@node_objs.12"/>
+  <edges id="130" source_obj="//@blocks.1/@node_objs.12" sink_obj="//@ports.4"/>
+  <edges id="131" source_obj="//@blocks.1/@node_objs.6" sink_obj="//@blocks.1/@node_objs.12"/>
+  <edges id="132" source_obj="//@ports.0" sink_obj="//@blocks.1/@node_objs.12"/>
+  <edges id="133" source_obj="//@blocks.1/@node_objs.10" sink_obj="//@blocks.1/@node_objs.12"/>
+  <edges id="134" source_obj="//@blocks.1/@node_objs.9" sink_obj="//@blocks.1/@node_objs.12"/>
+  <edges id="137" source_obj="//@blocks.1/@node_objs.2" sink_obj="//@blocks.1/@node_objs.13"/>
+  <edges id="141" source_obj="//@blocks.1/@node_objs.2" sink_obj="//@blocks.1/@node_objs.14"/>
+  <edges id="144" source_obj="//@blocks.1/@node_objs.14" sink_obj="//@blocks.1/@node_objs.15"/>
+  <edges id="147" source_obj="//@blocks.1/@node_objs.15" sink_obj="//@blocks.1/@node_objs.16"/>
+  <edges id="149" source_obj="//@blocks.1/@node_objs.16" sink_obj="//@blocks.1/@node_objs.17"/>
+  <edges id="151" source_obj="//@blocks.1/@node_objs.2" sink_obj="//@blocks.1/@node_objs.18"/>
+  <edges id="154" source_obj="//@blocks.1/@node_objs.18" sink_obj="//@blocks.1/@node_objs.19"/>
+  <edges id="155" source_obj="//@blocks.1/@node_objs.13" sink_obj="//@blocks.1/@node_objs.20"/>
+  <edges id="156" source_obj="//@blocks.1/@node_objs.17" sink_obj="//@blocks.1/@node_objs.20"/>
+  <edges id="157" source_obj="//@blocks.1/@node_objs.19" sink_obj="//@blocks.1/@node_objs.20"/>
+  <edges id="158" source_obj="//@blocks.0/@node_objs.8" sink_obj="//@blocks.1/@node_objs.21"/>
+  <edges id="159" source_obj="//@blocks.1/@node_objs.2" sink_obj="//@blocks.1/@node_objs.21"/>
+  <edges id="160" source_obj="//@blocks.1/@node_objs.20" sink_obj="//@blocks.1/@node_objs.21"/>
+  <edges id="163" source_obj="//@blocks.1/@node_objs.21" sink_obj="//@blocks.1/@node_objs.22"/>
+  <edges id="165" source_obj="//@blocks.1/@node_objs.22" sink_obj="//@blocks.1/@node_objs.23"/>
+  <edges id="166" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.1/@node_objs.24"/>
+  <edges id="167" source_obj="//@blocks.1/@node_objs.23" sink_obj="//@blocks.1/@node_objs.24"/>
+  <edges id="168" source_obj="//@blocks.1/@node_objs.21" sink_obj="//@blocks.1/@node_objs.25"/>
+  <edges id="169" source_obj="//@blocks.1/@node_objs.1" sink_obj="//@blocks.1/@node_objs.25"/>
+  <edges id="170" source_obj="//@blocks.1/@node_objs.25" sink_obj="//@blocks.1/@node_objs.26"/>
+  <edges id="173" source_obj="//@blocks.1/@node_objs.24" sink_obj="//@blocks.1/@node_objs.27"/>
+  <edges id="176" source_obj="//@blocks.1/@node_objs.26" sink_obj="//@blocks.1/@node_objs.28"/>
+  <edges id="177" source_obj="//@blocks.1/@node_objs.27" sink_obj="//@blocks.1/@node_objs.28"/>
+  <edges id="178" source_obj="//@blocks.1/@node_objs.24" sink_obj="//@blocks.1/@node_objs.28"/>
+  <edges id="181" source_obj="//@blocks.1/@node_objs.25" sink_obj="//@blocks.1/@node_objs.29"/>
+  <edges id="185" source_obj="//@blocks.1/@node_objs.29" sink_obj="//@blocks.1/@node_objs.30"/>
+  <edges id="188" source_obj="//@blocks.1/@node_objs.30" sink_obj="//@blocks.1/@node_objs.31"/>
+  <edges id="189" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@blocks.1/@node_objs.31"/>
+  <edges id="190" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.1/@node_objs.31"/>
+  <edges id="191" source_obj="//@blocks.1/@node_objs.25" sink_obj="//@blocks.2/@node_objs.0"/>
+  <edges id="192" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.2/@node_objs.0"/>
+  <edges id="193" source_obj="//@blocks.1/@node_objs.28" sink_obj="//@blocks.2/@node_objs.1"/>
+  <edges id="194" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.2/@node_objs.1"/>
+  <edges id="195" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.2/@node_objs.2"/>
+  <edges id="197" source_obj="//@blocks.3/@node_objs.0" sink_obj="//@ports.2"/>
+  <edges id="312" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@blocks.1"/>
+  <edges id="313" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.2"/>
+  <edges id="314" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.3"/>
+  <edges id="315" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.1" is_back_edge="1"/>
+  <edges id="316" edge_type="VirtEdge" source_obj="//@blocks.1/@node_objs.2" sink_obj="//@blocks.1/@node_objs.11"/>
+  <edges id="317" edge_type="VirtEdge" source_obj="//@blocks.1/@node_objs.11" sink_obj="//@blocks.1/@node_objs.12"/>
+  <edges id="318" edge_type="VirtEdge" source_obj="//@blocks.1/@node_objs.11" sink_obj="//@blocks.3/@node_objs.0"/>
+  <edges id="319" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.9" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="320" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.10" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="321" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.9" sink_obj="//@blocks.2/@node_objs.0"/>
+  <edges id="322" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.10" sink_obj="//@blocks.2/@node_objs.1"/>
+  <edges id="323" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.7" sink_obj="//@blocks.3/@node_objs.0"/>
+  <edges id="324" edge_type="VirtEdge" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.2/@node_objs.1"/>
+  <edges id="325" edge_type="VirtEdge" source_obj="//@blocks.1/@node_objs.1" sink_obj="//@blocks.2/@node_objs.0"/>
+  <blocks id="24" name="entry" type="BlockType">
+    <controlOutputObjs>VITIS_LOOP_25_2</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="7" name="out_memory_assign" originalName="out_memory" coreId="651" bitwidth="64" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="8" name="final_s2m_len_V" originalName="final_s2m_len.V" coreId="9" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="10" name="out_memory_read" coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" bitwidth="64" opcode="read" m_display="0" m_delay="3.63" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <dataInputObjs>out_memory</dataInputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="12" name="kernel_mode_read" coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" bitwidth="2" opcode="read" m_display="0" m_delay="3.63" m_topoIndex="4" m_clusterGroupNumber="-1">
+      <dataInputObjs>kernel_mode</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>bitselect</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="16" name="icmp_ln1065" lineNumber="1065" fileName="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="icmp_ln1065_fu_144_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="operator_eq_32_true" bitwidth="1" opcode="icmp" m_display="0" m_delay="0.95" m_topoIndex="5" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_base.h" linenumber="1065" fileDirectory="/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma" functionName="operator==&amp;lt;32, true&amp;gt;"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>or</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="17" name="icmp_ln1065_1" lineNumber="1065" fileName="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="icmp_ln1065_1_fu_150_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="operator_eq_32_true" bitwidth="1" opcode="icmp" m_display="0" m_delay="0.95" m_topoIndex="6" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_base.h" linenumber="1065" fileDirectory="/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma" functionName="operator==&amp;lt;32, true&amp;gt;"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>or</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="18" name="even" lineNumber="17" originalName="even" fileName="userdma.cpp" fileDirectory=".." rtlName="even_fu_156_p2" coreName="LogicGate" implIndex="auto" control="no" opType="or" coreId="74" contextFuncName="streamtoparallelwithburst" bitwidth="1" opcode="or" m_display="0" m_delay="0.97" m_topoIndex="7" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="userdma.cpp" linenumber="17" fileDirectory="/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma" functionName="streamtoparallelwithburst"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="19" name="s2m_buf_sts_write_ln19" lineNumber="19" fileName="userdma.cpp" fileDirectory=".." coreId="3741913136" contextFuncName="streamtoparallelwithburst" opcode="write" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="userdma.cpp" linenumber="19" fileDirectory="/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma" functionName="streamtoparallelwithburst"/>
+      <dataOutputObjs>s2m_buf_sts</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="20" name="tmp" lineNumber="38" fileName="userdma.cpp" fileDirectory=".." rtlName="tmp_reg_374" coreId="0" contextFuncName="streamtoparallelwithburst" bitwidth="1" opcode="bitselect" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="userdma.cpp" linenumber="38" fileDirectory="/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma" functionName="streamtoparallelwithburst"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="21" name="final_s2m_len_V_write_ln21" lineNumber="21" fileName="userdma.cpp" fileDirectory=".." coreId="3741924688" contextFuncName="streamtoparallelwithburst" opcode="store" m_display="0" m_delay="1.58" m_topoIndex="10" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="userdma.cpp" linenumber="21" fileDirectory="/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma" functionName="streamtoparallelwithburst"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="22" name="out_memory_assign_write_ln21" lineNumber="21" fileName="userdma.cpp" fileDirectory=".." coreId="0" contextFuncName="streamtoparallelwithburst" opcode="store" m_display="0" m_delay="1.58" m_topoIndex="11" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="userdma.cpp" linenumber="21" fileDirectory="/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma" functionName="streamtoparallelwithburst"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="23" name="br_ln21" lineNumber="21" fileName="userdma.cpp" fileDirectory=".." coreId="0" contextFuncName="streamtoparallelwithburst" opcode="br" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="userdma.cpp" linenumber="21" fileDirectory="/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma" functionName="streamtoparallelwithburst"/>
+      <controlInputObjs>VITIS_LOOP_25_2</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_base.h">
+      <validLinenumbers>1065</validLinenumbers>
+    </fileValidLineNumbers>
+    <fileValidLineNumbers fileName="userdma.cpp">
+      <validLinenumbers>17</validLinenumbers>
+      <validLinenumbers>19</validLinenumbers>
+      <validLinenumbers>38</validLinenumbers>
+      <validLinenumbers>21</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="58" name="VITIS_LOOP_25_2" type="BlockType">
+    <controlInputObjs>entry</controlInputObjs>
+    <controlInputObjs>VITIS_LOOP_25_2.VITIS_LOOP_25_2_crit_edge</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>VITIS_LOOP_25_2.VITIS_LOOP_25_2_crit_edge</controlOutputObjs>
+    <controlOutputObjs>do.end</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="25" name="out_memory_assign_load" lineNumber="30" originalName="out_memory" fileName="userdma.cpp" fileDirectory=".." coreId="0" contextFuncName="streamtoparallelwithburst" bitwidth="64" opcode="load" nodeLabel="1.0" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="userdma.cpp" linenumber="30" fileDirectory="/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma" functionName="streamtoparallelwithburst"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>trunc</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="26" name="final_s2m_len_V_2" lineNumber="14" originalName="final_s2m_len.V" fileName="userdma.cpp" fileDirectory=".." coreId="3742051968" contextFuncName="streamtoparallelwithburst" bitwidth="32" opcode="load" nodeLabel="2.0" m_display="0" m_topoIndex="23" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="userdma.cpp" linenumber="14" fileDirectory="/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma" functionName="streamtoparallelwithburst"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="28" name="tmp_4" lineNumber="145" originalName="tmp" fileName="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" contextFuncName="read" bitwidth="32" opcode="read" nodeLabel="1.0" m_display="0" m_delay="3.63" m_topoIndex="14" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h" linenumber="145" fileDirectory="/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma" functionName="read"/>
+      <dataInputObjs>incount25</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>bitselect</dataOutputObjs>
+      <dataOutputObjs>sub</dataOutputObjs>
+      <dataOutputObjs>partselect</dataOutputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="29" name="trunc_ln30" lineNumber="30" fileName="userdma.cpp" fileDirectory=".." rtlName="trunc_ln30_fu_183_p1" coreId="0" contextFuncName="streamtoparallelwithburst" bitwidth="3" opcode="trunc" nodeLabel="1.0" m_display="0" m_topoIndex="15" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="userdma.cpp" linenumber="30" fileDirectory="/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma" functionName="streamtoparallelwithburst"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>xor</dataOutputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+      <dataOutputObjs>bitconcatenate</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="30" name="xor_ln30" lineNumber="30" fileName="userdma.cpp" fileDirectory=".." rtlName="xor_ln30_fu_187_p2" coreName="LogicGate" implIndex="auto" control="no" opType="xor" coreId="74" contextFuncName="streamtoparallelwithburst" bitwidth="3" opcode="xor" nodeLabel="1.0" m_display="0" m_delay="0.96" m_topoIndex="16" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="userdma.cpp" linenumber="30" fileDirectory="/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma" functionName="streamtoparallelwithburst"/>
+      <dataInputObjs>trunc</dataInputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+      <dataOutputObjs>bitconcatenate</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="31" name="zext_ln30" lineNumber="30" fileName="userdma.cpp" fileDirectory=".." rtlName="zext_ln30_fu_193_p1" coreId="0" contextFuncName="streamtoparallelwithburst" bitwidth="8" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="userdma.cpp" linenumber="30" fileDirectory="/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma" functionName="streamtoparallelwithburst"/>
+      <dataInputObjs>xor</dataInputObjs>
+      <dataOutputObjs>shl</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="32" name="shl_ln30" lineNumber="30" fileName="userdma.cpp" fileDirectory=".." rtlName="shl_ln30_fu_197_p2" coreName="Shifter" implIndex="auto_pipe" control="no" opType="shl" coreId="75" contextFuncName="streamtoparallelwithburst" bitwidth="8" opcode="shl" nodeLabel="1.0" m_display="0" m_delay="2.66" m_topoIndex="18" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="userdma.cpp" linenumber="30" fileDirectory="/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma" functionName="streamtoparallelwithburst"/>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="33" name="shl_ln30_2" lineNumber="30" fileName="userdma.cpp" fileDirectory=".." rtlName="shl_ln30_2_fu_232_p3" coreId="0" contextFuncName="streamtoparallelwithburst" bitwidth="6" opcode="bitconcatenate" nodeLabel="2.0" m_display="0" m_topoIndex="24" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="userdma.cpp" linenumber="30" fileDirectory="/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma" functionName="streamtoparallelwithburst"/>
+      <dataInputObjs>xor</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="34" name="zext_ln32" lineNumber="32" fileName="userdma.cpp" fileDirectory=".." rtlName="zext_ln32_fu_203_p1" coreId="3741717736" contextFuncName="streamtoparallelwithburst" bitwidth="8" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="19" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="userdma.cpp" linenumber="32" fileDirectory="/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma" functionName="streamtoparallelwithburst"/>
+      <dataInputObjs>trunc</dataInputObjs>
+      <dataOutputObjs>shl</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="35" name="shl_ln32" lineNumber="32" fileName="userdma.cpp" fileDirectory=".." rtlName="shl_ln32_fu_207_p2" coreName="Shifter" implIndex="auto_pipe" control="no" opType="shl" coreId="75" contextFuncName="streamtoparallelwithburst" bitwidth="8" opcode="shl" nodeLabel="1.0" m_display="0" m_delay="2.66" m_topoIndex="20" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="userdma.cpp" linenumber="32" fileDirectory="/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma" functionName="streamtoparallelwithburst"/>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="36" name="shl_ln32_2" lineNumber="32" fileName="userdma.cpp" fileDirectory=".." rtlName="shl_ln32_2_fu_240_p3" coreId="2020173413" contextFuncName="streamtoparallelwithburst" bitwidth="6" opcode="bitconcatenate" nodeLabel="2.0" m_display="0" m_topoIndex="25" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="userdma.cpp" linenumber="32" fileDirectory="/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma" functionName="streamtoparallelwithburst"/>
+      <dataInputObjs>trunc</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="37" name="empty" coreId="3741726688" bitwidth="32" opcode="wait" nodeLabel="2.0" m_display="0" m_topoIndex="26" m_clusterGroupNumber="-1"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="38" name="_ln145" lineNumber="145" fileName="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." rtlName="grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129" coreId="3548563830" contextFuncName="read" opcode="call" nodeLabel="2.0" nodeLatency="1" m_display="0" m_delay="4.06" m_topoIndex="27" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h" linenumber="145" fileDirectory="/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma" functionName="read"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataInputObjs>or</dataInputObjs>
+      <dataInputObjs>load</dataInputObjs>
+      <dataInputObjs>bitconcatenate</dataInputObjs>
+      <dataInputObjs>shl</dataInputObjs>
+      <dataInputObjs>inbuf</dataInputObjs>
+      <dataInputObjs>bitconcatenate</dataInputObjs>
+      <dataInputObjs>shl</dataInputObjs>
+      <dataOutputObjs>gmem0</dataOutputObjs>
+      <constName>streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="39" name="tmp_2" lineNumber="39" fileName="userdma.cpp" fileDirectory=".." rtlName="tmp_2_fu_248_p3" coreId="3741727536" contextFuncName="streamtoparallelwithburst" bitwidth="1" opcode="bitselect" nodeLabel="2.0" m_display="0" m_topoIndex="28" m_clusterGroupNumber="1">
+      <inlineStackInfo fileName="userdma.cpp" linenumber="39" fileDirectory="/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma" functionName="streamtoparallelwithburst"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="40" name="sub_ln39" lineNumber="39" fileName="userdma.cpp" fileDirectory=".." rtlName="sub_ln39_fu_213_p2" coreName="Adder" implIndex="fabric" control="no" opType="sub" coreId="1" contextFuncName="streamtoparallelwithburst" bitwidth="32" opcode="sub" nodeLabel="1.0" m_display="0" m_delay="2.55" m_topoIndex="21" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="userdma.cpp" linenumber="39" fileDirectory="/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma" functionName="streamtoparallelwithburst"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>partselect</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="41" name="lshr_ln39_1" lineNumber="39" fileName="userdma.cpp" fileDirectory=".." rtlName="lshr_ln39_1_reg_410" coreId="0" contextFuncName="streamtoparallelwithburst" bitwidth="31" opcode="partselect" nodeLabel="1.0" m_display="0" m_topoIndex="22" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="userdma.cpp" linenumber="39" fileDirectory="/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma" functionName="streamtoparallelwithburst"/>
+      <dataInputObjs>sub</dataInputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="42" name="zext_ln39" lineNumber="39" fileName="userdma.cpp" fileDirectory=".." rtlName="zext_ln39_fu_255_p1" coreId="0" contextFuncName="streamtoparallelwithburst" bitwidth="32" opcode="zext" nodeLabel="2.0" m_display="0" m_topoIndex="29" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="userdma.cpp" linenumber="39" fileDirectory="/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma" functionName="streamtoparallelwithburst"/>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataOutputObjs>sub</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="43" name="sub_ln39_1" lineNumber="39" fileName="userdma.cpp" fileDirectory=".." rtlName="sub_ln39_1_fu_258_p2" coreName="Adder" implIndex="fabric" control="no" opType="sub" coreId="1" contextFuncName="streamtoparallelwithburst" bitwidth="32" opcode="sub" nodeLabel="2.0" m_display="0" m_delay="2.52" m_topoIndex="30" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="userdma.cpp" linenumber="39" fileDirectory="/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma" functionName="streamtoparallelwithburst"/>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="44" name="lshr_ln39_2" lineNumber="39" fileName="userdma.cpp" fileDirectory=".." rtlName="lshr_ln39_2_fu_264_p4" coreId="0" contextFuncName="streamtoparallelwithburst" bitwidth="31" opcode="partselect" nodeLabel="2.0" m_display="0" m_topoIndex="31" m_clusterGroupNumber="1">
+      <inlineStackInfo fileName="userdma.cpp" linenumber="39" fileDirectory="/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma" functionName="streamtoparallelwithburst"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="45" name="zext_ln39_1" lineNumber="39" fileName="userdma.cpp" fileDirectory=".." rtlName="zext_ln39_1_fu_273_p1" coreId="128" contextFuncName="streamtoparallelwithburst" bitwidth="32" opcode="zext" nodeLabel="2.0" m_display="0" m_topoIndex="32" m_clusterGroupNumber="1">
+      <inlineStackInfo fileName="userdma.cpp" linenumber="39" fileDirectory="/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma" functionName="streamtoparallelwithburst"/>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="46" name="select_ln39" lineNumber="39" fileName="userdma.cpp" fileDirectory=".." rtlName="select_ln39_fu_277_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="streamtoparallelwithburst" bitwidth="32" opcode="select" nodeLabel="2.0" m_display="0" m_topoIndex="33" m_clusterGroupNumber="1">
+      <inlineStackInfo fileName="userdma.cpp" linenumber="39" fileDirectory="/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma" functionName="streamtoparallelwithburst"/>
+      <dataInputObjs>bitselect</dataInputObjs>
+      <dataInputObjs>sub</dataInputObjs>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="47" name="select_ln38" lineNumber="38" fileName="userdma.cpp" fileDirectory=".." rtlName="select_ln38_fu_285_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="streamtoparallelwithburst" bitwidth="32" opcode="select" nodeLabel="2.0" m_display="0" m_delay="0.69" m_topoIndex="34" m_clusterGroupNumber="1">
+      <inlineStackInfo fileName="userdma.cpp" linenumber="38" fileDirectory="/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma" functionName="streamtoparallelwithburst"/>
+      <dataInputObjs>bitselect</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataInputObjs>select</dataInputObjs>
+      <dataOutputObjs>bitconcatenate</dataOutputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="48" name="shl_ln" lineNumber="42" fileName="userdma.cpp" fileDirectory=".." rtlName="shl_ln_fu_291_p3" coreId="3741761248" contextFuncName="streamtoparallelwithburst" bitwidth="35" opcode="bitconcatenate" nodeLabel="2.0" m_display="0" m_topoIndex="35" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="userdma.cpp" linenumber="42" fileDirectory="/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma" functionName="streamtoparallelwithburst"/>
+      <dataInputObjs>select</dataInputObjs>
+      <dataOutputObjs>sext</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="49" name="sext_ln9" lineNumber="9" fileName="userdma.cpp" fileDirectory=".." rtlName="sext_ln9_fu_299_p1" coreId="4294967295" contextFuncName="streamtoparallelwithburst" bitwidth="64" opcode="sext" nodeLabel="2.0" m_display="0" m_topoIndex="36" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="userdma.cpp" linenumber="9" fileDirectory="/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma" functionName="streamtoparallelwithburst"/>
+      <dataInputObjs>bitconcatenate</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="50" name="add_ln9" lineNumber="9" originalName="out_memory" fileName="userdma.cpp" fileDirectory=".." rtlName="add_ln9_fu_303_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="streamtoparallelwithburst" bitwidth="64" opcode="add" nodeLabel="2.0" m_display="0" m_delay="3.52" m_topoIndex="37" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="userdma.cpp" linenumber="9" fileDirectory="/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma" functionName="streamtoparallelwithburst"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataInputObjs>sext</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="51" name="final_s2m_len_V_3" lineNumber="14" originalName="final_s2m_len.V" fileName="userdma.cpp" fileDirectory=".." rtlName="final_s2m_len_V_3_fu_308_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="streamtoparallelwithburst" bitwidth="32" opcode="add" nodeLabel="2.0" m_display="0" m_delay="2.55" m_topoIndex="38" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="userdma.cpp" linenumber="14" fileDirectory="/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma" functionName="streamtoparallelwithburst"/>
+      <dataInputObjs>select</dataInputObjs>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>partselect</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="52" name="icmp_ln1065_2" lineNumber="1065" fileName="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="icmp_ln1065_2_fu_324_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="operator_eq_32_true" bitwidth="1" opcode="icmp" nodeLabel="3.0" m_display="0" m_delay="2.47" m_topoIndex="40" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_base.h" linenumber="1065" fileDirectory="/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma" functionName="operator==&amp;lt;32, true&amp;gt;"/>
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="53" name="add_ln47" lineNumber="47" fileName="userdma.cpp" fileDirectory=".." rtlName="add_ln47_fu_329_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="streamtoparallelwithburst" bitwidth="64" opcode="add" nodeLabel="3.0" m_display="0" m_delay="3.52" m_topoIndex="41" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="userdma.cpp" linenumber="47" fileDirectory="/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma" functionName="streamtoparallelwithburst"/>
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="54" name="select_ln46" lineNumber="46" originalName="out_memory" fileName="userdma.cpp" fileDirectory=".." rtlName="select_ln46_fu_334_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="streamtoparallelwithburst" bitwidth="64" opcode="select" nodeLabel="3.0" m_display="0" m_delay="1.48" m_topoIndex="42" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="userdma.cpp" linenumber="46" fileDirectory="/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma" functionName="streamtoparallelwithburst"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataInputObjs>add</dataInputObjs>
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="55" name="tmp_3" lineNumber="1073" fileName="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="tmp_3_reg_437" coreId="3742069184" contextFuncName="operator_lt_32_false" bitwidth="22" opcode="partselect" nodeLabel="2.0" m_display="0" m_topoIndex="39" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_base.h" linenumber="1073" fileDirectory="/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma" functionName="operator&amp;lt;&amp;lt;32, false&amp;gt;"/>
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="56" name="icmp_ln1073" lineNumber="1073" fileName="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="icmp_ln1073_fu_341_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="operator_lt_32_false" bitwidth="1" opcode="icmp" nodeLabel="3.0" m_display="0" m_delay="2.44" m_topoIndex="43" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_base.h" linenumber="1073" fileDirectory="/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma" functionName="operator&amp;lt;&amp;lt;32, false&amp;gt;"/>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataOutputObjs>br</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="57" name="br_ln49" lineNumber="49" fileName="userdma.cpp" fileDirectory=".." coreId="3742071696" contextFuncName="streamtoparallelwithburst" opcode="br" nodeLabel="3.0" m_display="0" m_topoIndex="44" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="userdma.cpp" linenumber="49" fileDirectory="/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma" functionName="streamtoparallelwithburst"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <controlInputObjs>do.end</controlInputObjs>
+      <controlInputObjs>VITIS_LOOP_25_2.VITIS_LOOP_25_2_crit_edge</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h">
+      <validLinenumbers>145</validLinenumbers>
+    </fileValidLineNumbers>
+    <fileValidLineNumbers fileName="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_base.h">
+      <validLinenumbers>1065</validLinenumbers>
+      <validLinenumbers>1073</validLinenumbers>
+    </fileValidLineNumbers>
+    <fileValidLineNumbers fileName="userdma.cpp">
+      <validLinenumbers>30</validLinenumbers>
+      <validLinenumbers>14</validLinenumbers>
+      <validLinenumbers>32</validLinenumbers>
+      <validLinenumbers>39</validLinenumbers>
+      <validLinenumbers>38</validLinenumbers>
+      <validLinenumbers>42</validLinenumbers>
+      <validLinenumbers>9</validLinenumbers>
+      <validLinenumbers>47</validLinenumbers>
+      <validLinenumbers>46</validLinenumbers>
+      <validLinenumbers>49</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="62" name="VITIS_LOOP_25_2.VITIS_LOOP_25_2_crit_edge" type="BlockType">
+    <controlInputObjs>VITIS_LOOP_25_2</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>VITIS_LOOP_25_2</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="59" name="final_s2m_len_V_write_ln49" lineNumber="49" fileName="userdma.cpp" fileDirectory=".." coreId="3742057424" contextFuncName="streamtoparallelwithburst" opcode="store" nodeLabel="3.0" m_display="0" m_delay="1.58" m_topoIndex="45" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="userdma.cpp" linenumber="49" fileDirectory="/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma" functionName="streamtoparallelwithburst"/>
+      <dataInputObjs>add</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="60" name="out_memory_assign_write_ln49" lineNumber="49" fileName="userdma.cpp" fileDirectory=".." coreId="0" contextFuncName="streamtoparallelwithburst" opcode="store" nodeLabel="3.0" m_display="0" m_delay="1.58" m_topoIndex="46" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="userdma.cpp" linenumber="49" fileDirectory="/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma" functionName="streamtoparallelwithburst"/>
+      <dataInputObjs>select</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="61" name="br_ln49" lineNumber="49" fileName="userdma.cpp" fileDirectory=".." coreId="0" contextFuncName="streamtoparallelwithburst" opcode="br" nodeLabel="3.0" m_display="0" m_topoIndex="47" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="userdma.cpp" linenumber="49" fileDirectory="/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma" functionName="streamtoparallelwithburst"/>
+      <controlInputObjs>VITIS_LOOP_25_2</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="userdma.cpp">
+      <validLinenumbers>49</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="65" name="do.end" type="BlockType">
+    <controlInputObjs>VITIS_LOOP_25_2</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="63" name="s2m_buf_sts_write_ln51" lineNumber="51" fileName="userdma.cpp" fileDirectory=".." coreId="3742064248" contextFuncName="streamtoparallelwithburst" opcode="write" nodeLabel="3.0" m_display="0" m_topoIndex="48" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="userdma.cpp" linenumber="51" fileDirectory="/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma" functionName="streamtoparallelwithburst"/>
+      <dataOutputObjs>s2m_buf_sts</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="64" name="_ln53" lineNumber="53" fileName="userdma.cpp" fileDirectory=".." coreId="0" contextFuncName="streamtoparallelwithburst" opcode="ret" nodeLabel="3.0" m_display="0" m_topoIndex="49" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="userdma.cpp" linenumber="53" fileDirectory="/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma" functionName="streamtoparallelwithburst"/>
+    </node_objs>
+    <fileValidLineNumbers fileName="userdma.cpp">
+      <validLinenumbers>51</validLinenumbers>
+      <validLinenumbers>53</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <ScheduleInfo time="0"/>
+  <ScheduleInfo time="1"/>
+  <ScheduleInfo time="2"/>
+  <ScheduleInfo time="3"/>
+  <regnodes realName="tmp_reg_374">
+    <nodeIds>20</nodeIds>
+  </regnodes>
+  <regnodes realName="shl_ln30_2_reg_415">
+    <nodeIds>33</nodeIds>
+  </regnodes>
+  <regnodes realName="out_memory_assign_reg_355">
+    <nodeIds>7</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_3_reg_437">
+    <nodeIds>55</nodeIds>
+  </regnodes>
+  <regnodes realName="add_ln9_reg_425">
+    <nodeIds>50</nodeIds>
+  </regnodes>
+  <regnodes realName="lshr_ln39_1_reg_410">
+    <nodeIds>41</nodeIds>
+  </regnodes>
+  <regnodes realName="even_reg_369">
+    <nodeIds>18</nodeIds>
+  </regnodes>
+  <regnodes realName="final_s2m_len_V_reg_362">
+    <nodeIds>8</nodeIds>
+  </regnodes>
+  <regnodes realName="shl_ln32_reg_405">
+    <nodeIds>35</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_4_reg_382">
+    <nodeIds>28</nodeIds>
+  </regnodes>
+  <regnodes realName="xor_ln30_reg_395">
+    <nodeIds>30</nodeIds>
+  </regnodes>
+  <regnodes realName="final_s2m_len_V_3_reg_431">
+    <nodeIds>51</nodeIds>
+  </regnodes>
+  <regnodes realName="shl_ln32_2_reg_420">
+    <nodeIds>36</nodeIds>
+  </regnodes>
+  <regnodes realName="trunc_ln30_reg_390">
+    <nodeIds>29</nodeIds>
+  </regnodes>
+  <regnodes realName="shl_ln30_reg_400">
+    <nodeIds>32</nodeIds>
+  </regnodes>
+  <expressionNodes realName="icmp_ln1065_fu_144">
+    <nodeIds>16</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln1073_fu_341">
+    <nodeIds>56</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="shl_ln32_fu_207">
+    <nodeIds>35</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sext_ln9_fu_299">
+    <nodeIds>49</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln39_fu_255">
+    <nodeIds>42</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="final_s2m_len_V_fu_98">
+    <nodeIds>8</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln1065_1_fu_150">
+    <nodeIds>17</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_3_fu_314">
+    <nodeIds>55</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln39_1_fu_273">
+    <nodeIds>45</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sub_ln39_1_fu_258">
+    <nodeIds>43</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="shl_ln_fu_291">
+    <nodeIds>48</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln30_fu_183">
+    <nodeIds>29</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln32_fu_203">
+    <nodeIds>34</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln38_fu_285">
+    <nodeIds>47</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="even_fu_156">
+    <nodeIds>18</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_2_fu_248">
+    <nodeIds>39</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="lshr_ln39_2_fu_264">
+    <nodeIds>44</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="shl_ln30_fu_197">
+    <nodeIds>32</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln47_fu_329">
+    <nodeIds>53</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="shl_ln32_2_fu_240">
+    <nodeIds>36</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_fu_162">
+    <nodeIds>20</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln1065_2_fu_324">
+    <nodeIds>52</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="out_memory_assign_fu_94">
+    <nodeIds>7</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln9_fu_303">
+    <nodeIds>50</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sub_ln39_fu_213">
+    <nodeIds>40</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln39_fu_277">
+    <nodeIds>46</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="xor_ln30_fu_187">
+    <nodeIds>30</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln30_fu_193">
+    <nodeIds>31</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="final_s2m_len_V_3_fu_308">
+    <nodeIds>51</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="shl_ln30_2_fu_232">
+    <nodeIds>33</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="lshr_ln39_1_fu_219">
+    <nodeIds>41</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln46_fu_334">
+    <nodeIds>54</nodeIds>
+  </expressionNodes>
+  <moduleNodes realName="grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129">
+    <nodeIds>38</nodeIds>
+  </moduleNodes>
+  <ioNodes realName="out_memory_assign_load_load_fu_180">
+    <nodeIds>25</nodeIds>
+  </ioNodes>
+  <ioNodes realName="grp_write_fu_114">
+    <nodeIds>19</nodeIds>
+    <nodeIds>63</nodeIds>
+  </ioNodes>
+  <ioNodes realName="out_memory_read_read_fu_102">
+    <nodeIds>10</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln49_store_fu_346">
+    <nodeIds>59</nodeIds>
+  </ioNodes>
+  <ioNodes realName="final_s2m_len_V_2_load_fu_229">
+    <nodeIds>26</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln21_store_fu_175">
+    <nodeIds>22</nodeIds>
+  </ioNodes>
+  <ioNodes realName="kernel_mode_read_read_fu_108">
+    <nodeIds>12</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln21_store_fu_170">
+    <nodeIds>21</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln49_store_fu_350">
+    <nodeIds>60</nodeIds>
+  </ioNodes>
+  <ioNodes realName="tmp_4_read_fu_122">
+    <nodeIds>28</nodeIds>
+  </ioNodes>
+  <ioPorts name="gmem0">
+    <contents name="call">
+      <nodeIds>38</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="inbuf">
+    <contents name="call">
+      <nodeIds>38</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="incount25">
+    <contents name="read">
+      <nodeIds>28</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="kernel_mode">
+    <contents name="read">
+      <nodeIds>12</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="out_memory">
+    <contents name="read">
+      <nodeIds>10</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="s2m_buf_sts">
+    <contents name="write">
+      <nodeIds>19</nodeIds>
+      <nodeIds>63</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="7" stage="1" latency="1"/>
+      <operations id="8" stage="1" latency="1"/>
+      <operations id="9" stage="1" latency="1"/>
+      <operations id="10" stage="1" latency="1"/>
+      <operations id="11" stage="1" latency="1"/>
+      <operations id="12" stage="1" latency="1"/>
+      <operations id="13" stage="1" latency="1"/>
+      <operations id="14" stage="1" latency="1"/>
+      <operations id="15" stage="1" latency="1"/>
+      <operations id="16" stage="1" latency="1"/>
+      <operations id="17" stage="1" latency="1"/>
+      <operations id="18" stage="1" latency="1"/>
+      <operations id="19" stage="1" latency="1"/>
+      <operations id="20" stage="1" latency="1"/>
+      <operations id="21" stage="1" latency="1"/>
+      <operations id="22" stage="1" latency="1"/>
+      <operations id="23" stage="1" latency="1"/>
+    </states>
+    <states id="2">
+      <operations id="25" stage="1" latency="1"/>
+      <operations id="28" stage="1" latency="1"/>
+      <operations id="29" stage="1" latency="1"/>
+      <operations id="30" stage="1" latency="1"/>
+      <operations id="31" stage="1" latency="1"/>
+      <operations id="32" stage="1" latency="1"/>
+      <operations id="34" stage="1" latency="1"/>
+      <operations id="35" stage="1" latency="1"/>
+      <operations id="40" stage="1" latency="1"/>
+      <operations id="41" stage="1" latency="1"/>
+    </states>
+    <states id="3">
+      <operations id="26" stage="1" latency="1"/>
+      <operations id="33" stage="1" latency="1"/>
+      <operations id="36" stage="1" latency="1"/>
+      <operations id="37" stage="1" latency="1"/>
+      <operations id="38" stage="2" latency="2"/>
+      <operations id="39" stage="1" latency="1"/>
+      <operations id="42" stage="1" latency="1"/>
+      <operations id="43" stage="1" latency="1"/>
+      <operations id="44" stage="1" latency="1"/>
+      <operations id="45" stage="1" latency="1"/>
+      <operations id="46" stage="1" latency="1"/>
+      <operations id="47" stage="1" latency="1"/>
+      <operations id="48" stage="1" latency="1"/>
+      <operations id="49" stage="1" latency="1"/>
+      <operations id="50" stage="1" latency="1"/>
+      <operations id="51" stage="1" latency="1"/>
+      <operations id="55" stage="1" latency="1"/>
+    </states>
+    <states id="4">
+      <operations id="27" stage="1" latency="1"/>
+      <operations id="38" stage="1" latency="2"/>
+      <operations id="52" stage="1" latency="1"/>
+      <operations id="53" stage="1" latency="1"/>
+      <operations id="54" stage="1" latency="1"/>
+      <operations id="56" stage="1" latency="1"/>
+      <operations id="57" stage="1" latency="1"/>
+      <operations id="59" stage="1" latency="1"/>
+      <operations id="60" stage="1" latency="1"/>
+      <operations id="61" stage="1" latency="1"/>
+      <operations id="63" stage="1" latency="1"/>
+      <operations id="64" stage="1" latency="1"/>
+    </states>
+    <transitions inState="1" outState="2">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="2" outState="3">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="3" outState="4">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="4" outState="2">
+      <condition id="-1"/>
+    </transitions>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="streamtoparallelwithburst" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="-1" mMaxLatency="-1">
+      <subRegions>2</subRegions>
+      <subRegions>3</subRegions>
+      <subRegions>4</subRegions>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="2" mTag="Entry" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>24</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="3" mTag="VITIS_LOOP_21_1" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="-1" mMaxLatency="-1" mType="1">
+      <basicBlocks>58</basicBlocks>
+      <basicBlocks>62</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="4" mTag="Return" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>65</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

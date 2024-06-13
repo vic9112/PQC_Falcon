@@ -1,0 +1,175 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib "/home/ubuntu/irq_test_v1/vivado/vvd_srcs/caravel_soc/rtl/header/user_defines.v" "/home/ubuntu/irq_test_v1/vivado/vvd_srcs/caravel_soc/rtl/header/defines.v" "/home/ubuntu/irq_test_v1/vivado/fsic_defines.v" --include "../../../../../vvd_srcs/caravel_soc/rtl/header" --include "../../../../vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/verilog" --include "../../../../vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/66be/hdl/verilog" --include "../../../../vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/ec67/hdl" --include "../../../../vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/4e49" --include "../../../../vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/2fc3/hdl/verilog" --include "../../../../../" --include "/tools/Xilinx/Vivado/2022.1/data/xilinx_vip/include" -d "USER_PROJECT_SIDEBAND_SUPPORT=1" -d "USE_EDGEDETECT_IP=1" -d "pSERIALIO_WIDTH=13" \
+"../../../../../vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj2/rtl/In_copy.v" \
+"../../../../../vvd_srcs/caravel_soc/rtl/user/logic_analyzer/rtl/LogicAnalyzer.v" \
+"../../../../../vvd_srcs/caravel_soc/vip/RAM128.v" \
+"../../../../../vvd_srcs/caravel_soc/vip/RAM256.v" \
+"../../../../../vvd_srcs/caravel_soc/rtl/user/logic_analyzer/rtl/Sram.v" \
+"../../../../../vvd_srcs/caravel_soc/rtl/soc/VexRiscv_MinDebugCache.v" \
+"../../../../../vvd_srcs/caravel_soc/rtl/user/user_subsys/axil_slav/rtl/axil_slav.v" \
+"../../../../../vvd_srcs/caravel_soc/rtl/user/user_subsys/axis_mstr/rtl/axis_mstr.v" \
+"../../../../../vvd_srcs/caravel_soc/rtl/user/user_subsys/axis_slav/rtl/axis_slav.v" \
+"../../../../../vvd_srcs/caravel_soc/rtl/soc/chip_io.v" \
+"../../../../../vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v" \
+"../../../../../vvd_srcs/caravel_soc/rtl/user/config_ctrl/rtl/config_ctrl.v" \
+"../../../../../vvd_srcs/caravel_soc/rtl/user/rtl/fsic.v" \
+"../../../../../vvd_srcs/caravel_soc/rtl/user/fsic_clkrst/rtl/fsic_clkrst.v" \
+"../../../../../vvd_srcs/caravel_soc/rtl/user/io_serdes/rtl/fsic_coreclk_phase_cnt.v" \
+"../../../../../vvd_srcs/caravel_soc/rtl/user/io_serdes/rtl/fsic_io_serdes_rx.v" \
+"../../../../../vvd_srcs/caravel_soc/rtl/user/mprj_io/rtl/fsic_mprj_io.v" \
+"../../../../../vvd_srcs/caravel_soc/rtl/soc/gpio_control_block.v" \
+"../../../../../vvd_srcs/caravel_soc/rtl/soc/gpio_defaults_block.v" \
+"../../../../../vvd_srcs/caravel_soc/rtl/soc/housekeeping.v" \
+"../../../../../vvd_srcs/caravel_soc/rtl/soc/housekeeping_spi.v" \
+"../../../../../vvd_srcs/caravel_soc/rtl/user/io_serdes/rtl/io_serdes.v" \
+"../../../../../vvd_srcs/caravel_soc/rtl/user/user_subsys/irq_mux/rtl/irq_mux.v" \
+"../../../../../vvd_srcs/caravel_soc/rtl/user/user_subsys/la_mux/rtl/la_mux.v" \
+"../../../../../vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v" \
+"../../../../../vvd_srcs/caravel_soc/rtl/soc/mgmt_core_wrapper.v" \
+"../../../../../vvd_srcs/caravel_soc/rtl/soc/mprj_io.v" \
+"../../../../../vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/spram.v" \
+"../../../../../vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj2/rtl/stage.v" \
+"../../../../../vvd_srcs/caravel_soc/rtl/user/axis_switch/rtl/sw_caravel.v" \
+"../../../../../vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/user_prj0.v" \
+"../../../../../vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj1/rtl/user_prj1.v" \
+"../../../../../vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj2/rtl/user_prj2.v" \
+"../../../../../vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj3/rtl/user_prj3.v" \
+"../../../../../vvd_srcs/caravel_soc/rtl/user/rtl/user_project_wrapper.v" \
+"../../../../../vvd_srcs/caravel_soc/rtl/user/user_subsys/rtl/user_subsys.v" \
+
+sv xil_defaultlib "/home/ubuntu/irq_test_v1/vivado/vvd_srcs/caravel_soc/rtl/header/user_defines.v" "/home/ubuntu/irq_test_v1/vivado/vvd_srcs/caravel_soc/rtl/header/defines.v" "/home/ubuntu/irq_test_v1/vivado/fsic_defines.v" --include "../../../../../vvd_srcs/caravel_soc/rtl/header" --include "../../../../vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/verilog" --include "../../../../vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/66be/hdl/verilog" --include "../../../../vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/ec67/hdl" --include "../../../../vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/4e49" --include "../../../../vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/2fc3/hdl/verilog" --include "../../../../../" --include "/tools/Xilinx/Vivado/2022.1/data/xilinx_vip/include" -d "USER_PROJECT_SIDEBAND_SUPPORT=1" -d "USE_EDGEDETECT_IP=1" -d "pSERIALIO_WIDTH=13" \
+"../../../../../vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axi_ctrl_logic.sv" \
+"../../../../../vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axil_axis.sv" \
+"../../../../../vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axilite_master.sv" \
+"../../../../../vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axilite_slave.sv" \
+"../../../../../vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axis_master.sv" \
+"../../../../../vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axis_slave.sv" \
+
+verilog xil_defaultlib "/home/ubuntu/irq_test_v1/vivado/vvd_srcs/caravel_soc/rtl/header/user_defines.v" "/home/ubuntu/irq_test_v1/vivado/vvd_srcs/caravel_soc/rtl/header/defines.v" "/home/ubuntu/irq_test_v1/vivado/fsic_defines.v" --include "../../../../../vvd_srcs/caravel_soc/rtl/header" --include "../../../../vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/verilog" --include "../../../../vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/66be/hdl/verilog" --include "../../../../vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/ec67/hdl" --include "../../../../vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/4e49" --include "../../../../vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/2fc3/hdl/verilog" --include "../../../../../" --include "/tools/Xilinx/Vivado/2022.1/data/xilinx_vip/include" -d "USER_PROJECT_SIDEBAND_SUPPORT=1" -d "USE_EDGEDETECT_IP=1" -d "pSERIALIO_WIDTH=13" \
+"../../../../../vvd_srcs/caravel_soc/rtl/soc/caravel.v" \
+"../../../../../vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr.v" \
+"../../../../../vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_control_s_axi.v" \
+"../../../../../vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_entry_proc.v" \
+"../../../../../vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_fifo_w1_d2_S.v" \
+"../../../../../vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_fifo_w32_d2_S.v" \
+"../../../../../vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_fifo_w32_d8_S.v" \
+"../../../../../vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_fifo_w33_d128_A.v" \
+"../../../../../vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_fifo_w64_d3_S.v" \
+"../../../../../vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_flow_control_loop_pipe_sequential_init.v" \
+"../../../../../vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_getinstream.v" \
+"../../../../../vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_getinstream_Pipeline_VITIS_LOOP_44_1.v" \
+"../../../../../vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v" \
+"../../../../../vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_regslice_both.v" \
+"../../../../../vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_start_for_streamtoparallelwithburst_U0.v" \
+"../../../../../vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_streamtoparallelwithburst.v" \
+"../../../../../vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_streamtoparallelwithburst_Pipeline_VITIS_LOOP_15_2.v" \
+"../../../../../vvd_srcs/fpga/rtl/PL/sw_fpga.v" \
+"../../../../../vvd_srcs/fpga/rtl/PL/ps_axil.v" \
+"../../../../../vitis_prj/verilog_spiflash/spiflash.v" \
+"../../../../vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_0/sim/bd_afc3_one_0.v" \
+
+sv xil_defaultlib "/home/ubuntu/irq_test_v1/vivado/vvd_srcs/caravel_soc/rtl/header/user_defines.v" "/home/ubuntu/irq_test_v1/vivado/vvd_srcs/caravel_soc/rtl/header/defines.v" "/home/ubuntu/irq_test_v1/vivado/fsic_defines.v" --include "../../../../../vvd_srcs/caravel_soc/rtl/header" --include "../../../../vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/verilog" --include "../../../../vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/66be/hdl/verilog" --include "../../../../vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/ec67/hdl" --include "../../../../vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/4e49" --include "../../../../vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/2fc3/hdl/verilog" --include "../../../../../" --include "/tools/Xilinx/Vivado/2022.1/data/xilinx_vip/include" -d "USER_PROJECT_SIDEBAND_SUPPORT=1" -d "USE_EDGEDETECT_IP=1" -d "pSERIALIO_WIDTH=13" \
+"../../../../vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_2/sim/bd_afc3_s00mmu_0.sv" \
+"../../../../vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_3/sim/bd_afc3_s00tr_0.sv" \
+"../../../../vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_4/sim/bd_afc3_s00sic_0.sv" \
+"../../../../vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_5/sim/bd_afc3_s00a2s_0.sv" \
+"../../../../vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_6/sim/bd_afc3_sarn_0.sv" \
+"../../../../vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_7/sim/bd_afc3_srn_0.sv" \
+"../../../../vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_8/sim/bd_afc3_sawn_0.sv" \
+"../../../../vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_9/sim/bd_afc3_swn_0.sv" \
+"../../../../vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_10/sim/bd_afc3_sbn_0.sv" \
+"../../../../vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_11/sim/bd_afc3_m00s2a_0.sv" \
+"../../../../vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_12/sim/bd_afc3_m00e_0.sv" \
+
+verilog xil_defaultlib "/home/ubuntu/irq_test_v1/vivado/vvd_srcs/caravel_soc/rtl/header/user_defines.v" "/home/ubuntu/irq_test_v1/vivado/vvd_srcs/caravel_soc/rtl/header/defines.v" "/home/ubuntu/irq_test_v1/vivado/fsic_defines.v" --include "../../../../../vvd_srcs/caravel_soc/rtl/header" --include "../../../../vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/verilog" --include "../../../../vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/66be/hdl/verilog" --include "../../../../vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/ec67/hdl" --include "../../../../vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/4e49" --include "../../../../vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/2fc3/hdl/verilog" --include "../../../../../" --include "/tools/Xilinx/Vivado/2022.1/data/xilinx_vip/include" -d "USER_PROJECT_SIDEBAND_SUPPORT=1" -d "USE_EDGEDETECT_IP=1" -d "pSERIALIO_WIDTH=13" \
+"../../../../vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_axi_smc_0/bd_0/sim/bd_afc3.v" \
+"../../../../vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_axi_smc_0/sim/design_1_axi_smc_0.v" \
+"../../../../vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_axi_smc_1_0/bd_0/ip/ip_0/sim/bd_a878_one_0.v" \
+
+sv xil_defaultlib "/home/ubuntu/irq_test_v1/vivado/vvd_srcs/caravel_soc/rtl/header/user_defines.v" "/home/ubuntu/irq_test_v1/vivado/vvd_srcs/caravel_soc/rtl/header/defines.v" "/home/ubuntu/irq_test_v1/vivado/fsic_defines.v" --include "../../../../../vvd_srcs/caravel_soc/rtl/header" --include "../../../../vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/verilog" --include "../../../../vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/66be/hdl/verilog" --include "../../../../vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/ec67/hdl" --include "../../../../vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/4e49" --include "../../../../vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/2fc3/hdl/verilog" --include "../../../../../" --include "/tools/Xilinx/Vivado/2022.1/data/xilinx_vip/include" -d "USER_PROJECT_SIDEBAND_SUPPORT=1" -d "USE_EDGEDETECT_IP=1" -d "pSERIALIO_WIDTH=13" \
+"../../../../vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_axi_smc_1_0/bd_0/ip/ip_2/sim/bd_a878_s00mmu_0.sv" \
+"../../../../vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_axi_smc_1_0/bd_0/ip/ip_3/sim/bd_a878_s00tr_0.sv" \
+"../../../../vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_axi_smc_1_0/bd_0/ip/ip_4/sim/bd_a878_s00sic_0.sv" \
+"../../../../vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_axi_smc_1_0/bd_0/ip/ip_5/sim/bd_a878_s00a2s_0.sv" \
+"../../../../vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_axi_smc_1_0/bd_0/ip/ip_6/sim/bd_a878_sawn_0.sv" \
+"../../../../vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_axi_smc_1_0/bd_0/ip/ip_7/sim/bd_a878_swn_0.sv" \
+"../../../../vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_axi_smc_1_0/bd_0/ip/ip_8/sim/bd_a878_sbn_0.sv" \
+"../../../../vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_axi_smc_1_0/bd_0/ip/ip_9/sim/bd_a878_m00s2a_0.sv" \
+"../../../../vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_axi_smc_1_0/bd_0/ip/ip_10/sim/bd_a878_m00e_0.sv" \
+
+verilog xil_defaultlib "/home/ubuntu/irq_test_v1/vivado/vvd_srcs/caravel_soc/rtl/header/user_defines.v" "/home/ubuntu/irq_test_v1/vivado/vvd_srcs/caravel_soc/rtl/header/defines.v" "/home/ubuntu/irq_test_v1/vivado/fsic_defines.v" --include "../../../../../vvd_srcs/caravel_soc/rtl/header" --include "../../../../vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/verilog" --include "../../../../vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/66be/hdl/verilog" --include "../../../../vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/ec67/hdl" --include "../../../../vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/4e49" --include "../../../../vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/2fc3/hdl/verilog" --include "../../../../../" --include "/tools/Xilinx/Vivado/2022.1/data/xilinx_vip/include" -d "USER_PROJECT_SIDEBAND_SUPPORT=1" -d "USE_EDGEDETECT_IP=1" -d "pSERIALIO_WIDTH=13" \
+"../../../../vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_axi_smc_1_0/bd_0/sim/bd_a878.v" \
+"../../../../vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_axi_smc_1_0/sim/design_1_axi_smc_1_0.v" \
+"../../../../vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_axi_smc_2_0/bd_0/ip/ip_0/sim/bd_a888_one_0.v" \
+
+sv xil_defaultlib "/home/ubuntu/irq_test_v1/vivado/vvd_srcs/caravel_soc/rtl/header/user_defines.v" "/home/ubuntu/irq_test_v1/vivado/vvd_srcs/caravel_soc/rtl/header/defines.v" "/home/ubuntu/irq_test_v1/vivado/fsic_defines.v" --include "../../../../../vvd_srcs/caravel_soc/rtl/header" --include "../../../../vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/verilog" --include "../../../../vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/66be/hdl/verilog" --include "../../../../vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/ec67/hdl" --include "../../../../vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/4e49" --include "../../../../vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/2fc3/hdl/verilog" --include "../../../../../" --include "/tools/Xilinx/Vivado/2022.1/data/xilinx_vip/include" -d "USER_PROJECT_SIDEBAND_SUPPORT=1" -d "USE_EDGEDETECT_IP=1" -d "pSERIALIO_WIDTH=13" \
+"../../../../vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_axi_smc_2_0/bd_0/ip/ip_2/sim/bd_a888_s00mmu_0.sv" \
+"../../../../vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_axi_smc_2_0/bd_0/ip/ip_3/sim/bd_a888_s00tr_0.sv" \
+"../../../../vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_axi_smc_2_0/bd_0/ip/ip_4/sim/bd_a888_s00sic_0.sv" \
+"../../../../vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_axi_smc_2_0/bd_0/ip/ip_5/sim/bd_a888_s00a2s_0.sv" \
+"../../../../vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_axi_smc_2_0/bd_0/ip/ip_6/sim/bd_a888_sarn_0.sv" \
+"../../../../vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_axi_smc_2_0/bd_0/ip/ip_7/sim/bd_a888_srn_0.sv" \
+"../../../../vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_axi_smc_2_0/bd_0/ip/ip_8/sim/bd_a888_m00s2a_0.sv" \
+"../../../../vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_axi_smc_2_0/bd_0/ip/ip_9/sim/bd_a888_m00e_0.sv" \
+
+verilog xil_defaultlib "/home/ubuntu/irq_test_v1/vivado/vvd_srcs/caravel_soc/rtl/header/user_defines.v" "/home/ubuntu/irq_test_v1/vivado/vvd_srcs/caravel_soc/rtl/header/defines.v" "/home/ubuntu/irq_test_v1/vivado/fsic_defines.v" --include "../../../../../vvd_srcs/caravel_soc/rtl/header" --include "../../../../vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/verilog" --include "../../../../vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/66be/hdl/verilog" --include "../../../../vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/ec67/hdl" --include "../../../../vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/4e49" --include "../../../../vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/2fc3/hdl/verilog" --include "../../../../../" --include "/tools/Xilinx/Vivado/2022.1/data/xilinx_vip/include" -d "USER_PROJECT_SIDEBAND_SUPPORT=1" -d "USE_EDGEDETECT_IP=1" -d "pSERIALIO_WIDTH=13" \
+"../../../../vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_axi_smc_2_0/bd_0/sim/bd_a888.v" \
+"../../../../vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_axi_smc_2_0/sim/design_1_axi_smc_2_0.v" \
+
+sv xil_defaultlib "/home/ubuntu/irq_test_v1/vivado/vvd_srcs/caravel_soc/rtl/header/user_defines.v" "/home/ubuntu/irq_test_v1/vivado/vvd_srcs/caravel_soc/rtl/header/defines.v" "/home/ubuntu/irq_test_v1/vivado/fsic_defines.v" --include "../../../../../vvd_srcs/caravel_soc/rtl/header" --include "../../../../vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/verilog" --include "../../../../vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/66be/hdl/verilog" --include "../../../../vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/ec67/hdl" --include "../../../../vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/4e49" --include "../../../../vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/2fc3/hdl/verilog" --include "../../../../../" --include "/tools/Xilinx/Vivado/2022.1/data/xilinx_vip/include" -d "USER_PROJECT_SIDEBAND_SUPPORT=1" -d "USE_EDGEDETECT_IP=1" -d "pSERIALIO_WIDTH=13" \
+"../../../../vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_axi_vip_0_0/sim/design_1_axi_vip_0_0_pkg.sv" \
+"../../../../vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_axi_vip_0_0/sim/design_1_axi_vip_0_0.sv" \
+
+verilog xil_defaultlib "/home/ubuntu/irq_test_v1/vivado/vvd_srcs/caravel_soc/rtl/header/user_defines.v" "/home/ubuntu/irq_test_v1/vivado/vvd_srcs/caravel_soc/rtl/header/defines.v" "/home/ubuntu/irq_test_v1/vivado/fsic_defines.v" --include "../../../../../vvd_srcs/caravel_soc/rtl/header" --include "../../../../vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/verilog" --include "../../../../vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/66be/hdl/verilog" --include "../../../../vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/ec67/hdl" --include "../../../../vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/4e49" --include "../../../../vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/2fc3/hdl/verilog" --include "../../../../../" --include "/tools/Xilinx/Vivado/2022.1/data/xilinx_vip/include" -d "USER_PROJECT_SIDEBAND_SUPPORT=1" -d "USE_EDGEDETECT_IP=1" -d "pSERIALIO_WIDTH=13" \
+"../../../../vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_xbar_0/sim/design_1_xbar_0.v" \
+
+sv xil_defaultlib "/home/ubuntu/irq_test_v1/vivado/vvd_srcs/caravel_soc/rtl/header/user_defines.v" "/home/ubuntu/irq_test_v1/vivado/vvd_srcs/caravel_soc/rtl/header/defines.v" "/home/ubuntu/irq_test_v1/vivado/fsic_defines.v" --include "../../../../../vvd_srcs/caravel_soc/rtl/header" --include "../../../../vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/verilog" --include "../../../../vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/66be/hdl/verilog" --include "../../../../vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/ec67/hdl" --include "../../../../vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/4e49" --include "../../../../vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/2fc3/hdl/verilog" --include "../../../../../" --include "/tools/Xilinx/Vivado/2022.1/data/xilinx_vip/include" -d "USER_PROJECT_SIDEBAND_SUPPORT=1" -d "USE_EDGEDETECT_IP=1" -d "pSERIALIO_WIDTH=13" \
+"../../../../vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_axi_vip_1_0/sim/design_1_axi_vip_1_0_pkg.sv" \
+"../../../../vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_axi_vip_1_0/sim/design_1_axi_vip_1_0.sv" \
+"../../../../vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_axi_vip_2_0/sim/design_1_axi_vip_2_0_pkg.sv" \
+"../../../../vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_axi_vip_2_0/sim/design_1_axi_vip_2_0.sv" \
+"../../../../vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_axi_vip_3_0/sim/design_1_axi_vip_3_0_pkg.sv" \
+"../../../../vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_axi_vip_3_0/sim/design_1_axi_vip_3_0.sv" \
+
+verilog xil_defaultlib "/home/ubuntu/irq_test_v1/vivado/vvd_srcs/caravel_soc/rtl/header/user_defines.v" "/home/ubuntu/irq_test_v1/vivado/vvd_srcs/caravel_soc/rtl/header/defines.v" "/home/ubuntu/irq_test_v1/vivado/fsic_defines.v" --include "../../../../../vvd_srcs/caravel_soc/rtl/header" --include "../../../../vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/verilog" --include "../../../../vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/66be/hdl/verilog" --include "../../../../vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/ec67/hdl" --include "../../../../vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/4e49" --include "../../../../vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/2fc3/hdl/verilog" --include "../../../../../" --include "/tools/Xilinx/Vivado/2022.1/data/xilinx_vip/include" -d "USER_PROJECT_SIDEBAND_SUPPORT=1" -d "USE_EDGEDETECT_IP=1" -d "pSERIALIO_WIDTH=13" \
+"../../../../vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_blk_mem_gen_0_0/sim/design_1_blk_mem_gen_0_0.v" \
+"../../../../vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_caravel_0_0/sim/design_1_caravel_0_0.v" \
+"../../../../vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_clk_wiz.v" \
+"../../../../vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.v" \
+"../../../../vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_ps_axil_0_0/sim/design_1_ps_axil_0_0.v" \
+"../../../../vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_spiflash_0_0/sim/design_1_spiflash_0_0.v" \
+"../../../../vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/2fc3/hdl/verilog/userdma_control_s_axi.v" \
+"../../../../vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/2fc3/hdl/verilog/userdma_entry_proc.v" \
+"../../../../vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/2fc3/hdl/verilog/userdma_fifo_w2_d2_S.v" \
+"../../../../vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/2fc3/hdl/verilog/userdma_fifo_w32_d4_S.v" \
+"../../../../vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/2fc3/hdl/verilog/userdma_fifo_w33_d1024_A.v" \
+"../../../../vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/2fc3/hdl/verilog/userdma_fifo_w64_d3_S.v" \
+"../../../../vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/2fc3/hdl/verilog/userdma_flow_control_loop_pipe.v" \
+"../../../../vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/2fc3/hdl/verilog/userdma_flow_control_loop_pipe_sequential_init.v" \
+"../../../../vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/2fc3/hdl/verilog/userdma_getinstream.v" \
+"../../../../vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/2fc3/hdl/verilog/userdma_getinstream_Pipeline_VITIS_LOOP_72_1.v" \
+"../../../../vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/2fc3/hdl/verilog/userdma_gmem0_m_axi.v" \
+"../../../../vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/2fc3/hdl/verilog/userdma_gmem1_m_axi.v" \
+"../../../../vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/2fc3/hdl/verilog/userdma_hls_deadlock_detection_unit.v" \
+"../../../../vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/2fc3/hdl/verilog/userdma_hls_deadlock_idx0_monitor.v" \
+"../../../../vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/2fc3/hdl/verilog/userdma_paralleltostreamwithburst.v" \
+"../../../../vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/2fc3/hdl/verilog/userdma_paralleltostreamwithburst_Pipeline_VITIS_LOOP_128_2.v" \
+"../../../../vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/2fc3/hdl/verilog/userdma_regslice_both.v" \
+"../../../../vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/2fc3/hdl/verilog/userdma_sendoutstream.v" \
+"../../../../vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/2fc3/hdl/verilog/userdma_start_for_sendoutstream_U0.v" \
+"../../../../vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/2fc3/hdl/verilog/userdma_start_for_streamtoparallelwithburst_U0.v" \
+"../../../../vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/2fc3/hdl/verilog/userdma_streamtoparallelwithburst.v" \
+"../../../../vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/2fc3/hdl/verilog/userdma_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2.v" \
+"../../../../vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/2fc3/hdl/verilog/userdma.v" \
+"../../../../vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_userdma_0_0/sim/design_1_userdma_0_0.v" \
+"../../../../vvd_caravel_fpga_sim.ip_user_files/bd/design_1/sim/design_1.v" \
+"../../../../vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v" \
+
+sv xil_defaultlib "/home/ubuntu/irq_test_v1/vivado/vvd_srcs/caravel_soc/rtl/header/user_defines.v" "/home/ubuntu/irq_test_v1/vivado/vvd_srcs/caravel_soc/rtl/header/defines.v" "/home/ubuntu/irq_test_v1/vivado/fsic_defines.v" --include "../../../../../vvd_srcs/caravel_soc/rtl/header" --include "../../../../vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/verilog" --include "../../../../vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/66be/hdl/verilog" --include "../../../../vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/ec67/hdl" --include "../../../../vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/4e49" --include "../../../../vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/2fc3/hdl/verilog" --include "../../../../../" --include "/tools/Xilinx/Vivado/2022.1/data/xilinx_vip/include" -d "USER_PROJECT_SIDEBAND_SUPPORT=1" -d "USE_EDGEDETECT_IP=1" -d "pSERIALIO_WIDTH=13" \
+"../../../../../fsic_tb.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

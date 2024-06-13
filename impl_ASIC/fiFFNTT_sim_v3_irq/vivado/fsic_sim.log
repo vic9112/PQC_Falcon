@@ -1,0 +1,2357 @@
+start vivado project
+remove previous project
+
+****** Vivado v2022.1 (64-bit)
+  **** SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
+  **** IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source vvd_caravel_fpga_fsic_sim.tcl
+# proc checkRequiredFiles { origin_dir} {
+#   set status true
+#   set files [list \
+#  "[file normalize "$origin_dir/vvd_srcs/caravel_soc/rtl/user/logic_analyzer/rtl/LogicAnalyzer.v"]"\
+#  "[file normalize "$origin_dir/vvd_srcs/caravel_soc/vip/RAM128.v"]"\
+#  "[file normalize "$origin_dir/vvd_srcs/caravel_soc/vip/RAM256.v"]"\
+#  "[file normalize "$origin_dir/vvd_srcs/caravel_soc/rtl/user/logic_analyzer/rtl/Sram.v"]"\
+#  "[file normalize "$origin_dir/vvd_srcs/caravel_soc/rtl/soc/VexRiscv_MinDebugCache.v"]"\
+#  "[file normalize "$origin_dir/vvd_srcs/caravel_soc/rtl/user/user_subsys/axil_slav/rtl/axil_slav.v"]"\
+#  "[file normalize "$origin_dir/vvd_srcs/caravel_soc/rtl/user/user_subsys/axis_mstr/rtl/axis_mstr.v"]"\
+#  "[file normalize "$origin_dir/vvd_srcs/caravel_soc/rtl/user/user_subsys/axis_slav/rtl/axis_slav.v"]"\
+#  "[file normalize "$origin_dir/vvd_srcs/caravel_soc/rtl/soc/chip_io.v"]"\
+#  "[file normalize "$origin_dir/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v"]"\
+#  "[file normalize "$origin_dir/vvd_srcs/caravel_soc/rtl/user/config_ctrl/rtl/config_ctrl.v"]"\
+#  "[file normalize "$origin_dir/vvd_srcs/caravel_soc/rtl/user/rtl/fsic.v"]"\
+#  "[file normalize "$origin_dir/vvd_srcs/caravel_soc/rtl/user/fsic_clkrst/rtl/fsic_clkrst.v"]"\
+#  "[file normalize "$origin_dir/vvd_srcs/caravel_soc/rtl/user/io_serdes/rtl/fsic_coreclk_phase_cnt.v"]"\
+#  "[file normalize "$origin_dir/vvd_srcs/caravel_soc/rtl/user/io_serdes/rtl/fsic_io_serdes_rx.v"]"\
+#  "[file normalize "$origin_dir/vvd_srcs/caravel_soc/rtl/user/mprj_io/rtl/fsic_mprj_io.v"]"\
+#  "[file normalize "$origin_dir/vvd_srcs/caravel_soc/rtl/soc/gpio_control_block.v"]"\
+#  "[file normalize "$origin_dir/vvd_srcs/caravel_soc/rtl/soc/gpio_defaults_block.v"]"\
+#  "[file normalize "$origin_dir/vvd_srcs/caravel_soc/rtl/soc/housekeeping.v"]"\
+#  "[file normalize "$origin_dir/vvd_srcs/caravel_soc/rtl/soc/housekeeping_spi.v"]"\
+#  "[file normalize "$origin_dir/vvd_srcs/caravel_soc/rtl/user/io_serdes/rtl/io_serdes.v"]"\
+#  "[file normalize "$origin_dir/vvd_srcs/caravel_soc/rtl/user/user_subsys/irq_mux/rtl/irq_mux.v"]"\
+#  "[file normalize "$origin_dir/vvd_srcs/caravel_soc/rtl/user/user_subsys/la_mux/rtl/la_mux.v"]"\
+#  "[file normalize "$origin_dir/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v"]"\
+#  "[file normalize "$origin_dir/vvd_srcs/caravel_soc/rtl/soc/mgmt_core_wrapper.v"]"\
+#  "[file normalize "$origin_dir/vvd_srcs/caravel_soc/rtl/soc/mprj_io.v"]"\
+#  "[file normalize "$origin_dir/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/spram.v"]"\
+#  "[file normalize "$origin_dir/vvd_srcs/caravel_soc/rtl/user/axis_switch/rtl/sw_caravel.v"]"\
+#  "[file normalize "$origin_dir/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/user_prj0.v"]"\
+#  "[file normalize "$origin_dir/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj1/rtl/user_prj1.v"]"\
+#  "[file normalize "$origin_dir/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj2/rtl/user_prj2.v"]"\
+#  "[file normalize "$origin_dir/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj3/rtl/user_prj3.v"]"\
+#  "[file normalize "$origin_dir/vvd_srcs/caravel_soc/rtl/user/rtl/user_project_wrapper.v"]"\
+#  "[file normalize "$origin_dir/vvd_srcs/caravel_soc/rtl/user/user_subsys/rtl/user_subsys.v"]"\
+#  "[file normalize "$origin_dir/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axi_ctrl_logic.sv"]"\
+#  "[file normalize "$origin_dir/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axil_axis.sv"]"\
+#  "[file normalize "$origin_dir/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axilite_master.sv"]"\
+#  "[file normalize "$origin_dir/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axilite_slave.sv"]"\
+#  "[file normalize "$origin_dir/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axis_master.sv"]"\
+#  "[file normalize "$origin_dir/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axis_slave.sv"]"\
+#  "[file normalize "$origin_dir/vvd_srcs/caravel_soc/rtl/soc/caravel.v"]"\
+#  "[file normalize "$origin_dir/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr.v"]"\
+#  "[file normalize "$origin_dir/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_control_s_axi.v"]"\
+#  "[file normalize "$origin_dir/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_entry_proc.v"]"\
+#  "[file normalize "$origin_dir/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_fifo_w1_d2_S.v"]"\
+#  "[file normalize "$origin_dir/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_fifo_w32_d2_S.v"]"\
+#  "[file normalize "$origin_dir/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_fifo_w32_d8_S.v"]"\
+#  "[file normalize "$origin_dir/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_fifo_w33_d128_A.v"]"\
+#  "[file normalize "$origin_dir/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_fifo_w64_d3_S.v"]"\
+#  "[file normalize "$origin_dir/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_flow_control_loop_pipe_sequential_init.v"]"\
+#  "[file normalize "$origin_dir/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_getinstream.v"]"\
+#  "[file normalize "$origin_dir/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_getinstream_Pipeline_VITIS_LOOP_44_1.v"]"\
+#  "[file normalize "$origin_dir/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v"]"\
+#  "[file normalize "$origin_dir/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_regslice_both.v"]"\
+#  "[file normalize "$origin_dir/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_start_for_streamtoparallelwithburst_U0.v"]"\
+#  "[file normalize "$origin_dir/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_streamtoparallelwithburst.v"]"\
+#  "[file normalize "$origin_dir/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_streamtoparallelwithburst_Pipeline_VITIS_LOOP_15_2.v"]"\
+#  "[file normalize "$origin_dir/vvd_srcs/fpga/rtl/PL/sw_fpga.v"]"\
+#  "[file normalize "$origin_dir/vvd_srcs/fpga/rtl/PL/ps_axil.v"]"\
+#  "[file normalize "$origin_dir/vitis_prj/verilog_spiflash/spiflash.v"]"\
+#  "[file normalize "$origin_dir/vvd_srcs/caravel_soc/rtl/header/user_defines.v"]"\
+#  "[file normalize "$origin_dir/vvd_srcs/caravel_soc/rtl/header/defines.v"]"\
+#  "[file normalize "$origin_dir/fsic_defines.v"]"\
+#  "[file normalize "$origin_dir/fsic.coe"]"\
+#  "[file normalize "$origin_dir/fsic_tb.sv"]"\
+#  "[file normalize "$origin_dir/fsic_tb_behav.wcfg"]"\
+#   ]
+#   foreach ifile $files {
+#     if { ![file isfile $ifile] } {
+#       puts " Could not find remote file $ifile "
+#       set status false
+#     }
+#   }
+# 
+#   set paths [list \
+#  "[file normalize "$origin_dir/[file normalize "$origin_dir/vitis_prj/hls_caravel_ps"]"]"\
+#  "[file normalize "$origin_dir/[file normalize "$origin_dir/vitis_prj/hls_output_pin"]"]"\
+#  "[file normalize "$origin_dir/[file normalize "$origin_dir/vitis_prj/hls_read_romcode"]"]"\
+#  "[file normalize "$origin_dir/[file normalize "$origin_dir/vitis_prj/hls_userdma"]"]"\
+#   ]
+#   foreach ipath $paths {
+#     if { ![file isdirectory $ipath] } {
+#       puts " Could not access $ipath "
+#       set status false
+#     }
+#   }
+# 
+#   return $status
+# }
+# set origin_dir "."
+# if { [info exists ::origin_dir_loc] } {
+#   set origin_dir $::origin_dir_loc
+# }
+# set _xil_proj_name_ "vvd_caravel_fpga_sim"
+# if { [info exists ::user_project_name] } {
+#   set _xil_proj_name_ $::user_project_name
+# }
+# variable script_file
+# set script_file "vvd_caravel_fpga_sim.tcl"
+# proc print_help {} {
+#   variable script_file
+#   puts "\nDescription:"
+#   puts "Recreate a Vivado project from this script. The created project will be"
+#   puts "functionally equivalent to the original project for which this script was"
+#   puts "generated. The script contains commands for creating a project, filesets,"
+#   puts "runs, adding/importing sources and setting properties on various objects.\n"
+#   puts "Syntax:"
+#   puts "$script_file"
+#   puts "$script_file -tclargs \[--origin_dir <path>\]"
+#   puts "$script_file -tclargs \[--project_name <name>\]"
+#   puts "$script_file -tclargs \[--help\]\n"
+#   puts "Usage:"
+#   puts "Name                   Description"
+#   puts "-------------------------------------------------------------------------"
+#   puts "\[--origin_dir <path>\]  Determine source file paths wrt this path. Default"
+#   puts "                       origin_dir path value is \".\", otherwise, the value"
+#   puts "                       that was set with the \"-paths_relative_to\" switch"
+#   puts "                       when this script was generated.\n"
+#   puts "\[--project_name <name>\] Create project with the specified name. Default"
+#   puts "                       name is the name of the project from where this"
+#   puts "                       script was generated.\n"
+#   puts "\[--help\]               Print help information for this script"
+#   puts "-------------------------------------------------------------------------\n"
+#   exit 0
+# }
+# if { $::argc > 0 } {
+#   for {set i 0} {$i < $::argc} {incr i} {
+#     set option [string trim [lindex $::argv $i]]
+#     switch -regexp -- $option {
+#       "--origin_dir"   { incr i; set origin_dir [lindex $::argv $i] }
+#       "--project_name" { incr i; set _xil_proj_name_ [lindex $::argv $i] }
+#       "--help"         { print_help }
+#       default {
+#         if { [regexp {^-} $option] } {
+#           puts "ERROR: Unknown option '$option' specified, please type '$script_file -tclargs --help' for usage info.\n"
+#           return 1
+#         }
+#       }
+#     }
+#   }
+# }
+# set orig_proj_dir "[file normalize "$origin_dir/vvd_caravel_fpga_sim"]"
+# set validate_required 0
+# if { $validate_required } {
+#   if { [checkRequiredFiles $origin_dir] } {
+#     puts "Tcl file $script_file is valid. All files required for project creation is accesable. "
+#   } else {
+#     puts "Tcl file $script_file is not valid. Not all files required for project creation is accesable. "
+#     return
+#   }
+# }
+# create_project ${_xil_proj_name_} ./${_xil_proj_name_} -part xc7z020clg400-1
+# set proj_dir [get_property directory [current_project]]
+# set obj [current_project]
+# set_property -name "default_lib" -value "xil_defaultlib" -objects $obj
+# set_property -name "enable_resource_estimation" -value "0" -objects $obj
+# set_property -name "enable_vhdl_2008" -value "1" -objects $obj
+# set_property -name "ip_cache_permissions" -value "read write" -objects $obj
+# set_property -name "ip_output_repo" -value "$proj_dir/${_xil_proj_name_}.cache/ip" -objects $obj
+# set_property -name "mem.enable_memory_map_generation" -value "1" -objects $obj
+# set_property -name "platform.board_id" -value "pynq-z2" -objects $obj
+# set_property -name "revised_directory_structure" -value "1" -objects $obj
+# set_property -name "sim.central_dir" -value "$proj_dir/${_xil_proj_name_}.ip_user_files" -objects $obj
+# set_property -name "sim.ip.auto_export_scripts" -value "1" -objects $obj
+# set_property -name "simulator_language" -value "Mixed" -objects $obj
+# set_property -name "webtalk.activehdl_export_sim" -value "34" -objects $obj
+# set_property -name "webtalk.ies_export_sim" -value "10" -objects $obj
+# set_property -name "webtalk.modelsim_export_sim" -value "34" -objects $obj
+# set_property -name "webtalk.questa_export_sim" -value "34" -objects $obj
+# set_property -name "webtalk.riviera_export_sim" -value "34" -objects $obj
+# set_property -name "webtalk.vcs_export_sim" -value "34" -objects $obj
+# set_property -name "webtalk.xcelium_export_sim" -value "1" -objects $obj
+# set_property -name "webtalk.xsim_export_sim" -value "34" -objects $obj
+# set_property -name "webtalk.xsim_launch_sim" -value "84" -objects $obj
+# set_property -name "xpm_libraries" -value "XPM_CDC XPM_FIFO XPM_MEMORY" -objects $obj
+# if {[string equal [get_filesets -quiet sources_1] ""]} {
+#   create_fileset -srcset sources_1
+# }
+# set obj [get_filesets sources_1]
+# if { $obj != {} } {
+#    set_property "ip_repo_paths" "[file normalize "$origin_dir/vitis_prj/hls_caravel_ps"] [file normalize "$origin_dir/vitis_prj/hls_output_pin"] [file normalize "$origin_dir/vitis_prj/hls_read_romcode"] [file normalize "$origin_dir/vitis_prj/hls_userdma"]" $obj
+# 
+#    # Rebuild user ip_repo's index before adding any source files
+#    update_ip_catalog -rebuild
+# }
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/ubuntu/fsic_fpga/vivado/vitis_prj/hls_caravel_ps'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/ubuntu/fsic_fpga/vivado/vitis_prj/hls_output_pin'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/ubuntu/fsic_fpga/vivado/vitis_prj/hls_read_romcode'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/ubuntu/fsic_fpga/vivado/vitis_prj/hls_userdma'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2022.1/data/ip'.
+# set obj [get_filesets sources_1]
+# set files [list \
+#  [file normalize "${origin_dir}/vvd_srcs/caravel_soc/rtl/user/logic_analyzer/rtl/LogicAnalyzer.v"] \
+#  [file normalize "${origin_dir}/vvd_srcs/caravel_soc/vip/RAM128.v"] \
+#  [file normalize "${origin_dir}/vvd_srcs/caravel_soc/vip/RAM256.v"] \
+#  [file normalize "${origin_dir}/vvd_srcs/caravel_soc/rtl/user/logic_analyzer/rtl/Sram.v"] \
+#  [file normalize "${origin_dir}/vvd_srcs/caravel_soc/rtl/soc/VexRiscv_MinDebugCache.v"] \
+#  [file normalize "${origin_dir}/vvd_srcs/caravel_soc/rtl/user/user_subsys/axil_slav/rtl/axil_slav.v"] \
+#  [file normalize "${origin_dir}/vvd_srcs/caravel_soc/rtl/user/user_subsys/axis_mstr/rtl/axis_mstr.v"] \
+#  [file normalize "${origin_dir}/vvd_srcs/caravel_soc/rtl/user/user_subsys/axis_slav/rtl/axis_slav.v"] \
+#  [file normalize "${origin_dir}/vvd_srcs/caravel_soc/rtl/soc/chip_io.v"] \
+#  [file normalize "${origin_dir}/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v"] \
+#  [file normalize "${origin_dir}/vvd_srcs/caravel_soc/rtl/user/config_ctrl/rtl/config_ctrl.v"] \
+#  [file normalize "${origin_dir}/vvd_srcs/caravel_soc/rtl/user/rtl/fsic.v"] \
+#  [file normalize "${origin_dir}/vvd_srcs/caravel_soc/rtl/user/fsic_clkrst/rtl/fsic_clkrst.v"] \
+#  [file normalize "${origin_dir}/vvd_srcs/caravel_soc/rtl/user/io_serdes/rtl/fsic_coreclk_phase_cnt.v"] \
+#  [file normalize "${origin_dir}/vvd_srcs/caravel_soc/rtl/user/io_serdes/rtl/fsic_io_serdes_rx.v"] \
+#  [file normalize "${origin_dir}/vvd_srcs/caravel_soc/rtl/user/mprj_io/rtl/fsic_mprj_io.v"] \
+#  [file normalize "${origin_dir}/vvd_srcs/caravel_soc/rtl/soc/gpio_control_block.v"] \
+#  [file normalize "${origin_dir}/vvd_srcs/caravel_soc/rtl/soc/gpio_defaults_block.v"] \
+#  [file normalize "${origin_dir}/vvd_srcs/caravel_soc/rtl/soc/housekeeping.v"] \
+#  [file normalize "${origin_dir}/vvd_srcs/caravel_soc/rtl/soc/housekeeping_spi.v"] \
+#  [file normalize "${origin_dir}/vvd_srcs/caravel_soc/rtl/user/io_serdes/rtl/io_serdes.v"] \
+#  [file normalize "${origin_dir}/vvd_srcs/caravel_soc/rtl/user/user_subsys/irq_mux/rtl/irq_mux.v"] \
+#  [file normalize "${origin_dir}/vvd_srcs/caravel_soc/rtl/user/user_subsys/la_mux/rtl/la_mux.v"] \
+#  [file normalize "${origin_dir}/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v"] \
+#  [file normalize "${origin_dir}/vvd_srcs/caravel_soc/rtl/soc/mgmt_core_wrapper.v"] \
+#  [file normalize "${origin_dir}/vvd_srcs/caravel_soc/rtl/soc/mprj_io.v"] \
+#  [file normalize "${origin_dir}/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/spram.v"] \
+#  [file normalize "${origin_dir}/vvd_srcs/caravel_soc/rtl/user/axis_switch/rtl/sw_caravel.v"] \
+#  [file normalize "${origin_dir}/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/user_prj0.v"] \
+#  [file normalize "${origin_dir}/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj1/rtl/user_prj1.v"] \
+#  [file normalize "${origin_dir}/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj2/rtl/user_prj2.v"] \
+#  [file normalize "${origin_dir}/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj3/rtl/user_prj3.v"] \
+#  [file normalize "${origin_dir}/vvd_srcs/caravel_soc/rtl/user/rtl/user_project_wrapper.v"] \
+#  [file normalize "${origin_dir}/vvd_srcs/caravel_soc/rtl/user/user_subsys/rtl/user_subsys.v"] \
+#  [file normalize "${origin_dir}/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axi_ctrl_logic.sv"] \
+#  [file normalize "${origin_dir}/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axil_axis.sv"] \
+#  [file normalize "${origin_dir}/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axilite_master.sv"] \
+#  [file normalize "${origin_dir}/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axilite_slave.sv"] \
+#  [file normalize "${origin_dir}/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axis_master.sv"] \
+#  [file normalize "${origin_dir}/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axis_slave.sv"] \
+#  [file normalize "${origin_dir}/vvd_srcs/caravel_soc/rtl/soc/caravel.v"] \
+#  [file normalize "${origin_dir}/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr.v"] \
+#  [file normalize "${origin_dir}/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_control_s_axi.v"] \
+#  [file normalize "${origin_dir}/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_entry_proc.v"] \
+#  [file normalize "${origin_dir}/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_fifo_w1_d2_S.v"] \
+#  [file normalize "${origin_dir}/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_fifo_w32_d2_S.v"] \
+#  [file normalize "${origin_dir}/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_fifo_w32_d8_S.v"] \
+#  [file normalize "${origin_dir}/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_fifo_w33_d128_A.v"] \
+#  [file normalize "${origin_dir}/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_fifo_w64_d3_S.v"] \
+#  [file normalize "${origin_dir}/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_flow_control_loop_pipe_sequential_init.v"] \
+#  [file normalize "${origin_dir}/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_getinstream.v"] \
+#  [file normalize "${origin_dir}/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_getinstream_Pipeline_VITIS_LOOP_44_1.v"] \
+#  [file normalize "${origin_dir}/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v"] \
+#  [file normalize "${origin_dir}/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_regslice_both.v"] \
+#  [file normalize "${origin_dir}/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_start_for_streamtoparallelwithburst_U0.v"] \
+#  [file normalize "${origin_dir}/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_streamtoparallelwithburst.v"] \
+#  [file normalize "${origin_dir}/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_streamtoparallelwithburst_Pipeline_VITIS_LOOP_15_2.v"] \
+#  [file normalize "${origin_dir}/vvd_srcs/fpga/rtl/PL/sw_fpga.v"] \
+#  [file normalize "${origin_dir}/vvd_srcs/fpga/rtl/PL/ps_axil.v"] \
+#  [file normalize "${origin_dir}/vitis_prj/verilog_spiflash/spiflash.v"] \
+#  [file normalize "${origin_dir}/vvd_srcs/caravel_soc/rtl/header/user_defines.v"] \
+#  [file normalize "${origin_dir}/vvd_srcs/caravel_soc/rtl/header/defines.v"] \
+#  [file normalize "${origin_dir}/fsic_defines.v"] \
+#  [file normalize "${origin_dir}/fsic.coe"] \
+# ]
+# add_files -norecurse -fileset $obj $files
+# set file "$origin_dir/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axi_ctrl_logic.sv"
+# set file [file normalize $file]
+# set file_obj [get_files -of_objects [get_filesets sources_1] [list "*$file"]]
+# set_property -name "file_type" -value "SystemVerilog" -objects $file_obj
+# set file "$origin_dir/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axil_axis.sv"
+# set file [file normalize $file]
+# set file_obj [get_files -of_objects [get_filesets sources_1] [list "*$file"]]
+# set_property -name "file_type" -value "SystemVerilog" -objects $file_obj
+# set file "$origin_dir/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axilite_master.sv"
+# set file [file normalize $file]
+# set file_obj [get_files -of_objects [get_filesets sources_1] [list "*$file"]]
+# set_property -name "file_type" -value "SystemVerilog" -objects $file_obj
+# set file "$origin_dir/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axilite_slave.sv"
+# set file [file normalize $file]
+# set file_obj [get_files -of_objects [get_filesets sources_1] [list "*$file"]]
+# set_property -name "file_type" -value "SystemVerilog" -objects $file_obj
+# set file "$origin_dir/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axis_master.sv"
+# set file [file normalize $file]
+# set file_obj [get_files -of_objects [get_filesets sources_1] [list "*$file"]]
+# set_property -name "file_type" -value "SystemVerilog" -objects $file_obj
+# set file "$origin_dir/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axis_slave.sv"
+# set file [file normalize $file]
+# set file_obj [get_files -of_objects [get_filesets sources_1] [list "*$file"]]
+# set_property -name "file_type" -value "SystemVerilog" -objects $file_obj
+# set file "$origin_dir/vvd_srcs/caravel_soc/rtl/header/user_defines.v"
+# set file [file normalize $file]
+# set file_obj [get_files -of_objects [get_filesets sources_1] [list "*$file"]]
+# set_property -name "file_type" -value "Verilog Header" -objects $file_obj
+# set_property -name "is_global_include" -value "1" -objects $file_obj
+# set file "$origin_dir/vvd_srcs/caravel_soc/rtl/header/defines.v"
+# set file [file normalize $file]
+# set file_obj [get_files -of_objects [get_filesets sources_1] [list "*$file"]]
+# set_property -name "file_type" -value "Verilog Header" -objects $file_obj
+# set_property -name "is_global_include" -value "1" -objects $file_obj
+# set file "$origin_dir/fsic_defines.v"
+# set file [file normalize $file]
+# set file_obj [get_files -of_objects [get_filesets sources_1] [list "*$file"]]
+# set_property -name "is_global_include" -value "1" -objects $file_obj
+# set obj [get_filesets sources_1]
+# set_property -name "top" -value "design_1_wrapper" -objects $obj
+# set_property -name "top_auto_set" -value "0" -objects $obj
+# if {[string equal [get_filesets -quiet constrs_1] ""]} {
+#   create_fileset -constrset constrs_1
+# }
+# set obj [get_filesets constrs_1]
+# set obj [get_filesets constrs_1]
+# if {[string equal [get_filesets -quiet sim_1] ""]} {
+#   create_fileset -simset sim_1
+# }
+# set obj [get_filesets sim_1]
+# set files [list \
+#  [file normalize "${origin_dir}/fsic_tb.sv"] \
+#  [file normalize "${origin_dir}/fsic_tb_behav.wcfg"] \
+# ]
+# add_files -norecurse -fileset $obj $files
+# set file "$origin_dir/fsic_tb.sv"
+# set file [file normalize $file]
+# set file_obj [get_files -of_objects [get_filesets sim_1] [list "*$file"]]
+# set_property -name "file_type" -value "SystemVerilog" -objects $file_obj
+# set_property -name "used_in" -value "synthesis simulation" -objects $file_obj
+# set_property -name "used_in_implementation" -value "0" -objects $file_obj
+# set obj [get_filesets sim_1]
+# set_property -name "top" -value "fsic_tb" -objects $obj
+# set_property -name "top_auto_set" -value "0" -objects $obj
+# set_property -name "top_lib" -value "xil_defaultlib" -objects $obj
+# set_property -name "verilog_define" -value "USER_PROJECT_SIDEBAND_SUPPORT=1 USE_EDGEDETECT_IP=1 pSERIALIO_WIDTH=13" -objects $obj
+# set obj [get_filesets utils_1]
+# set obj [get_filesets utils_1]
+# proc cr_bd_design_1 { parentCell } {
+# # The design that will be created by this Tcl proc contains the following 
+# # module references:
+# # caravel, ps_axil, spiflash
+# 
+# 
+# 
+#   # CHANGE DESIGN NAME HERE
+#   set design_name design_1
+# 
+#   common::send_gid_msg -ssname BD::TCL -id 2010 -severity "INFO" "Currently there is no design <$design_name> in project, so creating one..."
+# 
+#   create_bd_design $design_name
+# 
+#   set bCheckIPsPassed 1
+#   ##################################################################
+#   # CHECK IPs
+#   ##################################################################
+#   set bCheckIPs 1
+#   if { $bCheckIPs == 1 } {
+#      set list_check_ips "\ 
+#   xilinx.com:ip:smartconnect:1.0\
+#   xilinx.com:ip:axi_vip:1.1\
+#   xilinx.com:ip:blk_mem_gen:8.4\
+#   xilinx.com:ip:clk_wiz:6.0\
+#   xilinx.com:ip:proc_sys_reset:5.0\
+#   xilinx.com:hls:userdma:1.0\
+#   "
+# 
+#    set list_ips_missing ""
+#    common::send_gid_msg -ssname BD::TCL -id 2011 -severity "INFO" "Checking if the following IPs exist in the project's IP catalog: $list_check_ips ."
+# 
+#    foreach ip_vlnv $list_check_ips {
+#       set ip_obj [get_ipdefs -all $ip_vlnv]
+#       if { $ip_obj eq "" } {
+#          lappend list_ips_missing $ip_vlnv
+#       }
+#    }
+# 
+#    if { $list_ips_missing ne "" } {
+#       catch {common::send_gid_msg -ssname BD::TCL -id 2012 -severity "ERROR" "The following IPs are not found in the IP Catalog:\n  $list_ips_missing\n\nResolution: Please add the repository containing the IP(s) to the project." }
+#       set bCheckIPsPassed 0
+#    }
+# 
+#   }
+# 
+#   ##################################################################
+#   # CHECK Modules
+#   ##################################################################
+#   set bCheckModules 1
+#   if { $bCheckModules == 1 } {
+#      set list_check_mods "\ 
+#   caravel\
+#   ps_axil\
+#   spiflash\
+#   "
+# 
+#    set list_mods_missing ""
+#    common::send_gid_msg -ssname BD::TCL -id 2020 -severity "INFO" "Checking if the following modules exist in the project's sources: $list_check_mods ."
+# 
+#    foreach mod_vlnv $list_check_mods {
+#       if { [can_resolve_reference $mod_vlnv] == 0 } {
+#          lappend list_mods_missing $mod_vlnv
+#       }
+#    }
+# 
+#    if { $list_mods_missing ne "" } {
+#       catch {common::send_gid_msg -ssname BD::TCL -id 2021 -severity "ERROR" "The following module(s) are not found in the project: $list_mods_missing" }
+#       common::send_gid_msg -ssname BD::TCL -id 2022 -severity "INFO" "Please add source files for the missing module(s) above."
+#       set bCheckIPsPassed 0
+#    }
+# }
+# 
+#   if { $bCheckIPsPassed != 1 } {
+#     common::send_gid_msg -ssname BD::TCL -id 2023 -severity "WARNING" "Will not continue with creation of design due to the error(s) above."
+#     return 3
+#   }
+# 
+#   variable script_folder
+# 
+#   if { $parentCell eq "" } {
+#      set parentCell [get_bd_cells /]
+#   }
+# 
+#   # Get object for parentCell
+#   set parentObj [get_bd_cells $parentCell]
+#   if { $parentObj == "" } {
+#      catch {common::send_gid_msg -ssname BD::TCL -id 2090 -severity "ERROR" "Unable to find parent cell <$parentCell>!"}
+#      return
+#   }
+# 
+#   # Make sure parentObj is hier blk
+#   set parentType [get_property TYPE $parentObj]
+#   if { $parentType ne "hier" } {
+#      catch {common::send_gid_msg -ssname BD::TCL -id 2091 -severity "ERROR" "Parent <$parentObj> has TYPE = <$parentType>. Expected to be <hier>."}
+#      return
+#   }
+# 
+#   # Save current instance; Restore later
+#   set oldCurInst [current_bd_instance .]
+# 
+#   # Set parent object as current
+#   current_bd_instance $parentObj
+# 
+# 
+#   # Create interface ports
+# 
+#   # Create ports
+#   set resetb_0 [ create_bd_port -dir I resetb_0 ]
+#   set sys_clock [ create_bd_port -dir I -type clk -freq_hz 250000000 sys_clock ]
+#   set_property -dict [ list \
+#    CONFIG.PHASE {0.0} \
+#  ] $sys_clock
+#   set sys_reset [ create_bd_port -dir I -type rst sys_reset ]
+#   set_property -dict [ list \
+#    CONFIG.POLARITY {ACTIVE_LOW} \
+#  ] $sys_reset
+# 
+#   # Create instance: axi_smc, and set properties
+#   set axi_smc [ create_bd_cell -type ip -vlnv xilinx.com:ip:smartconnect:1.0 axi_smc ]
+#   set_property -dict [ list \
+#    CONFIG.NUM_SI {1} \
+#  ] $axi_smc
+# 
+#   # Create instance: axi_smc_1, and set properties
+#   set axi_smc_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:smartconnect:1.0 axi_smc_1 ]
+#   set_property -dict [ list \
+#    CONFIG.NUM_SI {1} \
+#  ] $axi_smc_1
+# 
+#   # Create instance: axi_smc_2, and set properties
+#   set axi_smc_2 [ create_bd_cell -type ip -vlnv xilinx.com:ip:smartconnect:1.0 axi_smc_2 ]
+#   set_property -dict [ list \
+#    CONFIG.NUM_SI {1} \
+#  ] $axi_smc_2
+# 
+#   # Create instance: axi_vip_0, and set properties
+#   set axi_vip_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_vip:1.1 axi_vip_0 ]
+#   set_property -dict [ list \
+#    CONFIG.ADDR_WIDTH {32} \
+#    CONFIG.ARUSER_WIDTH {0} \
+#    CONFIG.AWUSER_WIDTH {0} \
+#    CONFIG.BUSER_WIDTH {0} \
+#    CONFIG.DATA_WIDTH {32} \
+#    CONFIG.HAS_BRESP {1} \
+#    CONFIG.HAS_BURST {0} \
+#    CONFIG.HAS_CACHE {0} \
+#    CONFIG.HAS_LOCK {0} \
+#    CONFIG.HAS_PROT {0} \
+#    CONFIG.HAS_QOS {0} \
+#    CONFIG.HAS_REGION {0} \
+#    CONFIG.HAS_RRESP {1} \
+#    CONFIG.HAS_WSTRB {1} \
+#    CONFIG.ID_WIDTH {0} \
+#    CONFIG.INTERFACE_MODE {MASTER} \
+#    CONFIG.PROTOCOL {AXI4LITE} \
+#    CONFIG.READ_WRITE_MODE {READ_WRITE} \
+#    CONFIG.RUSER_BITS_PER_BYTE {0} \
+#    CONFIG.RUSER_WIDTH {0} \
+#    CONFIG.SUPPORTS_NARROW {0} \
+#    CONFIG.WUSER_BITS_PER_BYTE {0} \
+#    CONFIG.WUSER_WIDTH {0} \
+#  ] $axi_vip_0
+# 
+#   # Create instance: axi_vip_0_axi_periph, and set properties
+#   set axi_vip_0_axi_periph [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_interconnect:2.1 axi_vip_0_axi_periph ]
+#   set_property -dict [ list \
+#    CONFIG.NUM_MI {3} \
+#  ] $axi_vip_0_axi_periph
+# 
+#   # Create instance: axi_vip_1, and set properties
+#   set axi_vip_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_vip:1.1 axi_vip_1 ]
+#   set_property -dict [ list \
+#    CONFIG.INTERFACE_MODE {SLAVE} \
+#  ] $axi_vip_1
+# 
+#   # Create instance: axi_vip_2, and set properties
+#   set axi_vip_2 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_vip:1.1 axi_vip_2 ]
+#   set_property -dict [ list \
+#    CONFIG.INTERFACE_MODE {SLAVE} \
+#  ] $axi_vip_2
+# 
+#   # Create instance: axi_vip_3, and set properties
+#   set axi_vip_3 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_vip:1.1 axi_vip_3 ]
+#   set_property -dict [ list \
+#    CONFIG.INTERFACE_MODE {SLAVE} \
+#  ] $axi_vip_3
+# 
+#   # Create instance: blk_mem_gen_0, and set properties
+#   set blk_mem_gen_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:blk_mem_gen:8.4 blk_mem_gen_0 ]
+#   set_property -dict [ list \
+#    CONFIG.Byte_Size {8} \
+# CONFIG.Coe_File {/home/ubuntu/fsic_fpga/vivado/fsic.coe} \
+#    CONFIG.EN_SAFETY_CKT {true} \
+#    CONFIG.Enable_32bit_Address {true} \
+#    CONFIG.Enable_A {Use_ENA_Pin} \
+#    CONFIG.Enable_B {Always_Enabled} \
+#    CONFIG.Fill_Remaining_Memory_Locations {true} \
+#    CONFIG.Load_Init_File {true} \
+#    CONFIG.Memory_Type {Single_Port_RAM} \
+#    CONFIG.Operating_Mode_A {READ_FIRST} \
+#    CONFIG.Port_A_Write_Rate {50} \
+#    CONFIG.Port_B_Clock {0} \
+#    CONFIG.Port_B_Enable_Rate {0} \
+#    CONFIG.Port_B_Write_Rate {0} \
+#    CONFIG.Register_PortA_Output_of_Memory_Core {false} \
+#    CONFIG.Register_PortA_Output_of_Memory_Primitives {false} \
+#    CONFIG.Register_PortB_Output_of_Memory_Primitives {false} \
+#    CONFIG.Reset_Priority_A {CE} \
+#    CONFIG.Use_Byte_Write_Enable {true} \
+#    CONFIG.Use_RSTA_Pin {true} \
+#    CONFIG.Use_RSTB_Pin {false} \
+#    CONFIG.use_bram_block {Stand_Alone} \
+#  ] $blk_mem_gen_0
+# 
+#   # Create instance: caravel_0, and set properties
+#   set block_name caravel
+#   set block_cell_name caravel_0
+#   if { [catch {set caravel_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+#      catch {common::send_gid_msg -ssname BD::TCL -id 2095 -severity "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+#      return 1
+#    } elseif { $caravel_0 eq "" } {
+#      catch {common::send_gid_msg -ssname BD::TCL -id 2096 -severity "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+#      return 1
+#    }
+#   
+#   # Create instance: clk_wiz_0, and set properties
+#   set clk_wiz_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:6.0 clk_wiz_0 ]
+#   set_property -dict [ list \
+#    CONFIG.CLKIN1_JITTER_PS {40.0} \
+#    CONFIG.CLKOUT1_JITTER {925.151} \
+#    CONFIG.CLKOUT1_PHASE_ERROR {919.522} \
+#    CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {5} \
+#    CONFIG.CLKOUT2_JITTER {761.006} \
+#    CONFIG.CLKOUT2_PHASE_ERROR {919.522} \
+#    CONFIG.CLKOUT2_REQUESTED_OUT_FREQ {20} \
+#    CONFIG.CLKOUT2_USED {true} \
+#    CONFIG.CLK_IN1_BOARD_INTERFACE {Custom} \
+#    CONFIG.MMCM_CLKFBOUT_MULT_F {64.000} \
+#    CONFIG.MMCM_CLKIN1_PERIOD {4.000} \
+#    CONFIG.MMCM_CLKIN2_PERIOD {10.0} \
+#    CONFIG.MMCM_CLKOUT0_DIVIDE_F {128.000} \
+#    CONFIG.MMCM_CLKOUT1_DIVIDE {32} \
+#    CONFIG.MMCM_DIVCLK_DIVIDE {25} \
+#    CONFIG.NUM_OUT_CLKS {2} \
+#    CONFIG.RESET_PORT {resetn} \
+#    CONFIG.RESET_TYPE {ACTIVE_LOW} \
+#    CONFIG.USE_BOARD_FLOW {true} \
+#  ] $clk_wiz_0
+# 
+#   # Create instance: ps_axil_0, and set properties
+#   set block_name ps_axil
+#   set block_cell_name ps_axil_0
+#   if { [catch {set ps_axil_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+#      catch {common::send_gid_msg -ssname BD::TCL -id 2095 -severity "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+#      return 1
+#    } elseif { $ps_axil_0 eq "" } {
+#      catch {common::send_gid_msg -ssname BD::TCL -id 2096 -severity "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+#      return 1
+#    }
+#   
+#   set_property -dict [ list \
+#    CONFIG.FREQ_HZ {5000000} \
+#  ] [get_bd_intf_pins /ps_axil_0/ladma_mm]
+# 
+#   # Create instance: rst_clk_wiz_0_5M, and set properties
+#   set rst_clk_wiz_0_5M [ create_bd_cell -type ip -vlnv xilinx.com:ip:proc_sys_reset:5.0 rst_clk_wiz_0_5M ]
+# 
+#   # Create instance: spiflash_0, and set properties
+#   set block_name spiflash
+#   set block_cell_name spiflash_0
+#   if { [catch {set spiflash_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+#      catch {common::send_gid_msg -ssname BD::TCL -id 2095 -severity "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+#      return 1
+#    } elseif { $spiflash_0 eq "" } {
+#      catch {common::send_gid_msg -ssname BD::TCL -id 2096 -severity "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+#      return 1
+#    }
+#   
+#   # Create instance: userdma_0, and set properties
+#   set userdma_0 [ create_bd_cell -type ip -vlnv xilinx.com:hls:userdma:1.0 userdma_0 ]
+# 
+#   # Create interface connections
+#   connect_bd_intf_net -intf_net axi_smc_1_M00_AXI [get_bd_intf_pins axi_smc_1/M00_AXI] [get_bd_intf_pins axi_vip_2/S_AXI]
+#   connect_bd_intf_net -intf_net axi_smc_2_M00_AXI [get_bd_intf_pins axi_smc_2/M00_AXI] [get_bd_intf_pins axi_vip_3/S_AXI]
+#   connect_bd_intf_net -intf_net axi_smc_M00_AXI [get_bd_intf_pins axi_smc/M00_AXI] [get_bd_intf_pins axi_vip_1/S_AXI]
+#   connect_bd_intf_net -intf_net axi_vip_0_M_AXI [get_bd_intf_pins axi_vip_0/M_AXI] [get_bd_intf_pins axi_vip_0_axi_periph/S00_AXI]
+#   connect_bd_intf_net -intf_net axi_vip_0_axi_periph_M00_AXI [get_bd_intf_pins axi_vip_0_axi_periph/M00_AXI] [get_bd_intf_pins ps_axil_0/s_axi]
+#   connect_bd_intf_net -intf_net axi_vip_0_axi_periph_M01_AXI [get_bd_intf_pins axi_vip_0_axi_periph/M01_AXI] [get_bd_intf_pins ps_axil_0/ladma_s]
+#   connect_bd_intf_net -intf_net axi_vip_0_axi_periph_M02_AXI [get_bd_intf_pins axi_vip_0_axi_periph/M02_AXI] [get_bd_intf_pins userdma_0/s_axi_control]
+#   connect_bd_intf_net -intf_net ps_axil_0_ladma_mm [get_bd_intf_pins axi_smc/S00_AXI] [get_bd_intf_pins ps_axil_0/ladma_mm]
+#   connect_bd_intf_net -intf_net ps_axil_0_updma_so [get_bd_intf_pins ps_axil_0/updma_so] [get_bd_intf_pins userdma_0/inStreamTop]
+#   connect_bd_intf_net -intf_net userdma_0_m_axi_gmem0 [get_bd_intf_pins axi_smc_1/S00_AXI] [get_bd_intf_pins userdma_0/m_axi_gmem0]
+#   connect_bd_intf_net -intf_net userdma_0_m_axi_gmem1 [get_bd_intf_pins axi_smc_2/S00_AXI] [get_bd_intf_pins userdma_0/m_axi_gmem1]
+#   connect_bd_intf_net -intf_net userdma_0_outStreamTop [get_bd_intf_pins ps_axil_0/updma_si] [get_bd_intf_pins userdma_0/outStreamTop]
+# 
+#   # Create port connections
+#   connect_bd_net -net blk_mem_gen_0_douta [get_bd_pins blk_mem_gen_0/douta] [get_bd_pins spiflash_0/romcode_Dout_A]
+#   connect_bd_net -net caravel_0_flash_clk [get_bd_pins caravel_0/flash_clk] [get_bd_pins spiflash_0/spiclk]
+#   connect_bd_net -net caravel_0_flash_csb [get_bd_pins caravel_0/flash_csb] [get_bd_pins spiflash_0/csb]
+#   connect_bd_net -net caravel_0_flash_io0 [get_bd_pins caravel_0/flash_io0] [get_bd_pins spiflash_0/io0]
+#   connect_bd_net -net caravel_0_mprj_o [get_bd_pins caravel_0/mprj_o] [get_bd_pins ps_axil_0/caravel_mprj_in]
+#   connect_bd_net -net clk_wiz_0_clk_out1 [get_bd_pins axi_smc/aclk] [get_bd_pins axi_smc_1/aclk] [get_bd_pins axi_smc_2/aclk] [get_bd_pins axi_vip_0/aclk] [get_bd_pins axi_vip_0_axi_periph/ACLK] [get_bd_pins axi_vip_0_axi_periph/M00_ACLK] [get_bd_pins axi_vip_0_axi_periph/M01_ACLK] [get_bd_pins axi_vip_0_axi_periph/M02_ACLK] [get_bd_pins axi_vip_0_axi_periph/S00_ACLK] [get_bd_pins axi_vip_1/aclk] [get_bd_pins axi_vip_2/aclk] [get_bd_pins axi_vip_3/aclk] [get_bd_pins caravel_0/clock] [get_bd_pins clk_wiz_0/clk_out1] [get_bd_pins ps_axil_0/axi_clk] [get_bd_pins ps_axil_0/axi_clk_m] [get_bd_pins ps_axil_0/axi_clk_udso] [get_bd_pins ps_axil_0/axi_clk_usdi] [get_bd_pins ps_axil_0/axis_clk] [get_bd_pins rst_clk_wiz_0_5M/slowest_sync_clk] [get_bd_pins spiflash_0/ap_clk] [get_bd_pins userdma_0/ap_clk]
+#   connect_bd_net -net clk_wiz_0_clk_out2 [get_bd_pins clk_wiz_0/clk_out2] [get_bd_pins ps_axil_0/is_ioclk]
+#   connect_bd_net -net clk_wiz_0_locked [get_bd_pins clk_wiz_0/locked] [get_bd_pins rst_clk_wiz_0_5M/dcm_locked]
+#   connect_bd_net -net ps_axil_0_caravel_mprj_out [get_bd_pins caravel_0/mprj_i] [get_bd_pins ps_axil_0/caravel_mprj_out]
+#   connect_bd_net -net reset_rtl_1 [get_bd_ports sys_reset] [get_bd_pins clk_wiz_0/resetn] [get_bd_pins rst_clk_wiz_0_5M/ext_reset_in]
+#   connect_bd_net -net resetb_0_1 [get_bd_ports resetb_0] [get_bd_pins caravel_0/resetb]
+#   connect_bd_net -net rst_clk_wiz_0_5M_peripheral_aresetn [get_bd_pins axi_smc/aresetn] [get_bd_pins axi_smc_1/aresetn] [get_bd_pins axi_smc_2/aresetn] [get_bd_pins axi_vip_0/aresetn] [get_bd_pins axi_vip_0_axi_periph/ARESETN] [get_bd_pins axi_vip_0_axi_periph/M00_ARESETN] [get_bd_pins axi_vip_0_axi_periph/M01_ARESETN] [get_bd_pins axi_vip_0_axi_periph/M02_ARESETN] [get_bd_pins axi_vip_0_axi_periph/S00_ARESETN] [get_bd_pins axi_vip_1/aresetn] [get_bd_pins axi_vip_2/aresetn] [get_bd_pins axi_vip_3/aresetn] [get_bd_pins ps_axil_0/axi_reset_m_n] [get_bd_pins ps_axil_0/axi_reset_n] [get_bd_pins ps_axil_0/axi_reset_udso_n] [get_bd_pins ps_axil_0/axi_reset_usdi_n] [get_bd_pins ps_axil_0/axis_rst_n] [get_bd_pins rst_clk_wiz_0_5M/peripheral_aresetn] [get_bd_pins userdma_0/ap_rst_n]
+#   connect_bd_net -net rst_clk_wiz_0_5M_peripheral_reset [get_bd_pins rst_clk_wiz_0_5M/peripheral_reset] [get_bd_pins spiflash_0/ap_rst]
+#   connect_bd_net -net spiflash_0_io1 [get_bd_pins caravel_0/flash_io1] [get_bd_pins spiflash_0/io1]
+#   connect_bd_net -net spiflash_0_romcode_Addr_A [get_bd_pins blk_mem_gen_0/addra] [get_bd_pins spiflash_0/romcode_Addr_A]
+#   connect_bd_net -net spiflash_0_romcode_Clk_A [get_bd_pins blk_mem_gen_0/clka] [get_bd_pins spiflash_0/romcode_Clk_A]
+#   connect_bd_net -net spiflash_0_romcode_Din_A [get_bd_pins blk_mem_gen_0/dina] [get_bd_pins spiflash_0/romcode_Din_A]
+#   connect_bd_net -net spiflash_0_romcode_EN_A [get_bd_pins blk_mem_gen_0/ena] [get_bd_pins spiflash_0/romcode_EN_A]
+#   connect_bd_net -net spiflash_0_romcode_Rst_A [get_bd_pins blk_mem_gen_0/rsta] [get_bd_pins spiflash_0/romcode_Rst_A]
+#   connect_bd_net -net spiflash_0_romcode_WEN_A [get_bd_pins blk_mem_gen_0/wea] [get_bd_pins spiflash_0/romcode_WEN_A]
+#   connect_bd_net -net sys_clock_1 [get_bd_ports sys_clock] [get_bd_pins clk_wiz_0/clk_in1]
+# 
+#   # Create address segments
+#   assign_bd_address -offset 0x60000000 -range 0x00008000 -target_address_space [get_bd_addr_spaces axi_vip_0/Master_AXI] [get_bd_addr_segs ps_axil_0/s_axi/reg0] -force
+#   assign_bd_address -offset 0x60008000 -range 0x00001000 -target_address_space [get_bd_addr_spaces axi_vip_0/Master_AXI] [get_bd_addr_segs ps_axil_0/ladma_s/reg0] -force
+#   assign_bd_address -offset 0x60009000 -range 0x00001000 -target_address_space [get_bd_addr_spaces axi_vip_0/Master_AXI] [get_bd_addr_segs userdma_0/s_axi_control/Reg] -force
+#   assign_bd_address -offset 0x44A00000 -range 0x00008000 -target_address_space [get_bd_addr_spaces ps_axil_0/ladma_mm] [get_bd_addr_segs axi_vip_1/S_AXI/Reg] -force
+#   assign_bd_address -offset 0x45000000 -range 0x00080000 -target_address_space [get_bd_addr_spaces userdma_0/Data_m_axi_gmem0] [get_bd_addr_segs axi_vip_2/S_AXI/Reg] -force
+#   assign_bd_address -offset 0x45080000 -range 0x00080000 -target_address_space [get_bd_addr_spaces userdma_0/Data_m_axi_gmem1] [get_bd_addr_segs axi_vip_3/S_AXI/Reg] -force
+# 
+# 
+#   # Restore current instance
+#   current_bd_instance $oldCurInst
+# 
+#   validate_bd_design
+#   save_bd_design
+#   close_bd_design $design_name 
+# }
+# cr_bd_design_1 ""
+INFO: [BD::TCL 103-2010] Currently there is no design <design_1> in project, so creating one...
+Wrote  : </home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.srcs/sources_1/bd/design_1/design_1.bd> 
+INFO: [BD::TCL 103-2011] Checking if the following IPs exist in the project's IP catalog:  
+  xilinx.com:ip:smartconnect:1.0 xilinx.com:ip:axi_vip:1.1 xilinx.com:ip:blk_mem_gen:8.4 xilinx.com:ip:clk_wiz:6.0 xilinx.com:ip:proc_sys_reset:5.0 xilinx.com:hls:userdma:1.0  .
+INFO: [BD::TCL 103-2020] Checking if the following modules exist in the project's sources:  
+  caravel ps_axil spiflash  .
+INFO: [IP_Flow 19-3484] Absolute path of file '/home/ubuntu/fsic_fpga/vivado/fsic.coe' provided. It will be converted relative to IP Instance files '../../../../../../../fsic.coe'
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clock' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'flash_clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-5661] Bus Interface 'clock' does not have any bus interfaces associated with it.
+WARNING: [IP_Flow 19-5661] Bus Interface 'flash_clk' does not have any bus interfaces associated with it.
+CRITICAL WARNING: [IP_Flow 19-4751] Bus Interface 'flash_clk': FREQ_HZ bus parameter is missing for output clock interface.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/ubuntu/fsic_fpga/vivado/vitis_prj/hls_caravel_ps'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/ubuntu/fsic_fpga/vivado/vitis_prj/hls_output_pin'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/ubuntu/fsic_fpga/vivado/vitis_prj/hls_read_romcode'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/ubuntu/fsic_fpga/vivado/vitis_prj/hls_userdma'.
+WARNING: [IP_Flow 19-3374] An attempt to modify the value of disabled parameter 'MMCM_DIVCLK_DIVIDE' from '5' to '25' has been ignored for IP 'clk_wiz_0'
+WARNING: [IP_Flow 19-3374] An attempt to modify the value of disabled parameter 'MMCM_CLKFBOUT_MULT_F' from '32.000' to '64.000' has been ignored for IP 'clk_wiz_0'
+WARNING: [IP_Flow 19-3374] An attempt to modify the value of disabled parameter 'MMCM_CLKIN1_PERIOD' from '10.000' to '4.000' has been ignored for IP 'clk_wiz_0'
+WARNING: [IP_Flow 19-3374] An attempt to modify the value of disabled parameter 'MMCM_CLKIN2_PERIOD' from '10.000' to '10.0' has been ignored for IP 'clk_wiz_0'
+INFO: [IP_Flow 19-5107] Inferred bus interface 'axi_clk' of definition 'xilinx.com:signal:clock:1.0' (from X_INTERFACE_INFO parameter from HDL file).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'axi_clk' of definition 'xilinx.com:signal:clock:1.0' (from 'X_INTERFACE_INFO' attribute).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'axi_clk_m' of definition 'xilinx.com:signal:clock:1.0' (from X_INTERFACE_INFO parameter from HDL file).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'axi_clk_m' of definition 'xilinx.com:signal:clock:1.0' (from 'X_INTERFACE_INFO' attribute).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'axi_clk_udsi' of definition 'xilinx.com:signal:clock:1.0' (from X_INTERFACE_INFO parameter from HDL file).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'axi_clk_udsi' of definition 'xilinx.com:signal:clock:1.0' (from 'X_INTERFACE_INFO' attribute).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'axi_clk_udso' of definition 'xilinx.com:signal:clock:1.0' (from X_INTERFACE_INFO parameter from HDL file).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'axi_clk_udso' of definition 'xilinx.com:signal:clock:1.0' (from 'X_INTERFACE_INFO' attribute).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'axis_clk' of definition 'xilinx.com:signal:clock:1.0' (from X_INTERFACE_INFO parameter from HDL file).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'axis_clk' of definition 'xilinx.com:signal:clock:1.0' (from 'X_INTERFACE_INFO' attribute).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'updma_si' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'updma_so' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'ladma_mm' of definition 'xilinx.com:interface:aximm:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'ladma_s' of definition 'xilinx.com:interface:aximm:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's_axi' of definition 'xilinx.com:interface:aximm:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'axis_rst_n' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'aa_mb_irq' of definition 'xilinx.com:signal:interrupt:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'ladma_interrupt' of definition 'xilinx.com:signal:interrupt:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'axis_rst_n': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4728] Bus Interface 'aa_mb_irq': Added interface parameter 'SENSITIVITY' with value 'LEVEL_HIGH'.
+INFO: [IP_Flow 19-4728] Bus Interface 'ladma_interrupt': Added interface parameter 'SENSITIVITY' with value 'LEVEL_HIGH'.
+INFO: [IP_Flow 19-4728] Bus Interface 'axi_clk': Added interface parameter 'ASSOCIATED_BUSIF' with value 's_axi'.
+INFO: [IP_Flow 19-4728] Bus Interface 'axi_clk': Added interface parameter 'ASSOCIATED_RESET' with value 'axi_reset_n'.
+INFO: [IP_Flow 19-4728] Bus Interface 'axi_clk': Added interface parameter 'FREQ_HZ' with value '5000000'.
+INFO: [IP_Flow 19-4728] Bus Interface 'axi_clk_m': Added interface parameter 'ASSOCIATED_BUSIF' with value 'ladma_mm'.
+INFO: [IP_Flow 19-4728] Bus Interface 'axi_clk_m': Added interface parameter 'ASSOCIATED_RESET' with value 'axi_reset_m_n'.
+INFO: [IP_Flow 19-4728] Bus Interface 'axi_clk_m': Added interface parameter 'FREQ_HZ' with value '5000000'.
+INFO: [IP_Flow 19-4728] Bus Interface 'axi_clk_udsi': Added interface parameter 'ASSOCIATED_BUSIF' with value 'updma_si'.
+INFO: [IP_Flow 19-4728] Bus Interface 'axi_clk_udsi': Added interface parameter 'ASSOCIATED_RESET' with value 'axis_rst_n'.
+INFO: [IP_Flow 19-4728] Bus Interface 'axi_clk_udsi': Added interface parameter 'FREQ_HZ' with value '5000000'.
+INFO: [IP_Flow 19-4728] Bus Interface 'axi_clk_udso': Added interface parameter 'ASSOCIATED_BUSIF' with value 'updma_so'.
+INFO: [IP_Flow 19-4728] Bus Interface 'axi_clk_udso': Added interface parameter 'ASSOCIATED_RESET' with value 'axis_rst_n'.
+INFO: [IP_Flow 19-4728] Bus Interface 'axi_clk_udso': Added interface parameter 'FREQ_HZ' with value '5000000'.
+INFO: [IP_Flow 19-4728] Bus Interface 'axis_clk': Added interface parameter 'ASSOCIATED_BUSIF' with value 'ladma_s'.
+INFO: [IP_Flow 19-4728] Bus Interface 'axis_clk': Added interface parameter 'ASSOCIATED_RESET' with value 'axis_rst_n'.
+INFO: [IP_Flow 19-4728] Bus Interface 'axis_clk': Added interface parameter 'FREQ_HZ' with value '5000000'.
+INFO: [IP_Flow 19-7067] Note that bus interface 'axi_clk' has a fixed FREQ_HZ of '5000000'. This value will be respected whenever this IP is instantiated in IP Integrator.
+INFO: [IP_Flow 19-7067] Note that bus interface 'axi_clk_m' has a fixed FREQ_HZ of '5000000'. This value will be respected whenever this IP is instantiated in IP Integrator.
+INFO: [IP_Flow 19-7067] Note that bus interface 'axi_clk_udsi' has a fixed FREQ_HZ of '5000000'. This value will be respected whenever this IP is instantiated in IP Integrator.
+INFO: [IP_Flow 19-7067] Note that bus interface 'axi_clk_udso' has a fixed FREQ_HZ of '5000000'. This value will be respected whenever this IP is instantiated in IP Integrator.
+INFO: [IP_Flow 19-7067] Note that bus interface 'axis_clk' has a fixed FREQ_HZ of '5000000'. This value will be respected whenever this IP is instantiated in IP Integrator.
+WARNING: [IP_Flow 19-3157] Bus Interface 'axis_rst_n': Bus parameter POLARITY is ACTIVE_LOW but port 'axis_rst_n' is not *resetn - please double check the POLARITY setting.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/ubuntu/fsic_fpga/vivado/vitis_prj/hls_caravel_ps'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/ubuntu/fsic_fpga/vivado/vitis_prj/hls_output_pin'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/ubuntu/fsic_fpga/vivado/vitis_prj/hls_read_romcode'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/ubuntu/fsic_fpga/vivado/vitis_prj/hls_userdma'.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'ap_rst' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'ap_clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'ap_clk': Added interface parameter 'ASSOCIATED_RESET' with value 'ap_rst'.
+WARNING: [IP_Flow 19-5661] Bus Interface 'ap_clk' does not have any bus interfaces associated with it.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/ubuntu/fsic_fpga/vivado/vitis_prj/hls_caravel_ps'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/ubuntu/fsic_fpga/vivado/vitis_prj/hls_output_pin'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/ubuntu/fsic_fpga/vivado/vitis_prj/hls_read_romcode'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/ubuntu/fsic_fpga/vivado/vitis_prj/hls_userdma'.
+WARNING: [BD 41-1306] The connection to interface pin </blk_mem_gen_0/douta> is being overridden by the user with net <blk_mem_gen_0_douta>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </blk_mem_gen_0/addra> is being overridden by the user with net <spiflash_0_romcode_Addr_A>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </blk_mem_gen_0/clka> is being overridden by the user with net <spiflash_0_romcode_Clk_A>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </blk_mem_gen_0/dina> is being overridden by the user with net <spiflash_0_romcode_Din_A>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </blk_mem_gen_0/ena> is being overridden by the user with net <spiflash_0_romcode_EN_A>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </blk_mem_gen_0/rsta> is being overridden by the user with net <spiflash_0_romcode_Rst_A>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </blk_mem_gen_0/wea> is being overridden by the user with net <spiflash_0_romcode_WEN_A>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+Slave segment '/ps_axil_0/s_axi/reg0' is being assigned into address space '/axi_vip_0/Master_AXI' at <0x6000_0000 [ 32K ]>.
+Slave segment '/ps_axil_0/ladma_s/reg0' is being assigned into address space '/axi_vip_0/Master_AXI' at <0x6000_8000 [ 4K ]>.
+Slave segment '/userdma_0/s_axi_control/Reg' is being assigned into address space '/axi_vip_0/Master_AXI' at <0x6000_9000 [ 4K ]>.
+Slave segment '/axi_vip_1/S_AXI/Reg' is being assigned into address space '/ps_axil_0/ladma_mm' at <0x44A0_0000 [ 32K ]>.
+Slave segment '/axi_vip_2/S_AXI/Reg' is being assigned into address space '/userdma_0/Data_m_axi_gmem0' at <0x4500_0000 [ 512K ]>.
+Slave segment '/axi_vip_3/S_AXI/Reg' is being assigned into address space '/userdma_0/Data_m_axi_gmem1' at <0x4508_0000 [ 512K ]>.
+INFO: [xilinx.com:ip:smartconnect:1.0-1] design_1_axi_smc_0: SmartConnect design_1_axi_smc_0 is in High-performance Mode.
+CRITICAL WARNING: [xilinx.com:ip:smartconnect:1.0-1] design_1_axi_smc_0: RUSER_WIDTH (1) of S00_AXI must be integer number of bits per byte of RDATA (32).
+CRITICAL WARNING: [xilinx.com:ip:smartconnect:1.0-1] design_1_axi_smc_0: WUSER_WIDTH (1) of S00_AXI must be integer number of bits per byte of WDATA (32).
+INFO: [xilinx.com:ip:smartconnect:1.0-1] design_1_axi_smc_1_0: SmartConnect design_1_axi_smc_1_0 is in High-performance Mode.
+INFO: [xilinx.com:ip:smartconnect:1.0-1] design_1_axi_smc_2_0: SmartConnect design_1_axi_smc_2_0 is in High-performance Mode.
+WARNING: [BD 41-2180] Resetting the memory initialization file of </blk_mem_gen_0> to default.
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+WARNING: [BD 41-927] Following properties on pin /userdma_0/ap_clk have been updated from connected ip, but BD cell '/userdma_0' does not accept parameter changes, so they may not be synchronized with cell properties:
+	FREQ_HZ = 5000000 
+Please resolve any mismatches by directly setting properties on BD cell </userdma_0> to completely resolve these warnings.
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. These pins are tied-off to all 0's to avoid error in Implementation flow.
+Please check your design and connect them as needed: 
+/ps_axil_0/qspi_io0_i
+/ps_axil_0/qspi_sck_i
+/ps_axil_0/qspi_ss_i
+
+Wrote  : </home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.srcs/sources_1/bd/design_1/design_1.bd> 
+# set_property REGISTERED_WITH_MANAGER "1" [get_files design_1.bd ] 
+# set_property SYNTH_CHECKPOINT_MODE "Hierarchical" [get_files design_1.bd ] 
+# if { [get_property IS_LOCKED [ get_files -norecurse design_1.bd] ] == 1  } {
+#   import_files -fileset sources_1 [file normalize "${origin_dir}/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v" ]
+# } else {
+#   set wrapper_path [make_wrapper -fileset sources_1 -files [ get_files -norecurse design_1.bd] -top]
+#   add_files -norecurse -fileset sources_1 $wrapper_path
+# }
+INFO: [BD 41-1662] The design 'design_1.bd' is already validated. Therefore parameter propagation will not be re-run.
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. These pins are tied-off to all 0's to avoid error in Implementation flow.
+Please check your design and connect them as needed: 
+/ps_axil_0/qspi_io0_i
+/ps_axil_0/qspi_sck_i
+/ps_axil_0/qspi_ss_i
+
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_smc/S00_AXI_awlock'(1) to pin: '/ps_axil_0/ladma_mm_awlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_smc/S00_AXI_arlock'(1) to pin: '/ps_axil_0/ladma_mm_arlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_smc_1/S00_AXI_awlock'(1) to pin: '/userdma_0/m_axi_gmem0_AWLOCK'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_smc_2/S00_AXI_arlock'(1) to pin: '/userdma_0/m_axi_gmem1_ARLOCK'(2) - Only lower order bits will be connected.
+Verilog Output written to : /home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/synth/design_1.v
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_smc/S00_AXI_awlock'(1) to pin: '/ps_axil_0/ladma_mm_awlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_smc/S00_AXI_arlock'(1) to pin: '/ps_axil_0/ladma_mm_arlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_smc_1/S00_AXI_awlock'(1) to pin: '/userdma_0/m_axi_gmem0_AWLOCK'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_smc_2/S00_AXI_arlock'(1) to pin: '/userdma_0/m_axi_gmem1_ARLOCK'(2) - Only lower order bits will be connected.
+Verilog Output written to : /home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/sim/design_1.v
+Verilog Output written to : /home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v
+# set idrFlowPropertiesConstraints ""
+# catch {
+#  set idrFlowPropertiesConstraints [get_param runs.disableIDRFlowPropertyConstraints]
+#  set_param runs.disableIDRFlowPropertyConstraints 1
+# }
+# if {[string equal [get_runs -quiet synth_1] ""]} {
+#     create_run -name synth_1 -part xc7z020clg400-1 -flow {Vivado Synthesis 2020} -strategy "Vivado Synthesis Defaults" -report_strategy {No Reports} -constrset constrs_1
+# } else {
+#   set_property strategy "Vivado Synthesis Defaults" [get_runs synth_1]
+#   set_property flow "Vivado Synthesis 2020" [get_runs synth_1]
+# }
+# set obj [get_runs synth_1]
+# set_property set_report_strategy_name 1 $obj
+# set_property report_strategy {Vivado Synthesis Default Reports} $obj
+# set_property set_report_strategy_name 0 $obj
+# if { [ string equal [get_report_configs -of_objects [get_runs synth_1] synth_1_synth_report_utilization_0] "" ] } {
+#   create_report_config -report_name synth_1_synth_report_utilization_0 -report_type report_utilization:1.0 -steps synth_design -runs synth_1
+# }
+# set obj [get_report_configs -of_objects [get_runs synth_1] synth_1_synth_report_utilization_0]
+# if { $obj != "" } {
+# 
+# }
+# set obj [get_runs synth_1]
+# set_property -name "auto_incremental_checkpoint" -value "1" -objects $obj
+# set_property -name "strategy" -value "Vivado Synthesis Defaults" -objects $obj
+# current_run -synthesis [get_runs synth_1]
+# if {[string equal [get_runs -quiet impl_1] ""]} {
+#     create_run -name impl_1 -part xc7z020clg400-1 -flow {Vivado Implementation 2020} -strategy "Vivado Implementation Defaults" -report_strategy {No Reports} -constrset constrs_1 -parent_run synth_1
+# } else {
+#   set_property strategy "Vivado Implementation Defaults" [get_runs impl_1]
+#   set_property flow "Vivado Implementation 2020" [get_runs impl_1]
+# }
+# set obj [get_runs impl_1]
+# set_property set_report_strategy_name 1 $obj
+# set_property report_strategy {Vivado Implementation Default Reports} $obj
+# set_property set_report_strategy_name 0 $obj
+# if { [ string equal [get_report_configs -of_objects [get_runs impl_1] impl_1_init_report_timing_summary_0] "" ] } {
+#   create_report_config -report_name impl_1_init_report_timing_summary_0 -report_type report_timing_summary:1.0 -steps init_design -runs impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs impl_1] impl_1_init_report_timing_summary_0]
+# if { $obj != "" } {
+# set_property -name "is_enabled" -value "0" -objects $obj
+# set_property -name "options.max_paths" -value "10" -objects $obj
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs impl_1] impl_1_opt_report_drc_0] "" ] } {
+#   create_report_config -report_name impl_1_opt_report_drc_0 -report_type report_drc:1.0 -steps opt_design -runs impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs impl_1] impl_1_opt_report_drc_0]
+# if { $obj != "" } {
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs impl_1] impl_1_opt_report_timing_summary_0] "" ] } {
+#   create_report_config -report_name impl_1_opt_report_timing_summary_0 -report_type report_timing_summary:1.0 -steps opt_design -runs impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs impl_1] impl_1_opt_report_timing_summary_0]
+# if { $obj != "" } {
+# set_property -name "is_enabled" -value "0" -objects $obj
+# set_property -name "options.max_paths" -value "10" -objects $obj
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs impl_1] impl_1_power_opt_report_timing_summary_0] "" ] } {
+#   create_report_config -report_name impl_1_power_opt_report_timing_summary_0 -report_type report_timing_summary:1.0 -steps power_opt_design -runs impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs impl_1] impl_1_power_opt_report_timing_summary_0]
+# if { $obj != "" } {
+# set_property -name "is_enabled" -value "0" -objects $obj
+# set_property -name "options.max_paths" -value "10" -objects $obj
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs impl_1] impl_1_place_report_io_0] "" ] } {
+#   create_report_config -report_name impl_1_place_report_io_0 -report_type report_io:1.0 -steps place_design -runs impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs impl_1] impl_1_place_report_io_0]
+# if { $obj != "" } {
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs impl_1] impl_1_place_report_utilization_0] "" ] } {
+#   create_report_config -report_name impl_1_place_report_utilization_0 -report_type report_utilization:1.0 -steps place_design -runs impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs impl_1] impl_1_place_report_utilization_0]
+# if { $obj != "" } {
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs impl_1] impl_1_place_report_control_sets_0] "" ] } {
+#   create_report_config -report_name impl_1_place_report_control_sets_0 -report_type report_control_sets:1.0 -steps place_design -runs impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs impl_1] impl_1_place_report_control_sets_0]
+# if { $obj != "" } {
+# set_property -name "options.verbose" -value "1" -objects $obj
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs impl_1] impl_1_place_report_incremental_reuse_0] "" ] } {
+#   create_report_config -report_name impl_1_place_report_incremental_reuse_0 -report_type report_incremental_reuse:1.0 -steps place_design -runs impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs impl_1] impl_1_place_report_incremental_reuse_0]
+# if { $obj != "" } {
+# set_property -name "is_enabled" -value "0" -objects $obj
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs impl_1] impl_1_place_report_incremental_reuse_1] "" ] } {
+#   create_report_config -report_name impl_1_place_report_incremental_reuse_1 -report_type report_incremental_reuse:1.0 -steps place_design -runs impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs impl_1] impl_1_place_report_incremental_reuse_1]
+# if { $obj != "" } {
+# set_property -name "is_enabled" -value "0" -objects $obj
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs impl_1] impl_1_place_report_timing_summary_0] "" ] } {
+#   create_report_config -report_name impl_1_place_report_timing_summary_0 -report_type report_timing_summary:1.0 -steps place_design -runs impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs impl_1] impl_1_place_report_timing_summary_0]
+# if { $obj != "" } {
+# set_property -name "is_enabled" -value "0" -objects $obj
+# set_property -name "options.max_paths" -value "10" -objects $obj
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs impl_1] impl_1_post_place_power_opt_report_timing_summary_0] "" ] } {
+#   create_report_config -report_name impl_1_post_place_power_opt_report_timing_summary_0 -report_type report_timing_summary:1.0 -steps post_place_power_opt_design -runs impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs impl_1] impl_1_post_place_power_opt_report_timing_summary_0]
+# if { $obj != "" } {
+# set_property -name "is_enabled" -value "0" -objects $obj
+# set_property -name "options.max_paths" -value "10" -objects $obj
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs impl_1] impl_1_phys_opt_report_timing_summary_0] "" ] } {
+#   create_report_config -report_name impl_1_phys_opt_report_timing_summary_0 -report_type report_timing_summary:1.0 -steps phys_opt_design -runs impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs impl_1] impl_1_phys_opt_report_timing_summary_0]
+# if { $obj != "" } {
+# set_property -name "is_enabled" -value "0" -objects $obj
+# set_property -name "options.max_paths" -value "10" -objects $obj
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs impl_1] impl_1_route_report_drc_0] "" ] } {
+#   create_report_config -report_name impl_1_route_report_drc_0 -report_type report_drc:1.0 -steps route_design -runs impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs impl_1] impl_1_route_report_drc_0]
+# if { $obj != "" } {
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs impl_1] impl_1_route_report_methodology_0] "" ] } {
+#   create_report_config -report_name impl_1_route_report_methodology_0 -report_type report_methodology:1.0 -steps route_design -runs impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs impl_1] impl_1_route_report_methodology_0]
+# if { $obj != "" } {
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs impl_1] impl_1_route_report_power_0] "" ] } {
+#   create_report_config -report_name impl_1_route_report_power_0 -report_type report_power:1.0 -steps route_design -runs impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs impl_1] impl_1_route_report_power_0]
+# if { $obj != "" } {
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs impl_1] impl_1_route_report_route_status_0] "" ] } {
+#   create_report_config -report_name impl_1_route_report_route_status_0 -report_type report_route_status:1.0 -steps route_design -runs impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs impl_1] impl_1_route_report_route_status_0]
+# if { $obj != "" } {
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs impl_1] impl_1_route_report_timing_summary_0] "" ] } {
+#   create_report_config -report_name impl_1_route_report_timing_summary_0 -report_type report_timing_summary:1.0 -steps route_design -runs impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs impl_1] impl_1_route_report_timing_summary_0]
+# if { $obj != "" } {
+# set_property -name "options.max_paths" -value "10" -objects $obj
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs impl_1] impl_1_route_report_incremental_reuse_0] "" ] } {
+#   create_report_config -report_name impl_1_route_report_incremental_reuse_0 -report_type report_incremental_reuse:1.0 -steps route_design -runs impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs impl_1] impl_1_route_report_incremental_reuse_0]
+# if { $obj != "" } {
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs impl_1] impl_1_route_report_clock_utilization_0] "" ] } {
+#   create_report_config -report_name impl_1_route_report_clock_utilization_0 -report_type report_clock_utilization:1.0 -steps route_design -runs impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs impl_1] impl_1_route_report_clock_utilization_0]
+# if { $obj != "" } {
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs impl_1] impl_1_route_report_bus_skew_0] "" ] } {
+#   create_report_config -report_name impl_1_route_report_bus_skew_0 -report_type report_bus_skew:1.1 -steps route_design -runs impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs impl_1] impl_1_route_report_bus_skew_0]
+# if { $obj != "" } {
+# set_property -name "options.warn_on_violation" -value "1" -objects $obj
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs impl_1] impl_1_post_route_phys_opt_report_timing_summary_0] "" ] } {
+#   create_report_config -report_name impl_1_post_route_phys_opt_report_timing_summary_0 -report_type report_timing_summary:1.0 -steps post_route_phys_opt_design -runs impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs impl_1] impl_1_post_route_phys_opt_report_timing_summary_0]
+# if { $obj != "" } {
+# set_property -name "options.max_paths" -value "10" -objects $obj
+# set_property -name "options.warn_on_violation" -value "1" -objects $obj
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs impl_1] impl_1_post_route_phys_opt_report_bus_skew_0] "" ] } {
+#   create_report_config -report_name impl_1_post_route_phys_opt_report_bus_skew_0 -report_type report_bus_skew:1.1 -steps post_route_phys_opt_design -runs impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs impl_1] impl_1_post_route_phys_opt_report_bus_skew_0]
+# if { $obj != "" } {
+# set_property -name "options.warn_on_violation" -value "1" -objects $obj
+# 
+# }
+# set obj [get_runs impl_1]
+# set_property -name "strategy" -value "Vivado Implementation Defaults" -objects $obj
+# set_property -name "steps.write_bitstream.args.readback_file" -value "0" -objects $obj
+# set_property -name "steps.write_bitstream.args.verbose" -value "0" -objects $obj
+# current_run -implementation [get_runs impl_1]
+# catch {
+#  if { $idrFlowPropertiesConstraints != {} } {
+#    set_param runs.disableIDRFlowPropertyConstraints $idrFlowPropertiesConstraints
+#  }
+# }
+# puts "INFO: Project created:${_xil_proj_name_}"
+INFO: Project created:vvd_caravel_fpga_sim
+# if {[string equal [get_dashboard_gadgets  [ list "drc_1" ] ] ""]} {
+# create_dashboard_gadget -name {drc_1} -type drc
+# }
+# set obj [get_dashboard_gadgets [ list "drc_1" ] ]
+# set_property -name "reports" -value "impl_1#impl_1_route_report_drc_0" -objects $obj
+# if {[string equal [get_dashboard_gadgets  [ list "methodology_1" ] ] ""]} {
+# create_dashboard_gadget -name {methodology_1} -type methodology
+# }
+# set obj [get_dashboard_gadgets [ list "methodology_1" ] ]
+# set_property -name "reports" -value "impl_1#impl_1_route_report_methodology_0" -objects $obj
+# if {[string equal [get_dashboard_gadgets  [ list "power_1" ] ] ""]} {
+# create_dashboard_gadget -name {power_1} -type power
+# }
+# set obj [get_dashboard_gadgets [ list "power_1" ] ]
+# set_property -name "reports" -value "impl_1#impl_1_route_report_power_0" -objects $obj
+# if {[string equal [get_dashboard_gadgets  [ list "timing_1" ] ] ""]} {
+# create_dashboard_gadget -name {timing_1} -type timing
+# }
+# set obj [get_dashboard_gadgets [ list "timing_1" ] ]
+# set_property -name "reports" -value "impl_1#impl_1_route_report_timing_summary_0" -objects $obj
+# if {[string equal [get_dashboard_gadgets  [ list "utilization_1" ] ] ""]} {
+# create_dashboard_gadget -name {utilization_1} -type utilization
+# }
+# set obj [get_dashboard_gadgets [ list "utilization_1" ] ]
+# set_property -name "reports" -value "synth_1#synth_1_synth_report_utilization_0" -objects $obj
+# set_property -name "run.step" -value "synth_design" -objects $obj
+# set_property -name "run.type" -value "synthesis" -objects $obj
+# if {[string equal [get_dashboard_gadgets  [ list "utilization_2" ] ] ""]} {
+# create_dashboard_gadget -name {utilization_2} -type utilization
+# }
+# set obj [get_dashboard_gadgets [ list "utilization_2" ] ]
+# set_property -name "reports" -value "impl_1#impl_1_place_report_utilization_0" -objects $obj
+# move_dashboard_gadget -name {utilization_1} -row 0 -col 0
+# move_dashboard_gadget -name {power_1} -row 1 -col 0
+# move_dashboard_gadget -name {drc_1} -row 2 -col 0
+# move_dashboard_gadget -name {timing_1} -row 0 -col 1
+# move_dashboard_gadget -name {utilization_2} -row 1 -col 1
+# move_dashboard_gadget -name {methodology_1} -row 2 -col 1
+# set_property target_simulator "XSim" [current_project]  
+# launch_simulation -mode behavioral
+Command: launch_simulation  -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'fsic_tb'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Runs 36-567] Checking/generating simulation output products for IPs/BDs (if any)...
+INFO: [BD 41-1662] The design 'design_1.bd' is already validated. Therefore parameter propagation will not be re-run.
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. These pins are tied-off to all 0's to avoid error in Implementation flow.
+Please check your design and connect them as needed: 
+/ps_axil_0/qspi_io0_i
+/ps_axil_0/qspi_sck_i
+/ps_axil_0/qspi_ss_i
+
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_smc/S00_AXI_awlock'(1) to pin: '/ps_axil_0/ladma_mm_awlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_smc/S00_AXI_arlock'(1) to pin: '/ps_axil_0/ladma_mm_arlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_smc_1/S00_AXI_awlock'(1) to pin: '/userdma_0/m_axi_gmem0_AWLOCK'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_smc_2/S00_AXI_arlock'(1) to pin: '/userdma_0/m_axi_gmem1_ARLOCK'(2) - Only lower order bits will be connected.
+Verilog Output written to : /home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/synth/design_1.v
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_smc/S00_AXI_awlock'(1) to pin: '/ps_axil_0/ladma_mm_awlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_smc/S00_AXI_arlock'(1) to pin: '/ps_axil_0/ladma_mm_arlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_smc_1/S00_AXI_awlock'(1) to pin: '/userdma_0/m_axi_gmem0_AWLOCK'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_smc_2/S00_AXI_arlock'(1) to pin: '/userdma_0/m_axi_gmem1_ARLOCK'(2) - Only lower order bits will be connected.
+Verilog Output written to : /home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/sim/design_1.v
+Verilog Output written to : /home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v
+Exporting to file /home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/hw_handoff/design_1_axi_smc_0.hwh
+Generated Hardware Definition File /home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/design_1_axi_smc_0.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_smc .
+Exporting to file /home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1_0/bd_0/hw_handoff/design_1_axi_smc_1_0.hwh
+Generated Hardware Definition File /home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1_0/bd_0/synth/design_1_axi_smc_1_0.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_smc_1 .
+Exporting to file /home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2_0/bd_0/hw_handoff/design_1_axi_smc_2_0.hwh
+Generated Hardware Definition File /home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2_0/bd_0/synth/design_1_axi_smc_2_0.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_smc_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_vip_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_vip_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_vip_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_vip_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_vip_3 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block blk_mem_gen_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block caravel_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_wiz_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps_axil_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_clk_wiz_0_5M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block spiflash_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block userdma_0 .
+Exporting to file /home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Hardware Definition File /home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/synth/design_1.hwdef
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/tools/Xilinx/Vivado/2022.1/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/tools/Xilinx/Vivado/2022.1/data/xsim/xsim.ini' copied to run dir:'/home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'fsic_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported '/home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.sim/sim_1/behav/xsim/sc_xtlm_design_1_axi_smc_0.mem'
+INFO: [SIM-utils-43] Exported '/home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.sim/sim_1/behav/xsim/sc_xtlm_design_1_axi_smc_1_0.mem'
+INFO: [SIM-utils-43] Exported '/home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.sim/sim_1/behav/xsim/sc_xtlm_design_1_axi_smc_2_0.mem'
+INFO: [SIM-utils-43] Exported '/home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.sim/sim_1/behav/xsim/fsic.coe'
+INFO: [SIM-utils-43] Exported '/home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.sim/sim_1/behav/xsim/design_1_blk_mem_gen_0_0.mif'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.sim/sim_1/behav/xsim'
+xvlog --incr --relax -L uvm -L axi_vip_v1_1_12 -L smartconnect_v1_0 -L xilinx_vip -prj fsic_tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_srcs/caravel_soc/rtl/header/user_defines.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_srcs/caravel_soc/rtl/header/defines.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/fsic_defines.v" into library xil_defaultlib
+WARNING: [VRFC 10-3381] ignoring re-definition of command line macro 'USER_PROJECT_SIDEBAND_SUPPORT' [/home/ubuntu/fsic_fpga/vivado/fsic_defines.v:4]
+WARNING: [VRFC 10-3381] ignoring re-definition of command line macro 'USE_EDGEDETECT_IP' [/home/ubuntu/fsic_fpga/vivado/fsic_defines.v:5]
+WARNING: [VRFC 10-3381] ignoring re-definition of command line macro 'pSERIALIO_WIDTH' [/home/ubuntu/fsic_fpga/vivado/fsic_defines.v:6]
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_srcs/caravel_soc/rtl/user/logic_analyzer/rtl/LogicAnalyzer.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LOGIC_ANLZ
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_srcs/caravel_soc/vip/RAM128.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RAM128
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_srcs/caravel_soc/vip/RAM256.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RAM256
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_srcs/caravel_soc/rtl/user/logic_analyzer/rtl/Sram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sram
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/VexRiscv_MinDebugCache.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module VexRiscv
+INFO: [VRFC 10-311] analyzing module InstructionCache
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/axil_slav/rtl/axil_slav.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AXIL_SLAV
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/axis_mstr/rtl/axis_mstr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AXIS_MSTR
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/axis_slav/rtl/axis_slav.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AXIS_SLAV
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/chip_io.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module chip_io
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ccs_in_wait_coupled_v1
+INFO: [VRFC 10-311] analyzing module ccs_in_wait_v1
+INFO: [VRFC 10-311] analyzing module ccs_out_wait_v1
+INFO: [VRFC 10-311] analyzing module mgc_io_sync_v2
+INFO: [VRFC 10-311] analyzing module ccs_out_v1
+INFO: [VRFC 10-311] analyzing module ccs_genreg_v1
+INFO: [VRFC 10-311] analyzing module ccs_fifo_wait_core_v5
+INFO: [VRFC 10-311] analyzing module ccs_pipe_v6
+INFO: [VRFC 10-311] analyzing module EdgeDetect_VerDer_ccs_sample_mem_ccs_ram_sync_singleport_rwport_en_7_64_7_80_80_64_5_gen
+INFO: [VRFC 10-311] analyzing module EdgeDetect_VerDer_ccs_sample_mem_ccs_ram_sync_singleport_rwport_en_6_64_7_80_80_64_5_gen
+INFO: [VRFC 10-311] analyzing module EdgeDetect_VerDer_run_run_fsm
+INFO: [VRFC 10-311] analyzing module EdgeDetect_VerDer_run_staller
+INFO: [VRFC 10-311] analyzing module EdgeDetect_VerDer_run_wait_dp
+INFO: [VRFC 10-311] analyzing module EdgeDetect_VerDer_run_dy_rsci_dy_wait_dp
+INFO: [VRFC 10-311] analyzing module EdgeDetect_VerDer_run_dy_rsci_dy_wait_ctrl
+INFO: [VRFC 10-311] analyzing module EdgeDetect_VerDer_run_pix_out_rsci_pix_out_wait_dp
+INFO: [VRFC 10-311] analyzing module EdgeDetect_VerDer_run_pix_out_rsci_pix_out_wait_ctrl
+INFO: [VRFC 10-311] analyzing module EdgeDetect_VerDer_run_dat_in_rsci_dat_in_wait_dp
+INFO: [VRFC 10-311] analyzing module EdgeDetect_VerDer_run_dat_in_rsci_dat_in_wait_ctrl
+INFO: [VRFC 10-311] analyzing module EdgeDetect_HorDer_run_run_fsm
+INFO: [VRFC 10-311] analyzing module EdgeDetect_HorDer_run_staller
+INFO: [VRFC 10-311] analyzing module EdgeDetect_HorDer_run_dx_rsci_dx_wait_dp
+INFO: [VRFC 10-311] analyzing module EdgeDetect_HorDer_run_dx_rsci_dx_wait_ctrl
+INFO: [VRFC 10-311] analyzing module EdgeDetect_HorDer_run_pix_out_rsci_pix_out_wait_dp
+INFO: [VRFC 10-311] analyzing module EdgeDetect_HorDer_run_pix_out_rsci_pix_out_wait_ctrl
+INFO: [VRFC 10-311] analyzing module EdgeDetect_HorDer_run_pix_in_rsci_pix_in_wait_ctrl
+INFO: [VRFC 10-311] analyzing module EdgeDetect_MagAng_run_run_fsm
+INFO: [VRFC 10-311] analyzing module EdgeDetect_MagAng_run_staller
+INFO: [VRFC 10-311] analyzing module EdgeDetect_MagAng_run_crc32_dat_out_triosy_obj_crc32_dat_out_triosy_wait_ctrl
+INFO: [VRFC 10-311] analyzing module EdgeDetect_MagAng_run_crc32_pix_in_triosy_obj_crc32_pix_in_triosy_wait_ctrl
+INFO: [VRFC 10-311] analyzing module EdgeDetect_MagAng_run_dat_out_rsci_dat_out_wait_dp
+INFO: [VRFC 10-311] analyzing module EdgeDetect_MagAng_run_dat_out_rsci_dat_out_wait_ctrl
+INFO: [VRFC 10-311] analyzing module EdgeDetect_MagAng_run_pix_in_rsci_pix_in_wait_dp
+INFO: [VRFC 10-311] analyzing module EdgeDetect_MagAng_run_pix_in_rsci_pix_in_wait_ctrl
+INFO: [VRFC 10-311] analyzing module EdgeDetect_MagAng_run_dy_in_rsci_dy_in_wait_ctrl
+INFO: [VRFC 10-311] analyzing module EdgeDetect_MagAng_run_dx_in_rsci_dx_in_wait_ctrl
+INFO: [VRFC 10-311] analyzing module EdgeDetect_VerDer_run_dy_rsci
+INFO: [VRFC 10-311] analyzing module EdgeDetect_VerDer_run_pix_out_rsci
+INFO: [VRFC 10-311] analyzing module EdgeDetect_VerDer_run_dat_in_rsci
+INFO: [VRFC 10-311] analyzing module EdgeDetect_HorDer_run_dx_rsci
+INFO: [VRFC 10-311] analyzing module EdgeDetect_HorDer_run_pix_out_rsci
+INFO: [VRFC 10-311] analyzing module EdgeDetect_HorDer_run_pix_in_rsci
+INFO: [VRFC 10-311] analyzing module EdgeDetect_MagAng_run_crc32_dat_out_triosy_obj
+INFO: [VRFC 10-311] analyzing module EdgeDetect_MagAng_run_crc32_pix_in_triosy_obj
+INFO: [VRFC 10-311] analyzing module EdgeDetect_MagAng_run_dat_out_rsci
+INFO: [VRFC 10-311] analyzing module EdgeDetect_MagAng_run_pix_in_rsci
+INFO: [VRFC 10-311] analyzing module EdgeDetect_MagAng_run_dy_in_rsci
+INFO: [VRFC 10-311] analyzing module EdgeDetect_MagAng_run_dx_in_rsci
+INFO: [VRFC 10-311] analyzing module EdgeDetect_VerDer_run
+INFO: [VRFC 10-311] analyzing module EdgeDetect_HorDer_run
+INFO: [VRFC 10-311] analyzing module EdgeDetect_MagAng_run
+INFO: [VRFC 10-311] analyzing module EdgeDetect_VerDer
+INFO: [VRFC 10-311] analyzing module EdgeDetect_HorDer
+INFO: [VRFC 10-311] analyzing module EdgeDetect_MagAng
+INFO: [VRFC 10-311] analyzing module EdgeDetect_Top_struct
+INFO: [VRFC 10-311] analyzing module EdgeDetect_Top
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_srcs/caravel_soc/rtl/user/config_ctrl/rtl/config_ctrl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CFG_CTRL
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_srcs/caravel_soc/rtl/user/rtl/fsic.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FSIC
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_srcs/caravel_soc/rtl/user/fsic_clkrst/rtl/fsic_clkrst.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FSIC_CLKRST
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_srcs/caravel_soc/rtl/user/io_serdes/rtl/fsic_coreclk_phase_cnt.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fsic_coreclk_phase_cnt
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_srcs/caravel_soc/rtl/user/io_serdes/rtl/fsic_io_serdes_rx.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fsic_io_serdes_rx
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_srcs/caravel_soc/rtl/user/mprj_io/rtl/fsic_mprj_io.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MPRJ_IOz
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/gpio_control_block.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module gpio_control_block
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/gpio_defaults_block.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module gpio_defaults_block
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/housekeeping.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module housekeeping
+INFO: [VRFC 10-311] analyzing module boledu_fd_sc_hd__clkbuf_8
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/housekeeping_spi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module housekeeping_spi
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_srcs/caravel_soc/rtl/user/io_serdes/rtl/io_serdes.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IO_SERDES
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/irq_mux/rtl/irq_mux.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IRQ_MUX
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/la_mux/rtl/la_mux.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LA_MUX
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mgmt_core
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core_wrapper.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mgmt_core_wrapper
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mprj_io.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mprj_io
+INFO: [VRFC 10-311] analyzing module boledu_io
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/spram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SPRAM
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_srcs/caravel_soc/rtl/user/axis_switch/rtl/sw_caravel.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AXIS_SW
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj0/rtl/user_prj0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module USER_PRJ0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj1/rtl/user_prj1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module USER_PRJ1
+INFO: [VRFC 10-311] analyzing module multiplier_adder
+INFO: [VRFC 10-311] analyzing module bram11
+INFO: [VRFC 10-311] analyzing module fir
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj2/rtl/user_prj2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module USER_PRJ2
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/user_prj/user_prj3/rtl/user_prj3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module USER_PRJ3
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_srcs/caravel_soc/rtl/user/rtl/user_project_wrapper.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module user_project_wrapper
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_srcs/caravel_soc/rtl/user/user_subsys/rtl/user_subsys.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module USER_SUBSYS
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/fsic_fpga/vivado/vvd_srcs/caravel_soc/rtl/header/user_defines.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/fsic_fpga/vivado/vvd_srcs/caravel_soc/rtl/header/defines.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/fsic_fpga/vivado/fsic_defines.v" into library xil_defaultlib
+WARNING: [VRFC 10-3381] ignoring re-definition of command line macro 'USER_PROJECT_SIDEBAND_SUPPORT' [/home/ubuntu/fsic_fpga/vivado/fsic_defines.v:4]
+WARNING: [VRFC 10-3381] ignoring re-definition of command line macro 'USE_EDGEDETECT_IP' [/home/ubuntu/fsic_fpga/vivado/fsic_defines.v:5]
+WARNING: [VRFC 10-3381] ignoring re-definition of command line macro 'pSERIALIO_WIDTH' [/home/ubuntu/fsic_fpga/vivado/fsic_defines.v:6]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/fsic_fpga/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axi_ctrl_logic.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi_ctrl_logic
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/fsic_fpga/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axil_axis.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AXIL_AXIS
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/fsic_fpga/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axilite_master.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axilite_master
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/fsic_fpga/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axilite_slave.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axilite_slave
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/fsic_fpga/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axis_master.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axis_master
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/fsic_fpga/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axis_slave.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axis_slave
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_srcs/caravel_soc/rtl/header/user_defines.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_srcs/caravel_soc/rtl/header/defines.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/fsic_defines.v" into library xil_defaultlib
+WARNING: [VRFC 10-3381] ignoring re-definition of command line macro 'USER_PROJECT_SIDEBAND_SUPPORT' [/home/ubuntu/fsic_fpga/vivado/fsic_defines.v:4]
+WARNING: [VRFC 10-3381] ignoring re-definition of command line macro 'USE_EDGEDETECT_IP' [/home/ubuntu/fsic_fpga/vivado/fsic_defines.v:5]
+WARNING: [VRFC 10-3381] ignoring re-definition of command line macro 'pSERIALIO_WIDTH' [/home/ubuntu/fsic_fpga/vivado/fsic_defines.v:6]
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/caravel.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module caravel
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ladmatr
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_control_s_axi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ladmatr_control_s_axi
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_entry_proc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ladmatr_entry_proc
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_fifo_w1_d2_S.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ladmatr_fifo_w1_d2_S_shiftReg
+INFO: [VRFC 10-311] analyzing module ladmatr_fifo_w1_d2_S
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_fifo_w32_d2_S.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ladmatr_fifo_w32_d2_S_shiftReg
+INFO: [VRFC 10-311] analyzing module ladmatr_fifo_w32_d2_S
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_fifo_w32_d8_S.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ladmatr_fifo_w32_d8_S_shiftReg
+INFO: [VRFC 10-311] analyzing module ladmatr_fifo_w32_d8_S
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_fifo_w33_d128_A.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ladmatr_fifo_w33_d128_A_ram
+INFO: [VRFC 10-311] analyzing module ladmatr_fifo_w33_d128_A
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_fifo_w64_d3_S.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ladmatr_fifo_w64_d3_S_shiftReg
+INFO: [VRFC 10-311] analyzing module ladmatr_fifo_w64_d3_S
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_flow_control_loop_pipe_sequential_init.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ladmatr_flow_control_loop_pipe_sequential_init
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_getinstream.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ladmatr_getinstream
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_getinstream_Pipeline_VITIS_LOOP_44_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ladmatr_getinstream_Pipeline_VITIS_LOOP_44_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ladmatr_gmem0_m_axi
+INFO: [VRFC 10-311] analyzing module ladmatr_gmem0_m_axi_load
+INFO: [VRFC 10-311] analyzing module ladmatr_gmem0_m_axi_store
+INFO: [VRFC 10-311] analyzing module ladmatr_gmem0_m_axi_flushManager
+INFO: [VRFC 10-311] analyzing module ladmatr_gmem0_m_axi_read
+INFO: [VRFC 10-311] analyzing module ladmatr_gmem0_m_axi_write
+INFO: [VRFC 10-311] analyzing module ladmatr_gmem0_m_axi_throttle
+INFO: [VRFC 10-311] analyzing module ladmatr_gmem0_m_axi_reg_slice
+INFO: [VRFC 10-311] analyzing module ladmatr_gmem0_m_axi_fifo
+INFO: [VRFC 10-311] analyzing module ladmatr_gmem0_m_axi_srl
+INFO: [VRFC 10-311] analyzing module ladmatr_gmem0_m_axi_mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_regslice_both.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ladmatr_regslice_both
+INFO: [VRFC 10-311] analyzing module ladmatr_regslice_both_w1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_start_for_streamtoparallelwithburst_U0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ladmatr_start_for_streamtoparallelwithburst_U0_shiftReg
+INFO: [VRFC 10-311] analyzing module ladmatr_start_for_streamtoparallelwithburst_U0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_streamtoparallelwithburst.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ladmatr_streamtoparallelwithburst
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_streamtoparallelwithburst_Pipeline_VITIS_LOOP_15_2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ladmatr_streamtoparallelwithburst_Pipeline_VITIS_LOOP_15_2
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_srcs/fpga/rtl/PL/sw_fpga.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AXIS_SWz
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_srcs/fpga/rtl/PL/ps_axil.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ps_axil
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vitis_prj/verilog_spiflash/spiflash.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module spiflash
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_0/sim/bd_afc3_one_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bd_afc3_one_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/fsic_fpga/vivado/vvd_srcs/caravel_soc/rtl/header/user_defines.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/fsic_fpga/vivado/vvd_srcs/caravel_soc/rtl/header/defines.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/fsic_fpga/vivado/fsic_defines.v" into library xil_defaultlib
+WARNING: [VRFC 10-3381] ignoring re-definition of command line macro 'USER_PROJECT_SIDEBAND_SUPPORT' [/home/ubuntu/fsic_fpga/vivado/fsic_defines.v:4]
+WARNING: [VRFC 10-3381] ignoring re-definition of command line macro 'USE_EDGEDETECT_IP' [/home/ubuntu/fsic_fpga/vivado/fsic_defines.v:5]
+WARNING: [VRFC 10-3381] ignoring re-definition of command line macro 'pSERIALIO_WIDTH' [/home/ubuntu/fsic_fpga/vivado/fsic_defines.v:6]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_2/sim/bd_afc3_s00mmu_0.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bd_afc3_s00mmu_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_3/sim/bd_afc3_s00tr_0.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bd_afc3_s00tr_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_4/sim/bd_afc3_s00sic_0.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bd_afc3_s00sic_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_5/sim/bd_afc3_s00a2s_0.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bd_afc3_s00a2s_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_6/sim/bd_afc3_sarn_0.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bd_afc3_sarn_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_7/sim/bd_afc3_srn_0.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bd_afc3_srn_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_8/sim/bd_afc3_sawn_0.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bd_afc3_sawn_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_9/sim/bd_afc3_swn_0.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bd_afc3_swn_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_10/sim/bd_afc3_sbn_0.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bd_afc3_sbn_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_11/sim/bd_afc3_m00s2a_0.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bd_afc3_m00s2a_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_12/sim/bd_afc3_m00e_0.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bd_afc3_m00e_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_srcs/caravel_soc/rtl/header/user_defines.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_srcs/caravel_soc/rtl/header/defines.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/fsic_defines.v" into library xil_defaultlib
+WARNING: [VRFC 10-3381] ignoring re-definition of command line macro 'USER_PROJECT_SIDEBAND_SUPPORT' [/home/ubuntu/fsic_fpga/vivado/fsic_defines.v:4]
+WARNING: [VRFC 10-3381] ignoring re-definition of command line macro 'USE_EDGEDETECT_IP' [/home/ubuntu/fsic_fpga/vivado/fsic_defines.v:5]
+WARNING: [VRFC 10-3381] ignoring re-definition of command line macro 'pSERIALIO_WIDTH' [/home/ubuntu/fsic_fpga/vivado/fsic_defines.v:6]
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_axi_smc_0/bd_0/sim/bd_afc3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bd_afc3
+INFO: [VRFC 10-311] analyzing module clk_map_imp_5Y9LOC
+INFO: [VRFC 10-311] analyzing module m00_exit_pipeline_imp_1TZX5BB
+INFO: [VRFC 10-311] analyzing module s00_entry_pipeline_imp_USCCV8
+INFO: [VRFC 10-311] analyzing module s00_nodes_imp_Y7M43I
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_axi_smc_0/sim/design_1_axi_smc_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_axi_smc_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_axi_smc_1_0/bd_0/ip/ip_0/sim/bd_a878_one_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bd_a878_one_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/fsic_fpga/vivado/vvd_srcs/caravel_soc/rtl/header/user_defines.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/fsic_fpga/vivado/vvd_srcs/caravel_soc/rtl/header/defines.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/fsic_fpga/vivado/fsic_defines.v" into library xil_defaultlib
+WARNING: [VRFC 10-3381] ignoring re-definition of command line macro 'USER_PROJECT_SIDEBAND_SUPPORT' [/home/ubuntu/fsic_fpga/vivado/fsic_defines.v:4]
+WARNING: [VRFC 10-3381] ignoring re-definition of command line macro 'USE_EDGEDETECT_IP' [/home/ubuntu/fsic_fpga/vivado/fsic_defines.v:5]
+WARNING: [VRFC 10-3381] ignoring re-definition of command line macro 'pSERIALIO_WIDTH' [/home/ubuntu/fsic_fpga/vivado/fsic_defines.v:6]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_axi_smc_1_0/bd_0/ip/ip_2/sim/bd_a878_s00mmu_0.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bd_a878_s00mmu_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_axi_smc_1_0/bd_0/ip/ip_3/sim/bd_a878_s00tr_0.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bd_a878_s00tr_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_axi_smc_1_0/bd_0/ip/ip_4/sim/bd_a878_s00sic_0.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bd_a878_s00sic_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_axi_smc_1_0/bd_0/ip/ip_5/sim/bd_a878_s00a2s_0.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bd_a878_s00a2s_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_axi_smc_1_0/bd_0/ip/ip_6/sim/bd_a878_sawn_0.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bd_a878_sawn_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_axi_smc_1_0/bd_0/ip/ip_7/sim/bd_a878_swn_0.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bd_a878_swn_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_axi_smc_1_0/bd_0/ip/ip_8/sim/bd_a878_sbn_0.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bd_a878_sbn_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_axi_smc_1_0/bd_0/ip/ip_9/sim/bd_a878_m00s2a_0.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bd_a878_m00s2a_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_axi_smc_1_0/bd_0/ip/ip_10/sim/bd_a878_m00e_0.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bd_a878_m00e_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_srcs/caravel_soc/rtl/header/user_defines.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_srcs/caravel_soc/rtl/header/defines.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/fsic_defines.v" into library xil_defaultlib
+WARNING: [VRFC 10-3381] ignoring re-definition of command line macro 'USER_PROJECT_SIDEBAND_SUPPORT' [/home/ubuntu/fsic_fpga/vivado/fsic_defines.v:4]
+WARNING: [VRFC 10-3381] ignoring re-definition of command line macro 'USE_EDGEDETECT_IP' [/home/ubuntu/fsic_fpga/vivado/fsic_defines.v:5]
+WARNING: [VRFC 10-3381] ignoring re-definition of command line macro 'pSERIALIO_WIDTH' [/home/ubuntu/fsic_fpga/vivado/fsic_defines.v:6]
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_axi_smc_1_0/bd_0/sim/bd_a878.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bd_a878
+INFO: [VRFC 10-311] analyzing module clk_map_imp_G6MO4E
+INFO: [VRFC 10-311] analyzing module m00_exit_pipeline_imp_1I3LT8L
+INFO: [VRFC 10-311] analyzing module s00_entry_pipeline_imp_I9HTTY
+INFO: [VRFC 10-311] analyzing module s00_nodes_imp_NF95JW
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_axi_smc_1_0/sim/design_1_axi_smc_1_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_axi_smc_1_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_axi_smc_2_0/bd_0/ip/ip_0/sim/bd_a888_one_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bd_a888_one_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/fsic_fpga/vivado/vvd_srcs/caravel_soc/rtl/header/user_defines.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/fsic_fpga/vivado/vvd_srcs/caravel_soc/rtl/header/defines.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/fsic_fpga/vivado/fsic_defines.v" into library xil_defaultlib
+WARNING: [VRFC 10-3381] ignoring re-definition of command line macro 'USER_PROJECT_SIDEBAND_SUPPORT' [/home/ubuntu/fsic_fpga/vivado/fsic_defines.v:4]
+WARNING: [VRFC 10-3381] ignoring re-definition of command line macro 'USE_EDGEDETECT_IP' [/home/ubuntu/fsic_fpga/vivado/fsic_defines.v:5]
+WARNING: [VRFC 10-3381] ignoring re-definition of command line macro 'pSERIALIO_WIDTH' [/home/ubuntu/fsic_fpga/vivado/fsic_defines.v:6]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_axi_smc_2_0/bd_0/ip/ip_2/sim/bd_a888_s00mmu_0.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bd_a888_s00mmu_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_axi_smc_2_0/bd_0/ip/ip_3/sim/bd_a888_s00tr_0.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bd_a888_s00tr_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_axi_smc_2_0/bd_0/ip/ip_4/sim/bd_a888_s00sic_0.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bd_a888_s00sic_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_axi_smc_2_0/bd_0/ip/ip_5/sim/bd_a888_s00a2s_0.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bd_a888_s00a2s_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_axi_smc_2_0/bd_0/ip/ip_6/sim/bd_a888_sarn_0.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bd_a888_sarn_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_axi_smc_2_0/bd_0/ip/ip_7/sim/bd_a888_srn_0.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bd_a888_srn_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_axi_smc_2_0/bd_0/ip/ip_8/sim/bd_a888_m00s2a_0.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bd_a888_m00s2a_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_axi_smc_2_0/bd_0/ip/ip_9/sim/bd_a888_m00e_0.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bd_a888_m00e_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_srcs/caravel_soc/rtl/header/user_defines.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_srcs/caravel_soc/rtl/header/defines.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/fsic_defines.v" into library xil_defaultlib
+WARNING: [VRFC 10-3381] ignoring re-definition of command line macro 'USER_PROJECT_SIDEBAND_SUPPORT' [/home/ubuntu/fsic_fpga/vivado/fsic_defines.v:4]
+WARNING: [VRFC 10-3381] ignoring re-definition of command line macro 'USE_EDGEDETECT_IP' [/home/ubuntu/fsic_fpga/vivado/fsic_defines.v:5]
+WARNING: [VRFC 10-3381] ignoring re-definition of command line macro 'pSERIALIO_WIDTH' [/home/ubuntu/fsic_fpga/vivado/fsic_defines.v:6]
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_axi_smc_2_0/bd_0/sim/bd_a888.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bd_a888
+INFO: [VRFC 10-311] analyzing module clk_map_imp_1GNU3PT
+INFO: [VRFC 10-311] analyzing module m00_exit_pipeline_imp_J937NU
+INFO: [VRFC 10-311] analyzing module s00_entry_pipeline_imp_1J0OY2X
+INFO: [VRFC 10-311] analyzing module s00_nodes_imp_1MT4N83
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_axi_smc_2_0/sim/design_1_axi_smc_2_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_axi_smc_2_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/fsic_fpga/vivado/vvd_srcs/caravel_soc/rtl/header/user_defines.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/fsic_fpga/vivado/vvd_srcs/caravel_soc/rtl/header/defines.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/fsic_fpga/vivado/fsic_defines.v" into library xil_defaultlib
+WARNING: [VRFC 10-3381] ignoring re-definition of command line macro 'USER_PROJECT_SIDEBAND_SUPPORT' [/home/ubuntu/fsic_fpga/vivado/fsic_defines.v:4]
+WARNING: [VRFC 10-3381] ignoring re-definition of command line macro 'USE_EDGEDETECT_IP' [/home/ubuntu/fsic_fpga/vivado/fsic_defines.v:5]
+WARNING: [VRFC 10-3381] ignoring re-definition of command line macro 'pSERIALIO_WIDTH' [/home/ubuntu/fsic_fpga/vivado/fsic_defines.v:6]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_axi_vip_0_0/sim/design_1_axi_vip_0_0_pkg.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_axi_vip_0_0/sim/design_1_axi_vip_0_0.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_axi_vip_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_srcs/caravel_soc/rtl/header/user_defines.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_srcs/caravel_soc/rtl/header/defines.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/fsic_defines.v" into library xil_defaultlib
+WARNING: [VRFC 10-3381] ignoring re-definition of command line macro 'USER_PROJECT_SIDEBAND_SUPPORT' [/home/ubuntu/fsic_fpga/vivado/fsic_defines.v:4]
+WARNING: [VRFC 10-3381] ignoring re-definition of command line macro 'USE_EDGEDETECT_IP' [/home/ubuntu/fsic_fpga/vivado/fsic_defines.v:5]
+WARNING: [VRFC 10-3381] ignoring re-definition of command line macro 'pSERIALIO_WIDTH' [/home/ubuntu/fsic_fpga/vivado/fsic_defines.v:6]
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_xbar_0/sim/design_1_xbar_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_xbar_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/fsic_fpga/vivado/vvd_srcs/caravel_soc/rtl/header/user_defines.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/fsic_fpga/vivado/vvd_srcs/caravel_soc/rtl/header/defines.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/fsic_fpga/vivado/fsic_defines.v" into library xil_defaultlib
+WARNING: [VRFC 10-3381] ignoring re-definition of command line macro 'USER_PROJECT_SIDEBAND_SUPPORT' [/home/ubuntu/fsic_fpga/vivado/fsic_defines.v:4]
+WARNING: [VRFC 10-3381] ignoring re-definition of command line macro 'USE_EDGEDETECT_IP' [/home/ubuntu/fsic_fpga/vivado/fsic_defines.v:5]
+WARNING: [VRFC 10-3381] ignoring re-definition of command line macro 'pSERIALIO_WIDTH' [/home/ubuntu/fsic_fpga/vivado/fsic_defines.v:6]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_axi_vip_1_0/sim/design_1_axi_vip_1_0_pkg.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_axi_vip_1_0/sim/design_1_axi_vip_1_0.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_axi_vip_1_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_axi_vip_2_0/sim/design_1_axi_vip_2_0_pkg.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_axi_vip_2_0/sim/design_1_axi_vip_2_0.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_axi_vip_2_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_axi_vip_3_0/sim/design_1_axi_vip_3_0_pkg.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_axi_vip_3_0/sim/design_1_axi_vip_3_0.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_axi_vip_3_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_srcs/caravel_soc/rtl/header/user_defines.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_srcs/caravel_soc/rtl/header/defines.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/fsic_defines.v" into library xil_defaultlib
+WARNING: [VRFC 10-3381] ignoring re-definition of command line macro 'USER_PROJECT_SIDEBAND_SUPPORT' [/home/ubuntu/fsic_fpga/vivado/fsic_defines.v:4]
+WARNING: [VRFC 10-3381] ignoring re-definition of command line macro 'USE_EDGEDETECT_IP' [/home/ubuntu/fsic_fpga/vivado/fsic_defines.v:5]
+WARNING: [VRFC 10-3381] ignoring re-definition of command line macro 'pSERIALIO_WIDTH' [/home/ubuntu/fsic_fpga/vivado/fsic_defines.v:6]
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_blk_mem_gen_0_0/sim/design_1_blk_mem_gen_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_blk_mem_gen_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_caravel_0_0/sim/design_1_caravel_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_caravel_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_clk_wiz_0_0_clk_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_clk_wiz_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_ps_axil_0_0/sim/design_1_ps_axil_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_ps_axil_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_spiflash_0_0/sim/design_1_spiflash_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_spiflash_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/2db7/hdl/verilog/userdma_control_s_axi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module userdma_control_s_axi
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/2db7/hdl/verilog/userdma_entry_proc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module userdma_entry_proc
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/2db7/hdl/verilog/userdma_fifo_w1_d2_S.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module userdma_fifo_w1_d2_S_shiftReg
+INFO: [VRFC 10-311] analyzing module userdma_fifo_w1_d2_S
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/2db7/hdl/verilog/userdma_fifo_w32_d2_S.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module userdma_fifo_w32_d2_S_shiftReg
+INFO: [VRFC 10-311] analyzing module userdma_fifo_w32_d2_S
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/2db7/hdl/verilog/userdma_fifo_w32_d4_S.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module userdma_fifo_w32_d4_S_shiftReg
+INFO: [VRFC 10-311] analyzing module userdma_fifo_w32_d4_S
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/2db7/hdl/verilog/userdma_fifo_w33_d64_A.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module userdma_fifo_w33_d64_A_ram
+INFO: [VRFC 10-311] analyzing module userdma_fifo_w33_d64_A
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/2db7/hdl/verilog/userdma_fifo_w40_d64_A.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module userdma_fifo_w40_d64_A_ram
+INFO: [VRFC 10-311] analyzing module userdma_fifo_w40_d64_A
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/2db7/hdl/verilog/userdma_fifo_w64_d3_S.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module userdma_fifo_w64_d3_S_shiftReg
+INFO: [VRFC 10-311] analyzing module userdma_fifo_w64_d3_S
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/2db7/hdl/verilog/userdma_flow_control_loop_pipe_sequential_init.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module userdma_flow_control_loop_pipe_sequential_init
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/2db7/hdl/verilog/userdma_getinstream.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module userdma_getinstream
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/2db7/hdl/verilog/userdma_getinstream_Pipeline_VITIS_LOOP_49_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module userdma_getinstream_Pipeline_VITIS_LOOP_49_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/2db7/hdl/verilog/userdma_gmem0_m_axi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module userdma_gmem0_m_axi
+INFO: [VRFC 10-311] analyzing module userdma_gmem0_m_axi_load
+INFO: [VRFC 10-311] analyzing module userdma_gmem0_m_axi_store
+INFO: [VRFC 10-311] analyzing module userdma_gmem0_m_axi_flushManager
+INFO: [VRFC 10-311] analyzing module userdma_gmem0_m_axi_read
+INFO: [VRFC 10-311] analyzing module userdma_gmem0_m_axi_write
+INFO: [VRFC 10-311] analyzing module userdma_gmem0_m_axi_throttle
+INFO: [VRFC 10-311] analyzing module userdma_gmem0_m_axi_reg_slice
+INFO: [VRFC 10-311] analyzing module userdma_gmem0_m_axi_fifo
+INFO: [VRFC 10-311] analyzing module userdma_gmem0_m_axi_srl
+INFO: [VRFC 10-311] analyzing module userdma_gmem0_m_axi_mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/2db7/hdl/verilog/userdma_gmem1_m_axi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module userdma_gmem1_m_axi
+INFO: [VRFC 10-311] analyzing module userdma_gmem1_m_axi_load
+INFO: [VRFC 10-311] analyzing module userdma_gmem1_m_axi_store
+INFO: [VRFC 10-311] analyzing module userdma_gmem1_m_axi_flushManager
+INFO: [VRFC 10-311] analyzing module userdma_gmem1_m_axi_read
+INFO: [VRFC 10-311] analyzing module userdma_gmem1_m_axi_write
+INFO: [VRFC 10-311] analyzing module userdma_gmem1_m_axi_throttle
+INFO: [VRFC 10-311] analyzing module userdma_gmem1_m_axi_reg_slice
+INFO: [VRFC 10-311] analyzing module userdma_gmem1_m_axi_fifo
+INFO: [VRFC 10-311] analyzing module userdma_gmem1_m_axi_srl
+INFO: [VRFC 10-311] analyzing module userdma_gmem1_m_axi_mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/2db7/hdl/verilog/userdma_hls_deadlock_detection_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module userdma_hls_deadlock_detect_unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/2db7/hdl/verilog/userdma_hls_deadlock_idx0_monitor.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module userdma_hls_deadlock_idx0_monitor
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/2db7/hdl/verilog/userdma_paralleltostreamwithburst.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module userdma_paralleltostreamwithburst
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/2db7/hdl/verilog/userdma_paralleltostreamwithburst_Pipeline_VITIS_LOOP_94_2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module userdma_paralleltostreamwithburst_Pipeline_VITIS_LOOP_94_2
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/2db7/hdl/verilog/userdma_regslice_both.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module userdma_regslice_both
+INFO: [VRFC 10-311] analyzing module userdma_regslice_both_w1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/2db7/hdl/verilog/userdma_sendoutstream.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module userdma_sendoutstream
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/2db7/hdl/verilog/userdma_sendoutstream_Pipeline_VITIS_LOOP_125_2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module userdma_sendoutstream_Pipeline_VITIS_LOOP_125_2
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/2db7/hdl/verilog/userdma_start_for_sendoutstream_U0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module userdma_start_for_sendoutstream_U0_shiftReg
+INFO: [VRFC 10-311] analyzing module userdma_start_for_sendoutstream_U0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/2db7/hdl/verilog/userdma_start_for_streamtoparallelwithburst_U0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module userdma_start_for_streamtoparallelwithburst_U0_shiftReg
+INFO: [VRFC 10-311] analyzing module userdma_start_for_streamtoparallelwithburst_U0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/2db7/hdl/verilog/userdma_streamtoparallelwithburst.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module userdma_streamtoparallelwithburst
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/2db7/hdl/verilog/userdma_streamtoparallelwithburst_Pipeline_VITIS_LOOP_21_2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module userdma_streamtoparallelwithburst_Pipeline_VITIS_LOOP_21_2
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/2db7/hdl/verilog/userdma.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module userdma
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_userdma_0_0/sim/design_1_userdma_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_userdma_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.ip_user_files/bd/design_1/sim/design_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1
+INFO: [VRFC 10-311] analyzing module design_1_axi_vip_0_axi_periph_0
+INFO: [VRFC 10-311] analyzing module m00_couplers_imp_NA355P
+INFO: [VRFC 10-311] analyzing module m01_couplers_imp_1GCZ8ZG
+INFO: [VRFC 10-311] analyzing module m02_couplers_imp_NX0Y1Q
+INFO: [VRFC 10-311] analyzing module s00_couplers_imp_1BEKOF3
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_wrapper
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/fsic_fpga/vivado/vvd_srcs/caravel_soc/rtl/header/user_defines.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/fsic_fpga/vivado/vvd_srcs/caravel_soc/rtl/header/defines.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/fsic_fpga/vivado/fsic_defines.v" into library xil_defaultlib
+WARNING: [VRFC 10-3381] ignoring re-definition of command line macro 'USER_PROJECT_SIDEBAND_SUPPORT' [/home/ubuntu/fsic_fpga/vivado/fsic_defines.v:4]
+WARNING: [VRFC 10-3381] ignoring re-definition of command line macro 'USE_EDGEDETECT_IP' [/home/ubuntu/fsic_fpga/vivado/fsic_defines.v:5]
+WARNING: [VRFC 10-3381] ignoring re-definition of command line macro 'pSERIALIO_WIDTH' [/home/ubuntu/fsic_fpga/vivado/fsic_defines.v:6]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/fsic_fpga/vivado/fsic_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fsic_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+xvhdl --incr --relax -prj fsic_tb_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_1/sim/bd_afc3_psr_aclk_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'bd_afc3_psr_aclk_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_axi_smc_1_0/bd_0/ip/ip_1/sim/bd_a878_psr_aclk_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'bd_a878_psr_aclk_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_axi_smc_2_0/bd_0/ip/ip_1/sim/bd_a888_psr_aclk_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'bd_a888_psr_aclk_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_rst_clk_wiz_0_5M_0/sim/design_1_rst_clk_wiz_0_5M_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'design_1_rst_clk_wiz_0_5M_0'
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -d USER_PROJECT_SIDEBAND_SUPPORT=1 -d USE_EDGEDETECT_IP=1 -d pSERIALIO_WIDTH=13 -L xil_defaultlib -L xlconstant_v1_1_7 -L lib_cdc_v1_0_2 -L proc_sys_reset_v5_0_13 -L smartconnect_v1_0 -L axi_infrastructure_v1_1_0 -L axi_register_slice_v2_1_26 -L axi_vip_v1_1_12 -L generic_baseblocks_v2_1_0 -L fifo_generator_v13_2_7 -L axi_data_fifo_v2_1_25 -L axi_crossbar_v2_1_27 -L blk_mem_gen_v8_4_5 -L uvm -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot fsic_tb_behav xil_defaultlib.fsic_tb xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2022.1
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2022.1/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -d USER_PROJECT_SIDEBAND_SUPPORT=1 -d USE_EDGEDETECT_IP=1 -d pSERIALIO_WIDTH=13 -L xil_defaultlib -L xlconstant_v1_1_7 -L lib_cdc_v1_0_2 -L proc_sys_reset_v5_0_13 -L smartconnect_v1_0 -L axi_infrastructure_v1_1_0 -L axi_register_slice_v2_1_26 -L axi_vip_v1_1_12 -L generic_baseblocks_v2_1_0 -L fifo_generator_v13_2_7 -L axi_data_fifo_v2_1_25 -L axi_crossbar_v2_1_27 -L blk_mem_gen_v8_4_5 -L uvm -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot fsic_tb_behav xil_defaultlib.fsic_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-5021] port 'mb_reset' is not connected on this instance [/home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.ip_user_files/bd/design_1/sim/design_1.v:709]
+WARNING: [VRFC 10-5021] port 'mb_reset' is not connected on this instance [/home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_axi_smc_0/bd_0/sim/bd_afc3.v:848]
+WARNING: [VRFC 10-5021] port 'mb_reset' is not connected on this instance [/home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_axi_smc_1_0/bd_0/sim/bd_a878.v:486]
+WARNING: [VRFC 10-5021] port 'mb_reset' is not connected on this instance [/home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_axi_smc_2_0/bd_0/sim/bd_a888.v:402]
+WARNING: [VRFC 10-5021] port 'vccd1' is not connected on this instance [/home/ubuntu/fsic_fpga/vivado/vvd_srcs/caravel_soc/rtl/user/rtl/user_project_wrapper.v:123]
+WARNING: [VRFC 10-3705] select index -1 into 'axis_block_sigs' is out of bounds [/home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/2db7/hdl/verilog/userdma_hls_deadlock_idx0_monitor.v:23]
+WARNING: [VRFC 10-3705] select index -1 into 'axis_block_sigs' is out of bounds [/home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/2db7/hdl/verilog/userdma_hls_deadlock_idx0_monitor.v:24]
+WARNING: [VRFC 10-3705] select index -1 into 'axis_block_sigs' is out of bounds [/home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/2db7/hdl/verilog/userdma_hls_deadlock_idx0_monitor.v:28]
+WARNING: [VRFC 10-3705] select index -1 into 'axis_block_sigs' is out of bounds [/home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/2db7/hdl/verilog/userdma_hls_deadlock_idx0_monitor.v:37]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "/home/ubuntu/fsic_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/caravel.v" Line 77. Module caravel_default doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ubuntu/fsic_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/caravel.v" Line 77. Module caravel_default doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package unisim.vcomponents
+Compiling package ieee.vital_timing
+Compiling package ieee.vital_primitives
+Compiling package unisim.vpkg
+Compiling package ieee.std_logic_arith
+Compiling package synopsys.attributes
+Compiling package ieee.std_logic_misc
+Compiling package xilinx_vip.axi_vip_pkg
+Compiling package xilinx_vip.xil_common_vip_pkg
+Compiling package std.std
+Compiling package smartconnect_v1_0.sc_util_v1_0_4_pkg
+Compiling package xil_defaultlib.$unit_user_defines_v_3073216456
+Compiling package xil_defaultlib.design_1_axi_vip_0_0_pkg
+Compiling package xil_defaultlib.design_1_axi_vip_1_0_pkg
+Compiling package xil_defaultlib.design_1_axi_vip_2_0_pkg
+Compiling package xil_defaultlib.design_1_axi_vip_3_0_pkg
+Compiling module xlconstant_v1_1_7.xlconstant_v1_1_7_xlconstant
+Compiling module xil_defaultlib.bd_afc3_one_0
+Compiling architecture fdre_v of entity unisim.FDRE [fdre_default]
+Compiling architecture fdre_v of entity unisim.FDRE [\FDRE(init='1')\]
+Compiling architecture fdr_v of entity unisim.FDR [fdr_default]
+Compiling architecture implementation of entity lib_cdc_v1_0_2.cdc_sync [\cdc_sync(c_vector_width=2,c_mtb...]
+Compiling architecture srl16e_v of entity unisim.SRL16E [\SRL16E(init="1111111111111111")...]
+Compiling architecture srl16_v of entity unisim.SRL16 [\SRL16(init="1111111111111111")(...]
+Compiling architecture imp of entity proc_sys_reset_v5_0_13.lpf [\lpf(c_ext_rst_width=4,c_aux_rst...]
+Compiling architecture imp of entity proc_sys_reset_v5_0_13.upcnt_n [\upcnt_n(c_size=6)\]
+Compiling architecture imp of entity proc_sys_reset_v5_0_13.sequence_psr [sequence_psr_default]
+Compiling architecture imp of entity proc_sys_reset_v5_0_13.proc_sys_reset [\proc_sys_reset(c_family="zynq",...]
+Compiling architecture bd_afc3_psr_aclk_0_arch of entity xil_defaultlib.bd_afc3_psr_aclk_0 [bd_afc3_psr_aclk_0_default]
+Compiling module xil_defaultlib.clk_map_imp_5Y9LOC
+Compiling module xpm.xpm_cdc_async_rst(DEST_SYNC_FF=3...
+Compiling module xil_defaultlib.bd_afc3_m00e_0
+Compiling module xil_defaultlib.m00_exit_pipeline_imp_1TZX5BB
+Compiling module xil_defaultlib.bd_afc3_m00s2a_0
+Compiling module xil_defaultlib.bd_afc3_s00a2s_0
+Compiling module xil_defaultlib.bd_afc3_s00mmu_0
+Compiling module xil_defaultlib.bd_afc3_s00sic_0
+Compiling module xil_defaultlib.bd_afc3_s00tr_0
+Compiling module xil_defaultlib.s00_entry_pipeline_imp_USCCV8
+Compiling module xpm.xpm_memory_base(MEMORY_TYPE=1,ME...
+Compiling module xpm.xpm_memory_sdpram(MEMORY_SIZE=60...
+Compiling module xil_defaultlib.bd_afc3_sarn_0
+Compiling module xil_defaultlib.bd_afc3_sawn_0
+Compiling module xpm.xpm_memory_base(MEMORY_TYPE=1,ME...
+Compiling module xpm.xpm_memory_sdpram(MEMORY_SIZE=76...
+Compiling module xil_defaultlib.bd_afc3_sbn_0
+Compiling module xpm.xpm_memory_base(MEMORY_TYPE=1,ME...
+Compiling module xpm.xpm_memory_sdpram(MEMORY_SIZE=22...
+Compiling module xil_defaultlib.bd_afc3_srn_0
+Compiling module xil_defaultlib.bd_afc3_swn_0
+Compiling module xil_defaultlib.s00_nodes_imp_Y7M43I
+Compiling module xil_defaultlib.bd_afc3
+Compiling module xil_defaultlib.design_1_axi_smc_0
+Compiling module xil_defaultlib.bd_a878_one_0
+Compiling architecture bd_a878_psr_aclk_0_arch of entity xil_defaultlib.bd_a878_psr_aclk_0 [bd_a878_psr_aclk_0_default]
+Compiling module xil_defaultlib.clk_map_imp_G6MO4E
+Compiling module xil_defaultlib.bd_a878_m00e_0
+Compiling module xil_defaultlib.m00_exit_pipeline_imp_1I3LT8L
+Compiling module xil_defaultlib.bd_a878_m00s2a_0
+Compiling module xil_defaultlib.bd_a878_s00a2s_0
+Compiling module xil_defaultlib.bd_a878_s00mmu_0
+Compiling module xil_defaultlib.bd_a878_s00sic_0
+Compiling module xil_defaultlib.bd_a878_s00tr_0
+Compiling module xil_defaultlib.s00_entry_pipeline_imp_I9HTTY
+Compiling module xil_defaultlib.bd_a878_sawn_0
+Compiling module xil_defaultlib.bd_a878_sbn_0
+Compiling module xil_defaultlib.bd_a878_swn_0
+Compiling module xil_defaultlib.s00_nodes_imp_NF95JW
+Compiling module xil_defaultlib.bd_a878
+Compiling module xil_defaultlib.design_1_axi_smc_1_0
+Compiling module xil_defaultlib.bd_a888_one_0
+Compiling architecture bd_a888_psr_aclk_0_arch of entity xil_defaultlib.bd_a888_psr_aclk_0 [bd_a888_psr_aclk_0_default]
+Compiling module xil_defaultlib.clk_map_imp_1GNU3PT
+Compiling module xil_defaultlib.bd_a888_m00e_0
+Compiling module xil_defaultlib.m00_exit_pipeline_imp_J937NU
+Compiling module xil_defaultlib.bd_a888_m00s2a_0
+Compiling module xil_defaultlib.bd_a888_s00a2s_0
+Compiling module xil_defaultlib.bd_a888_s00mmu_0
+Compiling module xil_defaultlib.bd_a888_s00sic_0
+Compiling module xil_defaultlib.bd_a888_s00tr_0
+Compiling module xil_defaultlib.s00_entry_pipeline_imp_1J0OY2X
+Compiling module xil_defaultlib.bd_a888_sarn_0
+Compiling module xil_defaultlib.bd_a888_srn_0
+Compiling module xil_defaultlib.s00_nodes_imp_1MT4N83
+Compiling module xil_defaultlib.bd_a888
+Compiling module xil_defaultlib.design_1_axi_smc_2_0
+Compiling module xilinx_vip.axi_vip_axi4pc(WDATA_WIDTH=32,RD...
+Compiling module xilinx_vip.cb
+Compiling module xilinx_vip.axi_vip_if(C_AXI_PROTOCOL=2,C_AX...
+Compiling module axi_vip_v1_1_12.axi_vip_v1_1_12_top(C_AXI_PROTOC...
+Compiling module xil_defaultlib.design_1_axi_vip_0_0
+Compiling module xil_defaultlib.m00_couplers_imp_NA355P
+Compiling module xil_defaultlib.m01_couplers_imp_1GCZ8ZG
+Compiling module xil_defaultlib.m02_couplers_imp_NX0Y1Q
+Compiling module xil_defaultlib.s00_couplers_imp_1BEKOF3
+Compiling module axi_crossbar_v2_1_27.axi_crossbar_v2_1_27_addr_arbite...
+Compiling module generic_baseblocks_v2_1_0.generic_baseblocks_v2_1_0_carry_...
+Compiling module generic_baseblocks_v2_1_0.generic_baseblocks_v2_1_0_compar...
+Compiling module generic_baseblocks_v2_1_0.generic_baseblocks_v2_1_0_compar...
+Compiling module generic_baseblocks_v2_1_0.generic_baseblocks_v2_1_0_compar...
+Compiling module axi_crossbar_v2_1_27.axi_crossbar_v2_1_27_addr_decode...
+Compiling module axi_crossbar_v2_1_27.axi_crossbar_v2_1_27_splitter(C_...
+Compiling module axi_crossbar_v2_1_27.axi_crossbar_v2_1_27_splitter
+Compiling module generic_baseblocks_v2_1_0.generic_baseblocks_v2_1_0_mux_en...
+Compiling module generic_baseblocks_v2_1_0.generic_baseblocks_v2_1_0_mux_en...
+Compiling module generic_baseblocks_v2_1_0.generic_baseblocks_v2_1_0_mux_en...
+Compiling module axi_register_slice_v2_1_26.axi_register_slice_v2_1_26_axic_...
+Compiling module generic_baseblocks_v2_1_0.generic_baseblocks_v2_1_0_mux_en...
+Compiling module axi_crossbar_v2_1_27.axi_crossbar_v2_1_27_decerr_slav...
+Compiling module axi_crossbar_v2_1_27.axi_crossbar_v2_1_27_crossbar_sa...
+Compiling module axi_crossbar_v2_1_27.axi_crossbar_v2_1_27_axi_crossba...
+Compiling module xil_defaultlib.design_1_xbar_0
+Compiling module xil_defaultlib.design_1_axi_vip_0_axi_periph_0
+Compiling module xilinx_vip.axi_vip_axi4pc(WDATA_WIDTH=32,RD...
+Compiling module xilinx_vip.cb
+Compiling module xilinx_vip.axi_vip_if(C_AXI_AWUSER_WIDTH=1,...
+Compiling module axi_vip_v1_1_12.axi_vip_v1_1_12_top(C_AXI_AWUSER...
+Compiling module xil_defaultlib.design_1_axi_vip_1_0
+Compiling module xilinx_vip.axi_vip_axi4pc(WDATA_WIDTH=32,RD...
+Compiling module xilinx_vip.cb
+Compiling module xilinx_vip.axi_vip_if(C_AXI_SUPPORTS_NARROW...
+Compiling module axi_vip_v1_1_12.axi_vip_v1_1_12_top(C_AXI_SUPPOR...
+Compiling module xil_defaultlib.design_1_axi_vip_2_0
+Compiling module xilinx_vip.cb
+Compiling module xilinx_vip.axi_vip_if(C_AXI_SUPPORTS_NARROW...
+Compiling module axi_vip_v1_1_12.axi_vip_v1_1_12_top(C_AXI_SUPPOR...
+Compiling module xil_defaultlib.design_1_axi_vip_3_0
+Compiling module blk_mem_gen_v8_4_5.blk_mem_gen_v8_4_5_output_stage(...
+Compiling module blk_mem_gen_v8_4_5.blk_mem_gen_v8_4_5_output_stage(...
+Compiling module blk_mem_gen_v8_4_5.blk_mem_gen_v8_4_5_softecc_outpu...
+Compiling module blk_mem_gen_v8_4_5.blk_mem_gen_v8_4_5_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_5.blk_mem_gen_v8_4_5(C_FAMILY="zyn...
+Compiling module xil_defaultlib.design_1_blk_mem_gen_0_0
+Compiling module xil_defaultlib.boledu_io
+Compiling module xil_defaultlib.mprj_io_default
+Compiling module xil_defaultlib.chip_io
+Compiling module xil_defaultlib.RAM256_default
+Compiling module xil_defaultlib.RAM128_default
+Compiling module xil_defaultlib.InstructionCache
+Compiling module xil_defaultlib.VexRiscv
+Compiling module xil_defaultlib.mgmt_core
+Compiling module xil_defaultlib.mgmt_core_wrapper
+Compiling module xil_defaultlib.CFG_CTRL(pADDR_WIDTH=15)
+Compiling module xil_defaultlib.axilite_master
+Compiling module xil_defaultlib.axilite_slave
+Compiling module xil_defaultlib.axis_master
+Compiling module xil_defaultlib.axis_slave
+Compiling module xil_defaultlib.axi_ctrl_logic
+Compiling module xil_defaultlib.AXIL_AXIS
+Compiling module xil_defaultlib.AXIS_SW(pADDR_WIDTH=15)
+Compiling module xil_defaultlib.fsic_coreclk_phase_cnt
+Compiling module xil_defaultlib.fsic_io_serdes_rx
+Compiling module xil_defaultlib.IO_SERDES_default
+Compiling module xil_defaultlib.sram_default
+Compiling module xil_defaultlib.LOGIC_ANLZ
+Compiling module xil_defaultlib.AXIL_SLAV
+Compiling module xil_defaultlib.ccs_genreg_v1(has_en=1'b0)
+Compiling module xil_defaultlib.ccs_genreg_v1(ph_en=0)
+Compiling module xil_defaultlib.ccs_genreg_v1(width=36,ph_en=0)
+Compiling module xil_defaultlib.ccs_fifo_wait_core_v5(rscid=35,w...
+Compiling module xil_defaultlib.ccs_pipe_v6(rscid=35,width=36,sz...
+Compiling module xil_defaultlib.EdgeDetect_VerDer_ccs_sample_mem...
+Compiling module xil_defaultlib.EdgeDetect_VerDer_ccs_sample_mem...
+Compiling module xil_defaultlib.ccs_in_wait_v1(width=34)
+Compiling module xil_defaultlib.EdgeDetect_VerDer_run_dat_in_rsc...
+Compiling module xil_defaultlib.EdgeDetect_VerDer_run_dat_in_rsc...
+Compiling module xil_defaultlib.EdgeDetect_VerDer_run_dat_in_rsc...
+Compiling module xil_defaultlib.ccs_out_wait_v1(width=32)
+Compiling module xil_defaultlib.EdgeDetect_VerDer_run_pix_out_rs...
+Compiling module xil_defaultlib.EdgeDetect_VerDer_run_pix_out_rs...
+Compiling module xil_defaultlib.EdgeDetect_VerDer_run_pix_out_rs...
+Compiling module xil_defaultlib.ccs_out_wait_v1(width=36)
+Compiling module xil_defaultlib.EdgeDetect_VerDer_run_dy_rsci_dy...
+Compiling module xil_defaultlib.EdgeDetect_VerDer_run_dy_rsci_dy...
+Compiling module xil_defaultlib.EdgeDetect_VerDer_run_dy_rsci
+Compiling module xil_defaultlib.EdgeDetect_VerDer_run_wait_dp
+Compiling module xil_defaultlib.EdgeDetect_VerDer_run_staller
+Compiling module xil_defaultlib.EdgeDetect_VerDer_run_run_fsm
+Compiling module xil_defaultlib.EdgeDetect_VerDer_run
+Compiling module xil_defaultlib.EdgeDetect_VerDer
+Compiling module xil_defaultlib.ccs_in_wait_coupled_v1(width=32)
+Compiling module xil_defaultlib.EdgeDetect_HorDer_run_pix_in_rsc...
+Compiling module xil_defaultlib.EdgeDetect_HorDer_run_pix_in_rsc...
+Compiling module xil_defaultlib.EdgeDetect_HorDer_run_pix_out_rs...
+Compiling module xil_defaultlib.EdgeDetect_HorDer_run_pix_out_rs...
+Compiling module xil_defaultlib.EdgeDetect_HorDer_run_pix_out_rs...
+Compiling module xil_defaultlib.EdgeDetect_HorDer_run_dx_rsci_dx...
+Compiling module xil_defaultlib.EdgeDetect_HorDer_run_dx_rsci_dx...
+Compiling module xil_defaultlib.EdgeDetect_HorDer_run_dx_rsci
+Compiling module xil_defaultlib.EdgeDetect_HorDer_run_staller
+Compiling module xil_defaultlib.EdgeDetect_HorDer_run_run_fsm
+Compiling module xil_defaultlib.EdgeDetect_HorDer_run
+Compiling module xil_defaultlib.EdgeDetect_HorDer
+Compiling module xil_defaultlib.ccs_out_v1(width=32)
+Compiling module xil_defaultlib.ccs_in_wait_coupled_v1(width=36)
+Compiling module xil_defaultlib.EdgeDetect_MagAng_run_dx_in_rsci...
+Compiling module xil_defaultlib.EdgeDetect_MagAng_run_dx_in_rsci
+Compiling module xil_defaultlib.EdgeDetect_MagAng_run_dy_in_rsci...
+Compiling module xil_defaultlib.EdgeDetect_MagAng_run_dy_in_rsci
+Compiling module xil_defaultlib.ccs_in_wait_v1(width=32)
+Compiling module xil_defaultlib.EdgeDetect_MagAng_run_pix_in_rsc...
+Compiling module xil_defaultlib.EdgeDetect_MagAng_run_pix_in_rsc...
+Compiling module xil_defaultlib.EdgeDetect_MagAng_run_pix_in_rsc...
+Compiling module xil_defaultlib.ccs_out_wait_v1(width=34)
+Compiling module xil_defaultlib.EdgeDetect_MagAng_run_dat_out_rs...
+Compiling module xil_defaultlib.EdgeDetect_MagAng_run_dat_out_rs...
+Compiling module xil_defaultlib.EdgeDetect_MagAng_run_dat_out_rs...
+Compiling module xil_defaultlib.mgc_io_sync_v2
+Compiling module xil_defaultlib.EdgeDetect_MagAng_run_crc32_pix_...
+Compiling module xil_defaultlib.EdgeDetect_MagAng_run_crc32_pix_...
+Compiling module xil_defaultlib.EdgeDetect_MagAng_run_crc32_dat_...
+Compiling module xil_defaultlib.EdgeDetect_MagAng_run_crc32_dat_...
+Compiling module xil_defaultlib.EdgeDetect_MagAng_run_staller
+Compiling module xil_defaultlib.EdgeDetect_MagAng_run_run_fsm
+Compiling module xil_defaultlib.EdgeDetect_MagAng_run
+Compiling module xil_defaultlib.EdgeDetect_MagAng
+Compiling module xil_defaultlib.EdgeDetect_Top_struct
+Compiling module xil_defaultlib.EdgeDetect_Top
+Compiling module xil_defaultlib.SPRAM(data_width=64,depth=80)
+Compiling module xil_defaultlib.USER_PRJ0_default
+Compiling module xil_defaultlib.multiplier_adder
+Compiling module xil_defaultlib.fir
+Compiling module xil_defaultlib.bram11
+Compiling module xil_defaultlib.USER_PRJ1
+Compiling module xil_defaultlib.USER_PRJ2
+Compiling module xil_defaultlib.USER_PRJ3
+Compiling module xil_defaultlib.AXIS_SLAV
+Compiling module xil_defaultlib.AXIS_MSTR
+Compiling module xil_defaultlib.IRQ_MUX
+Compiling module xil_defaultlib.LA_MUX
+Compiling module xil_defaultlib.USER_SUBSYS(pADDR_WIDTH=15)
+Compiling module xil_defaultlib.FSIC_CLKRST
+Compiling module xil_defaultlib.MPRJ_IOz(pADDR_WIDTH=15)
+Compiling module xil_defaultlib.FSIC
+Compiling module xil_defaultlib.user_project_wrapper
+Compiling module xil_defaultlib.boledu_fd_sc_hd__clkbuf_8
+Compiling module xil_defaultlib.housekeeping_spi
+Compiling module xil_defaultlib.housekeeping
+Compiling module xil_defaultlib.gpio_defaults_block
+Compiling module xil_defaultlib.gpio_control_block
+Compiling module xil_defaultlib.caravel_default
+Compiling module xil_defaultlib.design_1_caravel_0_0
+Compiling module unisims_ver.IBUF
+Compiling module unisims_ver.MMCME2_ADV(CLKFBOUT_MULT_F=64.0,...
+Compiling module unisims_ver.BUFG
+Compiling module xil_defaultlib.design_1_clk_wiz_0_0_clk_wiz
+Compiling module xil_defaultlib.design_1_clk_wiz_0_0
+Compiling module xil_defaultlib.AXIS_SWz(pADDR_WIDTH=15)
+Compiling module xil_defaultlib.ladmatr_control_s_axi
+Compiling module xil_defaultlib.ladmatr_gmem0_m_axi_srl(DATA_WID...
+Compiling module xil_defaultlib.ladmatr_gmem0_m_axi_fifo(DATA_WI...
+Compiling module xil_defaultlib.ladmatr_gmem0_m_axi_mem(MEM_STYL...
+Compiling module xil_defaultlib.ladmatr_gmem0_m_axi_fifo(MEM_STY...
+Compiling module xil_defaultlib.ladmatr_gmem0_m_axi_srl(DATA_WID...
+Compiling module xil_defaultlib.ladmatr_gmem0_m_axi_fifo(DATA_WI...
+Compiling module xil_defaultlib.ladmatr_gmem0_m_axi_srl(DATA_WID...
+Compiling module xil_defaultlib.ladmatr_gmem0_m_axi_fifo(DATA_WI...
+Compiling module xil_defaultlib.ladmatr_gmem0_m_axi_store(NUM_WR...
+Compiling module xil_defaultlib.ladmatr_gmem0_m_axi_mem(MEM_STYL...
+Compiling module xil_defaultlib.ladmatr_gmem0_m_axi_fifo(MEM_STY...
+Compiling module xil_defaultlib.ladmatr_gmem0_m_axi_load(NUM_REA...
+Compiling module xil_defaultlib.ladmatr_gmem0_m_axi_reg_slice(DA...
+Compiling module xil_defaultlib.ladmatr_gmem0_m_axi_srl(DATA_WID...
+Compiling module xil_defaultlib.ladmatr_gmem0_m_axi_fifo(DATA_WI...
+Compiling module xil_defaultlib.ladmatr_gmem0_m_axi_reg_slice(DA...
+Compiling module xil_defaultlib.ladmatr_gmem0_m_axi_srl(DATA_WID...
+Compiling module xil_defaultlib.ladmatr_gmem0_m_axi_fifo(DATA_WI...
+Compiling module xil_defaultlib.ladmatr_gmem0_m_axi_srl(DATA_WID...
+Compiling module xil_defaultlib.ladmatr_gmem0_m_axi_fifo(DATA_WI...
+Compiling module xil_defaultlib.ladmatr_gmem0_m_axi_throttle(CON...
+Compiling module xil_defaultlib.ladmatr_gmem0_m_axi_reg_slice(DA...
+Compiling module xil_defaultlib.ladmatr_gmem0_m_axi_write(CONSER...
+Compiling module xil_defaultlib.ladmatr_gmem0_m_axi_reg_slice(DA...
+Compiling module xil_defaultlib.ladmatr_gmem0_m_axi_read(C_USER_...
+Compiling module xil_defaultlib.ladmatr_gmem0_m_axi(CONSERVATIVE...
+Compiling module xil_defaultlib.ladmatr_entry_proc
+Compiling module xil_defaultlib.ladmatr_flow_control_loop_pipe_s...
+Compiling module xil_defaultlib.ladmatr_getinstream_Pipeline_VIT...
+Compiling module xil_defaultlib.ladmatr_regslice_both
+Compiling module xil_defaultlib.ladmatr_regslice_both(DataWidth=...
+Compiling module xil_defaultlib.ladmatr_regslice_both(DataWidth=...
+Compiling module xil_defaultlib.ladmatr_regslice_both(DataWidth=...
+Compiling module xil_defaultlib.ladmatr_getinstream
+Compiling module xil_defaultlib.ladmatr_streamtoparallelwithburs...
+Compiling module xil_defaultlib.ladmatr_streamtoparallelwithburs...
+Compiling module xil_defaultlib.ladmatr_fifo_w64_d3_S_shiftReg
+Compiling module xil_defaultlib.ladmatr_fifo_w64_d3_S
+Compiling module xil_defaultlib.ladmatr_fifo_w33_d128_A_ram
+Compiling module xil_defaultlib.ladmatr_fifo_w33_d128_A
+Compiling module xil_defaultlib.ladmatr_fifo_w32_d8_S_shiftReg
+Compiling module xil_defaultlib.ladmatr_fifo_w32_d8_S
+Compiling module xil_defaultlib.ladmatr_fifo_w1_d2_S_shiftReg
+Compiling module xil_defaultlib.ladmatr_fifo_w1_d2_S
+Compiling module xil_defaultlib.ladmatr_fifo_w32_d2_S_shiftReg
+Compiling module xil_defaultlib.ladmatr_fifo_w32_d2_S
+Compiling module xil_defaultlib.ladmatr_start_for_streamtoparall...
+Compiling module xil_defaultlib.ladmatr_start_for_streamtoparall...
+Compiling module xil_defaultlib.ladmatr
+Compiling module xil_defaultlib.ps_axil
+Compiling module xil_defaultlib.design_1_ps_axil_0_0
+Compiling architecture imp of entity proc_sys_reset_v5_0_13.lpf [\lpf(c_ext_rst_width=4,c_aux_rst...]
+Compiling architecture imp of entity proc_sys_reset_v5_0_13.proc_sys_reset [\proc_sys_reset(c_family="zynq",...]
+Compiling architecture design_1_rst_clk_wiz_0_5m_0_arch of entity xil_defaultlib.design_1_rst_clk_wiz_0_5M_0 [design_1_rst_clk_wiz_0_5m_0_defa...]
+Compiling module xil_defaultlib.spiflash
+Compiling module xil_defaultlib.design_1_spiflash_0_0
+Compiling module xil_defaultlib.userdma_control_s_axi
+Compiling module xil_defaultlib.userdma_gmem0_m_axi_srl(DATA_WID...
+Compiling module xil_defaultlib.userdma_gmem0_m_axi_fifo(DATA_WI...
+Compiling module xil_defaultlib.userdma_gmem0_m_axi_mem(MEM_STYL...
+Compiling module xil_defaultlib.userdma_gmem0_m_axi_fifo(MEM_STY...
+Compiling module xil_defaultlib.userdma_gmem0_m_axi_srl(DATA_WID...
+Compiling module xil_defaultlib.userdma_gmem0_m_axi_fifo(DATA_WI...
+Compiling module xil_defaultlib.userdma_gmem0_m_axi_srl(DATA_WID...
+Compiling module xil_defaultlib.userdma_gmem0_m_axi_fifo(DATA_WI...
+Compiling module xil_defaultlib.userdma_gmem0_m_axi_store(NUM_WR...
+Compiling module xil_defaultlib.userdma_gmem0_m_axi_mem(MEM_STYL...
+Compiling module xil_defaultlib.userdma_gmem0_m_axi_fifo(MEM_STY...
+Compiling module xil_defaultlib.userdma_gmem0_m_axi_load(NUM_REA...
+Compiling module xil_defaultlib.userdma_gmem0_m_axi_reg_slice(DA...
+Compiling module xil_defaultlib.userdma_gmem0_m_axi_srl(DATA_WID...
+Compiling module xil_defaultlib.userdma_gmem0_m_axi_fifo(DATA_WI...
+Compiling module xil_defaultlib.userdma_gmem0_m_axi_reg_slice(DA...
+Compiling module xil_defaultlib.userdma_gmem0_m_axi_srl(DATA_WID...
+Compiling module xil_defaultlib.userdma_gmem0_m_axi_fifo(DATA_WI...
+Compiling module xil_defaultlib.userdma_gmem0_m_axi_srl(DATA_WID...
+Compiling module xil_defaultlib.userdma_gmem0_m_axi_fifo(DATA_WI...
+Compiling module xil_defaultlib.userdma_gmem0_m_axi_throttle(CON...
+Compiling module xil_defaultlib.userdma_gmem0_m_axi_reg_slice(DA...
+Compiling module xil_defaultlib.userdma_gmem0_m_axi_write(CONSER...
+Compiling module xil_defaultlib.userdma_gmem0_m_axi_reg_slice(DA...
+Compiling module xil_defaultlib.userdma_gmem0_m_axi_read(C_USER_...
+Compiling module xil_defaultlib.userdma_gmem0_m_axi(CONSERVATIVE...
+Compiling module xil_defaultlib.userdma_gmem1_m_axi_srl(DATA_WID...
+Compiling module xil_defaultlib.userdma_gmem1_m_axi_fifo(DATA_WI...
+Compiling module xil_defaultlib.userdma_gmem1_m_axi_mem(MEM_STYL...
+Compiling module xil_defaultlib.userdma_gmem1_m_axi_fifo(MEM_STY...
+Compiling module xil_defaultlib.userdma_gmem1_m_axi_srl(DATA_WID...
+Compiling module xil_defaultlib.userdma_gmem1_m_axi_fifo(DATA_WI...
+Compiling module xil_defaultlib.userdma_gmem1_m_axi_srl(DATA_WID...
+Compiling module xil_defaultlib.userdma_gmem1_m_axi_fifo(DATA_WI...
+Compiling module xil_defaultlib.userdma_gmem1_m_axi_store(NUM_WR...
+Compiling module xil_defaultlib.userdma_gmem1_m_axi_mem(MEM_STYL...
+Compiling module xil_defaultlib.userdma_gmem1_m_axi_fifo(MEM_STY...
+Compiling module xil_defaultlib.userdma_gmem1_m_axi_load(NUM_REA...
+Compiling module xil_defaultlib.userdma_gmem1_m_axi_reg_slice(DA...
+Compiling module xil_defaultlib.userdma_gmem1_m_axi_srl(DATA_WID...
+Compiling module xil_defaultlib.userdma_gmem1_m_axi_fifo(DATA_WI...
+Compiling module xil_defaultlib.userdma_gmem1_m_axi_reg_slice(DA...
+Compiling module xil_defaultlib.userdma_gmem1_m_axi_srl(DATA_WID...
+Compiling module xil_defaultlib.userdma_gmem1_m_axi_fifo(DATA_WI...
+Compiling module xil_defaultlib.userdma_gmem1_m_axi_srl(DATA_WID...
+Compiling module xil_defaultlib.userdma_gmem1_m_axi_fifo(DATA_WI...
+Compiling module xil_defaultlib.userdma_gmem1_m_axi_throttle(CON...
+Compiling module xil_defaultlib.userdma_gmem1_m_axi_reg_slice(DA...
+Compiling module xil_defaultlib.userdma_gmem1_m_axi_write(CONSER...
+Compiling module xil_defaultlib.userdma_gmem1_m_axi_reg_slice(DA...
+Compiling module xil_defaultlib.userdma_gmem1_m_axi_srl(DATA_WID...
+Compiling module xil_defaultlib.userdma_gmem1_m_axi_fifo(DATA_WI...
+Compiling module xil_defaultlib.userdma_gmem1_m_axi_read(C_USER_...
+Compiling module xil_defaultlib.userdma_gmem1_m_axi(CONSERVATIVE...
+Compiling module xil_defaultlib.userdma_entry_proc
+Compiling module xil_defaultlib.userdma_flow_control_loop_pipe_s...
+Compiling module xil_defaultlib.userdma_getinstream_Pipeline_VIT...
+Compiling module xil_defaultlib.userdma_regslice_both
+Compiling module xil_defaultlib.userdma_regslice_both(DataWidth=...
+Compiling module xil_defaultlib.userdma_regslice_both(DataWidth=...
+Compiling module xil_defaultlib.userdma_regslice_both(DataWidth=...
+Compiling module xil_defaultlib.userdma_getinstream
+Compiling module xil_defaultlib.userdma_streamtoparallelwithburs...
+Compiling module xil_defaultlib.userdma_streamtoparallelwithburs...
+Compiling module xil_defaultlib.userdma_paralleltostreamwithburs...
+Compiling module xil_defaultlib.userdma_paralleltostreamwithburs...
+Compiling module xil_defaultlib.userdma_sendoutstream_Pipeline_V...
+Compiling module xil_defaultlib.userdma_sendoutstream
+Compiling module xil_defaultlib.userdma_fifo_w64_d3_S_shiftReg
+Compiling module xil_defaultlib.userdma_fifo_w64_d3_S
+Compiling module xil_defaultlib.userdma_fifo_w33_d64_A_ram
+Compiling module xil_defaultlib.userdma_fifo_w33_d64_A
+Compiling module xil_defaultlib.userdma_fifo_w32_d4_S_shiftReg
+Compiling module xil_defaultlib.userdma_fifo_w32_d4_S
+Compiling module xil_defaultlib.userdma_fifo_w32_d2_S_shiftReg
+Compiling module xil_defaultlib.userdma_fifo_w32_d2_S
+Compiling module xil_defaultlib.userdma_fifo_w1_d2_S_shiftReg
+Compiling module xil_defaultlib.userdma_fifo_w1_d2_S
+Compiling module xil_defaultlib.userdma_fifo_w40_d64_A_ram
+Compiling module xil_defaultlib.userdma_fifo_w40_d64_A
+Compiling module xil_defaultlib.userdma_start_for_streamtoparall...
+Compiling module xil_defaultlib.userdma_start_for_streamtoparall...
+Compiling module xil_defaultlib.userdma_start_for_sendoutstream_...
+Compiling module xil_defaultlib.userdma_start_for_sendoutstream_...
+Compiling module xil_defaultlib.userdma_hls_deadlock_detect_unit...
+Compiling module xil_defaultlib.userdma_hls_deadlock_detect_unit...
+Compiling module xil_defaultlib.userdma_hls_deadlock_detect_unit...
+Compiling module xil_defaultlib.userdma_hls_deadlock_detect_unit...
+Compiling module xil_defaultlib.userdma_hls_deadlock_detect_unit...
+WARNING: [VRFC 10-3705] select index -1 into 'axis_block_sigs' is out of bounds [/home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/2db7/hdl/verilog/userdma_hls_deadlock_idx0_monitor.v:23]
+WARNING: [VRFC 10-3705] select index -1 into 'axis_block_sigs' is out of bounds [/home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/2db7/hdl/verilog/userdma_hls_deadlock_idx0_monitor.v:24]
+WARNING: [VRFC 10-3705] select index -1 into 'axis_block_sigs' is out of bounds [/home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/2db7/hdl/verilog/userdma_hls_deadlock_idx0_monitor.v:28]
+WARNING: [VRFC 10-3705] select index -1 into 'axis_block_sigs' is out of bounds [/home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.gen/sources_1/bd/design_1/ipshared/2db7/hdl/verilog/userdma_hls_deadlock_idx0_monitor.v:37]
+Compiling module xil_defaultlib.userdma_hls_deadlock_idx0_monito...
+Compiling module xil_defaultlib.userdma(C_M_AXI_GMEM0_USER_VALUE...
+Compiling module xil_defaultlib.design_1_userdma_0_0
+Compiling module xil_defaultlib.design_1
+Compiling module xil_defaultlib.design_1_wrapper
+Compiling module xil_defaultlib.fsic_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot fsic_tb_behav
+execute_script: Time (s): cpu = 00:01:31 ; elapsed = 00:00:52 . Memory (MB): peak = 2963.793 ; gain = 0.000 ; free physical = 4692 ; free virtual = 20842
+INFO: [USF-XSim-69] 'elaborate' step finished in '52' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/ubuntu/fsic_fpga/vivado/vvd_caravel_fpga_sim/vvd_caravel_fpga_sim.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "fsic_tb_behav -key {Behavioral:sim_1:Functional:fsic_tb} -tclbatch {fsic_tb.tcl} -protoinst "protoinst_files/bd_afc3.protoinst" -protoinst "protoinst_files/bd_a878.protoinst" -protoinst "protoinst_files/bd_a888.protoinst" -protoinst "protoinst_files/design_1.protoinst" -view {/home/ubuntu/fsic_fpga/vivado/fsic_tb_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/bd_afc3.protoinst
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/axi_smc/inst//m00_exit_pipeline/m00_exit/M_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/axi_smc/inst//m00_exit_pipeline/m00_exit/S_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/axi_smc/inst//m00_exit_pipeline/m_axi
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/axi_smc/inst//m00_exit_pipeline/s_axi
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/axi_smc/inst//m00_sc2axi/M_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/axi_smc/inst//s00_axi2sc/S_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/axi_smc/inst//s00_entry_pipeline/m_axi
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/axi_smc/inst//s00_entry_pipeline/s00_mmu/M_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/axi_smc/inst//s00_entry_pipeline/s00_mmu/S_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/axi_smc/inst//s00_entry_pipeline/s00_si_converter/M_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/axi_smc/inst//s00_entry_pipeline/s00_si_converter/S_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/axi_smc/inst//s00_entry_pipeline/s00_transaction_regulator/M_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/axi_smc/inst//s00_entry_pipeline/s00_transaction_regulator/S_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/axi_smc/inst//s00_entry_pipeline/s_axi
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/bd_a878.protoinst
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/axi_smc_1/inst//m00_exit_pipeline/m00_exit/M_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/axi_smc_1/inst//m00_exit_pipeline/m00_exit/S_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/axi_smc_1/inst//m00_exit_pipeline/m_axi
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/axi_smc_1/inst//m00_exit_pipeline/s_axi
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/axi_smc_1/inst//m00_sc2axi/M_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/axi_smc_1/inst//s00_axi2sc/S_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/axi_smc_1/inst//s00_entry_pipeline/m_axi
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/axi_smc_1/inst//s00_entry_pipeline/s00_mmu/M_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/axi_smc_1/inst//s00_entry_pipeline/s00_mmu/S_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/axi_smc_1/inst//s00_entry_pipeline/s00_si_converter/M_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/axi_smc_1/inst//s00_entry_pipeline/s00_si_converter/S_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/axi_smc_1/inst//s00_entry_pipeline/s00_transaction_regulator/M_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/axi_smc_1/inst//s00_entry_pipeline/s00_transaction_regulator/S_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/axi_smc_1/inst//s00_entry_pipeline/s_axi
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/bd_a888.protoinst
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/axi_smc_2/inst//m00_exit_pipeline/m00_exit/M_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/axi_smc_2/inst//m00_exit_pipeline/m00_exit/S_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/axi_smc_2/inst//m00_exit_pipeline/m_axi
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/axi_smc_2/inst//m00_exit_pipeline/s_axi
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/axi_smc_2/inst//m00_sc2axi/M_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/axi_smc_2/inst//s00_axi2sc/S_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/axi_smc_2/inst//s00_entry_pipeline/m_axi
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/axi_smc_2/inst//s00_entry_pipeline/s00_mmu/M_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/axi_smc_2/inst//s00_entry_pipeline/s00_mmu/S_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/axi_smc_2/inst//s00_entry_pipeline/s00_si_converter/M_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/axi_smc_2/inst//s00_entry_pipeline/s00_si_converter/S_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/axi_smc_2/inst//s00_entry_pipeline/s00_transaction_regulator/M_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/axi_smc_2/inst//s00_entry_pipeline/s00_transaction_regulator/S_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i/axi_smc_2/inst//s00_entry_pipeline/s_axi
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/design_1.protoinst
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i//axi_smc/M00_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i//axi_smc/S00_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i//axi_smc_1/M00_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i//axi_smc_1/S00_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i//axi_smc_2/M00_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i//axi_smc_2/S00_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i//axi_vip_0/M_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i//axi_vip_0_axi_periph/M00_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i//axi_vip_0_axi_periph/M01_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i//axi_vip_0_axi_periph/M02_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i//axi_vip_0_axi_periph/S00_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i//axi_vip_0_axi_periph/m00_couplers/M_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i//axi_vip_0_axi_periph/m00_couplers/S_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i//axi_vip_0_axi_periph/m01_couplers/M_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i//axi_vip_0_axi_periph/m01_couplers/S_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i//axi_vip_0_axi_periph/m02_couplers/M_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i//axi_vip_0_axi_periph/m02_couplers/S_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i//axi_vip_0_axi_periph/s00_couplers/M_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i//axi_vip_0_axi_periph/s00_couplers/S_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i//axi_vip_0_axi_periph/xbar/M00_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i//axi_vip_0_axi_periph/xbar/M01_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i//axi_vip_0_axi_periph/xbar/M02_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i//axi_vip_0_axi_periph/xbar/S00_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i//axi_vip_1/S_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i//axi_vip_2/S_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i//axi_vip_3/S_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i//ps_axil_0/ladma_mm
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i//ps_axil_0/ladma_s
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i//ps_axil_0/s_axi
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i//ps_axil_0/updma_si
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i//ps_axil_0/updma_so
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i//userdma_0/inStreamTop
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i//userdma_0/m_axi_gmem0
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i//userdma_0/m_axi_gmem1
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i//userdma_0/outStreamTop
+INFO: [Wavedata 42-564]   Found protocol instance at /fsic_tb/DUT/design_1_i//userdma_0/s_axi_control
+Time resolution is 1 ps
+open_wave_config /home/ubuntu/fsic_fpga/vivado/fsic_tb_behav.wcfg
+source fsic_tb.tcl
+## current_wave_config
+XilinxAXIVIP: Found at Path: fsic_tb.DUT.design_1_i.axi_vip_0.inst
+XilinxAXIVIP: Found at Path: fsic_tb.DUT.design_1_i.axi_vip_1.inst
+XilinxAXIVIP: Found at Path: fsic_tb.DUT.design_1_i.axi_vip_2.inst
+XilinxAXIVIP: Found at Path: fsic_tb.DUT.design_1_i.axi_vip_3.inst
+ Block Memory Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator module fsic_tb.DUT.design_1_i.blk_mem_gen_0.inst.\native_mem_mapped_module.blk_mem_gen_v8_4_5_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+                 200=> sys_rest = 1
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'fsic_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:01:56 ; elapsed = 00:01:20 . Memory (MB): peak = 3032.965 ; gain = 69.172 ; free physical = 4398 ; free virtual = 20555
+# run all
+               28858=> rst_clk_wiz_0_5M_peripheral_aresetn = 1
+              228858=> CaravelSoC resetb_0 = 1
+             8151658=> FW working, caravel_0_mprj_o[37] = 1
+             8151658=> PL_IS enabling...
+             8153858=> AXI4LITE_WRITE_BURST 60007000, value: 0001, resp: 00
+             8165858=> AXI4LITE_WRITE_BURST 60007000, value: 0003, resp: 00
+             8177458=> AXI4LITE_READ_BURST 60007000, value: 0003, resp: 00
+             8177458=> PL_IS enables: = 00000003
+             8177458=> Starting test...
+             8177458=> Starting Fpga2Soc_CfgWrite() test...
+             8177458=> =======================================================================
+             8177458=> Fpga2Soc_Write testing: SOC_CC
+             8180058=> AXI4LITE_WRITE_BURST 60005000, value: 0000, resp: 00
+             8192258=> AXI4LITE_READ_BURST 60005000, value: 0000, resp: 00
+             8192258=> #00000000, Fpga2Soc_Write SOC_CC offset 000 = 00000000, PASS
+             8192258=> Fpga2Soc_Read testing: SOC_UP
+             8202858=> AXI4LITE_READ_BURST 60000000, value: 0000, resp: 00
+             8212858=> Fpga2Soc_Read SOC_UP offset 000 = 00000000, PASS
+             8212858=> Fpga2Soc_Read testing: SOC_UP
+             8223258=> AXI4LITE_READ_BURST 60000004, value: 0280, resp: 00
+             8233258=> Fpga2Soc_Read SOC_UP offset 004 = 00000280, PASS
+             8233258=> Fpga2Soc_Read testing: SOC_UP
+             8243658=> AXI4LITE_READ_BURST 60000008, value: 01e0, resp: 00
+             8253658=> Fpga2Soc_Read SOC_UP offset 008 = 000001e0, PASS
+             8253658=> Fpga2Soc_Read testing: SOC_UP
+             8264058=> AXI4LITE_READ_BURST 6000000c, value: 0001, resp: 00
+             8274058=> Fpga2Soc_Read SOC_UP offset 00c = 00000001, PASS
+             8276458=> AXI4LITE_WRITE_BURST 60005000, value: 0001, resp: 00
+             8288658=> AXI4LITE_READ_BURST 60005000, value: 0001, resp: 00
+             8288658=> #00000001, Fpga2Soc_Write SOC_CC offset 000 = 00000001, PASS
+             8291258=> AXI4LITE_WRITE_BURST 60005000, value: 0002, resp: 00
+             8303458=> AXI4LITE_READ_BURST 60005000, value: 0002, resp: 00
+             8303458=> #00000002, Fpga2Soc_Write SOC_CC offset 000 = 00000002, PASS
+             8306058=> AXI4LITE_WRITE_BURST 60005000, value: 0003, resp: 00
+             8318258=> AXI4LITE_READ_BURST 60005000, value: 0003, resp: 00
+             8318258=> #00000003, Fpga2Soc_Write SOC_CC offset 000 = 00000003, PASS
+             8320858=> AXI4LITE_WRITE_BURST 60005000, value: 0004, resp: 00
+             8333058=> AXI4LITE_READ_BURST 60005000, value: 0004, resp: 00
+             8333058=> #00000004, Fpga2Soc_Write SOC_CC offset 000 = 00000004, PASS
+             8333058=> End Fpga2Soc_CfgWrite() test...
+             8333058=> =======================================================================
+             8333058=> =======================================================================
+             8333058=> Load FIR x_in into memory for DMA to access and stream into FIR
+             8333058=> =======================================================================
+WARNING: Too many words specified in data file ../../../../../fir_in.hex
+             8333058=> =======================================================================
+             8333058=> Configurate DMA
+             8333058=> =======================================================================
+             8333058=> FpgaLocal_Write: PL_UPDMA, enable s2m clear status
+             8334658=> AXI4LITE_WRITE_BURST 60009028, value: 0000, resp: 00
+             8335858=> AXI4LITE_READ_BURST 60009028, value: 0000, resp: 00
+             8335858=> Fpga2Soc_Write PL_UPDMA offset 028 = 00000000, PASS
+             8335858=> -----------------------------------------------------------------------
+             8335858=> FpgaLocal_Write: PL_UPDMA, enable m2s clear status
+             8337458=> AXI4LITE_WRITE_BURST 60009070, value: 0000, resp: 00
+             8338658=> AXI4LITE_READ_BURST 60009070, value: 0000, resp: 00
+             8338658=> Fpga2Soc_Write PL_UPDMA offset 070 = 00000000, PASS
+             8338658=> -----------------------------------------------------------------------
+             8338658=> FpgaLocal_Write: PL_UPDMA, s2m set buffer length...
+             8340258=> AXI4LITE_WRITE_BURST 60009020, value: 0040, resp: 00
+             8341458=> AXI4LITE_READ_BURST 60009020, value: 0040, resp: 00
+             8341458=> Fpga2Soc_Write PL_UPDMA offset 020 = 00000040, PASS
+             8341458=> -----------------------------------------------------------------------
+             8341458=> FpgaLocal_Write: PL_UPDMA, s2m set buffer low...
+             8343058=> AXI4LITE_WRITE_BURST 60009030, value: 45080000, resp: 00
+             8344258=> AXI4LITE_READ_BURST 60009030, value: 45080000, resp: 00
+             8344258=> Fpga2Soc_Write PL_UPDMA offset 030 = 45080000, PASS
+             8344258=> -----------------------------------------------------------------------
+             8344258=> FpgaLocal_Write: PL_UPDMA, s2m set buffer high...
+             8345858=> AXI4LITE_WRITE_BURST 60009034, value: 0000, resp: 00
+             8347058=> AXI4LITE_READ_BURST 60009034, value: 0000, resp: 00
+             8347058=> Fpga2Soc_Write PL_UPDMA offset 034 = 00000000, PASS
+             8347058=> -----------------------------------------------------------------------
+             8347058=> FpgaLocal_Write: PL_UPDMA, m2s set buffer low...
+             8348658=> AXI4LITE_WRITE_BURST 6000904c, value: 45000000, resp: 00
+             8349858=> AXI4LITE_READ_BURST 6000904c, value: 45000000, resp: 00
+             8349858=> Fpga2Soc_Write PL_UPDMA offset 04c = 45000000, PASS
+             8349858=> -----------------------------------------------------------------------
+             8349858=> FpgaLocal_Write: PL_UPDMA, m2s set buffer high...
+             8351458=> AXI4LITE_WRITE_BURST 60009050, value: 0000, resp: 00
+             8352658=> AXI4LITE_READ_BURST 60009050, value: 0000, resp: 00
+             8352658=> Fpga2Soc_Write PL_UPDMA offset 050 = 00000000, PASS
+             8352658=> -----------------------------------------------------------------------
+             8352658=> FpgaLocal_Write: PL_UPDMA, m2s set buffer length...
+             8354258=> AXI4LITE_WRITE_BURST 60009068, value: 0040, resp: 00
+             8355458=> AXI4LITE_READ_BURST 60009068, value: 0040, resp: 00
+             8355458=> Fpga2Soc_Write PL_UPDMA offset 068 = 00000040, PASS
+             8355458=> -----------------------------------------------------------------------
+             8355458=> =======================================================================
+             8355458=> Initialize FIR and program ap_start
+             8355458=> =======================================================================
+             8355458=> Fpga2Soc_Write: SOC_CC
+             8358058=> AXI4LITE_WRITE_BURST 60005000, value: 0001, resp: 00
+             8370258=> AXI4LITE_READ_BURST 60005000, value: 0001, resp: 00
+             8370258=> Fpga2Soc_Write SOC_CC offset 000 = 00000001, PASS
+             8370258=> Fpga2Soc_Write: SOC_UP
+             8372858=> AXI4LITE_WRITE_BURST 60000010, value: 0040, resp: 00
+             8385058=> AXI4LITE_READ_BURST 60000010, value: 0040, resp: 00
+             8385058=> Fpga2Soc_Write SOC_UP offset 010 = 00000040, PASS
+             8385058=> Fpga2Soc_Write: SOC_UP
+             8387658=> AXI4LITE_WRITE_BURST 60000020, value: 0000, resp: 00
+             8399858=> AXI4LITE_READ_BURST 60000020, value: 0000, resp: 00
+             8399858=> Fpga2Soc_Write SOC_UP offset 020 = 00000000, PASS
+             8399858=> Fpga2Soc_Write: SOC_UP
+             8402458=> AXI4LITE_WRITE_BURST 60000024, value: fffffff6, resp: 00
+             8414658=> AXI4LITE_READ_BURST 60000024, value: fffffff6, resp: 00
+             8414658=> Fpga2Soc_Write SOC_UP offset 024 = fffffff6, PASS
+             8414658=> Fpga2Soc_Write: SOC_UP
+             8417258=> AXI4LITE_WRITE_BURST 60000028, value: fffffff7, resp: 00
+             8429458=> AXI4LITE_READ_BURST 60000028, value: fffffff7, resp: 00
+             8429458=> Fpga2Soc_Write SOC_UP offset 028 = fffffff7, PASS
+             8429458=> Fpga2Soc_Write: SOC_UP
+             8432058=> AXI4LITE_WRITE_BURST 6000002c, value: 0017, resp: 00
+             8444258=> AXI4LITE_READ_BURST 6000002c, value: 0017, resp: 00
+             8444258=> Fpga2Soc_Write SOC_UP offset 02c = 00000017, PASS
+             8444258=> Fpga2Soc_Write: SOC_UP
+             8446858=> AXI4LITE_WRITE_BURST 60000030, value: 0038, resp: 00
+             8459058=> AXI4LITE_READ_BURST 60000030, value: 0038, resp: 00
+             8459058=> Fpga2Soc_Write SOC_UP offset 030 = 00000038, PASS
+             8459058=> Fpga2Soc_Write: SOC_UP
+             8461658=> AXI4LITE_WRITE_BURST 60000034, value: 003f, resp: 00
+             8473858=> AXI4LITE_READ_BURST 60000034, value: 003f, resp: 00
+             8473858=> Fpga2Soc_Write SOC_UP offset 034 = 0000003f, PASS
+             8473858=> Fpga2Soc_Write: SOC_UP
+             8476458=> AXI4LITE_WRITE_BURST 60000038, value: 0038, resp: 00
+             8488658=> AXI4LITE_READ_BURST 60000038, value: 0038, resp: 00
+             8488658=> Fpga2Soc_Write SOC_UP offset 038 = 00000038, PASS
+             8488658=> Fpga2Soc_Write: SOC_UP
+             8491258=> AXI4LITE_WRITE_BURST 6000003c, value: 0017, resp: 00
+             8503458=> AXI4LITE_READ_BURST 6000003c, value: 0017, resp: 00
+             8503458=> Fpga2Soc_Write SOC_UP offset 03c = 00000017, PASS
+             8503458=> Fpga2Soc_Write: SOC_UP
+             8506058=> AXI4LITE_WRITE_BURST 60000040, value: fffffff7, resp: 00
+             8518258=> AXI4LITE_READ_BURST 60000040, value: fffffff7, resp: 00
+             8518258=> Fpga2Soc_Write SOC_UP offset 040 = fffffff7, PASS
+             8518258=> Fpga2Soc_Write: SOC_UP
+             8520858=> AXI4LITE_WRITE_BURST 60000044, value: fffffff6, resp: 00
+             8533058=> AXI4LITE_READ_BURST 60000044, value: fffffff6, resp: 00
+             8533058=> Fpga2Soc_Write SOC_UP offset 044 = fffffff6, PASS
+             8533058=> Fpga2Soc_Write: SOC_UP
+             8535658=> AXI4LITE_WRITE_BURST 60000048, value: 0000, resp: 00
+             8547858=> AXI4LITE_READ_BURST 60000048, value: 0000, resp: 00
+             8547858=> Fpga2Soc_Write SOC_UP offset 048 = 00000000, PASS
+             8547858=> Fpga2Soc_Write: SOC_CC
+             8550458=> AXI4LITE_WRITE_BURST 60005000, value: 0001, resp: 00
+             8562658=> AXI4LITE_READ_BURST 60005000, value: 0001, resp: 00
+             8562658=> Fpga2Soc_Write SOC_CC offset 000 = 00000001, PASS
+             8562658=> Fpga2Soc_Write: SOC_UP
+             8565258=> AXI4LITE_WRITE_BURST 60000000, value: 0001, resp: 00
+             8565258=> =======================================================================
+             8565258=> Start DMA streaming x in, program ap_start to DMA
+             8565258=> =======================================================================
+             8566858=> AXI4LITE_WRITE_BURST 60009000, value: 0001, resp: 00
+             8566858=> =======================================================================
+             8566858=> Starting Check fir result written back by DMA
+             8566858=> =======================================================================
+             8566858=> FpgaLocal_Read: PL_UPDMA
+             8566858=> Wating buffer transfer done...
+             8775858=> -----------------------------------------------------------------------
+             8777058=> *----------------------------*--------*
+             8777058=> |     Stream to Memory Error | Status |
+             8777058=> *----------------------------*--------*
+             8777058=> |                     Passed |      0 |
+             8777058=> | Stream-in less than length |      1 |
+             8777058=> | Stream-in more than length |      2 |
+             8777058=> *----------------------------*--------*
+             8777058=> Stream to Memory error status:  0
+             8777058=> FIR PASS, last Y: 10614
+             8777058=> -----------------------------------------------------------------------
+             8777058=> End CheckfirDMADone()...
+             8777058=> End firDMA transmission...
+             8777058=> =======================================================================
+             9277058=> End of the test...
+Executing Axi4 End Of Simulation checks
+Executing Axi4 End Of Simulation checks
+Executing Axi4 End Of Simulation checks
+Executing Axi4 End Of Simulation checks
+$finish called at time : 9277058 ns : File "/home/ubuntu/fsic_fpga/vivado/fsic_tb.sv" Line 139
+run: Time (s): cpu = 00:00:07 ; elapsed = 00:02:53 . Memory (MB): peak = 3032.965 ; gain = 0.000 ; free physical = 3372 ; free virtual = 20487
+# exit
+INFO: xsimkernel Simulation Memory Usage: 157216 KB (Peak: 194308 KB), Simulation CPU Usage: 172710 ms
+INFO: [Common 17-206] Exiting Vivado at Tue May 21 22:16:10 2024...
+======================================================================
+                           vivado complete 
+======================================================================
