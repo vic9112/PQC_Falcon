@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.1 (lin64) Build 3526262 Mon Apr 18 15:47:01 MDT 2022
-| Date         : Mon May 27 09:59:46 2024
+| Date         : Thu Jun 13 09:51:40 2024
 | Host         : ubuntu2004 running 64-bit Ubuntu 20.04.6 LTS
 | Command      : report_clock_utilization -file design_1_wrapper_clock_utilization_routed.rpt
 | Design       : design_1_wrapper
@@ -60,15 +60,15 @@ Table of Contents
 +-----------+-----------+-----------------+------------+----------------+--------------+-------------------+-------------+-----------------+--------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------+
 | Global Id | Source Id | Driver Type/Pin | Constraint | Site           | Clock Region | Load Clock Region | Clock Loads | Non-Clock Loads | Clock Period | Clock                         | Driver Pin                                                                                                                                            | Net                                                                                                                                            |
 +-----------+-----------+-----------------+------------+----------------+--------------+-------------------+-------------+-----------------+--------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------+
-| g0        | src0      | BUFG/O          | None       | BUFGCTRL_X0Y24 | n/a          |                 6 |       18356 |               0 |      200.000 | clk_out1_design_1_clk_wiz_0_0 | design_1_i/clk_wiz_0/inst/clkout1_buf/O                                                                                                               | design_1_i/clk_wiz_0/inst/clk_out1                                                                                                             |
-| g1        | src1      | BUFG/O          | None       | BUFGCTRL_X0Y25 | n/a          |                 4 |         601 |               3 |       50.000 | clk_out2_design_1_clk_wiz_0_0 | design_1_i/clk_wiz_0/inst/clkout2_buf/O                                                                                                               | design_1_i/clk_wiz_0/inst/clk_out2                                                                                                             |
-| g2        | src2      | BUFG/O          | None       | BUFGCTRL_X0Y18 | n/a          |                 3 |         571 |               0 |              |                               | design_1_i/caravel_0/inst/housekeeping/csclk_BUFG_inst/O                                                                                              | design_1_i/caravel_0/inst/housekeeping/csclk_BUFG                                                                                              |
-| g3        | src3      | BUFG/O          | None       | BUFGCTRL_X0Y20 | n/a          |                 6 |         300 |               4 |              |                               | design_1_i/caravel_0/inst/housekeeping/mprj_io_loader_clock_BUFG_inst/O                                                                               | design_1_i/caravel_0/inst/housekeeping/mprj_io_loader_clock_BUFG                                                                               |
-| g4        | src4      | BUFG/O          | None       | BUFGCTRL_X0Y21 | n/a          |                 5 |         121 |               0 |              |                               | design_1_i/caravel_0/inst/housekeeping/mprj_io_loader_strobe_BUFG_inst/O                                                                              | design_1_i/caravel_0/inst/housekeeping/mprj_io_loader_strobe_BUFG                                                                              |
-| g5        | src1      | BUFG/O          | None       | BUFGCTRL_X0Y17 | n/a          |                 2 |         104 |               0 |       50.000 | clk_out2_design_1_clk_wiz_0_0 | design_1_i/caravel_0/inst/gpio_control_bidir_2[0]/mprj_o[0]_BUFG_inst/O                                                                               | design_1_i/caravel_0/inst/gpio_control_bidir_2[0]/mprj_o_BUFG[0]                                                                               |
-| g6        | src1      | BUFG/O          | None       | BUFGCTRL_X0Y27 | n/a          |                 1 |          96 |               1 |       50.000 | clk_out2_design_1_clk_wiz_0_0 | design_1_i/ps_axil_0/inst/PL_IS/caravel_mprj_out[13]_BUFG_inst/O                                                                                      | design_1_i/ps_axil_0/inst/PL_IS/caravel_mprj_out_BUFG[13]                                                                                      |
+| g0        | src0      | BUFG/O          | None       | BUFGCTRL_X0Y24 | n/a          |                 6 |       18769 |               0 |      200.000 | clk_out1_design_1_clk_wiz_0_0 | design_1_i/clk_wiz_0/inst/clkout1_buf/O                                                                                                               | design_1_i/clk_wiz_0/inst/clk_out1                                                                                                             |
+| g1        | src1      | BUFG/O          | None       | BUFGCTRL_X0Y25 | n/a          |                 3 |         624 |               3 |       50.000 | clk_out2_design_1_clk_wiz_0_0 | design_1_i/clk_wiz_0/inst/clkout2_buf/O                                                                                                               | design_1_i/clk_wiz_0/inst/clk_out2                                                                                                             |
+| g2        | src2      | BUFG/O          | None       | BUFGCTRL_X0Y18 | n/a          |                 2 |         571 |               0 |              |                               | design_1_i/caravel_0/inst/housekeeping/csclk_BUFG_inst/O                                                                                              | design_1_i/caravel_0/inst/housekeeping/csclk_BUFG                                                                                              |
+| g3        | src3      | BUFG/O          | None       | BUFGCTRL_X0Y20 | n/a          |                 2 |         300 |               4 |              |                               | design_1_i/caravel_0/inst/housekeeping/mprj_io_loader_clock_BUFG_inst/O                                                                               | design_1_i/caravel_0/inst/housekeeping/mprj_io_loader_clock_BUFG                                                                               |
+| g4        | src4      | BUFG/O          | None       | BUFGCTRL_X0Y21 | n/a          |                 2 |         121 |               0 |              |                               | design_1_i/caravel_0/inst/housekeeping/mprj_io_loader_strobe_BUFG_inst/O                                                                              | design_1_i/caravel_0/inst/housekeeping/mprj_io_loader_strobe_BUFG                                                                              |
+| g5        | src1      | BUFG/O          | None       | BUFGCTRL_X0Y17 | n/a          |                 1 |         104 |               0 |       50.000 | clk_out2_design_1_clk_wiz_0_0 | design_1_i/caravel_0/inst/gpio_control_bidir_2[0]/mprj_o[0]_BUFG_inst/O                                                                               | design_1_i/caravel_0/inst/gpio_control_bidir_2[0]/mprj_o_BUFG[0]                                                                               |
+| g6        | src1      | BUFG/O          | None       | BUFGCTRL_X0Y27 | n/a          |                 2 |         104 |               1 |       50.000 | clk_out2_design_1_clk_wiz_0_0 | design_1_i/ps_axil_0/inst/PL_IS/serial_tclk_BUFG_inst/O                                                                                               | design_1_i/ps_axil_0/inst/PL_IS/serial_tclk_BUFG                                                                                               |
 | g7        | src5      | BUFG/O          | None       | BUFGCTRL_X0Y19 | n/a          |                 1 |          74 |               0 |              |                               | design_1_i/caravel_0/inst/housekeeping/hkspi/flash_clk_BUFG_inst/O                                                                                    | design_1_i/caravel_0/inst/housekeeping/hkspi/flash_clk_BUFG                                                                                    |
-| g8        | src6      | BUFG/O          | None       | BUFGCTRL_X0Y16 | n/a          |                 3 |          44 |               3 |              |                               | design_1_i/axi_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/LOGIC_FOR_MD_0_GEN.SPI_MODULE_I/sck_o_BUFG_inst/O | design_1_i/axi_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/LOGIC_FOR_MD_0_GEN.SPI_MODULE_I/sck_o_BUFG |
+| g8        | src6      | BUFG/O          | None       | BUFGCTRL_X0Y16 | n/a          |                 1 |          44 |               3 |              |                               | design_1_i/axi_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/LOGIC_FOR_MD_0_GEN.SPI_MODULE_I/sck_o_BUFG_inst/O | design_1_i/axi_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/LOGIC_FOR_MD_0_GEN.SPI_MODULE_I/sck_o_BUFG |
 | g9        | src7      | BUFG/O          | None       | BUFGCTRL_X0Y22 | n/a          |                 1 |          32 |               0 |              |                               | design_1_i/caravel_0/inst/mprj/u_fsic/U_AXIL_AXIS0/axi_ctrl_logic/data_ss_reg[31]_i_2_n_0_BUFG_inst/O                                                 | design_1_i/caravel_0/inst/mprj/u_fsic/U_AXIL_AXIS0/axi_ctrl_logic/data_ss_reg[31]_i_2_n_0_BUFG                                                 |
 | g10       | src8      | BUFG/O          | None       | BUFGCTRL_X0Y23 | n/a          |                 1 |           1 |               0 |      100.000 | clkfbout_design_1_clk_wiz_0_0 | design_1_i/clk_wiz_0/inst/clkf_buf/O                                                                                                                  | design_1_i/clk_wiz_0/inst/clkfbout_buf_design_1_clk_wiz_0_0                                                                                    |
 | g11       | src9      | BUFG/O          | None       | BUFGCTRL_X0Y26 | n/a          |                 1 |           1 |               0 |        4.000 | clk_fpga_0                    | design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O                                                                              | design_1_i/processing_system7_0/inst/FCLK_CLK0                                                                                                 |
@@ -85,14 +85,14 @@ Table of Contents
 +-----------+-----------+---------------------+------------+-----------------+--------------+-------------+-----------------+---------------------+-------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------+
 | src0      | g0        | MMCME2_ADV/CLKOUT0  | None       | MMCME2_ADV_X1Y2 | X1Y2         |           1 |               0 |             200.000 | clk_out1_design_1_clk_wiz_0_0 | design_1_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0                                                                                                                                                                  | design_1_i/clk_wiz_0/inst/clk_out1_design_1_clk_wiz_0_0                                                                                   |
 | src1      | g1        | MMCME2_ADV/CLKOUT1  | None       | MMCME2_ADV_X1Y2 | X1Y2         |           1 |               0 |              50.000 | clk_out2_design_1_clk_wiz_0_0 | design_1_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT1                                                                                                                                                                  | design_1_i/clk_wiz_0/inst/clk_out2_design_1_clk_wiz_0_0                                                                                   |
-| src1      | g5        | LUT6/O              | None       | SLICE_X51Y49    | X1Y0         |           1 |               0 |              50.000 | clk_out2_design_1_clk_wiz_0_0 | design_1_i/caravel_0/inst/gpio_control_bidir_2[0]/mprj_o[35]_INST_0/O                                                                                                                                            | design_1_i/caravel_0/inst/gpio_control_bidir_2[0]/mprj_o[0]                                                                               |
-| src1      | g6        | LUT2/O              | None       | SLICE_X54Y58    | X1Y1         |           1 |               0 |              50.000 | clk_out2_design_1_clk_wiz_0_0 | design_1_i/ps_axil_0/inst/PL_IS/caravel_mprj_out[21]_INST_0/O                                                                                                                                                    | design_1_i/ps_axil_0/inst/PL_IS/caravel_mprj_out[13]                                                                                      |
-| src2      | g2        | LUT6/O              | None       | SLICE_X50Y49    | X1Y0         |           1 |               0 |                     |                               | design_1_i/caravel_0/inst/housekeeping/hkspi_disable_i_2/O                                                                                                                                                       | design_1_i/caravel_0/inst/housekeeping/csclk                                                                                              |
-| src3      | g3        | LUT3/O              | None       | SLICE_X39Y48    | X0Y0         |           1 |               0 |                     |                               | design_1_i/caravel_0/inst/housekeeping/shift_register[12]_i_1/O                                                                                                                                                  | design_1_i/caravel_0/inst/housekeeping/mprj_io_loader_clock                                                                               |
-| src4      | g4        | LUT3/O              | None       | SLICE_X39Y48    | X0Y0         |           1 |               0 |                     |                               | design_1_i/caravel_0/inst/housekeeping/gpio_dm[2]_i_1/O                                                                                                                                                          | design_1_i/caravel_0/inst/housekeeping/mprj_io_loader_strobe                                                                              |
-| src5      | g7        | LUT3/O              | None       | SLICE_X51Y49    | X1Y0         |           1 |               0 |                     |                               | design_1_i/caravel_0/inst/housekeeping/hkspi/flash_clk_INST_0/O                                                                                                                                                  | design_1_i/caravel_0/inst/housekeeping/hkspi/flash_clk                                                                                    |
-| src6      | g8        | FDRE/Q              | None       | SLICE_X53Y105   | X1Y2         |           1 |               0 |                     |                               | design_1_i/axi_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/LOGIC_FOR_MD_0_GEN.SPI_MODULE_I/RATIO_NOT_EQUAL_4_GENERATE.SCK_O_NQ_4_NO_STARTUP_USED.SCK_O_NE_4_FDRE_INST/Q | design_1_i/axi_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/LOGIC_FOR_MD_0_GEN.SPI_MODULE_I/sck_o |
-| src7      | g9        | LUT4/O              | None       | SLICE_X51Y50    | X1Y1         |           1 |               0 |                     |                               | design_1_i/caravel_0/inst/mprj/u_fsic/U_AXIL_AXIS0/axi_ctrl_logic/data_ss_reg[31]_i_2/O                                                                                                                          | design_1_i/caravel_0/inst/mprj/u_fsic/U_AXIL_AXIS0/axi_ctrl_logic/data_ss_reg[31]_i_2_n_0                                                 |
+| src1      | g5        | LUT6/O              | None       | SLICE_X50Y51    | X1Y1         |           1 |               0 |              50.000 | clk_out2_design_1_clk_wiz_0_0 | design_1_i/caravel_0/inst/gpio_control_bidir_2[0]/mprj_o[35]_INST_0/O                                                                                                                                            | design_1_i/caravel_0/inst/gpio_control_bidir_2[0]/mprj_o[0]                                                                               |
+| src1      | g6        | LUT2/O              | None       | SLICE_X53Y48    | X1Y0         |           1 |               0 |              50.000 | clk_out2_design_1_clk_wiz_0_0 | design_1_i/ps_axil_0/inst/PL_IS/serial_tclk_INST_0/O                                                                                                                                                             | design_1_i/ps_axil_0/inst/PL_IS/serial_tclk                                                                                               |
+| src2      | g2        | LUT6/O              | None       | SLICE_X50Y51    | X1Y1         |           1 |               0 |                     |                               | design_1_i/caravel_0/inst/housekeeping/hkspi_disable_i_2/O                                                                                                                                                       | design_1_i/caravel_0/inst/housekeeping/csclk                                                                                              |
+| src3      | g3        | LUT3/O              | None       | SLICE_X50Y66    | X1Y1         |           1 |               0 |                     |                               | design_1_i/caravel_0/inst/housekeeping/shift_register[12]_i_1/O                                                                                                                                                  | design_1_i/caravel_0/inst/housekeeping/mprj_io_loader_clock                                                                               |
+| src4      | g4        | LUT3/O              | None       | SLICE_X50Y66    | X1Y1         |           1 |               0 |                     |                               | design_1_i/caravel_0/inst/housekeeping/gpio_dm[2]_i_1/O                                                                                                                                                          | design_1_i/caravel_0/inst/housekeeping/mprj_io_loader_strobe                                                                              |
+| src5      | g7        | LUT3/O              | None       | SLICE_X50Y51    | X1Y1         |           1 |               0 |                     |                               | design_1_i/caravel_0/inst/housekeeping/hkspi/flash_clk_INST_0/O                                                                                                                                                  | design_1_i/caravel_0/inst/housekeeping/hkspi/flash_clk                                                                                    |
+| src6      | g8        | FDRE/Q              | None       | SLICE_X48Y66    | X0Y1         |           1 |               0 |                     |                               | design_1_i/axi_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/LOGIC_FOR_MD_0_GEN.SPI_MODULE_I/RATIO_NOT_EQUAL_4_GENERATE.SCK_O_NQ_4_NO_STARTUP_USED.SCK_O_NE_4_FDRE_INST/Q | design_1_i/axi_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/LOGIC_FOR_MD_0_GEN.SPI_MODULE_I/sck_o |
+| src7      | g9        | LUT4/O              | None       | SLICE_X52Y50    | X1Y1         |           1 |               0 |                     |                               | design_1_i/caravel_0/inst/mprj/u_fsic/U_AXIL_AXIS0/axi_ctrl_logic/data_ss_reg[31]_i_2/O                                                                                                                          | design_1_i/caravel_0/inst/mprj/u_fsic/U_AXIL_AXIS0/axi_ctrl_logic/data_ss_reg[31]_i_2_n_0                                                 |
 | src8      | g10       | MMCME2_ADV/CLKFBOUT | None       | MMCME2_ADV_X1Y2 | X1Y2         |           1 |               0 |             100.000 | clkfbout_design_1_clk_wiz_0_0 | design_1_i/clk_wiz_0/inst/mmcm_adv_inst/CLKFBOUT                                                                                                                                                                 | design_1_i/clk_wiz_0/inst/clkfbout_design_1_clk_wiz_0_0                                                                                   |
 | src9      | g11       | PS7/FCLKCLK[0]      | PS7_X0Y0   | PS7_X0Y0        | X0Y2         |           1 |               0 |               4.000 | clk_fpga_0                    | design_1_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]                                                                                                                                                            | design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]                                                                               |
 +-----------+-----------+---------------------+------------+-----------------+--------------+-------------+-----------------+---------------------+-------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------+
@@ -108,12 +108,12 @@ Table of Contents
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
 | Clock Region Name | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail |
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
-| X0Y0              |    9 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 | 7250 |  2500 | 3083 |  1000 |    3 |    60 |    5 |    30 |    3 |    60 |
-| X1Y0              |    7 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 | 2497 |  3200 |  592 |   850 |    2 |    60 |    4 |    30 |    0 |    40 |
-| X0Y1              |    6 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 | 4282 |  1200 | 1719 |   400 |    0 |    20 |    1 |    10 |    0 |    20 |
-| X1Y1              |    5 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 | 4102 |  2600 | 1498 |   850 |    0 |    60 |    0 |    30 |    0 |    40 |
-| X0Y2              |    3 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |  891 |  1200 |  295 |   400 |    0 |    20 |    0 |    10 |    0 |    20 |
-| X1Y2              |    4 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    1 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |  315 |  2600 |   97 |   850 |    0 |    60 |    0 |    30 |    0 |    40 |
+| X0Y0              |    1 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 | 3494 |  2500 | 2049 |  1000 |    1 |    60 |    4 |    30 |    0 |    60 |
+| X1Y0              |    4 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 | 5242 |  3200 | 1563 |   850 |    0 |    60 |    3 |    30 |    0 |    40 |
+| X0Y1              |    6 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 | 2838 |  1200 | 1096 |   400 |    0 |    20 |    0 |    10 |    0 |    20 |
+| X1Y1              |    8 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 | 6562 |  2600 | 2358 |   850 |    2 |    60 |    3 |    30 |    0 |    40 |
+| X0Y2              |    1 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |  472 |  1200 |  156 |   400 |    0 |    20 |    2 |    10 |    0 |    20 |
+| X1Y2              |    3 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    1 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |  689 |  2600 |  222 |   850 |    0 |    60 |    1 |    30 |    0 |    40 |
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
 * Global Clock column represents track count; while other columns represents cell counts
 
@@ -125,9 +125,9 @@ All Modules
 +----+----+----+
 |    | X0 | X1 |
 +----+----+----+
-| Y2 |  3 |  4 |
-| Y1 |  6 |  5 |
-| Y0 |  9 |  7 |
+| Y2 |  1 |  3 |
+| Y1 |  6 |  8 |
+| Y0 |  1 |  4 |
 +----+----+----+
 
 
@@ -137,7 +137,7 @@ All Modules
 +-----------+-----------------+-------------------+-------------------------------+-------------+-----------------+-------------+----------+----------------+----------+------------------------------------+
 | Global Id | Driver Type/Pin | Driver Region (D) | Clock                         | Period (ns) | Waveform (ns)   | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                |
 +-----------+-----------------+-------------------+-------------------------------+-------------+-----------------+-------------+----------+----------------+----------+------------------------------------+
-| g0        | BUFG/O          | n/a               | clk_out1_design_1_clk_wiz_0_0 |     200.000 | {0.000 100.000} |       18265 |        0 |              0 |        0 | design_1_i/clk_wiz_0/inst/clk_out1 |
+| g0        | BUFG/O          | n/a               | clk_out1_design_1_clk_wiz_0_0 |     200.000 | {0.000 100.000} |       18741 |        0 |              0 |        0 | design_1_i/clk_wiz_0/inst/clk_out1 |
 +-----------+-----------------+-------------------+-------------------------------+-------------+-----------------+-------------+----------+----------------+----------+------------------------------------+
 * Slice Loads column represents load cell count of all cell types other than IO, GT and clock resources
 ** IO Loads column represents load cell count of IO types
@@ -148,9 +148,9 @@ All Modules
 +----+-------+-------+-----------------------+
 |    | X0    | X1    | HORIZONTAL PROG DELAY |
 +----+-------+-------+-----------------------+
-| Y2 |   871 |   307 |                     0 |
-| Y1 |  4475 |  3968 |                     0 |
-| Y0 |  6486 |  2158 |                     0 |
+| Y2 |   479 |   690 |                     0 |
+| Y1 |  2539 |  5631 |                     0 |
+| Y0 |  4353 |  5049 |                     0 |
 +----+-------+-------+-----------------------+
 
 
@@ -160,7 +160,7 @@ All Modules
 +-----------+-----------------+-------------------+-------------------------------+-------------+----------------+-------------+----------+----------------+----------+------------------------------------+
 | Global Id | Driver Type/Pin | Driver Region (D) | Clock                         | Period (ns) | Waveform (ns)  | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                |
 +-----------+-----------------+-------------------+-------------------------------+-------------+----------------+-------------+----------+----------------+----------+------------------------------------+
-| g1        | BUFG/O          | n/a               | clk_out2_design_1_clk_wiz_0_0 |      50.000 | {0.000 25.000} |         604 |        0 |              0 |        0 | design_1_i/clk_wiz_0/inst/clk_out2 |
+| g1        | BUFG/O          | n/a               | clk_out2_design_1_clk_wiz_0_0 |      50.000 | {0.000 25.000} |         627 |        0 |              0 |        0 | design_1_i/clk_wiz_0/inst/clk_out2 |
 +-----------+-----------------+-------------------+-------------------------------+-------------+----------------+-------------+----------+----------------+----------+------------------------------------+
 * Slice Loads column represents load cell count of all cell types other than IO, GT and clock resources
 ** IO Loads column represents load cell count of IO types
@@ -168,13 +168,13 @@ All Modules
 **** GT Loads column represents load cell count of GT types
 
 
-+----+------+------+-----------------------+
-|    | X0   | X1   | HORIZONTAL PROG DELAY |
-+----+------+------+-----------------------+
-| Y2 |    0 |    0 |                     - |
-| Y1 |    7 |  299 |                     0 |
-| Y0 |  284 |   14 |                     0 |
-+----+------+------+-----------------------+
++----+-----+------+-----------------------+
+|    | X0  | X1   | HORIZONTAL PROG DELAY |
++----+-----+------+-----------------------+
+| Y2 |   0 |    0 |                     - |
+| Y1 |  95 |  219 |                     0 |
+| Y0 |   0 |  313 |                     0 |
++----+-----+------+-----------------------+
 
 
 8. Device Cell Placement Summary for Global Clock g2
@@ -195,8 +195,8 @@ All Modules
 |    | X0   | X1   | HORIZONTAL PROG DELAY |
 +----+------+------+-----------------------+
 | Y2 |    0 |    0 |                     - |
-| Y1 |   12 |    0 |                     0 |
-| Y0 |  426 |  133 |                     0 |
+| Y1 |  233 |  338 |                     0 |
+| Y0 |    0 |    0 |                     - |
 +----+------+------+-----------------------+
 
 
@@ -217,9 +217,9 @@ All Modules
 +----+-----+------+-----------------------+
 |    | X0  | X1   | HORIZONTAL PROG DELAY |
 +----+-----+------+-----------------------+
-| Y2 |  34 |    8 |                     0 |
-| Y1 |  82 |    2 |                     0 |
-| Y0 |  41 |  137 |                     0 |
+| Y2 |   0 |    0 |                     - |
+| Y1 |  58 |  246 |                     0 |
+| Y0 |   0 |    0 |                     - |
 +----+-----+------+-----------------------+
 
 
@@ -237,13 +237,13 @@ All Modules
 **** GT Loads column represents load cell count of GT types
 
 
-+----+-----+-----+-----------------------+
-|    | X0  | X1  | HORIZONTAL PROG DELAY |
-+----+-----+-----+-----------------------+
-| Y2 |  12 |   0 |                     0 |
-| Y1 |  20 |   4 |                     0 |
-| Y0 |  17 |  68 |                     0 |
-+----+-----+-----+-----------------------+
++----+-----+------+-----------------------+
+|    | X0  | X1   | HORIZONTAL PROG DELAY |
++----+-----+------+-----------------------+
+| Y2 |   0 |    0 |                     - |
+| Y1 |  10 |  111 |                     0 |
+| Y0 |   0 |    0 |                     - |
++----+-----+------+-----------------------+
 
 
 11. Device Cell Placement Summary for Global Clock g5
@@ -260,36 +260,36 @@ All Modules
 **** GT Loads column represents load cell count of GT types
 
 
-+----+----+-----+-----------------------+
-|    | X0 | X1  | HORIZONTAL PROG DELAY |
-+----+----+-----+-----------------------+
-| Y2 |  0 |   0 |                     - |
-| Y1 |  0 |  88 |                     0 |
-| Y0 |  0 |  16 |                     0 |
-+----+----+-----+-----------------------+
++----+----+------+-----------------------+
+|    | X0 | X1   | HORIZONTAL PROG DELAY |
++----+----+------+-----------------------+
+| Y2 |  0 |    0 |                     - |
+| Y1 |  0 |    0 |                     - |
+| Y0 |  0 |  104 |                     0 |
++----+----+------+-----------------------+
 
 
 12. Device Cell Placement Summary for Global Clock g6
 -----------------------------------------------------
 
-+-----------+-----------------+-------------------+-------------------------------+-------------+----------------+-------------+----------+----------------+----------+-----------------------------------------------------------+
-| Global Id | Driver Type/Pin | Driver Region (D) | Clock                         | Period (ns) | Waveform (ns)  | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                                       |
-+-----------+-----------------+-------------------+-------------------------------+-------------+----------------+-------------+----------+----------------+----------+-----------------------------------------------------------+
-| g6        | BUFG/O          | n/a               | clk_out2_design_1_clk_wiz_0_0 |      50.000 | {0.000 25.000} |          97 |        0 |              0 |        0 | design_1_i/ps_axil_0/inst/PL_IS/caravel_mprj_out_BUFG[13] |
-+-----------+-----------------+-------------------+-------------------------------+-------------+----------------+-------------+----------+----------------+----------+-----------------------------------------------------------+
++-----------+-----------------+-------------------+-------------------------------+-------------+----------------+-------------+----------+----------------+----------+--------------------------------------------------+
+| Global Id | Driver Type/Pin | Driver Region (D) | Clock                         | Period (ns) | Waveform (ns)  | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                              |
++-----------+-----------------+-------------------+-------------------------------+-------------+----------------+-------------+----------+----------------+----------+--------------------------------------------------+
+| g6        | BUFG/O          | n/a               | clk_out2_design_1_clk_wiz_0_0 |      50.000 | {0.000 25.000} |         105 |        0 |              0 |        0 | design_1_i/ps_axil_0/inst/PL_IS/serial_tclk_BUFG |
++-----------+-----------------+-------------------+-------------------------------+-------------+----------------+-------------+----------+----------------+----------+--------------------------------------------------+
 * Slice Loads column represents load cell count of all cell types other than IO, GT and clock resources
 ** IO Loads column represents load cell count of IO types
 *** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
 **** GT Loads column represents load cell count of GT types
 
 
-+----+-----+----+-----------------------+
-|    | X0  | X1 | HORIZONTAL PROG DELAY |
-+----+-----+----+-----------------------+
-| Y2 |   0 |  0 |                     - |
-| Y1 |   0 |  0 |                     - |
-| Y0 |  97 |  0 |                     0 |
-+----+-----+----+-----------------------+
++----+-----+-----+-----------------------+
+|    | X0  | X1  | HORIZONTAL PROG DELAY |
++----+-----+-----+-----------------------+
+| Y2 |   0 |   0 |                     - |
+| Y1 |  19 |  86 |                     0 |
+| Y0 |   0 |   0 |                     - |
++----+-----+-----+-----------------------+
 
 
 13. Device Cell Placement Summary for Global Clock g7
@@ -306,13 +306,13 @@ All Modules
 **** GT Loads column represents load cell count of GT types
 
 
-+----+-----+----+-----------------------+
-|    | X0  | X1 | HORIZONTAL PROG DELAY |
-+----+-----+----+-----------------------+
-| Y2 |   0 |  0 |                     - |
-| Y1 |   0 |  0 |                     - |
-| Y0 |  74 |  0 |                     0 |
-+----+-----+----+-----------------------+
++----+----+-----+-----------------------+
+|    | X0 | X1  | HORIZONTAL PROG DELAY |
++----+----+-----+-----------------------+
+| Y2 |  0 |   0 |                     - |
+| Y1 |  0 |   0 |                     - |
+| Y0 |  0 |  74 |                     0 |
++----+----+-----+-----------------------+
 
 
 14. Device Cell Placement Summary for Global Clock g8
@@ -329,13 +329,13 @@ All Modules
 **** GT Loads column represents load cell count of GT types
 
 
-+----+-----+----+-----------------------+
-|    | X0  | X1 | HORIZONTAL PROG DELAY |
-+----+-----+----+-----------------------+
-| Y2 |   0 |  0 |                     - |
-| Y1 |   5 |  0 |                     0 |
-| Y0 |  40 |  2 |                     0 |
-+----+-----+----+-----------------------+
++----+----+-----+-----------------------+
+|    | X0 | X1  | HORIZONTAL PROG DELAY |
++----+----+-----+-----------------------+
+| Y2 |  0 |   0 |                     - |
+| Y1 |  0 |  47 |                     0 |
+| Y0 |  0 |   0 |                     - |
++----+----+-----+-----------------------+
 
 
 15. Device Cell Placement Summary for Global Clock g9
@@ -352,13 +352,13 @@ All Modules
 **** GT Loads column represents load cell count of GT types
 
 
-+----+-----+----+-----------------------+
-|    | X0  | X1 | HORIZONTAL PROG DELAY |
-+----+-----+----+-----------------------+
-| Y2 |   0 |  0 |                     - |
-| Y1 |   0 |  0 |                     - |
-| Y0 |  32 |  0 |                     0 |
-+----+-----+----+-----------------------+
++----+----+-----+-----------------------+
+|    | X0 | X1  | HORIZONTAL PROG DELAY |
++----+----+-----+-----------------------+
+| Y2 |  0 |   0 |                     - |
+| Y1 |  0 |  32 |                     0 |
+| Y0 |  0 |   0 |                     - |
++----+----+-----+-----------------------+
 
 
 16. Device Cell Placement Summary for Global Clock g10
@@ -410,19 +410,11 @@ All Modules
 18. Clock Region Cell Placement per Global Clock: Region X0Y0
 -------------------------------------------------------------
 
-+-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+------------------------------------------------------------------------------------------------------------------------------------------------+
-| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | Memory LUTs | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                                                                                            |
-+-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+------------------------------------------------------------------------------------------------------------------------------------------------+
-| g0        | n/a   | BUFG/O          | None       |        6486 |               0 | 6287 |         184 |    8 |   3 |  0 |    0 |   0 |       0 | design_1_i/clk_wiz_0/inst/clk_out1                                                                                                             |
-| g1        | n/a   | BUFG/O          | None       |         282 |               2 |  282 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/clk_wiz_0/inst/clk_out2                                                                                                             |
-| g2        | n/a   | BUFG/O          | None       |         426 |               0 |  426 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/caravel_0/inst/housekeeping/csclk_BUFG                                                                                              |
-| g3        | n/a   | BUFG/O          | None       |          37 |               4 |   29 |           8 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/caravel_0/inst/housekeeping/mprj_io_loader_clock_BUFG                                                                               |
-| g4        | n/a   | BUFG/O          | None       |          17 |               0 |   17 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/caravel_0/inst/housekeeping/mprj_io_loader_strobe_BUFG                                                                              |
-| g6        | n/a   | BUFG/O          | None       |          96 |               1 |   96 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/ps_axil_0/inst/PL_IS/caravel_mprj_out_BUFG[13]                                                                                      |
-| g7        | n/a   | BUFG/O          | None       |          74 |               0 |   74 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/caravel_0/inst/housekeeping/hkspi/flash_clk_BUFG                                                                                    |
-| g8        | n/a   | BUFG/O          | None       |          39 |               1 |   39 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/axi_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/LOGIC_FOR_MD_0_GEN.SPI_MODULE_I/sck_o_BUFG |
-| g9        | n/a   | BUFG/O          | None       |          32 |               0 |    0 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/caravel_0/inst/mprj/u_fsic/U_AXIL_AXIS0/axi_ctrl_logic/data_ss_reg[31]_i_2_n_0_BUFG                                                 |
-+-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+------------------------------------------------------------------------------------------------------------------------------------------------+
++-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+------------------------------------+
+| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | Memory LUTs | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                |
++-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+------------------------------------+
+| g0        | n/a   | BUFG/O          | None       |        4353 |               0 | 3494 |         853 |    5 |   0 |  0 |    0 |   0 |       0 | design_1_i/clk_wiz_0/inst/clk_out1 |
++-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+------------------------------------+
 * Clock Loads column represents the clock pin loads (pin count). Internal cell leaf pins are not counted
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)
 *** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
@@ -431,17 +423,14 @@ All Modules
 19. Clock Region Cell Placement per Global Clock: Region X1Y0
 -------------------------------------------------------------
 
-+-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+------------------------------------------------------------------------------------------------------------------------------------------------+
-| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | Memory LUTs | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                                                                                            |
-+-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+------------------------------------------------------------------------------------------------------------------------------------------------+
-| g0        | n/a   | BUFG/O          | None       |        2158 |               0 | 2143 |           7 |    6 |   0 |  0 |    0 |   0 |       0 | design_1_i/clk_wiz_0/inst/clk_out1                                                                                                             |
-| g1        | n/a   | BUFG/O          | None       |          14 |               0 |   14 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/clk_wiz_0/inst/clk_out2                                                                                                             |
-| g2        | n/a   | BUFG/O          | None       |         133 |               0 |  133 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/caravel_0/inst/housekeeping/csclk_BUFG                                                                                              |
-| g3        | n/a   | BUFG/O          | None       |         137 |               0 |  123 |          14 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/caravel_0/inst/housekeeping/mprj_io_loader_clock_BUFG                                                                               |
-| g4        | n/a   | BUFG/O          | None       |          68 |               0 |   68 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/caravel_0/inst/housekeeping/mprj_io_loader_strobe_BUFG                                                                              |
-| g5        | n/a   | BUFG/O          | None       |          16 |               0 |   16 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/caravel_0/inst/gpio_control_bidir_2[0]/mprj_o_BUFG[0]                                                                               |
-| g8        | n/a   | BUFG/O          | None       |           0 |               2 |    0 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/axi_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/LOGIC_FOR_MD_0_GEN.SPI_MODULE_I/sck_o_BUFG |
-+-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+------------------------------------------------------------------------------------------------------------------------------------------------+
++-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+------------------------------------------------------------------+
+| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | Memory LUTs | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                              |
++-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+------------------------------------------------------------------+
+| g0        | n/a   | BUFG/O          | None       |        5049 |               0 | 4752 |         293 |    3 |   0 |  0 |    0 |   0 |       0 | design_1_i/clk_wiz_0/inst/clk_out1                               |
+| g1        | n/a   | BUFG/O          | None       |         312 |               1 |  312 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/clk_wiz_0/inst/clk_out2                               |
+| g5        | n/a   | BUFG/O          | None       |         104 |               0 |  104 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/caravel_0/inst/gpio_control_bidir_2[0]/mprj_o_BUFG[0] |
+| g7        | n/a   | BUFG/O          | None       |          74 |               0 |   74 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/caravel_0/inst/housekeeping/hkspi/flash_clk_BUFG      |
++-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+------------------------------------------------------------------+
 * Clock Loads column represents the clock pin loads (pin count). Internal cell leaf pins are not counted
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)
 *** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
@@ -450,16 +439,16 @@ All Modules
 20. Clock Region Cell Placement per Global Clock: Region X0Y1
 -------------------------------------------------------------
 
-+-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+------------------------------------------------------------------------------------------------------------------------------------------------+
-| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | Memory LUTs | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                                                                                            |
-+-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+------------------------------------------------------------------------------------------------------------------------------------------------+
-| g0        | n/a   | BUFG/O          | None       |        4475 |               0 | 4168 |         306 |    1 |   0 |  0 |    0 |   0 |       0 | design_1_i/clk_wiz_0/inst/clk_out1                                                                                                             |
-| g1        | n/a   | BUFG/O          | None       |           7 |               0 |    7 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/clk_wiz_0/inst/clk_out2                                                                                                             |
-| g2        | n/a   | BUFG/O          | None       |          12 |               0 |   12 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/caravel_0/inst/housekeeping/csclk_BUFG                                                                                              |
-| g3        | n/a   | BUFG/O          | None       |          82 |               0 |   70 |          12 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/caravel_0/inst/housekeeping/mprj_io_loader_clock_BUFG                                                                               |
-| g4        | n/a   | BUFG/O          | None       |          20 |               0 |   20 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/caravel_0/inst/housekeeping/mprj_io_loader_strobe_BUFG                                                                              |
-| g8        | n/a   | BUFG/O          | None       |           5 |               0 |    5 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/axi_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/LOGIC_FOR_MD_0_GEN.SPI_MODULE_I/sck_o_BUFG |
-+-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+------------------------------------------------------------------------------------------------------------------------------------------------+
++-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+-------------------------------------------------------------------+
+| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | Memory LUTs | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                               |
++-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+-------------------------------------------------------------------+
+| g0        | n/a   | BUFG/O          | None       |        2539 |               0 | 2433 |         106 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/clk_wiz_0/inst/clk_out1                                |
+| g1        | n/a   | BUFG/O          | None       |          95 |               0 |   95 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/clk_wiz_0/inst/clk_out2                                |
+| g2        | n/a   | BUFG/O          | None       |         233 |               0 |  233 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/caravel_0/inst/housekeeping/csclk_BUFG                 |
+| g3        | n/a   | BUFG/O          | None       |          57 |               1 |   49 |           8 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/caravel_0/inst/housekeeping/mprj_io_loader_clock_BUFG  |
+| g4        | n/a   | BUFG/O          | None       |          10 |               0 |   10 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/caravel_0/inst/housekeeping/mprj_io_loader_strobe_BUFG |
+| g6        | n/a   | BUFG/O          | None       |          18 |               1 |   18 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/ps_axil_0/inst/PL_IS/serial_tclk_BUFG                  |
++-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+-------------------------------------------------------------------+
 * Clock Loads column represents the clock pin loads (pin count). Internal cell leaf pins are not counted
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)
 *** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
@@ -468,15 +457,18 @@ All Modules
 21. Clock Region Cell Placement per Global Clock: Region X1Y1
 -------------------------------------------------------------
 
-+-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+-------------------------------------------------------------------+
-| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | Memory LUTs | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                               |
-+-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+-------------------------------------------------------------------+
-| g0        | n/a   | BUFG/O          | None       |        3968 |               0 | 3710 |         258 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/clk_wiz_0/inst/clk_out1                                |
-| g1        | n/a   | BUFG/O          | None       |         298 |               1 |  298 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/clk_wiz_0/inst/clk_out2                                |
-| g3        | n/a   | BUFG/O          | None       |           2 |               0 |    2 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/caravel_0/inst/housekeeping/mprj_io_loader_clock_BUFG  |
-| g4        | n/a   | BUFG/O          | None       |           4 |               0 |    4 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/caravel_0/inst/housekeeping/mprj_io_loader_strobe_BUFG |
-| g5        | n/a   | BUFG/O          | None       |          88 |               0 |   88 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/caravel_0/inst/gpio_control_bidir_2[0]/mprj_o_BUFG[0]  |
-+-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+-------------------------------------------------------------------+
++-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+------------------------------------------------------------------------------------------------------------------------------------------------+
+| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | Memory LUTs | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                                                                                            |
++-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+------------------------------------------------------------------------------------------------------------------------------------------------+
+| g0        | n/a   | BUFG/O          | None       |        5631 |               0 | 5551 |          71 |    5 |   0 |  0 |    0 |   0 |       0 | design_1_i/clk_wiz_0/inst/clk_out1                                                                                                             |
+| g1        | n/a   | BUFG/O          | None       |         217 |               2 |  217 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/clk_wiz_0/inst/clk_out2                                                                                                             |
+| g2        | n/a   | BUFG/O          | None       |         338 |               0 |  338 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/caravel_0/inst/housekeeping/csclk_BUFG                                                                                              |
+| g3        | n/a   | BUFG/O          | None       |         243 |               3 |  215 |          28 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/caravel_0/inst/housekeeping/mprj_io_loader_clock_BUFG                                                                               |
+| g4        | n/a   | BUFG/O          | None       |         111 |               0 |  111 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/caravel_0/inst/housekeeping/mprj_io_loader_strobe_BUFG                                                                              |
+| g6        | n/a   | BUFG/O          | None       |          86 |               0 |   86 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/ps_axil_0/inst/PL_IS/serial_tclk_BUFG                                                                                               |
+| g8        | n/a   | BUFG/O          | None       |          44 |               3 |   44 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/axi_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/LOGIC_FOR_MD_0_GEN.SPI_MODULE_I/sck_o_BUFG |
+| g9        | n/a   | BUFG/O          | None       |          32 |               0 |    0 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/caravel_0/inst/mprj/u_fsic/U_AXIL_AXIS0/axi_ctrl_logic/data_ss_reg[31]_i_2_n_0_BUFG                                                 |
++-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+------------------------------------------------------------------------------------------------------------------------------------------------+
 * Clock Loads column represents the clock pin loads (pin count). Internal cell leaf pins are not counted
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)
 *** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
@@ -485,13 +477,11 @@ All Modules
 22. Clock Region Cell Placement per Global Clock: Region X0Y2
 -------------------------------------------------------------
 
-+-----------+-------+-----------------+------------+-------------+-----------------+-----+-------------+------+-----+----+------+-----+---------+-------------------------------------------------------------------+
-| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF  | Memory LUTs | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                               |
-+-----------+-------+-----------------+------------+-------------+-----------------+-----+-------------+------+-----+----+------+-----+---------+-------------------------------------------------------------------+
-| g0        | n/a   | BUFG/O          | None       |         871 |               0 | 847 |          23 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/clk_wiz_0/inst/clk_out1                                |
-| g3        | n/a   | BUFG/O          | None       |          34 |               0 |  32 |           2 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/caravel_0/inst/housekeeping/mprj_io_loader_clock_BUFG  |
-| g4        | n/a   | BUFG/O          | None       |          12 |               0 |  12 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/caravel_0/inst/housekeeping/mprj_io_loader_strobe_BUFG |
-+-----------+-------+-----------------+------------+-------------+-----------------+-----+-------------+------+-----+----+------+-----+---------+-------------------------------------------------------------------+
++-----------+-------+-----------------+------------+-------------+-----------------+-----+-------------+------+-----+----+------+-----+---------+------------------------------------+
+| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF  | Memory LUTs | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                |
++-----------+-------+-----------------+------------+-------------+-----------------+-----+-------------+------+-----+----+------+-----+---------+------------------------------------+
+| g0        | n/a   | BUFG/O          | None       |         479 |               0 | 472 |           4 |    2 |   0 |  0 |    0 |   0 |       0 | design_1_i/clk_wiz_0/inst/clk_out1 |
++-----------+-------+-----------------+------------+-------------+-----------------+-----+-------------+------+-----+----+------+-----+---------+------------------------------------+
 * Clock Loads column represents the clock pin loads (pin count). Internal cell leaf pins are not counted
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)
 *** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
@@ -500,14 +490,13 @@ All Modules
 23. Clock Region Cell Placement per Global Clock: Region X1Y2
 -------------------------------------------------------------
 
-+-----------+-------+-----------------+------------+-------------+-----------------+-----+-------------+------+-----+----+------+-----+---------+------------------------------------------------------------------+
-| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF  | Memory LUTs | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                              |
-+-----------+-------+-----------------+------------+-------------+-----------------+-----+-------------+------+-----+----+------+-----+---------+------------------------------------------------------------------+
-| g0        | n/a   | BUFG/O          | None       |         307 |               0 | 307 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/clk_wiz_0/inst/clk_out1                               |
-| g3        | n/a   | BUFG/O          | None       |           8 |               0 |   8 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/caravel_0/inst/housekeeping/mprj_io_loader_clock_BUFG |
-| g10       | n/a   | BUFG/O          | None       |           1 |               0 |   0 |           0 |    0 |   0 |  0 |    1 |   0 |       0 | design_1_i/clk_wiz_0/inst/clkfbout_buf_design_1_clk_wiz_0_0      |
-| g11       | n/a   | BUFG/O          | None       |           1 |               0 |   0 |           0 |    0 |   0 |  0 |    1 |   0 |       0 | design_1_i/processing_system7_0/inst/FCLK_CLK0                   |
-+-----------+-------+-----------------+------------+-------------+-----------------+-----+-------------+------+-----+----+------+-----+---------+------------------------------------------------------------------+
++-----------+-------+-----------------+------------+-------------+-----------------+-----+-------------+------+-----+----+------+-----+---------+-------------------------------------------------------------+
+| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF  | Memory LUTs | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                         |
++-----------+-------+-----------------+------------+-------------+-----------------+-----+-------------+------+-----+----+------+-----+---------+-------------------------------------------------------------+
+| g0        | n/a   | BUFG/O          | None       |         690 |               0 | 689 |           0 |    1 |   0 |  0 |    0 |   0 |       0 | design_1_i/clk_wiz_0/inst/clk_out1                          |
+| g10       | n/a   | BUFG/O          | None       |           1 |               0 |   0 |           0 |    0 |   0 |  0 |    1 |   0 |       0 | design_1_i/clk_wiz_0/inst/clkfbout_buf_design_1_clk_wiz_0_0 |
+| g11       | n/a   | BUFG/O          | None       |           1 |               0 |   0 |           0 |    0 |   0 |  0 |    1 |   0 |       0 | design_1_i/processing_system7_0/inst/FCLK_CLK0              |
++-----------+-------+-----------------+------------+-------------+-----------------+-----+-------------+------+-----+----+------+-----+---------+-------------------------------------------------------------+
 * Clock Loads column represents the clock pin loads (pin count). Internal cell leaf pins are not counted
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)
 *** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
@@ -515,7 +504,7 @@ All Modules
 
 
 # Location of BUFG Primitives 
-set_property LOC BUFGCTRL_X0Y27 [get_cells design_1_i/ps_axil_0/inst/PL_IS/caravel_mprj_out[13]_BUFG_inst]
+set_property LOC BUFGCTRL_X0Y27 [get_cells design_1_i/ps_axil_0/inst/PL_IS/serial_tclk_BUFG_inst]
 set_property LOC BUFGCTRL_X0Y26 [get_cells design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG]
 set_property LOC BUFGCTRL_X0Y23 [get_cells design_1_i/clk_wiz_0/inst/clkf_buf]
 set_property LOC BUFGCTRL_X0Y25 [get_cells design_1_i/clk_wiz_0/inst/clkout2_buf]
@@ -532,18 +521,18 @@ set_property LOC BUFGCTRL_X0Y16 [get_cells design_1_i/axi_quad_spi_0/U0/NO_DUAL_
 
 # Location of clock ports
 
-# Clock net "design_1_i/ps_axil_0/inst/PL_IS/caravel_mprj_out_BUFG[13]" driven by instance "design_1_i/ps_axil_0/inst/PL_IS/caravel_mprj_out[13]_BUFG_inst" located at site "BUFGCTRL_X0Y27"
+# Clock net "design_1_i/ps_axil_0/inst/PL_IS/serial_tclk_BUFG" driven by instance "design_1_i/ps_axil_0/inst/PL_IS/serial_tclk_BUFG_inst" located at site "BUFGCTRL_X0Y27"
 #startgroup
-create_pblock {CLKAG_design_1_i/ps_axil_0/inst/PL_IS/caravel_mprj_out_BUFG[13]}
-add_cells_to_pblock [get_pblocks  {CLKAG_design_1_i/ps_axil_0/inst/PL_IS/caravel_mprj_out_BUFG[13]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="design_1_i/ps_axil_0/inst/PL_IS/caravel_mprj_out_BUFG[13]"}]]]
-resize_pblock [get_pblocks {CLKAG_design_1_i/ps_axil_0/inst/PL_IS/caravel_mprj_out_BUFG[13]}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0}
+create_pblock {CLKAG_design_1_i/ps_axil_0/inst/PL_IS/serial_tclk_BUFG}
+add_cells_to_pblock [get_pblocks  {CLKAG_design_1_i/ps_axil_0/inst/PL_IS/serial_tclk_BUFG}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="design_1_i/ps_axil_0/inst/PL_IS/serial_tclk_BUFG"}]]]
+resize_pblock [get_pblocks {CLKAG_design_1_i/ps_axil_0/inst/PL_IS/serial_tclk_BUFG}] -add {CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
 #endgroup
 
 # Clock net "design_1_i/clk_wiz_0/inst/clk_out2" driven by instance "design_1_i/clk_wiz_0/inst/clkout2_buf" located at site "BUFGCTRL_X0Y25"
 #startgroup
 create_pblock {CLKAG_design_1_i/clk_wiz_0/inst/clk_out2}
 add_cells_to_pblock [get_pblocks  {CLKAG_design_1_i/clk_wiz_0/inst/clk_out2}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="design_1_i/clk_wiz_0/inst/clk_out2"}]]]
-resize_pblock [get_pblocks {CLKAG_design_1_i/clk_wiz_0/inst/clk_out2}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
+resize_pblock [get_pblocks {CLKAG_design_1_i/clk_wiz_0/inst/clk_out2}] -add {CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
 #endgroup
 
 # Clock net "design_1_i/clk_wiz_0/inst/clk_out1" driven by instance "design_1_i/clk_wiz_0/inst/clkout1_buf" located at site "BUFGCTRL_X0Y24"
@@ -557,47 +546,47 @@ resize_pblock [get_pblocks {CLKAG_design_1_i/clk_wiz_0/inst/clk_out1}] -add {CLO
 #startgroup
 create_pblock {CLKAG_design_1_i/caravel_0/inst/mprj/u_fsic/U_AXIL_AXIS0/axi_ctrl_logic/data_ss_reg[31]_i_2_n_0_BUFG}
 add_cells_to_pblock [get_pblocks  {CLKAG_design_1_i/caravel_0/inst/mprj/u_fsic/U_AXIL_AXIS0/axi_ctrl_logic/data_ss_reg[31]_i_2_n_0_BUFG}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="design_1_i/caravel_0/inst/mprj/u_fsic/U_AXIL_AXIS0/axi_ctrl_logic/data_ss_reg[31]_i_2_n_0_BUFG"}]]]
-resize_pblock [get_pblocks {CLKAG_design_1_i/caravel_0/inst/mprj/u_fsic/U_AXIL_AXIS0/axi_ctrl_logic/data_ss_reg[31]_i_2_n_0_BUFG}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0}
+resize_pblock [get_pblocks {CLKAG_design_1_i/caravel_0/inst/mprj/u_fsic/U_AXIL_AXIS0/axi_ctrl_logic/data_ss_reg[31]_i_2_n_0_BUFG}] -add {CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
 #endgroup
 
 # Clock net "design_1_i/caravel_0/inst/housekeeping/mprj_io_loader_strobe_BUFG" driven by instance "design_1_i/caravel_0/inst/housekeeping/mprj_io_loader_strobe_BUFG_inst" located at site "BUFGCTRL_X0Y21"
 #startgroup
 create_pblock {CLKAG_design_1_i/caravel_0/inst/housekeeping/mprj_io_loader_strobe_BUFG}
 add_cells_to_pblock [get_pblocks  {CLKAG_design_1_i/caravel_0/inst/housekeeping/mprj_io_loader_strobe_BUFG}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="design_1_i/caravel_0/inst/housekeeping/mprj_io_loader_strobe_BUFG"}]]]
-resize_pblock [get_pblocks {CLKAG_design_1_i/caravel_0/inst/housekeeping/mprj_io_loader_strobe_BUFG}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
+resize_pblock [get_pblocks {CLKAG_design_1_i/caravel_0/inst/housekeeping/mprj_io_loader_strobe_BUFG}] -add {CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
 #endgroup
 
 # Clock net "design_1_i/caravel_0/inst/housekeeping/mprj_io_loader_clock_BUFG" driven by instance "design_1_i/caravel_0/inst/housekeeping/mprj_io_loader_clock_BUFG_inst" located at site "BUFGCTRL_X0Y20"
 #startgroup
 create_pblock {CLKAG_design_1_i/caravel_0/inst/housekeeping/mprj_io_loader_clock_BUFG}
 add_cells_to_pblock [get_pblocks  {CLKAG_design_1_i/caravel_0/inst/housekeeping/mprj_io_loader_clock_BUFG}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="design_1_i/caravel_0/inst/housekeeping/mprj_io_loader_clock_BUFG"}]]]
-resize_pblock [get_pblocks {CLKAG_design_1_i/caravel_0/inst/housekeeping/mprj_io_loader_clock_BUFG}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2}
+resize_pblock [get_pblocks {CLKAG_design_1_i/caravel_0/inst/housekeeping/mprj_io_loader_clock_BUFG}] -add {CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
 #endgroup
 
 # Clock net "design_1_i/caravel_0/inst/housekeeping/hkspi/flash_clk_BUFG" driven by instance "design_1_i/caravel_0/inst/housekeeping/hkspi/flash_clk_BUFG_inst" located at site "BUFGCTRL_X0Y19"
 #startgroup
 create_pblock {CLKAG_design_1_i/caravel_0/inst/housekeeping/hkspi/flash_clk_BUFG}
 add_cells_to_pblock [get_pblocks  {CLKAG_design_1_i/caravel_0/inst/housekeeping/hkspi/flash_clk_BUFG}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="design_1_i/caravel_0/inst/housekeeping/hkspi/flash_clk_BUFG"}]]]
-resize_pblock [get_pblocks {CLKAG_design_1_i/caravel_0/inst/housekeeping/hkspi/flash_clk_BUFG}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0}
+resize_pblock [get_pblocks {CLKAG_design_1_i/caravel_0/inst/housekeeping/hkspi/flash_clk_BUFG}] -add {CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
 #endgroup
 
 # Clock net "design_1_i/caravel_0/inst/housekeeping/csclk_BUFG" driven by instance "design_1_i/caravel_0/inst/housekeeping/csclk_BUFG_inst" located at site "BUFGCTRL_X0Y18"
 #startgroup
 create_pblock {CLKAG_design_1_i/caravel_0/inst/housekeeping/csclk_BUFG}
 add_cells_to_pblock [get_pblocks  {CLKAG_design_1_i/caravel_0/inst/housekeeping/csclk_BUFG}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="design_1_i/caravel_0/inst/housekeeping/csclk_BUFG"}]]]
-resize_pblock [get_pblocks {CLKAG_design_1_i/caravel_0/inst/housekeeping/csclk_BUFG}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
+resize_pblock [get_pblocks {CLKAG_design_1_i/caravel_0/inst/housekeeping/csclk_BUFG}] -add {CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
 #endgroup
 
 # Clock net "design_1_i/caravel_0/inst/gpio_control_bidir_2[0]/mprj_o_BUFG[0]" driven by instance "design_1_i/caravel_0/inst/gpio_control_bidir_2[0]/mprj_o[0]_BUFG_inst" located at site "BUFGCTRL_X0Y17"
 #startgroup
 create_pblock {CLKAG_design_1_i/caravel_0/inst/gpio_control_bidir_2[0]/mprj_o_BUFG[0]}
 add_cells_to_pblock [get_pblocks  {CLKAG_design_1_i/caravel_0/inst/gpio_control_bidir_2[0]/mprj_o_BUFG[0]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="design_1_i/caravel_0/inst/gpio_control_bidir_2[0]/mprj_o_BUFG[0]"}]]]
-resize_pblock [get_pblocks {CLKAG_design_1_i/caravel_0/inst/gpio_control_bidir_2[0]/mprj_o_BUFG[0]}] -add {CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
+resize_pblock [get_pblocks {CLKAG_design_1_i/caravel_0/inst/gpio_control_bidir_2[0]/mprj_o_BUFG[0]}] -add {CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
 #endgroup
 
 # Clock net "design_1_i/axi_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/LOGIC_FOR_MD_0_GEN.SPI_MODULE_I/sck_o_BUFG" driven by instance "design_1_i/axi_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/LOGIC_FOR_MD_0_GEN.SPI_MODULE_I/sck_o_BUFG_inst" located at site "BUFGCTRL_X0Y16"
 #startgroup
 create_pblock {CLKAG_design_1_i/axi_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/LOGIC_FOR_MD_0_GEN.SPI_MODULE_I/sck_o_BUFG}
 add_cells_to_pblock [get_pblocks  {CLKAG_design_1_i/axi_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/LOGIC_FOR_MD_0_GEN.SPI_MODULE_I/sck_o_BUFG}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="design_1_i/axi_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/LOGIC_FOR_MD_0_GEN.SPI_MODULE_I/sck_o_BUFG"}]]]
-resize_pblock [get_pblocks {CLKAG_design_1_i/axi_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/LOGIC_FOR_MD_0_GEN.SPI_MODULE_I/sck_o_BUFG}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
+resize_pblock [get_pblocks {CLKAG_design_1_i/axi_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/LOGIC_FOR_MD_0_GEN.SPI_MODULE_I/sck_o_BUFG}] -add {CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
 #endgroup

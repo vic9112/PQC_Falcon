@@ -9,10 +9,10 @@
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 
 source design_1_ps_axil_0_0.tcl -notrace
-create_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:12 . Memory (MB): peak = 2871.363 ; gain = 0.023 ; free physical = 2593 ; free virtual = 4566
+create_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:11 . Memory (MB): peak = 2874.328 ; gain = 0.023 ; free physical = 2667 ; free virtual = 15327
 INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vitis_prj/hls_caravel_ps'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vitis_prj/hls_output_pin'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vitis_prj/hls_caravel_ps'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vitis_prj/hls_output_pin'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2022.1/data/ip'.
 Command: synth_design -top design_1_ps_axil_0_0 -part xc7z020clg400-1 -incremental_mode off -mode out_of_context
 Starting synth_design
@@ -21,191 +21,189 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020
 INFO: [Device 21-403] Loading part xc7z020clg400-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 9111
+INFO: [Synth 8-7075] Helper process launched with PID 9012
 WARNING: [Synth 8-9501] generate block is allowed only inside loop and conditional generate in SystemVerilog mode [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:4023]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:15 . Memory (MB): peak = 2871.363 ; gain = 0.000 ; free physical = 1238 ; free virtual = 2323
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:14 . Memory (MB): peak = 2874.328 ; gain = 0.000 ; free physical = 1915 ; free virtual = 13662
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'design_1_ps_axil_0_0' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ip/design_1_ps_axil_0_0/synth/design_1_ps_axil_0_0.v:53]
-INFO: [Synth 8-6157] synthesizing module 'ps_axil' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/ps_axil.v:23]
-INFO: [Synth 8-155] case statement is not full and has no default [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/ps_axil.v:398]
-INFO: [Synth 8-155] case statement is not full and has no default [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/ps_axil.v:486]
-INFO: [Synth 8-6157] synthesizing module 'AXIS_SWz' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/sw_fpga.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'AXIS_SWz' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/sw_fpga.v:23]
-WARNING: [Synth 8-7071] port 'up_hpri_req' of module 'AXIS_SWz' is unconnected for instance 'PL_AS' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/ps_axil.v:582]
-WARNING: [Synth 8-7071] port 'la_as_tdata' of module 'AXIS_SWz' is unconnected for instance 'PL_AS' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/ps_axil.v:582]
-WARNING: [Synth 8-7071] port 'la_as_tstrb' of module 'AXIS_SWz' is unconnected for instance 'PL_AS' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/ps_axil.v:582]
-WARNING: [Synth 8-7071] port 'la_as_tkeep' of module 'AXIS_SWz' is unconnected for instance 'PL_AS' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/ps_axil.v:582]
-WARNING: [Synth 8-7071] port 'la_as_tlast' of module 'AXIS_SWz' is unconnected for instance 'PL_AS' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/ps_axil.v:582]
-WARNING: [Synth 8-7071] port 'la_as_tvalid' of module 'AXIS_SWz' is unconnected for instance 'PL_AS' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/ps_axil.v:582]
-WARNING: [Synth 8-7071] port 'la_as_tuser' of module 'AXIS_SWz' is unconnected for instance 'PL_AS' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/ps_axil.v:582]
-WARNING: [Synth 8-7071] port 'la_hpri_req' of module 'AXIS_SWz' is unconnected for instance 'PL_AS' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/ps_axil.v:582]
-WARNING: [Synth 8-7071] port 'as_la_tready' of module 'AXIS_SWz' is unconnected for instance 'PL_AS' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/ps_axil.v:582]
-WARNING: [Synth 8-7023] instance 'PL_AS' of module 'AXIS_SWz' has 81 connections declared, but only 72 given [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/ps_axil.v:582]
-INFO: [Synth 8-6157] synthesizing module 'AXIL_AXIS' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axil_axis.sv:7]
-INFO: [Synth 8-6157] synthesizing module 'axilite_master' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axilite_master.sv:9]
-INFO: [Synth 8-6155] done synthesizing module 'axilite_master' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axilite_master.sv:9]
-INFO: [Synth 8-6157] synthesizing module 'axilite_slave' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axilite_slave.sv:9]
-INFO: [Synth 8-155] case statement is not full and has no default [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axilite_slave.sv:104]
-INFO: [Synth 8-155] case statement is not full and has no default [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axilite_slave.sv:167]
-INFO: [Synth 8-155] case statement is not full and has no default [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axilite_slave.sv:185]
-INFO: [Synth 8-155] case statement is not full and has no default [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axilite_slave.sv:237]
-INFO: [Synth 8-6155] done synthesizing module 'axilite_slave' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axilite_slave.sv:9]
-INFO: [Synth 8-6157] synthesizing module 'axis_master' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axis_master.sv:9]
-INFO: [Synth 8-155] case statement is not full and has no default [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axis_master.sv:78]
-INFO: [Synth 8-155] case statement is not full and has no default [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axis_master.sv:97]
-INFO: [Synth 8-6155] done synthesizing module 'axis_master' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axis_master.sv:9]
-INFO: [Synth 8-6157] synthesizing module 'axis_slave' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axis_slave.sv:9]
-INFO: [Synth 8-155] case statement is not full and has no default [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axis_slave.sv:78]
-INFO: [Synth 8-155] case statement is not full and has no default [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axis_slave.sv:94]
-INFO: [Synth 8-6155] done synthesizing module 'axis_slave' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axis_slave.sv:9]
-INFO: [Synth 8-6157] synthesizing module 'axi_ctrl_logic' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axi_ctrl_logic.sv:11]
-INFO: [Synth 8-155] case statement is not full and has no default [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axi_ctrl_logic.sv:216]
-INFO: [Synth 8-155] case statement is not full and has no default [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axi_ctrl_logic.sv:276]
-INFO: [Synth 8-155] case statement is not full and has no default [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axi_ctrl_logic.sv:412]
-INFO: [Synth 8-155] case statement is not full and has no default [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axi_ctrl_logic.sv:708]
-INFO: [Synth 8-155] case statement is not full and has no default [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axi_ctrl_logic.sv:718]
-INFO: [Synth 8-6155] done synthesizing module 'axi_ctrl_logic' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axi_ctrl_logic.sv:11]
-INFO: [Synth 8-6155] done synthesizing module 'AXIL_AXIS' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axil_axis.sv:7]
-WARNING: [Synth 8-7071] port 'm_awvalid' of module 'AXIL_AXIS' is unconnected for instance 'PL_AA' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/ps_axil.v:679]
-WARNING: [Synth 8-7071] port 'm_awaddr' of module 'AXIL_AXIS' is unconnected for instance 'PL_AA' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/ps_axil.v:679]
-WARNING: [Synth 8-7071] port 'm_wvalid' of module 'AXIL_AXIS' is unconnected for instance 'PL_AA' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/ps_axil.v:679]
-WARNING: [Synth 8-7071] port 'm_wdata' of module 'AXIL_AXIS' is unconnected for instance 'PL_AA' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/ps_axil.v:679]
-WARNING: [Synth 8-7071] port 'm_wstrb' of module 'AXIL_AXIS' is unconnected for instance 'PL_AA' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/ps_axil.v:679]
-WARNING: [Synth 8-7071] port 'm_arvalid' of module 'AXIL_AXIS' is unconnected for instance 'PL_AA' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/ps_axil.v:679]
-WARNING: [Synth 8-7071] port 'm_araddr' of module 'AXIL_AXIS' is unconnected for instance 'PL_AA' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/ps_axil.v:679]
-WARNING: [Synth 8-7071] port 'm_rready' of module 'AXIL_AXIS' is unconnected for instance 'PL_AA' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/ps_axil.v:679]
-WARNING: [Synth 8-7071] port 'm_rdata' of module 'AXIL_AXIS' is unconnected for instance 'PL_AA' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/ps_axil.v:679]
-WARNING: [Synth 8-7071] port 'm_rvalid' of module 'AXIL_AXIS' is unconnected for instance 'PL_AA' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/ps_axil.v:679]
-WARNING: [Synth 8-7071] port 'm_awready' of module 'AXIL_AXIS' is unconnected for instance 'PL_AA' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/ps_axil.v:679]
-WARNING: [Synth 8-7071] port 'm_wready' of module 'AXIL_AXIS' is unconnected for instance 'PL_AA' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/ps_axil.v:679]
-WARNING: [Synth 8-7071] port 'm_arready' of module 'AXIL_AXIS' is unconnected for instance 'PL_AA' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/ps_axil.v:679]
-WARNING: [Synth 8-7023] instance 'PL_AA' of module 'AXIL_AXIS' has 46 connections declared, but only 33 given [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/ps_axil.v:679]
-INFO: [Synth 8-6157] synthesizing module 'IO_SERDES' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/caravel_soc/rtl/user/io_serdes/rtl/io_serdes.v:34]
-INFO: [Synth 8-6157] synthesizing module 'fsic_io_serdes_rx' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/caravel_soc/rtl/user/io_serdes/rtl/fsic_io_serdes_rx.v:24]
-INFO: [Synth 8-6155] done synthesizing module 'fsic_io_serdes_rx' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/caravel_soc/rtl/user/io_serdes/rtl/fsic_io_serdes_rx.v:24]
-INFO: [Synth 8-6157] synthesizing module 'fsic_coreclk_phase_cnt' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/caravel_soc/rtl/user/io_serdes/rtl/fsic_coreclk_phase_cnt.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'fsic_coreclk_phase_cnt' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/caravel_soc/rtl/user/io_serdes/rtl/fsic_coreclk_phase_cnt.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'IO_SERDES' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/caravel_soc/rtl/user/io_serdes/rtl/io_serdes.v:34]
-WARNING: [Synth 8-7071] port 'rxen_out' of module 'IO_SERDES' is unconnected for instance 'PL_IS' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/ps_axil.v:725]
-WARNING: [Synth 8-7023] instance 'PL_IS' of module 'IO_SERDES' has 42 connections declared, but only 41 given [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/ps_axil.v:725]
-INFO: [Synth 8-6157] synthesizing module 'ladmatr' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr.v:10]
-INFO: [Synth 8-6157] synthesizing module 'ladmatr_control_s_axi' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_control_s_axi.v:7]
-INFO: [Synth 8-155] case statement is not full and has no default [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_control_s_axi.v:237]
-INFO: [Synth 8-6155] done synthesizing module 'ladmatr_control_s_axi' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_control_s_axi.v:7]
-INFO: [Synth 8-6157] synthesizing module 'ladmatr_gmem0_m_axi' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v:11]
-INFO: [Synth 8-6157] synthesizing module 'ladmatr_gmem0_m_axi_store' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v:780]
-INFO: [Synth 8-6157] synthesizing module 'ladmatr_gmem0_m_axi_fifo' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v:2686]
-INFO: [Synth 8-6157] synthesizing module 'ladmatr_gmem0_m_axi_srl' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v:2864]
-INFO: [Synth 8-6155] done synthesizing module 'ladmatr_gmem0_m_axi_srl' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v:2864]
-INFO: [Synth 8-6155] done synthesizing module 'ladmatr_gmem0_m_axi_fifo' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v:2686]
-INFO: [Synth 8-6157] synthesizing module 'ladmatr_gmem0_m_axi_fifo__parameterized0' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v:2686]
-INFO: [Synth 8-6157] synthesizing module 'ladmatr_gmem0_m_axi_mem' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v:2918]
-INFO: [Synth 8-6155] done synthesizing module 'ladmatr_gmem0_m_axi_mem' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v:2918]
-INFO: [Synth 8-6155] done synthesizing module 'ladmatr_gmem0_m_axi_fifo__parameterized0' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v:2686]
-INFO: [Synth 8-6157] synthesizing module 'ladmatr_gmem0_m_axi_fifo__parameterized1' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v:2686]
-INFO: [Synth 8-6157] synthesizing module 'ladmatr_gmem0_m_axi_srl__parameterized0' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v:2864]
-INFO: [Synth 8-6155] done synthesizing module 'ladmatr_gmem0_m_axi_srl__parameterized0' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v:2864]
-INFO: [Synth 8-6155] done synthesizing module 'ladmatr_gmem0_m_axi_fifo__parameterized1' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v:2686]
-INFO: [Synth 8-6157] synthesizing module 'ladmatr_gmem0_m_axi_fifo__parameterized2' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v:2686]
-INFO: [Synth 8-6157] synthesizing module 'ladmatr_gmem0_m_axi_srl__parameterized1' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v:2864]
-INFO: [Synth 8-6155] done synthesizing module 'ladmatr_gmem0_m_axi_srl__parameterized1' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v:2864]
-INFO: [Synth 8-6155] done synthesizing module 'ladmatr_gmem0_m_axi_fifo__parameterized2' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v:2686]
-INFO: [Synth 8-6155] done synthesizing module 'ladmatr_gmem0_m_axi_store' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v:780]
-INFO: [Synth 8-6157] synthesizing module 'ladmatr_gmem0_m_axi_load' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v:324]
-INFO: [Synth 8-6157] synthesizing module 'ladmatr_gmem0_m_axi_fifo__parameterized3' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v:2686]
-INFO: [Synth 8-6157] synthesizing module 'ladmatr_gmem0_m_axi_mem__parameterized0' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v:2918]
-INFO: [Synth 8-6155] done synthesizing module 'ladmatr_gmem0_m_axi_mem__parameterized0' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v:2918]
-INFO: [Synth 8-6155] done synthesizing module 'ladmatr_gmem0_m_axi_fifo__parameterized3' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v:2686]
-INFO: [Synth 8-6155] done synthesizing module 'ladmatr_gmem0_m_axi_load' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v:324]
-INFO: [Synth 8-6157] synthesizing module 'ladmatr_gmem0_m_axi_write' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v:1852]
-INFO: [Synth 8-6157] synthesizing module 'ladmatr_gmem0_m_axi_reg_slice' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v:2584]
-INFO: [Synth 8-6155] done synthesizing module 'ladmatr_gmem0_m_axi_reg_slice' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v:2584]
-INFO: [Synth 8-6157] synthesizing module 'ladmatr_gmem0_m_axi_fifo__parameterized4' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v:2686]
-INFO: [Synth 8-6157] synthesizing module 'ladmatr_gmem0_m_axi_srl__parameterized2' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v:2864]
-INFO: [Synth 8-6155] done synthesizing module 'ladmatr_gmem0_m_axi_srl__parameterized2' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v:2864]
-INFO: [Synth 8-6155] done synthesizing module 'ladmatr_gmem0_m_axi_fifo__parameterized4' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v:2686]
-INFO: [Synth 8-6157] synthesizing module 'ladmatr_gmem0_m_axi_throttle' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v:2360]
-INFO: [Synth 8-6157] synthesizing module 'ladmatr_gmem0_m_axi_reg_slice__parameterized0' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v:2584]
-INFO: [Synth 8-6155] done synthesizing module 'ladmatr_gmem0_m_axi_reg_slice__parameterized0' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v:2584]
-INFO: [Synth 8-6157] synthesizing module 'ladmatr_gmem0_m_axi_fifo__parameterized5' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v:2686]
-INFO: [Synth 8-6157] synthesizing module 'ladmatr_gmem0_m_axi_srl__parameterized3' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v:2864]
-INFO: [Synth 8-6155] done synthesizing module 'ladmatr_gmem0_m_axi_srl__parameterized3' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v:2864]
-INFO: [Synth 8-6155] done synthesizing module 'ladmatr_gmem0_m_axi_fifo__parameterized5' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v:2686]
-INFO: [Synth 8-6157] synthesizing module 'ladmatr_gmem0_m_axi_fifo__parameterized6' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v:2686]
-INFO: [Synth 8-6157] synthesizing module 'ladmatr_gmem0_m_axi_srl__parameterized4' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v:2864]
-INFO: [Synth 8-6155] done synthesizing module 'ladmatr_gmem0_m_axi_srl__parameterized4' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v:2864]
-INFO: [Synth 8-6155] done synthesizing module 'ladmatr_gmem0_m_axi_fifo__parameterized6' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v:2686]
-INFO: [Synth 8-6155] done synthesizing module 'ladmatr_gmem0_m_axi_throttle' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v:2360]
-INFO: [Synth 8-6157] synthesizing module 'ladmatr_gmem0_m_axi_reg_slice__parameterized1' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v:2584]
-INFO: [Synth 8-6155] done synthesizing module 'ladmatr_gmem0_m_axi_reg_slice__parameterized1' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v:2584]
-WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v:2352]
-WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v:2355]
-INFO: [Synth 8-6155] done synthesizing module 'ladmatr_gmem0_m_axi_write' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v:1852]
-INFO: [Synth 8-6157] synthesizing module 'ladmatr_gmem0_m_axi_read' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v:1468]
-INFO: [Synth 8-6157] synthesizing module 'ladmatr_gmem0_m_axi_reg_slice__parameterized2' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v:2584]
-INFO: [Synth 8-6155] done synthesizing module 'ladmatr_gmem0_m_axi_reg_slice__parameterized2' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v:2584]
-WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v:1844]
-INFO: [Synth 8-6155] done synthesizing module 'ladmatr_gmem0_m_axi_read' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v:1468]
-INFO: [Synth 8-6155] done synthesizing module 'ladmatr_gmem0_m_axi' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v:11]
-INFO: [Synth 8-6157] synthesizing module 'ladmatr_entry_proc' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_entry_proc.v:10]
-INFO: [Synth 8-6155] done synthesizing module 'ladmatr_entry_proc' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_entry_proc.v:10]
-INFO: [Synth 8-6157] synthesizing module 'ladmatr_getinstream' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_getinstream.v:10]
-INFO: [Synth 8-6157] synthesizing module 'ladmatr_getinstream_Pipeline_VITIS_LOOP_44_1' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_getinstream_Pipeline_VITIS_LOOP_44_1.v:10]
-INFO: [Synth 8-6157] synthesizing module 'ladmatr_flow_control_loop_pipe_sequential_init' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_flow_control_loop_pipe_sequential_init.v:9]
-INFO: [Synth 8-6155] done synthesizing module 'ladmatr_flow_control_loop_pipe_sequential_init' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_flow_control_loop_pipe_sequential_init.v:9]
-INFO: [Synth 8-6155] done synthesizing module 'ladmatr_getinstream_Pipeline_VITIS_LOOP_44_1' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_getinstream_Pipeline_VITIS_LOOP_44_1.v:10]
-INFO: [Synth 8-6157] synthesizing module 'ladmatr_regslice_both' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_regslice_both.v:9]
-INFO: [Synth 8-6155] done synthesizing module 'ladmatr_regslice_both' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_regslice_both.v:9]
-INFO: [Synth 8-6157] synthesizing module 'ladmatr_regslice_both__parameterized0' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_regslice_both.v:9]
-INFO: [Synth 8-6155] done synthesizing module 'ladmatr_regslice_both__parameterized0' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_regslice_both.v:9]
-INFO: [Synth 8-6157] synthesizing module 'ladmatr_regslice_both__parameterized1' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_regslice_both.v:9]
-INFO: [Synth 8-6155] done synthesizing module 'ladmatr_regslice_both__parameterized1' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_regslice_both.v:9]
-INFO: [Synth 8-6157] synthesizing module 'ladmatr_regslice_both__parameterized2' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_regslice_both.v:9]
-INFO: [Synth 8-6155] done synthesizing module 'ladmatr_regslice_both__parameterized2' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_regslice_both.v:9]
-INFO: [Synth 8-6155] done synthesizing module 'ladmatr_getinstream' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_getinstream.v:10]
-INFO: [Synth 8-6157] synthesizing module 'ladmatr_streamtoparallelwithburst' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_streamtoparallelwithburst.v:10]
-INFO: [Synth 8-6157] synthesizing module 'ladmatr_streamtoparallelwithburst_Pipeline_VITIS_LOOP_15_2' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_streamtoparallelwithburst_Pipeline_VITIS_LOOP_15_2.v:10]
-INFO: [Synth 8-6155] done synthesizing module 'ladmatr_streamtoparallelwithburst_Pipeline_VITIS_LOOP_15_2' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_streamtoparallelwithburst_Pipeline_VITIS_LOOP_15_2.v:10]
-INFO: [Synth 8-6155] done synthesizing module 'ladmatr_streamtoparallelwithburst' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_streamtoparallelwithburst.v:10]
-INFO: [Synth 8-6157] synthesizing module 'ladmatr_fifo_w64_d3_S' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_fifo_w64_d3_S.v:43]
-INFO: [Synth 8-6157] synthesizing module 'ladmatr_fifo_w64_d3_S_shiftReg' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_fifo_w64_d3_S.v:9]
-INFO: [Synth 8-6155] done synthesizing module 'ladmatr_fifo_w64_d3_S_shiftReg' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_fifo_w64_d3_S.v:9]
-INFO: [Synth 8-6155] done synthesizing module 'ladmatr_fifo_w64_d3_S' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_fifo_w64_d3_S.v:43]
-INFO: [Synth 8-6157] synthesizing module 'ladmatr_fifo_w33_d128_A' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_fifo_w33_d128_A.v:52]
-INFO: [Synth 8-6157] synthesizing module 'ladmatr_fifo_w33_d128_A_ram' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_fifo_w33_d128_A.v:9]
-INFO: [Synth 8-6155] done synthesizing module 'ladmatr_fifo_w33_d128_A_ram' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_fifo_w33_d128_A.v:9]
-INFO: [Synth 8-6155] done synthesizing module 'ladmatr_fifo_w33_d128_A' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_fifo_w33_d128_A.v:52]
-INFO: [Synth 8-6157] synthesizing module 'ladmatr_fifo_w32_d8_S' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_fifo_w32_d8_S.v:43]
-INFO: [Synth 8-6157] synthesizing module 'ladmatr_fifo_w32_d8_S_shiftReg' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_fifo_w32_d8_S.v:9]
-INFO: [Synth 8-6155] done synthesizing module 'ladmatr_fifo_w32_d8_S_shiftReg' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_fifo_w32_d8_S.v:9]
-INFO: [Synth 8-6155] done synthesizing module 'ladmatr_fifo_w32_d8_S' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_fifo_w32_d8_S.v:43]
-INFO: [Synth 8-6157] synthesizing module 'ladmatr_fifo_w1_d2_S' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_fifo_w1_d2_S.v:43]
-INFO: [Synth 8-6157] synthesizing module 'ladmatr_fifo_w1_d2_S_shiftReg' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_fifo_w1_d2_S.v:9]
-INFO: [Synth 8-6155] done synthesizing module 'ladmatr_fifo_w1_d2_S_shiftReg' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_fifo_w1_d2_S.v:9]
-INFO: [Synth 8-6155] done synthesizing module 'ladmatr_fifo_w1_d2_S' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_fifo_w1_d2_S.v:43]
-INFO: [Synth 8-6157] synthesizing module 'ladmatr_fifo_w32_d2_S' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_fifo_w32_d2_S.v:43]
-INFO: [Synth 8-6157] synthesizing module 'ladmatr_fifo_w32_d2_S_shiftReg' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_fifo_w32_d2_S.v:9]
-INFO: [Synth 8-6155] done synthesizing module 'ladmatr_fifo_w32_d2_S_shiftReg' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_fifo_w32_d2_S.v:9]
-INFO: [Synth 8-6155] done synthesizing module 'ladmatr_fifo_w32_d2_S' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_fifo_w32_d2_S.v:43]
-INFO: [Synth 8-6157] synthesizing module 'ladmatr_start_for_streamtoparallelwithburst_U0' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_start_for_streamtoparallelwithburst_U0.v:43]
-INFO: [Synth 8-6157] synthesizing module 'ladmatr_start_for_streamtoparallelwithburst_U0_shiftReg' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_start_for_streamtoparallelwithburst_U0.v:9]
-INFO: [Synth 8-6155] done synthesizing module 'ladmatr_start_for_streamtoparallelwithburst_U0_shiftReg' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_start_for_streamtoparallelwithburst_U0.v:9]
-INFO: [Synth 8-6155] done synthesizing module 'ladmatr_start_for_streamtoparallelwithburst_U0' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_start_for_streamtoparallelwithburst_U0.v:43]
-INFO: [Synth 8-6155] done synthesizing module 'ladmatr' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr.v:10]
-WARNING: [Synth 8-7071] port 'm_axi_gmem0_WID' of module 'ladmatr' is unconnected for instance 'LA_DMA' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/ps_axil.v:776]
-WARNING: [Synth 8-7023] instance 'LA_DMA' of module 'ladmatr' has 72 connections declared, but only 71 given [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/ps_axil.v:776]
-INFO: [Synth 8-6155] done synthesizing module 'ps_axil' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/ps_axil.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_ps_axil_0_0' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ip/design_1_ps_axil_0_0/synth/design_1_ps_axil_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'design_1_ps_axil_0_0' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ip/design_1_ps_axil_0_0/synth/design_1_ps_axil_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'ps_axil' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/ps_axil.v:23]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/ps_axil.v:398]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/ps_axil.v:486]
+INFO: [Synth 8-6157] synthesizing module 'AXIS_SWz' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/sw_fpga.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'AXIS_SWz' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/sw_fpga.v:23]
+WARNING: [Synth 8-7071] port 'up_hpri_req' of module 'AXIS_SWz' is unconnected for instance 'PL_AS' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/ps_axil.v:582]
+WARNING: [Synth 8-7071] port 'la_as_tdata' of module 'AXIS_SWz' is unconnected for instance 'PL_AS' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/ps_axil.v:582]
+WARNING: [Synth 8-7071] port 'la_as_tstrb' of module 'AXIS_SWz' is unconnected for instance 'PL_AS' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/ps_axil.v:582]
+WARNING: [Synth 8-7071] port 'la_as_tkeep' of module 'AXIS_SWz' is unconnected for instance 'PL_AS' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/ps_axil.v:582]
+WARNING: [Synth 8-7071] port 'la_as_tlast' of module 'AXIS_SWz' is unconnected for instance 'PL_AS' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/ps_axil.v:582]
+WARNING: [Synth 8-7071] port 'la_as_tvalid' of module 'AXIS_SWz' is unconnected for instance 'PL_AS' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/ps_axil.v:582]
+WARNING: [Synth 8-7071] port 'la_as_tuser' of module 'AXIS_SWz' is unconnected for instance 'PL_AS' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/ps_axil.v:582]
+WARNING: [Synth 8-7071] port 'la_hpri_req' of module 'AXIS_SWz' is unconnected for instance 'PL_AS' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/ps_axil.v:582]
+WARNING: [Synth 8-7071] port 'as_la_tready' of module 'AXIS_SWz' is unconnected for instance 'PL_AS' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/ps_axil.v:582]
+WARNING: [Synth 8-7023] instance 'PL_AS' of module 'AXIS_SWz' has 81 connections declared, but only 72 given [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/ps_axil.v:582]
+INFO: [Synth 8-6157] synthesizing module 'AXIL_AXIS' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axil_axis.sv:7]
+INFO: [Synth 8-6157] synthesizing module 'axilite_master' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axilite_master.sv:9]
+INFO: [Synth 8-6155] done synthesizing module 'axilite_master' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axilite_master.sv:9]
+INFO: [Synth 8-6157] synthesizing module 'axilite_slave' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axilite_slave.sv:9]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axilite_slave.sv:104]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axilite_slave.sv:167]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axilite_slave.sv:185]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axilite_slave.sv:237]
+INFO: [Synth 8-6155] done synthesizing module 'axilite_slave' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axilite_slave.sv:9]
+INFO: [Synth 8-6157] synthesizing module 'axis_master' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axis_master.sv:9]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axis_master.sv:78]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axis_master.sv:97]
+INFO: [Synth 8-6155] done synthesizing module 'axis_master' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axis_master.sv:9]
+INFO: [Synth 8-6157] synthesizing module 'axis_slave' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axis_slave.sv:9]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axis_slave.sv:78]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axis_slave.sv:94]
+INFO: [Synth 8-6155] done synthesizing module 'axis_slave' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axis_slave.sv:9]
+INFO: [Synth 8-6157] synthesizing module 'axi_ctrl_logic' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axi_ctrl_logic.sv:11]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axi_ctrl_logic.sv:216]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axi_ctrl_logic.sv:276]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axi_ctrl_logic.sv:412]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axi_ctrl_logic.sv:708]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axi_ctrl_logic.sv:718]
+INFO: [Synth 8-6155] done synthesizing module 'axi_ctrl_logic' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axi_ctrl_logic.sv:11]
+INFO: [Synth 8-6155] done synthesizing module 'AXIL_AXIS' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axil_axis.sv:7]
+WARNING: [Synth 8-7071] port 'm_awvalid' of module 'AXIL_AXIS' is unconnected for instance 'PL_AA' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/ps_axil.v:679]
+WARNING: [Synth 8-7071] port 'm_awaddr' of module 'AXIL_AXIS' is unconnected for instance 'PL_AA' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/ps_axil.v:679]
+WARNING: [Synth 8-7071] port 'm_wvalid' of module 'AXIL_AXIS' is unconnected for instance 'PL_AA' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/ps_axil.v:679]
+WARNING: [Synth 8-7071] port 'm_wdata' of module 'AXIL_AXIS' is unconnected for instance 'PL_AA' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/ps_axil.v:679]
+WARNING: [Synth 8-7071] port 'm_wstrb' of module 'AXIL_AXIS' is unconnected for instance 'PL_AA' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/ps_axil.v:679]
+WARNING: [Synth 8-7071] port 'm_arvalid' of module 'AXIL_AXIS' is unconnected for instance 'PL_AA' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/ps_axil.v:679]
+WARNING: [Synth 8-7071] port 'm_araddr' of module 'AXIL_AXIS' is unconnected for instance 'PL_AA' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/ps_axil.v:679]
+WARNING: [Synth 8-7071] port 'm_rready' of module 'AXIL_AXIS' is unconnected for instance 'PL_AA' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/ps_axil.v:679]
+WARNING: [Synth 8-7071] port 'm_rdata' of module 'AXIL_AXIS' is unconnected for instance 'PL_AA' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/ps_axil.v:679]
+WARNING: [Synth 8-7071] port 'm_rvalid' of module 'AXIL_AXIS' is unconnected for instance 'PL_AA' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/ps_axil.v:679]
+WARNING: [Synth 8-7071] port 'm_awready' of module 'AXIL_AXIS' is unconnected for instance 'PL_AA' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/ps_axil.v:679]
+WARNING: [Synth 8-7071] port 'm_wready' of module 'AXIL_AXIS' is unconnected for instance 'PL_AA' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/ps_axil.v:679]
+WARNING: [Synth 8-7071] port 'm_arready' of module 'AXIL_AXIS' is unconnected for instance 'PL_AA' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/ps_axil.v:679]
+WARNING: [Synth 8-7023] instance 'PL_AA' of module 'AXIL_AXIS' has 46 connections declared, but only 33 given [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/ps_axil.v:679]
+INFO: [Synth 8-6157] synthesizing module 'IO_SERDES' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/caravel_soc/rtl/user/io_serdes/rtl/io_serdes.v:34]
+INFO: [Synth 8-6157] synthesizing module 'fsic_io_serdes_rx' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/caravel_soc/rtl/user/io_serdes/rtl/fsic_io_serdes_rx.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'fsic_io_serdes_rx' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/caravel_soc/rtl/user/io_serdes/rtl/fsic_io_serdes_rx.v:24]
+INFO: [Synth 8-6157] synthesizing module 'fsic_coreclk_phase_cnt' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/caravel_soc/rtl/user/io_serdes/rtl/fsic_coreclk_phase_cnt.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'fsic_coreclk_phase_cnt' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/caravel_soc/rtl/user/io_serdes/rtl/fsic_coreclk_phase_cnt.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'IO_SERDES' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/caravel_soc/rtl/user/io_serdes/rtl/io_serdes.v:34]
+INFO: [Synth 8-6157] synthesizing module 'ladmatr' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr.v:10]
+INFO: [Synth 8-6157] synthesizing module 'ladmatr_control_s_axi' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_control_s_axi.v:7]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_control_s_axi.v:237]
+INFO: [Synth 8-6155] done synthesizing module 'ladmatr_control_s_axi' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_control_s_axi.v:7]
+INFO: [Synth 8-6157] synthesizing module 'ladmatr_gmem0_m_axi' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v:11]
+INFO: [Synth 8-6157] synthesizing module 'ladmatr_gmem0_m_axi_store' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v:780]
+INFO: [Synth 8-6157] synthesizing module 'ladmatr_gmem0_m_axi_fifo' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v:2686]
+INFO: [Synth 8-6157] synthesizing module 'ladmatr_gmem0_m_axi_srl' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v:2864]
+INFO: [Synth 8-6155] done synthesizing module 'ladmatr_gmem0_m_axi_srl' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v:2864]
+INFO: [Synth 8-6155] done synthesizing module 'ladmatr_gmem0_m_axi_fifo' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v:2686]
+INFO: [Synth 8-6157] synthesizing module 'ladmatr_gmem0_m_axi_fifo__parameterized0' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v:2686]
+INFO: [Synth 8-6157] synthesizing module 'ladmatr_gmem0_m_axi_mem' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v:2918]
+INFO: [Synth 8-6155] done synthesizing module 'ladmatr_gmem0_m_axi_mem' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v:2918]
+INFO: [Synth 8-6155] done synthesizing module 'ladmatr_gmem0_m_axi_fifo__parameterized0' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v:2686]
+INFO: [Synth 8-6157] synthesizing module 'ladmatr_gmem0_m_axi_fifo__parameterized1' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v:2686]
+INFO: [Synth 8-6157] synthesizing module 'ladmatr_gmem0_m_axi_srl__parameterized0' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v:2864]
+INFO: [Synth 8-6155] done synthesizing module 'ladmatr_gmem0_m_axi_srl__parameterized0' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v:2864]
+INFO: [Synth 8-6155] done synthesizing module 'ladmatr_gmem0_m_axi_fifo__parameterized1' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v:2686]
+INFO: [Synth 8-6157] synthesizing module 'ladmatr_gmem0_m_axi_fifo__parameterized2' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v:2686]
+INFO: [Synth 8-6157] synthesizing module 'ladmatr_gmem0_m_axi_srl__parameterized1' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v:2864]
+INFO: [Synth 8-6155] done synthesizing module 'ladmatr_gmem0_m_axi_srl__parameterized1' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v:2864]
+INFO: [Synth 8-6155] done synthesizing module 'ladmatr_gmem0_m_axi_fifo__parameterized2' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v:2686]
+INFO: [Synth 8-6155] done synthesizing module 'ladmatr_gmem0_m_axi_store' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v:780]
+INFO: [Synth 8-6157] synthesizing module 'ladmatr_gmem0_m_axi_load' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v:324]
+INFO: [Synth 8-6157] synthesizing module 'ladmatr_gmem0_m_axi_fifo__parameterized3' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v:2686]
+INFO: [Synth 8-6157] synthesizing module 'ladmatr_gmem0_m_axi_mem__parameterized0' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v:2918]
+INFO: [Synth 8-6155] done synthesizing module 'ladmatr_gmem0_m_axi_mem__parameterized0' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v:2918]
+INFO: [Synth 8-6155] done synthesizing module 'ladmatr_gmem0_m_axi_fifo__parameterized3' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v:2686]
+INFO: [Synth 8-6155] done synthesizing module 'ladmatr_gmem0_m_axi_load' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v:324]
+INFO: [Synth 8-6157] synthesizing module 'ladmatr_gmem0_m_axi_write' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v:1852]
+INFO: [Synth 8-6157] synthesizing module 'ladmatr_gmem0_m_axi_reg_slice' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v:2584]
+INFO: [Synth 8-6155] done synthesizing module 'ladmatr_gmem0_m_axi_reg_slice' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v:2584]
+INFO: [Synth 8-6157] synthesizing module 'ladmatr_gmem0_m_axi_fifo__parameterized4' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v:2686]
+INFO: [Synth 8-6157] synthesizing module 'ladmatr_gmem0_m_axi_srl__parameterized2' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v:2864]
+INFO: [Synth 8-6155] done synthesizing module 'ladmatr_gmem0_m_axi_srl__parameterized2' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v:2864]
+INFO: [Synth 8-6155] done synthesizing module 'ladmatr_gmem0_m_axi_fifo__parameterized4' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v:2686]
+INFO: [Synth 8-6157] synthesizing module 'ladmatr_gmem0_m_axi_throttle' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v:2360]
+INFO: [Synth 8-6157] synthesizing module 'ladmatr_gmem0_m_axi_reg_slice__parameterized0' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v:2584]
+INFO: [Synth 8-6155] done synthesizing module 'ladmatr_gmem0_m_axi_reg_slice__parameterized0' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v:2584]
+INFO: [Synth 8-6157] synthesizing module 'ladmatr_gmem0_m_axi_fifo__parameterized5' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v:2686]
+INFO: [Synth 8-6157] synthesizing module 'ladmatr_gmem0_m_axi_srl__parameterized3' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v:2864]
+INFO: [Synth 8-6155] done synthesizing module 'ladmatr_gmem0_m_axi_srl__parameterized3' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v:2864]
+INFO: [Synth 8-6155] done synthesizing module 'ladmatr_gmem0_m_axi_fifo__parameterized5' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v:2686]
+INFO: [Synth 8-6157] synthesizing module 'ladmatr_gmem0_m_axi_fifo__parameterized6' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v:2686]
+INFO: [Synth 8-6157] synthesizing module 'ladmatr_gmem0_m_axi_srl__parameterized4' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v:2864]
+INFO: [Synth 8-6155] done synthesizing module 'ladmatr_gmem0_m_axi_srl__parameterized4' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v:2864]
+INFO: [Synth 8-6155] done synthesizing module 'ladmatr_gmem0_m_axi_fifo__parameterized6' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v:2686]
+INFO: [Synth 8-6155] done synthesizing module 'ladmatr_gmem0_m_axi_throttle' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v:2360]
+INFO: [Synth 8-6157] synthesizing module 'ladmatr_gmem0_m_axi_reg_slice__parameterized1' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v:2584]
+INFO: [Synth 8-6155] done synthesizing module 'ladmatr_gmem0_m_axi_reg_slice__parameterized1' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v:2584]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v:2352]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v:2355]
+INFO: [Synth 8-6155] done synthesizing module 'ladmatr_gmem0_m_axi_write' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v:1852]
+INFO: [Synth 8-6157] synthesizing module 'ladmatr_gmem0_m_axi_read' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v:1468]
+INFO: [Synth 8-6157] synthesizing module 'ladmatr_gmem0_m_axi_reg_slice__parameterized2' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v:2584]
+INFO: [Synth 8-6155] done synthesizing module 'ladmatr_gmem0_m_axi_reg_slice__parameterized2' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v:2584]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v:1844]
+INFO: [Synth 8-6155] done synthesizing module 'ladmatr_gmem0_m_axi_read' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v:1468]
+INFO: [Synth 8-6155] done synthesizing module 'ladmatr_gmem0_m_axi' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_gmem0_m_axi.v:11]
+INFO: [Synth 8-6157] synthesizing module 'ladmatr_entry_proc' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_entry_proc.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'ladmatr_entry_proc' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_entry_proc.v:10]
+INFO: [Synth 8-6157] synthesizing module 'ladmatr_getinstream' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_getinstream.v:10]
+INFO: [Synth 8-6157] synthesizing module 'ladmatr_getinstream_Pipeline_VITIS_LOOP_44_1' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_getinstream_Pipeline_VITIS_LOOP_44_1.v:10]
+INFO: [Synth 8-6157] synthesizing module 'ladmatr_flow_control_loop_pipe_sequential_init' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_flow_control_loop_pipe_sequential_init.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'ladmatr_flow_control_loop_pipe_sequential_init' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_flow_control_loop_pipe_sequential_init.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'ladmatr_getinstream_Pipeline_VITIS_LOOP_44_1' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_getinstream_Pipeline_VITIS_LOOP_44_1.v:10]
+INFO: [Synth 8-6157] synthesizing module 'ladmatr_regslice_both' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_regslice_both.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'ladmatr_regslice_both' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_regslice_both.v:9]
+INFO: [Synth 8-6157] synthesizing module 'ladmatr_regslice_both__parameterized0' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_regslice_both.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'ladmatr_regslice_both__parameterized0' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_regslice_both.v:9]
+INFO: [Synth 8-6157] synthesizing module 'ladmatr_regslice_both__parameterized1' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_regslice_both.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'ladmatr_regslice_both__parameterized1' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_regslice_both.v:9]
+INFO: [Synth 8-6157] synthesizing module 'ladmatr_regslice_both__parameterized2' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_regslice_both.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'ladmatr_regslice_both__parameterized2' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_regslice_both.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'ladmatr_getinstream' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_getinstream.v:10]
+INFO: [Synth 8-6157] synthesizing module 'ladmatr_streamtoparallelwithburst' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_streamtoparallelwithburst.v:10]
+INFO: [Synth 8-6157] synthesizing module 'ladmatr_streamtoparallelwithburst_Pipeline_VITIS_LOOP_15_2' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_streamtoparallelwithburst_Pipeline_VITIS_LOOP_15_2.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'ladmatr_streamtoparallelwithburst_Pipeline_VITIS_LOOP_15_2' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_streamtoparallelwithburst_Pipeline_VITIS_LOOP_15_2.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'ladmatr_streamtoparallelwithburst' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_streamtoparallelwithburst.v:10]
+INFO: [Synth 8-6157] synthesizing module 'ladmatr_fifo_w64_d3_S' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_fifo_w64_d3_S.v:43]
+INFO: [Synth 8-6157] synthesizing module 'ladmatr_fifo_w64_d3_S_shiftReg' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_fifo_w64_d3_S.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'ladmatr_fifo_w64_d3_S_shiftReg' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_fifo_w64_d3_S.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'ladmatr_fifo_w64_d3_S' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_fifo_w64_d3_S.v:43]
+INFO: [Synth 8-6157] synthesizing module 'ladmatr_fifo_w33_d128_A' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_fifo_w33_d128_A.v:52]
+INFO: [Synth 8-6157] synthesizing module 'ladmatr_fifo_w33_d128_A_ram' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_fifo_w33_d128_A.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'ladmatr_fifo_w33_d128_A_ram' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_fifo_w33_d128_A.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'ladmatr_fifo_w33_d128_A' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_fifo_w33_d128_A.v:52]
+INFO: [Synth 8-6157] synthesizing module 'ladmatr_fifo_w32_d8_S' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_fifo_w32_d8_S.v:43]
+INFO: [Synth 8-6157] synthesizing module 'ladmatr_fifo_w32_d8_S_shiftReg' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_fifo_w32_d8_S.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'ladmatr_fifo_w32_d8_S_shiftReg' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_fifo_w32_d8_S.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'ladmatr_fifo_w32_d8_S' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_fifo_w32_d8_S.v:43]
+INFO: [Synth 8-6157] synthesizing module 'ladmatr_fifo_w1_d2_S' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_fifo_w1_d2_S.v:43]
+INFO: [Synth 8-6157] synthesizing module 'ladmatr_fifo_w1_d2_S_shiftReg' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_fifo_w1_d2_S.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'ladmatr_fifo_w1_d2_S_shiftReg' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_fifo_w1_d2_S.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'ladmatr_fifo_w1_d2_S' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_fifo_w1_d2_S.v:43]
+INFO: [Synth 8-6157] synthesizing module 'ladmatr_fifo_w32_d2_S' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_fifo_w32_d2_S.v:43]
+INFO: [Synth 8-6157] synthesizing module 'ladmatr_fifo_w32_d2_S_shiftReg' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_fifo_w32_d2_S.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'ladmatr_fifo_w32_d2_S_shiftReg' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_fifo_w32_d2_S.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'ladmatr_fifo_w32_d2_S' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_fifo_w32_d2_S.v:43]
+INFO: [Synth 8-6157] synthesizing module 'ladmatr_start_for_streamtoparallelwithburst_U0' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_start_for_streamtoparallelwithburst_U0.v:43]
+INFO: [Synth 8-6157] synthesizing module 'ladmatr_start_for_streamtoparallelwithburst_U0_shiftReg' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_start_for_streamtoparallelwithburst_U0.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'ladmatr_start_for_streamtoparallelwithburst_U0_shiftReg' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_start_for_streamtoparallelwithburst_U0.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'ladmatr_start_for_streamtoparallelwithburst_U0' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_start_for_streamtoparallelwithburst_U0.v:43]
+INFO: [Synth 8-6155] done synthesizing module 'ladmatr' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr.v:10]
+WARNING: [Synth 8-7071] port 'm_axi_gmem0_WID' of module 'ladmatr' is unconnected for instance 'LA_DMA' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/ps_axil.v:776]
+WARNING: [Synth 8-7023] instance 'LA_DMA' of module 'ladmatr' has 72 connections declared, but only 71 given [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/ps_axil.v:776]
+INFO: [Synth 8-6155] done synthesizing module 'ps_axil' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/ps_axil.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_ps_axil_0_0' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ip/design_1_ps_axil_0_0/synth/design_1_ps_axil_0_0.v:53]
 WARNING: [Synth 8-7137] Register mem_reg in module AXIS_SWz has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code 
 WARNING: [Synth 8-4767] Trying to implement RAM 'mem_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
 Reason is one or more of the following :
 	1: RAM is sensitive to asynchronous reset signal. this RTL style is not supported. 
 RAM "mem_reg" dissolved into registers
-WARNING: [Synth 8-6014] Unused sequential element next_ls_reg was removed.  [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axi_ctrl_logic.sv:575]
-WARNING: [Synth 8-6014] Unused sequential element axi_reg_debug_reg was removed.  [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axi_ctrl_logic.sv:594]
-WARNING: [Synth 8-87] always_comb on 'wait_rd_data_back_reg' did not result in combinational logic [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axi_ctrl_logic.sv:133]
-WARNING: [Synth 8-6014] Unused sequential element int_ap_done_reg was removed.  [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_control_s_axi.v:319]
+WARNING: [Synth 8-6014] Unused sequential element next_ls_reg was removed.  [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axi_ctrl_logic.sv:575]
+WARNING: [Synth 8-6014] Unused sequential element axi_reg_debug_reg was removed.  [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axi_ctrl_logic.sv:594]
+WARNING: [Synth 8-87] always_comb on 'wait_rd_data_back_reg' did not result in combinational logic [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axi_ctrl_logic.sv:133]
+WARNING: [Synth 8-6014] Unused sequential element int_ap_done_reg was removed.  [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/fpga/rtl/PL/LA_DMA/ladmatr_control_s_axi.v:319]
 WARNING: [Synth 8-7129] Port buf_r_dout[32] in module ladmatr_streamtoparallelwithburst_Pipeline_VITIS_LOOP_15_2 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port buf_r_num_data_valid[7] in module ladmatr_streamtoparallelwithburst_Pipeline_VITIS_LOOP_15_2 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port buf_r_num_data_valid[6] in module ladmatr_streamtoparallelwithburst_Pipeline_VITIS_LOOP_15_2 is either unconnected or has no load
@@ -308,45 +306,45 @@ WARNING: [Synth 8-7129] Port sext_ln15[34] in module ladmatr_streamtoparallelwit
 WARNING: [Synth 8-7129] Port sext_ln15[33] in module ladmatr_streamtoparallelwithburst_Pipeline_VITIS_LOOP_15_2 is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:22 . Memory (MB): peak = 2871.363 ; gain = 0.000 ; free physical = 1003 ; free virtual = 2099
+Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:21 . Memory (MB): peak = 2874.328 ; gain = 0.000 ; free physical = 1972 ; free virtual = 13723
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:23 . Memory (MB): peak = 2871.363 ; gain = 0.000 ; free physical = 991 ; free virtual = 2088
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:22 . Memory (MB): peak = 2874.328 ; gain = 0.000 ; free physical = 1973 ; free virtual = 13724
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:23 . Memory (MB): peak = 2871.363 ; gain = 0.000 ; free physical = 991 ; free virtual = 2088
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:22 . Memory (MB): peak = 2874.328 ; gain = 0.000 ; free physical = 1973 ; free virtual = 13724
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.33 ; elapsed = 00:00:00.48 . Memory (MB): peak = 2871.363 ; gain = 0.000 ; free physical = 913 ; free virtual = 2011
+Netlist sorting complete. Time (s): cpu = 00:00:00.35 ; elapsed = 00:00:00.45 . Memory (MB): peak = 2874.328 ; gain = 0.000 ; free physical = 1947 ; free virtual = 13698
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2887.371 ; gain = 0.000 ; free physical = 1112 ; free virtual = 2229
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2890.336 ; gain = 0.000 ; free physical = 2147 ; free virtual = 13894
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.5 ; elapsed = 00:00:00.6 . Memory (MB): peak = 2887.371 ; gain = 0.000 ; free physical = 1079 ; free virtual = 2200
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.45 ; elapsed = 00:00:00.6 . Memory (MB): peak = 2890.336 ; gain = 0.000 ; free physical = 2146 ; free virtual = 13894
 INFO: [Designutils 20-5008] Incremental synthesis strategy off
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:24 ; elapsed = 00:00:43 . Memory (MB): peak = 2887.371 ; gain = 16.008 ; free physical = 1292 ; free virtual = 2421
+Finished Constraint Validation : Time (s): cpu = 00:00:24 ; elapsed = 00:00:42 . Memory (MB): peak = 2890.336 ; gain = 16.008 ; free physical = 2904 ; free virtual = 14664
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:24 ; elapsed = 00:00:43 . Memory (MB): peak = 2887.371 ; gain = 16.008 ; free physical = 1291 ; free virtual = 2420
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:24 ; elapsed = 00:00:42 . Memory (MB): peak = 2890.336 ; gain = 16.008 ; free physical = 2892 ; free virtual = 14652
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:43 . Memory (MB): peak = 2887.371 ; gain = 16.008 ; free physical = 1291 ; free virtual = 2421
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:42 . Memory (MB): peak = 2890.336 ; gain = 16.008 ; free physical = 2870 ; free virtual = 14630
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'axi_wr_state_reg' in module 'axilite_master'
 INFO: [Synth 8-802] inferred FSM for state register 'axi_rd_state_reg' in module 'axilite_master'
@@ -409,7 +407,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'axi_wr_state_reg' using en
         AXIS_SEND_BK_RDY |                              100 |                              010
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'axis_state_reg' using encoding 'one-hot' in module 'axis_master'
-WARNING: [Synth 8-327] inferring latch for variable 'bk_ready_reg' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axis_master.sv:99]
+WARNING: [Synth 8-327] inferring latch for variable 'bk_ready_reg' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axis_master.sv:99]
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -418,7 +416,7 @@ WARNING: [Synth 8-327] inferring latch for variable 'bk_ready_reg' [/home/ubuntu
         AXIS_SEND_TREADY |                              100 |                              010
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'axis_state_reg' using encoding 'one-hot' in module 'axis_slave'
-WARNING: [Synth 8-327] inferring latch for variable 'axis_tready_reg' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axis_slave.sv:96]
+WARNING: [Synth 8-327] inferring latch for variable 'axis_tready_reg' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axis_slave.sv:96]
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -430,25 +428,25 @@ WARNING: [Synth 8-327] inferring latch for variable 'axis_tready_reg' [/home/ubu
           AXI_SEND_BKEND |                              101 |                              100
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'axi_state_reg' using encoding 'sequential' in module 'axi_ctrl_logic'
-WARNING: [Synth 8-327] inferring latch for variable 'aa_index_reg' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axi_ctrl_logic.sv:364]
-WARNING: [Synth 8-327] inferring latch for variable 'do_nothing_reg' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axi_ctrl_logic.sv:368]
-WARNING: [Synth 8-327] inferring latch for variable 'trig_sm_rd_reg' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axi_ctrl_logic.sv:400]
-WARNING: [Synth 8-327] inferring latch for variable 'trig_lm_wr_reg' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axi_ctrl_logic.sv:432]
-WARNING: [Synth 8-327] inferring latch for variable 'trig_lm_rd_reg' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axi_ctrl_logic.sv:443]
-WARNING: [Synth 8-327] inferring latch for variable 'trig_sm_wr_reg' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axi_ctrl_logic.sv:356]
-WARNING: [Synth 8-327] inferring latch for variable 'rd_mb_reg' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axi_ctrl_logic.sv:304]
-WARNING: [Synth 8-327] inferring latch for variable 'wr_aa_reg' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axi_ctrl_logic.sv:304]
-WARNING: [Synth 8-327] inferring latch for variable 'rd_aa_reg' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axi_ctrl_logic.sv:304]
-WARNING: [Synth 8-327] inferring latch for variable 'rd_unsupp_reg' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axi_ctrl_logic.sv:304]
-WARNING: [Synth 8-327] inferring latch for variable 'rd_ss_complete_reg' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axi_ctrl_logic.sv:304]
-WARNING: [Synth 8-327] inferring latch for variable 'wr_mb_reg' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axi_ctrl_logic.sv:304]
-WARNING: [Synth 8-327] inferring latch for variable 'wait_rd_data_back_reg' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axi_ctrl_logic.sv:133]
-WARNING: [Synth 8-327] inferring latch for variable 'trig_int_reg' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axi_ctrl_logic.sv:426]
-WARNING: [Synth 8-327] inferring latch for variable 'addr_ss_reg' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axi_ctrl_logic.sv:419]
-WARNING: [Synth 8-327] inferring latch for variable 'data_ss_reg' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axi_ctrl_logic.sv:420]
-WARNING: [Synth 8-327] inferring latch for variable 'wstrb_ss_reg' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axi_ctrl_logic.sv:418]
-WARNING: [Synth 8-327] inferring latch for variable 'mb_index_reg' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axi_ctrl_logic.sv:358]
-WARNING: [Synth 8-327] inferring latch for variable 'bk_sm_valid_reg' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axi_ctrl_logic.sv:278]
+WARNING: [Synth 8-327] inferring latch for variable 'aa_index_reg' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axi_ctrl_logic.sv:364]
+WARNING: [Synth 8-327] inferring latch for variable 'do_nothing_reg' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axi_ctrl_logic.sv:368]
+WARNING: [Synth 8-327] inferring latch for variable 'trig_sm_rd_reg' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axi_ctrl_logic.sv:400]
+WARNING: [Synth 8-327] inferring latch for variable 'trig_lm_wr_reg' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axi_ctrl_logic.sv:432]
+WARNING: [Synth 8-327] inferring latch for variable 'trig_lm_rd_reg' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axi_ctrl_logic.sv:443]
+WARNING: [Synth 8-327] inferring latch for variable 'trig_sm_wr_reg' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axi_ctrl_logic.sv:356]
+WARNING: [Synth 8-327] inferring latch for variable 'rd_mb_reg' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axi_ctrl_logic.sv:304]
+WARNING: [Synth 8-327] inferring latch for variable 'wr_aa_reg' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axi_ctrl_logic.sv:304]
+WARNING: [Synth 8-327] inferring latch for variable 'rd_aa_reg' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axi_ctrl_logic.sv:304]
+WARNING: [Synth 8-327] inferring latch for variable 'rd_unsupp_reg' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axi_ctrl_logic.sv:304]
+WARNING: [Synth 8-327] inferring latch for variable 'rd_ss_complete_reg' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axi_ctrl_logic.sv:304]
+WARNING: [Synth 8-327] inferring latch for variable 'wr_mb_reg' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axi_ctrl_logic.sv:304]
+WARNING: [Synth 8-327] inferring latch for variable 'wait_rd_data_back_reg' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axi_ctrl_logic.sv:133]
+WARNING: [Synth 8-327] inferring latch for variable 'trig_int_reg' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axi_ctrl_logic.sv:426]
+WARNING: [Synth 8-327] inferring latch for variable 'addr_ss_reg' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axi_ctrl_logic.sv:419]
+WARNING: [Synth 8-327] inferring latch for variable 'data_ss_reg' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axi_ctrl_logic.sv:420]
+WARNING: [Synth 8-327] inferring latch for variable 'wstrb_ss_reg' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axi_ctrl_logic.sv:418]
+WARNING: [Synth 8-327] inferring latch for variable 'mb_index_reg' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axi_ctrl_logic.sv:358]
+WARNING: [Synth 8-327] inferring latch for variable 'bk_sm_valid_reg' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axi_ctrl_logic.sv:278]
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -457,7 +455,7 @@ WARNING: [Synth 8-327] inferring latch for variable 'bk_sm_valid_reg' [/home/ubu
        SM_SEND_DATA_DONE |                              100 |                              010
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'sm_state_reg' using encoding 'one-hot' in module 'axi_ctrl_logic'
-WARNING: [Synth 8-327] inferring latch for variable 'set_bk_ss_ready_reg' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axi_ctrl_logic.sv:219]
+WARNING: [Synth 8-327] inferring latch for variable 'set_bk_ss_ready_reg' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axi_ctrl_logic.sv:219]
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -467,10 +465,10 @@ WARNING: [Synth 8-327] inferring latch for variable 'set_bk_ss_ready_reg' [/home
            SS_SECND_DATA |                               11 |                              011
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'ss_secnd_state_reg' using encoding 'sequential' in module 'axi_ctrl_logic'
-WARNING: [Synth 8-327] inferring latch for variable 'secnd_data_ss_valid_reg' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axi_ctrl_logic.sv:218]
-WARNING: [Synth 8-327] inferring latch for variable 'secnd_data_ss_reg' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axi_ctrl_logic.sv:226]
-WARNING: [Synth 8-327] inferring latch for variable 'get_secnd_data_ss_reg' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axi_ctrl_logic.sv:414]
-WARNING: [Synth 8-327] inferring latch for variable 'secnd_data_done_reg' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axi_ctrl_logic.sv:415]
+WARNING: [Synth 8-327] inferring latch for variable 'secnd_data_ss_valid_reg' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axi_ctrl_logic.sv:218]
+WARNING: [Synth 8-327] inferring latch for variable 'secnd_data_ss_reg' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axi_ctrl_logic.sv:226]
+WARNING: [Synth 8-327] inferring latch for variable 'get_secnd_data_ss_reg' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axi_ctrl_logic.sv:414]
+WARNING: [Synth 8-327] inferring latch for variable 'secnd_data_done_reg' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_srcs/caravel_soc/rtl/user/axilite_axis/rtl/axi_ctrl_logic.sv:415]
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -544,7 +542,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'axi_fsm_reg_reg' using enc
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'ps_axi_fsm_reg_reg' using encoding 'sequential' in module 'ps_axil'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:28 ; elapsed = 00:00:50 . Memory (MB): peak = 2887.371 ; gain = 16.008 ; free physical = 1190 ; free virtual = 2342
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:28 ; elapsed = 00:00:50 . Memory (MB): peak = 2890.336 ; gain = 16.008 ; free physical = 2733 ; free virtual = 14496
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -594,8 +592,8 @@ Detailed RTL Component Info :
 	                5 Bit    Registers := 25    
 	                4 Bit    Registers := 63    
 	                3 Bit    Registers := 42    
-	                2 Bit    Registers := 42    
-	                1 Bit    Registers := 244   
+	                2 Bit    Registers := 41    
+	                1 Bit    Registers := 245   
 +---RAMs : 
 	               8K Bit	(255 X 34 bit)          RAMs := 1     
 	               4K Bit	(127 X 33 bit)          RAMs := 1     
@@ -638,11 +636,11 @@ Detailed RTL Component Info :
 	   8 Input    3 Bit        Muxes := 2     
 	   3 Input    3 Bit        Muxes := 9     
 	   6 Input    3 Bit        Muxes := 11    
-	   2 Input    2 Bit        Muxes := 95    
+	   2 Input    2 Bit        Muxes := 94    
 	   4 Input    2 Bit        Muxes := 15    
 	   3 Input    2 Bit        Muxes := 15    
 	   4 Input    1 Bit        Muxes := 42    
-	   2 Input    1 Bit        Muxes := 307   
+	   2 Input    1 Bit        Muxes := 309   
 	   3 Input    1 Bit        Muxes := 22    
 	   5 Input    1 Bit        Muxes := 17    
 	   6 Input    1 Bit        Muxes := 17    
@@ -667,7 +665,7 @@ WARNING: [Synth 8-3332] Sequential element (FSM_onehot_rstate_reg[0]) is unused 
 WARNING: [Synth 8-3332] Sequential element (bus_read/rs_rreq/FSM_sequential_state_reg[1]) is unused and will be removed from module ladmatr_gmem0_m_axi.
 WARNING: [Synth 8-3332] Sequential element (bus_read/rs_rreq/FSM_sequential_state_reg[0]) is unused and will be removed from module ladmatr_gmem0_m_axi.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:50 ; elapsed = 00:01:24 . Memory (MB): peak = 2887.371 ; gain = 16.008 ; free physical = 1509 ; free virtual = 2679
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:50 ; elapsed = 00:01:26 . Memory (MB): peak = 2890.336 ; gain = 16.008 ; free physical = 2779 ; free virtual = 14552
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -689,13 +687,13 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:57 ; elapsed = 00:01:34 . Memory (MB): peak = 2887.371 ; gain = 16.008 ; free physical = 770 ; free virtual = 2070
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:57 ; elapsed = 00:01:37 . Memory (MB): peak = 2890.336 ; gain = 16.008 ; free physical = 2446 ; free virtual = 14227
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:58 ; elapsed = 00:01:37 . Memory (MB): peak = 2887.371 ; gain = 16.008 ; free physical = 2667 ; free virtual = 4009
+Finished Timing Optimization : Time (s): cpu = 00:00:59 ; elapsed = 00:01:38 . Memory (MB): peak = 2890.336 ; gain = 16.008 ; free physical = 2337 ; free virtual = 14118
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -716,7 +714,7 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:02 ; elapsed = 00:01:42 . Memory (MB): peak = 2887.371 ; gain = 16.008 ; free physical = 2543 ; free virtual = 3902
+Finished Technology Mapping : Time (s): cpu = 00:01:02 ; elapsed = 00:01:46 . Memory (MB): peak = 2890.336 ; gain = 16.008 ; free physical = 1903 ; free virtual = 13693
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -836,37 +834,37 @@ CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'insti_17' to logic
 CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'insti_18' to logic
 CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'insti_19' to logic
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:09 ; elapsed = 00:01:52 . Memory (MB): peak = 2887.371 ; gain = 16.008 ; free physical = 2381 ; free virtual = 3758
+Finished IO Insertion : Time (s): cpu = 00:01:10 ; elapsed = 00:01:58 . Memory (MB): peak = 2890.336 ; gain = 16.008 ; free physical = 1651 ; free virtual = 13441
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:09 ; elapsed = 00:01:52 . Memory (MB): peak = 2887.371 ; gain = 16.008 ; free physical = 2381 ; free virtual = 3759
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:10 ; elapsed = 00:01:58 . Memory (MB): peak = 2890.336 ; gain = 16.008 ; free physical = 1651 ; free virtual = 13440
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:09 ; elapsed = 00:01:52 . Memory (MB): peak = 2887.371 ; gain = 16.008 ; free physical = 2381 ; free virtual = 3759
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:10 ; elapsed = 00:01:59 . Memory (MB): peak = 2890.336 ; gain = 16.008 ; free physical = 1642 ; free virtual = 13432
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:09 ; elapsed = 00:01:52 . Memory (MB): peak = 2887.371 ; gain = 16.008 ; free physical = 2381 ; free virtual = 3759
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:10 ; elapsed = 00:01:59 . Memory (MB): peak = 2890.336 ; gain = 16.008 ; free physical = 1642 ; free virtual = 13431
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:10 ; elapsed = 00:01:53 . Memory (MB): peak = 2887.371 ; gain = 16.008 ; free physical = 2381 ; free virtual = 3759
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:11 ; elapsed = 00:01:59 . Memory (MB): peak = 2890.336 ; gain = 16.008 ; free physical = 1637 ; free virtual = 13426
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:10 ; elapsed = 00:01:53 . Memory (MB): peak = 2887.371 ; gain = 16.008 ; free physical = 2381 ; free virtual = 3759
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:11 ; elapsed = 00:01:59 . Memory (MB): peak = 2890.336 ; gain = 16.008 ; free physical = 1636 ; free virtual = 13425
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -904,18 +902,18 @@ Report Cell Usage:
 |      |Cell     |Count |
 +------+---------+------+
 |1     |CARRY4   |   164|
-|2     |LUT1     |    79|
-|3     |LUT2     |   705|
-|4     |LUT3     |   920|
-|5     |LUT4     |   485|
-|6     |LUT5     |   426|
-|7     |LUT6     |   934|
-|8     |MUXF7    |   139|
+|2     |LUT1     |    80|
+|3     |LUT2     |   688|
+|4     |LUT3     |   939|
+|5     |LUT4     |   450|
+|6     |LUT5     |   423|
+|7     |LUT6     |   952|
+|8     |MUXF7    |   138|
 |9     |MUXF8    |    45|
 |10    |RAMB18E1 |     2|
 |12    |SRL16E   |   265|
 |13    |SRLC32E  |    74|
-|14    |FDCE     |  1573|
+|14    |FDCE     |  1572|
 |15    |FDPE     |    36|
 |16    |FDRE     |  2857|
 |17    |FDSE     |    19|
@@ -923,31 +921,31 @@ Report Cell Usage:
 |19    |LDC      |    98|
 +------+---------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:10 ; elapsed = 00:01:53 . Memory (MB): peak = 2887.371 ; gain = 16.008 ; free physical = 2381 ; free virtual = 3759
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:11 ; elapsed = 00:01:59 . Memory (MB): peak = 2890.336 ; gain = 16.008 ; free physical = 1636 ; free virtual = 13425
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 20 critical warnings and 311 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:01:04 ; elapsed = 00:01:44 . Memory (MB): peak = 2887.371 ; gain = 0.000 ; free physical = 2430 ; free virtual = 3807
-Synthesis Optimization Complete : Time (s): cpu = 00:01:10 ; elapsed = 00:01:53 . Memory (MB): peak = 2887.379 ; gain = 16.008 ; free physical = 2430 ; free virtual = 3807
+Synthesis finished with 0 errors, 20 critical warnings and 366 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:05 ; elapsed = 00:01:50 . Memory (MB): peak = 2890.336 ; gain = 0.000 ; free physical = 1656 ; free virtual = 13445
+Synthesis Optimization Complete : Time (s): cpu = 00:01:11 ; elapsed = 00:02:00 . Memory (MB): peak = 2890.344 ; gain = 16.008 ; free physical = 1656 ; free virtual = 13445
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.17 ; elapsed = 00:00:00.17 . Memory (MB): peak = 2887.379 ; gain = 0.000 ; free physical = 2502 ; free virtual = 3880
-INFO: [Netlist 29-17] Analyzing 486 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00.19 ; elapsed = 00:00:00.35 . Memory (MB): peak = 2890.344 ; gain = 0.000 ; free physical = 1863 ; free virtual = 13652
+INFO: [Netlist 29-17] Analyzing 485 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2887.379 ; gain = 0.000 ; free physical = 3538 ; free virtual = 4915
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2890.344 ; gain = 0.000 ; free physical = 1902 ; free virtual = 13687
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 136 instances were transformed.
   LD => LDCE: 38 instances
   LDC => LDCE: 98 instances
 
-Synth Design complete, checksum: 44fc4184
+Synth Design complete, checksum: 738b6291
 INFO: [Common 17-83] Releasing license: Synthesis
-278 Infos, 169 Warnings, 20 Critical Warnings and 0 Errors encountered.
+278 Infos, 167 Warnings, 20 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:22 ; elapsed = 00:02:08 . Memory (MB): peak = 2887.379 ; gain = 16.016 ; free physical = 3712 ; free virtual = 5090
-INFO: [Common 17-1381] The checkpoint '/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.runs/design_1_ps_axil_0_0_synth_1/design_1_ps_axil_0_0.dcp' has been generated.
+synth_design: Time (s): cpu = 00:01:22 ; elapsed = 00:02:13 . Memory (MB): peak = 2890.344 ; gain = 16.016 ; free physical = 2116 ; free virtual = 13901
+INFO: [Common 17-1381] The checkpoint '/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.runs/design_1_ps_axil_0_0_synth_1/design_1_ps_axil_0_0.dcp' has been generated.
 INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
 INFO: [Coretcl 2-1174] Renamed 71 cell refs.
-INFO: [Common 17-1381] The checkpoint '/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.runs/design_1_ps_axil_0_0_synth_1/design_1_ps_axil_0_0.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint '/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.runs/design_1_ps_axil_0_0_synth_1/design_1_ps_axil_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_ps_axil_0_0_utilization_synth.rpt -pb design_1_ps_axil_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon May 27 07:29:58 2024...
+INFO: [Common 17-206] Exiting Vivado at Thu Jun 13 08:44:53 2024...

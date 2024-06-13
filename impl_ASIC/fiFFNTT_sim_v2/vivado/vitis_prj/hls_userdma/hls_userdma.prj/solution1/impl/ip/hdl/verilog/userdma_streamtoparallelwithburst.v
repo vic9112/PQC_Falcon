@@ -98,13 +98,13 @@ input   ap_continue;
 output   ap_idle;
 output   ap_ready;
 input  [32:0] inbuf_dout;
-input  [6:0] inbuf_num_data_valid;
-input  [6:0] inbuf_fifo_cap;
+input  [10:0] inbuf_num_data_valid;
+input  [10:0] inbuf_fifo_cap;
 input   inbuf_empty_n;
 output   inbuf_read;
 input  [31:0] incount25_dout;
-input  [1:0] incount25_num_data_valid;
-input  [1:0] incount25_fifo_cap;
+input  [2:0] incount25_num_data_valid;
+input  [2:0] incount25_fifo_cap;
 input   incount25_empty_n;
 output   incount25_read;
 output  [0:0] s2m_buf_sts;
@@ -186,84 +186,90 @@ reg    incount25_blk_n;
 wire    ap_CS_fsm_state2;
 reg    kernel_mode_blk_n;
 reg    out_memory_blk_n;
-wire   [0:0] even_fu_148_p2;
-reg   [0:0] even_reg_344;
-reg   [0:0] tmp_reg_349;
-reg   [31:0] tmp_4_reg_357;
-wire   [2:0] xor_ln34_fu_179_p2;
-reg   [2:0] xor_ln34_reg_365;
-wire   [7:0] shl_ln34_fu_189_p2;
-reg   [7:0] shl_ln34_reg_370;
-reg   [30:0] lshr_ln43_1_reg_375;
-wire   [5:0] shl_ln34_2_fu_214_p3;
-reg   [5:0] shl_ln34_2_reg_380;
+wire   [0:0] even_fu_156_p2;
+reg   [0:0] even_reg_369;
+reg   [0:0] tmp_reg_374;
+reg   [31:0] tmp_4_reg_382;
+wire   [2:0] trunc_ln30_fu_183_p1;
+reg   [2:0] trunc_ln30_reg_390;
+wire   [2:0] xor_ln30_fu_187_p2;
+reg   [2:0] xor_ln30_reg_395;
+wire   [7:0] shl_ln30_fu_197_p2;
+reg   [7:0] shl_ln30_reg_400;
+wire   [7:0] shl_ln32_fu_207_p2;
+reg   [7:0] shl_ln32_reg_405;
+reg   [30:0] lshr_ln39_1_reg_410;
+wire   [5:0] shl_ln30_2_fu_232_p3;
+reg   [5:0] shl_ln30_2_reg_415;
 wire    ap_CS_fsm_state3;
-wire   [63:0] add_ln5_fu_277_p2;
-reg   [63:0] add_ln5_reg_385;
-wire   [31:0] final_s2m_len_V_3_fu_282_p2;
-reg   [31:0] final_s2m_len_V_3_reg_391;
-reg   [21:0] tmp_3_reg_397;
-wire    grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_ap_start;
-wire    grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_ap_done;
-wire    grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_ap_idle;
-wire    grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_ap_ready;
-wire    grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_inbuf_read;
-wire    grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_m_axi_gmem0_AWVALID;
-wire   [63:0] grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_m_axi_gmem0_AWADDR;
-wire   [0:0] grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_m_axi_gmem0_AWID;
-wire   [31:0] grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_m_axi_gmem0_AWLEN;
-wire   [2:0] grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_m_axi_gmem0_AWSIZE;
-wire   [1:0] grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_m_axi_gmem0_AWBURST;
-wire   [1:0] grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_m_axi_gmem0_AWLOCK;
-wire   [3:0] grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_m_axi_gmem0_AWCACHE;
-wire   [2:0] grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_m_axi_gmem0_AWPROT;
-wire   [3:0] grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_m_axi_gmem0_AWQOS;
-wire   [3:0] grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_m_axi_gmem0_AWREGION;
-wire   [0:0] grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_m_axi_gmem0_AWUSER;
-wire    grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_m_axi_gmem0_WVALID;
-wire   [63:0] grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_m_axi_gmem0_WDATA;
-wire   [7:0] grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_m_axi_gmem0_WSTRB;
-wire    grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_m_axi_gmem0_WLAST;
-wire   [0:0] grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_m_axi_gmem0_WID;
-wire   [0:0] grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_m_axi_gmem0_WUSER;
-wire    grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_m_axi_gmem0_ARVALID;
-wire   [63:0] grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_m_axi_gmem0_ARADDR;
-wire   [0:0] grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_m_axi_gmem0_ARID;
-wire   [31:0] grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_m_axi_gmem0_ARLEN;
-wire   [2:0] grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_m_axi_gmem0_ARSIZE;
-wire   [1:0] grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_m_axi_gmem0_ARBURST;
-wire   [1:0] grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_m_axi_gmem0_ARLOCK;
-wire   [3:0] grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_m_axi_gmem0_ARCACHE;
-wire   [2:0] grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_m_axi_gmem0_ARPROT;
-wire   [3:0] grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_m_axi_gmem0_ARQOS;
-wire   [3:0] grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_m_axi_gmem0_ARREGION;
-wire   [0:0] grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_m_axi_gmem0_ARUSER;
-wire    grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_m_axi_gmem0_RREADY;
-wire    grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_m_axi_gmem0_BREADY;
-reg    grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_ap_start_reg;
+wire   [5:0] shl_ln32_2_fu_240_p3;
+reg   [5:0] shl_ln32_2_reg_420;
+wire   [63:0] add_ln9_fu_303_p2;
+reg   [63:0] add_ln9_reg_425;
+wire   [31:0] final_s2m_len_V_3_fu_308_p2;
+reg   [31:0] final_s2m_len_V_3_reg_431;
+reg   [21:0] tmp_3_reg_437;
+wire    grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_ap_start;
+wire    grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_ap_done;
+wire    grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_ap_idle;
+wire    grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_ap_ready;
+wire    grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_inbuf_read;
+wire    grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_m_axi_gmem0_AWVALID;
+wire   [63:0] grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_m_axi_gmem0_AWADDR;
+wire   [0:0] grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_m_axi_gmem0_AWID;
+wire   [31:0] grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_m_axi_gmem0_AWLEN;
+wire   [2:0] grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_m_axi_gmem0_AWSIZE;
+wire   [1:0] grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_m_axi_gmem0_AWBURST;
+wire   [1:0] grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_m_axi_gmem0_AWLOCK;
+wire   [3:0] grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_m_axi_gmem0_AWCACHE;
+wire   [2:0] grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_m_axi_gmem0_AWPROT;
+wire   [3:0] grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_m_axi_gmem0_AWQOS;
+wire   [3:0] grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_m_axi_gmem0_AWREGION;
+wire   [0:0] grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_m_axi_gmem0_AWUSER;
+wire    grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_m_axi_gmem0_WVALID;
+wire   [63:0] grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_m_axi_gmem0_WDATA;
+wire   [7:0] grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_m_axi_gmem0_WSTRB;
+wire    grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_m_axi_gmem0_WLAST;
+wire   [0:0] grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_m_axi_gmem0_WID;
+wire   [0:0] grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_m_axi_gmem0_WUSER;
+wire    grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_m_axi_gmem0_ARVALID;
+wire   [63:0] grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_m_axi_gmem0_ARADDR;
+wire   [0:0] grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_m_axi_gmem0_ARID;
+wire   [31:0] grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_m_axi_gmem0_ARLEN;
+wire   [2:0] grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_m_axi_gmem0_ARSIZE;
+wire   [1:0] grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_m_axi_gmem0_ARBURST;
+wire   [1:0] grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_m_axi_gmem0_ARLOCK;
+wire   [3:0] grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_m_axi_gmem0_ARCACHE;
+wire   [2:0] grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_m_axi_gmem0_ARPROT;
+wire   [3:0] grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_m_axi_gmem0_ARQOS;
+wire   [3:0] grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_m_axi_gmem0_ARREGION;
+wire   [0:0] grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_m_axi_gmem0_ARUSER;
+wire    grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_m_axi_gmem0_RREADY;
+wire    grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_m_axi_gmem0_BREADY;
+reg    grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_ap_start_reg;
 wire    ap_CS_fsm_state4;
-reg   [63:0] out_memory_assign_fu_90;
-wire   [63:0] select_ln55_fu_309_p3;
-wire   [0:0] icmp_ln1073_fu_316_p2;
+reg   [63:0] out_memory_assign_fu_94;
+wire   [63:0] select_ln46_fu_334_p3;
+wire   [0:0] icmp_ln1073_fu_341_p2;
 reg    ap_block_state1;
-reg   [31:0] final_s2m_len_V_fu_94;
-wire   [0:0] out_sts_fu_298_p2;
+reg   [31:0] final_s2m_len_V_fu_98;
 reg   [0:0] s2m_buf_sts_preg;
-wire   [0:0] icmp_ln1065_fu_136_p2;
-wire   [0:0] icmp_ln1065_1_fu_142_p2;
-wire   [2:0] trunc_ln34_fu_175_p1;
-wire   [7:0] zext_ln34_fu_185_p1;
-wire   [31:0] sub_ln43_fu_195_p2;
-wire   [31:0] zext_ln43_fu_229_p1;
-wire   [30:0] lshr_ln43_2_fu_238_p4;
-wire   [0:0] tmp_2_fu_222_p3;
-wire   [31:0] sub_ln43_1_fu_232_p2;
-wire   [31:0] zext_ln43_1_fu_247_p1;
-wire   [31:0] select_ln43_fu_251_p3;
-wire   [31:0] select_ln42_fu_259_p3;
-wire   [34:0] shl_ln_fu_265_p3;
-wire  signed [63:0] sext_ln5_fu_273_p1;
-wire   [63:0] add_ln56_fu_304_p2;
+wire   [0:0] icmp_ln1065_fu_144_p2;
+wire   [0:0] icmp_ln1065_1_fu_150_p2;
+wire   [7:0] zext_ln30_fu_193_p1;
+wire   [7:0] zext_ln32_fu_203_p1;
+wire   [31:0] sub_ln39_fu_213_p2;
+wire   [31:0] zext_ln39_fu_255_p1;
+wire   [30:0] lshr_ln39_2_fu_264_p4;
+wire   [0:0] tmp_2_fu_248_p3;
+wire   [31:0] sub_ln39_1_fu_258_p2;
+wire   [31:0] zext_ln39_1_fu_273_p1;
+wire   [31:0] select_ln39_fu_277_p3;
+wire   [31:0] select_ln38_fu_285_p3;
+wire   [34:0] shl_ln_fu_291_p3;
+wire  signed [63:0] sext_ln9_fu_299_p1;
+wire   [0:0] icmp_ln1065_2_fu_324_p2;
+wire   [63:0] add_ln47_fu_329_p2;
 reg   [3:0] ap_NS_fsm;
 reg    ap_ST_fsm_state1_blk;
 reg    ap_ST_fsm_state2_blk;
@@ -275,57 +281,57 @@ wire    ap_ce_reg;
 initial begin
 #0 ap_done_reg = 1'b0;
 #0 ap_CS_fsm = 4'd1;
-#0 grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_ap_start_reg = 1'b0;
+#0 grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_ap_start_reg = 1'b0;
 #0 s2m_buf_sts_preg = 1'd0;
 end
 
-userdma_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2 grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123(
+userdma_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2 grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst),
-    .ap_start(grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_ap_start),
-    .ap_done(grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_ap_done),
-    .ap_idle(grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_ap_idle),
-    .ap_ready(grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_ap_ready),
+    .ap_start(grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_ap_start),
+    .ap_done(grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_ap_done),
+    .ap_idle(grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_ap_idle),
+    .ap_ready(grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_ap_ready),
     .inbuf_dout(inbuf_dout),
-    .inbuf_num_data_valid(7'd0),
-    .inbuf_fifo_cap(7'd0),
+    .inbuf_num_data_valid(11'd0),
+    .inbuf_fifo_cap(11'd0),
     .inbuf_empty_n(inbuf_empty_n),
-    .inbuf_read(grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_inbuf_read),
-    .m_axi_gmem0_AWVALID(grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_m_axi_gmem0_AWVALID),
+    .inbuf_read(grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_inbuf_read),
+    .m_axi_gmem0_AWVALID(grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_m_axi_gmem0_AWVALID),
     .m_axi_gmem0_AWREADY(m_axi_gmem0_AWREADY),
-    .m_axi_gmem0_AWADDR(grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_m_axi_gmem0_AWADDR),
-    .m_axi_gmem0_AWID(grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_m_axi_gmem0_AWID),
-    .m_axi_gmem0_AWLEN(grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_m_axi_gmem0_AWLEN),
-    .m_axi_gmem0_AWSIZE(grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_m_axi_gmem0_AWSIZE),
-    .m_axi_gmem0_AWBURST(grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_m_axi_gmem0_AWBURST),
-    .m_axi_gmem0_AWLOCK(grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_m_axi_gmem0_AWLOCK),
-    .m_axi_gmem0_AWCACHE(grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_m_axi_gmem0_AWCACHE),
-    .m_axi_gmem0_AWPROT(grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_m_axi_gmem0_AWPROT),
-    .m_axi_gmem0_AWQOS(grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_m_axi_gmem0_AWQOS),
-    .m_axi_gmem0_AWREGION(grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_m_axi_gmem0_AWREGION),
-    .m_axi_gmem0_AWUSER(grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_m_axi_gmem0_AWUSER),
-    .m_axi_gmem0_WVALID(grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_m_axi_gmem0_WVALID),
+    .m_axi_gmem0_AWADDR(grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_m_axi_gmem0_AWADDR),
+    .m_axi_gmem0_AWID(grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_m_axi_gmem0_AWID),
+    .m_axi_gmem0_AWLEN(grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_m_axi_gmem0_AWLEN),
+    .m_axi_gmem0_AWSIZE(grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_m_axi_gmem0_AWSIZE),
+    .m_axi_gmem0_AWBURST(grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_m_axi_gmem0_AWBURST),
+    .m_axi_gmem0_AWLOCK(grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_m_axi_gmem0_AWLOCK),
+    .m_axi_gmem0_AWCACHE(grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_m_axi_gmem0_AWCACHE),
+    .m_axi_gmem0_AWPROT(grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_m_axi_gmem0_AWPROT),
+    .m_axi_gmem0_AWQOS(grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_m_axi_gmem0_AWQOS),
+    .m_axi_gmem0_AWREGION(grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_m_axi_gmem0_AWREGION),
+    .m_axi_gmem0_AWUSER(grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_m_axi_gmem0_AWUSER),
+    .m_axi_gmem0_WVALID(grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_m_axi_gmem0_WVALID),
     .m_axi_gmem0_WREADY(m_axi_gmem0_WREADY),
-    .m_axi_gmem0_WDATA(grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_m_axi_gmem0_WDATA),
-    .m_axi_gmem0_WSTRB(grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_m_axi_gmem0_WSTRB),
-    .m_axi_gmem0_WLAST(grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_m_axi_gmem0_WLAST),
-    .m_axi_gmem0_WID(grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_m_axi_gmem0_WID),
-    .m_axi_gmem0_WUSER(grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_m_axi_gmem0_WUSER),
-    .m_axi_gmem0_ARVALID(grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_m_axi_gmem0_ARVALID),
+    .m_axi_gmem0_WDATA(grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_m_axi_gmem0_WDATA),
+    .m_axi_gmem0_WSTRB(grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_m_axi_gmem0_WSTRB),
+    .m_axi_gmem0_WLAST(grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_m_axi_gmem0_WLAST),
+    .m_axi_gmem0_WID(grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_m_axi_gmem0_WID),
+    .m_axi_gmem0_WUSER(grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_m_axi_gmem0_WUSER),
+    .m_axi_gmem0_ARVALID(grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_m_axi_gmem0_ARVALID),
     .m_axi_gmem0_ARREADY(1'b0),
-    .m_axi_gmem0_ARADDR(grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_m_axi_gmem0_ARADDR),
-    .m_axi_gmem0_ARID(grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_m_axi_gmem0_ARID),
-    .m_axi_gmem0_ARLEN(grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_m_axi_gmem0_ARLEN),
-    .m_axi_gmem0_ARSIZE(grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_m_axi_gmem0_ARSIZE),
-    .m_axi_gmem0_ARBURST(grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_m_axi_gmem0_ARBURST),
-    .m_axi_gmem0_ARLOCK(grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_m_axi_gmem0_ARLOCK),
-    .m_axi_gmem0_ARCACHE(grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_m_axi_gmem0_ARCACHE),
-    .m_axi_gmem0_ARPROT(grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_m_axi_gmem0_ARPROT),
-    .m_axi_gmem0_ARQOS(grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_m_axi_gmem0_ARQOS),
-    .m_axi_gmem0_ARREGION(grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_m_axi_gmem0_ARREGION),
-    .m_axi_gmem0_ARUSER(grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_m_axi_gmem0_ARUSER),
+    .m_axi_gmem0_ARADDR(grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_m_axi_gmem0_ARADDR),
+    .m_axi_gmem0_ARID(grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_m_axi_gmem0_ARID),
+    .m_axi_gmem0_ARLEN(grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_m_axi_gmem0_ARLEN),
+    .m_axi_gmem0_ARSIZE(grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_m_axi_gmem0_ARSIZE),
+    .m_axi_gmem0_ARBURST(grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_m_axi_gmem0_ARBURST),
+    .m_axi_gmem0_ARLOCK(grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_m_axi_gmem0_ARLOCK),
+    .m_axi_gmem0_ARCACHE(grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_m_axi_gmem0_ARCACHE),
+    .m_axi_gmem0_ARPROT(grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_m_axi_gmem0_ARPROT),
+    .m_axi_gmem0_ARQOS(grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_m_axi_gmem0_ARQOS),
+    .m_axi_gmem0_ARREGION(grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_m_axi_gmem0_ARREGION),
+    .m_axi_gmem0_ARUSER(grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_m_axi_gmem0_ARUSER),
     .m_axi_gmem0_RVALID(1'b0),
-    .m_axi_gmem0_RREADY(grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_m_axi_gmem0_RREADY),
+    .m_axi_gmem0_RREADY(grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_m_axi_gmem0_RREADY),
     .m_axi_gmem0_RDATA(64'd0),
     .m_axi_gmem0_RLAST(1'b0),
     .m_axi_gmem0_RID(1'd0),
@@ -333,15 +339,17 @@ userdma_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2 grp_streamtoparallelw
     .m_axi_gmem0_RUSER(1'd0),
     .m_axi_gmem0_RRESP(2'd0),
     .m_axi_gmem0_BVALID(m_axi_gmem0_BVALID),
-    .m_axi_gmem0_BREADY(grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_m_axi_gmem0_BREADY),
+    .m_axi_gmem0_BREADY(grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_m_axi_gmem0_BREADY),
     .m_axi_gmem0_BRESP(m_axi_gmem0_BRESP),
     .m_axi_gmem0_BID(m_axi_gmem0_BID),
     .m_axi_gmem0_BUSER(m_axi_gmem0_BUSER),
-    .tmp(tmp_4_reg_357),
-    .even(even_reg_344),
-    .out_memory_assign(out_memory_assign_fu_90),
-    .zext_ln34_1(shl_ln34_2_reg_380),
-    .shl_ln34_1(shl_ln34_reg_370)
+    .tmp_1(tmp_4_reg_382),
+    .even(even_reg_369),
+    .out_memory_assign(out_memory_assign_fu_94),
+    .zext_ln30_1(shl_ln30_2_reg_415),
+    .shl_ln30_1(shl_ln30_reg_400),
+    .zext_ln32_2(shl_ln32_2_reg_420),
+    .shl_ln32_1(shl_ln32_reg_405)
 );
 
 always @ (posedge ap_clk) begin
@@ -358,7 +366,7 @@ always @ (posedge ap_clk) begin
     end else begin
         if ((ap_continue == 1'b1)) begin
             ap_done_reg <= 1'b0;
-        end else if (((icmp_ln1073_fu_316_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state4) & (grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_ap_done == 1'b1))) begin
+        end else if (((icmp_ln1073_fu_341_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state4) & (grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_ap_done == 1'b1))) begin
             ap_done_reg <= 1'b1;
         end
     end
@@ -366,12 +374,12 @@ end
 
 always @ (posedge ap_clk) begin
     if (ap_rst == 1'b1) begin
-        grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_ap_start_reg <= 1'b0;
+        grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_ap_start_reg <= 1'b0;
     end else begin
         if ((1'b1 == ap_CS_fsm_state3)) begin
-            grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_ap_start_reg <= 1'b1;
-        end else if ((grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_ap_ready == 1'b1)) begin
-            grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_ap_start_reg <= 1'b0;
+            grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_ap_start_reg <= 1'b1;
+        end else if ((grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_ap_ready == 1'b1)) begin
+            grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_ap_start_reg <= 1'b0;
         end
     end
 end
@@ -380,55 +388,60 @@ always @ (posedge ap_clk) begin
     if (ap_rst == 1'b1) begin
         s2m_buf_sts_preg <= 1'd0;
     end else begin
-        if (((icmp_ln1073_fu_316_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state4) & (grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_ap_done == 1'b1))) begin
-            s2m_buf_sts_preg <= out_sts_fu_298_p2;
+        if (((icmp_ln1073_fu_341_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state4) & (grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_ap_done == 1'b1))) begin
+            s2m_buf_sts_preg <= 1'd1;
+        end else if ((~((ap_start == 1'b0) | (kernel_mode_empty_n == 1'b0) | (ap_done_reg == 1'b1) | (out_memory_empty_n == 1'b0)) & (1'b1 == ap_CS_fsm_state1))) begin
+            s2m_buf_sts_preg <= 1'd0;
         end
     end
 end
 
 always @ (posedge ap_clk) begin
     if ((~((ap_start == 1'b0) | (kernel_mode_empty_n == 1'b0) | (ap_done_reg == 1'b1) | (out_memory_empty_n == 1'b0)) & (1'b1 == ap_CS_fsm_state1))) begin
-        final_s2m_len_V_fu_94 <= 32'd0;
-    end else if (((icmp_ln1073_fu_316_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state4) & (grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_ap_done == 1'b1))) begin
-        final_s2m_len_V_fu_94 <= final_s2m_len_V_3_reg_391;
+        final_s2m_len_V_fu_98 <= 32'd0;
+    end else if (((icmp_ln1073_fu_341_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state4) & (grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_ap_done == 1'b1))) begin
+        final_s2m_len_V_fu_98 <= final_s2m_len_V_3_reg_431;
     end
 end
 
 always @ (posedge ap_clk) begin
     if ((~((ap_start == 1'b0) | (kernel_mode_empty_n == 1'b0) | (ap_done_reg == 1'b1) | (out_memory_empty_n == 1'b0)) & (1'b1 == ap_CS_fsm_state1))) begin
-        out_memory_assign_fu_90 <= out_memory_dout;
-    end else if (((icmp_ln1073_fu_316_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state4) & (grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_ap_done == 1'b1))) begin
-        out_memory_assign_fu_90 <= select_ln55_fu_309_p3;
+        out_memory_assign_fu_94 <= out_memory_dout;
+    end else if (((icmp_ln1073_fu_341_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state4) & (grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_ap_done == 1'b1))) begin
+        out_memory_assign_fu_94 <= select_ln46_fu_334_p3;
     end
 end
 
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_state3)) begin
-        add_ln5_reg_385 <= add_ln5_fu_277_p2;
-        final_s2m_len_V_3_reg_391 <= final_s2m_len_V_3_fu_282_p2;
-        shl_ln34_2_reg_380[5 : 3] <= shl_ln34_2_fu_214_p3[5 : 3];
-        tmp_3_reg_397 <= {{final_s2m_len_V_3_fu_282_p2[31:10]}};
+        add_ln9_reg_425 <= add_ln9_fu_303_p2;
+        final_s2m_len_V_3_reg_431 <= final_s2m_len_V_3_fu_308_p2;
+        shl_ln30_2_reg_415[5 : 3] <= shl_ln30_2_fu_232_p3[5 : 3];
+        shl_ln32_2_reg_420[5 : 3] <= shl_ln32_2_fu_240_p3[5 : 3];
+        tmp_3_reg_437 <= {{final_s2m_len_V_3_fu_308_p2[31:10]}};
     end
 end
 
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_state1)) begin
-        even_reg_344 <= even_fu_148_p2;
-        tmp_reg_349 <= kernel_mode_dout[32'd1];
+        even_reg_369 <= even_fu_156_p2;
+        tmp_reg_374 <= kernel_mode_dout[32'd1];
     end
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b1 == ap_CS_fsm_state2) & (tmp_reg_349 == 1'd0))) begin
-        lshr_ln43_1_reg_375 <= {{sub_ln43_fu_195_p2[31:1]}};
+    if (((1'b1 == ap_CS_fsm_state2) & (tmp_reg_374 == 1'd0))) begin
+        lshr_ln39_1_reg_410 <= {{sub_ln39_fu_213_p2[31:1]}};
     end
 end
 
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_state2)) begin
-        shl_ln34_reg_370 <= shl_ln34_fu_189_p2;
-        tmp_4_reg_357 <= incount25_dout;
-        xor_ln34_reg_365 <= xor_ln34_fu_179_p2;
+        shl_ln30_reg_400 <= shl_ln30_fu_197_p2;
+        shl_ln32_reg_405 <= shl_ln32_fu_207_p2;
+        tmp_4_reg_382 <= incount25_dout;
+        trunc_ln30_reg_390 <= trunc_ln30_fu_183_p1;
+        xor_ln30_reg_395 <= xor_ln30_fu_187_p2;
     end
 end
 
@@ -451,7 +464,7 @@ end
 assign ap_ST_fsm_state3_blk = 1'b0;
 
 always @ (*) begin
-    if ((grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_ap_done == 1'b0)) begin
+    if ((grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_ap_done == 1'b0)) begin
         ap_ST_fsm_state4_blk = 1'b1;
     end else begin
         ap_ST_fsm_state4_blk = 1'b0;
@@ -459,7 +472,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((icmp_ln1073_fu_316_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state4) & (grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_ap_done == 1'b1))) begin
+    if (((icmp_ln1073_fu_341_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state4) & (grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_ap_done == 1'b1))) begin
         ap_done = 1'b1;
     end else begin
         ap_done = ap_done_reg;
@@ -475,7 +488,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((icmp_ln1073_fu_316_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state4) & (grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_ap_done == 1'b1))) begin
+    if (((icmp_ln1073_fu_341_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state4) & (grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_ap_done == 1'b1))) begin
         ap_ready = 1'b1;
     end else begin
         ap_ready = 1'b0;
@@ -484,7 +497,7 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state4)) begin
-        inbuf_read = grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_inbuf_read;
+        inbuf_read = grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_inbuf_read;
     end else begin
         inbuf_read = 1'b0;
     end
@@ -524,7 +537,7 @@ end
 
 always @ (*) begin
     if (((1'b1 == ap_CS_fsm_state4) | (1'b1 == ap_CS_fsm_state3))) begin
-        m_axi_gmem0_AWVALID = grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_m_axi_gmem0_AWVALID;
+        m_axi_gmem0_AWVALID = grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_m_axi_gmem0_AWVALID;
     end else begin
         m_axi_gmem0_AWVALID = 1'b0;
     end
@@ -532,7 +545,7 @@ end
 
 always @ (*) begin
     if (((1'b1 == ap_CS_fsm_state4) | (1'b1 == ap_CS_fsm_state3))) begin
-        m_axi_gmem0_BREADY = grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_m_axi_gmem0_BREADY;
+        m_axi_gmem0_BREADY = grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_m_axi_gmem0_BREADY;
     end else begin
         m_axi_gmem0_BREADY = 1'b0;
     end
@@ -540,7 +553,7 @@ end
 
 always @ (*) begin
     if (((1'b1 == ap_CS_fsm_state4) | (1'b1 == ap_CS_fsm_state3))) begin
-        m_axi_gmem0_WVALID = grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_m_axi_gmem0_WVALID;
+        m_axi_gmem0_WVALID = grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_m_axi_gmem0_WVALID;
     end else begin
         m_axi_gmem0_WVALID = 1'b0;
     end
@@ -563,15 +576,17 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((icmp_ln1073_fu_316_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state4) & (grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_ap_done == 1'b1))) begin
-        s2m_buf_sts = out_sts_fu_298_p2;
+    if (((icmp_ln1073_fu_341_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state4) & (grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_ap_done == 1'b1))) begin
+        s2m_buf_sts = 1'd1;
+    end else if ((~((ap_start == 1'b0) | (kernel_mode_empty_n == 1'b0) | (ap_done_reg == 1'b1) | (out_memory_empty_n == 1'b0)) & (1'b1 == ap_CS_fsm_state1))) begin
+        s2m_buf_sts = 1'd0;
     end else begin
         s2m_buf_sts = s2m_buf_sts_preg;
     end
 end
 
 always @ (*) begin
-    if (((icmp_ln1073_fu_316_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state4) & (grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_ap_done == 1'b1))) begin
+    if ((((icmp_ln1073_fu_341_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state4) & (grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_ap_done == 1'b1)) | (~((ap_start == 1'b0) | (kernel_mode_empty_n == 1'b0) | (ap_done_reg == 1'b1) | (out_memory_empty_n == 1'b0)) & (1'b1 == ap_CS_fsm_state1)))) begin
         s2m_buf_sts_ap_vld = 1'b1;
     end else begin
         s2m_buf_sts_ap_vld = 1'b0;
@@ -598,9 +613,9 @@ always @ (*) begin
             ap_NS_fsm = ap_ST_fsm_state4;
         end
         ap_ST_fsm_state4 : begin
-            if (((icmp_ln1073_fu_316_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state4) & (grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_ap_done == 1'b1))) begin
+            if (((icmp_ln1073_fu_341_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state4) & (grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_ap_done == 1'b1))) begin
                 ap_NS_fsm = ap_ST_fsm_state1;
-            end else if (((icmp_ln1073_fu_316_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state4) & (grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_ap_done == 1'b1))) begin
+            end else if (((icmp_ln1073_fu_341_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state4) & (grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_ap_done == 1'b1))) begin
                 ap_NS_fsm = ap_ST_fsm_state2;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state4;
@@ -612,9 +627,9 @@ always @ (*) begin
     endcase
 end
 
-assign add_ln56_fu_304_p2 = ($signed(add_ln5_reg_385) + $signed(64'd18446744073709543424));
+assign add_ln47_fu_329_p2 = ($signed(add_ln9_reg_425) + $signed(64'd18446744073709543424));
 
-assign add_ln5_fu_277_p2 = ($signed(out_memory_assign_fu_90) + $signed(sext_ln5_fu_273_p1));
+assign add_ln9_fu_303_p2 = ($signed(out_memory_assign_fu_94) + $signed(sext_ln9_fu_299_p1));
 
 assign ap_CS_fsm_state1 = ap_CS_fsm[32'd0];
 
@@ -628,19 +643,21 @@ always @ (*) begin
     ap_block_state1 = ((ap_start == 1'b0) | (kernel_mode_empty_n == 1'b0) | (ap_done_reg == 1'b1) | (out_memory_empty_n == 1'b0));
 end
 
-assign even_fu_148_p2 = (icmp_ln1065_fu_136_p2 | icmp_ln1065_1_fu_142_p2);
+assign even_fu_156_p2 = (icmp_ln1065_fu_144_p2 | icmp_ln1065_1_fu_150_p2);
 
-assign final_s2m_len_V_3_fu_282_p2 = (select_ln42_fu_259_p3 + final_s2m_len_V_fu_94);
+assign final_s2m_len_V_3_fu_308_p2 = (select_ln38_fu_285_p3 + final_s2m_len_V_fu_98);
 
-assign grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_ap_start = grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_ap_start_reg;
+assign grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_ap_start = grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_ap_start_reg;
 
-assign icmp_ln1065_1_fu_142_p2 = ((kernel_mode_dout == 2'd1) ? 1'b1 : 1'b0);
+assign icmp_ln1065_1_fu_150_p2 = ((kernel_mode_dout == 2'd1) ? 1'b1 : 1'b0);
 
-assign icmp_ln1065_fu_136_p2 = ((kernel_mode_dout == 2'd0) ? 1'b1 : 1'b0);
+assign icmp_ln1065_2_fu_324_p2 = ((final_s2m_len_V_3_reg_431 == 32'd1024) ? 1'b1 : 1'b0);
 
-assign icmp_ln1073_fu_316_p2 = ((tmp_3_reg_397 == 22'd0) ? 1'b1 : 1'b0);
+assign icmp_ln1065_fu_144_p2 = ((kernel_mode_dout == 2'd0) ? 1'b1 : 1'b0);
 
-assign lshr_ln43_2_fu_238_p4 = {{tmp_4_reg_357[31:1]}};
+assign icmp_ln1073_fu_341_p2 = ((tmp_3_reg_437 == 22'd0) ? 1'b1 : 1'b0);
+
+assign lshr_ln39_2_fu_264_p4 = {{tmp_4_reg_382[31:1]}};
 
 assign m_axi_gmem0_ARADDR = 64'd0;
 
@@ -666,74 +683,79 @@ assign m_axi_gmem0_ARUSER = 1'd0;
 
 assign m_axi_gmem0_ARVALID = 1'b0;
 
-assign m_axi_gmem0_AWADDR = grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_m_axi_gmem0_AWADDR;
+assign m_axi_gmem0_AWADDR = grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_m_axi_gmem0_AWADDR;
 
-assign m_axi_gmem0_AWBURST = grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_m_axi_gmem0_AWBURST;
+assign m_axi_gmem0_AWBURST = grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_m_axi_gmem0_AWBURST;
 
-assign m_axi_gmem0_AWCACHE = grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_m_axi_gmem0_AWCACHE;
+assign m_axi_gmem0_AWCACHE = grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_m_axi_gmem0_AWCACHE;
 
-assign m_axi_gmem0_AWID = grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_m_axi_gmem0_AWID;
+assign m_axi_gmem0_AWID = grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_m_axi_gmem0_AWID;
 
-assign m_axi_gmem0_AWLEN = grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_m_axi_gmem0_AWLEN;
+assign m_axi_gmem0_AWLEN = grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_m_axi_gmem0_AWLEN;
 
-assign m_axi_gmem0_AWLOCK = grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_m_axi_gmem0_AWLOCK;
+assign m_axi_gmem0_AWLOCK = grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_m_axi_gmem0_AWLOCK;
 
-assign m_axi_gmem0_AWPROT = grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_m_axi_gmem0_AWPROT;
+assign m_axi_gmem0_AWPROT = grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_m_axi_gmem0_AWPROT;
 
-assign m_axi_gmem0_AWQOS = grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_m_axi_gmem0_AWQOS;
+assign m_axi_gmem0_AWQOS = grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_m_axi_gmem0_AWQOS;
 
-assign m_axi_gmem0_AWREGION = grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_m_axi_gmem0_AWREGION;
+assign m_axi_gmem0_AWREGION = grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_m_axi_gmem0_AWREGION;
 
-assign m_axi_gmem0_AWSIZE = grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_m_axi_gmem0_AWSIZE;
+assign m_axi_gmem0_AWSIZE = grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_m_axi_gmem0_AWSIZE;
 
-assign m_axi_gmem0_AWUSER = grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_m_axi_gmem0_AWUSER;
+assign m_axi_gmem0_AWUSER = grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_m_axi_gmem0_AWUSER;
 
 assign m_axi_gmem0_RREADY = 1'b0;
 
-assign m_axi_gmem0_WDATA = grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_m_axi_gmem0_WDATA;
+assign m_axi_gmem0_WDATA = grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_m_axi_gmem0_WDATA;
 
-assign m_axi_gmem0_WID = grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_m_axi_gmem0_WID;
+assign m_axi_gmem0_WID = grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_m_axi_gmem0_WID;
 
-assign m_axi_gmem0_WLAST = grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_m_axi_gmem0_WLAST;
+assign m_axi_gmem0_WLAST = grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_m_axi_gmem0_WLAST;
 
-assign m_axi_gmem0_WSTRB = grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_m_axi_gmem0_WSTRB;
+assign m_axi_gmem0_WSTRB = grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_m_axi_gmem0_WSTRB;
 
-assign m_axi_gmem0_WUSER = grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_m_axi_gmem0_WUSER;
+assign m_axi_gmem0_WUSER = grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_m_axi_gmem0_WUSER;
 
-assign out_sts_fu_298_p2 = ((final_s2m_len_V_3_reg_391 == 32'd1024) ? 1'b1 : 1'b0);
+assign select_ln38_fu_285_p3 = ((tmp_reg_374[0:0] == 1'b1) ? tmp_4_reg_382 : select_ln39_fu_277_p3);
 
-assign select_ln42_fu_259_p3 = ((tmp_reg_349[0:0] == 1'b1) ? tmp_4_reg_357 : select_ln43_fu_251_p3);
+assign select_ln39_fu_277_p3 = ((tmp_2_fu_248_p3[0:0] == 1'b1) ? sub_ln39_1_fu_258_p2 : zext_ln39_1_fu_273_p1);
 
-assign select_ln43_fu_251_p3 = ((tmp_2_fu_222_p3[0:0] == 1'b1) ? sub_ln43_1_fu_232_p2 : zext_ln43_1_fu_247_p1);
+assign select_ln46_fu_334_p3 = ((icmp_ln1065_2_fu_324_p2[0:0] == 1'b1) ? add_ln47_fu_329_p2 : add_ln9_reg_425);
 
-assign select_ln55_fu_309_p3 = ((out_sts_fu_298_p2[0:0] == 1'b1) ? add_ln56_fu_304_p2 : add_ln5_reg_385);
+assign sext_ln9_fu_299_p1 = $signed(shl_ln_fu_291_p3);
 
-assign sext_ln5_fu_273_p1 = $signed(shl_ln_fu_265_p3);
+assign shl_ln30_2_fu_232_p3 = {{xor_ln30_reg_395}, {3'd0}};
 
-assign shl_ln34_2_fu_214_p3 = {{xor_ln34_reg_365}, {3'd0}};
+assign shl_ln30_fu_197_p2 = 8'd15 << zext_ln30_fu_193_p1;
 
-assign shl_ln34_fu_189_p2 = 8'd15 << zext_ln34_fu_185_p1;
+assign shl_ln32_2_fu_240_p3 = {{trunc_ln30_reg_390}, {3'd0}};
 
-assign shl_ln_fu_265_p3 = {{select_ln42_fu_259_p3}, {3'd0}};
+assign shl_ln32_fu_207_p2 = 8'd15 << zext_ln32_fu_203_p1;
 
-assign sub_ln43_1_fu_232_p2 = (32'd0 - zext_ln43_fu_229_p1);
+assign shl_ln_fu_291_p3 = {{select_ln38_fu_285_p3}, {3'd0}};
 
-assign sub_ln43_fu_195_p2 = (32'd0 - incount25_dout);
+assign sub_ln39_1_fu_258_p2 = (32'd0 - zext_ln39_fu_255_p1);
 
-assign tmp_2_fu_222_p3 = tmp_4_reg_357[32'd31];
+assign sub_ln39_fu_213_p2 = (32'd0 - incount25_dout);
 
-assign trunc_ln34_fu_175_p1 = out_memory_assign_fu_90[2:0];
+assign tmp_2_fu_248_p3 = tmp_4_reg_382[32'd31];
 
-assign xor_ln34_fu_179_p2 = (trunc_ln34_fu_175_p1 ^ 3'd4);
+assign trunc_ln30_fu_183_p1 = out_memory_assign_fu_94[2:0];
 
-assign zext_ln34_fu_185_p1 = xor_ln34_fu_179_p2;
+assign xor_ln30_fu_187_p2 = (trunc_ln30_fu_183_p1 ^ 3'd4);
 
-assign zext_ln43_1_fu_247_p1 = lshr_ln43_2_fu_238_p4;
+assign zext_ln30_fu_193_p1 = xor_ln30_fu_187_p2;
 
-assign zext_ln43_fu_229_p1 = lshr_ln43_1_reg_375;
+assign zext_ln32_fu_203_p1 = trunc_ln30_fu_183_p1;
+
+assign zext_ln39_1_fu_273_p1 = lshr_ln39_2_fu_264_p4;
+
+assign zext_ln39_fu_255_p1 = lshr_ln39_1_reg_410;
 
 always @ (posedge ap_clk) begin
-    shl_ln34_2_reg_380[2:0] <= 3'b000;
+    shl_ln30_2_reg_415[2:0] <= 3'b000;
+    shl_ln32_2_reg_420[2:0] <= 3'b000;
 end
 
 endmodule //userdma_streamtoparallelwithburst

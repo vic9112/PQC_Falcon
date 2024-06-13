@@ -2,19 +2,19 @@
 # Vivado v2022.1 (64-bit)
 # SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
 # IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
-# Start of session at: Mon May 27 07:31:50 2024
-# Process ID: 9917
-# Current directory: /home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.runs/design_1_axi_quad_spi_0_0_synth_1
+# Start of session at: Thu Jun 13 08:43:50 2024
+# Process ID: 9310
+# Current directory: /home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.runs/design_1_axi_quad_spi_0_0_synth_1
 # Command line: vivado -log design_1_axi_quad_spi_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_axi_quad_spi_0_0.tcl
-# Log file: /home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.runs/design_1_axi_quad_spi_0_0_synth_1/design_1_axi_quad_spi_0_0.vds
-# Journal file: /home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.runs/design_1_axi_quad_spi_0_0_synth_1/vivado.jou
-# Running On: ubuntu2004, OS: Linux, CPU Frequency: 3194.000 MHz, CPU Physical cores: 2, Host memory: 8323 MB
+# Log file: /home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.runs/design_1_axi_quad_spi_0_0_synth_1/design_1_axi_quad_spi_0_0.vds
+# Journal file: /home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.runs/design_1_axi_quad_spi_0_0_synth_1/vivado.jou
+# Running On: ubuntu2004, OS: Linux, CPU Frequency: 3194.000 MHz, CPU Physical cores: 2, Host memory: 11260 MB
 #-----------------------------------------------------------
 source design_1_axi_quad_spi_0_0.tcl -notrace
-create_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 2865.426 ; gain = 0.023 ; free physical = 3508 ; free virtual = 4901
+create_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:11 . Memory (MB): peak = 2871.328 ; gain = 0.023 ; free physical = 2755 ; free virtual = 14528
 INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vitis_prj/hls_caravel_ps'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vitis_prj/hls_output_pin'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vitis_prj/hls_caravel_ps'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vitis_prj/hls_output_pin'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2022.1/data/ip'.
 Command: synth_design -top design_1_axi_quad_spi_0_0 -part xc7z020clg400-1 -incremental_mode off -mode out_of_context
 Starting synth_design
@@ -23,12 +23,12 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020
 INFO: [Device 21-403] Loading part xc7z020clg400-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 10013
+INFO: [Synth 8-7075] Helper process launched with PID 9321
 WARNING: [Synth 8-9501] generate block is allowed only inside loop and conditional generate in SystemVerilog mode [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:4023]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:16 . Memory (MB): peak = 2865.426 ; gain = 0.000 ; free physical = 1736 ; free virtual = 2947
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:13 . Memory (MB): peak = 2871.328 ; gain = 0.000 ; free physical = 1742 ; free virtual = 13532
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'design_1_axi_quad_spi_0_0' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ip/design_1_axi_quad_spi_0_0/synth/design_1_axi_quad_spi_0_0.vhd:97]
+INFO: [Synth 8-638] synthesizing module 'design_1_axi_quad_spi_0_0' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ip/design_1_axi_quad_spi_0_0/synth/design_1_axi_quad_spi_0_0.vhd:97]
 	Parameter Async_Clk bound to: 0 - type: integer 
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_SELECT_XPM bound to: 0 - type: integer 
@@ -59,217 +59,217 @@ INFO: [Synth 8-638] synthesizing module 'design_1_axi_quad_spi_0_0' [/home/ubunt
 	Parameter C_S_AXI4_BASEADDR bound to: 32'b11111111111111111111111111111111 
 	Parameter C_S_AXI4_HIGHADDR bound to: 32'b00000000000000000000000000000000 
 	Parameter C_LSB_STUP bound to: 0 - type: integer 
-INFO: [Synth 8-3491] module 'axi_quad_spi' declared at '/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:36498' bound to instance 'U0' of component 'axi_quad_spi' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ip/design_1_axi_quad_spi_0_0/synth/design_1_axi_quad_spi_0_0.vhd:290]
-INFO: [Synth 8-638] synthesizing module 'axi_quad_spi' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:36738]
-INFO: [Synth 8-638] synthesizing module 'axi_quad_spi_top' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:34994]
+INFO: [Synth 8-3491] module 'axi_quad_spi' declared at '/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:36498' bound to instance 'U0' of component 'axi_quad_spi' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ip/design_1_axi_quad_spi_0_0/synth/design_1_axi_quad_spi_0_0.vhd:290]
+INFO: [Synth 8-638] synthesizing module 'axi_quad_spi' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:36738]
+INFO: [Synth 8-638] synthesizing module 'axi_quad_spi_top' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:34994]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'IO0_I_REG' to cell 'FD' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:35463]
+INFO: [Synth 8-113] binding component instance 'IO0_I_REG' to cell 'FD' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:35463]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'IO1_I_REG' to cell 'FD' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:35474]
+INFO: [Synth 8-113] binding component instance 'IO1_I_REG' to cell 'FD' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:35474]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'IO2_I_REG' to cell 'FD' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:35485]
+INFO: [Synth 8-113] binding component instance 'IO2_I_REG' to cell 'FD' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:35485]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'IO3_I_REG' to cell 'FD' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:35497]
-INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2948]
-INFO: [Synth 8-638] synthesizing module 'slave_attachment' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2341]
-INFO: [Synth 8-638] synthesizing module 'address_decoder' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1775]
-INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized0' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized0' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized1' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized1' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized2' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized2' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized3' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized3' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized4' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized4' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized5' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized5' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized6' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized6' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized7' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized7' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized8' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized8' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized9' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized9' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized10' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized10' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized11' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized11' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized12' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized12' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized13' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized13' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized14' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized14' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized15' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized15' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized16' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized16' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized17' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized17' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized18' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized18' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized19' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized19' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized20' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized20' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized21' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized21' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized22' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized22' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized23' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized23' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized24' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized24' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized25' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized25' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-256] done synthesizing module 'address_decoder' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1775]
-INFO: [Synth 8-226] default block is never used [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2550]
-INFO: [Synth 8-256] done synthesizing module 'slave_attachment' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2341]
-INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2948]
-INFO: [Synth 8-638] synthesizing module 'qspi_core_interface' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:19206]
-INFO: [Synth 8-638] synthesizing module 'reset_sync_module' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:2426]
+INFO: [Synth 8-113] binding component instance 'IO3_I_REG' to cell 'FD' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:35497]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2948]
+INFO: [Synth 8-638] synthesizing module 'slave_attachment' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2341]
+INFO: [Synth 8-638] synthesizing module 'address_decoder' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1775]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized0' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized0' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized1' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized1' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized2' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized2' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized3' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized3' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized4' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized4' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized5' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized5' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized6' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized6' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized7' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized7' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized8' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized8' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized9' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized9' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized10' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized10' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized11' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized11' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized12' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized12' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized13' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized13' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized14' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized14' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized15' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized15' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized16' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized16' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized17' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized17' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized18' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized18' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized19' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized19' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized20' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized20' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized21' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized21' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized22' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized22' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized23' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized23' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized24' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized24' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized25' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized25' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'address_decoder' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1775]
+INFO: [Synth 8-226] default block is never used [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2550]
+INFO: [Synth 8-256] done synthesizing module 'slave_attachment' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2341]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2948]
+INFO: [Synth 8-638] synthesizing module 'qspi_core_interface' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:19206]
+INFO: [Synth 8-638] synthesizing module 'reset_sync_module' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:2426]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'RESET_SYNC_AX2S_1' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:2455]
+INFO: [Synth 8-113] binding component instance 'RESET_SYNC_AX2S_1' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:2455]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'RESET_SYNC_AX2S_2' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:2463]
-INFO: [Synth 8-256] done synthesizing module 'reset_sync_module' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:2426]
-INFO: [Synth 8-638] synthesizing module 'cross_clk_sync_fifo_1' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:14941]
+INFO: [Synth 8-113] binding component instance 'RESET_SYNC_AX2S_2' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:2463]
+INFO: [Synth 8-256] done synthesizing module 'reset_sync_module' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:2426]
+INFO: [Synth 8-638] synthesizing module 'cross_clk_sync_fifo_1' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:14941]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CMD_ERR_S2AX_1_CDC' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15224]
+INFO: [Synth 8-113] binding component instance 'CMD_ERR_S2AX_1_CDC' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15224]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CMD_ERR_S2AX_2' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15232]
+INFO: [Synth 8-113] binding component instance 'CMD_ERR_S2AX_2' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15232]
 	Parameter INIT bound to: 1'b1 
-INFO: [Synth 8-113] binding component instance 'SPISEL_D1_REG_S2AX_1_CDC' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15243]
+INFO: [Synth 8-113] binding component instance 'SPISEL_D1_REG_S2AX_1_CDC' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15243]
 	Parameter INIT bound to: 1'b1 
-INFO: [Synth 8-113] binding component instance 'SPISEL_D1_REG_S2AX_2' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15251]
+INFO: [Synth 8-113] binding component instance 'SPISEL_D1_REG_S2AX_2' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15251]
 	Parameter INIT bound to: 1'b1 
-INFO: [Synth 8-113] binding component instance 'SPISEL_PULSE_S2AX_1_CDC' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15277]
+INFO: [Synth 8-113] binding component instance 'SPISEL_PULSE_S2AX_1_CDC' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15277]
 	Parameter INIT bound to: 1'b1 
-INFO: [Synth 8-113] binding component instance 'SPISEL_PULSE_S2AX_2' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15285]
+INFO: [Synth 8-113] binding component instance 'SPISEL_PULSE_S2AX_2' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15285]
 	Parameter INIT bound to: 1'b1 
-INFO: [Synth 8-113] binding component instance 'SPISEL_PULSE_S2AX_3' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15293]
+INFO: [Synth 8-113] binding component instance 'SPISEL_PULSE_S2AX_3' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15293]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'MST_N_SLV_MODE_S2AX_1_CDC' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15306]
+INFO: [Synth 8-113] binding component instance 'MST_N_SLV_MODE_S2AX_1_CDC' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15306]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'MST_N_SLV_MODE_S2AX_2' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15314]
+INFO: [Synth 8-113] binding component instance 'MST_N_SLV_MODE_S2AX_2' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15314]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'SLV_MODF_STRB_S2AX_1_CDC' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15339]
+INFO: [Synth 8-113] binding component instance 'SLV_MODF_STRB_S2AX_1_CDC' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15339]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'SLV_MODF_STRB_S2AX_2' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15347]
+INFO: [Synth 8-113] binding component instance 'SLV_MODF_STRB_S2AX_2' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15347]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'SLV_MODF_STRB_S2AX_3' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15355]
+INFO: [Synth 8-113] binding component instance 'SLV_MODF_STRB_S2AX_3' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15355]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'MODF_STROBE_S2AX_1_CDC' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15380]
+INFO: [Synth 8-113] binding component instance 'MODF_STROBE_S2AX_1_CDC' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15380]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'MODF_STROBE_S2AX_2' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15388]
+INFO: [Synth 8-113] binding component instance 'MODF_STROBE_S2AX_2' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15388]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'MODF_STROBE_S2AX_3' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15396]
+INFO: [Synth 8-113] binding component instance 'MODF_STROBE_S2AX_3' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15396]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'RX_FIFO_EMPTY_AX2S_1_CDC' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15409]
+INFO: [Synth 8-113] binding component instance 'RX_FIFO_EMPTY_AX2S_1_CDC' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15409]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'RX_FIFO_EMPTY_AX2S_2' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15417]
+INFO: [Synth 8-113] binding component instance 'RX_FIFO_EMPTY_AX2S_2' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15417]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'TX_FIFO_EMPTY_S2AX_1_CDC' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15429]
+INFO: [Synth 8-113] binding component instance 'TX_FIFO_EMPTY_S2AX_1_CDC' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15429]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'TX_FIFO_EMPTY_S2AX_2' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15437]
+INFO: [Synth 8-113] binding component instance 'TX_FIFO_EMPTY_S2AX_2' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15437]
 	Parameter INIT bound to: 1'b1 
-INFO: [Synth 8-113] binding component instance 'TX_EMPT_4_SPISR_S2AX_1_CDC' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15449]
+INFO: [Synth 8-113] binding component instance 'TX_EMPT_4_SPISR_S2AX_1_CDC' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15449]
 	Parameter INIT bound to: 1'b1 
-INFO: [Synth 8-113] binding component instance 'TX_EMPT_4_SPISR_S2AX_2' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15457]
+INFO: [Synth 8-113] binding component instance 'TX_EMPT_4_SPISR_S2AX_2' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15457]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'TX_FIFO_FULL_AX2S_1_CDC' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15468]
+INFO: [Synth 8-113] binding component instance 'TX_FIFO_FULL_AX2S_1_CDC' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15468]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'TX_FIFO_FULL_AX2S_2' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15476]
+INFO: [Synth 8-113] binding component instance 'TX_FIFO_FULL_AX2S_2' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15476]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'SPIXFER_DONE_S2AX_1_CDC' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15487]
+INFO: [Synth 8-113] binding component instance 'SPIXFER_DONE_S2AX_1_CDC' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15487]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'SPIXFER_DONE_S2AX_2' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15495]
+INFO: [Synth 8-113] binding component instance 'SPIXFER_DONE_S2AX_2' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15495]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'RX_FIFO_RST_AX2S_1_CDC' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15520]
+INFO: [Synth 8-113] binding component instance 'RX_FIFO_RST_AX2S_1_CDC' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15520]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'RX_FIFO_RST_AX2S_2' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15528]
+INFO: [Synth 8-113] binding component instance 'RX_FIFO_RST_AX2S_2' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15528]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'RX_FIFO_FULL_S2AX_1_CDC' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15542]
+INFO: [Synth 8-113] binding component instance 'RX_FIFO_FULL_S2AX_1_CDC' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15542]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'RX_FIFO_FULL_S2AX_2' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15550]
+INFO: [Synth 8-113] binding component instance 'RX_FIFO_FULL_S2AX_2' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15550]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'SYNC_SPIXFER_DONE_S2AX_1_CDC' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15573]
+INFO: [Synth 8-113] binding component instance 'SYNC_SPIXFER_DONE_S2AX_1_CDC' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15573]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'SYNC_SPIXFER_DONE_S2AX_2' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15581]
+INFO: [Synth 8-113] binding component instance 'SYNC_SPIXFER_DONE_S2AX_2' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15581]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'SYNC_SPIXFER_DONE_S2AX_3' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15589]
+INFO: [Synth 8-113] binding component instance 'SYNC_SPIXFER_DONE_S2AX_3' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15589]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'DTR_UNDERRUN_S2AX_1_CDC' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15599]
+INFO: [Synth 8-113] binding component instance 'DTR_UNDERRUN_S2AX_1_CDC' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15599]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'DTR_UNDERRUN_S2AX_2' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15607]
+INFO: [Synth 8-113] binding component instance 'DTR_UNDERRUN_S2AX_2' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15607]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'SPICR_0_LOOP_AX2S_1_CDC' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15617]
+INFO: [Synth 8-113] binding component instance 'SPICR_0_LOOP_AX2S_1_CDC' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15617]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'SPICR_0_LOOP_AX2S_2' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15625]
+INFO: [Synth 8-113] binding component instance 'SPICR_0_LOOP_AX2S_2' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15625]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'SPICR_1_SPE_AX2S_1_CDC' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15636]
+INFO: [Synth 8-113] binding component instance 'SPICR_1_SPE_AX2S_1_CDC' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15636]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'SPICR_1_SPE_AX2S_2' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15644]
+INFO: [Synth 8-113] binding component instance 'SPICR_1_SPE_AX2S_2' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15644]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'SPICR_2_MST_N_SLV_AX2S_1_CDC' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15655]
+INFO: [Synth 8-113] binding component instance 'SPICR_2_MST_N_SLV_AX2S_1_CDC' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15655]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'SPICR_2_MST_N_SLV_AX2S_2' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15663]
+INFO: [Synth 8-113] binding component instance 'SPICR_2_MST_N_SLV_AX2S_2' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15663]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'SPICR_3_CPOL_AX2S_1_CDC' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15674]
+INFO: [Synth 8-113] binding component instance 'SPICR_3_CPOL_AX2S_1_CDC' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15674]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'SPICR_3_CPOL_AX2S_2' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15682]
+INFO: [Synth 8-113] binding component instance 'SPICR_3_CPOL_AX2S_2' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15682]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'SPICR_4_CPHA_AX2S_1_CDC' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15693]
+INFO: [Synth 8-113] binding component instance 'SPICR_4_CPHA_AX2S_1_CDC' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15693]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'SPICR_4_CPHA_AX2S_2' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15701]
+INFO: [Synth 8-113] binding component instance 'SPICR_4_CPHA_AX2S_2' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15701]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'SPICR_5_TXFIFO_AX2S_1_CDC' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15712]
+INFO: [Synth 8-113] binding component instance 'SPICR_5_TXFIFO_AX2S_1_CDC' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15712]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'SPICR_5_TXFIFO_AX2S_2' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15720]
+INFO: [Synth 8-113] binding component instance 'SPICR_5_TXFIFO_AX2S_2' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15720]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'SPICR_6_RXFIFO_RST_AX2S_1_CDC' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15731]
+INFO: [Synth 8-113] binding component instance 'SPICR_6_RXFIFO_RST_AX2S_1_CDC' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15731]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'SPICR_6_RXFIFO_RST_AX2S_2' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15739]
+INFO: [Synth 8-113] binding component instance 'SPICR_6_RXFIFO_RST_AX2S_2' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15739]
 	Parameter INIT bound to: 1'b1 
-INFO: [Synth 8-113] binding component instance 'SPICR_7_SS_AX2S_1_CDC' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15750]
+INFO: [Synth 8-113] binding component instance 'SPICR_7_SS_AX2S_1_CDC' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15750]
 	Parameter INIT bound to: 1'b1 
-INFO: [Synth 8-113] binding component instance 'SPICR_7_SS_AX2S_2' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15758]
+INFO: [Synth 8-113] binding component instance 'SPICR_7_SS_AX2S_2' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15758]
 	Parameter INIT bound to: 1'b1 
-INFO: [Synth 8-113] binding component instance 'SPICR_8_TR_INHIBIT_AX2S_1_CDC' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15769]
+INFO: [Synth 8-113] binding component instance 'SPICR_8_TR_INHIBIT_AX2S_1_CDC' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15769]
 	Parameter INIT bound to: 1'b1 
-INFO: [Synth 8-113] binding component instance 'SPICR_8_TR_INHIBIT_AX2S_2' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15777]
+INFO: [Synth 8-113] binding component instance 'SPICR_8_TR_INHIBIT_AX2S_2' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15777]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'SPICR_9_LSB_AX2S_1_CDC' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15788]
+INFO: [Synth 8-113] binding component instance 'SPICR_9_LSB_AX2S_1_CDC' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15788]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'SPICR_9_LSB_AX2S_2' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15796]
+INFO: [Synth 8-113] binding component instance 'SPICR_9_LSB_AX2S_2' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15796]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'SPICR_BITS_7_8_AX2S_1_CDC' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15812]
+INFO: [Synth 8-113] binding component instance 'SPICR_BITS_7_8_AX2S_1_CDC' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15812]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'SPICR_BITS_7_8_AX2S_2' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15820]
+INFO: [Synth 8-113] binding component instance 'SPICR_BITS_7_8_AX2S_2' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15820]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'SPICR_BITS_7_8_AX2S_1_CDC' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15812]
+INFO: [Synth 8-113] binding component instance 'SPICR_BITS_7_8_AX2S_1_CDC' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15812]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'SPICR_BITS_7_8_AX2S_2' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15820]
+INFO: [Synth 8-113] binding component instance 'SPICR_BITS_7_8_AX2S_2' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15820]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'SR_3_MODF_AX2S_1_CDC' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15833]
+INFO: [Synth 8-113] binding component instance 'SR_3_MODF_AX2S_1_CDC' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15833]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'SR_3_MODF_AX2S_2' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15841]
+INFO: [Synth 8-113] binding component instance 'SR_3_MODF_AX2S_2' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15841]
 	Parameter INIT bound to: 1'b1 
-INFO: [Synth 8-113] binding component instance 'SPISSR_AX2S_1_CDC' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15858]
+INFO: [Synth 8-113] binding component instance 'SPISSR_AX2S_1_CDC' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15858]
 	Parameter INIT bound to: 1'b1 
-INFO: [Synth 8-113] binding component instance 'SPISSR_SYNC_AXI_2_SPI_2' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15866]
+INFO: [Synth 8-113] binding component instance 'SPISSR_SYNC_AXI_2_SPI_2' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15866]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'DRR_OVERRUN_S2AX_1_CDC' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15891]
+INFO: [Synth 8-113] binding component instance 'DRR_OVERRUN_S2AX_1_CDC' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15891]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'DRR_OVERRUN_S2AX_2' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15899]
+INFO: [Synth 8-113] binding component instance 'DRR_OVERRUN_S2AX_2' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15899]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'DRR_OVERRUN_S2AX_3' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15907]
-INFO: [Synth 8-256] done synthesizing module 'cross_clk_sync_fifo_1' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:14941]
+INFO: [Synth 8-113] binding component instance 'DRR_OVERRUN_S2AX_3' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:15907]
+INFO: [Synth 8-256] done synthesizing module 'cross_clk_sync_fifo_1' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:14941]
 	Parameter CDC_SYNC_STAGES bound to: 2 - type: integer 
 	Parameter DOUT_RESET_VALUE bound to: 0 - type: string 
 	Parameter ECC_MODE bound to: no_ecc - type: string 
@@ -287,7 +287,7 @@ INFO: [Synth 8-256] done synthesizing module 'cross_clk_sync_fifo_1' (0#1) [/hom
 	Parameter WAKEUP_TIME bound to: 0 - type: integer 
 	Parameter WRITE_DATA_WIDTH bound to: 8 - type: integer 
 	Parameter WR_DATA_COUNT_WIDTH bound to: 5 - type: integer 
-INFO: [Synth 8-3491] module 'xpm_fifo_async' declared at '/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:2145' bound to instance 'RX_FIFO_II' of component 'xpm_fifo_async' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:21050]
+INFO: [Synth 8-3491] module 'xpm_fifo_async' declared at '/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:2145' bound to instance 'RX_FIFO_II' of component 'xpm_fifo_async' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:21050]
 INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_async' [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:2145]
 INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_base' [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:55]
 INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn' [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1858]
@@ -324,23 +324,23 @@ INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized3' [/to
 INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized3' (0#1) [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1858]
 INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_base' (0#1) [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:55]
 INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_async' (0#1) [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:2145]
-INFO: [Synth 8-638] synthesizing module 'cdc_sync' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
+INFO: [Synth 8-638] synthesizing module 'cdc_sync' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:514]
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:514]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:545]
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:545]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:554]
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:554]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:564]
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:564]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:574]
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:574]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:584]
-INFO: [Synth 8-256] done synthesizing module 'cdc_sync' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
-INFO: [Synth 8-638] synthesizing module 'counter_f' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:669]
-INFO: [Synth 8-256] done synthesizing module 'counter_f' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:669]
-INFO: [Synth 8-638] synthesizing module 'async_fifo_fg' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/6c82/hdl/lib_fifo_v1_0_rfs.vhd:255]
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6' to cell 'FDR' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:584]
+INFO: [Synth 8-256] done synthesizing module 'cdc_sync' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
+INFO: [Synth 8-638] synthesizing module 'counter_f' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:669]
+INFO: [Synth 8-256] done synthesizing module 'counter_f' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:669]
+INFO: [Synth 8-638] synthesizing module 'async_fifo_fg' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/6c82/hdl/lib_fifo_v1_0_rfs.vhd:255]
 	Parameter FIFO_MEMORY_TYPE bound to: auto - type: string 
 	Parameter FIFO_WRITE_DEPTH bound to: 16 - type: integer 
 	Parameter RELATED_CLOCKS bound to: 0 - type: integer 
@@ -358,7 +358,7 @@ INFO: [Synth 8-638] synthesizing module 'async_fifo_fg' [/home/ubuntu/PQC_Falcon
 	Parameter DOUT_RESET_VALUE bound to: 0 - type: string 
 	Parameter ECC_MODE bound to: no_ecc - type: string 
 	Parameter WAKEUP_TIME bound to: 0 - type: integer 
-INFO: [Synth 8-3491] module 'xpm_fifo_async' declared at '/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:2145' bound to instance 'xpm_fifo_async_inst' of component 'xpm_fifo_async' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/6c82/hdl/lib_fifo_v1_0_rfs.vhd:1932]
+INFO: [Synth 8-3491] module 'xpm_fifo_async' declared at '/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:2145' bound to instance 'xpm_fifo_async_inst' of component 'xpm_fifo_async' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/6c82/hdl/lib_fifo_v1_0_rfs.vhd:1932]
 INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_async__parameterized1' [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:2145]
 INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_base__parameterized0' [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:55]
 INFO: [Synth 8-226] default block is never used [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1206]
@@ -366,57 +366,57 @@ INFO: [Synth 8-226] default block is never used [/tools/Xilinx/Vivado/2022.1/dat
 INFO: [Synth 8-226] default block is never used [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1295]
 INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_base__parameterized0' (0#1) [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:55]
 INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_async__parameterized1' (0#1) [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:2145]
-INFO: [Synth 8-256] done synthesizing module 'async_fifo_fg' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/6c82/hdl/lib_fifo_v1_0_rfs.vhd:255]
-INFO: [Synth 8-638] synthesizing module 'qspi_fifo_ifmodule' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:13465]
-INFO: [Synth 8-256] done synthesizing module 'qspi_fifo_ifmodule' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:13465]
-INFO: [Synth 8-638] synthesizing module 'qspi_occupancy_reg' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:3647]
-INFO: [Synth 8-256] done synthesizing module 'qspi_occupancy_reg' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:3647]
-INFO: [Synth 8-638] synthesizing module 'qspi_mode_0_module' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:8775]
+INFO: [Synth 8-256] done synthesizing module 'async_fifo_fg' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/6c82/hdl/lib_fifo_v1_0_rfs.vhd:255]
+INFO: [Synth 8-638] synthesizing module 'qspi_fifo_ifmodule' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:13465]
+INFO: [Synth 8-256] done synthesizing module 'qspi_fifo_ifmodule' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:13465]
+INFO: [Synth 8-638] synthesizing module 'qspi_occupancy_reg' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:3647]
+INFO: [Synth 8-256] done synthesizing module 'qspi_occupancy_reg' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:3647]
+INFO: [Synth 8-638] synthesizing module 'qspi_mode_0_module' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:8775]
 	Parameter INIT bound to: 1'b1 
-INFO: [Synth 8-113] binding component instance 'MST_TRANS_INHIBIT_D1_I' to cell 'FD' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:9350]
+INFO: [Synth 8-113] binding component instance 'MST_TRANS_INHIBIT_D1_I' to cell 'FD' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:9350]
 	Parameter INIT bound to: 1'b1 
-INFO: [Synth 8-113] binding component instance 'SPI_TRISTATE_CONTROL_II' to cell 'FD' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:9378]
+INFO: [Synth 8-113] binding component instance 'SPI_TRISTATE_CONTROL_II' to cell 'FD' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:9378]
 	Parameter INIT bound to: 1'b1 
-INFO: [Synth 8-113] binding component instance 'SPI_TRISTATE_CONTROL_III' to cell 'FD' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:9390]
+INFO: [Synth 8-113] binding component instance 'SPI_TRISTATE_CONTROL_III' to cell 'FD' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:9390]
 	Parameter INIT bound to: 1'b1 
-INFO: [Synth 8-113] binding component instance 'SPI_TRISTATE_CONTROL_IV' to cell 'FD' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:9402]
+INFO: [Synth 8-113] binding component instance 'SPI_TRISTATE_CONTROL_IV' to cell 'FD' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:9402]
 	Parameter INIT bound to: 1'b1 
-INFO: [Synth 8-113] binding component instance 'SPI_TRISTATE_CONTROL_V' to cell 'FD' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:9426]
+INFO: [Synth 8-113] binding component instance 'SPI_TRISTATE_CONTROL_V' to cell 'FD' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:9426]
 	Parameter INIT bound to: 1'b1 
-INFO: [Synth 8-113] binding component instance 'SPISEL_REG' to cell 'FD' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:9505]
+INFO: [Synth 8-113] binding component instance 'SPISEL_REG' to cell 'FD' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:9505]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'SCK_I_REG' to cell 'FD' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:9588]
+INFO: [Synth 8-113] binding component instance 'SCK_I_REG' to cell 'FD' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:9588]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'SCK_O_NE_4_FDRE_INST' to cell 'FDRE' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:10685]
-INFO: [Synth 8-256] done synthesizing module 'qspi_mode_0_module' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:8775]
-INFO: [Synth 8-638] synthesizing module 'qspi_cntrl_reg' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:13820]
-INFO: [Synth 8-113] binding component instance 'SPI_TRISTATE_CONTROL_I' to cell 'FDRE' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:14027]
-INFO: [Synth 8-113] binding component instance 'SPI_TRISTATE_CONTROL_I' to cell 'FDRE' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:14027]
-INFO: [Synth 8-256] done synthesizing module 'qspi_cntrl_reg' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:13820]
-INFO: [Synth 8-638] synthesizing module 'qspi_status_slave_sel_reg' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:2658]
-INFO: [Synth 8-256] done synthesizing module 'qspi_status_slave_sel_reg' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:2658]
-INFO: [Synth 8-638] synthesizing module 'soft_reset' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:874]
-INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:1005]
-INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:1005]
-INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:1005]
-INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:1005]
-INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:1005]
-INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:1005]
-INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:1005]
-INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:1005]
-INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:1005]
-INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:1005]
-INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:1005]
-INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:1005]
-INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:1005]
+INFO: [Synth 8-113] binding component instance 'SCK_O_NE_4_FDRE_INST' to cell 'FDRE' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:10685]
+INFO: [Synth 8-256] done synthesizing module 'qspi_mode_0_module' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:8775]
+INFO: [Synth 8-638] synthesizing module 'qspi_cntrl_reg' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:13820]
+INFO: [Synth 8-113] binding component instance 'SPI_TRISTATE_CONTROL_I' to cell 'FDRE' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:14027]
+INFO: [Synth 8-113] binding component instance 'SPI_TRISTATE_CONTROL_I' to cell 'FDRE' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:14027]
+INFO: [Synth 8-256] done synthesizing module 'qspi_cntrl_reg' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:13820]
+INFO: [Synth 8-638] synthesizing module 'qspi_status_slave_sel_reg' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:2658]
+INFO: [Synth 8-256] done synthesizing module 'qspi_status_slave_sel_reg' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:2658]
+INFO: [Synth 8-638] synthesizing module 'soft_reset' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:874]
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:1005]
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:1005]
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:1005]
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:1005]
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:1005]
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:1005]
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:1005]
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:1005]
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:1005]
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:1005]
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:1005]
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:1005]
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:1005]
 INFO: [Common 17-14] Message 'Synth 8-113' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-256] done synthesizing module 'soft_reset' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:874]
-INFO: [Synth 8-638] synthesizing module 'interrupt_control' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/a040/hdl/interrupt_control_v3_1_vh_rfs.vhd:259]
-INFO: [Synth 8-256] done synthesizing module 'interrupt_control' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/a040/hdl/interrupt_control_v3_1_vh_rfs.vhd:259]
-INFO: [Synth 8-256] done synthesizing module 'qspi_core_interface' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:19206]
-INFO: [Synth 8-256] done synthesizing module 'axi_quad_spi_top' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:34994]
-INFO: [Synth 8-256] done synthesizing module 'axi_quad_spi' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:36738]
-INFO: [Synth 8-256] done synthesizing module 'design_1_axi_quad_spi_0_0' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ip/design_1_axi_quad_spi_0_0/synth/design_1_axi_quad_spi_0_0.vhd:97]
+INFO: [Synth 8-256] done synthesizing module 'soft_reset' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:874]
+INFO: [Synth 8-638] synthesizing module 'interrupt_control' [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/a040/hdl/interrupt_control_v3_1_vh_rfs.vhd:259]
+INFO: [Synth 8-256] done synthesizing module 'interrupt_control' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/a040/hdl/interrupt_control_v3_1_vh_rfs.vhd:259]
+INFO: [Synth 8-256] done synthesizing module 'qspi_core_interface' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:19206]
+INFO: [Synth 8-256] done synthesizing module 'axi_quad_spi_top' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:34994]
+INFO: [Synth 8-256] done synthesizing module 'axi_quad_spi' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:36738]
+INFO: [Synth 8-256] done synthesizing module 'design_1_axi_quad_spi_0_0' (0#1) [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ip/design_1_axi_quad_spi_0_0/synth/design_1_axi_quad_spi_0_0.vhd:97]
 WARNING: [Synth 8-6014] Unused sequential element gen_rd_b.gen_doutb_pipe.enb_pipe_reg[0] was removed.  [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:3017]
 WARNING: [Synth 8-6014] Unused sequential element dest_out_bin_ff_reg was removed.  [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:417]
 WARNING: [Synth 8-6014] Unused sequential element dest_out_bin_ff_reg was removed.  [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:417]
@@ -427,43 +427,43 @@ WARNING: [Synth 8-6014] Unused sequential element gen_fwft.empty_fwft_fb_reg was
 WARNING: [Synth 8-6014] Unused sequential element gdvld.data_valid_std_reg was removed.  [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:537]
 WARNING: [Synth 8-6014] Unused sequential element gen_pf_ic_rc.gae_ic_std.ram_aempty_i_reg was removed.  [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:757]
 WARNING: [Synth 8-6014] Unused sequential element gen_fwft.empty_fwft_fb_reg was removed.  [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1390]
-WARNING: [Synth 8-6014] Unused sequential element transfer_start_d2_reg was removed.  [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:9713]
-WARNING: [Synth 8-6014] Unused sequential element transfer_start_d3_reg was removed.  [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:9714]
-WARNING: [Synth 8-6014] Unused sequential element SPIXfer_done_int_pulse_d3_reg was removed.  [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:9771]
-WARNING: [Synth 8-6014] Unused sequential element SS_Asserted_reg was removed.  [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:10949]
-WARNING: [Synth 8-6014] Unused sequential element SS_Asserted_1dly_reg was removed.  [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:10950]
-WARNING: [Synth 8-6014] Unused sequential element MODF_strobe_int_reg was removed.  [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:10979]
-WARNING: [Synth 8-6014] Unused sequential element LEGACY_MD_WR_RD_ACK_GEN.Bus2IP_WrCE_d1_reg was removed.  [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:19837]
-WARNING: [Synth 8-6014] Unused sequential element LEGACY_MD_WR_RD_ACK_GEN.Bus2IP_WrCE_d2_reg was removed.  [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:19838]
-WARNING: [Synth 8-6014] Unused sequential element LEGACY_MD_WR_RD_ACK_GEN.Bus2IP_WrCE_d3_reg was removed.  [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:19839]
-WARNING: [Synth 8-6014] Unused sequential element LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_RdAck_core_reg_d1_reg was removed.  [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:19938]
-WARNING: [Synth 8-6014] Unused sequential element LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_RdAck_core_reg_1_reg was removed.  [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:19940]
-WARNING: [Synth 8-3848] Net cfgclk in module/entity qspi_core_interface does not have driver. [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:19183]
-WARNING: [Synth 8-3848] Net cfgmclk in module/entity qspi_core_interface does not have driver. [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:19184]
-WARNING: [Synth 8-3848] Net eos in module/entity qspi_core_interface does not have driver. [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:19185]
-WARNING: [Synth 8-3848] Net preq in module/entity qspi_core_interface does not have driver. [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:19186]
-WARNING: [Synth 8-3848] Net di in module/entity qspi_core_interface does not have driver. [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:19187]
-WARNING: [Synth 8-3848] Net s_axi4_awready in module/entity axi_quad_spi_top does not have driver. [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:34885]
-WARNING: [Synth 8-3848] Net s_axi4_wready in module/entity axi_quad_spi_top does not have driver. [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:34893]
-WARNING: [Synth 8-3848] Net s_axi4_bid in module/entity axi_quad_spi_top does not have driver. [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:34897]
-WARNING: [Synth 8-3848] Net s_axi4_bresp in module/entity axi_quad_spi_top does not have driver. [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:34898]
-WARNING: [Synth 8-3848] Net s_axi4_bvalid in module/entity axi_quad_spi_top does not have driver. [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:34899]
-WARNING: [Synth 8-3848] Net s_axi4_arready in module/entity axi_quad_spi_top does not have driver. [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:34913]
-WARNING: [Synth 8-3848] Net s_axi4_rid in module/entity axi_quad_spi_top does not have driver. [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:34917]
-WARNING: [Synth 8-3848] Net s_axi4_rdata in module/entity axi_quad_spi_top does not have driver. [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:34918]
-WARNING: [Synth 8-3848] Net s_axi4_rresp in module/entity axi_quad_spi_top does not have driver. [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:34919]
-WARNING: [Synth 8-3848] Net s_axi4_rlast in module/entity axi_quad_spi_top does not have driver. [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:34920]
-WARNING: [Synth 8-3848] Net s_axi4_rvalid in module/entity axi_quad_spi_top does not have driver. [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:34921]
-WARNING: [Synth 8-3848] Net io0_1_o in module/entity axi_quad_spi does not have driver. [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:36681]
-WARNING: [Synth 8-3848] Net io0_1_t in module/entity axi_quad_spi does not have driver. [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:36682]
-WARNING: [Synth 8-3848] Net io1_1_o in module/entity axi_quad_spi does not have driver. [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:36685]
-WARNING: [Synth 8-3848] Net io1_1_t in module/entity axi_quad_spi does not have driver. [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:36686]
-WARNING: [Synth 8-3848] Net io2_1_o in module/entity axi_quad_spi does not have driver. [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:36691]
-WARNING: [Synth 8-3848] Net io2_1_t in module/entity axi_quad_spi does not have driver. [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:36692]
-WARNING: [Synth 8-3848] Net io3_1_o in module/entity axi_quad_spi does not have driver. [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:36695]
-WARNING: [Synth 8-3848] Net io3_1_t in module/entity axi_quad_spi does not have driver. [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:36696]
-WARNING: [Synth 8-3848] Net ss_1_o in module/entity axi_quad_spi does not have driver. [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:36711]
-WARNING: [Synth 8-3848] Net ss_1_t in module/entity axi_quad_spi does not have driver. [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:36712]
+WARNING: [Synth 8-6014] Unused sequential element transfer_start_d2_reg was removed.  [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:9713]
+WARNING: [Synth 8-6014] Unused sequential element transfer_start_d3_reg was removed.  [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:9714]
+WARNING: [Synth 8-6014] Unused sequential element SPIXfer_done_int_pulse_d3_reg was removed.  [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:9771]
+WARNING: [Synth 8-6014] Unused sequential element SS_Asserted_reg was removed.  [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:10949]
+WARNING: [Synth 8-6014] Unused sequential element SS_Asserted_1dly_reg was removed.  [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:10950]
+WARNING: [Synth 8-6014] Unused sequential element MODF_strobe_int_reg was removed.  [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:10979]
+WARNING: [Synth 8-6014] Unused sequential element LEGACY_MD_WR_RD_ACK_GEN.Bus2IP_WrCE_d1_reg was removed.  [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:19837]
+WARNING: [Synth 8-6014] Unused sequential element LEGACY_MD_WR_RD_ACK_GEN.Bus2IP_WrCE_d2_reg was removed.  [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:19838]
+WARNING: [Synth 8-6014] Unused sequential element LEGACY_MD_WR_RD_ACK_GEN.Bus2IP_WrCE_d3_reg was removed.  [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:19839]
+WARNING: [Synth 8-6014] Unused sequential element LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_RdAck_core_reg_d1_reg was removed.  [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:19938]
+WARNING: [Synth 8-6014] Unused sequential element LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_RdAck_core_reg_1_reg was removed.  [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:19940]
+WARNING: [Synth 8-3848] Net cfgclk in module/entity qspi_core_interface does not have driver. [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:19183]
+WARNING: [Synth 8-3848] Net cfgmclk in module/entity qspi_core_interface does not have driver. [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:19184]
+WARNING: [Synth 8-3848] Net eos in module/entity qspi_core_interface does not have driver. [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:19185]
+WARNING: [Synth 8-3848] Net preq in module/entity qspi_core_interface does not have driver. [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:19186]
+WARNING: [Synth 8-3848] Net di in module/entity qspi_core_interface does not have driver. [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:19187]
+WARNING: [Synth 8-3848] Net s_axi4_awready in module/entity axi_quad_spi_top does not have driver. [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:34885]
+WARNING: [Synth 8-3848] Net s_axi4_wready in module/entity axi_quad_spi_top does not have driver. [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:34893]
+WARNING: [Synth 8-3848] Net s_axi4_bid in module/entity axi_quad_spi_top does not have driver. [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:34897]
+WARNING: [Synth 8-3848] Net s_axi4_bresp in module/entity axi_quad_spi_top does not have driver. [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:34898]
+WARNING: [Synth 8-3848] Net s_axi4_bvalid in module/entity axi_quad_spi_top does not have driver. [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:34899]
+WARNING: [Synth 8-3848] Net s_axi4_arready in module/entity axi_quad_spi_top does not have driver. [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:34913]
+WARNING: [Synth 8-3848] Net s_axi4_rid in module/entity axi_quad_spi_top does not have driver. [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:34917]
+WARNING: [Synth 8-3848] Net s_axi4_rdata in module/entity axi_quad_spi_top does not have driver. [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:34918]
+WARNING: [Synth 8-3848] Net s_axi4_rresp in module/entity axi_quad_spi_top does not have driver. [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:34919]
+WARNING: [Synth 8-3848] Net s_axi4_rlast in module/entity axi_quad_spi_top does not have driver. [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:34920]
+WARNING: [Synth 8-3848] Net s_axi4_rvalid in module/entity axi_quad_spi_top does not have driver. [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:34921]
+WARNING: [Synth 8-3848] Net io0_1_o in module/entity axi_quad_spi does not have driver. [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:36681]
+WARNING: [Synth 8-3848] Net io0_1_t in module/entity axi_quad_spi does not have driver. [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:36682]
+WARNING: [Synth 8-3848] Net io1_1_o in module/entity axi_quad_spi does not have driver. [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:36685]
+WARNING: [Synth 8-3848] Net io1_1_t in module/entity axi_quad_spi does not have driver. [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:36686]
+WARNING: [Synth 8-3848] Net io2_1_o in module/entity axi_quad_spi does not have driver. [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:36691]
+WARNING: [Synth 8-3848] Net io2_1_t in module/entity axi_quad_spi does not have driver. [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:36692]
+WARNING: [Synth 8-3848] Net io3_1_o in module/entity axi_quad_spi does not have driver. [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:36695]
+WARNING: [Synth 8-3848] Net io3_1_t in module/entity axi_quad_spi does not have driver. [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:36696]
+WARNING: [Synth 8-3848] Net ss_1_o in module/entity axi_quad_spi does not have driver. [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:36711]
+WARNING: [Synth 8-3848] Net ss_1_t in module/entity axi_quad_spi does not have driver. [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ipshared/67dc/hdl/axi_quad_spi_v3_2_rfs.vhd:36712]
 WARNING: [Synth 8-7129] Port bus2ip_data[1] in module interrupt_control is either unconnected or has no load
 WARNING: [Synth 8-7129] Port bus2ip_data[2] in module interrupt_control is either unconnected or has no load
 WARNING: [Synth 8-7129] Port bus2ip_data[3] in module interrupt_control is either unconnected or has no load
@@ -566,34 +566,34 @@ WARNING: [Synth 8-7129] Port Bus2IP_SPISSR_Data[18] in module qspi_status_slave_
 WARNING: [Synth 8-7129] Port Bus2IP_SPISSR_Data[19] in module qspi_status_slave_sel_reg is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:16 ; elapsed = 00:00:33 . Memory (MB): peak = 2865.426 ; gain = 0.000 ; free physical = 1294 ; free virtual = 2424
+Finished RTL Elaboration : Time (s): cpu = 00:00:16 ; elapsed = 00:00:28 . Memory (MB): peak = 2871.328 ; gain = 0.000 ; free physical = 2359 ; free virtual = 14147
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:16 ; elapsed = 00:00:33 . Memory (MB): peak = 2865.426 ; gain = 0.000 ; free physical = 1281 ; free virtual = 2411
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:16 ; elapsed = 00:00:28 . Memory (MB): peak = 2871.328 ; gain = 0.000 ; free physical = 2360 ; free virtual = 14150
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:33 . Memory (MB): peak = 2865.426 ; gain = 0.000 ; free physical = 1281 ; free virtual = 2411
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:28 . Memory (MB): peak = 2871.328 ; gain = 0.000 ; free physical = 2360 ; free virtual = 14150
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2865.426 ; gain = 0.000 ; free physical = 1268 ; free virtual = 2399
+Netlist sorting complete. Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2871.328 ; gain = 0.000 ; free physical = 2360 ; free virtual = 14152
 INFO: [Netlist 29-17] Analyzing 107 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ip/design_1_axi_quad_spi_0_0/design_1_axi_quad_spi_0_0_ooc.xdc] for cell 'U0'
-Finished Parsing XDC File [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ip/design_1_axi_quad_spi_0_0/design_1_axi_quad_spi_0_0_ooc.xdc] for cell 'U0'
-Parsing XDC File [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ip/design_1_axi_quad_spi_0_0/design_1_axi_quad_spi_0_0_board.xdc] for cell 'U0'
-Finished Parsing XDC File [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ip/design_1_axi_quad_spi_0_0/design_1_axi_quad_spi_0_0_board.xdc] for cell 'U0'
-Parsing XDC File [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ip/design_1_axi_quad_spi_0_0/design_1_axi_quad_spi_0_0.xdc] for cell 'U0'
-Finished Parsing XDC File [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ip/design_1_axi_quad_spi_0_0/design_1_axi_quad_spi_0_0.xdc] for cell 'U0'
-Parsing XDC File [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.runs/design_1_axi_quad_spi_0_0_synth_1/dont_touch.xdc]
-Finished Parsing XDC File [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.runs/design_1_axi_quad_spi_0_0_synth_1/dont_touch.xdc]
-Parsing XDC File [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ip/design_1_axi_quad_spi_0_0/design_1_axi_quad_spi_0_0_clocks.xdc] for cell 'U0'
-Finished Parsing XDC File [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ip/design_1_axi_quad_spi_0_0/design_1_axi_quad_spi_0_0_clocks.xdc] for cell 'U0'
+Parsing XDC File [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ip/design_1_axi_quad_spi_0_0/design_1_axi_quad_spi_0_0_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ip/design_1_axi_quad_spi_0_0/design_1_axi_quad_spi_0_0_ooc.xdc] for cell 'U0'
+Parsing XDC File [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ip/design_1_axi_quad_spi_0_0/design_1_axi_quad_spi_0_0_board.xdc] for cell 'U0'
+Finished Parsing XDC File [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ip/design_1_axi_quad_spi_0_0/design_1_axi_quad_spi_0_0_board.xdc] for cell 'U0'
+Parsing XDC File [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ip/design_1_axi_quad_spi_0_0/design_1_axi_quad_spi_0_0.xdc] for cell 'U0'
+Finished Parsing XDC File [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ip/design_1_axi_quad_spi_0_0/design_1_axi_quad_spi_0_0.xdc] for cell 'U0'
+Parsing XDC File [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.runs/design_1_axi_quad_spi_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.runs/design_1_axi_quad_spi_0_0_synth_1/dont_touch.xdc]
+Parsing XDC File [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ip/design_1_axi_quad_spi_0_0/design_1_axi_quad_spi_0_0_clocks.xdc] for cell 'U0'
+Finished Parsing XDC File [/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ip/design_1_axi_quad_spi_0_0/design_1_axi_quad_spi_0_0_clocks.xdc] for cell 'U0'
 INFO: [Vivado 12-3272] Current instance is the top level cell 'U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.RX_FIFO_II/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst' of design 'preSynthElab_1' [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
 WARNING: [XPM_CDC_GRAY: TCL-1000] The source and destination clocks are the same. 
      Instance: U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.RX_FIFO_II/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst 
@@ -657,29 +657,29 @@ Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_axi
 INFO: [Project 1-1714] 14 XPM XDC files have been applied to the design.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2928.246 ; gain = 0.000 ; free physical = 1141 ; free virtual = 2297
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2930.148 ; gain = 0.000 ; free physical = 4620 ; free virtual = 16405
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 107 instances were transformed.
   FD => FDRE: 11 instances
   FDR => FDRE: 79 instances
   FDRSE => FDRSE (FDRE, LUT4, VCC): 17 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.11 . Memory (MB): peak = 2928.246 ; gain = 0.000 ; free physical = 1109 ; free virtual = 2268
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.11 . Memory (MB): peak = 2930.148 ; gain = 0.000 ; free physical = 4620 ; free virtual = 16405
 INFO: [Designutils 20-5008] Incremental synthesis strategy off
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:27 ; elapsed = 00:00:50 . Memory (MB): peak = 2928.246 ; gain = 62.820 ; free physical = 905 ; free virtual = 2075
+Finished Constraint Validation : Time (s): cpu = 00:00:26 ; elapsed = 00:00:46 . Memory (MB): peak = 2930.148 ; gain = 58.820 ; free physical = 3712 ; free virtual = 15497
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:27 ; elapsed = 00:00:50 . Memory (MB): peak = 2928.246 ; gain = 62.820 ; free physical = 905 ; free virtual = 2075
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:26 ; elapsed = 00:00:46 . Memory (MB): peak = 2930.148 ; gain = 58.820 ; free physical = 3712 ; free virtual = 15497
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property KEEP_HIERARCHY = SOFT for U0. (constraint file  /home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.runs/design_1_axi_quad_spi_0_0_synth_1/dont_touch.xdc, line 9).
+Applied set_property KEEP_HIERARCHY = SOFT for U0. (constraint file  /home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.runs/design_1_axi_quad_spi_0_0_synth_1/dont_touch.xdc, line 9).
 Applied set_property KEEP_HIERARCHY = SOFT for U0/\NO_DUAL_QUAD_MODE.QSPI_NORMAL /\QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I /\FIFO_EXISTS.RX_FIFO_II /\gnuram_async_fifo.xpm_fifo_base_inst /\gen_cdc_pntr.rd_pntr_cdc_inst . (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for U0/\NO_DUAL_QUAD_MODE.QSPI_NORMAL /\QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I /\FIFO_EXISTS.TX_FIFO_II /\xpm_fifo_instance.xpm_fifo_async_inst /\gnuram_async_fifo.xpm_fifo_base_inst /\gen_cdc_pntr.rd_pntr_cdc_inst . (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for U0/\NO_DUAL_QUAD_MODE.QSPI_NORMAL /\QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I /\FIFO_EXISTS.RX_FIFO_II /\gnuram_async_fifo.xpm_fifo_base_inst /\gen_cdc_pntr.wr_pntr_cdc_inst . (constraint file  auto generated constraint).
@@ -695,7 +695,7 @@ Applied set_property KEEP_HIERARCHY = SOFT for U0/\NO_DUAL_QUAD_MODE.QSPI_NORMAL
 Applied set_property KEEP_HIERARCHY = SOFT for U0/\NO_DUAL_QUAD_MODE.QSPI_NORMAL /\QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I /\FIFO_EXISTS.RX_FIFO_II . (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for U0/\NO_DUAL_QUAD_MODE.QSPI_NORMAL /\QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I /\FIFO_EXISTS.TX_FIFO_II /\xpm_fifo_instance.xpm_fifo_async_inst . (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:27 ; elapsed = 00:00:50 . Memory (MB): peak = 2928.246 ; gain = 62.820 ; free physical = 894 ; free virtual = 2065
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:47 . Memory (MB): peak = 2930.148 ; gain = 58.820 ; free physical = 3712 ; free virtual = 15497
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'slave_attachment'
 INFO: [Synth 8-802] inferred FSM for state register 'gen_rst_ic.curr_wrst_state_reg' in module 'xpm_fifo_rst__xdcDup__1'
@@ -787,7 +787,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'gen_fwft.curr_fwft_state_r
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'LOCAL_TX_EMPTY_FIFO_12_GEN.spi_cntrl_ps_reg' using encoding 'sequential' in module 'qspi_mode_0_module'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:29 ; elapsed = 00:00:53 . Memory (MB): peak = 2928.246 ; gain = 62.820 ; free physical = 878 ; free virtual = 2050
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:28 ; elapsed = 00:00:49 . Memory (MB): peak = 2930.148 ; gain = 58.820 ; free physical = 3683 ; free virtual = 15469
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -896,7 +896,7 @@ INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGA
 INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/IO2_I_REG) is unused and will be removed from module axi_quad_spi.
 INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/IO3_I_REG) is unused and will be removed from module axi_quad_spi.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:01:00 . Memory (MB): peak = 2928.246 ; gain = 62.820 ; free physical = 1201 ; free virtual = 2407
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:33 ; elapsed = 00:00:58 . Memory (MB): peak = 2930.148 ; gain = 58.820 ; free physical = 3366 ; free virtual = 15159
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -918,13 +918,13 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:41 ; elapsed = 00:01:09 . Memory (MB): peak = 2928.246 ; gain = 62.820 ; free physical = 2305 ; free virtual = 3588
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:40 ; elapsed = 00:01:12 . Memory (MB): peak = 2930.148 ; gain = 58.820 ; free physical = 1397 ; free virtual = 13195
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:42 ; elapsed = 00:01:11 . Memory (MB): peak = 2928.246 ; gain = 62.820 ; free physical = 2275 ; free virtual = 3579
+Finished Timing Optimization : Time (s): cpu = 00:00:42 ; elapsed = 00:01:15 . Memory (MB): peak = 2930.148 ; gain = 58.820 ; free physical = 1711 ; free virtual = 13509
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -945,7 +945,7 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:43 ; elapsed = 00:01:12 . Memory (MB): peak = 2928.246 ; gain = 62.820 ; free physical = 2242 ; free virtual = 3545
+Finished Technology Mapping : Time (s): cpu = 00:00:42 ; elapsed = 00:01:16 . Memory (MB): peak = 2930.148 ; gain = 58.820 ; free physical = 1847 ; free virtual = 13645
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -963,37 +963,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:50 ; elapsed = 00:01:23 . Memory (MB): peak = 2928.246 ; gain = 62.820 ; free physical = 1724 ; free virtual = 3079
+Finished IO Insertion : Time (s): cpu = 00:00:49 ; elapsed = 00:01:27 . Memory (MB): peak = 2930.148 ; gain = 58.820 ; free physical = 1748 ; free virtual = 13547
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:50 ; elapsed = 00:01:23 . Memory (MB): peak = 2928.246 ; gain = 62.820 ; free physical = 1723 ; free virtual = 3078
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:49 ; elapsed = 00:01:27 . Memory (MB): peak = 2930.148 ; gain = 58.820 ; free physical = 1748 ; free virtual = 13547
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:50 ; elapsed = 00:01:23 . Memory (MB): peak = 2928.246 ; gain = 62.820 ; free physical = 1720 ; free virtual = 3076
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:49 ; elapsed = 00:01:27 . Memory (MB): peak = 2930.148 ; gain = 58.820 ; free physical = 1747 ; free virtual = 13546
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:50 ; elapsed = 00:01:23 . Memory (MB): peak = 2928.246 ; gain = 62.820 ; free physical = 1720 ; free virtual = 3076
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:49 ; elapsed = 00:01:27 . Memory (MB): peak = 2930.148 ; gain = 58.820 ; free physical = 1747 ; free virtual = 13546
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:50 ; elapsed = 00:01:23 . Memory (MB): peak = 2928.246 ; gain = 62.820 ; free physical = 1720 ; free virtual = 3075
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:49 ; elapsed = 00:01:27 . Memory (MB): peak = 2930.148 ; gain = 58.820 ; free physical = 1747 ; free virtual = 13546
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:50 ; elapsed = 00:01:23 . Memory (MB): peak = 2928.246 ; gain = 62.820 ; free physical = 1719 ; free virtual = 3075
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:49 ; elapsed = 00:01:27 . Memory (MB): peak = 2930.148 ; gain = 58.820 ; free physical = 1747 ; free virtual = 13546
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -1023,19 +1023,19 @@ Report Cell Usage:
 |12    |FDSE     |    28|
 +------+---------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:50 ; elapsed = 00:01:23 . Memory (MB): peak = 2928.246 ; gain = 62.820 ; free physical = 1719 ; free virtual = 3074
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:49 ; elapsed = 00:01:27 . Memory (MB): peak = 2930.148 ; gain = 58.820 ; free physical = 1747 ; free virtual = 13546
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 223 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:46 ; elapsed = 00:01:18 . Memory (MB): peak = 2928.246 ; gain = 0.000 ; free physical = 1732 ; free virtual = 3087
-Synthesis Optimization Complete : Time (s): cpu = 00:00:50 ; elapsed = 00:01:23 . Memory (MB): peak = 2928.254 ; gain = 62.820 ; free physical = 1732 ; free virtual = 3087
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:46 ; elapsed = 00:01:22 . Memory (MB): peak = 2930.148 ; gain = 0.000 ; free physical = 1827 ; free virtual = 13626
+Synthesis Optimization Complete : Time (s): cpu = 00:00:49 ; elapsed = 00:01:28 . Memory (MB): peak = 2930.156 ; gain = 58.820 ; free physical = 1827 ; free virtual = 13626
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2928.254 ; gain = 0.000 ; free physical = 1817 ; free virtual = 3173
+Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.05 . Memory (MB): peak = 2930.156 ; gain = 0.000 ; free physical = 1918 ; free virtual = 13717
 INFO: [Netlist 29-17] Analyzing 55 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 WARNING: [Constraints 18-5572] Instance U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/LOGIC_FOR_MD_0_GEN.SPI_MODULE_I/RATIO_NOT_EQUAL_4_GENERATE.SCK_O_NQ_4_NO_STARTUP_USED.SCK_O_NE_4_FDRE_INST has IOB constraint set, However, the instance does not seem to have valid I/O connection to be placed into I/O. The constraint on the instance will be ignored.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2928.254 ; gain = 0.000 ; free physical = 1757 ; free virtual = 3114
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2930.156 ; gain = 0.000 ; free physical = 1825 ; free virtual = 13624
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 55 instances were transformed.
   FD => FDRE: 6 instances
@@ -1047,10 +1047,10 @@ Synth Design complete, checksum: 97de5d96
 INFO: [Common 17-83] Releasing license: Synthesis
 334 Infos, 158 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:00 ; elapsed = 00:01:34 . Memory (MB): peak = 2928.254 ; gain = 62.828 ; free physical = 1914 ; free virtual = 3271
-INFO: [Common 17-1381] The checkpoint '/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.runs/design_1_axi_quad_spi_0_0_synth_1/design_1_axi_quad_spi_0_0.dcp' has been generated.
+synth_design: Time (s): cpu = 00:00:59 ; elapsed = 00:01:38 . Memory (MB): peak = 2930.156 ; gain = 58.828 ; free physical = 1991 ; free virtual = 13790
+INFO: [Common 17-1381] The checkpoint '/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.runs/design_1_axi_quad_spi_0_0_synth_1/design_1_axi_quad_spi_0_0.dcp' has been generated.
 INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_axi_quad_spi_0_0, cache-ID = 3ee6d7dbb1066ec2
 INFO: [Coretcl 2-1174] Renamed 81 cell refs.
-INFO: [Common 17-1381] The checkpoint '/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.runs/design_1_axi_quad_spi_0_0_synth_1/design_1_axi_quad_spi_0_0.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint '/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.runs/design_1_axi_quad_spi_0_0_synth_1/design_1_axi_quad_spi_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_axi_quad_spi_0_0_utilization_synth.rpt -pb design_1_axi_quad_spi_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon May 27 07:33:50 2024...
+INFO: [Common 17-206] Exiting Vivado at Thu Jun 13 08:45:54 2024...

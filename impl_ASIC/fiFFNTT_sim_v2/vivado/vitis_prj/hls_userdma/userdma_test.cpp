@@ -1,6 +1,14 @@
 #include "userdma.h"
 #include "test_data.h"
 
+typedef union {
+		double fpr;
+		struct {
+			unsigned int lower;
+			unsigned int upper;
+			} uin;
+		} fprcell;
+
 void test_NTT (memcell s2m_buf[BUF_LEN], memcell m2s_buf[BUF_LEN], memcell result[BUF_LEN]) {
 	int err = 0;
 	hls::stream<trans_pkt> inStream_t, outStream_t;
@@ -14,14 +22,14 @@ void test_NTT (memcell s2m_buf[BUF_LEN], memcell m2s_buf[BUF_LEN], memcell resul
 
 	// Initialize
 	for (j = 0; j < BUF_LEN; j++){
-		s2m_buf[j].uin.lower = 0;
-		s2m_buf[j].uin.upper = 0;
+		s2m_buf[j].lower = 0;
+		s2m_buf[j].upper = 0;
 	}
 
 
 	// Input NTT first
 	for(int i = 0; i < 1024; i++){
-		m2s_buf[i].uin.lower = NTT_in[i];
+		m2s_buf[i].lower = NTT_in[i];
 	}
 
 	for (int x = 0; x < 1024; x++) {
@@ -56,7 +64,7 @@ void test_NTT (memcell s2m_buf[BUF_LEN], memcell m2s_buf[BUF_LEN], memcell resul
 		printf("s2m_buf, address: %x", s2m_buf);
 		for (j = 0; j < 1024; j++){
 			if((j % 32) == 0) printf("\n");
-			printf("%5d ", s2m_buf[j].uin.lower);
+			printf("%5d ", s2m_buf[j].lower);
 		}
 		printf("\n");
 	}
@@ -72,10 +80,28 @@ void test_NTT (memcell s2m_buf[BUF_LEN], memcell m2s_buf[BUF_LEN], memcell resul
 		}
 		printf("\n");
 	}
+
 	printf("\n");
 	printf("s2m_err: %x", s2m_err);
 	printf("\n");
 	printf("\n");
+/*
+	if ((m2s_buf_sts == 1) && (s2m_buf_sts == 1)) {
+		clr_m2s_sts = 1;
+		clr_s2m_sts = 1;
+		userdma(inStream_t, outStream_t, 2, &s2m_buf_sts, &m2s_buf_sts, s2m_buf, m2s_buf, &s2m_err, clr_s2m_sts, clr_m2s_sts);
+		printf("clear s2m buffer status -> %d\n", s2m_buf_sts);
+		printf("clear m2s buffer status -> %d\n", m2s_buf_sts);
+	} else if (m2s_buf_sts == 1) {
+		clr_m2s_sts = 1;
+		userdma(inStream_t, outStream_t, 2, &s2m_buf_sts, &m2s_buf_sts, s2m_buf, m2s_buf, &s2m_err, clr_s2m_sts, clr_m2s_sts);
+		printf("clear m2s buffer status -> %d\n", m2s_buf_sts);
+	} else if (s2m_buf_sts == 1) {
+		clr_s2m_sts = 1;
+		userdma(inStream_t, outStream_t, 2, &s2m_buf_sts, &m2s_buf_sts, s2m_buf, m2s_buf, &s2m_err, clr_s2m_sts, clr_m2s_sts);
+		printf("clear s2m buffer status -> %d\n", s2m_buf_sts);
+	}
+*/
 }
 
 void test_FFT (memcell s2m_buf[BUF_LEN], memcell m2s_buf[BUF_LEN], memcell result[BUF_LEN]) {
@@ -89,26 +115,33 @@ void test_FFT (memcell s2m_buf[BUF_LEN], memcell m2s_buf[BUF_LEN], memcell resul
 
 	int	j;
 
+	fprcell f;
+
 	// Initialize
 	for (j = 0; j < BUF_LEN; j++){
-		s2m_buf[j].fpr = 0;
+		s2m_buf[j].lower = 0;
+		s2m_buf[j].upper = 0;
 	}
 
 
 	// Input NTT first
 	for(int i = 0; i < 1024; i++){
-		m2s_buf[i].fpr = FFT_in[i];
+		f.fpr = FFT_in[i];
+		m2s_buf[i].lower = f.uin.lower;
+		m2s_buf[i].upper = f.uin.upper;
 	}
 	bool high = 0;
 	memcell fft_out;
 	for (int x = 0; x < 1024; x++) {
-		fft_out.fpr = FFT_out[x];
-		dataStream_t.data = fft_out.uin.lower;
+		f.fpr = FFT_out[x];
+		fft_out.lower = f.uin.lower;
+		fft_out.upper = f.uin.upper;
+		dataStream_t.data = fft_out.lower;
 		dataStream_t.keep = -1;
 		dataStream_t.user = (x == 0);
 		dataStream_t.last = 0;
 		inStream_t.write(dataStream_t);
-		dataStream_t.data = fft_out.uin.upper;
+		dataStream_t.data = fft_out.upper;
 		dataStream_t.keep = -1;
 		dataStream_t.user = (x == 0);
 		dataStream_t.last = (x == 1023);
@@ -138,7 +171,9 @@ void test_FFT (memcell s2m_buf[BUF_LEN], memcell m2s_buf[BUF_LEN], memcell resul
 		printf("s2m_buf, address: %x", s2m_buf);
 		for (j = 0; j < 1024; j++){
 			if((j % 8) == 0) printf("\n");
-			printf("%15f ", s2m_buf[j].fpr);
+			f.uin.lower = s2m_buf[j].lower;
+			f.uin.upper = s2m_buf[j].upper;
+			printf("%15f ", f.fpr);
 		}
 		printf("\n");
 	}
@@ -151,14 +186,17 @@ void test_FFT (memcell s2m_buf[BUF_LEN], memcell m2s_buf[BUF_LEN], memcell resul
 		printf("\nFirst Programmed Data for fiFFNTT mode: %5d \n\n", dataStream_t.data);
 		for (j = 0; j < 1024; j++){
 			dataStream_t = outStream_t.read();
-			m2s_data[j].uin.lower = dataStream_t.data;
+			m2s_data[j].lower = dataStream_t.data;
 			dataStream_t = outStream_t.read();
-			m2s_data[j].uin.upper = dataStream_t.data;
+			m2s_data[j].upper = dataStream_t.data;
 			if((j % 16) == 0) printf("\n");
-			printf("%15f ", m2s_data[j].fpr);
+			f.uin.lower = m2s_data[j].lower;
+			f.uin.upper = m2s_data[j].upper;
+			printf("%15f ", f.fpr);
 		}
 		printf("\n");
 	}
+
 	printf("\n");
 	printf("s2m_err: %x", s2m_err);
 	printf("\n");
@@ -170,18 +208,6 @@ int main() {
 
 	test_FFT(s2m_buf, m2s_buf, result);
 	test_NTT(s2m_buf, m2s_buf, result);
-/*
-  if((s2m_buf_sts == 1) && (m2s_buf_sts == 1)){
-	  userdma(inStream_t, &s2m_buf_sts, S2M_LEN,  s2m_buf, &s2m_err, m2s_buf, &m2s_buf_sts, M2S_LEN, outStream_t);
-	  printf("clear s2m_buf_sts -> %d\n", s2m_buf_sts);
-	  printf("clear m2s_buf_sts -> %d\n", m2s_buf_sts);
-  } else if((s2m_buf_sts == 1) && (m2s_buf_sts == 0)){
-	  userdma(inStream_t, &s2m_buf_sts, S2M_LEN,  s2m_buf, &s2m_err, m2s_buf, &m2s_buf_sts, M2S_LEN, outStream_t);
-	  printf("clear s2m_buf_sts -> %d\n", s2m_buf_sts);
-  } else if((s2m_buf_sts == 0) && (m2s_buf_sts == 1)){
-	  userdma(inStream_t, &s2m_buf_sts, S2M_LEN,  s2m_buf, &s2m_err, m2s_buf, &m2s_buf_sts, M2S_LEN, outStream_t);
-	  printf("clear m2s_buf_sts -> %d\n", m2s_buf_sts);
-  }
-*/
+
 	return 0;
 }

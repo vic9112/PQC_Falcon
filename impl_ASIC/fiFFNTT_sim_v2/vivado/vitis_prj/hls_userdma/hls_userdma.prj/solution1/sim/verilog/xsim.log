@@ -2,25 +2,39 @@
 # xsim v2022.1 (64-bit)
 # SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
 # IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
-# Start of session at: Fri May 24 13:44:01 2024
-# Process ID: 23062
+# Start of session at: Wed May 29 13:00:50 2024
+# Process ID: 415714
 # Current directory: /home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma/hls_userdma.prj/solution1/sim/verilog
-# Command line: xsim -mode tcl -source {xsim.dir/userdma/xsim_script.tcl}
+# Command line: xsim -source {xsim.dir/userdma/xsim_script.tcl}
 # Log file: /home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma/hls_userdma.prj/solution1/sim/verilog/xsim.log
 # Journal file: /home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma/hls_userdma.prj/solution1/sim/verilog/xsim.jou
 # Running On: ubuntu2004, OS: Linux, CPU Frequency: 2592.000 MHz, CPU Physical cores: 2, Host memory: 10425 MB
 #-----------------------------------------------------------
+start_gui
 source xsim.dir/userdma/xsim_script.tcl
+# set_param project.enableReportConfiguration 0
+# load_feature core
+# current_fileset
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es:part0:1.2 available at /tools/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/es/1.2/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es_revb:part0:1.0 available at /tools/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120_revb/es/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at /tools/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at /tools/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at /tools/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/2.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at /tools/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2022.1/data/ip'.
+current_fileset: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 8377.836 ; gain = 0.000 ; free physical = 1085 ; free virtual = 17150
 # xsim {userdma} -view {{userdma_dataflow_ana.wcfg}} -tclbatch {userdma.tcl} -protoinst {userdma.protoinst}
 INFO: [Wavedata 42-565] Reading protoinst file userdma.protoinst
 INFO: [Wavedata 42-564]   Found protocol instance at /apatb_userdma_top/AESL_inst_userdma//AESL_inst_userdma_activity
 INFO: [Wavedata 42-564]   Found protocol instance at /apatb_userdma_top/AESL_inst_userdma/entry_proc_U0/entry_proc_U0_activity
 INFO: [Wavedata 42-564]   Found protocol instance at /apatb_userdma_top/AESL_inst_userdma/getinstream_U0/getinstream_U0_activity
-INFO: [Wavedata 42-564]   Found protocol instance at /apatb_userdma_top/AESL_inst_userdma/getinstream_U0/grp_getinstream_Pipeline_VITIS_LOOP_84_1_fu_93/grp_getinstream_Pipeline_VITIS_LOOP_84_1_fu_93_activity
-INFO: [Wavedata 42-564]   Found protocol instance at /apatb_userdma_top/AESL_inst_userdma/paralleltostreamwithburst_U0/grp_paralleltostreamwithburst_Pipeline_VITIS_LOOP_138_2_fu_121/grp_paralleltostreamwithburst_Pipeline_VITIS_LOOP_138_2_fu_121_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_userdma_top/AESL_inst_userdma/getinstream_U0/grp_getinstream_Pipeline_VITIS_LOOP_72_1_fu_93/grp_getinstream_Pipeline_VITIS_LOOP_72_1_fu_93_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_userdma_top/AESL_inst_userdma/paralleltostreamwithburst_U0/grp_paralleltostreamwithburst_Pipeline_VITIS_LOOP_128_2_fu_117/grp_paralleltostreamwithburst_Pipeline_VITIS_LOOP_128_2_fu_117_activity
 INFO: [Wavedata 42-564]   Found protocol instance at /apatb_userdma_top/AESL_inst_userdma/paralleltostreamwithburst_U0/paralleltostreamwithburst_U0_activity
 INFO: [Wavedata 42-564]   Found protocol instance at /apatb_userdma_top/AESL_inst_userdma/sendoutstream_U0/sendoutstream_U0_activity
-INFO: [Wavedata 42-564]   Found protocol instance at /apatb_userdma_top/AESL_inst_userdma/streamtoparallelwithburst_U0/grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123/grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_userdma_top/AESL_inst_userdma/streamtoparallelwithburst_U0/grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129/grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_activity
 INFO: [Wavedata 42-564]   Found protocol instance at /apatb_userdma_top/AESL_inst_userdma/streamtoparallelwithburst_U0/streamtoparallelwithburst_U0_activity
 Time resolution is 1 ps
 open_wave_config userdma_dataflow_ana.wcfg
@@ -343,10 +357,15 @@ WARNING: [Simtcl 6-197] One or more HDL objects could not be logged because of o
 // RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
 ////////////////////////////////////////////////////////////////////////////////////
 // RTL Simulation : 0 / 2 [n/a] @ "125000"
-// RTL Simulation : 1 / 2 [n/a] @ "55165000"
-// RTL Simulation : 2 / 2 [n/a] @ "83155000"
+// RTL Simulation : 1 / 2 [n/a] @ "62725000"
+// RTL Simulation : 2 / 2 [n/a] @ "95635000"
 ////////////////////////////////////////////////////////////////////////////////////
-$finish called at time : 83215 ns : File "/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma/hls_userdma.prj/solution1/sim/verilog/userdma.autotb.v" Line 749
-run: Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 3059.383 ; gain = 0.000 ; free physical = 1069 ; free virtual = 14982
-## quit
-INFO: [Common 17-206] Exiting xsim at Fri May 24 13:44:16 2024...
+$finish called at time : 95695 ns : File "/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma/hls_userdma.prj/solution1/sim/verilog/userdma.autotb.v" Line 749
+run: Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 8377.836 ; gain = 0.000 ; free physical = 927 ; free virtual = 17014
+xsim: Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 8377.836 ; gain = 0.000 ; free physical = 927 ; free virtual = 17014
+current_wave_config {userdma.wcfg}
+userdma.wcfg
+add_wave {{/apatb_userdma_top/AESL_inst_userdma/s2m_buf_sts}} 
+current_wave_config {userdma.wcfg}
+userdma.wcfg
+add_wave {{/apatb_userdma_top/AESL_inst_userdma/m2s_buf_sts}} 

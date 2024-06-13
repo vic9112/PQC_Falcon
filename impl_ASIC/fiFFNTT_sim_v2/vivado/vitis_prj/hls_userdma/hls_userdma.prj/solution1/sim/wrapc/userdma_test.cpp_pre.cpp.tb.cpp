@@ -74962,17 +74962,13 @@ public:
 
 
 
-
-
 typedef ap_axiu<32, 2, 0, 0> trans_pkt;
 
-typedef union {
-  double fpr;
-  struct {
-   unsigned int lower;
-   unsigned int upper;
-   } uin;
-  } memcell;
+
+struct memcell {
+ ap_uint<32> lower;
+ ap_uint<32> upper;
+};
 
 void userdma(
   hls::stream<trans_pkt> &inStreamTop,
@@ -74984,8 +74980,8 @@ void userdma(
   memcell m2sbuf[1024],
   ap_uint<2> *s2m_err);
 
-static constexpr int MAX_BURST_LENGTH = 32;
-static constexpr int BUFFER_FACTOR = 2;
+static constexpr int MAX_BURST_LENGTH = 256;
+static constexpr int BUFFER_FACTOR = 4;
 
 
 static constexpr int DATA_DEPTH = MAX_BURST_LENGTH * BUFFER_FACTOR;
@@ -74993,12 +74989,6 @@ static constexpr int COUNT_DEPTH = BUFFER_FACTOR;
 
 struct data {
  ap_int<32> data_filed;
- ap_int<1> last;
-};
-
-struct out_data {
- ap_int<32> data_filed;
- ap_int<2> upsb;
  ap_int<1> last;
 };
 # 2 "/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma/userdma_test.cpp" 2
@@ -75089,13 +75079,21 @@ static const double FFT_out[] = {73835.09279755657189526,
 -72158.97469416672538500, 38303.67460635968018323, -1298519.35143863083794713,};
 # 3 "/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma/userdma_test.cpp" 2
 
+typedef union {
+  double fpr;
+  struct {
+   unsigned int lower;
+   unsigned int upper;
+   } uin;
+  } fprcell;
+
 
 #ifndef HLS_FASTSIM
 #ifdef __cplusplus
 extern "C"
 #endif
 void apatb_userdma_sw(hls::stream<hls::axis<ap_uint<32>, 2, 0, 0>, 0> &, hls::stream<hls::axis<ap_uint<32>, 2, 0, 0>, 0> &, ap_uint<2>, bool *, bool *, memcell *, memcell *, ap_uint<2> *);
-# 4 "/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma/userdma_test.cpp"
+# 12 "/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma/userdma_test.cpp"
 void test_NTT (memcell s2m_buf[1024], memcell m2s_buf[1024], memcell result[1024]) {
  int err = 0;
  hls::stream<trans_pkt> inStream_t, outStream_t;
@@ -75109,14 +75107,14 @@ void test_NTT (memcell s2m_buf[1024], memcell m2s_buf[1024], memcell result[1024
 
 
  for (j = 0; j < 1024; j++){
-  s2m_buf[j].uin.lower = 0;
-  s2m_buf[j].uin.upper = 0;
+  s2m_buf[j].lower = 0;
+  s2m_buf[j].upper = 0;
  }
 
 
 
  for(int i = 0; i < 1024; i++){
-  m2s_buf[i].uin.lower = NTT_in[i];
+  m2s_buf[i].lower = NTT_in[i];
  }
 
  for (int x = 0; x < 1024; x++) {
@@ -75140,10 +75138,10 @@ void test_NTT (memcell s2m_buf[1024], memcell m2s_buf[1024], memcell result[1024
 #ifndef HLS_FASTSIM
 #define userdma apatb_userdma_sw
 #endif
-# 44 "/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma/userdma_test.cpp"
+# 52 "/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma/userdma_test.cpp"
 userdma(inStream_t, outStream_t, 2, &s2m_buf_sts, &m2s_buf_sts, s2m_buf, m2s_buf, &s2m_err);
 #undef userdma
-# 44 "/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma/userdma_test.cpp"
+# 52 "/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma/userdma_test.cpp"
 
 
  printf("\n");
@@ -75159,7 +75157,7 @@ userdma(inStream_t, outStream_t, 2, &s2m_buf_sts, &m2s_buf_sts, s2m_buf, m2s_buf
   printf("s2m_buf, address: %x", s2m_buf);
   for (j = 0; j < 1024; j++){
    if((j % 32) == 0) printf("\n");
-   printf("%5d ", s2m_buf[j].uin.lower);
+   printf("%5d ", s2m_buf[j].lower);
   }
   printf("\n");
  }
@@ -75175,13 +75173,15 @@ userdma(inStream_t, outStream_t, 2, &s2m_buf_sts, &m2s_buf_sts, s2m_buf, m2s_buf
   }
   printf("\n");
  }
+
  printf("\n");
  printf("s2m_err: %x", s2m_err);
  printf("\n");
  printf("\n");
+# 105 "/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma/userdma_test.cpp"
 }
 #endif
-# 79 "/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma/userdma_test.cpp"
+# 105 "/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma/userdma_test.cpp"
 
 
 
@@ -75190,7 +75190,7 @@ userdma(inStream_t, outStream_t, 2, &s2m_buf_sts, &m2s_buf_sts, s2m_buf, m2s_buf
 extern "C"
 #endif
 void apatb_userdma_sw(hls::stream<hls::axis<ap_uint<32>, 2, 0, 0>, 0> &, hls::stream<hls::axis<ap_uint<32>, 2, 0, 0>, 0> &, ap_uint<2>, bool *, bool *, memcell *, memcell *, ap_uint<2> *);
-# 81 "/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma/userdma_test.cpp"
+# 107 "/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma/userdma_test.cpp"
 void test_FFT (memcell s2m_buf[1024], memcell m2s_buf[1024], memcell result[1024]) {
  int err = 0;
  hls::stream<trans_pkt> inStream_t, outStream_t;
@@ -75202,26 +75202,33 @@ void test_FFT (memcell s2m_buf[1024], memcell m2s_buf[1024], memcell result[1024
 
  int j;
 
+ fprcell f;
+
 
  for (j = 0; j < 1024; j++){
-  s2m_buf[j].fpr = 0;
+  s2m_buf[j].lower = 0;
+  s2m_buf[j].upper = 0;
  }
 
 
 
  for(int i = 0; i < 1024; i++){
-  m2s_buf[i].fpr = FFT_in[i];
+  f.fpr = FFT_in[i];
+  m2s_buf[i].lower = f.uin.lower;
+  m2s_buf[i].upper = f.uin.upper;
  }
  bool high = 0;
  memcell fft_out;
  for (int x = 0; x < 1024; x++) {
-  fft_out.fpr = FFT_out[x];
-  dataStream_t.data = fft_out.uin.lower;
+  f.fpr = FFT_out[x];
+  fft_out.lower = f.uin.lower;
+  fft_out.upper = f.uin.upper;
+  dataStream_t.data = fft_out.lower;
   dataStream_t.keep = -1;
   dataStream_t.user = (x == 0);
   dataStream_t.last = 0;
   inStream_t.write(dataStream_t);
-  dataStream_t.data = fft_out.uin.upper;
+  dataStream_t.data = fft_out.upper;
   dataStream_t.keep = -1;
   dataStream_t.user = (x == 0);
   dataStream_t.last = (x == 1023);
@@ -75240,10 +75247,10 @@ void test_FFT (memcell s2m_buf[1024], memcell m2s_buf[1024], memcell result[1024
 #ifndef HLS_FASTSIM
 #define userdma apatb_userdma_sw
 #endif
-# 126 "/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma/userdma_test.cpp"
+# 159 "/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma/userdma_test.cpp"
 userdma(inStream_t, outStream_t, 0, &s2m_buf_sts, &m2s_buf_sts, s2m_buf, m2s_buf, &s2m_err);
 #undef userdma
-# 126 "/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma/userdma_test.cpp"
+# 159 "/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma/userdma_test.cpp"
 
 
  printf("\n");
@@ -75259,7 +75266,9 @@ userdma(inStream_t, outStream_t, 0, &s2m_buf_sts, &m2s_buf_sts, s2m_buf, m2s_buf
   printf("s2m_buf, address: %x", s2m_buf);
   for (j = 0; j < 1024; j++){
    if((j % 8) == 0) printf("\n");
-   printf("%15f ", s2m_buf[j].fpr);
+   f.uin.lower = s2m_buf[j].lower;
+   f.uin.upper = s2m_buf[j].upper;
+   printf("%15f ", f.fpr);
   }
   printf("\n");
  }
@@ -75272,21 +75281,24 @@ userdma(inStream_t, outStream_t, 0, &s2m_buf_sts, &m2s_buf_sts, s2m_buf, m2s_buf
   printf("\nFirst Programmed Data for fiFFNTT mode: %5d \n\n", dataStream_t.data);
   for (j = 0; j < 1024; j++){
    dataStream_t = outStream_t.read();
-   m2s_data[j].uin.lower = dataStream_t.data;
+   m2s_data[j].lower = dataStream_t.data;
    dataStream_t = outStream_t.read();
-   m2s_data[j].uin.upper = dataStream_t.data;
+   m2s_data[j].upper = dataStream_t.data;
    if((j % 16) == 0) printf("\n");
-   printf("%15f ", m2s_data[j].fpr);
+   f.uin.lower = m2s_data[j].lower;
+   f.uin.upper = m2s_data[j].upper;
+   printf("%15f ", f.fpr);
   }
   printf("\n");
  }
+
  printf("\n");
  printf("s2m_err: %x", s2m_err);
  printf("\n");
  printf("\n");
 }
 #endif
-# 166 "/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma/userdma_test.cpp"
+# 204 "/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma/userdma_test.cpp"
 
 
 int main() {
@@ -75294,6 +75306,6 @@ int main() {
 
  test_FFT(s2m_buf, m2s_buf, result);
  test_NTT(s2m_buf, m2s_buf, result);
-# 186 "/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma/userdma_test.cpp"
+
  return 0;
 }

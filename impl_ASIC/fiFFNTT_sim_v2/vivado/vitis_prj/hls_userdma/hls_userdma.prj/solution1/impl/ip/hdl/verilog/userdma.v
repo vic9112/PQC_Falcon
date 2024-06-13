@@ -7,7 +7,7 @@
 
 `timescale 1 ns / 1 ps 
 
-(* CORE_GENERATION_INFO="userdma_userdma,hls_ip_2022_1,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020-clg400-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=7.300000,HLS_SYN_LAT=-1,HLS_SYN_TPT=-1,HLS_SYN_MEM=4,HLS_SYN_DSP=0,HLS_SYN_FF=5579,HLS_SYN_LUT=7599,HLS_VERSION=2022_1}" *)
+(* CORE_GENERATION_INFO="userdma_userdma,hls_ip_2022_1,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020-clg400-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=7.300000,HLS_SYN_LAT=-1,HLS_SYN_TPT=-1,HLS_SYN_MEM=4,HLS_SYN_DSP=0,HLS_SYN_FF=5067,HLS_SYN_LUT=9160,HLS_VERSION=2022_1}" *)
 
 module userdma (
         s_axi_control_AWVALID,
@@ -321,7 +321,7 @@ wire    gmem1_RVALID;
 wire   [63:0] gmem1_RDATA;
 wire    gmem1_RLAST;
 wire   [0:0] gmem1_RID;
-wire   [9:0] gmem1_RFIFONUM;
+wire   [10:0] gmem1_RFIFONUM;
 wire   [0:0] gmem1_RUSER;
 wire   [1:0] gmem1_RRESP;
 wire    gmem1_BVALID;
@@ -430,7 +430,7 @@ wire   [3:0] paralleltostreamwithburst_U0_m_axi_gmem1_ARREGION;
 wire   [0:0] paralleltostreamwithburst_U0_m_axi_gmem1_ARUSER;
 wire    paralleltostreamwithburst_U0_m_axi_gmem1_RREADY;
 wire    paralleltostreamwithburst_U0_m_axi_gmem1_BREADY;
-wire   [34:0] paralleltostreamwithburst_U0_outbuf_din;
+wire   [32:0] paralleltostreamwithburst_U0_outbuf_din;
 wire    paralleltostreamwithburst_U0_outbuf_write;
 wire    sendoutstream_U0_ap_start;
 wire    sendoutstream_U0_ap_done;
@@ -453,13 +453,13 @@ wire   [2:0] s2mbuf_c_fifo_cap;
 wire    s2mbuf_c_empty_n;
 wire    inbuf_full_n;
 wire   [32:0] inbuf_dout;
-wire   [6:0] inbuf_num_data_valid;
-wire   [6:0] inbuf_fifo_cap;
+wire   [10:0] inbuf_num_data_valid;
+wire   [10:0] inbuf_fifo_cap;
 wire    inbuf_empty_n;
 wire    incount_full_n;
 wire   [31:0] incount_dout;
-wire   [1:0] incount_num_data_valid;
-wire   [1:0] incount_fifo_cap;
+wire   [2:0] incount_num_data_valid;
+wire   [2:0] incount_fifo_cap;
 wire    incount_empty_n;
 wire    kernel_mode_c_full_n;
 wire   [1:0] kernel_mode_c_dout;
@@ -467,9 +467,9 @@ wire   [1:0] kernel_mode_c_num_data_valid;
 wire   [1:0] kernel_mode_c_fifo_cap;
 wire    kernel_mode_c_empty_n;
 wire    outbuf_full_n;
-wire   [34:0] outbuf_dout;
-wire   [6:0] outbuf_num_data_valid;
-wire   [6:0] outbuf_fifo_cap;
+wire   [32:0] outbuf_dout;
+wire   [10:0] outbuf_num_data_valid;
+wire   [10:0] outbuf_fifo_cap;
 wire    outbuf_empty_n;
 wire    ap_sync_done;
 wire    ap_sync_ready;
@@ -538,11 +538,11 @@ control_s_axi_U(
 
 userdma_gmem0_m_axi #(
     .CONSERVATIVE( 1 ),
-    .USER_MAXREQS( 15 ),
+    .USER_MAXREQS( 5 ),
     .NUM_READ_OUTSTANDING( 16 ),
     .NUM_WRITE_OUTSTANDING( 16 ),
     .MAX_READ_BURST_LENGTH( 16 ),
-    .MAX_WRITE_BURST_LENGTH( 32 ),
+    .MAX_WRITE_BURST_LENGTH( 256 ),
     .USER_RFIFONUM_WIDTH( 9 ),
     .C_M_AXI_ID_WIDTH( C_M_AXI_GMEM0_ID_WIDTH ),
     .C_M_AXI_ADDR_WIDTH( C_M_AXI_GMEM0_ADDR_WIDTH ),
@@ -628,12 +628,12 @@ gmem0_m_axi_U(
 
 userdma_gmem1_m_axi #(
     .CONSERVATIVE( 1 ),
-    .USER_MAXREQS( 15 ),
-    .NUM_READ_OUTSTANDING( 16 ),
+    .USER_MAXREQS( 5 ),
+    .NUM_READ_OUTSTANDING( 4 ),
     .NUM_WRITE_OUTSTANDING( 16 ),
-    .MAX_READ_BURST_LENGTH( 32 ),
+    .MAX_READ_BURST_LENGTH( 256 ),
     .MAX_WRITE_BURST_LENGTH( 16 ),
-    .USER_RFIFONUM_WIDTH( 10 ),
+    .USER_RFIFONUM_WIDTH( 11 ),
     .C_M_AXI_ID_WIDTH( C_M_AXI_GMEM1_ID_WIDTH ),
     .C_M_AXI_ADDR_WIDTH( C_M_AXI_GMEM1_ADDR_WIDTH ),
     .C_M_AXI_DATA_WIDTH( C_M_AXI_GMEM1_DATA_WIDTH ),
@@ -953,7 +953,7 @@ userdma_fifo_w64_d3_S s2mbuf_c_U(
     .if_read(streamtoparallelwithburst_U0_out_memory_read)
 );
 
-userdma_fifo_w33_d64_A inbuf_U(
+userdma_fifo_w33_d1024_A inbuf_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
     .if_read_ce(1'b1),
@@ -968,7 +968,7 @@ userdma_fifo_w33_d64_A inbuf_U(
     .if_read(streamtoparallelwithburst_U0_inbuf_read)
 );
 
-userdma_fifo_w32_d2_S incount_U(
+userdma_fifo_w32_d4_S incount_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
     .if_read_ce(1'b1),
@@ -998,7 +998,7 @@ userdma_fifo_w2_d2_S kernel_mode_c_U(
     .if_read(streamtoparallelwithburst_U0_kernel_mode_read)
 );
 
-userdma_fifo_w35_d64_A outbuf_U(
+userdma_fifo_w33_d1024_A outbuf_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
     .if_read_ce(1'b1),

@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.1 (lin64) Build 3526262 Mon Apr 18 15:47:01 MDT 2022
-| Date         : Mon May 27 09:59:10 2024
+| Date         : Thu Jun 13 09:51:05 2024
 | Host         : ubuntu2004 running 64-bit Ubuntu 20.04.6 LTS
 | Command      : report_methodology -file design_1_wrapper_methodology_drc_routed.rpt -pb design_1_wrapper_methodology_drc_routed.pb -rpx design_1_wrapper_methodology_drc_routed.rpx
 | Design       : design_1_wrapper
@@ -23,7 +23,7 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 1294
+             Violations found: 1291
 +-----------+------------------+----------------------------------------------------+------------+
 | Rule      | Severity         | Description                                        | Violations |
 +-----------+------------------+----------------------------------------------------+------------+
@@ -32,7 +32,7 @@ Table of Contents
 | TIMING-14 | Critical Warning | LUT on the clock tree                              | 3          |
 | TIMING-17 | Critical Warning | Non-clocked sequential cell                        | 1000       |
 | LUTAR-1   | Warning          | LUT drives async reset alert                       | 13         |
-| TIMING-20 | Warning          | Non-clocked latch                                  | 275        |
+| TIMING-20 | Warning          | Non-clocked latch                                  | 272        |
 | LATCH-1   | Advisory         | Existing latches in the design                     | 1          |
 +-----------+------------------+----------------------------------------------------+------------+
 
@@ -55,12 +55,12 @@ Related violations: <none>
 
 TIMING-14#2 Critical Warning
 LUT on the clock tree  
-The LUT design_1_i/caravel_0/inst/mprj/u_fsic/U_IO_SERDES0/mprj_o[35]_INST_0_i_4 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
+The LUT design_1_i/caravel_0/inst/mprj/u_fsic/U_IO_SERDES0/serial_tclk_INST_0 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
 Related violations: <none>
 
 TIMING-14#3 Critical Warning
 LUT on the clock tree  
-The LUT design_1_i/ps_axil_0/inst/PL_IS/caravel_mprj_out[21]_INST_0 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
+The LUT design_1_i/ps_axil_0/inst/PL_IS/serial_tclk_INST_0 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
 Related violations: <none>
 
 TIMING-17#1 Critical Warning
@@ -5185,27 +5185,7 @@ Related violations: <none>
 
 LUTAR-1#7 Warning
 LUT drives async reset alert  
-LUT cell design_1_i/caravel_0/inst/mprj/u_fsic/U_FSIC_CLKRST0/pre_as_is_tdata_buf[31]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/caravel_0/inst/mprj/u_fsic/U_IO_SERDES0/pre_as_is_tid_tuser_buf_reg[2]/CLR,
-design_1_i/caravel_0/inst/mprj/u_fsic/U_IO_SERDES0/pre_as_is_tid_tuser_buf_reg[3]/CLR,
-design_1_i/caravel_0/inst/mprj/u_fsic/U_IO_SERDES0/pre_as_is_tkeep_buf_reg[0]/CLR,
-design_1_i/caravel_0/inst/mprj/u_fsic/U_IO_SERDES0/pre_as_is_tkeep_buf_reg[1]/CLR,
-design_1_i/caravel_0/inst/mprj/u_fsic/U_IO_SERDES0/pre_as_is_tkeep_buf_reg[2]/CLR,
-design_1_i/caravel_0/inst/mprj/u_fsic/U_IO_SERDES0/pre_as_is_tkeep_buf_reg[3]/CLR,
-design_1_i/caravel_0/inst/mprj/u_fsic/U_IO_SERDES0/pre_as_is_tstrb_buf_reg[0]/CLR,
-design_1_i/caravel_0/inst/mprj/u_fsic/U_IO_SERDES0/pre_as_is_tstrb_buf_reg[1]/CLR,
-design_1_i/caravel_0/inst/mprj/u_fsic/U_IO_SERDES0/pre_as_is_tstrb_buf_reg[2]/CLR,
-design_1_i/caravel_0/inst/mprj/u_fsic/U_IO_SERDES0/pre_as_is_tstrb_buf_reg[3]/CLR,
-design_1_i/caravel_0/inst/mprj/u_fsic/U_IO_SERDES0/pre_as_is_tupsb_4_1_buf_reg[0]/CLR,
-design_1_i/caravel_0/inst/mprj/u_fsic/U_IO_SERDES0/pre_as_is_tupsb_tlast_tvalid_tready_buf_reg[0]/CLR,
-design_1_i/caravel_0/inst/mprj/u_fsic/U_IO_SERDES0/pre_as_is_tupsb_tlast_tvalid_tready_buf_reg[1]/CLR,
-design_1_i/caravel_0/inst/mprj/u_fsic/U_IO_SERDES0/pre_as_is_tupsb_tlast_tvalid_tready_buf_reg[2]/CLR,
-design_1_i/caravel_0/inst/mprj/u_fsic/U_IO_SERDES0/pre_as_is_tupsb_tlast_tvalid_tready_buf_reg[3]/CLR
- (the first 15 of 51 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
-Related violations: <none>
-
-LUTAR-1#8 Warning
-LUT drives async reset alert  
-LUT cell design_1_i/caravel_0/inst/mprj/u_fsic/U_FSIC_CLKRST0/w_ptr[2]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/caravel_0/inst/mprj/u_fsic/U_IO_SERDES0/genblk2[6].fsic_io_serdes_rx_tdata/RxFifo_reg[1]/CLR,
+LUT cell design_1_i/caravel_0/inst/mprj/u_fsic/U_IO_SERDES0/genblk2[7].fsic_io_serdes_rx_tdata/w_ptr[2]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/caravel_0/inst/mprj/u_fsic/U_IO_SERDES0/genblk2[6].fsic_io_serdes_rx_tdata/RxFifo_reg[1]/CLR,
 design_1_i/caravel_0/inst/mprj/u_fsic/U_IO_SERDES0/genblk2[6].fsic_io_serdes_rx_tdata/RxFifo_reg[2]/CLR,
 design_1_i/caravel_0/inst/mprj/u_fsic/U_IO_SERDES0/genblk2[6].fsic_io_serdes_rx_tdata/RxFifo_reg[3]/CLR,
 design_1_i/caravel_0/inst/mprj/u_fsic/U_IO_SERDES0/genblk2[6].fsic_io_serdes_rx_tdata/RxFifo_reg[4]/CLR,
@@ -5220,7 +5200,27 @@ design_1_i/caravel_0/inst/mprj/u_fsic/U_IO_SERDES0/genblk2[7].fsic_io_serdes_rx_
 design_1_i/caravel_0/inst/mprj/u_fsic/U_IO_SERDES0/genblk2[7].fsic_io_serdes_rx_tdata/w_ptr_reg[0]/CLR,
 design_1_i/caravel_0/inst/mprj/u_fsic/U_IO_SERDES0/genblk2[7].fsic_io_serdes_rx_tdata/w_ptr_reg[1]/CLR,
 design_1_i/caravel_0/inst/mprj/u_fsic/U_IO_SERDES0/genblk2[7].fsic_io_serdes_rx_tdata/w_ptr_reg[2]/CLR
- (the first 15 of 96 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+ (the first 15 of 104 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#8 Warning
+LUT drives async reset alert  
+LUT cell design_1_i/caravel_0/inst/mprj/u_fsic/U_IO_SERDES0/is_as_tready_out_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/caravel_0/inst/mprj/u_fsic/U_IO_SERDES0/pre_as_is_tkeep_buf_reg[1]/CLR,
+design_1_i/caravel_0/inst/mprj/u_fsic/U_IO_SERDES0/pre_as_is_tkeep_buf_reg[2]/CLR,
+design_1_i/caravel_0/inst/mprj/u_fsic/U_IO_SERDES0/pre_as_is_tkeep_buf_reg[3]/CLR,
+design_1_i/caravel_0/inst/mprj/u_fsic/U_IO_SERDES0/pre_as_is_tstrb_buf_reg[0]/CLR,
+design_1_i/caravel_0/inst/mprj/u_fsic/U_IO_SERDES0/pre_as_is_tstrb_buf_reg[1]/CLR,
+design_1_i/caravel_0/inst/mprj/u_fsic/U_IO_SERDES0/pre_as_is_tstrb_buf_reg[2]/CLR,
+design_1_i/caravel_0/inst/mprj/u_fsic/U_IO_SERDES0/pre_as_is_tstrb_buf_reg[3]/CLR,
+design_1_i/caravel_0/inst/mprj/u_fsic/U_IO_SERDES0/pre_as_is_tupsb_4_1_buf_reg[0]/CLR,
+design_1_i/caravel_0/inst/mprj/u_fsic/U_IO_SERDES0/pre_as_is_tupsb_4_1_buf_reg[1]/CLR,
+design_1_i/caravel_0/inst/mprj/u_fsic/U_IO_SERDES0/pre_as_is_tupsb_4_1_buf_reg[2]/CLR,
+design_1_i/caravel_0/inst/mprj/u_fsic/U_IO_SERDES0/pre_as_is_tupsb_4_1_buf_reg[3]/CLR,
+design_1_i/caravel_0/inst/mprj/u_fsic/U_IO_SERDES0/pre_as_is_tupsb_tlast_tvalid_tready_buf_reg[0]/CLR,
+design_1_i/caravel_0/inst/mprj/u_fsic/U_IO_SERDES0/pre_as_is_tupsb_tlast_tvalid_tready_buf_reg[1]/CLR,
+design_1_i/caravel_0/inst/mprj/u_fsic/U_IO_SERDES0/pre_as_is_tupsb_tlast_tvalid_tready_buf_reg[2]/CLR,
+design_1_i/caravel_0/inst/mprj/u_fsic/U_IO_SERDES0/pre_as_is_tupsb_tlast_tvalid_tready_buf_reg[3]/CLR
+ (the first 15 of 54 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 LUTAR-1#9 Warning
@@ -5304,7 +5304,7 @@ Related violations: <none>
 
 LUTAR-1#13 Warning
 LUT drives async reset alert  
-LUT cell design_1_i/ps_axil_0/inst/PL_IS/pre_as_is_tdata_buf[31]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/ps_axil_0/inst/PL_IS/pre_as_is_tkeep_buf_reg[1]/CLR,
+LUT cell design_1_i/ps_axil_0/inst/PL_IS/is_as_tready_out_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/ps_axil_0/inst/PL_IS/pre_as_is_tkeep_buf_reg[1]/CLR,
 design_1_i/ps_axil_0/inst/PL_IS/pre_as_is_tkeep_buf_reg[2]/CLR,
 design_1_i/ps_axil_0/inst/PL_IS/pre_as_is_tkeep_buf_reg[3]/CLR,
 design_1_i/ps_axil_0/inst/PL_IS/pre_as_is_tstrb_buf_reg[0]/CLR,
@@ -6004,702 +6004,687 @@ Related violations: <none>
 
 TIMING-20#137 Warning
 Non-clocked latch  
-The latch design_1_i/caravel_0/inst/mprj/u_fsic/U_USER_SUBSYS0/U_USRPRJ1/fir/FSM_sequential_next_state_reg[0] cannot be properly analyzed as its control pin design_1_i/caravel_0/inst/mprj/u_fsic/U_USER_SUBSYS0/U_USRPRJ1/fir/FSM_sequential_next_state_reg[0]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/aa_index_reg[0] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/aa_index_reg[0]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#138 Warning
 Non-clocked latch  
-The latch design_1_i/caravel_0/inst/mprj/u_fsic/U_USER_SUBSYS0/U_USRPRJ1/fir/FSM_sequential_next_state_reg[1] cannot be properly analyzed as its control pin design_1_i/caravel_0/inst/mprj/u_fsic/U_USER_SUBSYS0/U_USRPRJ1/fir/FSM_sequential_next_state_reg[1]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/aa_index_reg[1] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/aa_index_reg[1]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#139 Warning
 Non-clocked latch  
-The latch design_1_i/caravel_0/inst/mprj/u_fsic/U_USER_SUBSYS0/U_USRPRJ1/fir/FSM_sequential_next_state_reg[2] cannot be properly analyzed as its control pin design_1_i/caravel_0/inst/mprj/u_fsic/U_USER_SUBSYS0/U_USRPRJ1/fir/FSM_sequential_next_state_reg[2]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/aa_index_reg[2] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/aa_index_reg[2]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#140 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/aa_index_reg[0] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/aa_index_reg[0]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/aa_index_reg[3] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/aa_index_reg[3]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#141 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/aa_index_reg[1] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/aa_index_reg[1]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/aa_index_reg[4] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/aa_index_reg[4]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#142 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/aa_index_reg[2] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/aa_index_reg[2]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/aa_index_reg[5] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/aa_index_reg[5]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#143 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/aa_index_reg[3] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/aa_index_reg[3]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/aa_index_reg[6] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/aa_index_reg[6]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#144 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/aa_index_reg[4] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/aa_index_reg[4]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/aa_index_reg[7] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/aa_index_reg[7]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#145 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/aa_index_reg[5] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/aa_index_reg[5]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/aa_index_reg[8] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/aa_index_reg[8]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#146 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/aa_index_reg[6] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/aa_index_reg[6]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/aa_index_reg[9] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/aa_index_reg[9]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#147 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/aa_index_reg[7] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/aa_index_reg[7]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[0] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[0]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#148 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/aa_index_reg[8] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/aa_index_reg[8]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[10] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[10]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#149 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/aa_index_reg[9] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/aa_index_reg[9]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[11] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[11]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#150 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[0] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[0]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[12] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[12]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#151 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[10] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[10]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[13] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[13]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#152 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[11] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[11]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[14] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[14]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#153 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[12] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[12]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[15] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[15]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#154 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[13] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[13]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[16] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[16]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#155 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[14] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[14]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[17] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[17]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#156 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[15] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[15]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[18] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[18]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#157 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[16] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[16]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[19] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[19]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#158 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[17] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[17]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[1] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[1]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#159 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[18] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[18]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[20] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[20]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#160 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[19] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[19]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[21] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[21]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#161 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[1] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[1]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[22] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[22]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#162 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[20] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[20]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[23] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[23]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#163 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[21] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[21]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[24] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[24]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#164 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[22] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[22]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[25] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[25]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#165 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[23] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[23]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[26] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[26]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#166 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[24] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[24]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[27] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[27]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#167 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[25] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[25]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[2] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[2]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#168 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[26] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[26]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[3] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[3]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#169 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[27] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[27]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[4] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[4]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#170 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[2] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[2]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[5] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[5]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#171 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[3] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[3]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[6] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[6]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#172 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[4] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[4]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[7] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[7]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#173 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[5] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[5]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[8] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[8]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#174 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[6] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[6]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[9] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[9]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#175 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[7] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[7]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/bk_sm_valid_reg cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/bk_sm_valid_reg/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#176 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[8] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[8]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[0] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[0]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#177 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[9] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/addr_ss_reg[9]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[10] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[10]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#178 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/bk_sm_valid_reg cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/bk_sm_valid_reg/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[11] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[11]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#179 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[0] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[0]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[12] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[12]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#180 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[10] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[10]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[13] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[13]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#181 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[11] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[11]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[14] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[14]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#182 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[12] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[12]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[15] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[15]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#183 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[13] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[13]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[16] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[16]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#184 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[14] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[14]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[17] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[17]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#185 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[15] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[15]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[18] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[18]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#186 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[16] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[16]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[19] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[19]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#187 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[17] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[17]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[1] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[1]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#188 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[18] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[18]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[20] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[20]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#189 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[19] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[19]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[21] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[21]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#190 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[1] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[1]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[22] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[22]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#191 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[20] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[20]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[23] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[23]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#192 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[21] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[21]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[24] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[24]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#193 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[22] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[22]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[25] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[25]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#194 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[23] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[23]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[26] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[26]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#195 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[24] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[24]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[27] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[27]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#196 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[25] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[25]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[28] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[28]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#197 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[26] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[26]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[29] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[29]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#198 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[27] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[27]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[2] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[2]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#199 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[28] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[28]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[30] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[30]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#200 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[29] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[29]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[31] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[31]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#201 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[2] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[2]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[3] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[3]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#202 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[30] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[30]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[4] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[4]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#203 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[31] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[31]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[5] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[5]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#204 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[3] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[3]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[6] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[6]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#205 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[4] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[4]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[7] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[7]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#206 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[5] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[5]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[8] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[8]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#207 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[6] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[6]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[9] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[9]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#208 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[7] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[7]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/do_nothing_reg cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/do_nothing_reg/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#209 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[8] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[8]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/get_secnd_data_ss_reg cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/get_secnd_data_ss_reg/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#210 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[9] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/data_ss_reg[9]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/mb_index_reg[0] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/mb_index_reg[0]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#211 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/do_nothing_reg cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/do_nothing_reg/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/mb_index_reg[1] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/mb_index_reg[1]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#212 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/get_secnd_data_ss_reg cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/get_secnd_data_ss_reg/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/mb_index_reg[2] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/mb_index_reg[2]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#213 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/mb_index_reg[0] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/mb_index_reg[0]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/mb_index_reg[3] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/mb_index_reg[3]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#214 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/mb_index_reg[1] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/mb_index_reg[1]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/mb_index_reg[4] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/mb_index_reg[4]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#215 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/mb_index_reg[2] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/mb_index_reg[2]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/mb_index_reg[5] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/mb_index_reg[5]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#216 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/mb_index_reg[3] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/mb_index_reg[3]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/mb_index_reg[6] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/mb_index_reg[6]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#217 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/mb_index_reg[4] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/mb_index_reg[4]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/mb_index_reg[7] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/mb_index_reg[7]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#218 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/mb_index_reg[5] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/mb_index_reg[5]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/mb_index_reg[8] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/mb_index_reg[8]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#219 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/mb_index_reg[6] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/mb_index_reg[6]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/mb_index_reg[9] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/mb_index_reg[9]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#220 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/mb_index_reg[7] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/mb_index_reg[7]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/rd_aa_reg cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/rd_aa_reg/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#221 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/mb_index_reg[8] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/mb_index_reg[8]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/rd_mb_reg cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/rd_mb_reg/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#222 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/mb_index_reg[9] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/mb_index_reg[9]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/rd_ss_complete_reg cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/rd_ss_complete_reg/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#223 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/rd_aa_reg cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/rd_aa_reg/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/rd_unsupp_reg cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/rd_unsupp_reg/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#224 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/rd_mb_reg cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/rd_mb_reg/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_done_reg cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_done_reg/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#225 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/rd_ss_complete_reg cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/rd_ss_complete_reg/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[0] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[0]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#226 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/rd_unsupp_reg cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/rd_unsupp_reg/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[10] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[10]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#227 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_done_reg cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_done_reg/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[11] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[11]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#228 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[0] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[0]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[12] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[12]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#229 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[10] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[10]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[13] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[13]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#230 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[11] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[11]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[14] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[14]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#231 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[12] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[12]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[15] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[15]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#232 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[13] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[13]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[16] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[16]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#233 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[14] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[14]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[17] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[17]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#234 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[15] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[15]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[18] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[18]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#235 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[16] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[16]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[19] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[19]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#236 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[17] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[17]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[1] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[1]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#237 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[18] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[18]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[20] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[20]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#238 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[19] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[19]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[21] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[21]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#239 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[1] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[1]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[22] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[22]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#240 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[20] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[20]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[23] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[23]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#241 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[21] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[21]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[24] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[24]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#242 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[22] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[22]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[25] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[25]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#243 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[23] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[23]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[26] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[26]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#244 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[24] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[24]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[27] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[27]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#245 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[25] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[25]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[28] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[28]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#246 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[26] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[26]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[29] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[29]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#247 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[27] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[27]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[2] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[2]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#248 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[28] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[28]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[30] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[30]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#249 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[29] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[29]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[31] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[31]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#250 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[2] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[2]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[3] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[3]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#251 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[30] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[30]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[4] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[4]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#252 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[31] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[31]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[5] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[5]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#253 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[3] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[3]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[6] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[6]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#254 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[4] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[4]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[7] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[7]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#255 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[5] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[5]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[8] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[8]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#256 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[6] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[6]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[9] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[9]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#257 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[7] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[7]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_valid_reg cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_valid_reg/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#258 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[8] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[8]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/set_bk_ss_ready_reg cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/set_bk_ss_ready_reg/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#259 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[9] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_reg[9]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/trig_int_reg cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/trig_int_reg/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#260 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_valid_reg cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/secnd_data_ss_valid_reg/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/trig_lm_rd_reg cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/trig_lm_rd_reg/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#261 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/set_bk_ss_ready_reg cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/set_bk_ss_ready_reg/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/trig_lm_wr_reg cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/trig_lm_wr_reg/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#262 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/trig_int_reg cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/trig_int_reg/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/trig_sm_rd_reg cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/trig_sm_rd_reg/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#263 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/trig_lm_rd_reg cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/trig_lm_rd_reg/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/trig_sm_wr_reg cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/trig_sm_wr_reg/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#264 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/trig_lm_wr_reg cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/trig_lm_wr_reg/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/wait_rd_data_back_reg cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/wait_rd_data_back_reg/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#265 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/trig_sm_rd_reg cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/trig_sm_rd_reg/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/wr_aa_reg cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/wr_aa_reg/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#266 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/trig_sm_wr_reg cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/trig_sm_wr_reg/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/wr_mb_reg cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/wr_mb_reg/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#267 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/wait_rd_data_back_reg cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/wait_rd_data_back_reg/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/wstrb_ss_reg[0] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/wstrb_ss_reg[0]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#268 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/wr_aa_reg cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/wr_aa_reg/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/wstrb_ss_reg[1] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/wstrb_ss_reg[1]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#269 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/wr_mb_reg cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/wr_mb_reg/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/wstrb_ss_reg[2] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/wstrb_ss_reg[2]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#270 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/wstrb_ss_reg[0] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/wstrb_ss_reg[0]/G is not reached by a timing clock
+The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/wstrb_ss_reg[3] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/wstrb_ss_reg[3]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#271 Warning
 Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/wstrb_ss_reg[1] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/wstrb_ss_reg[1]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#272 Warning
-Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/wstrb_ss_reg[2] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/wstrb_ss_reg[2]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#273 Warning
-Non-clocked latch  
-The latch design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/wstrb_ss_reg[3] cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/axi_ctrl_logic/wstrb_ss_reg[3]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#274 Warning
-Non-clocked latch  
 The latch design_1_i/ps_axil_0/inst/PL_AA/sm/bk_ready_reg cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/sm/bk_ready_reg/G is not reached by a timing clock
 Related violations: <none>
 
-TIMING-20#275 Warning
+TIMING-20#272 Warning
 Non-clocked latch  
 The latch design_1_i/ps_axil_0/inst/PL_AA/ss/axis_tready_reg cannot be properly analyzed as its control pin design_1_i/ps_axil_0/inst/PL_AA/ss/axis_tready_reg/G is not reached by a timing clock
 Related violations: <none>
 
 LATCH-1#1 Advisory
 Existing latches in the design  
-There are 275 latches found in the design. Inferred latches are often the result of HDL coding mistakes, such as incomplete if or case statements.
+There are 272 latches found in the design. Inferred latches are often the result of HDL coding mistakes, such as incomplete if or case statements.
 Related violations: <none>
 
 

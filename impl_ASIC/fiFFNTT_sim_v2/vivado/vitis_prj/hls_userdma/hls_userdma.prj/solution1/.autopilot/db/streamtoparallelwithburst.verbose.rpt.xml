@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'streamtoparallelwithburst'" level="0">
-<item name = "Date">Fri May 24 13:42:55 2024
+<item name = "Date">Wed May 29 12:58:14 2024
 </item>
 <item name = "Version">2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)</item>
 <item name = "Project">hls_userdma.prj</item>
@@ -31,12 +31,12 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123">streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129">streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2, ?, ?, ?, ?, ?, ?, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- VITIS_LOOP_25_1">?, ?, ?, -, -, ?, no</column>
+<column name="- VITIS_LOOP_21_1">?, ?, ?, -, -, ?, no</column>
 </table>
 </item>
 </section>
@@ -49,12 +49,12 @@
 <item name = "Summary"><table name="" hasTotal="1">
 <keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
 <column name="DSP">-, -, -, -, -</column>
-<column name="Expression">-, -, 0, 460, -</column>
+<column name="Expression">-, -, 0, 477, -</column>
 <column name="FIFO">-, -, -, -, -</column>
-<column name="Instance">-, -, 421, 750, -</column>
+<column name="Instance">-, -, 441, 932, -</column>
 <column name="Memory">-, -, -, -, -</column>
-<column name="Multiplexer">-, -, -, 124, -</column>
-<column name="Register">-, -, 300, -, -</column>
+<column name="Multiplexer">-, -, -, 129, -</column>
+<column name="Register">-, -, 314, -, -</column>
 <specialColumn name="Available">280, 220, 106400, 53200, 0</specialColumn>
 <specialColumn name="Utilization (%)">0, 0, ~0, 2, 0</specialColumn>
 </table>
@@ -63,7 +63,7 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
-<column name="grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123">streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2, 0, 0, 421, 750, 0</column>
+<column name="grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129">streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2, 0, 0, 441, 932, 0</column>
 </table>
 </item>
 <item name = "DSP"><table name="" hasTotal="0">
@@ -80,58 +80,62 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="add_ln56_fu_304_p2">+, 0, 0, 71, 64, 15</column>
-<column name="add_ln5_fu_277_p2">+, 0, 0, 71, 64, 64</column>
-<column name="final_s2m_len_V_3_fu_282_p2">+, 0, 0, 39, 32, 32</column>
-<column name="sub_ln43_1_fu_232_p2">-, 0, 0, 39, 1, 32</column>
-<column name="sub_ln43_fu_195_p2">-, 0, 0, 39, 1, 32</column>
-<column name="icmp_ln1065_1_fu_142_p2">icmp, 0, 0, 8, 2, 1</column>
-<column name="icmp_ln1065_fu_136_p2">icmp, 0, 0, 8, 2, 1</column>
-<column name="icmp_ln1073_fu_316_p2">icmp, 0, 0, 14, 22, 1</column>
-<column name="out_sts_fu_298_p2">icmp, 0, 0, 18, 32, 11</column>
+<column name="add_ln47_fu_329_p2">+, 0, 0, 71, 64, 15</column>
+<column name="add_ln9_fu_303_p2">+, 0, 0, 71, 64, 64</column>
+<column name="final_s2m_len_V_3_fu_308_p2">+, 0, 0, 39, 32, 32</column>
+<column name="sub_ln39_1_fu_258_p2">-, 0, 0, 39, 1, 32</column>
+<column name="sub_ln39_fu_213_p2">-, 0, 0, 39, 1, 32</column>
+<column name="icmp_ln1065_1_fu_150_p2">icmp, 0, 0, 8, 2, 1</column>
+<column name="icmp_ln1065_2_fu_324_p2">icmp, 0, 0, 18, 32, 11</column>
+<column name="icmp_ln1065_fu_144_p2">icmp, 0, 0, 8, 2, 1</column>
+<column name="icmp_ln1073_fu_341_p2">icmp, 0, 0, 14, 22, 1</column>
 <column name="ap_block_state1">or, 0, 0, 2, 1, 1</column>
-<column name="even_fu_148_p2">or, 0, 0, 2, 1, 1</column>
-<column name="select_ln42_fu_259_p3">select, 0, 0, 32, 1, 32</column>
-<column name="select_ln43_fu_251_p3">select, 0, 0, 32, 1, 32</column>
-<column name="select_ln55_fu_309_p3">select, 0, 0, 64, 1, 64</column>
-<column name="shl_ln34_fu_189_p2">shl, 0, 0, 17, 4, 8</column>
-<column name="xor_ln34_fu_179_p2">xor, 0, 0, 4, 3, 4</column>
+<column name="even_fu_156_p2">or, 0, 0, 2, 1, 1</column>
+<column name="select_ln38_fu_285_p3">select, 0, 0, 32, 1, 32</column>
+<column name="select_ln39_fu_277_p3">select, 0, 0, 32, 1, 32</column>
+<column name="select_ln46_fu_334_p3">select, 0, 0, 64, 1, 64</column>
+<column name="shl_ln30_fu_197_p2">shl, 0, 0, 17, 4, 8</column>
+<column name="shl_ln32_fu_207_p2">shl, 0, 0, 17, 4, 8</column>
+<column name="xor_ln30_fu_187_p2">xor, 0, 0, 4, 3, 4</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
 <keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
 <column name="ap_NS_fsm">25, 5, 1, 5</column>
 <column name="ap_done">9, 2, 1, 2</column>
-<column name="final_s2m_len_V_fu_94">9, 2, 32, 64</column>
+<column name="final_s2m_len_V_fu_98">9, 2, 32, 64</column>
 <column name="inbuf_read">9, 2, 1, 2</column>
 <column name="incount25_blk_n">9, 2, 1, 2</column>
 <column name="kernel_mode_blk_n">9, 2, 1, 2</column>
 <column name="m_axi_gmem0_AWVALID">9, 2, 1, 2</column>
 <column name="m_axi_gmem0_BREADY">9, 2, 1, 2</column>
 <column name="m_axi_gmem0_WVALID">9, 2, 1, 2</column>
-<column name="out_memory_assign_fu_90">9, 2, 64, 128</column>
+<column name="out_memory_assign_fu_94">9, 2, 64, 128</column>
 <column name="out_memory_blk_n">9, 2, 1, 2</column>
-<column name="s2m_buf_sts">9, 2, 1, 2</column>
+<column name="s2m_buf_sts">14, 3, 1, 3</column>
 </table>
 </item>
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
-<column name="add_ln5_reg_385">64, 0, 64, 0</column>
+<column name="add_ln9_reg_425">64, 0, 64, 0</column>
 <column name="ap_CS_fsm">4, 0, 4, 0</column>
 <column name="ap_done_reg">1, 0, 1, 0</column>
-<column name="even_reg_344">1, 0, 1, 0</column>
-<column name="final_s2m_len_V_3_reg_391">32, 0, 32, 0</column>
-<column name="final_s2m_len_V_fu_94">32, 0, 32, 0</column>
-<column name="grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123_ap_start_reg">1, 0, 1, 0</column>
-<column name="lshr_ln43_1_reg_375">31, 0, 31, 0</column>
-<column name="out_memory_assign_fu_90">64, 0, 64, 0</column>
+<column name="even_reg_369">1, 0, 1, 0</column>
+<column name="final_s2m_len_V_3_reg_431">32, 0, 32, 0</column>
+<column name="final_s2m_len_V_fu_98">32, 0, 32, 0</column>
+<column name="grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129_ap_start_reg">1, 0, 1, 0</column>
+<column name="lshr_ln39_1_reg_410">31, 0, 31, 0</column>
+<column name="out_memory_assign_fu_94">64, 0, 64, 0</column>
 <column name="s2m_buf_sts_preg">1, 0, 1, 0</column>
-<column name="shl_ln34_2_reg_380">3, 0, 6, 3</column>
-<column name="shl_ln34_reg_370">8, 0, 8, 0</column>
-<column name="tmp_3_reg_397">22, 0, 22, 0</column>
-<column name="tmp_4_reg_357">32, 0, 32, 0</column>
-<column name="tmp_reg_349">1, 0, 1, 0</column>
-<column name="xor_ln34_reg_365">3, 0, 3, 0</column>
+<column name="shl_ln30_2_reg_415">3, 0, 6, 3</column>
+<column name="shl_ln30_reg_400">8, 0, 8, 0</column>
+<column name="shl_ln32_2_reg_420">3, 0, 6, 3</column>
+<column name="shl_ln32_reg_405">8, 0, 8, 0</column>
+<column name="tmp_3_reg_437">22, 0, 22, 0</column>
+<column name="tmp_4_reg_382">32, 0, 32, 0</column>
+<column name="tmp_reg_374">1, 0, 1, 0</column>
+<column name="trunc_ln30_reg_390">3, 0, 3, 0</column>
+<column name="xor_ln30_reg_395">3, 0, 3, 0</column>
 </table>
 </item>
 </section>
@@ -149,13 +153,13 @@
 <column name="ap_idle">out, 1, ap_ctrl_hs, streamtoparallelwithburst, return value</column>
 <column name="ap_ready">out, 1, ap_ctrl_hs, streamtoparallelwithburst, return value</column>
 <column name="inbuf_dout">in, 33, ap_fifo, inbuf, pointer</column>
-<column name="inbuf_num_data_valid">in, 7, ap_fifo, inbuf, pointer</column>
-<column name="inbuf_fifo_cap">in, 7, ap_fifo, inbuf, pointer</column>
+<column name="inbuf_num_data_valid">in, 11, ap_fifo, inbuf, pointer</column>
+<column name="inbuf_fifo_cap">in, 11, ap_fifo, inbuf, pointer</column>
 <column name="inbuf_empty_n">in, 1, ap_fifo, inbuf, pointer</column>
 <column name="inbuf_read">out, 1, ap_fifo, inbuf, pointer</column>
 <column name="incount25_dout">in, 32, ap_fifo, incount25, pointer</column>
-<column name="incount25_num_data_valid">in, 2, ap_fifo, incount25, pointer</column>
-<column name="incount25_fifo_cap">in, 2, ap_fifo, incount25, pointer</column>
+<column name="incount25_num_data_valid">in, 3, ap_fifo, incount25, pointer</column>
+<column name="incount25_fifo_cap">in, 3, ap_fifo, incount25, pointer</column>
 <column name="incount25_empty_n">in, 1, ap_fifo, incount25, pointer</column>
 <column name="incount25_read">out, 1, ap_fifo, incount25, pointer</column>
 <column name="s2m_buf_sts">out, 1, ap_vld, s2m_buf_sts, pointer</column>

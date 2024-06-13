@@ -68,13 +68,13 @@ module AESL_axi_master_gmem0 (
  parameter gmem0_ID_BITWIDTH = 32'd 1;
  parameter gmem0_RUSER_BITWIDTH = 32'd 1;
  parameter gmem0_BUSER_BITWIDTH = 32'd 1;
- parameter   FIFO_DEPTH            =   10 + 10;
+ parameter   FIFO_DEPTH            =   1 + 1;
  parameter   mem_page_num            =   32'd 4;
  parameter   FIFO_DEPTH_ADDR_WIDTH   =    32'd 32;
 parameter gmem0_C_DATA_BITWIDTH = 32'd 64;
 parameter gmem0_mem_depth = 32'd 1024;
-parameter ReadReqLatency = 32'd 10;
-parameter WriteReqLatency = 32'd 10;
+parameter ReadReqLatency = 32'd 1;
+parameter WriteReqLatency = 32'd 1;
 // Input and Output
 input clk;
 input reset;

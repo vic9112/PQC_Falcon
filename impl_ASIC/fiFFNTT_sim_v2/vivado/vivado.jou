@@ -1,0 +1,60 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Thu Jun 13 09:23:27 2024
+# Process ID: 13038
+# Current directory: /home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado
+# Command line: vivado
+# Log file: /home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vivado.log
+# Journal file: /home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vivado.jou
+# Running On: ubuntu2004, OS: Linux, CPU Frequency: 3194.000 MHz, CPU Physical cores: 2, Host memory: 11260 MB
+#-----------------------------------------------------------
+start_gui
+open_project /home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.xpr
+open_bd_design {/home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.srcs/sources_1/bd/design_1/design_1.bd}
+update_compile_order -fileset sources_1
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:hls:userdma:1.0 userdma_0
+endgroup
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {/clk_wiz_0/clk_out1 (5 MHz)} Clk_xbar {/clk_wiz_0/clk_out1 (5 MHz)} Master {/userdma_0/m_axi_gmem0} Slave {/processing_system7_0/S_AXI_HP0} ddr_seg {Auto} intc_ip {/axi_mem_intercon} master_apm {0}}  [get_bd_intf_pins userdma_0/m_axi_gmem0]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {/clk_wiz_0/clk_out1 (5 MHz)} Clk_xbar {/clk_wiz_0/clk_out1 (5 MHz)} Master {/userdma_0/m_axi_gmem1} Slave {/processing_system7_0/S_AXI_HP0} ddr_seg {Auto} intc_ip {/axi_mem_intercon} master_apm {0}}  [get_bd_intf_pins userdma_0/m_axi_gmem1]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/clk_wiz_0/clk_out1 (5 MHz)} Clk_slave {Auto} Clk_xbar {/clk_wiz_0/clk_out1 (5 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/userdma_0/s_axi_control} ddr_seg {Auto} intc_ip {/ps7_0_axi_periph} master_apm {0}}  [get_bd_intf_pins userdma_0/s_axi_control]
+endgroup
+regenerate_bd_layout
+connect_bd_intf_net [get_bd_intf_pins userdma_0/inStreamTop] [get_bd_intf_pins ps_axil_0/updma_so]
+connect_bd_intf_net [get_bd_intf_pins userdma_0/outStreamTop] [get_bd_intf_pins ps_axil_0/updma_si]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_intc:4.1 axi_intc_0
+endgroup
+set_property -dict [list CONFIG.C_KIND_OF_INTR.VALUE_SRC USER] [get_bd_cells axi_intc_0]
+set_property -dict [list CONFIG.C_IRQ_CONNECTION {1}] [get_bd_cells axi_intc_0]
+set_property location {4 1116 933} [get_bd_cells axi_intc_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlconcat:2.1 xlconcat_0
+endgroup
+set_property location {4 1243 1128} [get_bd_cells xlconcat_0]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/clk_wiz_0/clk_out1 (5 MHz)} Clk_slave {Auto} Clk_xbar {/clk_wiz_0/clk_out1 (5 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/axi_intc_0/s_axi} ddr_seg {Auto} intc_ip {/ps7_0_axi_periph} master_apm {0}}  [get_bd_intf_pins axi_intc_0/s_axi]
+startgroup
+set_property location {6 2475 625} [get_bd_cells xlconcat_0]
+set_property location {6 2475 425} [get_bd_cells axi_intc_0]
+endgroup
+connect_bd_net [get_bd_pins ps_axil_0/aa_mb_irq] [get_bd_pins axi_intc_0/intr]
+set_property -dict [list CONFIG.NUM_PORTS {1}] [get_bd_cells xlconcat_0]
+connect_bd_net [get_bd_pins axi_intc_0/irq] [get_bd_pins xlconcat_0/In0]
+startgroup
+set_property -dict [list CONFIG.PCW_USE_FABRIC_INTERRUPT {1} CONFIG.PCW_IRQ_F2P_INTR {1}] [get_bd_cells processing_system7_0]
+endgroup
+connect_bd_net [get_bd_pins xlconcat_0/dout] [get_bd_pins processing_system7_0/IRQ_F2P]
+regenerate_bd_layout
+set_property range 4K [get_bd_addr_segs {processing_system7_0/Data/SEG_userdma_0_Reg}]
+set_property offset 0x60009000 [get_bd_addr_segs {processing_system7_0/Data/SEG_userdma_0_Reg}]
+save_bd_design
+regenerate_bd_layout
+reset_run synth_1
+reset_run design_1_xbar_0_synth_1
+reset_run design_1_processing_system7_0_0_synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+open_run impl_1

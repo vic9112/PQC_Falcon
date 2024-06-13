@@ -309,5 +309,4 @@ add_wave /apatb_userdma_top/gmem1_AWREADY -into $ctrl_group -color #ffff00 -radi
 add_wave /apatb_userdma_top/gmem1_AWVALID -into $ctrl_group -color #ffff00 -radix hex
 save_wave_config userdma.wcfg
 run all
-quit
 

@@ -119,32 +119,48 @@ module fsic_tb();
         $display($time, "=> Starting test...");
 
         //Fpga2Soc_CfgRead();
-        Fpga2Soc_CfgWrite();
+        //Fpga2Soc_CfgWrite();
         //FpgaLocal_CfgRead();
         //SocLocal_MbWrite();
         //FpgaLocal_MbWrite();
         //SocLa2DmaPath();
         //SocUp2DmaPath();
         //load_dma_x();
-        load_dma_NTT();
+        //load_dma_NTT();
         //load_dma_iNTT();
-        //load_dma_FFT();
+        load_dma_FFT();
         //load_dma_iFFT();
         //setting_dma();
-        setting_dma_NTT();
+        //setting_dma_NTT();
         //setting_dma_iNTT();
-        //setting_dma_FFT();
+        setting_dma_FFT();
         //setting_dma_iFFT();
         //test_FIR();
         ap_start_get_result(); // should to change checkdone!
 
         data = 32'h0000_0002;
         axil_cycles_gen(WriteCyc, SOC_CC, offset, data, 1);
-        //#20us
         axil_cycles_gen(ReadCyc, SOC_CC, offset, data, 1);
-
         #500us    
-        $display($time, "=> End of the test...");                         
+        $display($time, "=> End of the FFT test...");  
+        
+        // set user_prj2 0000 1
+        data = 32'h0000_0001;
+        axil_cycles_gen(WriteCyc, SOC_UP, 12'b0, data, 1);
+        axil_cycles_gen(ReadCyc, SOC_UP, 12'b0, data, 1);
+        
+        // iFFT
+        load_dma_iFFT();
+		setting_dma_iFFT();
+		ap_start_get_result(); 
+		data = 32'h0000_0002;
+        axil_cycles_gen(WriteCyc, SOC_CC, offset, data, 1);
+        axil_cycles_gen(ReadCyc, SOC_CC, offset, data, 1);
+		
+		
+        #500us    
+        $display($time, "=> End of the iFFT test..."); 
+        $display($time, "=> End of the test...");                      
         $finish;
     end
     
@@ -166,6 +182,7 @@ module fsic_tb();
                 $display($time, "=> Fpga2Soc_Write SOC_CC offset %h = %h, FAIL", offset, data);
                 ->> error_event;
             end
+///////////////////////////////////////////////////////////////////////////////////
             // dma ap_start
             $display($time, "=> FpgaLocal_Write: PL_UPDMA, set ap_start...");
             offset = 32'h0000_0000;
@@ -229,7 +246,7 @@ module fsic_tb();
     reg [31:0] updma_iFFT_x_data;    
     task load_dma_iFFT;
     	begin
-    	    $display($time, "=> load dma FFT ...");
+    	    $display($time, "=> load dma iFFT ...");
             $display($time, "=> =======================================================================");
 
             $readmemh("../../../../../FFT_out.hex", updma_iFFT_x);

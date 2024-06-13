@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.1 (lin64) Build 3526262 Mon Apr 18 15:47:01 MDT 2022
-| Date         : Mon May 27 07:29:55 2024
+| Date         : Thu Jun 13 08:44:51 2024
 | Host         : ubuntu2004 running 64-bit Ubuntu 20.04.6 LTS
 | Command      : report_utilization -file design_1_ps_axil_0_0_utilization_synth.rpt -pb design_1_ps_axil_0_0_utilization_synth.pb
 | Design       : design_1_ps_axil_0_0
@@ -31,15 +31,15 @@ Table of Contents
 +----------------------------+------+-------+------------+-----------+-------+
 |          Site Type         | Used | Fixed | Prohibited | Available | Util% |
 +----------------------------+------+-------+------------+-----------+-------+
-| Slice LUTs*                | 3067 |     0 |          0 |     53200 |  5.77 |
-|   LUT as Logic             | 2728 |     0 |          0 |     53200 |  5.13 |
+| Slice LUTs*                | 3056 |     0 |          0 |     53200 |  5.74 |
+|   LUT as Logic             | 2717 |     0 |          0 |     53200 |  5.11 |
 |   LUT as Memory            |  339 |     0 |          0 |     17400 |  1.95 |
 |     LUT as Distributed RAM |    0 |     0 |            |           |       |
 |     LUT as Shift Register  |  339 |     0 |            |           |       |
-| Slice Registers            | 4621 |     0 |          0 |    106400 |  4.34 |
-|   Register as Flip Flop    | 4485 |     0 |          0 |    106400 |  4.22 |
+| Slice Registers            | 4620 |     0 |          0 |    106400 |  4.34 |
+|   Register as Flip Flop    | 4484 |     0 |          0 |    106400 |  4.21 |
 |   Register as Latch        |  136 |     0 |          0 |    106400 |  0.13 |
-| F7 Muxes                   |  139 |     0 |          0 |     26600 |  0.52 |
+| F7 Muxes                   |  138 |     0 |          0 |     26600 |  0.52 |
 | F8 Muxes                   |   45 |     0 |          0 |     13300 |  0.34 |
 +----------------------------+------+-------+------------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
@@ -58,7 +58,7 @@ Table of Contents
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
 | 36    |          Yes |           - |          Set |
-| 1709  |          Yes |           - |        Reset |
+| 1708  |          Yes |           - |        Reset |
 | 19    |          Yes |         Set |            - |
 | 2857  |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
@@ -151,17 +151,17 @@ Table of Contents
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
 | FDRE     | 2857 |        Flop & Latch |
-| FDCE     | 1573 |        Flop & Latch |
-| LUT6     |  934 |                 LUT |
-| LUT3     |  920 |                 LUT |
-| LUT2     |  705 |                 LUT |
-| LUT4     |  485 |                 LUT |
-| LUT5     |  426 |                 LUT |
+| FDCE     | 1572 |        Flop & Latch |
+| LUT6     |  952 |                 LUT |
+| LUT3     |  939 |                 LUT |
+| LUT2     |  688 |                 LUT |
+| LUT4     |  450 |                 LUT |
+| LUT5     |  423 |                 LUT |
 | SRL16E   |  265 |  Distributed Memory |
 | CARRY4   |  164 |          CarryLogic |
-| MUXF7    |  139 |               MuxFx |
+| MUXF7    |  138 |               MuxFx |
 | LDCE     |  136 |        Flop & Latch |
-| LUT1     |   79 |                 LUT |
+| LUT1     |   80 |                 LUT |
 | SRLC32E  |   74 |  Distributed Memory |
 | MUXF8    |   45 |               MuxFx |
 | FDPE     |   36 |        Flop & Latch |

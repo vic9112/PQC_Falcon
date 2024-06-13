@@ -161,6 +161,8 @@
                         					
                     </folderInfo>
                     					
+                    <fileInfo id="cdt.managedbuild.config.gnu.exe.debug.606333227.1418592232" name="test_data.h" rcbsApplicability="disable" resourcePath="testbench/test_data.h" toolsToInvoke=""/>
+                    					
                     <fileInfo id="cdt.managedbuild.config.gnu.exe.debug.606333227.2081157310" name="userdma_test.cpp" rcbsApplicability="disable" resourcePath="testbench/userdma_test.cpp" toolsToInvoke="cdt.managedbuild.tool.gnu.cpp.compiler.exe.debug.115239098.2140569838">
                         						
                         <tool id="cdt.managedbuild.tool.gnu.cpp.compiler.exe.debug.115239098.2140569838" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.exe.debug.115239098">
@@ -342,6 +344,8 @@
                         </toolChain>
                         					
                     </folderInfo>
+                    					
+                    <fileInfo id="cdt.managedbuild.config.gnu.exe.release.994698167.837481804" name="test_data.h" rcbsApplicability="disable" resourcePath="testbench/test_data.h" toolsToInvoke=""/>
                     					
                     <fileInfo id="cdt.managedbuild.config.gnu.exe.release.994698167.387773003" name="userdma_test.cpp" rcbsApplicability="disable" resourcePath="testbench/userdma_test.cpp" toolsToInvoke="cdt.managedbuild.tool.gnu.cpp.compiler.exe.release.526739683.1925958301">
                         						

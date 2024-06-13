@@ -166,7 +166,7 @@ end;
 architecture behav of userdma is 
     attribute CORE_GENERATION_INFO : STRING;
     attribute CORE_GENERATION_INFO of behav : architecture is
-    "userdma_userdma,hls_ip_2022_1,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020-clg400-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=7.300000,HLS_SYN_LAT=-1,HLS_SYN_TPT=-1,HLS_SYN_MEM=4,HLS_SYN_DSP=0,HLS_SYN_FF=5579,HLS_SYN_LUT=7599,HLS_VERSION=2022_1}";
+    "userdma_userdma,hls_ip_2022_1,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020-clg400-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=7.300000,HLS_SYN_LAT=-1,HLS_SYN_TPT=-1,HLS_SYN_MEM=4,HLS_SYN_DSP=0,HLS_SYN_FF=5067,HLS_SYN_LUT=9160,HLS_VERSION=2022_1}";
     constant C_S_AXI_DATA_WIDTH : INTEGER range 63 downto 0 := 20;
     constant ap_const_logic_1 : STD_LOGIC := '1';
     constant C_M_AXI_DATA_WIDTH : INTEGER range 63 downto 0 := 20;
@@ -206,7 +206,7 @@ architecture behav of userdma is
     signal gmem1_RDATA : STD_LOGIC_VECTOR (63 downto 0);
     signal gmem1_RLAST : STD_LOGIC;
     signal gmem1_RID : STD_LOGIC_VECTOR (0 downto 0);
-    signal gmem1_RFIFONUM : STD_LOGIC_VECTOR (9 downto 0);
+    signal gmem1_RFIFONUM : STD_LOGIC_VECTOR (10 downto 0);
     signal gmem1_RUSER : STD_LOGIC_VECTOR (0 downto 0);
     signal gmem1_RRESP : STD_LOGIC_VECTOR (1 downto 0);
     signal gmem1_BVALID : STD_LOGIC;
@@ -315,7 +315,7 @@ architecture behav of userdma is
     signal paralleltostreamwithburst_U0_m_axi_gmem1_ARUSER : STD_LOGIC_VECTOR (0 downto 0);
     signal paralleltostreamwithburst_U0_m_axi_gmem1_RREADY : STD_LOGIC;
     signal paralleltostreamwithburst_U0_m_axi_gmem1_BREADY : STD_LOGIC;
-    signal paralleltostreamwithburst_U0_outbuf_din : STD_LOGIC_VECTOR (34 downto 0);
+    signal paralleltostreamwithburst_U0_outbuf_din : STD_LOGIC_VECTOR (32 downto 0);
     signal paralleltostreamwithburst_U0_outbuf_write : STD_LOGIC;
     signal sendoutstream_U0_ap_start : STD_LOGIC;
     signal sendoutstream_U0_ap_done : STD_LOGIC;
@@ -338,13 +338,13 @@ architecture behav of userdma is
     signal s2mbuf_c_empty_n : STD_LOGIC;
     signal inbuf_full_n : STD_LOGIC;
     signal inbuf_dout : STD_LOGIC_VECTOR (32 downto 0);
-    signal inbuf_num_data_valid : STD_LOGIC_VECTOR (6 downto 0);
-    signal inbuf_fifo_cap : STD_LOGIC_VECTOR (6 downto 0);
+    signal inbuf_num_data_valid : STD_LOGIC_VECTOR (10 downto 0);
+    signal inbuf_fifo_cap : STD_LOGIC_VECTOR (10 downto 0);
     signal inbuf_empty_n : STD_LOGIC;
     signal incount_full_n : STD_LOGIC;
     signal incount_dout : STD_LOGIC_VECTOR (31 downto 0);
-    signal incount_num_data_valid : STD_LOGIC_VECTOR (1 downto 0);
-    signal incount_fifo_cap : STD_LOGIC_VECTOR (1 downto 0);
+    signal incount_num_data_valid : STD_LOGIC_VECTOR (2 downto 0);
+    signal incount_fifo_cap : STD_LOGIC_VECTOR (2 downto 0);
     signal incount_empty_n : STD_LOGIC;
     signal kernel_mode_c_full_n : STD_LOGIC;
     signal kernel_mode_c_dout : STD_LOGIC_VECTOR (1 downto 0);
@@ -352,9 +352,9 @@ architecture behav of userdma is
     signal kernel_mode_c_fifo_cap : STD_LOGIC_VECTOR (1 downto 0);
     signal kernel_mode_c_empty_n : STD_LOGIC;
     signal outbuf_full_n : STD_LOGIC;
-    signal outbuf_dout : STD_LOGIC_VECTOR (34 downto 0);
-    signal outbuf_num_data_valid : STD_LOGIC_VECTOR (6 downto 0);
-    signal outbuf_fifo_cap : STD_LOGIC_VECTOR (6 downto 0);
+    signal outbuf_dout : STD_LOGIC_VECTOR (32 downto 0);
+    signal outbuf_num_data_valid : STD_LOGIC_VECTOR (10 downto 0);
+    signal outbuf_fifo_cap : STD_LOGIC_VECTOR (10 downto 0);
     signal outbuf_empty_n : STD_LOGIC;
     signal ap_sync_done : STD_LOGIC;
     signal ap_sync_ready : STD_LOGIC;
@@ -415,13 +415,13 @@ architecture behav of userdma is
         s2m_err : OUT STD_LOGIC_VECTOR (1 downto 0);
         s2m_err_ap_vld : OUT STD_LOGIC;
         inbuf_din : OUT STD_LOGIC_VECTOR (32 downto 0);
-        inbuf_num_data_valid : IN STD_LOGIC_VECTOR (6 downto 0);
-        inbuf_fifo_cap : IN STD_LOGIC_VECTOR (6 downto 0);
+        inbuf_num_data_valid : IN STD_LOGIC_VECTOR (10 downto 0);
+        inbuf_fifo_cap : IN STD_LOGIC_VECTOR (10 downto 0);
         inbuf_full_n : IN STD_LOGIC;
         inbuf_write : OUT STD_LOGIC;
         incount25_din : OUT STD_LOGIC_VECTOR (31 downto 0);
-        incount25_num_data_valid : IN STD_LOGIC_VECTOR (1 downto 0);
-        incount25_fifo_cap : IN STD_LOGIC_VECTOR (1 downto 0);
+        incount25_num_data_valid : IN STD_LOGIC_VECTOR (2 downto 0);
+        incount25_fifo_cap : IN STD_LOGIC_VECTOR (2 downto 0);
         incount25_full_n : IN STD_LOGIC;
         incount25_write : OUT STD_LOGIC;
         kernel_mode_c_din : OUT STD_LOGIC_VECTOR (1 downto 0);
@@ -442,13 +442,13 @@ architecture behav of userdma is
         ap_idle : OUT STD_LOGIC;
         ap_ready : OUT STD_LOGIC;
         inbuf_dout : IN STD_LOGIC_VECTOR (32 downto 0);
-        inbuf_num_data_valid : IN STD_LOGIC_VECTOR (6 downto 0);
-        inbuf_fifo_cap : IN STD_LOGIC_VECTOR (6 downto 0);
+        inbuf_num_data_valid : IN STD_LOGIC_VECTOR (10 downto 0);
+        inbuf_fifo_cap : IN STD_LOGIC_VECTOR (10 downto 0);
         inbuf_empty_n : IN STD_LOGIC;
         inbuf_read : OUT STD_LOGIC;
         incount25_dout : IN STD_LOGIC_VECTOR (31 downto 0);
-        incount25_num_data_valid : IN STD_LOGIC_VECTOR (1 downto 0);
-        incount25_fifo_cap : IN STD_LOGIC_VECTOR (1 downto 0);
+        incount25_num_data_valid : IN STD_LOGIC_VECTOR (2 downto 0);
+        incount25_fifo_cap : IN STD_LOGIC_VECTOR (2 downto 0);
         incount25_empty_n : IN STD_LOGIC;
         incount25_read : OUT STD_LOGIC;
         s2m_buf_sts : OUT STD_LOGIC_VECTOR (0 downto 0);
@@ -562,7 +562,7 @@ architecture behav of userdma is
         m_axi_gmem1_RDATA : IN STD_LOGIC_VECTOR (63 downto 0);
         m_axi_gmem1_RLAST : IN STD_LOGIC;
         m_axi_gmem1_RID : IN STD_LOGIC_VECTOR (0 downto 0);
-        m_axi_gmem1_RFIFONUM : IN STD_LOGIC_VECTOR (9 downto 0);
+        m_axi_gmem1_RFIFONUM : IN STD_LOGIC_VECTOR (10 downto 0);
         m_axi_gmem1_RUSER : IN STD_LOGIC_VECTOR (0 downto 0);
         m_axi_gmem1_RRESP : IN STD_LOGIC_VECTOR (1 downto 0);
         m_axi_gmem1_BVALID : IN STD_LOGIC;
@@ -572,9 +572,9 @@ architecture behav of userdma is
         m_axi_gmem1_BUSER : IN STD_LOGIC_VECTOR (0 downto 0);
         in_memory : IN STD_LOGIC_VECTOR (63 downto 0);
         kernel_mode : IN STD_LOGIC_VECTOR (1 downto 0);
-        outbuf_din : OUT STD_LOGIC_VECTOR (34 downto 0);
-        outbuf_num_data_valid : IN STD_LOGIC_VECTOR (6 downto 0);
-        outbuf_fifo_cap : IN STD_LOGIC_VECTOR (6 downto 0);
+        outbuf_din : OUT STD_LOGIC_VECTOR (32 downto 0);
+        outbuf_num_data_valid : IN STD_LOGIC_VECTOR (10 downto 0);
+        outbuf_fifo_cap : IN STD_LOGIC_VECTOR (10 downto 0);
         outbuf_full_n : IN STD_LOGIC;
         outbuf_write : OUT STD_LOGIC );
     end component;
@@ -589,9 +589,9 @@ architecture behav of userdma is
         ap_continue : IN STD_LOGIC;
         ap_idle : OUT STD_LOGIC;
         ap_ready : OUT STD_LOGIC;
-        outbuf_dout : IN STD_LOGIC_VECTOR (34 downto 0);
-        outbuf_num_data_valid : IN STD_LOGIC_VECTOR (6 downto 0);
-        outbuf_fifo_cap : IN STD_LOGIC_VECTOR (6 downto 0);
+        outbuf_dout : IN STD_LOGIC_VECTOR (32 downto 0);
+        outbuf_num_data_valid : IN STD_LOGIC_VECTOR (10 downto 0);
+        outbuf_fifo_cap : IN STD_LOGIC_VECTOR (10 downto 0);
         outbuf_empty_n : IN STD_LOGIC;
         outbuf_read : OUT STD_LOGIC;
         outStreamTop_TREADY : IN STD_LOGIC;
@@ -623,7 +623,7 @@ architecture behav of userdma is
     end component;
 
 
-    component userdma_fifo_w33_d64_A IS
+    component userdma_fifo_w33_d1024_A IS
     port (
         clk : IN STD_LOGIC;
         reset : IN STD_LOGIC;
@@ -633,14 +633,14 @@ architecture behav of userdma is
         if_full_n : OUT STD_LOGIC;
         if_write : IN STD_LOGIC;
         if_dout : OUT STD_LOGIC_VECTOR (32 downto 0);
-        if_num_data_valid : OUT STD_LOGIC_VECTOR (6 downto 0);
-        if_fifo_cap : OUT STD_LOGIC_VECTOR (6 downto 0);
+        if_num_data_valid : OUT STD_LOGIC_VECTOR (10 downto 0);
+        if_fifo_cap : OUT STD_LOGIC_VECTOR (10 downto 0);
         if_empty_n : OUT STD_LOGIC;
         if_read : IN STD_LOGIC );
     end component;
 
 
-    component userdma_fifo_w32_d2_S IS
+    component userdma_fifo_w32_d4_S IS
     port (
         clk : IN STD_LOGIC;
         reset : IN STD_LOGIC;
@@ -650,8 +650,8 @@ architecture behav of userdma is
         if_full_n : OUT STD_LOGIC;
         if_write : IN STD_LOGIC;
         if_dout : OUT STD_LOGIC_VECTOR (31 downto 0);
-        if_num_data_valid : OUT STD_LOGIC_VECTOR (1 downto 0);
-        if_fifo_cap : OUT STD_LOGIC_VECTOR (1 downto 0);
+        if_num_data_valid : OUT STD_LOGIC_VECTOR (2 downto 0);
+        if_fifo_cap : OUT STD_LOGIC_VECTOR (2 downto 0);
         if_empty_n : OUT STD_LOGIC;
         if_read : IN STD_LOGIC );
     end component;
@@ -669,23 +669,6 @@ architecture behav of userdma is
         if_dout : OUT STD_LOGIC_VECTOR (1 downto 0);
         if_num_data_valid : OUT STD_LOGIC_VECTOR (1 downto 0);
         if_fifo_cap : OUT STD_LOGIC_VECTOR (1 downto 0);
-        if_empty_n : OUT STD_LOGIC;
-        if_read : IN STD_LOGIC );
-    end component;
-
-
-    component userdma_fifo_w35_d64_A IS
-    port (
-        clk : IN STD_LOGIC;
-        reset : IN STD_LOGIC;
-        if_read_ce : IN STD_LOGIC;
-        if_write_ce : IN STD_LOGIC;
-        if_din : IN STD_LOGIC_VECTOR (34 downto 0);
-        if_full_n : OUT STD_LOGIC;
-        if_write : IN STD_LOGIC;
-        if_dout : OUT STD_LOGIC_VECTOR (34 downto 0);
-        if_num_data_valid : OUT STD_LOGIC_VECTOR (6 downto 0);
-        if_fifo_cap : OUT STD_LOGIC_VECTOR (6 downto 0);
         if_empty_n : OUT STD_LOGIC;
         if_read : IN STD_LOGIC );
     end component;
@@ -933,7 +916,7 @@ architecture behav of userdma is
         I_RVALID : OUT STD_LOGIC;
         I_RREADY : IN STD_LOGIC;
         I_RDATA : OUT STD_LOGIC_VECTOR (63 downto 0);
-        I_RFIFONUM : OUT STD_LOGIC_VECTOR (9 downto 0);
+        I_RFIFONUM : OUT STD_LOGIC_VECTOR (10 downto 0);
         I_AWVALID : IN STD_LOGIC;
         I_AWREADY : OUT STD_LOGIC;
         I_AWADDR : IN STD_LOGIC_VECTOR (63 downto 0);
@@ -992,11 +975,11 @@ begin
     gmem0_m_axi_U : component userdma_gmem0_m_axi
     generic map (
         CONSERVATIVE => 1,
-        USER_MAXREQS => 15,
+        USER_MAXREQS => 5,
         NUM_READ_OUTSTANDING => 16,
         NUM_WRITE_OUTSTANDING => 16,
         MAX_READ_BURST_LENGTH => 16,
-        MAX_WRITE_BURST_LENGTH => 32,
+        MAX_WRITE_BURST_LENGTH => 256,
         USER_RFIFONUM_WIDTH => 9,
         C_M_AXI_ID_WIDTH => C_M_AXI_GMEM0_ID_WIDTH,
         C_M_AXI_ADDR_WIDTH => C_M_AXI_GMEM0_ADDR_WIDTH,
@@ -1082,12 +1065,12 @@ begin
     gmem1_m_axi_U : component userdma_gmem1_m_axi
     generic map (
         CONSERVATIVE => 1,
-        USER_MAXREQS => 15,
-        NUM_READ_OUTSTANDING => 16,
+        USER_MAXREQS => 5,
+        NUM_READ_OUTSTANDING => 4,
         NUM_WRITE_OUTSTANDING => 16,
-        MAX_READ_BURST_LENGTH => 32,
+        MAX_READ_BURST_LENGTH => 256,
         MAX_WRITE_BURST_LENGTH => 16,
-        USER_RFIFONUM_WIDTH => 10,
+        USER_RFIFONUM_WIDTH => 11,
         C_M_AXI_ID_WIDTH => C_M_AXI_GMEM1_ID_WIDTH,
         C_M_AXI_ADDR_WIDTH => C_M_AXI_GMEM1_ADDR_WIDTH,
         C_M_AXI_DATA_WIDTH => C_M_AXI_GMEM1_DATA_WIDTH,
@@ -1406,7 +1389,7 @@ begin
         if_empty_n => s2mbuf_c_empty_n,
         if_read => streamtoparallelwithburst_U0_out_memory_read);
 
-    inbuf_U : component userdma_fifo_w33_d64_A
+    inbuf_U : component userdma_fifo_w33_d1024_A
     port map (
         clk => ap_clk,
         reset => ap_rst_n_inv,
@@ -1421,7 +1404,7 @@ begin
         if_empty_n => inbuf_empty_n,
         if_read => streamtoparallelwithburst_U0_inbuf_read);
 
-    incount_U : component userdma_fifo_w32_d2_S
+    incount_U : component userdma_fifo_w32_d4_S
     port map (
         clk => ap_clk,
         reset => ap_rst_n_inv,
@@ -1451,7 +1434,7 @@ begin
         if_empty_n => kernel_mode_c_empty_n,
         if_read => streamtoparallelwithburst_U0_kernel_mode_read);
 
-    outbuf_U : component userdma_fifo_w35_d64_A
+    outbuf_U : component userdma_fifo_w33_d1024_A
     port map (
         clk => ap_clk,
         reset => ap_rst_n_inv,

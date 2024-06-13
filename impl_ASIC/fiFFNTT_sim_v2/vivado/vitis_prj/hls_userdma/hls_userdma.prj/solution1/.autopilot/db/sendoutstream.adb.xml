@@ -23,9 +23,9 @@
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="8" bw="0" op_0_bw="0" op_1_bw="35" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32">
+<Node id="8" bw="0" op_0_bw="0" op_1_bw="33" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32">
 <![CDATA[
-entry:0 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i35 %outbuf, void @empty_16, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3, i32 4294967295, i32 0
+entry:0 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i33 %outbuf, void @empty_16, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3, i32 4294967295, i32 0
 
 ]]></Node>
 <StgValue><ssdm name="specinterface_ln0"/></StgValue>
@@ -53,42 +53,42 @@ entry:1 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %out
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="10" bw="0" op_0_bw="0">
+<Node id="10" bw="0" op_0_bw="0" op_1_bw="1" op_2_bw="1">
 <![CDATA[
-entry:2 %br_ln176 = br void %do.cond
+entry:2 %write_ln165 = write void @_ssdm_op_Write.ap_auto.volatile.i1P0A, i1 %m2s_buf_sts, i1 0
 
 ]]></Node>
-<StgValue><ssdm name="br_ln176"/></StgValue>
+<StgValue><ssdm name="write_ln165"/></StgValue>
 </operation>
 
 <operation id="8" st_id="1" stage="1" lat="1">
-<core>FIFO</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
-<Node id="14" bw="35" op_0_bw="35" op_1_bw="35">
-<![CDATA[
-do.cond:2 %outbuf_read = read i35 @_ssdm_op_Read.ap_fifo.volatile.i35P0A, i35 %outbuf
-
-]]></Node>
-<StgValue><ssdm name="outbuf_read"/></StgValue>
-</operation>
-
-<operation id="9" st_id="1" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="15" bw="32" op_0_bw="35">
+<Node id="11" bw="0" op_0_bw="0">
 <![CDATA[
-do.cond:3 %tmp_data_filed_V = trunc i35 %outbuf_read
+entry:3 %br_ln167 = br void %do.cond
 
 ]]></Node>
-<StgValue><ssdm name="tmp_data_filed_V"/></StgValue>
+<StgValue><ssdm name="br_ln167"/></StgValue>
+</operation>
+
+<operation id="9" st_id="1" stage="1" lat="1">
+<core>FIFO</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="15" bw="33" op_0_bw="33" op_1_bw="33">
+<![CDATA[
+do.cond:2 %outbuf_read = read i33 @_ssdm_op_Read.ap_fifo.volatile.i33P0A, i33 %outbuf
+
+]]></Node>
+<StgValue><ssdm name="outbuf_read"/></StgValue>
 </operation>
 
 <operation id="10" st_id="1" stage="1" lat="1">
@@ -98,12 +98,12 @@ do.cond:3 %tmp_data_filed_V = trunc i35 %outbuf_read
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="16" bw="2" op_0_bw="2" op_1_bw="35" op_2_bw="32" op_3_bw="32">
+<Node id="16" bw="32" op_0_bw="33">
 <![CDATA[
-do.cond:4 %tmp_upsb_V = partselect i2 @_ssdm_op_PartSelect.i2.i35.i32.i32, i35 %outbuf_read, i32 32, i32 33
+do.cond:3 %tmp_data_filed_V = trunc i33 %outbuf_read
 
 ]]></Node>
-<StgValue><ssdm name="tmp_upsb_V"/></StgValue>
+<StgValue><ssdm name="tmp_data_filed_V"/></StgValue>
 </operation>
 
 <operation id="11" st_id="1" stage="1" lat="1">
@@ -113,9 +113,9 @@ do.cond:4 %tmp_upsb_V = partselect i2 @_ssdm_op_PartSelect.i2.i35.i32.i32, i35 %
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="17" bw="1" op_0_bw="1" op_1_bw="35" op_2_bw="32">
+<Node id="17" bw="1" op_0_bw="1" op_1_bw="33" op_2_bw="32">
 <![CDATA[
-do.cond:5 %tmp_last_V = bitselect i1 @_ssdm_op_BitSelect.i1.i35.i32, i35 %outbuf_read, i32 34
+do.cond:4 %tmp_last_V = bitselect i1 @_ssdm_op_BitSelect.i1.i33.i32, i33 %outbuf_read, i32 32
 
 ]]></Node>
 <StgValue><ssdm name="tmp_last_V"/></StgValue>
@@ -130,7 +130,7 @@ do.cond:5 %tmp_last_V = bitselect i1 @_ssdm_op_BitSelect.i1.i35.i32, i35 %outbuf
 
 <Node id="18" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="4" op_3_bw="4" op_4_bw="2" op_5_bw="1" op_6_bw="32" op_7_bw="4" op_8_bw="4" op_9_bw="2" op_10_bw="1">
 <![CDATA[
-do.cond:6 %write_ln304 = write void @_ssdm_op_Write.axis.volatile.i32P0A.i4P0A.i4P0A.i2P0A.i1P0A, i32 %outStreamTop_V_data_V, i4 %outStreamTop_V_keep_V, i4 %outStreamTop_V_strb_V, i2 %outStreamTop_V_user_V, i1 %outStreamTop_V_last_V, i32 %tmp_data_filed_V, i4 0, i4 0, i2 %tmp_upsb_V, i1 %tmp_last_V
+do.cond:5 %write_ln304 = write void @_ssdm_op_Write.axis.volatile.i32P0A.i4P0A.i4P0A.i2P0A.i1P0A, i32 %outStreamTop_V_data_V, i4 %outStreamTop_V_keep_V, i4 %outStreamTop_V_strb_V, i2 %outStreamTop_V_user_V, i1 %outStreamTop_V_last_V, i32 %tmp_data_filed_V, i4 0, i4 0, i2 0, i1 %tmp_last_V
 
 ]]></Node>
 <StgValue><ssdm name="write_ln304"/></StgValue>
@@ -143,12 +143,12 @@ do.cond:6 %write_ln304 = write void @_ssdm_op_Write.axis.volatile.i32P0A.i4P0A.i
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="19" bw="0" op_0_bw="1" op_1_bw="0" op_2_bw="0">
+<Node id="20" bw="0" op_0_bw="1" op_1_bw="0" op_2_bw="0">
 <![CDATA[
-do.cond:7 %br_ln183 = br i1 %tmp_last_V, void %do.cond, void %do.end
+do.cond:7 %br_ln177 = br i1 %tmp_last_V, void %do.cond, void %do.end
 
 ]]></Node>
-<StgValue><ssdm name="br_ln183"/></StgValue>
+<StgValue><ssdm name="br_ln177"/></StgValue>
 </operation>
 </state>
 
@@ -161,12 +161,12 @@ do.cond:7 %br_ln183 = br i1 %tmp_last_V, void %do.cond, void %do.end
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="12" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="0">
+<Node id="13" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="0">
 <![CDATA[
-do.cond:0 %specpipeline_ln177 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 0, i32 0, void @empty_3
+do.cond:0 %specpipeline_ln168 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 0, i32 0, void @empty_3
 
 ]]></Node>
-<StgValue><ssdm name="specpipeline_ln177"/></StgValue>
+<StgValue><ssdm name="specpipeline_ln168"/></StgValue>
 </operation>
 
 <operation id="15" st_id="2" stage="1" lat="1">
@@ -176,7 +176,7 @@ do.cond:0 %specpipeline_ln177 = specpipeline void @_ssdm_op_SpecPipeline, i32 42
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="13" bw="0" op_0_bw="0" op_1_bw="0">
+<Node id="14" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
 do.cond:1 %specloopname_ln145 = specloopname void @_ssdm_op_SpecLoopName, void @empty_13
 
@@ -193,7 +193,7 @@ do.cond:1 %specloopname_ln145 = specloopname void @_ssdm_op_SpecLoopName, void @
 
 <Node id="18" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="4" op_3_bw="4" op_4_bw="2" op_5_bw="1" op_6_bw="32" op_7_bw="4" op_8_bw="4" op_9_bw="2" op_10_bw="1">
 <![CDATA[
-do.cond:6 %write_ln304 = write void @_ssdm_op_Write.axis.volatile.i32P0A.i4P0A.i4P0A.i2P0A.i1P0A, i32 %outStreamTop_V_data_V, i4 %outStreamTop_V_keep_V, i4 %outStreamTop_V_strb_V, i2 %outStreamTop_V_user_V, i1 %outStreamTop_V_last_V, i32 %tmp_data_filed_V, i4 0, i4 0, i2 %tmp_upsb_V, i1 %tmp_last_V
+do.cond:5 %write_ln304 = write void @_ssdm_op_Write.axis.volatile.i32P0A.i4P0A.i4P0A.i2P0A.i1P0A, i32 %outStreamTop_V_data_V, i4 %outStreamTop_V_keep_V, i4 %outStreamTop_V_strb_V, i2 %outStreamTop_V_user_V, i1 %outStreamTop_V_last_V, i32 %tmp_data_filed_V, i4 0, i4 0, i2 0, i1 %tmp_last_V
 
 ]]></Node>
 <StgValue><ssdm name="write_ln304"/></StgValue>
@@ -203,16 +203,15 @@ do.cond:6 %write_ln304 = write void @_ssdm_op_Write.axis.volatile.i32P0A.i4P0A.i
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="tmp_last_V" val="1"/>
-</and_exp></or_exp>
+<or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="21" bw="0" op_0_bw="0" op_1_bw="1" op_2_bw="1">
+<Node id="19" bw="0" op_0_bw="0" op_1_bw="1" op_2_bw="1" op_3_bw="0">
 <![CDATA[
-do.end:0 %write_ln185 = write void @_ssdm_op_Write.ap_auto.i1P0A, i1 %m2s_buf_sts, i1 1
+do.cond:6 %write_ln175 = write void @_ssdm_op_Write.ap_auto.volatile.i1P0A, i1 %m2s_buf_sts, i1 %tmp_last_V
 
 ]]></Node>
-<StgValue><ssdm name="write_ln185"/></StgValue>
+<StgValue><ssdm name="write_ln175"/></StgValue>
 </operation>
 
 <operation id="18" st_id="2" stage="1" lat="1">
@@ -225,10 +224,10 @@ do.end:0 %write_ln185 = write void @_ssdm_op_Write.ap_auto.i1P0A, i1 %m2s_buf_st
 
 <Node id="22" bw="0">
 <![CDATA[
-do.end:1 %ret_ln187 = ret
+do.end:0 %ret_ln178 = ret
 
 ]]></Node>
-<StgValue><ssdm name="ret_ln187"/></StgValue>
+<StgValue><ssdm name="ret_ln178"/></StgValue>
 </operation>
 </state>
 </state_list>
@@ -344,95 +343,93 @@ do.end:1 %ret_ln187 = ret
 </dataflow>
 <dataflow id="83" from="StgValue_39" to="specinterface_ln0" fromId="39" toId="6">
 </dataflow>
-<dataflow id="85" from="_ssdm_op_Read.ap_fifo.volatile.i35P0A" to="outbuf_read" fromId="84" toId="8">
+<dataflow id="85" from="_ssdm_op_Write.ap_auto.volatile.i1P0A" to="write_ln165" fromId="84" toId="7">
 </dataflow>
-<dataflow id="86" from="outbuf" to="outbuf_read" fromId="27" toId="8">
+<dataflow id="86" from="m2s_buf_sts" to="write_ln165" fromId="28" toId="7">
 </dataflow>
-<dataflow id="87" from="outbuf_read" to="tmp_data_filed_V" fromId="8" toId="9">
+<dataflow id="88" from="StgValue_87" to="write_ln165" fromId="87" toId="7">
 </dataflow>
-<dataflow id="89" from="_ssdm_op_PartSelect.i2.i35.i32.i32" to="tmp_upsb_V" fromId="88" toId="10">
+<dataflow id="90" from="_ssdm_op_Read.ap_fifo.volatile.i33P0A" to="outbuf_read" fromId="89" toId="9">
 </dataflow>
-<dataflow id="90" from="outbuf_read" to="tmp_upsb_V" fromId="8" toId="10">
+<dataflow id="91" from="outbuf" to="outbuf_read" fromId="27" toId="9">
 </dataflow>
-<dataflow id="92" from="StgValue_91" to="tmp_upsb_V" fromId="91" toId="10">
+<dataflow id="92" from="outbuf_read" to="tmp_data_filed_V" fromId="9" toId="10">
 </dataflow>
-<dataflow id="94" from="StgValue_93" to="tmp_upsb_V" fromId="93" toId="10">
+<dataflow id="94" from="_ssdm_op_BitSelect.i1.i33.i32" to="tmp_last_V" fromId="93" toId="11">
 </dataflow>
-<dataflow id="96" from="_ssdm_op_BitSelect.i1.i35.i32" to="tmp_last_V" fromId="95" toId="11">
+<dataflow id="95" from="outbuf_read" to="tmp_last_V" fromId="9" toId="11">
 </dataflow>
-<dataflow id="97" from="outbuf_read" to="tmp_last_V" fromId="8" toId="11">
+<dataflow id="97" from="StgValue_96" to="tmp_last_V" fromId="96" toId="11">
 </dataflow>
-<dataflow id="99" from="StgValue_98" to="tmp_last_V" fromId="98" toId="11">
+<dataflow id="99" from="_ssdm_op_Write.axis.volatile.i32P0A.i4P0A.i4P0A.i2P0A.i1P0A" to="write_ln304" fromId="98" toId="12">
 </dataflow>
-<dataflow id="101" from="_ssdm_op_Write.axis.volatile.i32P0A.i4P0A.i4P0A.i2P0A.i1P0A" to="write_ln304" fromId="100" toId="12">
+<dataflow id="100" from="outStreamTop_V_data_V" to="write_ln304" fromId="29" toId="12">
 </dataflow>
-<dataflow id="102" from="outStreamTop_V_data_V" to="write_ln304" fromId="29" toId="12">
+<dataflow id="101" from="outStreamTop_V_keep_V" to="write_ln304" fromId="30" toId="12">
 </dataflow>
-<dataflow id="103" from="outStreamTop_V_keep_V" to="write_ln304" fromId="30" toId="12">
+<dataflow id="102" from="outStreamTop_V_strb_V" to="write_ln304" fromId="31" toId="12">
 </dataflow>
-<dataflow id="104" from="outStreamTop_V_strb_V" to="write_ln304" fromId="31" toId="12">
+<dataflow id="103" from="outStreamTop_V_user_V" to="write_ln304" fromId="32" toId="12">
 </dataflow>
-<dataflow id="105" from="outStreamTop_V_user_V" to="write_ln304" fromId="32" toId="12">
+<dataflow id="104" from="outStreamTop_V_last_V" to="write_ln304" fromId="33" toId="12">
 </dataflow>
-<dataflow id="106" from="outStreamTop_V_last_V" to="write_ln304" fromId="33" toId="12">
+<dataflow id="105" from="tmp_data_filed_V" to="write_ln304" fromId="10" toId="12">
 </dataflow>
-<dataflow id="107" from="tmp_data_filed_V" to="write_ln304" fromId="9" toId="12">
+<dataflow id="107" from="StgValue_106" to="write_ln304" fromId="106" toId="12">
 </dataflow>
-<dataflow id="109" from="StgValue_108" to="write_ln304" fromId="108" toId="12">
+<dataflow id="108" from="StgValue_106" to="write_ln304" fromId="106" toId="12">
 </dataflow>
-<dataflow id="110" from="StgValue_108" to="write_ln304" fromId="108" toId="12">
+<dataflow id="110" from="StgValue_109" to="write_ln304" fromId="109" toId="12">
 </dataflow>
-<dataflow id="111" from="tmp_upsb_V" to="write_ln304" fromId="10" toId="12">
+<dataflow id="111" from="tmp_last_V" to="write_ln304" fromId="11" toId="12">
 </dataflow>
-<dataflow id="112" from="tmp_last_V" to="write_ln304" fromId="11" toId="12">
+<dataflow id="112" from="tmp_last_V" to="br_ln177" fromId="11" toId="13">
 </dataflow>
-<dataflow id="113" from="tmp_last_V" to="br_ln183" fromId="11" toId="13">
+<dataflow id="114" from="_ssdm_op_SpecPipeline" to="specpipeline_ln168" fromId="113" toId="14">
 </dataflow>
-<dataflow id="115" from="_ssdm_op_SpecPipeline" to="specpipeline_ln177" fromId="114" toId="14">
+<dataflow id="115" from="StgValue_55" to="specpipeline_ln168" fromId="55" toId="14">
 </dataflow>
-<dataflow id="116" from="StgValue_55" to="specpipeline_ln177" fromId="55" toId="14">
+<dataflow id="116" from="StgValue_39" to="specpipeline_ln168" fromId="39" toId="14">
 </dataflow>
-<dataflow id="117" from="StgValue_39" to="specpipeline_ln177" fromId="39" toId="14">
+<dataflow id="117" from="StgValue_39" to="specpipeline_ln168" fromId="39" toId="14">
 </dataflow>
-<dataflow id="118" from="StgValue_39" to="specpipeline_ln177" fromId="39" toId="14">
+<dataflow id="118" from="StgValue_39" to="specpipeline_ln168" fromId="39" toId="14">
 </dataflow>
-<dataflow id="119" from="StgValue_39" to="specpipeline_ln177" fromId="39" toId="14">
+<dataflow id="119" from="empty_3" to="specpipeline_ln168" fromId="42" toId="14">
 </dataflow>
-<dataflow id="120" from="empty_3" to="specpipeline_ln177" fromId="42" toId="14">
+<dataflow id="121" from="_ssdm_op_SpecLoopName" to="specloopname_ln145" fromId="120" toId="15">
 </dataflow>
-<dataflow id="122" from="_ssdm_op_SpecLoopName" to="specloopname_ln145" fromId="121" toId="15">
+<dataflow id="123" from="empty_13" to="specloopname_ln145" fromId="122" toId="15">
 </dataflow>
-<dataflow id="124" from="empty_13" to="specloopname_ln145" fromId="123" toId="15">
+<dataflow id="124" from="_ssdm_op_Write.axis.volatile.i32P0A.i4P0A.i4P0A.i2P0A.i1P0A" to="write_ln304" fromId="98" toId="16">
 </dataflow>
-<dataflow id="125" from="_ssdm_op_Write.axis.volatile.i32P0A.i4P0A.i4P0A.i2P0A.i1P0A" to="write_ln304" fromId="100" toId="16">
+<dataflow id="125" from="outStreamTop_V_data_V" to="write_ln304" fromId="29" toId="16">
 </dataflow>
-<dataflow id="126" from="outStreamTop_V_data_V" to="write_ln304" fromId="29" toId="16">
+<dataflow id="126" from="outStreamTop_V_keep_V" to="write_ln304" fromId="30" toId="16">
 </dataflow>
-<dataflow id="127" from="outStreamTop_V_keep_V" to="write_ln304" fromId="30" toId="16">
+<dataflow id="127" from="outStreamTop_V_strb_V" to="write_ln304" fromId="31" toId="16">
 </dataflow>
-<dataflow id="128" from="outStreamTop_V_strb_V" to="write_ln304" fromId="31" toId="16">
+<dataflow id="128" from="outStreamTop_V_user_V" to="write_ln304" fromId="32" toId="16">
 </dataflow>
-<dataflow id="129" from="outStreamTop_V_user_V" to="write_ln304" fromId="32" toId="16">
+<dataflow id="129" from="outStreamTop_V_last_V" to="write_ln304" fromId="33" toId="16">
 </dataflow>
-<dataflow id="130" from="outStreamTop_V_last_V" to="write_ln304" fromId="33" toId="16">
+<dataflow id="130" from="tmp_data_filed_V" to="write_ln304" fromId="10" toId="16">
 </dataflow>
-<dataflow id="131" from="tmp_data_filed_V" to="write_ln304" fromId="9" toId="16">
+<dataflow id="131" from="StgValue_106" to="write_ln304" fromId="106" toId="16">
 </dataflow>
-<dataflow id="132" from="StgValue_108" to="write_ln304" fromId="108" toId="16">
+<dataflow id="132" from="StgValue_106" to="write_ln304" fromId="106" toId="16">
 </dataflow>
-<dataflow id="133" from="StgValue_108" to="write_ln304" fromId="108" toId="16">
+<dataflow id="133" from="StgValue_109" to="write_ln304" fromId="109" toId="16">
 </dataflow>
-<dataflow id="134" from="tmp_upsb_V" to="write_ln304" fromId="10" toId="16">
+<dataflow id="134" from="tmp_last_V" to="write_ln304" fromId="11" toId="16">
 </dataflow>
-<dataflow id="135" from="tmp_last_V" to="write_ln304" fromId="11" toId="16">
+<dataflow id="135" from="_ssdm_op_Write.ap_auto.volatile.i1P0A" to="write_ln175" fromId="84" toId="17">
 </dataflow>
-<dataflow id="137" from="_ssdm_op_Write.ap_auto.i1P0A" to="write_ln185" fromId="136" toId="17">
+<dataflow id="136" from="m2s_buf_sts" to="write_ln175" fromId="28" toId="17">
 </dataflow>
-<dataflow id="138" from="m2s_buf_sts" to="write_ln185" fromId="28" toId="17">
+<dataflow id="137" from="tmp_last_V" to="write_ln175" fromId="11" toId="17">
 </dataflow>
-<dataflow id="140" from="StgValue_139" to="write_ln185" fromId="139" toId="17">
-</dataflow>
-<dataflow id="141" from="tmp_last_V" to="StgValue_3" fromId="11" toId="3">
+<dataflow id="138" from="tmp_last_V" to="StgValue_3" fromId="11" toId="3">
 </dataflow>
 </dataflows>
 

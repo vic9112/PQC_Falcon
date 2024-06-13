@@ -40,9 +40,9 @@ output   ap_done;
 input   ap_continue;
 output   ap_idle;
 output   ap_ready;
-input  [34:0] outbuf_dout;
-input  [6:0] outbuf_num_data_valid;
-input  [6:0] outbuf_fifo_cap;
+input  [32:0] outbuf_dout;
+input  [10:0] outbuf_num_data_valid;
+input  [10:0] outbuf_fifo_cap;
 input   outbuf_empty_n;
 output   outbuf_read;
 input   outStreamTop_TREADY;
@@ -72,22 +72,22 @@ reg    ap_block_state2_pp0_stage0_iter1;
 wire    ap_loop_exit_ready;
 reg    ap_loop_exit_ready_pp0_iter1_reg;
 reg    ap_block_pp0_stage0_subdone;
-wire   [0:0] tmp_last_V_fu_107_p3;
+wire   [0:0] tmp_last_V_fu_93_p3;
 reg    ap_condition_exit_pp0_iter0_stage0;
 reg    ap_ready_int;
 reg    outbuf_blk_n;
 wire    ap_block_pp0_stage0;
 reg    outStreamTop_TDATA_blk_n;
 reg    ap_block_pp0_stage0_11001;
-reg   [0:0] tmp_last_V_reg_126;
-reg    ap_block_pp0_stage0_01001;
+reg   [0:0] tmp_last_V_reg_107;
 reg   [0:0] m2s_buf_sts_preg;
+wire    ap_loop_init;
+reg    ap_block_pp0_stage0_01001;
 wire    ap_continue_int;
 reg    ap_done_int;
 reg   [0:0] ap_NS_fsm;
 wire    ap_enable_pp0;
 wire    ap_start_int;
-wire    ap_loop_init;
 wire   [31:0] outStreamTop_TDATA_int_regslice;
 reg    outStreamTop_TVALID_int_regslice;
 wire    outStreamTop_TREADY_int_regslice;
@@ -99,7 +99,6 @@ wire    regslice_both_outStreamTop_V_strb_V_U_apdone_blk;
 wire    regslice_both_outStreamTop_V_strb_V_U_ack_in_dummy;
 wire    regslice_both_outStreamTop_V_strb_V_U_vld_out;
 wire    regslice_both_outStreamTop_V_user_V_U_apdone_blk;
-wire   [1:0] outStreamTop_TUSER_int_regslice;
 wire    regslice_both_outStreamTop_V_user_V_U_ack_in_dummy;
 wire    regslice_both_outStreamTop_V_user_V_U_vld_out;
 wire    regslice_both_outStreamTop_V_last_V_U_apdone_blk;
@@ -179,7 +178,7 @@ userdma_regslice_both #(
 regslice_both_outStreamTop_V_user_V_U(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst),
-    .data_in(outStreamTop_TUSER_int_regslice),
+    .data_in(2'd0),
     .vld_in(outStreamTop_TVALID_int_regslice),
     .ack_in(regslice_both_outStreamTop_V_user_V_U_ack_in_dummy),
     .data_out(outStreamTop_TUSER),
@@ -236,8 +235,12 @@ always @ (posedge ap_clk) begin
     if (ap_rst == 1'b1) begin
         m2s_buf_sts_preg <= 1'd0;
     end else begin
-        if (((tmp_last_V_reg_126 == 1'd1) & (1'b0 == ap_block_pp0_stage0_01001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-            m2s_buf_sts_preg <= 1'd1;
+        if (((1'b0 == ap_block_pp0_stage0_01001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+            if ((ap_enable_reg_pp0_iter1 == 1'b1)) begin
+                m2s_buf_sts_preg <= tmp_last_V_reg_107;
+            end else if (((ap_start_int == 1'b1) & (ap_loop_init == 1'b1))) begin
+                m2s_buf_sts_preg <= 1'd0;
+            end
         end
     end
 end
@@ -254,12 +257,12 @@ end
 
 always @ (posedge ap_clk) begin
     if (((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-        tmp_last_V_reg_126 <= outbuf_dout[32'd34];
+        tmp_last_V_reg_107 <= outbuf_dout[32'd32];
     end
 end
 
 always @ (*) begin
-    if (((tmp_last_V_fu_107_p3 == 1'd1) & (1'b0 == ap_block_pp0_stage0_subdone) & (ap_start_int == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+    if (((tmp_last_V_fu_93_p3 == 1'd1) & (1'b0 == ap_block_pp0_stage0_subdone) & (ap_start_int == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         ap_condition_exit_pp0_iter0_stage0 = 1'b1;
     end else begin
         ap_condition_exit_pp0_iter0_stage0 = 1'b0;
@@ -299,15 +302,21 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((tmp_last_V_reg_126 == 1'd1) & (1'b0 == ap_block_pp0_stage0_01001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-        m2s_buf_sts = 1'd1;
+    if (((1'b0 == ap_block_pp0_stage0_01001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+        if ((ap_enable_reg_pp0_iter1 == 1'b1)) begin
+            m2s_buf_sts = tmp_last_V_reg_107;
+        end else if (((ap_start_int == 1'b1) & (ap_loop_init == 1'b1))) begin
+            m2s_buf_sts = 1'd0;
+        end else begin
+            m2s_buf_sts = m2s_buf_sts_preg;
+        end
     end else begin
         m2s_buf_sts = m2s_buf_sts_preg;
     end
 end
 
 always @ (*) begin
-    if (((tmp_last_V_reg_126 == 1'd1) & (1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+    if ((((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0)) | ((1'b0 == ap_block_pp0_stage0_11001) & (ap_start_int == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_loop_init == 1'b1)))) begin
         m2s_buf_sts_ap_vld = 1'b1;
     end else begin
         m2s_buf_sts_ap_vld = 1'b0;
@@ -389,12 +398,10 @@ assign ap_loop_exit_ready = ap_condition_exit_pp0_iter0_stage0;
 
 assign outStreamTop_TDATA_int_regslice = outbuf_dout[31:0];
 
-assign outStreamTop_TLAST_int_regslice = outbuf_dout[32'd34];
-
-assign outStreamTop_TUSER_int_regslice = {{outbuf_dout[33:32]}};
+assign outStreamTop_TLAST_int_regslice = outbuf_dout[32'd32];
 
 assign outStreamTop_TVALID = regslice_both_outStreamTop_V_data_V_U_vld_out;
 
-assign tmp_last_V_fu_107_p3 = outbuf_dout[32'd34];
+assign tmp_last_V_fu_93_p3 = outbuf_dout[32'd32];
 
 endmodule //userdma_sendoutstream

@@ -10500,19 +10500,15 @@ private:
 
 
 
-
-
 typedef ap_axiu<32, 2, 0, 0> trans_pkt;
 
-typedef union {
-  double fpr;
-  struct {
-   unsigned int lower;
-   unsigned int upper;
-   } uin;
-  } memcell;
 
-__attribute__((sdx_kernel("userdma", 0))) void userdma(
+struct memcell {
+ ap_uint<32> lower;
+ ap_uint<32> upper;
+};
+
+void userdma(
   hls::stream<trans_pkt> &inStreamTop,
   hls::stream<trans_pkt> &outStreamTop,
   ap_uint<2> kernel_mode,
@@ -10522,8 +10518,8 @@ __attribute__((sdx_kernel("userdma", 0))) void userdma(
   memcell m2sbuf[1024],
   ap_uint<2> *s2m_err);
 
-static constexpr int MAX_BURST_LENGTH = 32;
-static constexpr int BUFFER_FACTOR = 2;
+static constexpr int MAX_BURST_LENGTH = 256;
+static constexpr int BUFFER_FACTOR = 4;
 
 
 static constexpr int DATA_DEPTH = MAX_BURST_LENGTH * BUFFER_FACTOR;
@@ -10533,40 +10529,38 @@ struct data {
  ap_int<32> data_filed;
  ap_int<1> last;
 };
-
-struct out_data {
- ap_int<32> data_filed;
- ap_int<2> upsb;
- ap_int<1> last;
-};
 # 2 "userdma.cpp" 2
 
 
-void streamtoparallelwithburst(hls::stream<data> &in_stream, hls::stream<int> &in_counts, bool &buf_sts,
- ap_uint<2> kernel_mode, memcell *out_memory) {
+void streamtoparallelwithburst(
+ hls::stream<data> &in_stream,
+ hls::stream<int> &in_counts,
+ bool volatile *buf_sts,
+ ap_uint<2> kernel_mode,
+ memcell *out_memory
+ ) {
 
  data in_val;
  int count = 0;
- bool out_sts = 0;
  ap_uint<32> final_s2m_len = 0;
  ap_uint<32> s2m_len;
- buf_sts = 0;
  s2m_len = 1024;
  bool even = ((kernel_mode == 0) || (kernel_mode == 1))? 1 : 0;
  bool high = 0;
-# 25 "userdma.cpp"
- VITIS_LOOP_25_1: do {
+ *buf_sts = 0;
+
+ VITIS_LOOP_21_1: do {
   count = in_counts.read();
   high = 0;
   int a = 0;
-  VITIS_LOOP_29_2: for (int i = 0; i < count; ++i) {
+  VITIS_LOOP_25_2: for (int i = 0; i < count; ++i) {
 #pragma HLS PIPELINE
  in_val = in_stream.read();
 
    if (high)
-    out_memory[a-1].uin.upper = in_val.data_filed;
+    out_memory[a-1].upper = in_val.data_filed;
    else
-    out_memory[a].uin.lower = in_val.data_filed;
+    out_memory[a].lower = in_val.data_filed;
    high = (even)? (!high) : high;
 
    a = (even)? (high)? a + 1 : a : a + 1;
@@ -10580,22 +10574,22 @@ void streamtoparallelwithburst(hls::stream<data> &in_stream, hls::stream<int> &i
    final_s2m_len += count;
   }
 
-  if (final_s2m_len == s2m_len)
-   out_sts = 1;
-  else
-   out_sts = 0;
-
   if (final_s2m_len == 1024)
    out_memory -= 1024;
 
-  buf_sts = out_sts;
-
  } while(final_s2m_len < s2m_len);
-# 70 "userdma.cpp"
+
+ *buf_sts = 1;
+
 }
 
-void getinstream(hls::stream<trans_pkt> &in_stream, ap_uint<2> kernel_mode, ap_uint<2> &s2m_err,
- hls::stream<data > &out_stream, hls::stream<int>& out_counts) {
+void getinstream(
+ hls::stream<trans_pkt> &in_stream,
+ ap_uint<2> kernel_mode,
+ ap_uint<2> &s2m_err,
+ hls::stream<data > &out_stream,
+ hls::stream<int> &out_counts
+ ) {
 
  int count = 0;
     ap_uint<32> in_len = 0;
@@ -10606,7 +10600,7 @@ void getinstream(hls::stream<trans_pkt> &in_stream, ap_uint<2> kernel_mode, ap_u
  s2m_len = ((kernel_mode == 0) || (kernel_mode == 1))? 2048 : 1024;
  bool even = ((kernel_mode == 0) || (kernel_mode == 1))? 1 : 0;
 
-    VITIS_LOOP_84_1: do {
+    VITIS_LOOP_72_1: do {
 #pragma HLS PIPELINE
  in_val = in_stream.read();
   data out_val = {in_val.data, in_val.last};
@@ -10632,11 +10626,14 @@ void getinstream(hls::stream<trans_pkt> &in_stream, ap_uint<2> kernel_mode, ap_u
 }
 
 
-void paralleltostreamwithburst(memcell *in_memory, ap_uint<2> kernel_mode, hls::stream<out_data> &out_stream) {
+void paralleltostreamwithburst(
+ memcell *in_memory,
+ ap_uint<2> kernel_mode,
+ hls::stream<data> &out_stream
+ ) {
 
- out_data out_val;
+ data out_val;
  int count;
- bool out_sts = 0;
  int m2s_len = 0;
  int final_m2s_len = 0;
  m2s_len = ((kernel_mode == 0) || (kernel_mode == 1))? 2048 : 1024;
@@ -10647,11 +10644,10 @@ void paralleltostreamwithburst(memcell *in_memory, ap_uint<2> kernel_mode, hls::
 
  out_val.data_filed = (kernel_mode == 0)? 4 : (kernel_mode == 1)? 5 :
                          (kernel_mode == 2)? 6 : (kernel_mode == 3)? 7 : 0;
- out_val.upsb = 0;
  out_val.last = 0;
  out_stream.write(out_val);
 
- VITIS_LOOP_129_1: do {
+ VITIS_LOOP_119_1: do {
   if(final_m2s_len > MAX_BURST_LENGTH){
    count = MAX_BURST_LENGTH;
   }else{
@@ -10660,25 +10656,21 @@ void paralleltostreamwithburst(memcell *in_memory, ap_uint<2> kernel_mode, hls::
   high = 0;
   int a = 0;
 
-  VITIS_LOOP_138_2: for (int i = 0; i < count; ++i) {
+  VITIS_LOOP_128_2: for (int i = 0; i < count; ++i) {
 #pragma HLS PIPELINE
 
  if (high)
-    out_val.data_filed = in_memory[a-1].uin.upper;
+    out_val.data_filed = in_memory[a-1].upper;
    else
-    out_val.data_filed = in_memory[a].uin.lower;
+    out_val.data_filed = in_memory[a].lower;
    high = (even)? (!high) : high;
 
    a = (even)? (high)? a + 1 : a : a + 1;
 
-   out_val.upsb = 0;
    if((final_m2s_len <= MAX_BURST_LENGTH) && (i == (count - 1)))
     out_val.last = 1;
    else
     out_val.last = 0;
-
-   if (final_m2s_len == m2s_len)
-    out_val.upsb = 1;
 
    out_stream.write(out_val);
    final_m2s_len--;
@@ -10689,66 +10681,72 @@ void paralleltostreamwithburst(memcell *in_memory, ap_uint<2> kernel_mode, hls::
    in_memory += count;
 
  } while(final_m2s_len != 0);
+
 }
 
 
-void sendoutstream(hls::stream<out_data> &in_stream, bool &buf_sts, hls::stream<trans_pkt> &out_stream) {
+void sendoutstream(
+ hls::stream<data> &in_stream,
+ bool volatile *buf_sts,
+ hls::stream<trans_pkt> &out_stream
+ ) {
 
  int count = 0;
     trans_pkt out_val;
-    buf_sts = 0;
+    *buf_sts = 0;
 
-    VITIS_LOOP_176_1: do {
+    VITIS_LOOP_167_1: do {
 #pragma HLS PIPELINE
- out_data in_data = in_stream.read();
+ data in_data = in_stream.read();
      out_val.data = in_data.data_filed;
-     out_val.user = in_data.upsb;
+
      out_val.last = in_data.last;
      out_stream.write(out_val);
+
+     *buf_sts = (out_val.last)? 1 : 0;
+
     } while(!out_val.last);
-
-    buf_sts = (out_val.last)? 1 : 0;
-
 }
 
 __attribute__((sdx_kernel("userdma", 0))) void userdma(
-  hls::stream<trans_pkt> &inStreamTop,
-  hls::stream<trans_pkt> &outStreamTop,
-  ap_uint<2> kernel_mode,
-  bool *s2m_buf_sts,
-  bool *m2s_buf_sts,
-  memcell s2mbuf[1024],
-  memcell m2sbuf[1024],
-  ap_uint<2> *s2m_err) {
+ hls::stream<trans_pkt> &inStreamTop,
+ hls::stream<trans_pkt> &outStreamTop,
+ ap_uint<2> kernel_mode,
+ bool volatile *s2m_buf_sts,
+ bool volatile *m2s_buf_sts,
+ memcell s2mbuf[1024],
+ memcell m2sbuf[1024],
+ ap_uint<2> *s2m_err
+ ) {
 #line 17 "/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma/hls_userdma.prj/solution1/csynth.tcl"
 #pragma HLSDIRECTIVE TOP name=userdma
-# 197 "userdma.cpp"
+# 189 "userdma.cpp"
 
 #line 6 "/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma/hls_userdma.prj/solution1/directives.tcl"
 #pragma HLSDIRECTIVE TOP name=userdma
-# 197 "userdma.cpp"
+# 189 "userdma.cpp"
 
 #pragma HLS INTERFACE axis register_mode=both register port=inStreamTop
 #pragma HLS INTERFACE axis register_mode=both register port=outStreamTop
-#pragma HLS INTERFACE s_axilite port = kernel_mode bundle = control
-#pragma HLS INTERFACE s_axilite port = s2m_buf_sts bundle = control
-#pragma HLS INTERFACE s_axilite port = m2s_buf_sts bundle = control
-#pragma HLS INTERFACE s_axilite port = s2mbuf bundle = control
-#pragma HLS INTERFACE s_axilite port = m2sbuf bundle = control
-#pragma HLS INTERFACE m_axi max_write_burst_length=32 latency=10 depth=1024 bundle=gmem0 port=s2mbuf offset = slave
-#pragma HLS INTERFACE m_axi max_read_burst_length=32 latency=10 depth=1024 bundle=gmem1 port=m2sbuf offset = slave
-#pragma HLS INTERFACE s_axilite port = s2m_err bundle = control
-#pragma HLS INTERFACE s_axilite port = return bundle = control
+#pragma HLS INTERFACE s_axilite port=kernel_mode bundle=control
+#pragma HLS INTERFACE s_axilite port=s2m_buf_sts bundle=control
+#pragma HLS INTERFACE s_axilite port=m2s_buf_sts bundle=control
+#pragma HLS INTERFACE s_axilite port=s2mbuf bundle=control
+#pragma HLS INTERFACE s_axilite port=m2sbuf bundle=control
+#pragma HLS INTERFACE m_axi max_write_burst_length=256 depth=1024 bundle=gmem0 port=s2mbuf offset=slave
+#pragma HLS INTERFACE m_axi max_read_burst_length=256 num_read_outstanding=4 depth=1024 bundle=gmem1 port=m2sbuf offset=slave
+#pragma HLS INTERFACE s_axilite port=s2m_err bundle=control
+#pragma HLS INTERFACE s_axilite port=return bundle=control
 
 #pragma HLS DATAFLOW
 
  hls::stream<data, DATA_DEPTH> inbuf ("in_stream_buf");
  hls::stream<int, COUNT_DEPTH> incount ("in_count");
- hls::stream<out_data, DATA_DEPTH> outbuf ("out_stream_buf");
+ hls::stream<data, DATA_DEPTH> outbuf ("out_stream_buf");
 
  getinstream(inStreamTop, kernel_mode, *s2m_err, inbuf, incount);
- streamtoparallelwithburst(inbuf, incount, *s2m_buf_sts, kernel_mode, s2mbuf);
+ streamtoparallelwithburst(inbuf, incount, s2m_buf_sts, kernel_mode, s2mbuf);
  paralleltostreamwithburst(m2sbuf, kernel_mode, outbuf);
- sendoutstream(outbuf, *m2s_buf_sts, outStreamTop);
+ sendoutstream(outbuf, m2s_buf_sts, outStreamTop);
 
 }

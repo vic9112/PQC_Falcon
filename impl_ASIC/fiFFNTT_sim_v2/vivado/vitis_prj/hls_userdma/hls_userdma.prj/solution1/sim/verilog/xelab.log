@@ -13,14 +13,15 @@ INFO: [VRFC 10-311] analyzing module userdma_fifo_w2_d2_S
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma/hls_userdma.prj/solution1/sim/verilog/userdma_start_for_streamtoparallelwithburst_U0.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module userdma_start_for_streamtoparallelwithburst_U0_shiftReg
 INFO: [VRFC 10-311] analyzing module userdma_start_for_streamtoparallelwithburst_U0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma/hls_userdma.prj/solution1/sim/verilog/userdma_fifo_w33_d1024_A.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module userdma_fifo_w33_d1024_A_ram
+INFO: [VRFC 10-311] analyzing module userdma_fifo_w33_d1024_A
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma/hls_userdma.prj/solution1/sim/verilog/AESL_axi_slave_control.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module AESL_axi_slave_control
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma/hls_userdma.prj/solution1/sim/verilog/userdma_entry_proc.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module userdma_entry_proc
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma/hls_userdma.prj/solution1/sim/verilog/userdma_flow_control_loop_pipe.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module userdma_flow_control_loop_pipe
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma/hls_userdma.prj/solution1/sim/verilog/userdma_getinstream_Pipeline_VITIS_LOOP_84_1.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module userdma_getinstream_Pipeline_VITIS_LOOP_84_1
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma/hls_userdma.prj/solution1/sim/verilog/userdma.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module userdma
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma/hls_userdma.prj/solution1/sim/verilog/userdma_getinstream.v" into library xil_defaultlib
@@ -32,11 +33,10 @@ INFO: [VRFC 10-311] analyzing module userdma_regslice_both
 INFO: [VRFC 10-311] analyzing module userdma_regslice_both_w1
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma/hls_userdma.prj/solution1/sim/verilog/userdma_sendoutstream.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module userdma_sendoutstream
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma/hls_userdma.prj/solution1/sim/verilog/userdma_fifo_w33_d64_A.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module userdma_fifo_w33_d64_A_ram
-INFO: [VRFC 10-311] analyzing module userdma_fifo_w33_d64_A
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma/hls_userdma.prj/solution1/sim/verilog/AESL_fifo.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module fifo
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma/hls_userdma.prj/solution1/sim/verilog/userdma_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module userdma_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma/hls_userdma.prj/solution1/sim/verilog/userdma_gmem1_m_axi.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module userdma_gmem1_m_axi
 INFO: [VRFC 10-311] analyzing module userdma_gmem1_m_axi_load
@@ -57,13 +57,13 @@ INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/fsic_pqc/vivado/
 INFO: [VRFC 10-311] analyzing module AESL_deadlock_report_unit
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma/hls_userdma.prj/solution1/sim/verilog/AESL_axi_master_gmem0.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module AESL_axi_master_gmem0
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma/hls_userdma.prj/solution1/sim/verilog/userdma_fifo_w35_d64_A.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module userdma_fifo_w35_d64_A_ram
-INFO: [VRFC 10-311] analyzing module userdma_fifo_w35_d64_A
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma/hls_userdma.prj/solution1/sim/verilog/userdma_fifo_w32_d4_S.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module userdma_fifo_w32_d4_S_shiftReg
+INFO: [VRFC 10-311] analyzing module userdma_fifo_w32_d4_S
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma/hls_userdma.prj/solution1/sim/verilog/AESL_deadlock_detector.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module AESL_deadlock_detector
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma/hls_userdma.prj/solution1/sim/verilog/userdma_paralleltostreamwithburst_Pipeline_VITIS_LOOP_138_2.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module userdma_paralleltostreamwithburst_Pipeline_VITIS_LOOP_138_2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma/hls_userdma.prj/solution1/sim/verilog/userdma_getinstream_Pipeline_VITIS_LOOP_72_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module userdma_getinstream_Pipeline_VITIS_LOOP_72_1
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma/hls_userdma.prj/solution1/sim/verilog/AESL_axi_master_gmem1.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module AESL_axi_master_gmem1
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma/hls_userdma.prj/solution1/sim/verilog/userdma_gmem0_m_axi.v" into library xil_defaultlib
@@ -82,11 +82,8 @@ INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/fsic_pqc/vivado/
 INFO: [VRFC 10-311] analyzing module apatb_userdma_top
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma/hls_userdma.prj/solution1/sim/verilog/AESL_axi_s_outStreamTop.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module AESL_axi_s_outStreamTop
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma/hls_userdma.prj/solution1/sim/verilog/userdma_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module userdma_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma/hls_userdma.prj/solution1/sim/verilog/userdma_fifo_w32_d2_S.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module userdma_fifo_w32_d2_S_shiftReg
-INFO: [VRFC 10-311] analyzing module userdma_fifo_w32_d2_S
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma/hls_userdma.prj/solution1/sim/verilog/userdma_paralleltostreamwithburst_Pipeline_VITIS_LOOP_128_2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module userdma_paralleltostreamwithburst_Pipeline_VITIS_LOOP_128_2
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma/hls_userdma.prj/solution1/sim/verilog/AESL_deadlock_kernel_monitor_top.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module AESL_deadlock_kernel_monitor_top
 WARNING: [VRFC 10-3824] variable 'block_delay' must explicitly be declared as automatic or static [/home/ubuntu/fsic_pqc/vivado/vitis_prj/hls_userdma/hls_userdma.prj/solution1/sim/verilog/AESL_deadlock_kernel_monitor_top.v:41]
@@ -166,6 +163,8 @@ Compiling module xil_defaultlib.userdma_gmem1_m_axi_throttle(CON...
 Compiling module xil_defaultlib.userdma_gmem1_m_axi_reg_slice(DA...
 Compiling module xil_defaultlib.userdma_gmem1_m_axi_write(CONSER...
 Compiling module xil_defaultlib.userdma_gmem1_m_axi_reg_slice(DA...
+Compiling module xil_defaultlib.userdma_gmem1_m_axi_srl(DATA_WID...
+Compiling module xil_defaultlib.userdma_gmem1_m_axi_fifo(DATA_WI...
 Compiling module xil_defaultlib.userdma_gmem1_m_axi_read(C_USER_...
 Compiling module xil_defaultlib.userdma_gmem1_m_axi(CONSERVATIVE...
 Compiling module xil_defaultlib.userdma_entry_proc
@@ -184,14 +183,12 @@ Compiling module xil_defaultlib.userdma_flow_control_loop_pipe
 Compiling module xil_defaultlib.userdma_sendoutstream
 Compiling module xil_defaultlib.userdma_fifo_w64_d3_S_shiftReg
 Compiling module xil_defaultlib.userdma_fifo_w64_d3_S
-Compiling module xil_defaultlib.userdma_fifo_w33_d64_A_ram
-Compiling module xil_defaultlib.userdma_fifo_w33_d64_A
-Compiling module xil_defaultlib.userdma_fifo_w32_d2_S_shiftReg
-Compiling module xil_defaultlib.userdma_fifo_w32_d2_S
+Compiling module xil_defaultlib.userdma_fifo_w33_d1024_A_ram
+Compiling module xil_defaultlib.userdma_fifo_w33_d1024_A
+Compiling module xil_defaultlib.userdma_fifo_w32_d4_S_shiftReg
+Compiling module xil_defaultlib.userdma_fifo_w32_d4_S
 Compiling module xil_defaultlib.userdma_fifo_w2_d2_S_shiftReg
 Compiling module xil_defaultlib.userdma_fifo_w2_d2_S
-Compiling module xil_defaultlib.userdma_fifo_w35_d64_A_ram
-Compiling module xil_defaultlib.userdma_fifo_w35_d64_A
 Compiling module xil_defaultlib.userdma_start_for_streamtoparall...
 Compiling module xil_defaultlib.userdma_start_for_streamtoparall...
 Compiling module xil_defaultlib.userdma_start_for_sendoutstream_...

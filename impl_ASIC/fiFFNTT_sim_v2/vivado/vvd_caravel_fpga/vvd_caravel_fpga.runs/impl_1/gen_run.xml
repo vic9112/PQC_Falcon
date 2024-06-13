@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z020clg400-1" LaunchTime="1716817786">
+<GenRun Id="impl_1" LaunchPart="xc7z020clg400-1" LaunchTime="1718285598">
   <File Type="PA-TCL" Name="design_1_wrapper.tcl"/>
   <File Type="ROUTE-BUS-SKEW-PB" Name="design_1_wrapper_bus_skew_routed.pb"/>
   <File Type="REPORTS-TCL" Name="design_1_wrapper_reports.tcl"/>
@@ -566,6 +566,14 @@
   </FileSet>
   <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
     <Filter Type="Utils"/>
+    <File Path="$PSRCDIR/utils_1/imports/synth_1/design_1_wrapper.dcp">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedInSteps" Val="synth_1"/>
+        <Attr Name="AutoDcp" Val="1"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="TopAutoSet" Val="TRUE"/>
     </Config>
@@ -583,19 +591,20 @@
     <Step Id="write_bitstream"/>
   </Strategy>
   <BlockFileSet Type="BlockSrcs" Name="design_1_userdma_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_axi_intc_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_auto_pc_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_xbar_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_auto_pc_1"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_auto_us_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_processing_system7_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_xbar_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_caravel_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_spiflash_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_auto_pc_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_processing_system7_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_ps_axil_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_rst_ps7_0_10M_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_caravel_ps_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_axi_quad_spi_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_output_pin_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_xbar_1"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_blk_mem_gen_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_clk_wiz_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_axi_quad_spi_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_spiflash_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_rst_ps7_0_10M_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_ps_axil_0_0"/>
 </GenRun>

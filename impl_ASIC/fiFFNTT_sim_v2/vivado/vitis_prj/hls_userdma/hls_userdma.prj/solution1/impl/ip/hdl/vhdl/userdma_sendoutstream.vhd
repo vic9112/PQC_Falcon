@@ -18,9 +18,9 @@ port (
     ap_continue : IN STD_LOGIC;
     ap_idle : OUT STD_LOGIC;
     ap_ready : OUT STD_LOGIC;
-    outbuf_dout : IN STD_LOGIC_VECTOR (34 downto 0);
-    outbuf_num_data_valid : IN STD_LOGIC_VECTOR (6 downto 0);
-    outbuf_fifo_cap : IN STD_LOGIC_VECTOR (6 downto 0);
+    outbuf_dout : IN STD_LOGIC_VECTOR (32 downto 0);
+    outbuf_num_data_valid : IN STD_LOGIC_VECTOR (10 downto 0);
+    outbuf_fifo_cap : IN STD_LOGIC_VECTOR (10 downto 0);
     outbuf_empty_n : IN STD_LOGIC;
     outbuf_read : OUT STD_LOGIC;
     outStreamTop_TREADY : IN STD_LOGIC;
@@ -43,11 +43,10 @@ architecture behav of userdma_sendoutstream is
     constant ap_const_boolean_1 : BOOLEAN := true;
     constant ap_const_boolean_0 : BOOLEAN := false;
     constant ap_const_lv1_1 : STD_LOGIC_VECTOR (0 downto 0) := "1";
-    constant ap_const_lv4_0 : STD_LOGIC_VECTOR (3 downto 0) := "0000";
     constant ap_const_lv1_0 : STD_LOGIC_VECTOR (0 downto 0) := "0";
+    constant ap_const_lv4_0 : STD_LOGIC_VECTOR (3 downto 0) := "0000";
+    constant ap_const_lv2_0 : STD_LOGIC_VECTOR (1 downto 0) := "00";
     constant ap_const_lv32_20 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000100000";
-    constant ap_const_lv32_21 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000100001";
-    constant ap_const_lv32_22 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000100010";
 
 attribute shreg_extract : string;
     signal ap_CS_fsm : STD_LOGIC_VECTOR (0 downto 0) := "1";
@@ -65,22 +64,22 @@ attribute shreg_extract : string;
     signal ap_loop_exit_ready : STD_LOGIC;
     signal ap_loop_exit_ready_pp0_iter1_reg : STD_LOGIC;
     signal ap_block_pp0_stage0_subdone : BOOLEAN;
-    signal tmp_last_V_fu_107_p3 : STD_LOGIC_VECTOR (0 downto 0);
+    signal tmp_last_V_fu_93_p3 : STD_LOGIC_VECTOR (0 downto 0);
     signal ap_condition_exit_pp0_iter0_stage0 : STD_LOGIC;
     signal ap_ready_int : STD_LOGIC;
     signal outbuf_blk_n : STD_LOGIC;
     signal ap_block_pp0_stage0 : BOOLEAN;
     signal outStreamTop_TDATA_blk_n : STD_LOGIC;
     signal ap_block_pp0_stage0_11001 : BOOLEAN;
-    signal tmp_last_V_reg_126 : STD_LOGIC_VECTOR (0 downto 0);
-    signal ap_block_pp0_stage0_01001 : BOOLEAN;
+    signal tmp_last_V_reg_107 : STD_LOGIC_VECTOR (0 downto 0);
     signal m2s_buf_sts_preg : STD_LOGIC_VECTOR (0 downto 0) := "0";
+    signal ap_loop_init : STD_LOGIC;
+    signal ap_block_pp0_stage0_01001 : BOOLEAN;
     signal ap_continue_int : STD_LOGIC;
     signal ap_done_int : STD_LOGIC;
     signal ap_NS_fsm : STD_LOGIC_VECTOR (0 downto 0);
     signal ap_enable_pp0 : STD_LOGIC;
     signal ap_start_int : STD_LOGIC;
-    signal ap_loop_init : STD_LOGIC;
     signal outStreamTop_TDATA_int_regslice : STD_LOGIC_VECTOR (31 downto 0);
     signal outStreamTop_TVALID_int_regslice : STD_LOGIC;
     signal outStreamTop_TREADY_int_regslice : STD_LOGIC;
@@ -92,7 +91,6 @@ attribute shreg_extract : string;
     signal regslice_both_outStreamTop_V_strb_V_U_ack_in_dummy : STD_LOGIC;
     signal regslice_both_outStreamTop_V_strb_V_U_vld_out : STD_LOGIC;
     signal regslice_both_outStreamTop_V_user_V_U_apdone_blk : STD_LOGIC;
-    signal outStreamTop_TUSER_int_regslice : STD_LOGIC_VECTOR (1 downto 0);
     signal regslice_both_outStreamTop_V_user_V_U_ack_in_dummy : STD_LOGIC;
     signal regslice_both_outStreamTop_V_user_V_U_vld_out : STD_LOGIC;
     signal regslice_both_outStreamTop_V_last_V_U_apdone_blk : STD_LOGIC;
@@ -201,7 +199,7 @@ begin
     port map (
         ap_clk => ap_clk,
         ap_rst => ap_rst,
-        data_in => outStreamTop_TUSER_int_regslice,
+        data_in => ap_const_lv2_0,
         vld_in => outStreamTop_TVALID_int_regslice,
         ack_in => regslice_both_outStreamTop_V_user_V_U_ack_in_dummy,
         data_out => outStreamTop_TUSER,
@@ -275,8 +273,12 @@ begin
             if (ap_rst = '1') then
                 m2s_buf_sts_preg <= ap_const_lv1_0;
             else
-                if (((tmp_last_V_reg_126 = ap_const_lv1_1) and (ap_const_boolean_0 = ap_block_pp0_stage0_01001) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0))) then 
-                    m2s_buf_sts_preg <= ap_const_lv1_1;
+                if (((ap_const_boolean_0 = ap_block_pp0_stage0_01001) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0))) then
+                    if ((ap_enable_reg_pp0_iter1 = ap_const_logic_1)) then 
+                        m2s_buf_sts_preg <= tmp_last_V_reg_107;
+                    elsif (((ap_start_int = ap_const_logic_1) and (ap_loop_init = ap_const_logic_1))) then 
+                        m2s_buf_sts_preg <= ap_const_lv1_0;
+                    end if;
                 end if; 
             end if;
         end if;
@@ -299,7 +301,7 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if (((ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0))) then
-                tmp_last_V_reg_126 <= outbuf_dout(34 downto 34);
+                tmp_last_V_reg_107 <= outbuf_dout(32 downto 32);
             end if;
         end if;
     end process;
@@ -346,9 +348,9 @@ begin
     end process;
 
 
-    ap_condition_exit_pp0_iter0_stage0_assign_proc : process(ap_CS_fsm_pp0_stage0, ap_block_pp0_stage0_subdone, tmp_last_V_fu_107_p3, ap_start_int)
+    ap_condition_exit_pp0_iter0_stage0_assign_proc : process(ap_CS_fsm_pp0_stage0, ap_block_pp0_stage0_subdone, tmp_last_V_fu_93_p3, ap_start_int)
     begin
-        if (((tmp_last_V_fu_107_p3 = ap_const_lv1_1) and (ap_const_boolean_0 = ap_block_pp0_stage0_subdone) and (ap_start_int = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0))) then 
+        if (((tmp_last_V_fu_93_p3 = ap_const_lv1_1) and (ap_const_boolean_0 = ap_block_pp0_stage0_subdone) and (ap_start_int = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0))) then 
             ap_condition_exit_pp0_iter0_stage0 <= ap_const_logic_1;
         else 
             ap_condition_exit_pp0_iter0_stage0 <= ap_const_logic_0;
@@ -399,19 +401,25 @@ begin
     end process;
 
 
-    m2s_buf_sts_assign_proc : process(ap_CS_fsm_pp0_stage0, tmp_last_V_reg_126, ap_block_pp0_stage0_01001, m2s_buf_sts_preg)
+    m2s_buf_sts_assign_proc : process(ap_CS_fsm_pp0_stage0, ap_enable_reg_pp0_iter1, tmp_last_V_reg_107, m2s_buf_sts_preg, ap_loop_init, ap_block_pp0_stage0_01001, ap_start_int)
     begin
-        if (((tmp_last_V_reg_126 = ap_const_lv1_1) and (ap_const_boolean_0 = ap_block_pp0_stage0_01001) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0))) then 
-            m2s_buf_sts <= ap_const_lv1_1;
+        if (((ap_const_boolean_0 = ap_block_pp0_stage0_01001) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0))) then
+            if ((ap_enable_reg_pp0_iter1 = ap_const_logic_1)) then 
+                m2s_buf_sts <= tmp_last_V_reg_107;
+            elsif (((ap_start_int = ap_const_logic_1) and (ap_loop_init = ap_const_logic_1))) then 
+                m2s_buf_sts <= ap_const_lv1_0;
+            else 
+                m2s_buf_sts <= m2s_buf_sts_preg;
+            end if;
         else 
             m2s_buf_sts <= m2s_buf_sts_preg;
         end if; 
     end process;
 
 
-    m2s_buf_sts_ap_vld_assign_proc : process(ap_CS_fsm_pp0_stage0, ap_block_pp0_stage0_11001, tmp_last_V_reg_126)
+    m2s_buf_sts_ap_vld_assign_proc : process(ap_CS_fsm_pp0_stage0, ap_enable_reg_pp0_iter1, ap_block_pp0_stage0_11001, ap_loop_init, ap_start_int)
     begin
-        if (((tmp_last_V_reg_126 = ap_const_lv1_1) and (ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0))) then 
+        if ((((ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_enable_reg_pp0_iter1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0)) or ((ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_start_int = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0) and (ap_loop_init = ap_const_logic_1)))) then 
             m2s_buf_sts_ap_vld <= ap_const_logic_1;
         else 
             m2s_buf_sts_ap_vld <= ap_const_logic_0;
@@ -429,8 +437,7 @@ begin
     end process;
 
     outStreamTop_TDATA_int_regslice <= outbuf_dout(32 - 1 downto 0);
-    outStreamTop_TLAST_int_regslice <= outbuf_dout(34 downto 34);
-    outStreamTop_TUSER_int_regslice <= outbuf_dout(33 downto 32);
+    outStreamTop_TLAST_int_regslice <= outbuf_dout(32 downto 32);
     outStreamTop_TVALID <= regslice_both_outStreamTop_V_data_V_U_vld_out;
 
     outStreamTop_TVALID_int_regslice_assign_proc : process(ap_CS_fsm_pp0_stage0, ap_block_pp0_stage0_11001, ap_start_int)
@@ -462,5 +469,5 @@ begin
         end if; 
     end process;
 
-    tmp_last_V_fu_107_p3 <= outbuf_dout(34 downto 34);
+    tmp_last_V_fu_93_p3 <= outbuf_dout(32 downto 32);
 end behav;

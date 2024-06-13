@@ -15,7 +15,7 @@ set C_modelType { void 0 }
 set C_modelArgList {
 	{ inbuf int 33 regular {fifo 0 volatile }  }
 	{ incount25 int 32 regular {fifo 0 volatile }  }
-	{ s2m_buf_sts int 1 regular {pointer 1}  }
+	{ s2m_buf_sts int 1 regular {pointer 1 volatile }  }
 	{ kernel_mode int 2 regular {fifo 0}  }
 	{ gmem0 int 64 regular {axi_master 1}  }
 	{ out_memory int 64 regular {fifo 0}  }
@@ -38,13 +38,13 @@ set portList {
 	{ ap_idle sc_out sc_logic 1 done -1 } 
 	{ ap_ready sc_out sc_logic 1 ready -1 } 
 	{ inbuf_dout sc_in sc_lv 33 signal 0 } 
-	{ inbuf_num_data_valid sc_in sc_lv 7 signal 0 } 
-	{ inbuf_fifo_cap sc_in sc_lv 7 signal 0 } 
+	{ inbuf_num_data_valid sc_in sc_lv 11 signal 0 } 
+	{ inbuf_fifo_cap sc_in sc_lv 11 signal 0 } 
 	{ inbuf_empty_n sc_in sc_logic 1 signal 0 } 
 	{ inbuf_read sc_out sc_logic 1 signal 0 } 
 	{ incount25_dout sc_in sc_lv 32 signal 1 } 
-	{ incount25_num_data_valid sc_in sc_lv 2 signal 1 } 
-	{ incount25_fifo_cap sc_in sc_lv 2 signal 1 } 
+	{ incount25_num_data_valid sc_in sc_lv 3 signal 1 } 
+	{ incount25_fifo_cap sc_in sc_lv 3 signal 1 } 
 	{ incount25_empty_n sc_in sc_logic 1 signal 1 } 
 	{ incount25_read sc_out sc_logic 1 signal 1 } 
 	{ s2m_buf_sts sc_out sc_lv 1 signal 2 } 
@@ -115,13 +115,13 @@ set NewPortList {[
  	{ "name": "ap_idle", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "done", "bundle":{"name": "ap_idle", "role": "default" }} , 
  	{ "name": "ap_ready", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "ready", "bundle":{"name": "ap_ready", "role": "default" }} , 
  	{ "name": "inbuf_dout", "direction": "in", "datatype": "sc_lv", "bitwidth":33, "type": "signal", "bundle":{"name": "inbuf", "role": "dout" }} , 
- 	{ "name": "inbuf_num_data_valid", "direction": "in", "datatype": "sc_lv", "bitwidth":7, "type": "signal", "bundle":{"name": "inbuf", "role": "num_data_valid" }} , 
- 	{ "name": "inbuf_fifo_cap", "direction": "in", "datatype": "sc_lv", "bitwidth":7, "type": "signal", "bundle":{"name": "inbuf", "role": "fifo_cap" }} , 
+ 	{ "name": "inbuf_num_data_valid", "direction": "in", "datatype": "sc_lv", "bitwidth":11, "type": "signal", "bundle":{"name": "inbuf", "role": "num_data_valid" }} , 
+ 	{ "name": "inbuf_fifo_cap", "direction": "in", "datatype": "sc_lv", "bitwidth":11, "type": "signal", "bundle":{"name": "inbuf", "role": "fifo_cap" }} , 
  	{ "name": "inbuf_empty_n", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "inbuf", "role": "empty_n" }} , 
  	{ "name": "inbuf_read", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "inbuf", "role": "read" }} , 
  	{ "name": "incount25_dout", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "incount25", "role": "dout" }} , 
- 	{ "name": "incount25_num_data_valid", "direction": "in", "datatype": "sc_lv", "bitwidth":2, "type": "signal", "bundle":{"name": "incount25", "role": "num_data_valid" }} , 
- 	{ "name": "incount25_fifo_cap", "direction": "in", "datatype": "sc_lv", "bitwidth":2, "type": "signal", "bundle":{"name": "incount25", "role": "fifo_cap" }} , 
+ 	{ "name": "incount25_num_data_valid", "direction": "in", "datatype": "sc_lv", "bitwidth":3, "type": "signal", "bundle":{"name": "incount25", "role": "num_data_valid" }} , 
+ 	{ "name": "incount25_fifo_cap", "direction": "in", "datatype": "sc_lv", "bitwidth":3, "type": "signal", "bundle":{"name": "incount25", "role": "fifo_cap" }} , 
  	{ "name": "incount25_empty_n", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "incount25", "role": "empty_n" }} , 
  	{ "name": "incount25_read", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "incount25", "role": "read" }} , 
  	{ "name": "s2m_buf_sts", "direction": "out", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "s2m_buf_sts", "role": "default" }} , 
@@ -199,10 +199,10 @@ set RtlHierarchyInfo {[
 		"HasNonBlockingOperation" : "0",
 		"IsBlackBox" : "0",
 		"Port" : [
-			{"Name" : "inbuf", "Type" : "Fifo", "Direction" : "I", "DependentProc" : ["0"], "DependentChan" : "0", "DependentChanDepth" : "64", "DependentChanType" : "0",
+			{"Name" : "inbuf", "Type" : "Fifo", "Direction" : "I", "DependentProc" : ["0"], "DependentChan" : "0", "DependentChanDepth" : "1024", "DependentChanType" : "0",
 				"SubConnect" : [
-					{"ID" : "1", "SubInstance" : "grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123", "Port" : "inbuf", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "incount25", "Type" : "Fifo", "Direction" : "I", "DependentProc" : ["0"], "DependentChan" : "0", "DependentChanDepth" : "2", "DependentChanType" : "0",
+					{"ID" : "1", "SubInstance" : "grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129", "Port" : "inbuf", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+			{"Name" : "incount25", "Type" : "Fifo", "Direction" : "I", "DependentProc" : ["0"], "DependentChan" : "0", "DependentChanDepth" : "4", "DependentChanType" : "0",
 				"BlockSignal" : [
 					{"Name" : "incount25_blk_n", "Type" : "RtlSignal"}]},
 			{"Name" : "s2m_buf_sts", "Type" : "Vld", "Direction" : "O"},
@@ -211,15 +211,15 @@ set RtlHierarchyInfo {[
 					{"Name" : "kernel_mode_blk_n", "Type" : "RtlSignal"}]},
 			{"Name" : "gmem0", "Type" : "MAXI", "Direction" : "O",
 				"SubConnect" : [
-					{"ID" : "1", "SubInstance" : "grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123", "Port" : "gmem0", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+					{"ID" : "1", "SubInstance" : "grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129", "Port" : "gmem0", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
 			{"Name" : "out_memory", "Type" : "Fifo", "Direction" : "I", "DependentProc" : ["0"], "DependentChan" : "0", "DependentChanDepth" : "3", "DependentChanType" : "2",
 				"BlockSignal" : [
 					{"Name" : "out_memory_blk_n", "Type" : "RtlSignal"}]}],
 		"Loop" : [
-			{"Name" : "VITIS_LOOP_25_1", "PipelineType" : "no",
+			{"Name" : "VITIS_LOOP_21_1", "PipelineType" : "no",
 				"LoopDec" : {"FSMBitwidth" : "4", "FirstState" : "ap_ST_fsm_state2", "LastState" : ["ap_ST_fsm_state4"], "QuitState" : ["ap_ST_fsm_state2"], "PreState" : ["ap_ST_fsm_state1"], "PostState" : ["ap_ST_fsm_state1"], "OneDepthLoop" : "0", "OneStateBlock": ""}}]},
-	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123", "Parent" : "0", "Child" : ["2"],
-		"CDFG" : "streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2",
+	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129", "Parent" : "0", "Child" : ["2"],
+		"CDFG" : "streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
@@ -233,41 +233,45 @@ set RtlHierarchyInfo {[
 		"HasNonBlockingOperation" : "0",
 		"IsBlackBox" : "0",
 		"Port" : [
-			{"Name" : "tmp", "Type" : "None", "Direction" : "I"},
+			{"Name" : "tmp_1", "Type" : "None", "Direction" : "I"},
 			{"Name" : "even", "Type" : "None", "Direction" : "I"},
 			{"Name" : "out_memory_assign", "Type" : "None", "Direction" : "I"},
-			{"Name" : "zext_ln34_1", "Type" : "None", "Direction" : "I"},
+			{"Name" : "zext_ln30_1", "Type" : "None", "Direction" : "I"},
 			{"Name" : "gmem0", "Type" : "MAXI", "Direction" : "O",
 				"BlockSignal" : [
 					{"Name" : "gmem0_blk_n_AW", "Type" : "RtlSignal"},
 					{"Name" : "gmem0_blk_n_W", "Type" : "RtlSignal"},
 					{"Name" : "gmem0_blk_n_B", "Type" : "RtlSignal"}]},
-			{"Name" : "shl_ln34_1", "Type" : "None", "Direction" : "I"},
+			{"Name" : "shl_ln30_1", "Type" : "None", "Direction" : "I"},
 			{"Name" : "inbuf", "Type" : "Fifo", "Direction" : "I",
 				"BlockSignal" : [
-					{"Name" : "inbuf_blk_n", "Type" : "RtlSignal"}]}],
+					{"Name" : "inbuf_blk_n", "Type" : "RtlSignal"}]},
+			{"Name" : "zext_ln32_2", "Type" : "None", "Direction" : "I"},
+			{"Name" : "shl_ln32_1", "Type" : "None", "Direction" : "I"}],
 		"Loop" : [
-			{"Name" : "VITIS_LOOP_29_2", "PipelineType" : "UPC",
-				"LoopDec" : {"FSMBitwidth" : "1", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter17", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter17", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
-	{"ID" : "2", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123.flow_control_loop_pipe_sequential_init_U", "Parent" : "1"}]}
+			{"Name" : "VITIS_LOOP_25_2", "PipelineType" : "UPC",
+				"LoopDec" : {"FSMBitwidth" : "1", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter8", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter8", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
+	{"ID" : "2", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129.flow_control_loop_pipe_sequential_init_U", "Parent" : "1"}]}
 
 
 set ArgLastReadFirstWriteLatency {
 	streamtoparallelwithburst {
 		inbuf {Type I LastRead 1 FirstWrite -1}
 		incount25 {Type I LastRead 1 FirstWrite -1}
-		s2m_buf_sts {Type O LastRead -1 FirstWrite 3}
+		s2m_buf_sts {Type O LastRead -1 FirstWrite 0}
 		kernel_mode {Type I LastRead 0 FirstWrite -1}
 		gmem0 {Type O LastRead 5 FirstWrite 3}
 		out_memory {Type I LastRead 0 FirstWrite -1}}
-	streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2 {
-		tmp {Type I LastRead 0 FirstWrite -1}
+	streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2 {
+		tmp_1 {Type I LastRead 0 FirstWrite -1}
 		even {Type I LastRead 0 FirstWrite -1}
 		out_memory_assign {Type I LastRead 0 FirstWrite -1}
-		zext_ln34_1 {Type I LastRead 0 FirstWrite -1}
+		zext_ln30_1 {Type I LastRead 0 FirstWrite -1}
 		gmem0 {Type O LastRead 5 FirstWrite 3}
-		shl_ln34_1 {Type I LastRead 0 FirstWrite -1}
-		inbuf {Type I LastRead 1 FirstWrite -1}}}
+		shl_ln30_1 {Type I LastRead 0 FirstWrite -1}
+		inbuf {Type I LastRead 1 FirstWrite -1}
+		zext_ln32_2 {Type I LastRead 0 FirstWrite -1}
+		shl_ln32_1 {Type I LastRead 0 FirstWrite -1}}}
 
 set hasDtUnsupportedChannel 0
 
@@ -280,8 +284,8 @@ set PipelineEnableSignalInfo {[
 ]}
 
 set Spec2ImplPortList { 
-	inbuf { ap_fifo {  { inbuf_dout fifo_port_we 0 33 }  { inbuf_num_data_valid fifo_status_num_data_valid 0 7 }  { inbuf_fifo_cap fifo_update 0 7 }  { inbuf_empty_n fifo_status 0 1 }  { inbuf_read fifo_data 1 1 } } }
-	incount25 { ap_fifo {  { incount25_dout fifo_port_we 0 32 }  { incount25_num_data_valid fifo_status_num_data_valid 0 2 }  { incount25_fifo_cap fifo_update 0 2 }  { incount25_empty_n fifo_status 0 1 }  { incount25_read fifo_data 1 1 } } }
+	inbuf { ap_fifo {  { inbuf_dout fifo_port_we 0 33 }  { inbuf_num_data_valid fifo_status_num_data_valid 0 11 }  { inbuf_fifo_cap fifo_update 0 11 }  { inbuf_empty_n fifo_status 0 1 }  { inbuf_read fifo_data 1 1 } } }
+	incount25 { ap_fifo {  { incount25_dout fifo_port_we 0 32 }  { incount25_num_data_valid fifo_status_num_data_valid 0 3 }  { incount25_fifo_cap fifo_update 0 3 }  { incount25_empty_n fifo_status 0 1 }  { incount25_read fifo_data 1 1 } } }
 	s2m_buf_sts { ap_vld {  { s2m_buf_sts out_data 1 1 }  { s2m_buf_sts_ap_vld out_vld 1 1 } } }
 	kernel_mode { ap_fifo {  { kernel_mode_dout fifo_port_we 0 2 }  { kernel_mode_num_data_valid fifo_status_num_data_valid 0 2 }  { kernel_mode_fifo_cap fifo_update 0 2 }  { kernel_mode_empty_n fifo_status 0 1 }  { kernel_mode_read fifo_data 1 1 } } }
 	 { m_axi {  { m_axi_gmem0_AWVALID VALID 1 1 }  { m_axi_gmem0_AWREADY READY 0 1 }  { m_axi_gmem0_AWADDR ADDR 1 64 }  { m_axi_gmem0_AWID ID 1 1 }  { m_axi_gmem0_AWLEN SIZE 1 32 }  { m_axi_gmem0_AWSIZE BURST 1 3 }  { m_axi_gmem0_AWBURST LOCK 1 2 }  { m_axi_gmem0_AWLOCK CACHE 1 2 }  { m_axi_gmem0_AWCACHE PROT 1 4 }  { m_axi_gmem0_AWPROT QOS 1 3 }  { m_axi_gmem0_AWQOS REGION 1 4 }  { m_axi_gmem0_AWREGION USER 1 4 }  { m_axi_gmem0_AWUSER DATA 1 1 }  { m_axi_gmem0_WVALID VALID 1 1 }  { m_axi_gmem0_WREADY READY 0 1 }  { m_axi_gmem0_WDATA FIFONUM 1 64 }  { m_axi_gmem0_WSTRB STRB 1 8 }  { m_axi_gmem0_WLAST LAST 1 1 }  { m_axi_gmem0_WID ID 1 1 }  { m_axi_gmem0_WUSER DATA 1 1 }  { m_axi_gmem0_ARVALID VALID 1 1 }  { m_axi_gmem0_ARREADY READY 0 1 }  { m_axi_gmem0_ARADDR ADDR 1 64 }  { m_axi_gmem0_ARID ID 1 1 }  { m_axi_gmem0_ARLEN SIZE 1 32 }  { m_axi_gmem0_ARSIZE BURST 1 3 }  { m_axi_gmem0_ARBURST LOCK 1 2 }  { m_axi_gmem0_ARLOCK CACHE 1 2 }  { m_axi_gmem0_ARCACHE PROT 1 4 }  { m_axi_gmem0_ARPROT QOS 1 3 }  { m_axi_gmem0_ARQOS REGION 1 4 }  { m_axi_gmem0_ARREGION USER 1 4 }  { m_axi_gmem0_ARUSER DATA 1 1 }  { m_axi_gmem0_RVALID VALID 0 1 }  { m_axi_gmem0_RREADY READY 1 1 }  { m_axi_gmem0_RDATA FIFONUM 0 64 }  { m_axi_gmem0_RLAST LAST 0 1 }  { m_axi_gmem0_RID ID 0 1 }  { m_axi_gmem0_RFIFONUM LEN 0 9 }  { m_axi_gmem0_RUSER DATA 0 1 }  { m_axi_gmem0_RRESP RESP 0 2 }  { m_axi_gmem0_BVALID VALID 0 1 }  { m_axi_gmem0_BREADY READY 1 1 }  { m_axi_gmem0_BRESP RESP 0 2 }  { m_axi_gmem0_BID ID 0 1 }  { m_axi_gmem0_BUSER DATA 0 1 } } }

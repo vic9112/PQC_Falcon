@@ -8,17 +8,17 @@
 <InstName>entry_proc_U0</InstName>
 <ModuleName>entry_proc</ModuleName>
 <IsCompInst>true</IsCompInst>
-<ID>172</ID>
+<ID>170</ID>
 </Instance>
 <Instance>
 <InstName>getinstream_U0</InstName>
 <ModuleName>getinstream</ModuleName>
 <IsCompInst>true</IsCompInst>
-<ID>179</ID>
+<ID>177</ID>
 <InstancesList>
 <Instance>
-<InstName>grp_getinstream_Pipeline_VITIS_LOOP_84_1_fu_93</InstName>
-<ModuleName>getinstream_Pipeline_VITIS_LOOP_84_1</ModuleName>
+<InstName>grp_getinstream_Pipeline_VITIS_LOOP_72_1_fu_93</InstName>
+<ModuleName>getinstream_Pipeline_VITIS_LOOP_72_1</ModuleName>
 <IsCompInst>true</IsCompInst>
 <ID>93</ID>
 </Instance>
@@ -28,13 +28,13 @@
 <InstName>paralleltostreamwithburst_U0</InstName>
 <ModuleName>paralleltostreamwithburst</ModuleName>
 <IsCompInst>true</IsCompInst>
-<ID>200</ID>
+<ID>198</ID>
 <InstancesList>
 <Instance>
-<InstName>grp_paralleltostreamwithburst_Pipeline_VITIS_LOOP_138_2_fu_121</InstName>
-<ModuleName>paralleltostreamwithburst_Pipeline_VITIS_LOOP_138_2</ModuleName>
+<InstName>grp_paralleltostreamwithburst_Pipeline_VITIS_LOOP_128_2_fu_117</InstName>
+<ModuleName>paralleltostreamwithburst_Pipeline_VITIS_LOOP_128_2</ModuleName>
 <IsCompInst>true</IsCompInst>
-<ID>121</ID>
+<ID>117</ID>
 </Instance>
 </InstancesList>
 </Instance>
@@ -42,13 +42,13 @@
 <InstName>streamtoparallelwithburst_U0</InstName>
 <ModuleName>streamtoparallelwithburst</ModuleName>
 <IsCompInst>true</IsCompInst>
-<ID>211</ID>
+<ID>209</ID>
 <InstancesList>
 <Instance>
-<InstName>grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123</InstName>
-<ModuleName>streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2</ModuleName>
+<InstName>grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129</InstName>
+<ModuleName>streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2</ModuleName>
 <IsCompInst>true</IsCompInst>
-<ID>123</ID>
+<ID>129</ID>
 </Instance>
 </InstancesList>
 </Instance>
@@ -56,7 +56,7 @@
 <InstName>sendoutstream_U0</InstName>
 <ModuleName>sendoutstream</ModuleName>
 <IsCompInst>true</IsCompInst>
-<ID>223</ID>
+<ID>221</ID>
 </Instance>
 </InstancesList>
 </TopModule>
@@ -281,9 +281,9 @@
 </InterfaceSummary>
 </Module>
 <Module>
-<Name>getinstream_Pipeline_VITIS_LOOP_84_1</Name>
+<Name>getinstream_Pipeline_VITIS_LOOP_72_1</Name>
 <Loops>
-<VITIS_LOOP_84_1></VITIS_LOOP_84_1>
+<VITIS_LOOP_72_1></VITIS_LOOP_72_1>
 </Loops>
 <PerformanceEstimates>
 <SummaryOfTimingAnalysis>
@@ -302,8 +302,8 @@
 <PipelineType>no</PipelineType>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
-<VITIS_LOOP_84_1>
-<Name>VITIS_LOOP_84_1</Name>
+<VITIS_LOOP_72_1>
+<Name>VITIS_LOOP_72_1</Name>
 <TripCount>undef</TripCount>
 <Latency>undef</Latency>
 <AbsoluteTimeLatency>undef</AbsoluteTimeLatency>
@@ -312,7 +312,7 @@
 <PipelineType>yes</PipelineType>
 <InstanceList>
 </InstanceList>
-</VITIS_LOOP_84_1>
+</VITIS_LOOP_72_1>
 </SummaryOfLoopLatency>
 </PerformanceEstimates>
 <AreaEstimates>
@@ -337,7 +337,7 @@
 <InterfaceSummary>
 <RtlPorts>
 <name>ap_clk</name>
-<Object>getinstream_Pipeline_VITIS_LOOP_84_1</Object>
+<Object>getinstream_Pipeline_VITIS_LOOP_72_1</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -348,7 +348,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_rst</name>
-<Object>getinstream_Pipeline_VITIS_LOOP_84_1</Object>
+<Object>getinstream_Pipeline_VITIS_LOOP_72_1</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -359,7 +359,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_start</name>
-<Object>getinstream_Pipeline_VITIS_LOOP_84_1</Object>
+<Object>getinstream_Pipeline_VITIS_LOOP_72_1</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -370,7 +370,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_done</name>
-<Object>getinstream_Pipeline_VITIS_LOOP_84_1</Object>
+<Object>getinstream_Pipeline_VITIS_LOOP_72_1</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -381,7 +381,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_idle</name>
-<Object>getinstream_Pipeline_VITIS_LOOP_84_1</Object>
+<Object>getinstream_Pipeline_VITIS_LOOP_72_1</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -392,7 +392,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_ready</name>
-<Object>getinstream_Pipeline_VITIS_LOOP_84_1</Object>
+<Object>getinstream_Pipeline_VITIS_LOOP_72_1</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -442,7 +442,7 @@
 <IOProtocol>ap_fifo</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>7</Bits>
+<Bits>11</Bits>
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -453,7 +453,7 @@
 <IOProtocol>ap_fifo</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>7</Bits>
+<Bits>11</Bits>
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -497,7 +497,7 @@
 <IOProtocol>ap_fifo</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>2</Bits>
+<Bits>3</Bits>
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -508,7 +508,7 @@
 <IOProtocol>ap_fifo</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>2</Bits>
+<Bits>3</Bits>
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -589,8 +589,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>select_ln84</name>
-<Object>select_ln84</Object>
+<name>select_ln72</name>
+<Object>select_ln72</Object>
 <Type>scalar</Type>
 <Scope></Scope>
 <IOProtocol>ap_none</IOProtocol>
@@ -868,7 +868,7 @@
 <IOProtocol>ap_fifo</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>7</Bits>
+<Bits>11</Bits>
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -879,7 +879,7 @@
 <IOProtocol>ap_fifo</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>7</Bits>
+<Bits>11</Bits>
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -923,7 +923,7 @@
 <IOProtocol>ap_fifo</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>2</Bits>
+<Bits>3</Bits>
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -934,7 +934,7 @@
 <IOProtocol>ap_fifo</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>2</Bits>
+<Bits>3</Bits>
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -1017,9 +1017,9 @@
 </InterfaceSummary>
 </Module>
 <Module>
-<Name>streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2</Name>
+<Name>streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2</Name>
 <Loops>
-<VITIS_LOOP_29_2></VITIS_LOOP_29_2>
+<VITIS_LOOP_25_2></VITIS_LOOP_25_2>
 </Loops>
 <PerformanceEstimates>
 <SummaryOfTimingAnalysis>
@@ -1038,25 +1038,25 @@
 <PipelineType>no</PipelineType>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
-<VITIS_LOOP_29_2>
-<Name>VITIS_LOOP_29_2</Name>
+<VITIS_LOOP_25_2>
+<Name>VITIS_LOOP_25_2</Name>
 <TripCount>undef</TripCount>
 <Latency>undef</Latency>
 <AbsoluteTimeLatency>undef</AbsoluteTimeLatency>
 <PipelineII>1</PipelineII>
-<PipelineDepth>18</PipelineDepth>
+<PipelineDepth>9</PipelineDepth>
 <PipelineType>yes</PipelineType>
 <InstanceList>
 </InstanceList>
-</VITIS_LOOP_29_2>
+</VITIS_LOOP_25_2>
 </SummaryOfLoopLatency>
 </PerformanceEstimates>
 <AreaEstimates>
 <Resources>
-<FF>421</FF>
+<FF>441</FF>
 <AVAIL_FF>106400</AVAIL_FF>
 <UTIL_FF>~0</UTIL_FF>
-<LUT>750</LUT>
+<LUT>932</LUT>
 <AVAIL_LUT>53200</AVAIL_LUT>
 <UTIL_LUT>1</UTIL_LUT>
 <BRAM_18K>0</BRAM_18K>
@@ -1073,7 +1073,7 @@
 <InterfaceSummary>
 <RtlPorts>
 <name>ap_clk</name>
-<Object>streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2</Object>
+<Object>streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -1084,7 +1084,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_rst</name>
-<Object>streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2</Object>
+<Object>streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -1095,7 +1095,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_start</name>
-<Object>streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2</Object>
+<Object>streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -1106,7 +1106,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_done</name>
-<Object>streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2</Object>
+<Object>streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -1117,7 +1117,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_idle</name>
-<Object>streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2</Object>
+<Object>streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -1128,7 +1128,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_ready</name>
-<Object>streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2</Object>
+<Object>streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -1156,7 +1156,7 @@
 <IOProtocol>ap_fifo</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>7</Bits>
+<Bits>11</Bits>
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -1167,7 +1167,7 @@
 <IOProtocol>ap_fifo</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>7</Bits>
+<Bits>11</Bits>
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -1699,8 +1699,8 @@
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>tmp</name>
-<Object>tmp</Object>
+<name>tmp_1</name>
+<Object>tmp_1</Object>
 <Type>scalar</Type>
 <Scope></Scope>
 <IOProtocol>ap_none</IOProtocol>
@@ -1732,8 +1732,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>zext_ln34_1</name>
-<Object>zext_ln34_1</Object>
+<name>zext_ln30_1</name>
+<Object>zext_ln30_1</Object>
 <Type>scalar</Type>
 <Scope></Scope>
 <IOProtocol>ap_none</IOProtocol>
@@ -1743,8 +1743,30 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>shl_ln34_1</name>
-<Object>shl_ln34_1</Object>
+<name>shl_ln30_1</name>
+<Object>shl_ln30_1</Object>
+<Type>scalar</Type>
+<Scope></Scope>
+<IOProtocol>ap_none</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>zext_ln32_2</name>
+<Object>zext_ln32_2</Object>
+<Type>scalar</Type>
+<Scope></Scope>
+<IOProtocol>ap_none</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>6</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>shl_ln32_1</name>
+<Object>shl_ln32_1</Object>
 <Type>scalar</Type>
 <Scope></Scope>
 <IOProtocol>ap_none</IOProtocol>
@@ -1758,7 +1780,7 @@
 <Module>
 <Name>streamtoparallelwithburst</Name>
 <Loops>
-<VITIS_LOOP_25_1></VITIS_LOOP_25_1>
+<VITIS_LOOP_21_1></VITIS_LOOP_21_1>
 </Loops>
 <PerformanceEstimates>
 <SummaryOfTimingAnalysis>
@@ -1777,8 +1799,8 @@
 <PipelineType>no</PipelineType>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
-<VITIS_LOOP_25_1>
-<Name>VITIS_LOOP_25_1</Name>
+<VITIS_LOOP_21_1>
+<Name>VITIS_LOOP_21_1</Name>
 <TripCount>undef</TripCount>
 <Latency>undef</Latency>
 <AbsoluteTimeLatency>undef</AbsoluteTimeLatency>
@@ -1786,17 +1808,17 @@
 <PipelineDepth>undef</PipelineDepth>
 <PipelineType>no</PipelineType>
 <InstanceList>
-<Instance>grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_29_2_fu_123</Instance>
+<Instance>grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_25_2_fu_129</Instance>
 </InstanceList>
-</VITIS_LOOP_25_1>
+</VITIS_LOOP_21_1>
 </SummaryOfLoopLatency>
 </PerformanceEstimates>
 <AreaEstimates>
 <Resources>
-<FF>721</FF>
+<FF>755</FF>
 <AVAIL_FF>106400</AVAIL_FF>
 <UTIL_FF>~0</UTIL_FF>
-<LUT>1334</LUT>
+<LUT>1538</LUT>
 <AVAIL_LUT>53200</AVAIL_LUT>
 <UTIL_LUT>2</UTIL_LUT>
 <BRAM_18K>0</BRAM_18K>
@@ -1907,7 +1929,7 @@
 <IOProtocol>ap_fifo</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>7</Bits>
+<Bits>11</Bits>
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -1918,7 +1940,7 @@
 <IOProtocol>ap_fifo</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>7</Bits>
+<Bits>11</Bits>
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -1962,7 +1984,7 @@
 <IOProtocol>ap_fifo</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>2</Bits>
+<Bits>3</Bits>
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -1973,7 +1995,7 @@
 <IOProtocol>ap_fifo</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>2</Bits>
+<Bits>3</Bits>
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -2639,9 +2661,9 @@
 </InterfaceSummary>
 </Module>
 <Module>
-<Name>paralleltostreamwithburst_Pipeline_VITIS_LOOP_138_2</Name>
+<Name>paralleltostreamwithburst_Pipeline_VITIS_LOOP_128_2</Name>
 <Loops>
-<VITIS_LOOP_138_2></VITIS_LOOP_138_2>
+<VITIS_LOOP_128_2></VITIS_LOOP_128_2>
 </Loops>
 <PerformanceEstimates>
 <SummaryOfTimingAnalysis>
@@ -2660,27 +2682,27 @@
 <PipelineType>no</PipelineType>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
-<VITIS_LOOP_138_2>
-<Name>VITIS_LOOP_138_2</Name>
+<VITIS_LOOP_128_2>
+<Name>VITIS_LOOP_128_2</Name>
 <TripCount>undef</TripCount>
 <Latency>undef</Latency>
 <AbsoluteTimeLatency>undef</AbsoluteTimeLatency>
 <PipelineII>1</PipelineII>
-<PipelineDepth>21</PipelineDepth>
+<PipelineDepth>12</PipelineDepth>
 <PipelineType>yes</PipelineType>
 <InstanceList>
 </InstanceList>
-</VITIS_LOOP_138_2>
+</VITIS_LOOP_128_2>
 </SummaryOfLoopLatency>
 </PerformanceEstimates>
 <AreaEstimates>
 <Resources>
-<FF>1984</FF>
+<FF>1387</FF>
 <AVAIL_FF>106400</AVAIL_FF>
 <UTIL_FF>1</UTIL_FF>
-<LUT>1040</LUT>
+<LUT>1204</LUT>
 <AVAIL_LUT>53200</AVAIL_LUT>
-<UTIL_LUT>1</UTIL_LUT>
+<UTIL_LUT>2</UTIL_LUT>
 <BRAM_18K>0</BRAM_18K>
 <AVAIL_BRAM>280</AVAIL_BRAM>
 <UTIL_BRAM>0</UTIL_BRAM>
@@ -2695,7 +2717,7 @@
 <InterfaceSummary>
 <RtlPorts>
 <name>ap_clk</name>
-<Object>paralleltostreamwithburst_Pipeline_VITIS_LOOP_138_2</Object>
+<Object>paralleltostreamwithburst_Pipeline_VITIS_LOOP_128_2</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -2706,7 +2728,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_rst</name>
-<Object>paralleltostreamwithburst_Pipeline_VITIS_LOOP_138_2</Object>
+<Object>paralleltostreamwithburst_Pipeline_VITIS_LOOP_128_2</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -2717,7 +2739,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_start</name>
-<Object>paralleltostreamwithburst_Pipeline_VITIS_LOOP_138_2</Object>
+<Object>paralleltostreamwithburst_Pipeline_VITIS_LOOP_128_2</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -2728,7 +2750,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_done</name>
-<Object>paralleltostreamwithburst_Pipeline_VITIS_LOOP_138_2</Object>
+<Object>paralleltostreamwithburst_Pipeline_VITIS_LOOP_128_2</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -2739,7 +2761,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_idle</name>
-<Object>paralleltostreamwithburst_Pipeline_VITIS_LOOP_138_2</Object>
+<Object>paralleltostreamwithburst_Pipeline_VITIS_LOOP_128_2</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -2750,7 +2772,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_ready</name>
-<Object>paralleltostreamwithburst_Pipeline_VITIS_LOOP_138_2</Object>
+<Object>paralleltostreamwithburst_Pipeline_VITIS_LOOP_128_2</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -3185,7 +3207,7 @@
 <IOProtocol>m_axi</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>10</Bits>
+<Bits>11</Bits>
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -3273,7 +3295,7 @@
 <IOProtocol>ap_fifo</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>out</Dir>
-<Bits>35</Bits>
+<Bits>33</Bits>
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -3284,7 +3306,7 @@
 <IOProtocol>ap_fifo</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>7</Bits>
+<Bits>11</Bits>
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -3295,7 +3317,7 @@
 <IOProtocol>ap_fifo</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>7</Bits>
+<Bits>11</Bits>
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -3354,25 +3376,14 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>sub50</name>
-<Object>sub50</Object>
+<name>sub46</name>
+<Object>sub46</Object>
 <Type>scalar</Type>
 <Scope></Scope>
 <IOProtocol>ap_none</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
 <Bits>32</Bits>
-<Attribute>data</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>select_ln119</name>
-<Object>select_ln119</Object>
-<Type>scalar</Type>
-<Scope></Scope>
-<IOProtocol>ap_none</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>in</Dir>
-<Bits>12</Bits>
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -3398,8 +3409,19 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>zext_ln142</name>
-<Object>zext_ln142</Object>
+<name>zext_ln91</name>
+<Object>zext_ln91</Object>
+<Type>scalar</Type>
+<Scope></Scope>
+<IOProtocol>ap_none</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>6</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>zext_ln91_1</name>
+<Object>zext_ln91_1</Object>
 <Type>scalar</Type>
 <Scope></Scope>
 <IOProtocol>ap_none</IOProtocol>
@@ -3413,7 +3435,7 @@
 <Module>
 <Name>paralleltostreamwithburst</Name>
 <Loops>
-<VITIS_LOOP_129_1></VITIS_LOOP_129_1>
+<VITIS_LOOP_119_1></VITIS_LOOP_119_1>
 </Loops>
 <PerformanceEstimates>
 <SummaryOfTimingAnalysis>
@@ -3432,8 +3454,8 @@
 <PipelineType>no</PipelineType>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
-<VITIS_LOOP_129_1>
-<Name>VITIS_LOOP_129_1</Name>
+<VITIS_LOOP_119_1>
+<Name>VITIS_LOOP_119_1</Name>
 <TripCount>undef</TripCount>
 <Latency>undef</Latency>
 <AbsoluteTimeLatency>undef</AbsoluteTimeLatency>
@@ -3441,17 +3463,17 @@
 <PipelineDepth>undef</PipelineDepth>
 <PipelineType>no</PipelineType>
 <InstanceList>
-<Instance>grp_paralleltostreamwithburst_Pipeline_VITIS_LOOP_138_2_fu_121</Instance>
+<Instance>grp_paralleltostreamwithburst_Pipeline_VITIS_LOOP_128_2_fu_117</Instance>
 </InstanceList>
-</VITIS_LOOP_129_1>
+</VITIS_LOOP_119_1>
 </SummaryOfLoopLatency>
 </PerformanceEstimates>
 <AreaEstimates>
 <Resources>
-<FF>2348</FF>
+<FF>1752</FF>
 <AVAIL_FF>106400</AVAIL_FF>
-<UTIL_FF>2</UTIL_FF>
-<LUT>1651</LUT>
+<UTIL_FF>1</UTIL_FF>
+<LUT>1804</LUT>
 <AVAIL_LUT>53200</AVAIL_LUT>
 <UTIL_LUT>3</UTIL_LUT>
 <BRAM_18K>0</BRAM_18K>
@@ -4002,7 +4024,7 @@
 <IOProtocol>m_axi</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>10</Bits>
+<Bits>11</Bits>
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -4112,7 +4134,7 @@
 <IOProtocol>ap_fifo</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>out</Dir>
-<Bits>35</Bits>
+<Bits>33</Bits>
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -4123,7 +4145,7 @@
 <IOProtocol>ap_fifo</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>7</Bits>
+<Bits>11</Bits>
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -4134,7 +4156,7 @@
 <IOProtocol>ap_fifo</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>7</Bits>
+<Bits>11</Bits>
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -4164,13 +4186,13 @@
 <Module>
 <Name>sendoutstream</Name>
 <Loops>
-<VITIS_LOOP_176_1></VITIS_LOOP_176_1>
+<VITIS_LOOP_167_1></VITIS_LOOP_167_1>
 </Loops>
 <PerformanceEstimates>
 <SummaryOfTimingAnalysis>
 <TargetClockPeriod>10.00</TargetClockPeriod>
 <ClockUncertainty>2.70</ClockUncertainty>
-<EstimatedClockPeriod>3.561</EstimatedClockPeriod>
+<EstimatedClockPeriod>3.507</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <Best-caseLatency>undef</Best-caseLatency>
@@ -4183,8 +4205,8 @@
 <PipelineType>no</PipelineType>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
-<VITIS_LOOP_176_1>
-<Name>VITIS_LOOP_176_1</Name>
+<VITIS_LOOP_167_1>
+<Name>VITIS_LOOP_167_1</Name>
 <TripCount>undef</TripCount>
 <Latency>undef</Latency>
 <AbsoluteTimeLatency>undef</AbsoluteTimeLatency>
@@ -4193,7 +4215,7 @@
 <PipelineType>yes</PipelineType>
 <InstanceList>
 </InstanceList>
-</VITIS_LOOP_176_1>
+</VITIS_LOOP_167_1>
 </SummaryOfLoopLatency>
 </PerformanceEstimates>
 <AreaEstimates>
@@ -4201,7 +4223,7 @@
 <FF>6</FF>
 <AVAIL_FF>106400</AVAIL_FF>
 <UTIL_FF>~0</UTIL_FF>
-<LUT>55</LUT>
+<LUT>69</LUT>
 <AVAIL_LUT>53200</AVAIL_LUT>
 <UTIL_LUT>~0</UTIL_LUT>
 <BRAM_18K>0</BRAM_18K>
@@ -4301,7 +4323,7 @@
 <IOProtocol>ap_fifo</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>35</Bits>
+<Bits>33</Bits>
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -4312,7 +4334,7 @@
 <IOProtocol>ap_fifo</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>7</Bits>
+<Bits>11</Bits>
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -4323,7 +4345,7 @@
 <IOProtocol>ap_fifo</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>7</Bits>
+<Bits>11</Bits>
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -4474,12 +4496,12 @@
 <BRAM_18K>4</BRAM_18K>
 <AVAIL_BRAM>280</AVAIL_BRAM>
 <UTIL_BRAM>1</UTIL_BRAM>
-<FF>5579</FF>
+<FF>5067</FF>
 <AVAIL_FF>106400</AVAIL_FF>
-<UTIL_FF>5</UTIL_FF>
-<LUT>7601</LUT>
+<UTIL_FF>4</UTIL_FF>
+<LUT>9162</LUT>
 <AVAIL_LUT>53200</AVAIL_LUT>
-<UTIL_LUT>14</UTIL_LUT>
+<UTIL_LUT>17</UTIL_LUT>
 <DSP>0</DSP>
 <AVAIL_DSP>220</AVAIL_DSP>
 <UTIL_DSP>0</UTIL_DSP>
@@ -5965,7 +5987,7 @@
 <FIFOInst>
 <Name>inbuf_U</Name>
 <ParentInst></ParentInst>
-<StaticDepth>64</StaticDepth>
+<StaticDepth>1024</StaticDepth>
 <RuntimeDepth>mOutPtr</RuntimeDepth>
 <InterfaceList>
 <Interface>clk</Interface>
@@ -5980,7 +6002,7 @@
 <FIFOInst>
 <Name>incount_U</Name>
 <ParentInst></ParentInst>
-<StaticDepth>2</StaticDepth>
+<StaticDepth>4</StaticDepth>
 <RuntimeDepth>mOutPtr</RuntimeDepth>
 <InterfaceList>
 <Interface>clk</Interface>
@@ -5995,7 +6017,7 @@
 <FIFOInst>
 <Name>outbuf_U</Name>
 <ParentInst></ParentInst>
-<StaticDepth>64</StaticDepth>
+<StaticDepth>1024</StaticDepth>
 <RuntimeDepth>mOutPtr</RuntimeDepth>
 <InterfaceList>
 <Interface>clk</Interface>

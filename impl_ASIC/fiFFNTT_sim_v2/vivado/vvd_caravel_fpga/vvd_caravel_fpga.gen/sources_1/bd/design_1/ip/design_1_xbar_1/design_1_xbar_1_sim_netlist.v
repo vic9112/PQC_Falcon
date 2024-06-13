@@ -1,10 +1,10 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2022.1 (lin64) Build 3526262 Mon Apr 18 15:47:01 MDT 2022
-// Date        : Mon May 27 09:38:03 2024
+// Date        : Thu Jun 13 09:38:15 2024
 // Host        : ubuntu2004 running 64-bit Ubuntu 20.04.6 LTS
 // Command     : write_verilog -force -mode funcsim
-//               /home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v1/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ip/design_1_xbar_1/design_1_xbar_1_sim_netlist.v
+//               /home/ubuntu/PQC_Falcon/impl_ASIC/fiFFNTT_sim_v2/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ip/design_1_xbar_1/design_1_xbar_1_sim_netlist.v
 // Design      : design_1_xbar_1
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -131,7 +131,7 @@ module design_1_xbar_1
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI RRESP [1:0] [1:0], xilinx.com:interface:aximm:1.0 S01_AXI RRESP [1:0] [3:2], xilinx.com:interface:aximm:1.0 S02_AXI RRESP [1:0] [5:4]" *) output [5:0]s_axi_rresp;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI RLAST [0:0] [0:0], xilinx.com:interface:aximm:1.0 S01_AXI RLAST [0:0] [1:1], xilinx.com:interface:aximm:1.0 S02_AXI RLAST [0:0] [2:2]" *) output [2:0]s_axi_rlast;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI RVALID [0:0] [0:0], xilinx.com:interface:aximm:1.0 S01_AXI RVALID [0:0] [1:1], xilinx.com:interface:aximm:1.0 S02_AXI RVALID [0:0] [2:2]" *) output [2:0]s_axi_rvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI RREADY [0:0] [0:0], xilinx.com:interface:aximm:1.0 S01_AXI RREADY [0:0] [1:1], xilinx.com:interface:aximm:1.0 S02_AXI RREADY [0:0] [2:2]" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S00_AXI, DATA_WIDTH 64, PROTOCOL AXI4, FREQ_HZ 5000000, ID_WIDTH 2, ADDR_WIDTH 64, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 1, HAS_LOCK 1, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 1, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 1, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 256, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0, XIL_INTERFACENAME S01_AXI, DATA_WIDTH 64, PROTOCOL AXI4, FREQ_HZ 5000000, ID_WIDTH 2, ADDR_WIDTH 64, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE WRITE_ONLY, HAS_BURST 1, HAS_LOCK 1, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 1, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 1, NUM_READ_OUTSTANDING 16, NUM_WRITE_OUTSTANDING 8, MAX_BURST_LENGTH 256, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0, XIL_INTERFACENAME S02_AXI, DATA_WIDTH 64, PROTOCOL AXI4, FREQ_HZ 5000000, ID_WIDTH 2, ADDR_WIDTH 64, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_ONLY, HAS_BURST 1, HAS_LOCK 1, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 1, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 1, NUM_READ_OUTSTANDING 8, NUM_WRITE_OUTSTANDING 16, MAX_BURST_LENGTH 256, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *) input [2:0]s_axi_rready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI RREADY [0:0] [0:0], xilinx.com:interface:aximm:1.0 S01_AXI RREADY [0:0] [1:1], xilinx.com:interface:aximm:1.0 S02_AXI RREADY [0:0] [2:2]" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S00_AXI, DATA_WIDTH 64, PROTOCOL AXI4, FREQ_HZ 5000000, ID_WIDTH 2, ADDR_WIDTH 64, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 1, HAS_LOCK 1, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 1, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 1, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 256, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0, XIL_INTERFACENAME S01_AXI, DATA_WIDTH 64, PROTOCOL AXI4, FREQ_HZ 5000000, ID_WIDTH 2, ADDR_WIDTH 64, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE WRITE_ONLY, HAS_BURST 1, HAS_LOCK 1, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 1, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 1, NUM_READ_OUTSTANDING 16, NUM_WRITE_OUTSTANDING 8, MAX_BURST_LENGTH 256, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0, XIL_INTERFACENAME S02_AXI, DATA_WIDTH 64, PROTOCOL AXI4, FREQ_HZ 5000000, ID_WIDTH 2, ADDR_WIDTH 64, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_ONLY, HAS_BURST 1, HAS_LOCK 1, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 1, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 1, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 16, MAX_BURST_LENGTH 256, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *) input [2:0]s_axi_rready;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M00_AXI AWID" *) output [1:0]m_axi_awid;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M00_AXI AWADDR" *) output [63:0]m_axi_awaddr;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M00_AXI AWLEN" *) output [7:0]m_axi_awlen;
@@ -407,7 +407,7 @@ module design_1_xbar_1
   (* C_R_REGISTER = "0" *) 
   (* C_S_AXI_ARB_PRIORITY = "96'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000" *) 
   (* C_S_AXI_BASE_ID = "96'b000000000000000000000000000000100000000000000000000000000000000100000000000000000000000000000000" *) 
-  (* C_S_AXI_READ_ACCEPTANCE = "96'b000000000000000000000000000010000000000000000000000000000000001000000000000000000000000000000010" *) 
+  (* C_S_AXI_READ_ACCEPTANCE = "96'b000000000000000000000000000001000000000000000000000000000000001000000000000000000000000000000010" *) 
   (* C_S_AXI_SINGLE_THREAD = "96'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000" *) 
   (* C_S_AXI_THREAD_ID_WIDTH = "96'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000" *) 
   (* C_S_AXI_WRITE_ACCEPTANCE = "96'b000000000000000000000000000000100000000000000000000000000000100000000000000000000000000000000010" *) 
@@ -4320,7 +4320,7 @@ endmodule
 (* C_M_AXI_READ_CONNECTIVITY = "5" *) (* C_M_AXI_READ_ISSUING = "8" *) (* C_M_AXI_SECURE = "0" *) 
 (* C_M_AXI_WRITE_CONNECTIVITY = "3" *) (* C_M_AXI_WRITE_ISSUING = "8" *) (* C_NUM_ADDR_RANGES = "1" *) 
 (* C_NUM_MASTER_SLOTS = "1" *) (* C_NUM_SLAVE_SLOTS = "3" *) (* C_R_REGISTER = "0" *) 
-(* C_S_AXI_ARB_PRIORITY = "96'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000" *) (* C_S_AXI_BASE_ID = "96'b000000000000000000000000000000100000000000000000000000000000000100000000000000000000000000000000" *) (* C_S_AXI_READ_ACCEPTANCE = "96'b000000000000000000000000000010000000000000000000000000000000001000000000000000000000000000000010" *) 
+(* C_S_AXI_ARB_PRIORITY = "96'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000" *) (* C_S_AXI_BASE_ID = "96'b000000000000000000000000000000100000000000000000000000000000000100000000000000000000000000000000" *) (* C_S_AXI_READ_ACCEPTANCE = "96'b000000000000000000000000000001000000000000000000000000000000001000000000000000000000000000000010" *) 
 (* C_S_AXI_SINGLE_THREAD = "96'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000" *) (* C_S_AXI_THREAD_ID_WIDTH = "96'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000" *) (* C_S_AXI_WRITE_ACCEPTANCE = "96'b000000000000000000000000000000100000000000000000000000000000100000000000000000000000000000000010" *) 
 (* DowngradeIPIdentifiedWarnings = "yes" *) (* ORIG_REF_NAME = "axi_crossbar_v2_1_27_axi_crossbar" *) (* P_ADDR_DECODE = "1" *) 
 (* P_AXI3 = "1" *) (* P_AXI4 = "0" *) (* P_AXILITE = "2" *) 
@@ -4927,7 +4927,7 @@ module design_1_xbar_1_axi_crossbar_v2_1_27_crossbar
   wire \gen_master_slots[0].reg_slice_mi_n_145 ;
   wire \gen_master_slots[0].reg_slice_mi_n_146 ;
   wire \gen_master_slots[0].reg_slice_mi_n_147 ;
-  wire \gen_master_slots[0].reg_slice_mi_n_160 ;
+  wire \gen_master_slots[0].reg_slice_mi_n_161 ;
   wire \gen_master_slots[0].reg_slice_mi_n_5 ;
   wire \gen_master_slots[0].reg_slice_mi_n_7 ;
   wire \gen_master_slots[0].reg_slice_mi_n_8 ;
@@ -4937,13 +4937,13 @@ module design_1_xbar_1_axi_crossbar_v2_1_27_crossbar
   wire \gen_master_slots[1].reg_slice_mi_n_6 ;
   wire \gen_master_slots[1].reg_slice_mi_n_8 ;
   wire \gen_single_thread.active_target_enc ;
-  wire \gen_single_thread.active_target_enc_14 ;
-  wire \gen_single_thread.active_target_enc_17 ;
-  wire \gen_single_thread.active_target_enc_21 ;
+  wire \gen_single_thread.active_target_enc_15 ;
+  wire \gen_single_thread.active_target_enc_18 ;
+  wire \gen_single_thread.active_target_enc_22 ;
   wire [0:0]\gen_single_thread.active_target_hot ;
-  wire [0:0]\gen_single_thread.active_target_hot_13 ;
-  wire [0:0]\gen_single_thread.active_target_hot_16 ;
-  wire [0:0]\gen_single_thread.active_target_hot_20 ;
+  wire [0:0]\gen_single_thread.active_target_hot_14 ;
+  wire [0:0]\gen_single_thread.active_target_hot_17 ;
+  wire [0:0]\gen_single_thread.active_target_hot_21 ;
   wire \gen_slave_slots[0].gen_si_read.si_transactor_ar_n_2 ;
   wire \gen_slave_slots[0].gen_si_read.si_transactor_ar_n_4 ;
   wire \gen_slave_slots[0].gen_si_write.si_transactor_aw_n_2 ;
@@ -4977,11 +4977,11 @@ module design_1_xbar_1_axi_crossbar_v2_1_27_crossbar
   wire [7:0]m_axi_wstrb;
   wire [0:0]m_axi_wvalid;
   wire [1:0]m_ready_d;
-  wire [1:0]m_ready_d_18;
-  wire [1:0]m_ready_d_22;
+  wire [1:0]m_ready_d_19;
+  wire [1:0]m_ready_d_23;
   wire [1:0]m_select_enc;
-  wire m_select_enc_15;
-  wire m_select_enc_19;
+  wire m_select_enc_16;
+  wire m_select_enc_20;
   wire [1:0]m_select_enc_6;
   wire [0:0]m_valid_i0;
   wire match;
@@ -5007,7 +5007,7 @@ module design_1_xbar_1_axi_crossbar_v2_1_27_crossbar
   wire p_2_in;
   wire p_2_in_10;
   wire p_2_in_11;
-  wire p_2_in_9;
+  wire p_2_in_12;
   wire push010_out;
   wire r_cmd_pop_0__1;
   wire r_cmd_pop_1__1;
@@ -5046,8 +5046,9 @@ module design_1_xbar_1_axi_crossbar_v2_1_27_crossbar
   wire [1:0]s_axi_wready;
   wire [15:0]s_axi_wstrb;
   wire [1:0]s_axi_wvalid;
-  wire [1:1]s_rvalid_i0__1;
+  wire [1:0]s_rvalid_i0__1;
   wire [1:1]s_rvalid_i0__1_8;
+  wire [1:1]s_rvalid_i0__1_9;
   wire [1:0]sa_wm_awvalid__1;
   wire splitter_aw_mi_n_0;
   wire [1:0]ss_aa_awready;
@@ -5060,7 +5061,7 @@ module design_1_xbar_1_axi_crossbar_v2_1_27_crossbar
   wire [133:133]st_mr_rmesg;
   wire [1:0]st_mr_rvalid;
   wire [2:0]valid_qual_i;
-  wire [1:0]valid_qual_i_12;
+  wire [1:0]valid_qual_i_13;
   wire w_cmd_pop_0__0;
   wire w_cmd_pop_1__0;
   wire [8:0]w_issuing_cnt;
@@ -5086,9 +5087,9 @@ module design_1_xbar_1_axi_crossbar_v2_1_27_crossbar
         .\gen_axi.read_cs0__0 (\gen_axi.read_cs0__0 ),
         .\gen_master_slots[1].r_issuing_cnt_reg[8] (addr_arbiter_ar_n_95),
         .\gen_single_thread.active_target_enc (\gen_single_thread.active_target_enc ),
-        .\gen_single_thread.active_target_enc_2 (\gen_single_thread.active_target_enc_21 ),
+        .\gen_single_thread.active_target_enc_2 (\gen_single_thread.active_target_enc_22 ),
         .\gen_single_thread.active_target_hot (\gen_single_thread.active_target_hot ),
-        .\gen_single_thread.active_target_hot_1 (\gen_single_thread.active_target_hot_20 ),
+        .\gen_single_thread.active_target_hot_1 (\gen_single_thread.active_target_hot_21 ),
         .m_axi_arready(m_axi_arready),
         .m_axi_arvalid(m_axi_arvalid),
         .match(match_0),
@@ -5132,9 +5133,9 @@ module design_1_xbar_1_axi_crossbar_v2_1_27_crossbar
         .\gen_rep[0].fifoaddr_reg[2] (\gen_master_slots[0].gen_mi_write.wdata_mux_w_n_4 ),
         .m_axi_awready(m_axi_awready),
         .m_axi_awvalid(m_axi_awvalid),
-        .m_ready_d(m_ready_d_22),
+        .m_ready_d(m_ready_d_23),
         .m_ready_d_1(m_ready_d[0]),
-        .m_ready_d_2(m_ready_d_18[0]),
+        .m_ready_d_2(m_ready_d_19[0]),
         .match(match_2),
         .match_0(match_1),
         .mi_awready(mi_awready),
@@ -5153,7 +5154,7 @@ module design_1_xbar_1_axi_crossbar_v2_1_27_crossbar
         .s_axi_awvalid(s_axi_awvalid),
         .sa_wm_awvalid__1(sa_wm_awvalid__1),
         .ss_aa_awready(ss_aa_awready),
-        .valid_qual_i(valid_qual_i_12),
+        .valid_qual_i(valid_qual_i_13),
         .w_cmd_pop_0__0(w_cmd_pop_0__0),
         .w_cmd_pop_1__0(w_cmd_pop_1__0),
         .w_issuing_cnt({w_issuing_cnt[8],w_issuing_cnt[3:0]}));
@@ -5210,10 +5211,10 @@ module design_1_xbar_1_axi_crossbar_v2_1_27_crossbar
         .m_axi_wready(m_axi_wready),
         .m_axi_wstrb(m_axi_wstrb),
         .m_axi_wvalid(m_axi_wvalid),
-        .m_ready_d(m_ready_d_22[0]),
+        .m_ready_d(m_ready_d_23[0]),
         .m_select_enc(m_select_enc),
-        .m_select_enc_1(m_select_enc_15),
-        .m_select_enc_2(m_select_enc_19),
+        .m_select_enc_1(m_select_enc_16),
+        .m_select_enc_2(m_select_enc_20),
         .p_1_in(p_1_in_3),
         .push010_out(push010_out),
         .s_axi_wdata(s_axi_wdata),
@@ -5255,20 +5256,20 @@ module design_1_xbar_1_axi_crossbar_v2_1_27_crossbar
         .Q(st_mr_rlast[0]),
         .aclk(aclk),
         .aresetn(aresetn),
-        .\aresetn_d_reg[0] (\gen_master_slots[0].reg_slice_mi_n_160 ),
+        .\aresetn_d_reg[0] (\gen_master_slots[0].reg_slice_mi_n_161 ),
         .bready_carry(bready_carry[4]),
         .\gen_arbiter.qual_reg[0]_i_2__0 (w_issuing_cnt[3:0]),
         .\gen_master_slots[0].r_issuing_cnt_reg[1] (aa_mi_artarget_hot[0]),
         .\gen_master_slots[0].r_issuing_cnt_reg[3] (r_issuing_cnt[3:0]),
         .\gen_master_slots[0].w_issuing_cnt_reg[1] (\gen_master_slots[0].reg_slice_mi_n_10 ),
         .\gen_single_thread.active_target_enc (\gen_single_thread.active_target_enc ),
-        .\gen_single_thread.active_target_enc_1 (\gen_single_thread.active_target_enc_21 ),
-        .\gen_single_thread.active_target_enc_2 (\gen_single_thread.active_target_enc_14 ),
-        .\gen_single_thread.active_target_enc_3 (\gen_single_thread.active_target_enc_17 ),
+        .\gen_single_thread.active_target_enc_1 (\gen_single_thread.active_target_enc_22 ),
+        .\gen_single_thread.active_target_enc_2 (\gen_single_thread.active_target_enc_15 ),
+        .\gen_single_thread.active_target_enc_3 (\gen_single_thread.active_target_enc_18 ),
         .\gen_single_thread.active_target_hot (\gen_single_thread.active_target_hot ),
-        .\gen_single_thread.active_target_hot_4 (\gen_single_thread.active_target_hot_20 ),
-        .\gen_single_thread.active_target_hot_5 (\gen_single_thread.active_target_hot_13 ),
-        .\gen_single_thread.active_target_hot_6 (\gen_single_thread.active_target_hot_16 ),
+        .\gen_single_thread.active_target_hot_4 (\gen_single_thread.active_target_hot_21 ),
+        .\gen_single_thread.active_target_hot_5 (\gen_single_thread.active_target_hot_14 ),
+        .\gen_single_thread.active_target_hot_6 (\gen_single_thread.active_target_hot_17 ),
         .\gen_single_thread.active_target_hot_reg[0] (\gen_master_slots[0].reg_slice_mi_n_142 ),
         .\gen_single_thread.active_target_hot_reg[0]_0 (\gen_master_slots[0].reg_slice_mi_n_145 ),
         .\gen_single_thread.active_target_hot_reg[0]_1 (\gen_master_slots[0].reg_slice_mi_n_146 ),
@@ -5300,6 +5301,7 @@ module design_1_xbar_1_axi_crossbar_v2_1_27_crossbar
         .\s_axi_rvalid[2] (st_mr_rvalid[1]),
         .s_ready_i_reg(M_AXI_RREADY),
         .s_ready_i_reg_0(\gen_master_slots[1].reg_slice_mi_n_5 ),
+        .s_rvalid_i0__1(s_rvalid_i0__1[0]),
         .st_mr_bid_2(st_mr_bid_2),
         .st_mr_bvalid(st_mr_bvalid[1]),
         .st_mr_rid_2(st_mr_rid_2),
@@ -5346,9 +5348,9 @@ module design_1_xbar_1_axi_crossbar_v2_1_27_crossbar
         .\gen_axi.write_cs0__0 (\gen_axi.write_cs0__0 ),
         .m_aready1__1(m_aready1__1),
         .m_avalid(m_avalid_7),
-        .m_ready_d(m_ready_d_22[0]),
+        .m_ready_d(m_ready_d_23[0]),
         .m_select_enc(m_select_enc_6),
-        .m_select_enc_0(m_select_enc_15),
+        .m_select_enc_0(m_select_enc_16),
         .mi_wready_1(mi_wready_1),
         .p_1_in(p_1_in_3),
         .s_axi_wlast(s_axi_wlast),
@@ -5364,20 +5366,20 @@ module design_1_xbar_1_axi_crossbar_v2_1_27_crossbar
        (.E(st_mr_bvalid[0]),
         .aclk(aclk),
         .\aresetn_d_reg[1] (\gen_master_slots[1].reg_slice_mi_n_5 ),
-        .\aresetn_d_reg[1]_0 (\gen_master_slots[0].reg_slice_mi_n_160 ),
+        .\aresetn_d_reg[1]_0 (\gen_master_slots[0].reg_slice_mi_n_161 ),
         .bready_carry(bready_carry[5]),
         .\gen_master_slots[1].r_issuing_cnt_reg[8] (\gen_master_slots[1].reg_slice_mi_n_8 ),
         .\gen_master_slots[1].w_issuing_cnt_reg[8] (\gen_master_slots[1].reg_slice_mi_n_6 ),
+        .\gen_single_thread.accept_cnt_reg[0] (\gen_master_slots[0].reg_slice_mi_n_147 ),
+        .\gen_single_thread.accept_cnt_reg[0]_0 (\gen_slave_slots[2].gen_si_read.si_transactor_ar_n_4 ),
         .\gen_single_thread.accept_cnt_reg[1] (\gen_master_slots[0].reg_slice_mi_n_142 ),
         .\gen_single_thread.accept_cnt_reg[1]_0 (\gen_slave_slots[0].gen_si_read.si_transactor_ar_n_4 ),
         .\gen_single_thread.accept_cnt_reg[1]_1 (\gen_master_slots[0].reg_slice_mi_n_145 ),
         .\gen_single_thread.accept_cnt_reg[3] (\gen_master_slots[0].reg_slice_mi_n_146 ),
-        .\gen_single_thread.accept_cnt_reg[3]_0 (\gen_master_slots[0].reg_slice_mi_n_147 ),
-        .\gen_single_thread.accept_cnt_reg[3]_1 (\gen_slave_slots[2].gen_si_read.si_transactor_ar_n_4 ),
         .\gen_single_thread.active_target_enc (\gen_single_thread.active_target_enc ),
-        .\gen_single_thread.active_target_enc_4 (\gen_single_thread.active_target_enc_14 ),
-        .\gen_single_thread.active_target_enc_5 (\gen_single_thread.active_target_enc_17 ),
-        .\gen_single_thread.active_target_enc_6 (\gen_single_thread.active_target_enc_21 ),
+        .\gen_single_thread.active_target_enc_5 (\gen_single_thread.active_target_enc_15 ),
+        .\gen_single_thread.active_target_enc_6 (\gen_single_thread.active_target_enc_18 ),
+        .\gen_single_thread.active_target_enc_7 (\gen_single_thread.active_target_enc_22 ),
         .\m_payload_i_reg[63] (st_mr_rmesg),
         .m_valid_i_reg(st_mr_rvalid[1]),
         .m_valid_i_reg_0(\gen_decerr_slave.decerr_slave_inst_n_9 ),
@@ -5390,17 +5392,18 @@ module design_1_xbar_1_axi_crossbar_v2_1_27_crossbar
         .mi_rvalid_1(mi_rvalid_1),
         .p_0_in(p_0_in),
         .p_1_in(p_1_in_5),
-        .p_2_in(p_2_in_11),
-        .p_2_in_0(p_2_in_10),
-        .p_2_in_1(p_2_in_9),
+        .p_2_in(p_2_in_12),
+        .p_2_in_0(p_2_in_11),
+        .p_2_in_1(p_2_in_10),
         .p_2_in_2(p_2_in),
         .r_cmd_pop_1__1(r_cmd_pop_1__1),
         .r_issuing_cnt(r_issuing_cnt[8]),
         .rready_carry(rready_carry),
         .s_axi_bready(s_axi_bready),
         .s_axi_rready(s_axi_rready),
-        .s_rvalid_i0__1(s_rvalid_i0__1_8),
-        .s_rvalid_i0__1_3(s_rvalid_i0__1),
+        .s_rvalid_i0__1(s_rvalid_i0__1_9),
+        .s_rvalid_i0__1_3(s_rvalid_i0__1_8),
+        .s_rvalid_i0__1_4(s_rvalid_i0__1[1]),
         .st_mr_bid_2(st_mr_bid_2),
         .st_mr_bvalid(st_mr_bvalid[1]),
         .st_mr_rid_2(st_mr_rid_2),
@@ -5423,17 +5426,17 @@ module design_1_xbar_1_axi_crossbar_v2_1_27_crossbar
         .\gen_arbiter.qual_reg_reg[0]_0 (\gen_master_slots[0].reg_slice_mi_n_5 ),
         .\gen_single_thread.accept_cnt_reg[0]_0 (\gen_arbiter.s_ready_i_reg[0] ),
         .\gen_single_thread.active_target_enc (\gen_single_thread.active_target_enc ),
-        .\gen_single_thread.active_target_enc_0 (\gen_single_thread.active_target_enc_21 ),
+        .\gen_single_thread.active_target_enc_0 (\gen_single_thread.active_target_enc_22 ),
         .\gen_single_thread.active_target_enc_reg[0]_0 (\gen_slave_slots[0].gen_si_read.si_transactor_ar_n_4 ),
         .\gen_single_thread.active_target_enc_reg[0]_1 (addr_arbiter_ar_n_106),
         .\gen_single_thread.active_target_hot (\gen_single_thread.active_target_hot ),
         .\gen_single_thread.active_target_hot_reg[0]_0 (addr_arbiter_ar_n_105),
         .match(match_0),
-        .p_2_in(p_2_in_11),
+        .p_2_in(p_2_in_12),
         .rready_carry(rready_carry),
         .s_axi_arvalid(s_axi_arvalid[0]),
         .s_axi_rready(s_axi_rready),
-        .s_rvalid_i0__1(s_rvalid_i0__1_8),
+        .s_rvalid_i0__1(s_rvalid_i0__1_9),
         .st_mr_rid_2(st_mr_rid_2),
         .st_mr_rlast(st_mr_rlast),
         .st_mr_rvalid(st_mr_rvalid[0]),
@@ -5446,28 +5449,28 @@ module design_1_xbar_1_axi_crossbar_v2_1_27_crossbar
         .\gen_arbiter.qual_reg[0]_i_2__0_0 (\gen_master_slots[0].reg_slice_mi_n_145 ),
         .\gen_arbiter.qual_reg_reg[0] (\gen_master_slots[1].reg_slice_mi_n_6 ),
         .\gen_arbiter.qual_reg_reg[0]_0 (\gen_master_slots[0].reg_slice_mi_n_10 ),
-        .\gen_single_thread.active_target_enc (\gen_single_thread.active_target_enc_14 ),
-        .\gen_single_thread.active_target_enc_0 (\gen_single_thread.active_target_enc_17 ),
+        .\gen_single_thread.active_target_enc (\gen_single_thread.active_target_enc_15 ),
+        .\gen_single_thread.active_target_enc_0 (\gen_single_thread.active_target_enc_18 ),
         .\gen_single_thread.active_target_enc_reg[0]_0 (\gen_slave_slots[0].gen_si_write.splitter_aw_si_n_0 ),
-        .\gen_single_thread.active_target_hot (\gen_single_thread.active_target_hot_13 ),
+        .\gen_single_thread.active_target_hot (\gen_single_thread.active_target_hot_14 ),
         .\gen_single_thread.active_target_hot_reg[0]_0 (\gen_slave_slots[0].gen_si_write.splitter_aw_si_n_4 ),
         .m_ready_d(m_ready_d[0]),
         .\m_ready_d_reg[0] (\gen_slave_slots[0].gen_si_write.si_transactor_aw_n_2 ),
         .match(match_2),
-        .p_2_in(p_2_in_10),
+        .p_2_in(p_2_in_11),
         .s_axi_awready(s_axi_awready[0]),
         .s_axi_awvalid(s_axi_awvalid[0]),
         .s_axi_bready(s_axi_bready),
-        .s_rvalid_i0__1(s_rvalid_i0__1),
+        .s_rvalid_i0__1(s_rvalid_i0__1_8),
         .st_mr_bid_2(st_mr_bid_2),
-        .valid_qual_i(valid_qual_i_12[0]));
+        .valid_qual_i(valid_qual_i_13[0]));
   design_1_xbar_1_axi_crossbar_v2_1_27_splitter \gen_slave_slots[0].gen_si_write.splitter_aw_si 
        (.aclk(aclk),
         .aresetn_d(aresetn_d),
         .\gen_arbiter.s_ready_i_reg[0] (\gen_slave_slots[0].gen_si_write.splitter_aw_si_n_0 ),
         .\gen_arbiter.s_ready_i_reg[0]_0 (\gen_slave_slots[0].gen_si_write.splitter_aw_si_n_4 ),
-        .\gen_single_thread.active_target_enc (\gen_single_thread.active_target_enc_14 ),
-        .\gen_single_thread.active_target_hot (\gen_single_thread.active_target_hot_13 ),
+        .\gen_single_thread.active_target_enc (\gen_single_thread.active_target_enc_15 ),
+        .\gen_single_thread.active_target_hot (\gen_single_thread.active_target_hot_14 ),
         .m_ready_d(m_ready_d),
         .match(match_2),
         .s_axi_awready(s_axi_awready[0]),
@@ -5483,7 +5486,7 @@ module design_1_xbar_1_axi_crossbar_v2_1_27_crossbar
         .m_aready0__0(m_aready0__0_4),
         .m_avalid(m_avalid_7),
         .m_ready_d(m_ready_d[1]),
-        .m_select_enc(m_select_enc_15),
+        .m_select_enc(m_select_enc_16),
         .m_select_enc_0(m_select_enc),
         .m_valid_i0(m_valid_i0),
         .match(match_2),
@@ -5500,29 +5503,29 @@ module design_1_xbar_1_axi_crossbar_v2_1_27_crossbar
         .\gen_arbiter.qual_reg_reg[1] (\gen_master_slots[1].reg_slice_mi_n_6 ),
         .\gen_arbiter.qual_reg_reg[1]_0 (\gen_master_slots[0].reg_slice_mi_n_10 ),
         .\gen_single_thread.accept_cnt_reg[2]_0 (s_axi_awready[1]),
-        .\gen_single_thread.active_target_enc (\gen_single_thread.active_target_enc_17 ),
+        .\gen_single_thread.active_target_enc (\gen_single_thread.active_target_enc_18 ),
         .\gen_single_thread.active_target_enc_reg[0]_0 (\gen_slave_slots[1].gen_si_write.splitter_aw_si_n_0 ),
-        .\gen_single_thread.active_target_hot (\gen_single_thread.active_target_hot_16 ),
+        .\gen_single_thread.active_target_hot (\gen_single_thread.active_target_hot_17 ),
         .\gen_single_thread.active_target_hot_reg[0]_0 (\gen_slave_slots[1].gen_si_write.splitter_aw_si_n_4 ),
-        .m_ready_d(m_ready_d_18),
+        .m_ready_d(m_ready_d_19),
         .\m_ready_d_reg[0] (\gen_slave_slots[1].gen_si_write.si_transactor_aw_n_2 ),
         .match(match_1),
-        .p_2_in(p_2_in_9),
+        .p_2_in(p_2_in_10),
         .s_axi_awvalid(s_axi_awvalid[1]),
         .s_axi_bready(s_axi_bready[1]),
         .ss_aa_awready(ss_aa_awready[1]),
         .ss_wr_awready_1(ss_wr_awready_1),
         .st_mr_bid_2(st_mr_bid_2),
         .st_mr_bvalid(st_mr_bvalid),
-        .valid_qual_i(valid_qual_i_12[1]));
+        .valid_qual_i(valid_qual_i_13[1]));
   design_1_xbar_1_axi_crossbar_v2_1_27_splitter_2 \gen_slave_slots[1].gen_si_write.splitter_aw_si 
        (.aclk(aclk),
         .aresetn_d(aresetn_d),
         .\gen_arbiter.s_ready_i_reg[1] (\gen_slave_slots[1].gen_si_write.splitter_aw_si_n_0 ),
         .\gen_arbiter.s_ready_i_reg[1]_0 (\gen_slave_slots[1].gen_si_write.splitter_aw_si_n_4 ),
-        .\gen_single_thread.active_target_enc (\gen_single_thread.active_target_enc_17 ),
-        .\gen_single_thread.active_target_hot (\gen_single_thread.active_target_hot_16 ),
-        .m_ready_d(m_ready_d_18),
+        .\gen_single_thread.active_target_enc (\gen_single_thread.active_target_enc_18 ),
+        .\gen_single_thread.active_target_hot (\gen_single_thread.active_target_hot_17 ),
+        .m_ready_d(m_ready_d_19),
         .match(match_1),
         .s_axi_awready(s_axi_awready[1]),
         .s_axi_awvalid(s_axi_awvalid[1]),
@@ -5536,8 +5539,8 @@ module design_1_xbar_1_axi_crossbar_v2_1_27_crossbar
         .m_aready0__0(m_aready0__0),
         .m_avalid(m_avalid),
         .m_axi_wvalid(m_axi_wvalid),
-        .m_ready_d(m_ready_d_18[1]),
-        .m_select_enc(m_select_enc_19),
+        .m_ready_d(m_ready_d_19[1]),
+        .m_select_enc(m_select_enc_20),
         .m_select_enc_0(m_select_enc_6),
         .m_valid_i0(m_valid_i0),
         .match(match_1),
@@ -5551,22 +5554,20 @@ module design_1_xbar_1_axi_crossbar_v2_1_27_crossbar
        (.D(\gen_slave_slots[2].gen_si_read.si_transactor_ar_n_2 ),
         .SR(reset),
         .aclk(aclk),
-        .\gen_arbiter.qual_reg[2]_i_2_0 (\gen_master_slots[0].reg_slice_mi_n_147 ),
         .\gen_arbiter.qual_reg_reg[2] (\gen_master_slots[1].reg_slice_mi_n_8 ),
         .\gen_arbiter.qual_reg_reg[2]_0 (\gen_master_slots[0].reg_slice_mi_n_5 ),
-        .\gen_single_thread.accept_cnt_reg[1]_0 (\gen_arbiter.s_ready_i_reg[2] ),
-        .\gen_single_thread.active_target_enc (\gen_single_thread.active_target_enc_21 ),
+        .\gen_single_thread.accept_cnt_reg[2]_0 (\gen_arbiter.s_ready_i_reg[2] ),
+        .\gen_single_thread.active_target_enc (\gen_single_thread.active_target_enc_22 ),
         .\gen_single_thread.active_target_enc_reg[0]_0 (\gen_slave_slots[2].gen_si_read.si_transactor_ar_n_4 ),
         .\gen_single_thread.active_target_enc_reg[0]_1 (addr_arbiter_ar_n_108),
-        .\gen_single_thread.active_target_hot (\gen_single_thread.active_target_hot_20 ),
+        .\gen_single_thread.active_target_hot (\gen_single_thread.active_target_hot_21 ),
         .\gen_single_thread.active_target_hot_reg[0]_0 (addr_arbiter_ar_n_107),
         .match(match),
         .p_2_in(p_2_in),
         .s_axi_arvalid(s_axi_arvalid[1]),
         .s_axi_rready(s_axi_rready[1]),
-        .st_mr_rid_2(st_mr_rid_2),
+        .s_rvalid_i0__1(s_rvalid_i0__1),
         .st_mr_rlast(st_mr_rlast),
-        .st_mr_rvalid(st_mr_rvalid),
         .valid_qual_i(valid_qual_i[2]));
   design_1_xbar_1_axi_crossbar_v2_1_27_splitter_3 splitter_aw_mi
        (.Q(aa_mi_awtarget_hot),
@@ -5575,7 +5576,7 @@ module design_1_xbar_1_axi_crossbar_v2_1_27_crossbar
         .aresetn_d(aresetn_d),
         .\gen_arbiter.m_valid_i_reg_inv (splitter_aw_mi_n_0),
         .m_axi_awready(m_axi_awready),
-        .m_ready_d(m_ready_d_22),
+        .m_ready_d(m_ready_d_23),
         .mi_awready(mi_awready),
         .mi_awready_mux__0(mi_awready_mux__0),
         .p_1_in(p_1_in_3));
@@ -6175,7 +6176,7 @@ module design_1_xbar_1_axi_crossbar_v2_1_27_si_transactor
         .I3(\gen_single_thread.active_target_enc_0 ),
         .I4(st_mr_rid_2),
         .O(rready_carry));
-  (* SOFT_HLUTNM = "soft_lutpair221" *) 
+  (* SOFT_HLUTNM = "soft_lutpair222" *) 
   LUT4 #(
     .INIT(16'hC338)) 
     \gen_single_thread.accept_cnt[0]_i_1 
@@ -6184,7 +6185,7 @@ module design_1_xbar_1_axi_crossbar_v2_1_27_si_transactor
         .I2(\gen_single_thread.accept_cnt_reg[0]_0 ),
         .I3(\gen_single_thread.accept_cnt [0]),
         .O(\gen_single_thread.accept_cnt[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair221" *) 
+  (* SOFT_HLUTNM = "soft_lutpair222" *) 
   LUT4 #(
     .INIT(16'hD2B0)) 
     \gen_single_thread.accept_cnt[1]_i_1 
@@ -6343,7 +6344,7 @@ module design_1_xbar_1_axi_crossbar_v2_1_27_si_transactor__parameterized0
        (.I0(\gen_single_thread.accept_cnt [0]),
         .I1(\gen_single_thread.accept_cnt [1]),
         .O(\gen_arbiter.qual_reg[0]_i_4__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair222" *) 
+  (* SOFT_HLUTNM = "soft_lutpair223" *) 
   LUT4 #(
     .INIT(16'hC338)) 
     \gen_single_thread.accept_cnt[0]_i_1__0 
@@ -6352,7 +6353,7 @@ module design_1_xbar_1_axi_crossbar_v2_1_27_si_transactor__parameterized0
         .I2(s_axi_awready),
         .I3(\gen_single_thread.accept_cnt [0]),
         .O(\gen_single_thread.accept_cnt[0]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair222" *) 
+  (* SOFT_HLUTNM = "soft_lutpair223" *) 
   LUT4 #(
     .INIT(16'hD2B0)) 
     \gen_single_thread.accept_cnt[1]_i_1__0 
@@ -6508,7 +6509,7 @@ module design_1_xbar_1_axi_crossbar_v2_1_27_si_transactor__parameterized1
         .I4(st_mr_bvalid[1]),
         .I5(\gen_arbiter.qual_reg[1]_i_8_n_0 ),
         .O(\gen_arbiter.qual_reg[1]_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair228" *) 
+  (* SOFT_HLUTNM = "soft_lutpair229" *) 
   LUT4 #(
     .INIT(16'h0001)) 
     \gen_arbiter.qual_reg[1]_i_4 
@@ -6517,7 +6518,7 @@ module design_1_xbar_1_axi_crossbar_v2_1_27_si_transactor__parameterized1
         .I2(\gen_single_thread.accept_cnt_reg [0]),
         .I3(\gen_single_thread.accept_cnt_reg [1]),
         .O(\gen_arbiter.qual_reg[1]_i_4_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair227" *) 
+  (* SOFT_HLUTNM = "soft_lutpair228" *) 
   LUT4 #(
     .INIT(16'h0010)) 
     \gen_arbiter.qual_reg[1]_i_7 
@@ -6547,7 +6548,7 @@ module design_1_xbar_1_axi_crossbar_v2_1_27_si_transactor__parameterized1
         .I4(m_ready_d[1]),
         .I5(\gen_single_thread.accept_cnt_reg [1]),
         .O(\gen_single_thread.accept_cnt[1]_i_1__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair228" *) 
+  (* SOFT_HLUTNM = "soft_lutpair229" *) 
   LUT4 #(
     .INIT(16'h78E1)) 
     \gen_single_thread.accept_cnt[2]_i_1 
@@ -6566,7 +6567,7 @@ module design_1_xbar_1_axi_crossbar_v2_1_27_si_transactor__parameterized1
         .I4(\gen_single_thread.accept_cnt_reg [2]),
         .I5(\gen_single_thread.accept_cnt_reg [3]),
         .O(\gen_single_thread.accept_cnt[3]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair227" *) 
+  (* SOFT_HLUTNM = "soft_lutpair228" *) 
   LUT5 #(
     .INIT(32'h7F80FE01)) 
     \gen_single_thread.accept_cnt[3]_i_2 
@@ -6637,17 +6638,15 @@ module design_1_xbar_1_axi_crossbar_v2_1_27_si_transactor__parameterized2
     \gen_single_thread.active_target_enc_reg[0]_1 ,
     aclk,
     \gen_single_thread.active_target_hot_reg[0]_0 ,
-    \gen_single_thread.accept_cnt_reg[1]_0 ,
+    \gen_single_thread.accept_cnt_reg[2]_0 ,
+    p_2_in,
     s_axi_arvalid,
     match,
     \gen_arbiter.qual_reg_reg[2] ,
     \gen_arbiter.qual_reg_reg[2]_0 ,
-    p_2_in,
-    st_mr_rvalid,
-    \gen_arbiter.qual_reg[2]_i_2_0 ,
+    s_rvalid_i0__1,
     st_mr_rlast,
-    s_axi_rready,
-    st_mr_rid_2);
+    s_axi_rready);
   output \gen_single_thread.active_target_enc ;
   output [0:0]\gen_single_thread.active_target_hot ;
   output [0:0]D;
@@ -6657,35 +6656,28 @@ module design_1_xbar_1_axi_crossbar_v2_1_27_si_transactor__parameterized2
   input \gen_single_thread.active_target_enc_reg[0]_1 ;
   input aclk;
   input \gen_single_thread.active_target_hot_reg[0]_0 ;
-  input \gen_single_thread.accept_cnt_reg[1]_0 ;
+  input \gen_single_thread.accept_cnt_reg[2]_0 ;
+  input p_2_in;
   input [0:0]s_axi_arvalid;
   input match;
   input \gen_arbiter.qual_reg_reg[2] ;
   input \gen_arbiter.qual_reg_reg[2]_0 ;
-  input p_2_in;
-  input [1:0]st_mr_rvalid;
-  input \gen_arbiter.qual_reg[2]_i_2_0 ;
+  input [1:0]s_rvalid_i0__1;
   input [1:0]st_mr_rlast;
   input [0:0]s_axi_rready;
-  input [0:0]st_mr_rid_2;
 
   wire [0:0]D;
   wire [0:0]SR;
   wire aclk;
-  wire \gen_arbiter.qual_reg[2]_i_2_0 ;
   wire \gen_arbiter.qual_reg[2]_i_3_n_0 ;
   wire \gen_arbiter.qual_reg[2]_i_4_n_0 ;
-  wire \gen_arbiter.qual_reg[2]_i_8_n_0 ;
   wire \gen_arbiter.qual_reg_reg[2] ;
   wire \gen_arbiter.qual_reg_reg[2]_0 ;
+  wire [2:0]\gen_single_thread.accept_cnt ;
   wire \gen_single_thread.accept_cnt[0]_i_1__2_n_0 ;
   wire \gen_single_thread.accept_cnt[1]_i_1__2_n_0 ;
   wire \gen_single_thread.accept_cnt[2]_i_1__0_n_0 ;
-  wire \gen_single_thread.accept_cnt[3]_i_1__0_n_0 ;
-  wire \gen_single_thread.accept_cnt[3]_i_2__0_n_0 ;
-  wire [3:0]\gen_single_thread.accept_cnt_reg ;
-  wire \gen_single_thread.accept_cnt_reg[1]_0 ;
-  wire \gen_single_thread.accept_limit00_in__0 ;
+  wire \gen_single_thread.accept_cnt_reg[2]_0 ;
   wire \gen_single_thread.active_target_enc ;
   wire \gen_single_thread.active_target_enc_reg[0]_0 ;
   wire \gen_single_thread.active_target_enc_reg[0]_1 ;
@@ -6695,9 +6687,8 @@ module design_1_xbar_1_axi_crossbar_v2_1_27_si_transactor__parameterized2
   wire p_2_in;
   wire [0:0]s_axi_arvalid;
   wire [0:0]s_axi_rready;
-  wire [0:0]st_mr_rid_2;
+  wire [1:0]s_rvalid_i0__1;
   wire [1:0]st_mr_rlast;
-  wire [1:0]st_mr_rvalid;
   wire [0:0]valid_qual_i;
 
   LUT2 #(
@@ -6717,87 +6708,56 @@ module design_1_xbar_1_axi_crossbar_v2_1_27_si_transactor__parameterized2
         .I5(\gen_arbiter.qual_reg_reg[2]_0 ),
         .O(valid_qual_i));
   LUT6 #(
-    .INIT(64'h22222AAA2AAA2AAA)) 
+    .INIT(64'h0010001000101010)) 
     \gen_arbiter.qual_reg[2]_i_3 
-       (.I0(\gen_single_thread.accept_limit00_in__0 ),
-        .I1(\gen_single_thread.active_target_enc_reg[0]_0 ),
-        .I2(st_mr_rvalid[0]),
-        .I3(\gen_arbiter.qual_reg[2]_i_2_0 ),
-        .I4(st_mr_rvalid[1]),
-        .I5(\gen_arbiter.qual_reg[2]_i_8_n_0 ),
+       (.I0(\gen_single_thread.accept_cnt [1]),
+        .I1(\gen_single_thread.accept_cnt [0]),
+        .I2(\gen_single_thread.accept_cnt [2]),
+        .I3(\gen_single_thread.active_target_enc_reg[0]_0 ),
+        .I4(s_rvalid_i0__1[0]),
+        .I5(s_rvalid_i0__1[1]),
         .O(\gen_arbiter.qual_reg[2]_i_3_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair234" *) 
-  LUT4 #(
-    .INIT(16'h0001)) 
-    \gen_arbiter.qual_reg[2]_i_4 
-       (.I0(\gen_single_thread.accept_cnt_reg [3]),
-        .I1(\gen_single_thread.accept_cnt_reg [2]),
-        .I2(\gen_single_thread.accept_cnt_reg [0]),
-        .I3(\gen_single_thread.accept_cnt_reg [1]),
-        .O(\gen_arbiter.qual_reg[2]_i_4_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair232" *) 
-  LUT4 #(
-    .INIT(16'h0010)) 
-    \gen_arbiter.qual_reg[2]_i_7 
-       (.I0(\gen_single_thread.accept_cnt_reg [0]),
-        .I1(\gen_single_thread.accept_cnt_reg [2]),
-        .I2(\gen_single_thread.accept_cnt_reg [3]),
-        .I3(\gen_single_thread.accept_cnt_reg [1]),
-        .O(\gen_single_thread.accept_limit00_in__0 ));
-  (* SOFT_HLUTNM = "soft_lutpair233" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
-    \gen_arbiter.qual_reg[2]_i_8 
-       (.I0(\gen_single_thread.active_target_enc ),
-        .I1(st_mr_rid_2),
-        .O(\gen_arbiter.qual_reg[2]_i_8_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair235" *) 
-  LUT1 #(
-    .INIT(2'h1)) 
-    \gen_single_thread.accept_cnt[0]_i_1__2 
-       (.I0(\gen_single_thread.accept_cnt_reg [0]),
-        .O(\gen_single_thread.accept_cnt[0]_i_1__2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair235" *) 
   LUT3 #(
-    .INIT(8'h69)) 
+    .INIT(8'h01)) 
+    \gen_arbiter.qual_reg[2]_i_4 
+       (.I0(\gen_single_thread.accept_cnt [1]),
+        .I1(\gen_single_thread.accept_cnt [0]),
+        .I2(\gen_single_thread.accept_cnt [2]),
+        .O(\gen_arbiter.qual_reg[2]_i_4_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair233" *) 
+  LUT5 #(
+    .INIT(32'h99669962)) 
+    \gen_single_thread.accept_cnt[0]_i_1__2 
+       (.I0(\gen_single_thread.accept_cnt_reg[2]_0 ),
+        .I1(p_2_in),
+        .I2(\gen_single_thread.accept_cnt [2]),
+        .I3(\gen_single_thread.accept_cnt [0]),
+        .I4(\gen_single_thread.accept_cnt [1]),
+        .O(\gen_single_thread.accept_cnt[0]_i_1__2_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair233" *) 
+  LUT5 #(
+    .INIT(32'hDDBB2240)) 
     \gen_single_thread.accept_cnt[1]_i_1__2 
-       (.I0(\gen_single_thread.accept_cnt_reg [0]),
-        .I1(\gen_single_thread.accept_cnt_reg[1]_0 ),
-        .I2(\gen_single_thread.accept_cnt_reg [1]),
+       (.I0(\gen_single_thread.accept_cnt_reg[2]_0 ),
+        .I1(p_2_in),
+        .I2(\gen_single_thread.accept_cnt [2]),
+        .I3(\gen_single_thread.accept_cnt [0]),
+        .I4(\gen_single_thread.accept_cnt [1]),
         .O(\gen_single_thread.accept_cnt[1]_i_1__2_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair234" *) 
-  LUT4 #(
-    .INIT(16'h78E1)) 
-    \gen_single_thread.accept_cnt[2]_i_1__0 
-       (.I0(\gen_single_thread.accept_cnt_reg [0]),
-        .I1(\gen_single_thread.accept_cnt_reg[1]_0 ),
-        .I2(\gen_single_thread.accept_cnt_reg [2]),
-        .I3(\gen_single_thread.accept_cnt_reg [1]),
-        .O(\gen_single_thread.accept_cnt[2]_i_1__0_n_0 ));
-  LUT6 #(
-    .INIT(64'h6666666666666662)) 
-    \gen_single_thread.accept_cnt[3]_i_1__0 
-       (.I0(\gen_single_thread.accept_cnt_reg[1]_0 ),
-        .I1(p_2_in),
-        .I2(\gen_single_thread.accept_cnt_reg [1]),
-        .I3(\gen_single_thread.accept_cnt_reg [0]),
-        .I4(\gen_single_thread.accept_cnt_reg [2]),
-        .I5(\gen_single_thread.accept_cnt_reg [3]),
-        .O(\gen_single_thread.accept_cnt[3]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair232" *) 
   LUT5 #(
-    .INIT(32'h7F80FE01)) 
-    \gen_single_thread.accept_cnt[3]_i_2__0 
-       (.I0(\gen_single_thread.accept_cnt_reg[1]_0 ),
-        .I1(\gen_single_thread.accept_cnt_reg [0]),
-        .I2(\gen_single_thread.accept_cnt_reg [1]),
-        .I3(\gen_single_thread.accept_cnt_reg [3]),
-        .I4(\gen_single_thread.accept_cnt_reg [2]),
-        .O(\gen_single_thread.accept_cnt[3]_i_2__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair233" *) 
+    .INIT(32'hD2F0F0B0)) 
+    \gen_single_thread.accept_cnt[2]_i_1__0 
+       (.I0(\gen_single_thread.accept_cnt_reg[2]_0 ),
+        .I1(p_2_in),
+        .I2(\gen_single_thread.accept_cnt [2]),
+        .I3(\gen_single_thread.accept_cnt [0]),
+        .I4(\gen_single_thread.accept_cnt [1]),
+        .O(\gen_single_thread.accept_cnt[2]_i_1__0_n_0 ));
   LUT4 #(
     .INIT(16'hD800)) 
-    \gen_single_thread.accept_cnt[3]_i_4 
+    \gen_single_thread.accept_cnt[2]_i_3 
        (.I0(\gen_single_thread.active_target_enc ),
         .I1(st_mr_rlast[1]),
         .I2(st_mr_rlast[0]),
@@ -6807,33 +6767,25 @@ module design_1_xbar_1_axi_crossbar_v2_1_27_si_transactor__parameterized2
     .INIT(1'b0)) 
     \gen_single_thread.accept_cnt_reg[0] 
        (.C(aclk),
-        .CE(\gen_single_thread.accept_cnt[3]_i_1__0_n_0 ),
+        .CE(1'b1),
         .D(\gen_single_thread.accept_cnt[0]_i_1__2_n_0 ),
-        .Q(\gen_single_thread.accept_cnt_reg [0]),
+        .Q(\gen_single_thread.accept_cnt [0]),
         .R(SR));
   FDRE #(
     .INIT(1'b0)) 
     \gen_single_thread.accept_cnt_reg[1] 
        (.C(aclk),
-        .CE(\gen_single_thread.accept_cnt[3]_i_1__0_n_0 ),
+        .CE(1'b1),
         .D(\gen_single_thread.accept_cnt[1]_i_1__2_n_0 ),
-        .Q(\gen_single_thread.accept_cnt_reg [1]),
+        .Q(\gen_single_thread.accept_cnt [1]),
         .R(SR));
   FDRE #(
     .INIT(1'b0)) 
     \gen_single_thread.accept_cnt_reg[2] 
        (.C(aclk),
-        .CE(\gen_single_thread.accept_cnt[3]_i_1__0_n_0 ),
+        .CE(1'b1),
         .D(\gen_single_thread.accept_cnt[2]_i_1__0_n_0 ),
-        .Q(\gen_single_thread.accept_cnt_reg [2]),
-        .R(SR));
-  FDRE #(
-    .INIT(1'b0)) 
-    \gen_single_thread.accept_cnt_reg[3] 
-       (.C(aclk),
-        .CE(\gen_single_thread.accept_cnt[3]_i_1__0_n_0 ),
-        .D(\gen_single_thread.accept_cnt[3]_i_2__0_n_0 ),
-        .Q(\gen_single_thread.accept_cnt_reg [3]),
+        .Q(\gen_single_thread.accept_cnt [2]),
         .R(SR));
   FDRE #(
     .INIT(1'b0)) 
@@ -7105,7 +7057,7 @@ module design_1_xbar_1_axi_crossbar_v2_1_27_splitter_3
   wire mi_awready_mux__0;
   wire p_1_in;
 
-  (* SOFT_HLUTNM = "soft_lutpair236" *) 
+  (* SOFT_HLUTNM = "soft_lutpair235" *) 
   LUT3 #(
     .INIT(8'h2F)) 
     \gen_arbiter.any_grant_i_3 
@@ -7133,7 +7085,7 @@ module design_1_xbar_1_axi_crossbar_v2_1_27_splitter_3
         .I4(aresetn_d),
         .I5(aa_sa_awready),
         .O(\m_ready_d[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair236" *) 
+  (* SOFT_HLUTNM = "soft_lutpair235" *) 
   LUT5 #(
     .INIT(32'h0000BA00)) 
     \m_ready_d[1]_i_1 
@@ -7598,7 +7550,7 @@ module design_1_xbar_1_axi_data_fifo_v2_1_25_axic_reg_srl_fifo
   wire \storage_data1_reg[0]_0 ;
   wire wm_mr_wvalid_1;
 
-  (* SOFT_HLUTNM = "soft_lutpair225" *) 
+  (* SOFT_HLUTNM = "soft_lutpair226" *) 
   LUT4 #(
     .INIT(16'h7500)) 
     \FSM_onehot_state[0]_i_1 
@@ -7617,14 +7569,14 @@ module design_1_xbar_1_axi_data_fifo_v2_1_25_axic_reg_srl_fifo
         .I4(\FSM_onehot_state_reg_n_0_[0] ),
         .I5(storage_data1210_out__0),
         .O(\FSM_onehot_state[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair226" *) 
+  (* SOFT_HLUTNM = "soft_lutpair227" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \FSM_onehot_state[1]_i_2 
        (.I0(m_aready__1),
         .I1(\FSM_onehot_state_reg_n_0_[0] ),
         .O(storage_data11));
-  (* SOFT_HLUTNM = "soft_lutpair225" *) 
+  (* SOFT_HLUTNM = "soft_lutpair226" *) 
   LUT3 #(
     .INIT(8'h20)) 
     \FSM_onehot_state[1]_i_3 
@@ -7642,7 +7594,7 @@ module design_1_xbar_1_axi_data_fifo_v2_1_25_axic_reg_srl_fifo
         .I4(m_ready_d),
         .I5(s_axi_awvalid),
         .O(m_valid_i));
-  (* SOFT_HLUTNM = "soft_lutpair226" *) 
+  (* SOFT_HLUTNM = "soft_lutpair227" *) 
   LUT4 #(
     .INIT(16'h8A00)) 
     \FSM_onehot_state[3]_i_2 
@@ -7704,7 +7656,7 @@ module design_1_xbar_1_axi_data_fifo_v2_1_25_axic_reg_srl_fifo
         .I4(f_decoder2_return),
         .I5(m_avalid),
         .O(wm_mr_wvalid_1));
-  (* SOFT_HLUTNM = "soft_lutpair224" *) 
+  (* SOFT_HLUTNM = "soft_lutpair225" *) 
   LUT3 #(
     .INIT(8'h96)) 
     \gen_rep[0].fifoaddr[0]_i_1 
@@ -7712,7 +7664,7 @@ module design_1_xbar_1_axi_data_fifo_v2_1_25_axic_reg_srl_fifo
         .I1(storage_data11),
         .I2(fifoaddr[0]),
         .O(\gen_rep[0].fifoaddr[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair224" *) 
+  (* SOFT_HLUTNM = "soft_lutpair225" *) 
   LUT4 #(
     .INIT(16'hDB24)) 
     \gen_rep[0].fifoaddr[1]_i_1 
@@ -7942,7 +7894,7 @@ module design_1_xbar_1_axi_data_fifo_v2_1_25_axic_reg_srl_fifo__parameterized0
         .I4(\FSM_onehot_state_reg_n_0_[0] ),
         .I5(state2__0),
         .O(\FSM_onehot_state[3]_i_3__2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair231" *) 
+  (* SOFT_HLUTNM = "soft_lutpair232" *) 
   LUT3 #(
     .INIT(8'h01)) 
     \FSM_onehot_state[3]_i_4__0 
@@ -7992,7 +7944,7 @@ module design_1_xbar_1_axi_data_fifo_v2_1_25_axic_reg_srl_fifo__parameterized0
         .I3(m_select_enc_0[1]),
         .I4(m_select_enc_0[0]),
         .O(\storage_data1_reg[0]_1 ));
-  (* SOFT_HLUTNM = "soft_lutpair230" *) 
+  (* SOFT_HLUTNM = "soft_lutpair231" *) 
   LUT4 #(
     .INIT(16'h8778)) 
     \gen_rep[0].fifoaddr[0]_i_1__1 
@@ -8001,7 +7953,7 @@ module design_1_xbar_1_axi_data_fifo_v2_1_25_axic_reg_srl_fifo__parameterized0
         .I2(push),
         .I3(fifoaddr[0]),
         .O(\gen_rep[0].fifoaddr[0]_i_1__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair230" *) 
+  (* SOFT_HLUTNM = "soft_lutpair231" *) 
   LUT5 #(
     .INIT(32'h8FF77008)) 
     \gen_rep[0].fifoaddr[1]_i_1__1 
@@ -8103,7 +8055,7 @@ module design_1_xbar_1_axi_data_fifo_v2_1_25_axic_reg_srl_fifo__parameterized0
         .I4(push),
         .I5(s_ready_i_reg_0),
         .O(s_ready_i_i_1__3_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair231" *) 
+  (* SOFT_HLUTNM = "soft_lutpair232" *) 
   LUT3 #(
     .INIT(8'h40)) 
     s_ready_i_i_2__0
@@ -9430,7 +9382,7 @@ module design_1_xbar_1_axi_data_fifo_v2_1_25_ndeep_srl
         .I4(s_axi_awvalid),
         .I5(m_aready__1),
         .O(push));
-  (* SOFT_HLUTNM = "soft_lutpair223" *) 
+  (* SOFT_HLUTNM = "soft_lutpair224" *) 
   LUT1 #(
     .INIT(2'h1)) 
     \gen_primitive_shifter.gen_srls[0].srl_inst_i_2 
@@ -9444,7 +9396,7 @@ module design_1_xbar_1_axi_data_fifo_v2_1_25_ndeep_srl
         .I2(s_axi_wlast),
         .I3(m_aready0__0),
         .O(m_aready__1));
-  (* SOFT_HLUTNM = "soft_lutpair223" *) 
+  (* SOFT_HLUTNM = "soft_lutpair224" *) 
   LUT5 #(
     .INIT(32'hC5FFC500)) 
     \storage_data1[0]_i_1__1 
@@ -9682,7 +9634,7 @@ module design_1_xbar_1_axi_data_fifo_v2_1_25_ndeep_srl__parameterized1
         .I4(s_axi_awvalid),
         .I5(m_aready__1),
         .O(push));
-  (* SOFT_HLUTNM = "soft_lutpair229" *) 
+  (* SOFT_HLUTNM = "soft_lutpair230" *) 
   LUT1 #(
     .INIT(2'h1)) 
     \gen_primitive_shifter.gen_srls[0].srl_inst_i_2__2 
@@ -9696,7 +9648,7 @@ module design_1_xbar_1_axi_data_fifo_v2_1_25_ndeep_srl__parameterized1
         .I2(s_axi_wlast),
         .I3(m_aready0__0),
         .O(m_aready__1));
-  (* SOFT_HLUTNM = "soft_lutpair229" *) 
+  (* SOFT_HLUTNM = "soft_lutpair230" *) 
   LUT5 #(
     .INIT(32'hC5FFC500)) 
     \storage_data1[0]_i_1__2 
@@ -9876,6 +9828,7 @@ module design_1_xbar_1_axi_register_slice_v2_1_26_axi_register_slice
     \gen_single_thread.active_target_hot_reg[0]_1 ,
     \gen_single_thread.active_target_hot_reg[0]_2 ,
     r_cmd_pop_0__1,
+    s_rvalid_i0__1,
     w_cmd_pop_0__0,
     s_axi_rresp,
     s_axi_rlast,
@@ -9932,6 +9885,7 @@ module design_1_xbar_1_axi_register_slice_v2_1_26_axi_register_slice
   output \gen_single_thread.active_target_hot_reg[0]_1 ;
   output \gen_single_thread.active_target_hot_reg[0]_2 ;
   output r_cmd_pop_0__1;
+  output [0:0]s_rvalid_i0__1;
   output w_cmd_pop_0__0;
   output [3:0]s_axi_rresp;
   output [1:0]s_axi_rlast;
@@ -10021,6 +9975,7 @@ module design_1_xbar_1_axi_register_slice_v2_1_26_axi_register_slice
   wire [0:0]\s_axi_rvalid[2] ;
   wire s_ready_i_reg;
   wire s_ready_i_reg_0;
+  wire [0:0]s_rvalid_i0__1;
   wire [0:0]st_mr_bid_2;
   wire [0:0]st_mr_bvalid;
   wire [0:0]st_mr_rid_2;
@@ -10087,6 +10042,7 @@ module design_1_xbar_1_axi_register_slice_v2_1_26_axi_register_slice
         .s_axi_rvalid(s_axi_rvalid),
         .\s_axi_rvalid[2] (\s_axi_rvalid[2] ),
         .s_ready_i_reg_0(s_ready_i_reg),
+        .s_rvalid_i0__1(s_rvalid_i0__1),
         .st_mr_rid_2(st_mr_rid_2),
         .st_mr_rlast(st_mr_rlast));
 endmodule
@@ -10112,6 +10068,7 @@ module design_1_xbar_1_axi_register_slice_v2_1_26_axi_register_slice_1
     r_cmd_pop_1__1,
     s_rvalid_i0__1,
     s_rvalid_i0__1_3,
+    s_rvalid_i0__1_4,
     \m_payload_i_reg[63] ,
     m_valid_i_reg_0,
     aclk,
@@ -10127,15 +10084,15 @@ module design_1_xbar_1_axi_register_slice_v2_1_26_axi_register_slice_1
     \gen_single_thread.accept_cnt_reg[1] ,
     st_mr_rvalid,
     \gen_single_thread.accept_cnt_reg[1]_0 ,
-    \gen_single_thread.active_target_enc_4 ,
+    \gen_single_thread.active_target_enc_5 ,
     \gen_single_thread.accept_cnt_reg[1]_1 ,
     E,
     s_axi_bready,
-    \gen_single_thread.active_target_enc_5 ,
-    \gen_single_thread.accept_cnt_reg[3] ,
     \gen_single_thread.active_target_enc_6 ,
-    \gen_single_thread.accept_cnt_reg[3]_0 ,
-    \gen_single_thread.accept_cnt_reg[3]_1 ,
+    \gen_single_thread.accept_cnt_reg[3] ,
+    \gen_single_thread.active_target_enc_7 ,
+    \gen_single_thread.accept_cnt_reg[0] ,
+    \gen_single_thread.accept_cnt_reg[0]_0 ,
     s_axi_rready,
     mi_rlast_1,
     mi_rid_2,
@@ -10159,6 +10116,7 @@ module design_1_xbar_1_axi_register_slice_v2_1_26_axi_register_slice_1
   output r_cmd_pop_1__1;
   output [0:0]s_rvalid_i0__1;
   output [0:0]s_rvalid_i0__1_3;
+  output [0:0]s_rvalid_i0__1_4;
   output [0:0]\m_payload_i_reg[63] ;
   input m_valid_i_reg_0;
   input aclk;
@@ -10174,15 +10132,15 @@ module design_1_xbar_1_axi_register_slice_v2_1_26_axi_register_slice_1
   input \gen_single_thread.accept_cnt_reg[1] ;
   input [0:0]st_mr_rvalid;
   input \gen_single_thread.accept_cnt_reg[1]_0 ;
-  input \gen_single_thread.active_target_enc_4 ;
+  input \gen_single_thread.active_target_enc_5 ;
   input \gen_single_thread.accept_cnt_reg[1]_1 ;
   input [0:0]E;
   input [1:0]s_axi_bready;
-  input \gen_single_thread.active_target_enc_5 ;
-  input \gen_single_thread.accept_cnt_reg[3] ;
   input \gen_single_thread.active_target_enc_6 ;
-  input \gen_single_thread.accept_cnt_reg[3]_0 ;
-  input \gen_single_thread.accept_cnt_reg[3]_1 ;
+  input \gen_single_thread.accept_cnt_reg[3] ;
+  input \gen_single_thread.active_target_enc_7 ;
+  input \gen_single_thread.accept_cnt_reg[0] ;
+  input \gen_single_thread.accept_cnt_reg[0]_0 ;
   input [1:0]s_axi_rready;
   input mi_rlast_1;
   input [0:0]mi_rid_2;
@@ -10195,16 +10153,16 @@ module design_1_xbar_1_axi_register_slice_v2_1_26_axi_register_slice_1
   wire [0:0]bready_carry;
   wire \gen_master_slots[1].r_issuing_cnt_reg[8] ;
   wire \gen_master_slots[1].w_issuing_cnt_reg[8] ;
+  wire \gen_single_thread.accept_cnt_reg[0] ;
+  wire \gen_single_thread.accept_cnt_reg[0]_0 ;
   wire \gen_single_thread.accept_cnt_reg[1] ;
   wire \gen_single_thread.accept_cnt_reg[1]_0 ;
   wire \gen_single_thread.accept_cnt_reg[1]_1 ;
   wire \gen_single_thread.accept_cnt_reg[3] ;
-  wire \gen_single_thread.accept_cnt_reg[3]_0 ;
-  wire \gen_single_thread.accept_cnt_reg[3]_1 ;
   wire \gen_single_thread.active_target_enc ;
-  wire \gen_single_thread.active_target_enc_4 ;
   wire \gen_single_thread.active_target_enc_5 ;
   wire \gen_single_thread.active_target_enc_6 ;
+  wire \gen_single_thread.active_target_enc_7 ;
   wire [0:0]\m_payload_i_reg[63] ;
   wire [0:0]m_valid_i_reg;
   wire m_valid_i_reg_0;
@@ -10228,6 +10186,7 @@ module design_1_xbar_1_axi_register_slice_v2_1_26_axi_register_slice_1
   wire [1:0]s_axi_rready;
   wire [0:0]s_rvalid_i0__1;
   wire [0:0]s_rvalid_i0__1_3;
+  wire [0:0]s_rvalid_i0__1_4;
   wire [0:0]st_mr_bid_2;
   wire [0:0]st_mr_bvalid;
   wire [0:0]st_mr_rid_2;
@@ -10245,8 +10204,8 @@ module design_1_xbar_1_axi_register_slice_v2_1_26_axi_register_slice_1
         .\gen_master_slots[1].w_issuing_cnt_reg[8] (\gen_master_slots[1].w_issuing_cnt_reg[8] ),
         .\gen_single_thread.accept_cnt_reg[1] (\gen_single_thread.accept_cnt_reg[1]_1 ),
         .\gen_single_thread.accept_cnt_reg[3] (\gen_single_thread.accept_cnt_reg[3] ),
-        .\gen_single_thread.active_target_enc_4 (\gen_single_thread.active_target_enc_4 ),
         .\gen_single_thread.active_target_enc_5 (\gen_single_thread.active_target_enc_5 ),
+        .\gen_single_thread.active_target_enc_6 (\gen_single_thread.active_target_enc_6 ),
         .\m_payload_i_reg[2]_0 (st_mr_bid_2),
         .m_valid_i_reg_0(st_mr_bvalid),
         .m_valid_i_reg_1(m_valid_i_reg_0),
@@ -10264,12 +10223,12 @@ module design_1_xbar_1_axi_register_slice_v2_1_26_axi_register_slice_1
   design_1_xbar_1_axi_register_slice_v2_1_26_axic_register_slice__parameterized2 \r.r_pipe 
        (.aclk(aclk),
         .\gen_master_slots[1].r_issuing_cnt_reg[8] (\gen_master_slots[1].r_issuing_cnt_reg[8] ),
+        .\gen_single_thread.accept_cnt_reg[0] (\gen_single_thread.accept_cnt_reg[0] ),
+        .\gen_single_thread.accept_cnt_reg[0]_0 (\gen_single_thread.accept_cnt_reg[0]_0 ),
         .\gen_single_thread.accept_cnt_reg[1] (\gen_single_thread.accept_cnt_reg[1] ),
         .\gen_single_thread.accept_cnt_reg[1]_0 (\gen_single_thread.accept_cnt_reg[1]_0 ),
-        .\gen_single_thread.accept_cnt_reg[3] (\gen_single_thread.accept_cnt_reg[3]_0 ),
-        .\gen_single_thread.accept_cnt_reg[3]_0 (\gen_single_thread.accept_cnt_reg[3]_1 ),
         .\gen_single_thread.active_target_enc (\gen_single_thread.active_target_enc ),
-        .\gen_single_thread.active_target_enc_6 (\gen_single_thread.active_target_enc_6 ),
+        .\gen_single_thread.active_target_enc_7 (\gen_single_thread.active_target_enc_7 ),
         .\m_payload_i_reg[63]_0 (\m_payload_i_reg[63] ),
         .\m_payload_i_reg[66]_0 (st_mr_rlast),
         .\m_payload_i_reg[68]_0 (st_mr_rid_2),
@@ -10287,6 +10246,7 @@ module design_1_xbar_1_axi_register_slice_v2_1_26_axi_register_slice_1
         .s_axi_rready(s_axi_rready),
         .s_ready_i_reg_0(mi_rready_1),
         .s_rvalid_i0__1(s_rvalid_i0__1),
+        .s_rvalid_i0__1_4(s_rvalid_i0__1_4),
         .st_mr_rvalid(st_mr_rvalid));
 endmodule
 
@@ -10309,11 +10269,11 @@ module design_1_xbar_1_axi_register_slice_v2_1_26_axic_register_slice__parameter
     mi_bvalid_1,
     bready_carry,
     w_issuing_cnt,
-    \gen_single_thread.active_target_enc_4 ,
+    \gen_single_thread.active_target_enc_5 ,
     \gen_single_thread.accept_cnt_reg[1] ,
     E,
     s_axi_bready,
-    \gen_single_thread.active_target_enc_5 ,
+    \gen_single_thread.active_target_enc_6 ,
     \gen_single_thread.accept_cnt_reg[3] ,
     mi_bid_2);
   output m_valid_i_reg_0;
@@ -10333,11 +10293,11 @@ module design_1_xbar_1_axi_register_slice_v2_1_26_axic_register_slice__parameter
   input mi_bvalid_1;
   input [0:0]bready_carry;
   input [0:0]w_issuing_cnt;
-  input \gen_single_thread.active_target_enc_4 ;
+  input \gen_single_thread.active_target_enc_5 ;
   input \gen_single_thread.accept_cnt_reg[1] ;
   input [0:0]E;
   input [1:0]s_axi_bready;
-  input \gen_single_thread.active_target_enc_5 ;
+  input \gen_single_thread.active_target_enc_6 ;
   input \gen_single_thread.accept_cnt_reg[3] ;
   input [0:0]mi_bid_2;
 
@@ -10349,8 +10309,8 @@ module design_1_xbar_1_axi_register_slice_v2_1_26_axic_register_slice__parameter
   wire \gen_master_slots[1].w_issuing_cnt_reg[8] ;
   wire \gen_single_thread.accept_cnt_reg[1] ;
   wire \gen_single_thread.accept_cnt_reg[3] ;
-  wire \gen_single_thread.active_target_enc_4 ;
   wire \gen_single_thread.active_target_enc_5 ;
+  wire \gen_single_thread.active_target_enc_6 ;
   wire \m_payload_i[2]_i_1_n_0 ;
   wire \m_payload_i_reg[2]_0 ;
   wire m_valid_i_reg_0;
@@ -10381,7 +10341,7 @@ module design_1_xbar_1_axi_register_slice_v2_1_26_axic_register_slice__parameter
     .INIT(8'h40)) 
     \gen_arbiter.qual_reg[0]_i_5__0 
        (.I0(\m_payload_i_reg[2]_0 ),
-        .I1(\gen_single_thread.active_target_enc_4 ),
+        .I1(\gen_single_thread.active_target_enc_5 ),
         .I2(m_valid_i_reg_0),
         .O(s_rvalid_i0__1_3));
   LUT2 #(
@@ -10395,16 +10355,16 @@ module design_1_xbar_1_axi_register_slice_v2_1_26_axic_register_slice__parameter
     \gen_master_slots[1].w_issuing_cnt[8]_i_2 
        (.I0(m_valid_i_reg_0),
         .I1(\m_payload_i_reg[2]_0 ),
-        .I2(\gen_single_thread.active_target_enc_5 ),
+        .I2(\gen_single_thread.active_target_enc_6 ),
         .I3(s_axi_bready[1]),
-        .I4(\gen_single_thread.active_target_enc_4 ),
+        .I4(\gen_single_thread.active_target_enc_5 ),
         .I5(s_axi_bready[0]),
         .O(w_cmd_pop_1__0));
   LUT6 #(
     .INIT(64'h4040FF4000000000)) 
     \gen_single_thread.accept_cnt[1]_i_2__0 
        (.I0(\m_payload_i_reg[2]_0 ),
-        .I1(\gen_single_thread.active_target_enc_4 ),
+        .I1(\gen_single_thread.active_target_enc_5 ),
         .I2(m_valid_i_reg_0),
         .I3(\gen_single_thread.accept_cnt_reg[1] ),
         .I4(E),
@@ -10414,7 +10374,7 @@ module design_1_xbar_1_axi_register_slice_v2_1_26_axic_register_slice__parameter
     .INIT(64'h8080FF8000000000)) 
     \gen_single_thread.accept_cnt[3]_i_3 
        (.I0(\m_payload_i_reg[2]_0 ),
-        .I1(\gen_single_thread.active_target_enc_5 ),
+        .I1(\gen_single_thread.active_target_enc_6 ),
         .I2(m_valid_i_reg_0),
         .I3(\gen_single_thread.accept_cnt_reg[3] ),
         .I4(E),
@@ -10728,6 +10688,7 @@ module design_1_xbar_1_axi_register_slice_v2_1_26_axic_register_slice__parameter
     p_2_in_2,
     r_cmd_pop_1__1,
     s_rvalid_i0__1,
+    s_rvalid_i0__1_4,
     \m_payload_i_reg[63]_0 ,
     p_0_in,
     aclk,
@@ -10739,9 +10700,9 @@ module design_1_xbar_1_axi_register_slice_v2_1_26_axic_register_slice__parameter
     \gen_single_thread.accept_cnt_reg[1] ,
     st_mr_rvalid,
     \gen_single_thread.accept_cnt_reg[1]_0 ,
-    \gen_single_thread.active_target_enc_6 ,
-    \gen_single_thread.accept_cnt_reg[3] ,
-    \gen_single_thread.accept_cnt_reg[3]_0 ,
+    \gen_single_thread.active_target_enc_7 ,
+    \gen_single_thread.accept_cnt_reg[0] ,
+    \gen_single_thread.accept_cnt_reg[0]_0 ,
     s_axi_rready,
     mi_rlast_1,
     mi_rid_2);
@@ -10754,6 +10715,7 @@ module design_1_xbar_1_axi_register_slice_v2_1_26_axic_register_slice__parameter
   output p_2_in_2;
   output r_cmd_pop_1__1;
   output [0:0]s_rvalid_i0__1;
+  output [0:0]s_rvalid_i0__1_4;
   output [0:0]\m_payload_i_reg[63]_0 ;
   input p_0_in;
   input aclk;
@@ -10765,21 +10727,21 @@ module design_1_xbar_1_axi_register_slice_v2_1_26_axic_register_slice__parameter
   input \gen_single_thread.accept_cnt_reg[1] ;
   input [0:0]st_mr_rvalid;
   input \gen_single_thread.accept_cnt_reg[1]_0 ;
-  input \gen_single_thread.active_target_enc_6 ;
-  input \gen_single_thread.accept_cnt_reg[3] ;
-  input \gen_single_thread.accept_cnt_reg[3]_0 ;
+  input \gen_single_thread.active_target_enc_7 ;
+  input \gen_single_thread.accept_cnt_reg[0] ;
+  input \gen_single_thread.accept_cnt_reg[0]_0 ;
   input [1:0]s_axi_rready;
   input mi_rlast_1;
   input [0:0]mi_rid_2;
 
   wire aclk;
   wire \gen_master_slots[1].r_issuing_cnt_reg[8] ;
+  wire \gen_single_thread.accept_cnt_reg[0] ;
+  wire \gen_single_thread.accept_cnt_reg[0]_0 ;
   wire \gen_single_thread.accept_cnt_reg[1] ;
   wire \gen_single_thread.accept_cnt_reg[1]_0 ;
-  wire \gen_single_thread.accept_cnt_reg[3] ;
-  wire \gen_single_thread.accept_cnt_reg[3]_0 ;
   wire \gen_single_thread.active_target_enc ;
-  wire \gen_single_thread.active_target_enc_6 ;
+  wire \gen_single_thread.active_target_enc_7 ;
   wire \m_payload_i[66]_i_1_n_0 ;
   wire \m_payload_i[68]_i_1_n_0 ;
   wire [0:0]\m_payload_i_reg[63]_0 ;
@@ -10802,11 +10764,13 @@ module design_1_xbar_1_axi_register_slice_v2_1_26_axic_register_slice__parameter
   wire s_ready_i0;
   wire s_ready_i_reg_0;
   wire [0:0]s_rvalid_i0__1;
+  wire [0:0]s_rvalid_i0__1_4;
   wire [68:66]skid_buffer;
   wire \skid_buffer_reg_n_0_[66] ;
   wire \skid_buffer_reg_n_0_[68] ;
   wire [0:0]st_mr_rvalid;
 
+  (* SOFT_HLUTNM = "soft_lutpair221" *) 
   LUT3 #(
     .INIT(8'h40)) 
     \gen_arbiter.qual_reg[0]_i_5 
@@ -10823,6 +10787,14 @@ module design_1_xbar_1_axi_register_slice_v2_1_26_axic_register_slice__parameter
         .I2(rready_carry),
         .I3(m_valid_i_reg_0),
         .O(\gen_master_slots[1].r_issuing_cnt_reg[8] ));
+  (* SOFT_HLUTNM = "soft_lutpair221" *) 
+  LUT3 #(
+    .INIT(8'h80)) 
+    \gen_arbiter.qual_reg[2]_i_8 
+       (.I0(\m_payload_i_reg[68]_0 ),
+        .I1(\gen_single_thread.active_target_enc_7 ),
+        .I2(m_valid_i_reg_0),
+        .O(s_rvalid_i0__1_4));
   (* SOFT_HLUTNM = "soft_lutpair220" *) 
   LUT3 #(
     .INIT(8'h80)) 
@@ -10843,19 +10815,19 @@ module design_1_xbar_1_axi_register_slice_v2_1_26_axic_register_slice__parameter
         .O(p_2_in));
   LUT6 #(
     .INIT(64'hFF80808000000000)) 
-    \gen_single_thread.accept_cnt[3]_i_3__0 
+    \gen_single_thread.accept_cnt[2]_i_2 
        (.I0(\m_payload_i_reg[68]_0 ),
-        .I1(\gen_single_thread.active_target_enc_6 ),
+        .I1(\gen_single_thread.active_target_enc_7 ),
         .I2(m_valid_i_reg_0),
-        .I3(\gen_single_thread.accept_cnt_reg[3] ),
+        .I3(\gen_single_thread.accept_cnt_reg[0] ),
         .I4(st_mr_rvalid),
-        .I5(\gen_single_thread.accept_cnt_reg[3]_0 ),
+        .I5(\gen_single_thread.accept_cnt_reg[0]_0 ),
         .O(p_2_in_2));
   LUT6 #(
     .INIT(64'hD5808080FFFFFFFF)) 
     \m_payload_i[63]_i_1 
        (.I0(\m_payload_i_reg[68]_0 ),
-        .I1(\gen_single_thread.active_target_enc_6 ),
+        .I1(\gen_single_thread.active_target_enc_7 ),
         .I2(s_axi_rready[1]),
         .I3(\gen_single_thread.active_target_enc ),
         .I4(s_axi_rready[0]),
@@ -10971,6 +10943,7 @@ module design_1_xbar_1_axi_register_slice_v2_1_26_axic_register_slice__parameter
     \gen_single_thread.active_target_hot_reg[0] ,
     \gen_single_thread.active_target_hot_reg[0]_0 ,
     r_cmd_pop_0__1,
+    s_rvalid_i0__1,
     s_axi_rresp,
     s_axi_rlast,
     p_0_in,
@@ -11005,6 +10978,7 @@ module design_1_xbar_1_axi_register_slice_v2_1_26_axic_register_slice__parameter
   output \gen_single_thread.active_target_hot_reg[0] ;
   output \gen_single_thread.active_target_hot_reg[0]_0 ;
   output r_cmd_pop_0__1;
+  output [0:0]s_rvalid_i0__1;
   output [3:0]s_axi_rresp;
   output [1:0]s_axi_rlast;
   input p_0_in;
@@ -11067,6 +11041,7 @@ module design_1_xbar_1_axi_register_slice_v2_1_26_axic_register_slice__parameter
   wire [0:0]\s_axi_rvalid[2] ;
   wire s_ready_i0;
   wire s_ready_i_reg_0;
+  wire [0:0]s_rvalid_i0__1;
   wire [68:0]skid_buffer;
   wire \skid_buffer_reg_n_0_[0] ;
   wire \skid_buffer_reg_n_0_[10] ;
@@ -11151,6 +11126,15 @@ module design_1_xbar_1_axi_register_slice_v2_1_26_axic_register_slice__parameter
         .I2(rready_carry),
         .I3(m_valid_i_reg_0),
         .O(\m_payload_i_reg[66]_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair113" *) 
+  LUT4 #(
+    .INIT(16'h4000)) 
+    \gen_arbiter.qual_reg[2]_i_7 
+       (.I0(st_mr_rid_0[0]),
+        .I1(st_mr_rid_0[1]),
+        .I2(\gen_single_thread.active_target_hot_4 ),
+        .I3(m_valid_i_reg_0),
+        .O(s_rvalid_i0__1));
   LUT3 #(
     .INIT(8'h69)) 
     \gen_master_slots[0].r_issuing_cnt[1]_i_1 
@@ -13203,7 +13187,6 @@ module design_1_xbar_1_axi_register_slice_v2_1_26_axic_register_slice__parameter
         .I3(\gen_single_thread.active_target_enc ),
         .I4(st_mr_rid_2),
         .O(s_axi_rvalid[0]));
-  (* SOFT_HLUTNM = "soft_lutpair113" *) 
   LUT3 #(
     .INIT(8'h8A)) 
     \s_axi_rvalid[0]_INST_0_i_1 

@@ -10,19 +10,15 @@
 #include "ap_axi_sdata.h"
 #include "hls_stream.h"
 
-// #define csim
-
 #define BUF_LEN 1024
 
 typedef ap_axiu<32, 2, 0, 0> trans_pkt;	//tuser is FSIC tuser (2 bits) and user project upsb (5 bits)
 
-typedef union {
-		double fpr;
-		struct {
-			unsigned int lower;
-			unsigned int upper;
-			} uin;
-		} memcell;
+
+struct memcell {
+	ap_uint<32> lower;
+	ap_uint<32> upper;
+};
 
 void userdma(
 		hls::stream<trans_pkt> &inStreamTop,
@@ -34,8 +30,8 @@ void userdma(
 		memcell     m2sbuf[BUF_LEN],
 		ap_uint<2>  *s2m_err);
 
-static constexpr int MAX_BURST_LENGTH = 32;
-static constexpr int BUFFER_FACTOR = 2;
+static constexpr int MAX_BURST_LENGTH = 256;
+static constexpr int BUFFER_FACTOR = 4;
 
 // Buffer sizes
 static constexpr int DATA_DEPTH = MAX_BURST_LENGTH * BUFFER_FACTOR;
@@ -46,10 +42,12 @@ struct data {
 	ap_int<1> last;
 };
 
+/*
 struct out_data {
 	ap_int<32> data_filed;
 	ap_int<2> upsb;
 	ap_int<1> last;
 };
+*/
 
 #endif

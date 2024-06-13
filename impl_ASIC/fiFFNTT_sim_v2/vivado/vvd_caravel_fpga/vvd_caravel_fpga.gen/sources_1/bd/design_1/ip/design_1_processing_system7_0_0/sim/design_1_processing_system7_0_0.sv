@@ -764,6 +764,7 @@
   S_AXI_HP0_WID,
   S_AXI_HP0_WDATA,
   S_AXI_HP0_WSTRB,
+  IRQ_F2P,
   FCLK_CLK0,
   FCLK_RESET0_N,
   MIO,
@@ -937,6 +938,7 @@
       input  [5 : 0] S_AXI_HP0_WID;
       input  [63 : 0] S_AXI_HP0_WDATA;
       input  [7 : 0] S_AXI_HP0_WSTRB;
+      input  [0 : 0] IRQ_F2P;
       output  FCLK_CLK0;
       output  FCLK_RESET0_N;
       inout  [53 : 0] MIO;
@@ -1017,6 +1019,7 @@ import "DPI-C" function void ps7_set_ip_context(input string ip_name);
 import "DPI-C" function void ps7_set_str_param(input string name,input string val);
 import "DPI-C" function void ps7_set_int_param(input string name,input longint val);
 import "DPI-C" function void ps7_init_c_model();
+import "DPI-C" function void ps7_set_input_IRQ_F2P(input int pinIdex, input int pinValue);
 import "DPI-C" function void ps7_init_m_axi_gp0(input int M_AXI_GP0_AWID_size,input int M_AXI_GP0_AWADDR_size,input int M_AXI_GP0_AWLEN_size,input int M_AXI_GP0_AWSIZE_size,input int M_AXI_GP0_AWBURST_size,input int M_AXI_GP0_AWLOCK_size,input int M_AXI_GP0_AWCACHE_size,input int M_AXI_GP0_AWPROT_size,input int M_AXI_GP0_AWQOS_size,input int M_AXI_GP0_AWVALID_size,input int M_AXI_GP0_AWREADY_size,input int M_AXI_GP0_WID_size,input int M_AXI_GP0_WDATA_size,input int M_AXI_GP0_WSTRB_size,input int M_AXI_GP0_WLAST_size,input int M_AXI_GP0_WVALID_size,input int M_AXI_GP0_WREADY_size,input int M_AXI_GP0_BID_size,input int M_AXI_GP0_BRESP_size,input int M_AXI_GP0_BVALID_size,input int M_AXI_GP0_BREADY_size,input int M_AXI_GP0_ARID_size,input int M_AXI_GP0_ARADDR_size,input int M_AXI_GP0_ARLEN_size,input int M_AXI_GP0_ARSIZE_size,input int M_AXI_GP0_ARBURST_size,input int M_AXI_GP0_ARLOCK_size,input int M_AXI_GP0_ARCACHE_size,input int M_AXI_GP0_ARPROT_size,input int M_AXI_GP0_ARQOS_size,input int M_AXI_GP0_ARVALID_size,input int M_AXI_GP0_ARREADY_size,input int M_AXI_GP0_RID_size,input int M_AXI_GP0_RDATA_size,input int M_AXI_GP0_RRESP_size,input int M_AXI_GP0_RLAST_size,input int M_AXI_GP0_RVALID_size,input int M_AXI_GP0_RREADY_size);
 import "DPI-C" function void ps7_init_s_axi_hp0(input int S_AXI_HP0_AWID_size,input int S_AXI_HP0_AWADDR_size,input int S_AXI_HP0_AWLEN_size,input int S_AXI_HP0_AWSIZE_size,input int S_AXI_HP0_AWBURST_size,input int S_AXI_HP0_AWLOCK_size,input int S_AXI_HP0_AWCACHE_size,input int S_AXI_HP0_AWPROT_size,input int S_AXI_HP0_AWQOS_size,input int S_AXI_HP0_AWVALID_size,input int S_AXI_HP0_AWREADY_size,input int S_AXI_HP0_WID_size,input int S_AXI_HP0_WDATA_size,input int S_AXI_HP0_WSTRB_size,input int S_AXI_HP0_WLAST_size,input int S_AXI_HP0_WVALID_size,input int S_AXI_HP0_WREADY_size,input int S_AXI_HP0_BID_size,input int S_AXI_HP0_BRESP_size,input int S_AXI_HP0_BVALID_size,input int S_AXI_HP0_BREADY_size,input int S_AXI_HP0_ARID_size,input int S_AXI_HP0_ARADDR_size,input int S_AXI_HP0_ARLEN_size,input int S_AXI_HP0_ARSIZE_size,input int S_AXI_HP0_ARBURST_size,input int S_AXI_HP0_ARLOCK_size,input int S_AXI_HP0_ARCACHE_size,input int S_AXI_HP0_ARPROT_size,input int S_AXI_HP0_ARQOS_size,input int S_AXI_HP0_ARVALID_size,input int S_AXI_HP0_ARREADY_size,input int S_AXI_HP0_RID_size,input int S_AXI_HP0_RDATA_size,input int S_AXI_HP0_RRESP_size,input int S_AXI_HP0_RLAST_size,input int S_AXI_HP0_RVALID_size,input int S_AXI_HP0_RREADY_size);
 import "DPI-C" function void ps7_simulate_single_cycle_FCLK_CLK0();
@@ -1220,6 +1223,14 @@ output bit S_AXI_HP0_RVALID
    ps7_simulate_single_cycle_FCLK_CLK0();
   end
 
+always@(posedge IRQ_F2P[0])
+begin
+    ps7_set_input_IRQ_F2P(0,1);
+end
+always@(negedge IRQ_F2P[0])
+begin
+    ps7_set_input_IRQ_F2P(0,0);
+end
 
 always@(posedge M_AXI_GP0_ACLK)
   begin

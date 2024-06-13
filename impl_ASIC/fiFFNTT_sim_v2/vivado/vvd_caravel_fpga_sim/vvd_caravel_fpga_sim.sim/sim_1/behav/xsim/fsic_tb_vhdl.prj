@@ -1,0 +1,9 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_1/sim/bd_afc3_psr_aclk_0.vhd" \
+"../../../../vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_axi_smc_1_0/bd_0/ip/ip_1/sim/bd_a878_psr_aclk_0.vhd" \
+"../../../../vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_axi_smc_2_0/bd_0/ip/ip_1/sim/bd_a888_psr_aclk_0.vhd" \
+"../../../../vvd_caravel_fpga_sim.ip_user_files/bd/design_1/ip/design_1_rst_clk_wiz_0_5M_0/sim/design_1_rst_clk_wiz_0_5M_0.vhd" \
+
+# Do not sort compile order
+nosort
