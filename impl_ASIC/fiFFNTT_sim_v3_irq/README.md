@@ -33,3 +33,4 @@
 - Include host code `fsicIRQ_test.ipynb`
 
 Refer to [Interrupt - PYNQ](https://pynq.readthedocs.io/en/latest/pynq_libraries/interrupt.html)
+https://pp4fpgas.readthedocs.io/en/latest/interrupts.html
