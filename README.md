@@ -4,7 +4,7 @@
 | Team | Github Link |
 | ----- | ----------- |
 | Leader | [VicChen](https://github.com/vic9112) |
-| Member | [YouWei](https://github.com/nthuyouwei) <br> [ShengDa](https://github.com/ShengdaChen1212) <br> [KennyWang](https://github.com/kenny0916) <br> [LukasChen](https://github.com/lukaschen1010) |
+| Members | [YouWei](https://github.com/nthuyouwei) <br> [ShengDa](https://github.com/ShengdaChen1212) <br> [KennyWang](https://github.com/kenny0916) <br> [LukasChen](https://github.com/lukaschen1010) |
 
 ## Folder Explanations
 
