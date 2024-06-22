@@ -1,11 +1,10 @@
 # FPGA Implementation of HighLevel Synthesis in Post-Quantum Cryptography: Hardware Acceleration for Falcon Digital Signature
 
 ## Contributors:
-- [VicChen](https://github.com/vic9112)
-- [YouWei](https://github.com/nthuyouwei)
-- [ShengDa](https://github.com/ShengdaChen1212)
-- [KennyWang](https://github.com/kenny0916)
-- [LukasChen](https://github.com/lukaschen1010)
+| Team | Github Link |
+| ----- | ----------- |
+| Leader | [VicChen](https://github.com/vic9112) |
+| Member | [YouWei](https://github.com/nthuyouwei) <br> [ShengDa](https://github.com/ShengdaChen1212) <br> [KennyWang](https://github.com/kenny0916) <br> [LukasChen](https://github.com/lukaschen1010) |
 
 ## Folder Explanations
 
