@@ -30,10 +30,10 @@ typedef	unsigned short int u16;
 typedef union {
 	fpr f;	// one 64-bit double
 	struct {u16 n0;
-			u16 n1;
-			u16 n2;
-			u16 n3;
-			} u16;  // four 16-bit unsigned integer
+		u16 n1;
+		u16 n2;
+		u16 n3;
+		} u16;  // four 16-bit unsigned integer
 	} memcell;
 
 
